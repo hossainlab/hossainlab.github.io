@@ -1,0 +1,127 @@
+project:
+  type: website
+
+  preview:
+    port: 5555
+    browser: true
+    watch-inputs: true
+    navigate: true
+
+  render:
+    - "*.qmd"
+    - "*.md"
+    - "!etc/"
+
+  resources:
+    - "files/**"
+    - "etc/**"
+
+    # Things that need to be at the site root
+    - ".htaccess"
+    - "LiveSearchSiteAuth.xml"
+    - "keybase.txt"
+    - "y_key_31e0c4105fc75710.html"
+    - "pgp_ath.asc.txt"
+
+freeze: true
+
+bibliography: files/bib/references.bib
+csl: files/bib/chicago-author-date.csl
+
+# Metadata stuff
+pagetitle: "{{< meta title >}} | Md. Jubayer Hossain"
+description-meta: "Andrew Heiss is an assistant professor at Georgia State University, researching international NGOs and teaching data science & economics."
+author-meta: "Md. Jubayer Hossain"
+
+website:
+  title: "Md. Jubayer Hossain"
+  description: "{{< meta description-meta >}}"
+  favicon: "/files/favicon-512.png"
+  site-url: "https://hossainlab.github.io/"
+  repo-url: "https://github.com/hossainlab/"
+
+  google-analytics: "UA-527449-5"
+
+  twitter-card:
+    image: "/files/profiles/twitter-card-large.png"
+    description: "{{< meta description-meta >}}"
+    card-style: summary_large_image
+    creator: "@andrewheiss"
+    site: "@andrewheiss"
+
+  open-graph:
+    image: "/files/profiles/twitter-card-large.png"
+    description: "{{< meta description-meta >}}"
+    locale: en_US
+
+  navbar:
+    pinned: true
+
+    left:
+      - text: "About"
+        href: "index.qmd"
+      - text: "CV"
+        href: "cv/index.qmd"
+      - text: "Blog"
+        file: blog/index.qmd
+      - text: "Research"
+        file: research/index.qmd
+      - text: "Teaching"
+        href: "teaching/index.qmd"
+      - text: "Talks"
+        href: "talks/index.qmd"
+      - text: "Now"
+        href: now/index.qmd
+      - text: "Uses"
+        file: uses/index.qmd
+
+    right:
+      - icon: rss
+        aria-label: rss
+        href: atom.xml
+      - icon: envelope
+        aria-label: email
+        href: "mailto:aheiss@gsu.edu"
+      - icon: twitter
+        aria-label: twitter
+        href: https://twitter.com/andrewheiss
+        rel: me
+      - icon: mastodon
+        aria-label: mastodon
+        href: https://fediscience.org/users/andrew/
+        rel: me
+      - icon: github
+        aria-label: github
+        href: https://github.com/andrewheiss
+        rel: me
+      - icon: youtube
+        aria-label: youtube
+        href: https://www.youtube.com/andrewheiss
+        rel: me
+      - icon: postage-heart-fill
+        aria-label: family
+        href: https://www.heissatopia.com/
+      - icon: linkedin
+        aria-label: linkedin
+        href: https://www.linkedin.com/in/andrewheiss
+        rel: me
+
+  page-footer:
+    left: |
+      <span class="faux-block">{{< fa brands creative-commons >}} {{< var years >}} Md. Jubayer Hossain</span>
+    center: |
+      <span class="faux-block">{{< fa brands orcid >}} <strong>ORCID</strong> [{{< var orcid >}}](https://orcid.org/{{< var orcid >}})</span>
+    right: |
+      <span class="faux-block">Made with {{< fa brands r-project >}} and [Quarto](https://quarto.org/)</span>
+
+format:
+  html:
+    theme:
+      - html/ath.scss
+    toc: false
+    code-link: true
+    anchor-sections: true
+    fig-cap-location: margin
+    reference-location: margin
+    footnotes-hover: true
+    highlight-style: monokai

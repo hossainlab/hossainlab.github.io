@@ -1,0 +1,145 @@
+---
+title: "Blog"
+author: ""
+description-meta: "Md. Jubayer Hossain's blog"
+listing:
+  - id: posts_2023
+    contents: "2023/**/index.qmd"
+    sort: "date desc"
+    template: ../html/blog/listing.ejs
+    categories: true
+  - id: posts_2022
+    contents: "2022/**/index.qmd"
+    sort: "date desc"
+    template: ../html/blog/listing.ejs
+  - id: posts_2021
+    contents: "2021/**/index.qmd"
+    sort: "date desc"
+    template: ../html/blog/listing.ejs
+  - id: posts_2020
+    contents: "2020/**/index.qmd"
+    sort: "date desc"
+    template: ../html/blog/listing.ejs
+  - id: posts_2019
+    contents: 
+      - "2019/**/index.qmd"
+      - "2019/**/index.md"
+    sort: "date desc"
+    template: ../html/blog/listing.ejs
+  - id: posts_2018
+    contents: 
+      - "2018/**/index.qmd"
+      - "2018/**/index.md"
+    sort: "date desc"
+    template: ../html/blog/listing.ejs
+  - id: posts_2017
+    contents: 
+      - "2017/**/index.qmd"
+      - "2017/**/index.md"
+    sort: "date desc"
+    template: ../html/blog/listing.ejs
+  - id: posts_2016
+    contents: "2016/**/index.md"
+    sort: "date desc"
+    template: ../html/blog/listing.ejs
+  - id: posts_2013
+    contents: "2013/**/index.md"
+    sort: "date desc"
+    template: ../html/blog/listing.ejs
+  - id: posts_2012
+    contents: "2012/**/index.md"
+    sort: "date desc"
+    template: ../html/blog/listing.ejs
+  - id: posts_2011
+    contents: "2011/**/index.md"
+    sort: "date desc"
+    template: ../html/blog/listing.ejs
+  - id: posts_2010
+    contents: "2010/**/index.md"
+    sort: "date desc"
+    template: ../html/blog/listing.ejs
+  - id: posts_2009
+    contents: "2009/**/index.md"
+    sort: "date desc"
+    template: ../html/blog/listing.ejs
+  - id: posts_2007
+    contents: "2007/**/index.md"
+    sort: "date desc"
+    template: ../html/blog/listing.ejs
+page-layout: full
+toc-title: Year
+toc-location: right
+date-format: "MMMM D, YYYY"
+code-tools: false
+comments: false
+---
+
+## 2023
+
+:::{#posts_2023}
+:::
+
+## 2022
+
+:::{#posts_2022}
+:::
+
+## 2021
+
+:::{#posts_2021}
+:::
+
+## 2020
+
+:::{#posts_2020}
+:::
+
+## 2019
+
+:::{#posts_2019}
+:::
+
+## 2018
+
+:::{#posts_2018}
+:::
+
+## 2017
+
+:::{#posts_2017}
+:::
+
+## 2016
+
+:::{#posts_2016}
+:::
+
+## 2013
+
+:::{#posts_2013}
+:::
+
+## 2012
+
+:::{#posts_2012}
+:::
+
+## 2011
+
+:::{#posts_2011}
+:::
+
+## 2010
+
+:::{#posts_2010}
+:::
+
+## 2009
+
+:::{#posts_2009}
+:::
+
+## 2007
+
+:::{#posts_2007}
+:::

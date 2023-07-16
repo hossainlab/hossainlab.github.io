@@ -1,0 +1,40 @@
+# Metadata stuff
+description-meta: "{{< meta description >}}"
+
+# Date format
+date-format: "dddd, MMMM D, YYYY"
+
+# Enable banner style title blocks
+title-block-banner: "#170C3A"
+
+# Add blog-post class to the banner header area
+format: 
+  html:
+    code-tools: true
+    comments:
+      giscus: 
+        repo: andrewheiss/ath-quarto
+        category: Blog comments
+        category-id: DIC_kwDOIg6EJc4CSz92
+        mapping: pathname
+    quarto-template-params:
+      banner-header-class: "blog-post"
+
+# Default for table of contents
+toc: true
+toc-title: Contents
+toc-location: left
+
+freeze: true
+
+# Default knitr options
+execute:
+  echo: true
+  message: true
+  warning: true
+
+# Default author
+author:
+  - name: Md. Jubayer Hossain
+    url: https://hossainlab.github.io/
+    orcid: 0000-0001-9323-4997

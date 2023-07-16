@@ -1,0 +1,9 @@
+---
+title: "Andrew Heiss's blog"
+search: false
+listing:
+  feed: true
+  contents:
+    - "blog/**/index.qmd"
+    - "blog/**/index.qmd"
+---

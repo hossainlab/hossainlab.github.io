@@ -1,0 +1,47 @@
+---
+pagetitle: "Md. Jubayer Hossain"
+main-photo: /files/profiles/hero-removebg.png
+main-photo-square: /files/profiles/ahero-removebg.png
+comments: false
+#page-layout: full
+format:
+  html:
+    margin-top: 0em
+    margin-bottom: 0em
+    minimal: true
+    smooth-scroll: true
+    fig-responsive: true
+    quarto-template-params:
+      banner-header-class: "home"
+---
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-3}
+![](files/profiles/hero-removebg.png){width=100% fig-alt="A portrait of the website author, Paul Bürkner."}
+
+:::
+
+::: {.g-col-12 .g-col-md-9}
+## What I Do
+
+I am Jubayer, recent alumni with Bachelor and Master’s in Microbiology. I aspire to maximize the quality of life of the human around me by working at the intersection of education, technology, and health research.
+
+
+Recently, I have completed my internship at the Health System and Population Studies Division, [icddr,b](https://www.icddrb.org/). I did my Bachelor and Masters from the Department of Microbiology at [Jagannath University,Dhaka](https://jnu.ac.bd/dept/portal/web/microbiology). 
+
+Python is my primary language for data analysis and machine learning. I also have a basic understanding of R, Julia, SPSS, QGIS, and SQL.
+
+:::
+:::
+
+
+:::{#news}
+## News
+- **July 9, 2023**: I'm thrilled to announce that the highly anticipated videos from our workshop on "R for Research: Fundamentals of R - Part 1" are now available for viewing. Whether you missed the live event or want to revisit the valuable insights shared during the session, these videos are your gateway to mastering the basics of R programming language for data analysis and research. Join us as we explore the foundations of R and learn essential skills to enhance your data analysis capabilities. Don't wait any longer; dive into the videos today and take your research to new heights! Check it out: {{< video https://youtu.be/dQhZjmw9BK0 title="R for Research || Fundamentals of R: Part 1" aspect-ratio="16x9" >}}
+
+- **April 12, 2023**: Watch this informative 2-hour workshop on how **NASA Earth Observing Data** can help improve public health. Discover how we can use these data to monitor our environment and identify potential health risks. Learn about the different ways NASA Earth Observing Data can benefit our communities and keep us safe. Check it out: {{< video https://youtu.be/rHJUhAz0_98 title="Using NASA Earth Observing Data for Public Health" aspect-ratio="16x9" >}}
+
+:::
+
+
