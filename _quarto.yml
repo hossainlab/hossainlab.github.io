@@ -1,5 +1,7 @@
 project:
   type: website
+  output-dir: docs
+
 
   preview:
     port: 5555
@@ -30,7 +32,7 @@ csl: files/bib/chicago-author-date.csl
 
 # Metadata stuff
 pagetitle: "{{< meta title >}} | Md. Jubayer Hossain"
-description-meta: "Andrew Heiss is an assistant professor at Georgia State University, researching international NGOs and teaching data science & economics."
+description-meta: "Md. Jubayer Hossain is a health data analyst at CHIRAL Bangladesh"
 author-meta: "Md. Jubayer Hossain"
 
 website:
