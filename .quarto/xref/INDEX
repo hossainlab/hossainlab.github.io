@@ -70,5 +70,11 @@
   },
   "publications/articles/shahnaj2023_01.qmd": {
     "shahnaj2023_01.html": "63f5d222"
+  },
+  "resources.qmd": {
+    "resources.html": "95748033"
+  },
+  "teaching/index.qmd": {
+    "index.html": "15456e1d"
   }
 }

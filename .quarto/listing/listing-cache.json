@@ -17,13 +17,39 @@
       "blog"
     ],
     "blog\\index.qmd": [
-      "hello-world/index.qmd"
+      "hello-world/index.qmd",
+      "2023/**/index.qmd",
+      "2022/**/index.qmd",
+      "2021/**/index.qmd",
+      "2020/**/index.qmd",
+      "2019/**/index.qmd",
+      "2019/**/index.md",
+      "2018/**/index.qmd",
+      "2018/**/index.md",
+      "2017/**/index.qmd",
+      "2017/**/index.md",
+      "2016/**/index.md",
+      "2013/**/index.md",
+      "2012/**/index.md",
+      "2011/**/index.md",
+      "2010/**/index.md",
+      "2009/**/index.md",
+      "2007/**/index.md"
     ],
     "research.qmd": [
       "publications/*/**.qmd"
     ],
     "publications.qmd": [
       "publications/*/**.qmd"
+    ],
+    "teaching\\index.qmd": [
+      "ay_22-23.yml",
+      "ay_21-22.yml",
+      "ay_20-21.yml",
+      "ay_19-20.yml",
+      "ay_18-19.yml",
+      "ay_17-18.yml",
+      "ay_older.yml"
     ]
   }
 }

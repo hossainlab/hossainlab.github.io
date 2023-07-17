@@ -26,6 +26,7 @@ engine: knitr
 website:
   page-navigation: true
   title: ""
+  favicon: /files/profiles/favicon-512.png
 
   page-footer:
     left: "&copy; Copyright 2022, Md. Jubayer Hossain"
@@ -48,10 +49,49 @@ website:
           file: talks/index.qmd
         - text: "Projects"
           file: projects/index.qmd
+        - text: "Resources"
+          file: resources.qmd
+        - text: "Teaching"
+          file: teaching/index.qmd
+      right:
+      - icon: rss
+        aria-label: rss
+        href: atom.xml
+      - icon: envelope
+        aria-label: email
+        href: "mailto:aheiss@gsu.edu"
+      - icon: twitter
+        aria-label: twitter
+        href: https://twitter.com/andrewheiss
+        rel: me
+      - icon: mastodon
+        aria-label: mastodon
+        href: https://fediscience.org/users/andrew/
+        rel: me
+      - icon: github
+        aria-label: github
+        href: https://github.com/andrewheiss
+        rel: me
+      - icon: youtube
+        aria-label: youtube
+        href: https://www.youtube.com/andrewheiss
+        rel: me
+      - icon: postage-heart-fill
+        aria-label: family
+        href: https://www.heissatopia.com/
+      - icon: linkedin
+        aria-label: linkedin
+        href: https://www.linkedin.com/in/andrewheiss
+
 format:
   html:
-    theme: cosmo
+    theme:
+       - html/ath.scss
     css: styles.css
-    toc: true
-
-
+    toc: false
+    code-link: true
+    anchor-sections: true
+    fig-cap-location: margin
+    reference-location: margin
+    footnotes-hover: true
+    highlight-style: monokai
