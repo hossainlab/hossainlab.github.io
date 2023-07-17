@@ -15,6 +15,15 @@
     ],
     "blog\\blog.qmd": [
       "blog"
+    ],
+    "blog\\index.qmd": [
+      "hello-world/index.qmd"
+    ],
+    "research.qmd": [
+      "publications/*/**.qmd"
+    ],
+    "publications.qmd": [
+      "publications/*/**.qmd"
     ]
   }
 }

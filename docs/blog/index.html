@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Andreas Handel’s personal website.">
+<meta name="author" content="">
+<meta name="description" content="Welcome to my blog, I’m thrilled to welcome you! Here, you will find a collection of articles on a wide variety of topics. Take a look around and let me know what you think!">
 
-<title>Projects</title>
+<title>Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,20 +66,48 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-ehr .list');
+    const listingTargetEl = window.document.querySelector('#listing-posts_2023 .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-image','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-ehr'] = new List('listing-ehr', options);
+    window['quarto-listings']['listing-posts_2023'] = new List('listing-posts_2023', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-posts_2022 .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-posts_2022'] = new List('listing-posts_2022', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -128,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../blog/index.html" rel="" target="">
+    <a class="nav-link active" href="../blog/index.html" rel="" target="" aria-current="page">
  <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
@@ -140,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../projects/index.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../projects/index.html" rel="" target="">
  <span class="menu-text">Projects</span></a>
   </li>  
 </ul>
@@ -151,25 +180,27 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    </div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Year</h2>
+   
+  <ul>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">2023</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">2022</a></li>
+  </ul>
+</nav>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Projects</h1>
+<h1 class="title">Blog</h1>
 </div>
 
-<div>
-  <div class="description">
-    <p>This page provides a mix of two types of listing, grouped by <code>id</code>.</p>
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
@@ -182,43 +213,90 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>This is an example of <strong>grid</strong> listing. You can specify the content in the <code>yaml</code> header in the <code>.qmd</code> file.</p>
-<p>It is convenient to use <code>id</code> to link to multiple folders.</p>
-<div id="listing-ehr" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="news,code,analysis" data-listing-file-modified-sort="1689606047890" data-listing-reading-time-sort="1">
-<a href="../projects/project_1/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left borderless">
-<p class="card-img-top">
-<img src="../projects/project_1/image.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-project_1
-</h5>
-<div class="card-text listing-description">
-In this project I use EHR to explore the hospital transfers.
+<p>Welcome to my blog, I’m thrilled that you are here! You will find a collection of articles on a wide variety of topics. As an avid learner, I strive to share informative and engaging content with my readers. Whether you are looking for thought-provoking insights or simply seeking to broaden your horizons, I hope you will find something of interest on my blog. So, take a look around and let me know what you think!</p>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section">2023</h2>
+<div id="listing-posts_2023" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="news" data-listing-date-sort="1652983200000" data-listing-file-modified-sort="1687719320000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="../blog/hello-world/index.html"> <img src="../blog/hello-world/hello-world-thumbnail.png" class="thumbnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../blog/hello-world/index.html">
+<h3 class="no-anchor listing-title">
+Hello World!
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
+news
 </div>
 </div>
+<a href="../blog/hello-world/index.html">
+<div class="listing-description">
+<p>For the past years, my homepage has just been a placeholder. It served a single purpose: People who enter the domain of my email address in their browser should not look at some weird empty page. So here we go!</p>
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="news,code,analysis" data-listing-file-modified-sort="1689606047890" data-listing-reading-time-sort="1">
-<a href="../projects/project_2/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left borderless">
-<p class="card-img-top">
-<img src="../projects/project_2/image.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-project_2
-</h5>
-<div class="card-text listing-description">
-In this project I work on Machine Learning methods to predict in-hospital mortality.
+<div class="metadata">
+<a href="../blog/hello-world/index.html">
+<div class="listing-date">
+May 20, 2022
 </div>
-</div>
+<div class="listing-author">
+Md. Jubayer Hossain
 </div>
 </a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1">2022</h2>
+<div id="listing-posts_2022" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="news" data-listing-date-sort="1652983200000" data-listing-file-modified-sort="1687719320000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="../blog/hello-world/index.html"> <img src="../blog/hello-world/hello-world-thumbnail.png" class="thumbnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../blog/hello-world/index.html">
+<h3 class="no-anchor listing-title">
+Hello World!
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
+news
+</div>
+</div>
+<a href="../blog/hello-world/index.html">
+<div class="listing-description">
+<p>For the past years, my homepage has just been a placeholder. It served a single purpose: People who enter the domain of my email address in their browser should not look at some weird empty page. So here we go!</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../blog/hello-world/index.html">
+<div class="listing-date">
+May 20, 2022
+</div>
+<div class="listing-author">
+Md. Jubayer Hossain
+</div>
+</a>
+</div>
 </div>
 </div>
 <div class="listing-no-matching d-none">
@@ -228,6 +306,7 @@ No matching items
 
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

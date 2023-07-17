@@ -1,8 +1,32 @@
-# options specified here will apply to all posts in this folder
-
-# freeze computational output
-# (see https://quarto.org/docs/projects/code-execution.html#freeze)
-freeze: true
+# Freeze computed outputs
+freeze: auto
 
 # Enable banner style title blocks
 title-block-banner: true
+
+# Default for table of contents
+toc: true
+toc-title: Table of contents
+toc-location: left
+toc-depth: 3
+
+page-layout: article
+
+# Default knitr options
+execute:
+  echo: true
+  message: true
+  warning: true
+
+# Default fields for citation
+citation: true
+
+comments:
+  utterances:
+    repo: hossainlab/hossainlab.github.io
+
+# Default author
+author:
+  - name: Md. Jubayer Hossain
+    url: https://hossainlab.github.io/
+    orcid: 0000-0001-9323-4997

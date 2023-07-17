@@ -23,5 +23,21 @@
   {
     "listing": "/blog/blog.html",
     "items": []
+  },
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/hello-world/index.html"
+    ]
+  },
+  {
+    "listing": "/research.html",
+    "items": []
+  },
+  {
+    "listing": "/publications.html",
+    "items": [
+      "/publications/articles/shahnaj2023_01.html"
+    ]
   }
 ]

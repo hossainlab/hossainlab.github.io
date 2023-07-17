@@ -46,5 +46,29 @@
   },
   "cv/index.qmd": {
     "index.html": "89c19ec3"
+  },
+  "blog/4-realizations-from-atomic-habits/index.qmd": {
+    "index.html": "434b843e"
+  },
+  "blog/agile-methods-for-academia/index.qmd": {
+    "index.html": "efbdc2c2"
+  },
+  "blog/hello-world/index.qmd": {
+    "index.html": "87ada02d"
+  },
+  "blog/index.qmd": {
+    "index.html": "d5918f56"
+  },
+  "research.qmd": {
+    "research.html": "255319af"
+  },
+  "research/articles/shahnaj2023_01.qmd": {
+    "shahnaj2023_01.html": "40803c3b"
+  },
+  "publications.qmd": {
+    "publications.html": "3f347d47"
+  },
+  "publications/articles/shahnaj2023_01.qmd": {
+    "shahnaj2023_01.html": "63f5d222"
   }
 }

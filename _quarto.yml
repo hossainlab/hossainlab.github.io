@@ -41,7 +41,9 @@ website:
         - text: "CV"
           file: cv/index.qmd
         - text: "Blog"
-          file: blog/blog.qmd
+          file: blog/index.qmd
+        - text: "Publications"
+          file: publications.qmd
         - text: "Talks"
           file: talks/index.qmd
         - text: "Projects"
