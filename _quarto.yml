@@ -37,10 +37,6 @@ website:
       left:
         - text: "Home"
           file: index.qmd
-        - text: "About"
-          file: about.qmd
-        - text: "CV"
-          file: cv/index.qmd
         - text: "Blog"
           file: blog/index.qmd
         - text: "Publications"
@@ -53,35 +49,30 @@ website:
           file: resources.qmd
         - text: "Teaching"
           file: teaching/index.qmd
+        - text: "CV"
+          file: cv/index.qmd
       right:
       - icon: rss
         aria-label: rss
         href: atom.xml
       - icon: envelope
         aria-label: email
-        href: "mailto:aheiss@gsu.edu"
+        href: "mailto:hossainmj@gmail.com"
       - icon: twitter
         aria-label: twitter
-        href: https://twitter.com/andrewheiss
-        rel: me
-      - icon: mastodon
-        aria-label: mastodon
-        href: https://fediscience.org/users/andrew/
+        href: https://twitter.com/JHossain_28
         rel: me
       - icon: github
         aria-label: github
-        href: https://github.com/andrewheiss
+        href: https://github.com/hossainlab
         rel: me
       - icon: youtube
         aria-label: youtube
-        href: https://www.youtube.com/andrewheiss
+        href: https://www.youtube.com/@hossainlab
         rel: me
-      - icon: postage-heart-fill
-        aria-label: family
-        href: https://www.heissatopia.com/
       - icon: linkedin
         aria-label: linkedin
-        href: https://www.linkedin.com/in/andrewheiss
+        href: https://www.linkedin.com/in/hossainmj
 
 format:
   html:
