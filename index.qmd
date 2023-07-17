@@ -34,14 +34,3 @@ Python is my primary language for data analysis and machine learning. I also hav
 
 :::
 :::
-
-
-:::{#news}
-## News
-- **July 9, 2023**: I'm thrilled to announce that the highly anticipated videos from our workshop on "R for Research: Fundamentals of R - Part 1" are now available for viewing. Whether you missed the live event or want to revisit the valuable insights shared during the session, these videos are your gateway to mastering the basics of R programming language for data analysis and research. Join us as we explore the foundations of R and learn essential skills to enhance your data analysis capabilities. Don't wait any longer; dive into the videos today and take your research to new heights! Check it out: {{< video https://youtu.be/dQhZjmw9BK0 title="R for Research || Fundamentals of R: Part 1" aspect-ratio="16x9" >}}
-
-- **April 12, 2023**: Watch this informative 2-hour workshop on how **NASA Earth Observing Data** can help improve public health. Discover how we can use these data to monitor our environment and identify potential health risks. Learn about the different ways NASA Earth Observing Data can benefit our communities and keep us safe. Check it out: {{< video https://youtu.be/rHJUhAz0_98 title="Using NASA Earth Observing Data for Public Health" aspect-ratio="16x9" >}}
-
-:::
-
-
