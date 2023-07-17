@@ -8,7 +8,7 @@
 
 <meta name="description" content="Andreas Handel’s personal website.">
 
-<title>Projects</title>
+<title>Curriculum vitae</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -62,38 +60,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-ehr .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-ehr'] = new List('listing-ehr', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -124,7 +91,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../cv/index.html" rel="" target="">
+    <a class="nav-link active" href="../cv/index.html" rel="" target="" aria-current="page">
  <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
@@ -136,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../projects/index.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../projects/index.html" rel="" target="">
  <span class="menu-text">Projects</span></a>
   </li>  
 </ul>
@@ -158,14 +125,9 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Projects</h1>
+<h1 class="title">Curriculum vitae</h1>
 </div>
 
-<div>
-  <div class="description">
-    <p>This page provides a mix of two types of listing, grouped by <code>id</code>.</p>
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
@@ -178,50 +140,34 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>This is an example of <strong>grid</strong> listing. You can specify the content in the <code>yaml</code> header in the <code>.qmd</code> file.</p>
-<p>It is convenient to use <code>id</code> to link to multiple folders.</p>
-<div id="listing-ehr" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="news,code,analysis" data-listing-file-modified-sort="1689606047890" data-listing-reading-time-sort="1">
-<a href="../projects/project_1/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left borderless">
-<p class="card-img-top">
-<img src="../projects/project_1/image.jpg" class="thumbnail-image card-img" style="height: 150px;">
+<div class="cell">
+<style type="text/css">
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+</div>
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="CV_Jubayer_Hossain.pdf" target="_blank">
+    <i class="fa-solid fa-file-arrow-down"></i> Download current CV
+  </a>
 </p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-project_1
-</h5>
-<div class="card-text listing-description">
-In this project I use EHR to explore the hospital transfers.
+<div class="embed-container">
+  <iframe src="CV_Jubayer_Hossain.pdf" style="border: 0.5px"></iframe>
 </div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="news,code,analysis" data-listing-file-modified-sort="1689606047890" data-listing-reading-time-sort="1">
-<a href="../projects/project_2/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left borderless">
-<p class="card-img-top">
-<img src="../projects/project_2/image.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-project_2
-</h5>
-<div class="card-text listing-description">
-In this project I work on Machine Learning methods to predict in-hospital mortality.
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-
 
 
 

@@ -40,5 +40,11 @@
   },
   "talks/talk_2/index.qmd": {
     "index.html": "88717ef0"
+  },
+  "blog/blog.qmd": {
+    "blog.html": "0677f0e6"
+  },
+  "cv/index.qmd": {
+    "index.html": "89c19ec3"
   }
 }

@@ -12,6 +12,9 @@
     "talks\\index.qmd": [
       "talk_1",
       "talk_2"
+    ],
+    "blog\\blog.qmd": [
+      "blog"
     ]
   }
 }

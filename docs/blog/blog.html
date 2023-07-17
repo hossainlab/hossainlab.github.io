@@ -8,7 +8,7 @@
 
 <meta name="description" content="Andreas Handel’s personal website.">
 
-<title>Projects</title>
+<title>Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,20 +65,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-ehr .list');
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-image','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: [{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: [],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-ehr'] = new List('listing-ehr', options);
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -128,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../blog/blog.html" rel="" target="">
+    <a class="nav-link active" href="../blog/blog.html" rel="" target="" aria-current="page">
  <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
@@ -136,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../projects/index.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../projects/index.html" rel="" target="">
  <span class="menu-text">Projects</span></a>
   </li>  
 </ul>
@@ -147,85 +147,52 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Blog</h1>
+                  <div>
+        <div class="description">
+          <p>This part is the same as the Quarto default blog template.</p>
+        </div>
+      </div>
+                </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Projects</h1>
-</div>
-
-<div>
-  <div class="description">
-    <p>This page provides a mix of two types of listing, grouped by <code>id</code>.</p>
-  </div>
-</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
 
-</header>
+<p>Read more about Quarto blogs <a href="https://quarto.org/docs/websites/website-blog.html">here</a>.</p>
 
-<p>This is an example of <strong>grid</strong> listing. You can specify the content in the <code>yaml</code> header in the <code>.qmd</code> file.</p>
-<p>It is convenient to use <code>id</code> to link to multiple folders.</p>
-<div id="listing-ehr" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="news,code,analysis" data-listing-file-modified-sort="1689606047890" data-listing-reading-time-sort="1">
-<a href="../projects/project_1/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left borderless">
-<p class="card-img-top">
-<img src="../projects/project_1/image.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-project_1
-</h5>
-<div class="card-text listing-description">
-In this project I use EHR to explore the hospital transfers.
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="news,code,analysis" data-listing-file-modified-sort="1689606047890" data-listing-reading-time-sort="1">
-<a href="../projects/project_2/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left borderless">
-<p class="card-img-top">
-<img src="../projects/project_2/image.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-project_2
-</h5>
-<div class="card-text listing-description">
-In this project I work on Machine Learning methods to predict in-hospital mortality.
-</div>
-</div>
-</div>
-</a>
-</div>
+
+
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+
 </div>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-</div>
-
-
-
-
-</main> <!-- /main -->
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

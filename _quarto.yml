@@ -38,12 +38,14 @@ website:
           file: index.qmd
         - text: "About"
           file: about.qmd
+        - text: "CV"
+          file: cv/index.qmd
         - text: "Blog"
-          file: blog.qmd
+          file: blog/blog.qmd
         - text: "Talks"
-          file: presentations.qmd
+          file: talks/index.qmd
         - text: "Projects"
-          file: projects.qmd
+          file: projects/index.qmd
 format:
   html:
     theme: cosmo
