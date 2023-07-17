@@ -3,7 +3,7 @@ pagetitle: "Md. Jubayer Hossain"
 main-photo: /files/profiles/hero-removebg.png
 main-photo-square: /files/profiles/ahero-removebg.png
 comments: false
-#page-layout: full
+page-layout: full
 format:
   html:
     margin-top: 0em
