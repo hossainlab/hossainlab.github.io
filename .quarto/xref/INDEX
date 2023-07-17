@@ -1,0 +1,44 @@
+{
+  "index.qmd": {
+    "index.html": "d2f4c98b"
+  },
+  "about.qmd": {
+    "about.html": "69bedf43"
+  },
+  "about_template.qmd": {
+    "about_template.html": "9f49ffe2"
+  },
+  "blog/post-with-code/index.qmd": {
+    "index.html": "21cc560f"
+  },
+  "blog/welcome/index.qmd": {
+    "index.html": "56c6e618"
+  },
+  "blog.qmd": {
+    "blog.html": "aad3a53f"
+  },
+  "projects/index.qmd": {
+    "index.html": "ac8f29c0"
+  },
+  "projects/pkg_1/index.qmd": {
+    "index.html": "10b3837d"
+  },
+  "projects/pkg_2/index.qmd": {
+    "index.html": "0446e5bc"
+  },
+  "projects/project_1/index.qmd": {
+    "index.html": "acaf7744"
+  },
+  "projects/project_2/index.qmd": {
+    "index.html": "e7d8491b"
+  },
+  "talks/index.qmd": {
+    "index.html": "03611c38"
+  },
+  "talks/talk_1/index.qmd": {
+    "index.html": "5b757851"
+  },
+  "talks/talk_2/index.qmd": {
+    "index.html": "88717ef0"
+  }
+}

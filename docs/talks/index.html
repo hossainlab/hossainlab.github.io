@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Md. Jubayer Hossain">
-<meta name="description" content="Md. Jubayer Hossain is a health data analyst at CHIRAL Bangladesh">
+<meta name="description" content="This page provides an example of the default listing.">
 
-<title>Talks | Md. Jubayer Hossain</title>
+<title>Hello :) - Talks</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="..//files/favicon-512.png" rel="icon" type="image/png">
+<link href="../blog.html" rel="next">
+<link href="../projects/index.html" rel="prev">
 <script src="../site_libs/quarto-listing/list.min.js"></script>
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js"></script>
@@ -43,14 +43,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 20,
   "language": {
     "search-no-results-text": "No results",
@@ -68,20 +66,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-talks_2022 .list');
+    const listingTargetEl = window.document.querySelector('#listing-rstats .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-date','listing-description','listing-location','listing-links',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      valueNames: ['listing-title','listing-description','listing-image','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-date","listing-description","listing-location","listing-links"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-talks_2022'] = new List('listing-talks_2022', options);
+    window['quarto-listings']['listing-rstats'] = new List('listing-rstats', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -96,216 +94,20 @@ ul.task-list li input[type="checkbox"] {
   
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-talks_2021 .list');
+    const listingTargetEl = window.document.querySelector('#listing-ehr .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-date','listing-description','listing-location','listing-links',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      valueNames: ['listing-title','listing-description','listing-image','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-date","listing-description","listing-location","listing-links"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-talks_2021'] = new List('listing-talks_2021', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-talks_2020 .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-date','listing-description','listing-location','listing-links',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
-      
-      searchColumns: ["listing-title","listing-date","listing-description","listing-location","listing-links"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-talks_2020'] = new List('listing-talks_2020', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-talks_2019 .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-date','listing-description','listing-location','listing-links',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
-      
-      searchColumns: ["listing-title","listing-date","listing-description","listing-location","listing-links"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-talks_2019'] = new List('listing-talks_2019', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-talks_2018 .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-date','listing-description','listing-location','listing-links',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
-      
-      searchColumns: ["listing-title","listing-date","listing-description","listing-location","listing-links"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-talks_2018'] = new List('listing-talks_2018', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-talks_2016 .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-date','listing-description','listing-location','listing-links',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
-      
-      searchColumns: ["listing-title","listing-date","listing-description","listing-location","listing-links"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-talks_2016'] = new List('listing-talks_2016', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-talks_2015 .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-date','listing-description','listing-location','listing-links',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
-      
-      searchColumns: ["listing-title","listing-date","listing-description","listing-location","listing-links"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-talks_2015'] = new List('listing-talks_2015', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-talks_2014 .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-date','listing-description','listing-location','listing-links',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
-      
-      searchColumns: ["listing-title","listing-date","listing-description","listing-location","listing-links"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-talks_2014'] = new List('listing-talks_2014', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-talks_2013 .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-date','listing-description','listing-location','listing-links',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
-      
-      searchColumns: ["listing-title","listing-date","listing-description","listing-location","listing-links"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-talks_2013'] = new List('listing-talks_2013', options);
+    window['quarto-listings']['listing-ehr'] = new List('listing-ehr', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -319,1076 +121,191 @@ ul.task-list li input[type="checkbox"] {
   })
   </script>
 
-<script type="text/javascript">
-
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-527449-5', 'auto');
-
-ga('send', {
-  hitType: 'pageview',
-  'anonymizeIp': true,
-});
-</script>
-<style>
-
-      .quarto-title-block .quarto-title-banner {
-        background: #FB9E07;
-      }
-</style>
-
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="Talks | Md. Jubayer Hossain">
-<meta property="og:description" content="Md. Jubayer Hossain is a health data analyst at CHIRAL Bangladesh">
-<meta property="og:image" content="https://hossainlab.github.io//files/profiles/twitter-card-large.png">
-<meta property="og:site-name" content="Md. Jubayer Hossain">
-<meta property="og:locale" content="en_US">
-<meta property="og:image:height" content="1257">
-<meta property="og:image:width" content="2401">
-<meta name="twitter:title" content="Talks | Md. Jubayer Hossain">
-<meta name="twitter:description" content="Md. Jubayer Hossain is a health data analyst at CHIRAL Bangladesh">
-<meta name="twitter:image" content="https://hossainlab.github.io//files/profiles/twitter-card-large.png">
-<meta name="twitter:creator" content="@andrewheiss">
-<meta name="twitter:site" content="@andrewheiss">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image-height" content="1257">
-<meta name="twitter:image-width" content="2401">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Md. Jubayer Hossain</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../index.html" rel="" target="">
- <span class="menu-text">About</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../cv/index.html" rel="" target="">
- <span class="menu-text">CV</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../blog/index.html" rel="" target="">
- <span class="menu-text">Blog</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../research/index.html" rel="" target="">
- <span class="menu-text">Research</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../teaching/index.html" rel="" target="">
- <span class="menu-text">Teaching</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="../talks/index.html" rel="" target="" aria-current="page">
- <span class="menu-text">Talks</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../now/index.html" rel="" target="">
- <span class="menu-text">Now</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../uses/index.html" rel="" target="">
- <span class="menu-text">Uses</span></a>
-  </li>  
-</ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
-    <a class="nav-link" href="../atom.xml" rel="" target=""><i class="bi bi-rss" role="img" aria-label="rss">
-</i> 
- <span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="mailto:aheiss@gsu.edu" rel="" target=""><i class="bi bi-envelope" role="img" aria-label="email">
-</i> 
- <span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/andrewheiss" rel="me" target=""><i class="bi bi-twitter" role="img" aria-label="twitter">
-</i> 
- <span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://fediscience.org/users/andrew/" rel="me" target=""><i class="bi bi-mastodon" role="img" aria-label="mastodon">
-</i> 
- <span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/andrewheiss" rel="me" target=""><i class="bi bi-github" role="img" aria-label="github">
-</i> 
- <span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://www.youtube.com/andrewheiss" rel="me" target=""><i class="bi bi-youtube" role="img" aria-label="youtube">
-</i> 
- <span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://www.heissatopia.com/" rel="" target=""><i class="bi bi-postage-heart-fill" role="img" aria-label="family">
-</i> 
- <span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/andrewheiss" rel="me" target=""><i class="bi bi-linkedin" role="img" aria-label="linkedin">
-</i> 
- <span class="menu-text"></span></a>
-  </li>  
-</ul>
-            <div class="quarto-navbar-tools">
-</div>
-          </div> <!-- /navcollapse -->
-      </div> <!-- /container-fluid -->
-    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../talks/index.html">Talks</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Talks</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Hello :)</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../projects/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Projects</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../talks/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Talks</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../blog.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Blog</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+ <span class="menu-text">About</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../about.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About me</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../about_template.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">This template</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Year</h2>
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">2022</a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">2021</a></li>
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">2020</a></li>
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">2019</a></li>
-  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">2018</a></li>
-  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">2016</a></li>
-  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">2015</a></li>
-  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7">2014</a></li>
-  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8">2013</a></li>
+  <li><a href="#rstats" id="toc-rstats" class="nav-link active" data-scroll-target="#rstats">Rstats</a></li>
+  <li><a href="#electronic-health-records" id="toc-electronic-health-records" class="nav-link" data-scroll-target="#electronic-health-records">Electronic Health Records</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Talks</h1>
+</div>
+
+<div>
+  <div class="description">
+    <p>This page provides an example of the default listing.</p>
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
 
+    
+  
+    
+  </div>
+  
 
-<p>This page contains the source code, links, and slides for various workshops, talks, lectures, and presentations I’ve given. Research presentations given at conferences are typically stored in their respective repositories on GitHub; one-off workshops and talks can all be found in a <a href="https://github.com/andrewheiss/talks">catch-all GitHub repository</a>.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+</header>
+
+<section id="rstats" class="level2">
+<h2 class="anchored" data-anchor-id="rstats">Rstats</h2>
+<div id="listing-rstats" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="rstats" data-listing-date-sort="1554141600000" data-listing-file-modified-sort="1689000801669" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="../talks/talk_1/index.html"> <p class="card-img-top"><img src="talk_1\image.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p> </a></p>
 </div>
-<div class="callout-title-container flex-fill">
-Copyright
+<div class="body">
+<a href="../talks/talk_1/index.html">
+<h3 class="no-anchor listing-title">
+Building Website in R: Step by Step Introduction to blogdown
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+<p>Talk at Oslo UseR meetup</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../talks/talk_1/index.html">
+<div class="listing-date">
+Apr 2, 2019
+</div>
+</a>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>Except where noted, all content is © Andrew Heiss and licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons</a>.</p>
-</div>
-</div>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">2022</h2>
-<div id="listing-talks_2022" class="quarto-listing quarto-listing-container-custom">
-<div class="talks">
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">September 12, 2022</p>
-        </div>
-        <div class="body">
-            <p class="title">APIs and web scraping with R</p>
-            <p class="description">Workshop for <a href="https://www.seacen.org/">SEACEN's</a> September 2022 online course on "Data Analytics for Macroeconomic Surveillance" | Kuala Lumpur, Malaysia (via Zoom)</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://talks.andrewheiss.com/2022-seacen/">
-                        <i class="fa-solid fa-chalkboard-user"></i> Companion site, slides, and materials
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/2022-seacen">
-                        <i class="fa-brands fa-github"></i> GitHub repository
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">February 22, 2022</p>
-        </div>
-        <div class="body">
-            <p class="title">Putting everything out there as a researcher</p>
-            <p class="description">Workshop for EPID 9100 (PhD/MS seminar), Department of Epidemiology &amp; Biostatistics, University of Georgia | Athens, Georgia</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://talks.andrewheiss.com/2022-03-22_uga-putting-everything-out-there/slides.html">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://talks.andrewheiss.com/2022-03-22_uga-putting-everything-out-there/">
-                        <i class="fa-solid fa-up-right-from-square"></i> Handout page
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/tree/master/2022-03-22_uga-putting-everything-out-there">
-                        <i class="fa-brands fa-github"></i> GitHub repository for talk
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
 </div>
 </section>
-<section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1">2021</h2>
-<div id="listing-talks_2021" class="quarto-listing quarto-listing-container-custom">
-<div class="talks">
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">November 16, 2021</p>
-        </div>
-        <div class="body">
-            <p class="title">Introduction to the tidyverse + data visualization with ggplot2</p>
-            <p class="description">Two sessions for <a href="https://www.seacen.org/">SEACEN's</a> November 2021 online course on "Data Analytics for Macroeconomic Surveillance" | Kuala Lumpur, Malaysia (via Zoom)</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://talks.andrewheiss.com/2021-seacen/">
-                        <i class="fa-solid fa-chalkboard-user"></i> Companion site, slides, and materials
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/2021-seacen">
-                        <i class="fa-brands fa-github"></i> GitHub repository
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">August 17, 2021</p>
-        </div>
-        <div class="body">
-            <p class="title">Making documents, websites, and dashboards with R</p>
-            <p class="description">Workshop for the Georgia Policy Labs at the Andrew Young School of Policy Studies | Atlanta, Georgia (via Zoom)</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://talks.andrewheiss.com/2021-gpl/03_markdown-interactivity/">
-                        <i class="fa-solid fa-chalkboard-user"></i> Companion site and slides
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">July 13, 2021</p>
-        </div>
-        <div class="body">
-            <p class="title">Introduction to Geographic Information Systems (GIS) data with R</p>
-            <p class="description">Workshop for the Georgia Policy Labs at the Andrew Young School of Policy Studies | Atlanta, Georgia (via Zoom)</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://talks.andrewheiss.com/2021-gpl/02_gis-with-r/">
-                        <i class="fa-solid fa-chalkboard-user"></i> Companion site and slides
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">June 29, 2021</p>
-        </div>
-        <div class="body">
-            <p class="title">Graphic design for public administrators</p>
-            <p class="description">Workshop for the Georgia Policy Labs at the Andrew Young School of Policy Studies | Atlanta, Georgia (via Zoom)</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://talks.andrewheiss.com/2021-gpl/01_graphic-design/">
-                        <i class="fa-solid fa-chalkboard-user"></i> Companion site and slides
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">March 4, 2021</p>
-        </div>
-        <div class="body">
-            <p class="title">Universal documents and reproducibility</p>
-            <p class="description">Workshop for EPID 9100 (PhD/MS seminar), Department of Epidemiology &amp; Biostatistics, University of Georgia | Athens, Georgia (via Zoom)</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://talks.andrewheiss.com/2021-03-04_uga-markdown/slides/universal-writing-reproducibility.html">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://talks.andrewheiss.com/2021-03-04_uga-markdown/">
-                        <i class="fa-solid fa-up-right-from-square"></i> Companion site
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/2021-03-04_uga-markdown">
-                        <i class="fa-brands fa-github"></i> GitHub repository for talk
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">February 5, 2021</p>
-        </div>
-        <div class="body">
-            <p class="title">What does the internet say about you?</p>
-            <p class="description">Workshop for the Political Science Graduate Student Association, Department of Political Science, Georgia State University | Atlanta, Georgia (via Zoom)</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://talks.andrewheiss.com/2021-02-05_gsu-polisci-web-presence/slides.html">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://talks.andrewheiss.com/2021-02-05_gsu-polisci-web-presence/">
-                        <i class="fa-solid fa-up-right-from-square"></i> Handout page
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/2021-02-05_gsu-polisci-web-presence">
-                        <i class="fa-brands fa-github"></i> GitHub repository for talk
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
+<section id="electronic-health-records" class="level2">
+<h2 class="anchored" data-anchor-id="electronic-health-records">Electronic Health Records</h2>
+<div id="listing-ehr" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="ehr" data-listing-date-sort="1572199200000" data-listing-file-modified-sort="1689000801670" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="../talks/talk_2/index.html"> <p class="card-img-top"><img src="talk_2\image.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p> </a></p>
 </div>
-<div class="listing-no-matching d-none">
-No matching items
+<div class="body">
+<a href="../talks/talk_2/index.html">
+<h3 class="no-anchor listing-title">
+Learning from Hospital EHR data with R
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+<p>A 15 minutes introduction to hospital EHR data</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../talks/talk_2/index.html">
+<div class="listing-date">
+Oct 28, 2019
+</div>
+</a>
 </div>
 </div>
-</section>
-<section id="section-2" class="level2">
-<h2 class="anchored" data-anchor-id="section-2">2020</h2>
-<div id="listing-talks_2020" class="quarto-listing quarto-listing-container-custom">
-<div class="talks">
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">October 29, 2020</p>
-        </div>
-        <div class="body">
-            <p class="title">The US and the 2020 Election</p>
-            <p class="description">Guest lecture for KIEN 2263 (English Academic and Professional Skills II), Centre for Language &amp; Communication Studies, University of Turku | Turku, Finland (via Zoom)</p>
-            
-        </div>
-    </div>
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">October 23, 2020</p>
-        </div>
-        <div class="body">
-            <p class="title">Universal documents and reproducibility</p>
-            <p class="description">"Unpacking the Hidden Curriculum": Graduate Student Professionalization Workshop, Department of Political Science, University of Utah | Salt Lake City, Utah (via Zoom)</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://talks.andrewheiss.com/2020-10-23_utah-markdown/slides/universal-writing-reproducibility.html">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://talks.andrewheiss.com/2020-10-23_utah-markdown/">
-                        <i class="fa-solid fa-up-right-from-square"></i> Companion site
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/2020-10-23_utah-markdown">
-                        <i class="fa-brands fa-github"></i> GitHub repository for talk
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">October 23, 2020</p>
-        </div>
-        <div class="body">
-            <p class="title">What does the internet say about you?</p>
-            <p class="description">"Unpacking the Hidden Curriculum": Graduate Student Professionalization Workshop, Department of Political Science, University of Utah | Salt Lake City, Utah (via Zoom)</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://talks.andrewheiss.com/2020-10-23_utah-web-presence/slides.html">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://talks.andrewheiss.com/2020-10-23_utah-web-presence/">
-                        <i class="fa-solid fa-up-right-from-square"></i> Handout page
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/2020-10-23_utah-web-presence">
-                        <i class="fa-brands fa-github"></i> GitHub repository for talk
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">September 17, 2020</p>
-        </div>
-        <div class="body">
-            <p class="title">Truth, beauty, and data: Why data visualization matters in research</p>
-            <p class="description">Methods workshop in the Département de science politique, Université de Montréal | Montréal, Canada (via Zoom)</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://talks.andrewheiss.com/2020-09-17_umontreal-dataviz/slides.html">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://talks.andrewheiss.com/2020-09-17_umontreal-dataviz/">
-                        <i class="fa-solid fa-up-right-from-square"></i> Handout page
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/2020-09-17_umontreal-dataviz">
-                        <i class="fa-brands fa-github"></i> GitHub repository for talk
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">August 21, 2020</p>
-        </div>
-        <div class="body">
-            <p class="title">Program evaluation and causal inference with R</p>
-            <p class="description">Workshop for the Georgia Policy Labs at the Andrew Young School of Policy Studies | Atlanta, Georgia (via Zoom)</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://talks.andrewheiss.com/2020-gpl/03_causal-inference/">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides and materials
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">July 20, 2020</p>
-        </div>
-        <div class="body">
-            <p class="title">Data visualization with R</p>
-            <p class="description">Workshop for the Georgia Policy Labs at the Andrew Young School of Policy Studies | Atlanta, Georgia (via Zoom)</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://talks.andrewheiss.com/2020-gpl/02_data-visualization/">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides and materials
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">July 16, 2020</p>
-        </div>
-        <div class="body">
-            <p class="title">What does the internet say about you?</p>
-            <p class="description">Workshop for members of the International Society for Third-Sector Research (ISTR) | Online workshop via Zoom</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/blob/master/2020-07-16_istr-internet/slides/istr-internet.pdf">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/tree/master/2020-07-16_istr-internet">
-                        <i class="fa-brands fa-github"></i> GitHub repository for talk
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">July 9, 2020</p>
-        </div>
-        <div class="body">
-            <p class="title">Welcome to the tidyverse: Introduction to R and tidy data analysis</p>
-            <p class="description">Workshop for the Georgia Policy Labs at the Andrew Young School of Policy Studies | Atlanta, Georgia (via Zoom)</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://talks.andrewheiss.com/2020-gpl/01_welcome-tidyverse/">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides and materials
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">July 7, 2020</p>
-        </div>
-        <div class="body">
-            <p class="title">Truth, Beauty, and Data</p>
-            <p class="description">Workshop on data visualization for employees of the Church of Jesus Christ of Latter-day Saints | Salt Lake City, Utah (via Zoom)</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://talks.andrewheiss.com/2020-07-07_church-dataviz/">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-</section>
-<section id="section-3" class="level2">
-<h2 class="anchored" data-anchor-id="section-3">2019</h2>
-<div id="listing-talks_2019" class="quarto-listing quarto-listing-container-custom">
-<div class="talks">
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">November 21, 2019</p>
-        </div>
-        <div class="body">
-            <p class="title">Why Donors Donate: Disentangling Organizational and Structural Heuristics for International Philanthropy</p>
-            <p class="description">2019 Conference for the Association for Research on Nonprofit Organizations and Voluntary Action (ARNOVA) | San Diego, California</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/blob/master/2019-11-21_why-donors-donate_arnova19/presentation/why-donors-donate_arnova19.pdf">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/tree/master/2019-11-21_why-donors-donate_arnova19">
-                        <i class="fa-brands fa-github"></i> GitHub repository
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">November 5, 2019</p>
-        </div>
-        <div class="body">
-            <p class="title">NGOs and authoritarianism</p>
-            <p class="description">Guest lecture for International NGOs (PMAP 8201) | Atlanta, Georgia</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/blob/master/2019-11-05_ngos-authoritarianism/presentation/pmap8201f19_ngos-authoritarianism.pdf">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/tree/master/2019-11-05_ngos-authoritarianism">
-                        <i class="fa-brands fa-github"></i> GitHub repository
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">October 18, 2019</p>
-        </div>
-        <div class="body">
-            <p class="title">Open source resources for teaching data public service-focused data science courses</p>
-            <p class="description">2019 Conference for the Network of Schools of Public Policy, Affairs, and Administration (NASPAA) | Los Angeles, California</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/blob/master/2019-10-18_ds4ps-naspaa19/presentation/naspaa19.pdf">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/tree/master/2019-10-18_ds4ps-naspaa19">
-                        <i class="fa-brands fa-github"></i> GitHub repository
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://talks.andrewheiss.com/naspaa19/">
-                        <i class="fa-solid fa-up-right-from-square"></i> Handout page
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">October 10, 2019</p>
-        </div>
-        <div class="body">
-            <p class="title">Data Science, Open Source, and Radical Transparency</p>
-            <p class="description">Brown bag presentation to PhD students in the Andrew Young School of Policy Studies | Atlanta, Georgia</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/blob/master/2019-10-10_data-science-radical-transparency/presentation/ds-transparency.pdf">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/tree/master/2019-10-10_data-science-radical-transparency">
-                        <i class="fa-brands fa-github"></i> GitHub repository
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">September 19, 2019</p>
-        </div>
-        <div class="body">
-            <p class="title">Curiosity, Transparency, and Failure</p>
-            <p class="description">Guest talk to epidemiology PhD students at the University of Georgia | Athens, Georgia</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/blob/master/2019-09-19_curiosity-transparency-failure/presentation/curiousity-transparency-failure.pdf">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/tree/master/2019-09-19_curiosity-transparency-failure">
-                        <i class="fa-brands fa-github"></i> GitHub repository
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">May 14, 2019</p>
-        </div>
-        <div class="body">
-            <p class="title">"Why won't this run again?!": Making R analysis more reproducible</p>
-            <p class="description">Utah County R Users Group | Provo, Utah</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/2019-05-14_reproducibility/blob/dd8479a1ed882bab18849c5e8929a54980cbe1ea/presentation/andrew-heiss_2019-05-14_utah-county-rug_reproducibility.pdf">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/2019-05-14_reproducibility">
-                        <i class="fa-brands fa-github"></i> GitHub repository for talk
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/2019-05-14_reproducibility">
-                        <i class="fa-solid fa-up-right-from-square"></i> Handout page
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-</section>
-<section id="section-4" class="level2">
-<h2 class="anchored" data-anchor-id="section-4">2018</h2>
-<div id="listing-talks_2018" class="quarto-listing quarto-listing-container-custom">
-<div class="talks">
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">September 19, 2018</p>
-        </div>
-        <div class="body">
-            <p class="title">A lightning quick introduction to data visualization</p>
-            <p class="description">Utah Valley University Department of Biology Seminar | Orem, Utah</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/blob/master/2018-09-18_uvu-dataviz/presentation/andrew-heiss_2018-09-19_uvu-dataviz.pdf">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/tree/master/2018-09-18_uvu-dataviz">
-                        <i class="fa-brands fa-github"></i> GitHub repository
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://talks.andrewheiss.com/uvu-dataviz/">
-                        <i class="fa-solid fa-up-right-from-square"></i> Handout page
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">July 11, 2018</p>
-        </div>
-        <div class="body">
-            <p class="title">Introduction to data visualization with R</p>
-            <p class="description">Utah <a href="https://twitter.com/utahrug">R Users Group</a> | Salt Lake City, Utah</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/blob/master/2018-07-11_utah-rug-dataviz/presentation/andrew-heiss_2018-07-11_utah-rug-dataviz.pdf">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/tree/master/2018-07-11_utah-rug-dataviz">
-                        <i class="fa-brands fa-github"></i> GitHub repository for talk
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://talks.andrewheiss.com/utah-rug-dataviz/">
-                        <i class="fa-solid fa-up-right-from-square"></i> Resources and code examples
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://www.youtube.com/watch?v=BsoHElr7HpA">
-                        <i class="fa-brands fa-youtube"></i> Video
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">June 12, 2018</p>
-        </div>
-        <div class="body">
-            <p class="title">Taking Control of Regulations: How International Advocacy NGOs Shape the Regulatory Environments of their Target Countries</p>
-            <p class="description"><a href="http://www.concordia.ca/cuevents/main/2018/06/11/interest-groups-international-organizations-and-global-problem-solving-capacity.html">Interest Groups, International Organizations, and Global Problem-solving Capacity workshop</a> | Stockholm, Sweden</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://docs.google.com/presentation/d/1s09gaDK1B0dZQ9ulAMKd2y6fh5QyYwfvpP2eBdK2OBw/edit?usp=sharing">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/taking-control-of-regulations">
-                        <i class="fa-brands fa-github"></i> GitHub repository for paper
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">April 27, 2018</p>
-        </div>
-        <div class="body">
-            <p class="title">A lightning quick introduction to data visualization</p>
-            <p class="description"><a href="https://westcoastnonprofitdata.org/">West Coast Nonprofit Data Conference</a> | Salt Lake City, Utah</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/blob/master/2019-09-19_curiosity-transparency-failure/presentation/curiousity-transparency-failure.pdf">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/tree/master/2018-04-27_wcnpd18">
-                        <i class="fa-brands fa-github"></i> GitHub repository for talk
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://talks.andrewheiss.com/wcnpd18/">
-                        <i class="fa-solid fa-up-right-from-square"></i> Handout page
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-</section>
-<section id="section-5" class="level2">
-<h2 class="anchored" data-anchor-id="section-5">2016</h2>
-<div id="listing-talks_2016" class="quarto-listing quarto-listing-container-custom">
-<div class="talks">
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">March 7, 2016</p>
-        </div>
-        <div class="body">
-            <p class="title">Telling Stories with Data</p>
-            <p class="description">MPP workshop at the Sanford School of Public Policy, Duke University | Durham, North Carolina</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/blob/master/2016-03-07_telling-stories-data-short/presentation/Telling%20stories%20with%20data,%20short.pdf">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/tree/master/2016-03-07_telling-stories-data-short">
-                        <i class="fa-brands fa-github"></i> GitHub repository
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-</section>
-<section id="section-6" class="level2">
-<h2 class="anchored" data-anchor-id="section-6">2015</h2>
-<div id="listing-talks_2015" class="quarto-listing quarto-listing-container-custom">
-<div class="talks">
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">October 16, 2015</p>
-        </div>
-        <div class="body">
-            <p class="title">Enhancing basic statistical figures: Make pretty pictures like the New York Times</p>
-            <p class="description">MPP workshop at the Sanford School of Public Policy | Durham, North Carolina</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/blob/master/2015-10-16_making-pretty-figures/presentation/Making%20pretty%20figures.pdf">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/tree/master/2015-10-16_making-pretty-figures">
-                        <i class="fa-brands fa-github"></i> GitHub repository
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">October 2, 2015</p>
-        </div>
-        <div class="body">
-            <p class="title">Graphic Design for Non-Designers</p>
-            <p class="description">MPP workshop at the Sanford School of Public Policy | Durham, North Carolina</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/blob/master/2015-10-02_graphic-design-nondesigners/presentation/Graphic%20design%20for%20non-designers.pdf">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/tree/master/2015-10-02_graphic-design-nondesigners">
-                        <i class="fa-brands fa-github"></i> GitHub repository
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">September 15, 2015</p>
-        </div>
-        <div class="body">
-            <p class="title">A <em>Very</em> Brief Overview of Topics in Data Visualization</p>
-            <p class="description">MPP workshop at the Sanford School of Public Policy | Durham, North Carolina</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/blob/master/2015-09-15_intro-data-visualization/presentation/Intro%20to%20data%20visualization.pdf">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/tree/master/2015-09-15_intro-data-visualization">
-                        <i class="fa-brands fa-github"></i> GitHub repository
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">April 17, 2015</p>
-        </div>
-        <div class="body">
-            <p class="title">Telling Stories with Data</p>
-            <p class="description">PhD workshop at the Sanford School of Public Policy | Durham, North Carolina</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/blob/master/2015-04-17_telling-stories-data-phd/presentation/Telling%20stories%20with%20data,%20PhD.pdf">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/tree/master/2015-04-17_telling-stories-data-phd">
-                        <i class="fa-brands fa-github"></i> GitHub repository
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-</section>
-<section id="section-7" class="level2">
-<h2 class="anchored" data-anchor-id="section-7">2014</h2>
-<div id="listing-talks_2014" class="quarto-listing quarto-listing-container-custom">
-<div class="talks">
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">September 11, 2014</p>
-        </div>
-        <div class="body">
-            <p class="title">Data Visualization and Exploratory Data Analysis</p>
-            <p class="description">MPP workshop at the Sanford School of Public Policy | Durham, North Carolina</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/blob/master/2014-09-11_data-visualization-eda/presentation/Data%20visualization.pdf">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/tree/master/2014-09-11_data-visualization-eda">
-                        <i class="fa-brands fa-github"></i> GitHub repository
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">September 2, 2014</p>
-        </div>
-        <div class="body">
-            <p class="title">Practically Perfect Professional Policy Presentations</p>
-            <p class="description">MPP workshop at the Sanford School of Public Policy | Durham, North Carolina</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/blob/master/2014-09-02_practically-perfect-policy-presentations/presentation/Practically%20Perfect%20Professional%20Policy%20Presentations,%20short.pdf">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/tree/master/2014-09-02_practically-perfect-policy-presentations">
-                        <i class="fa-brands fa-github"></i> GitHub repository
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">January 22, 2014</p>
-        </div>
-        <div class="body">
-            <p class="title">Data Visualization and Exploratory Data Analysis</p>
-            <p class="description">MPP workshop at the Sanford School of Public Policy | Durham, North Carolina</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/blob/master/2014-01-22_data-visualization-eda/presentation/Data%20visualization%20old.pdf">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/tree/master/2014-01-22_data-visualization-eda">
-                        <i class="fa-brands fa-github"></i> GitHub repository
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-</section>
-<section id="section-8" class="level2">
-<h2 class="anchored" data-anchor-id="section-8">2013</h2>
-<div id="listing-talks_2013" class="quarto-listing quarto-listing-container-custom">
-<div class="talks">
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">September 12, 2013</p>
-        </div>
-        <div class="body">
-            <p class="title">Telling Stories with Data</p>
-            <p class="description">MPP workshop at the Sanford School of Public Policy | Durham, North Carolina</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/blob/master/2013-09-12_telling-stories-data/presentation/Telling%20stories%20with%20data.pdf">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/tree/master/2013-09-12_telling-stories-data">
-                        <i class="fa-brands fa-github"></i> GitHub repository
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">September 12, 2013</p>
-        </div>
-        <div class="body">
-            <p class="title">Practically Perfect Professional Policy Presentations</p>
-            <p class="description">MPP workshop at the Sanford School of Public Policy | Durham, North Carolina</p>
-            <ul class="talk-links">
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/blob/master/2013-09-12_practically-perfect-policy-presentations/presentation/Practically%20Perfect%20Professional%20Policy%20Presentations.pdf">
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                <li class="talk-link">
-                    <a href="https://github.com/andrewheiss/talks/tree/master/2013-09-12_practically-perfect-policy-presentations">
-                        <i class="fa-brands fa-github"></i> GitHub repository
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items
@@ -1633,12 +550,26 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../projects/index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Projects</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../blog.html" class="pagination-link">
+        <span class="nav-page-text">Blog</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left"><span class="faux-block"><i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> 2019-2023 Md. Jubayer Hossain</span></div>   
-    <div class="nav-footer-center"><span class="faux-block"><i class="fa-brands fa-orcid" aria-label="orcid"></i> <strong>ORCID</strong> <a href="https://orcid.org/0000-0001-9323-4997">0000-0001-9323-4997</a></span></div>
-    <div class="nav-footer-right"><span class="faux-block">Made with <i class="fa-brands fa-r-project" aria-label="r-project"></i> and <a href="https://quarto.org/">Quarto</a></span></div>
+    <div class="nav-footer-left">© Copyright 2022, Author</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>
 
