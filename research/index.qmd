@@ -18,40 +18,46 @@ listing:
     contents: "reviews/*/index.qmd"
     sort: "date desc"
     template: ../html/research/listing.ejs
-  - id: dormant-working-papers
-    contents: "dormant-working-papers/*/index.qmd"
+  - id: under-review 
+    contents: "under-review/*/index.qmd"
     sort: "date desc"
     template: ../html/research/listing.ejs
-  - id: seminar-papers
-    contents: "seminar-papers/*/index.qmd"
+  - id: conference-papers
+    contents: "conference-papers/*/index.qmd"
     sort: "date desc"
     template: ../html/research/listing.ejs
-  - id: translations
-    contents: "translations/*/index.qmd"
-    sort: "date desc"
-    template: ../html/research/listing.ejs
+
 page-layout: full
 include-back-link: false
 toc-location: right
 ---
 
-My research spans public policy, nonprofit management, political science, and international relations. I study human rights and international nonprofit management and I focus on authoritarian regulation of civil society and international NGO responses to administrative crackdown. I also research causal inference methods, particularly using panel data. {{< ai blank-just-to-add-ai-dependency-to-this-page >}}
+My research spans public public health, health data science, and machine learning. {{< ai blank-just-to-add-ai-dependency-to-this-page >}}
 
 
 
-## Journal articles
+## Journal Articles
 
 :::{#articles}
 :::
 
 
-## Working papers
+## Under Review 
+
+:::{#under-review}
+:::
+
+## Working Papers
 
 :::{#working-papers}
 :::
 
+## Conference Papers 
 
-## Book chapters
+:::{#conference-papers}
+:::
+
+## Book Chapters
 
 :::{#book-chapters}
 :::
@@ -63,19 +69,4 @@ My research spans public policy, nonprofit management, political science, and in
 :::
 
 
-## Dormant working papers
 
-:::{#dormant-working-papers}
-:::
-
-
-## Selected seminar papers
-
-:::{#seminar-papers}
-:::
-
-
-## Translations
-
-:::{#translations}
-:::
