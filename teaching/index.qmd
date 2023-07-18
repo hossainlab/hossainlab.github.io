@@ -1,5 +1,7 @@
 ---
 title: "Teaching"
+description: | 
+  Welcome to my personal teaching page! Here, you will find a curated collection of educational resources and insights aimed at empowering learners in their academic journey. Explore a range of engaging topics, tutorials, and practical exercises designed to enhance your understanding and ignite a passion for learning. Join me on this educational adventure and unlock your full potential.
 listing:
   - id: ay_22-23
     contents: ay_22-23.yml
