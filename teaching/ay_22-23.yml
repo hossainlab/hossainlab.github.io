@@ -1,5 +1,5 @@
 - title: Research Internship Program
-  description: "Our Research Internship Program offers aspiring researchers an immersive and hands-on experience in cutting-edge scientific investigations"
+  description: "Our Research Internship Program offers aspiring researchers an immersive and hands-on experience in cutting-edge scientific investigations."
   university: CHIRAL Bangladesh
   number: Internship 2023
   url: https://docs.google.com/spreadsheets/d/1YuwhJA6eR2hlwgIce3YNQuUnJphE-nr9rUJfslR3-Js/edit?usp=sharing
@@ -11,6 +11,21 @@
     url: https://docs.google.com/spreadsheets/d/1YuwhJA6eR2hlwgIce3YNQuUnJphE-nr9rUJfslR3-Js/edit?usp=sharing
   - name: Fall 2023
     url: https://docs.google.com/spreadsheets/d/1YuwhJA6eR2hlwgIce3YNQuUnJphE-nr9rUJfslR3-Js/edit?usp=sharing
+
+- title: Bioinformatics BootCamp
+  description: "The Bioinformatics BootCamp is a comprehensive and immersive program that empowers participants with the necessary skills and tools to navigate the complex world of biological data analysis."
+  university: CHIRAL Bangladesh
+  number: BootCamp
+  url: https://docs.google.com/spreadsheets/d/1JHtlILH98Q0jN8N5lJdSCLNKSnhwCVk4lw0mKDOd6Qw/edit?usp=sharing
+  logo: logos/bioinfo.png
+  semester:
+  - name: BootCamp 1.0
+    url: https://docs.google.com/spreadsheets/d/1JHtlILH98Q0jN8N5lJdSCLNKSnhwCVk4lw0mKDOd6Qw/edit?usp=sharing
+  - name: BootCamp 2.0
+    url: https://docs.google.com/spreadsheets/d/1JHtlILH98Q0jN8N5lJdSCLNKSnhwCVk4lw0mKDOd6Qw/edit?usp=sharing
+  - name: BootCamp 3.0
+    url: https://docs.google.com/spreadsheets/d/1JHtlILH98Q0jN8N5lJdSCLNKSnhwCVk4lw0mKDOd6Qw/edit?usp=sharing
+
 
 - title: Applied Machine Learning for Healthcare (AML4H)
   description: "Empowering Healthcare with Intelligent Solutions: Applied Machine Learning for Healthcare (AML4H)"
