@@ -7,6 +7,10 @@ listing:
     contents: ay_22-23.yml
     sort: "date desc"
     template: ../html/teaching/listing.ejs
+  - id: ay_20-21
+    contents: ay_20-21.yml
+    sort: "date desc"
+    template: ../html/teaching/listing.ejs
   - id: ay_19-20
     contents: ay_19-20.yml
     sort: "date desc"
@@ -24,6 +28,12 @@ toc-title: Academic Year
 :::{#ay_22-23}
 :::
 
+
+
+## 2020–21
+
+:::{#ay_20-21}
+:::
 
 
 ## 2019–20

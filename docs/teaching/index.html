@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Andreas Handel’s personal website.">
+<meta name="description" content="Jubayer Hossain’s personal website.">
 
 <title>Teaching</title>
 <style>
@@ -80,6 +80,34 @@ ul.task-list li input[type="checkbox"] {
 
     window['quarto-listings'] = window['quarto-listings'] || {};
     window['quarto-listings']['listing-ay_22-23'] = new List('listing-ay_22-23', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-ay_20-21 .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-description','listing-university','listing-number','listing-url','listing-logo','listing-semester',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-description","listing-university","listing-number","listing-url","listing-logo","listing-semester"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-ay_20-21'] = new List('listing-ay_20-21', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -225,7 +253,8 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">2022–23</a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">2019–20</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">2020–21</a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">2019–20</a></li>
   </ul>
 </nav>
     </div>
@@ -292,8 +321,8 @@ ul.task-list li input[type="checkbox"] {
             </p>
             <p class="course-description">Empowering Healthcare with Intelligent Solutions: Applied Machine Learning for Healthcare (AML4H)</p>
             <ul class="course-semesters">
-                <li><a href="hhttps://github.com/chiraltraining/PY4HDS"><i class="fa-solid fa-building-columns"></i> Cohort 01, June 2023</a></li>
-                <li><a href="https://github.com/chiraltraining/PY4HDS"><i class="fa-solid fa-building-columns"></i> Cohort 02, October 2023</a></li>
+                <li><a href="hhttps://github.com/chiraltraining/PY4HDS"><i class="fa-solid fa-building-columns"></i> Cohort 01</a></li>
+                <li><a href="https://github.com/chiraltraining/PY4HDS"><i class="fa-solid fa-building-columns"></i> Cohort 02</a></li>
             </ul>
         </div>
     </div>
@@ -311,8 +340,8 @@ ul.task-list li input[type="checkbox"] {
             </p>
             <p class="course-description">Unleash the Power of R: Empowering Research with Data Analysis</p>
             <ul class="course-semesters">
-                <li><a href="https://chiraltraining.github.io/RforResearch/"><i class="fa-solid fa-building-columns"></i> Cohort 01, June 2023</a></li>
-                <li><a href="https://chiraltraining.github.io/RforResearch/"><i class="fa-solid fa-building-columns"></i> Cohort 02, October 2023</a></li>
+                <li><a href="https://chiraltraining.github.io/RforResearch/"><i class="fa-solid fa-building-columns"></i> Cohort 01</a></li>
+                <li><a href="https://chiraltraining.github.io/RforResearch/"><i class="fa-solid fa-building-columns"></i> Cohort 02</a></li>
             </ul>
         </div>
     </div>
@@ -330,8 +359,8 @@ ul.task-list li input[type="checkbox"] {
             </p>
             <p class="course-description">Learn to Analyze Genomics, Metagenomics, and Transcriptomics Data with R</p>
             <ul class="course-semesters">
-                <li><a href="https://chiraltraining.github.io/RforBioinformatics/"><i class="fa-solid fa-building-columns"></i> Cohort 01, August 2023</a></li>
-                <li><a href="https://chiraltraining.github.io/RforBioinformatics/"><i class="fa-solid fa-building-columns"></i> Cohort 02, October 2023</a></li>
+                <li><a href="https://chiraltraining.github.io/RforBioinformatics/"><i class="fa-solid fa-building-columns"></i> Cohort 01</a></li>
+                <li><a href="https://chiraltraining.github.io/RforBioinformatics/"><i class="fa-solid fa-building-columns"></i> Cohort 02</a></li>
             </ul>
         </div>
     </div>
@@ -349,8 +378,8 @@ ul.task-list li input[type="checkbox"] {
             </p>
             <p class="course-description">Harness the Power of R: Simplifying RNA-Seq Data Analysis.</p>
             <ul class="course-semesters">
-                <li class="no-link"><i class="fa-solid fa-building-columns"></i> Cohort 01, August 2023</li>
-                <li class="no-link"><i class="fa-solid fa-building-columns"></i> Cohort 02, October 2023</li>
+                <li class="no-link"><i class="fa-solid fa-building-columns"></i> Cohort 01</li>
+                <li class="no-link"><i class="fa-solid fa-building-columns"></i> Cohort 02</li>
             </ul>
         </div>
     </div>
@@ -368,8 +397,8 @@ ul.task-list li input[type="checkbox"] {
             </p>
             <p class="course-description">Unleashing Insights: Analyzing Single Cell RNA-Seq Data with R.</p>
             <ul class="course-semesters">
-                <li class="no-link"><i class="fa-solid fa-building-columns"></i> Cohort 01, August 2023</li>
-                <li class="no-link"><i class="fa-solid fa-building-columns"></i> Cohort 02, October 2023</li>
+                <li class="no-link"><i class="fa-solid fa-building-columns"></i> Cohort 01</li>
+                <li class="no-link"><i class="fa-solid fa-building-columns"></i> Cohort 02</li>
             </ul>
         </div>
     </div>
@@ -387,8 +416,8 @@ ul.task-list li input[type="checkbox"] {
             </p>
             <p class="course-description">Unleashing the Power of Data in Life Sciences: Machine Learning for Bioinformatics</p>
             <ul class="course-semesters">
-                <li class="no-link"><i class="fa-solid fa-building-columns"></i> Cohort 01, October 2023</li>
-                <li class="no-link"><i class="fa-solid fa-building-columns"></i> Cohort 02, December 2023</li>
+                <li class="no-link"><i class="fa-solid fa-building-columns"></i> Cohort 01</li>
+                <li class="no-link"><i class="fa-solid fa-building-columns"></i> Cohort 02</li>
             </ul>
         </div>
     </div>
@@ -399,7 +428,77 @@ No matching items
 </div>
 </section>
 <section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1">2019–20</h2>
+<h2 class="anchored" data-anchor-id="section-1">2020–21</h2>
+<div id="listing-ay_20-21" class="quarto-listing quarto-listing-container-custom">
+<div class="teaching">
+    <div class="course-entry">
+        <div class="logo">
+            <a href="https://bioinformatics101.netlify.app/" target="_blank"><img src="logos/evalsp20.png" alt="Bioinformatics 101 - A Gentle Introduction to Bioinformatics" title="Bioinformatics 101 - A Gentle Introduction to Bioinformatics"></a>
+        </div>
+        <div class="body">
+            <p class="course-title">
+                <a href="https://bioinformatics101.netlify.app/" target="_blank">Bioinformatics 101 - A Gentle Introduction to Bioinformatics</a> 
+            </p>
+            <p class="course-details">
+                <span class="course-number">Bioinformatics 101</span> | 
+                <span class="course-university">CHIRAL Bangladesh</span>
+            </p>
+            <p class="course-description">The Basic Bioinformatics (Bioinformatics 101: A Gentle Introduction to Bioinformatics) Course provides a thorough understanding and introduction.</p>
+            <ul class="course-semesters">
+                <li><a href="https://bioinformatics101.netlify.app/"><i class="fa-solid fa-building-columns"></i> Cohort 01</a></li>
+                <li><a href="https://bioinformatics101.netlify.app/"><i class="fa-solid fa-building-columns"></i> Cohort 02</a></li>
+                <li><a href="https://bioinformatics101.netlify.app/"><i class="fa-solid fa-building-columns"></i> Cohort 03</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="course-entry">
+        <div class="logo">
+            <a href="https://chiral-hrt.netlify.app/" target="_blank"><img src="logos/evalsp20.png" alt="Health Research ToolBox - A Step by Step Guide for Beginners" title="Health Research ToolBox - A Step by Step Guide for Beginners"></a>
+        </div>
+        <div class="body">
+            <p class="course-title">
+                <a href="https://chiral-hrt.netlify.app/" target="_blank">Health Research ToolBox - A Step by Step Guide for Beginners</a> 
+            </p>
+            <p class="course-details">
+                <span class="course-number">HRT</span> | 
+                <span class="course-university">CHIRAL Bangladesh</span>
+            </p>
+            <p class="course-description">This course will give students a foundation in research principles and practice, mainly applied to public health.</p>
+            <ul class="course-semesters">
+                <li><a href="https://chiral-hrt.netlify.app/"><i class="fa-solid fa-building-columns"></i> Cohort 01</a></li>
+                <li><a href="https://chiral-hrt.netlify.app/"><i class="fa-solid fa-building-columns"></i> Cohort 02</a></li>
+                <li><a href="https://chiral-hrt.netlify.app/"><i class="fa-solid fa-building-columns"></i> Cohort 03</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="course-entry">
+        <div class="logo">
+            <a href="https://biostatswithr.netlify.app/" target="_blank"><img src="logos/evalsp20.png" alt="Fundamental of Biostatistics" title="Fundamental of Biostatistics"></a>
+        </div>
+        <div class="body">
+            <p class="course-title">
+                <a href="https://biostatswithr.netlify.app/" target="_blank">Fundamental of Biostatistics</a> 
+            </p>
+            <p class="course-details">
+                <span class="course-number">Biostats101</span> | 
+                <span class="course-university">CHIRAL Bangladesh</span>
+            </p>
+            <p class="course-description">This course will provide students a foundation in statistical analysis principles and practice, mainly applied to life sciences.</p>
+            <ul class="course-semesters">
+                <li><a href="https://biostatswithr.netlify.app/"><i class="fa-solid fa-building-columns"></i> Cohort 01</a></li>
+                <li><a href="https://biostatswithr.netlify.app/"><i class="fa-solid fa-building-columns"></i> Cohort 02</a></li>
+                <li><a href="https://biostatswithr.netlify.app/"><i class="fa-solid fa-building-columns"></i> Cohort 03</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="section-2" class="level2">
+<h2 class="anchored" data-anchor-id="section-2">2019–20</h2>
 <div id="listing-ay_19-20" class="quarto-listing quarto-listing-container-custom">
 <div class="teaching">
     <div class="course-entry">

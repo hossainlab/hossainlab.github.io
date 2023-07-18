@@ -19,9 +19,9 @@
   url: https://github.com/chiraltraining/PY4HDS
   logo: logos/aml4h.png
   semester:
-  - name: Cohort 01, June 2023
+  - name: Cohort 01
     url: hhttps://github.com/chiraltraining/PY4HDS
-  - name: Cohort 02, October 2023
+  - name: Cohort 02
     url: https://github.com/chiraltraining/PY4HDS
 
 - title: R for Research
@@ -31,9 +31,9 @@
   url: https://chiraltraining.github.io/RforResearch/
   logo: logos/rlogo.png
   semester:
-  - name: Cohort 01, June 2023
+  - name: Cohort 01
     url: https://chiraltraining.github.io/RforResearch/
-  - name: Cohort 02, October 2023
+  - name: Cohort 02
     url: https://chiraltraining.github.io/RforResearch/
 
 - title: R for Bioinformatics
@@ -43,9 +43,9 @@
   url: https://chiraltraining.github.io/RforBioinformatics/
   logo: logos/bioconductor.gif
   semester:
-  - name: Cohort 01, August 2023
+  - name: Cohort 01
     url: https://chiraltraining.github.io/RforBioinformatics/
-  - name: Cohort 02, October 2023
+  - name: Cohort 02
     url: https://chiraltraining.github.io/RforBioinformatics/
 
 - title: RNASeq Data Aanalysis with R
@@ -55,11 +55,10 @@
   url:
   logo: logos/bioconductor.gif
   semester:
-  - name: Cohort 01, August 2023
+  - name: Cohort 01
     url:
-  - name: Cohort 02, October 2023
+  - name: Cohort 02
     url:
-
 
 - title: Single Cell RNASeq Data Aanalysis with R
   description: "Unleashing Insights: Analyzing Single Cell RNA-Seq Data with R."
@@ -68,9 +67,9 @@
   url:
   logo: logos/bioconductor.gif
   semester:
-  - name: Cohort 01, August 2023
+  - name: Cohort 01
     url:
-  - name: Cohort 02, October 2023
+  - name: Cohort 02
     url:
 
 - title: Machine Learning for Bioinformatics
@@ -80,7 +79,7 @@
   url:
   logo: logos/bioconductor.gif
   semester:
-  - name: Cohort 01, October 2023
+  - name: Cohort 01
     url:
-  - name: Cohort 02, December 2023
+  - name: Cohort 02
     url:

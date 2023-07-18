@@ -1,0 +1,41 @@
+- title: Bioinformatics 101 - A Gentle Introduction to Bioinformatics
+  description: "The Basic Bioinformatics (Bioinformatics 101: A Gentle Introduction to Bioinformatics) Course provides a thorough understanding and introduction."
+  university: CHIRAL Bangladesh
+  number: Bioinformatics 101
+  url: https://bioinformatics101.netlify.app/
+  logo: logos/evalsp20.png
+  semester:
+  - name: Cohort 01
+    url: https://bioinformatics101.netlify.app/
+  - name: Cohort 02
+    url: https://bioinformatics101.netlify.app/
+  - name: Cohort 03
+    url: https://bioinformatics101.netlify.app/
+
+- title: Health Research ToolBox - A Step by Step Guide for Beginners
+  description: "This course will give students a foundation in research principles and practice, mainly applied to public health."
+  university: CHIRAL Bangladesh
+  number: HRT
+  url: https://chiral-hrt.netlify.app/
+  logo: logos/evalsp20.png
+  semester:
+  - name: Cohort 01
+    url: https://chiral-hrt.netlify.app/
+  - name: Cohort 02
+    url: https://chiral-hrt.netlify.app/
+  - name: Cohort 03
+    url: https://chiral-hrt.netlify.app/
+
+- title: Fundamental of Biostatistics
+  description: "This course will provide students a foundation in statistical analysis principles and practice, mainly applied to life sciences."
+  university: CHIRAL Bangladesh
+  number: Biostats101
+  url: https://biostatswithr.netlify.app/
+  logo: logos/evalsp20.png
+  semester:
+  - name: Cohort 01
+    url: https://biostatswithr.netlify.app/
+  - name: Cohort 02
+    url: https://biostatswithr.netlify.app/
+  - name: Cohort 03
+    url: https://biostatswithr.netlify.app/

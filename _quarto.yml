@@ -19,7 +19,7 @@ project:
 execute:
   # Re-render only when source changes
   freeze: auto
-description-meta: "Andreas Handel's personal website."
+description-meta: "Jubayer Hossain's personal website."
 engine: knitr
 
 
