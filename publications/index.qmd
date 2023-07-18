@@ -4,7 +4,7 @@ pagetitle: "Research | Md. Jubayer Hossain"
 toc: false
 listing:
   - id: articles
-    contents: "publications/*/*.qmd"
+    contents: "articles/*.qmd"
     template: ../ejs/article.ejs
     categories: true
     sort:

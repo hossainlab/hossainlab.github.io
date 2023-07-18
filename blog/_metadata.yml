@@ -8,12 +8,12 @@ date-format: "dddd, MMMM D, YYYY"
 title-block-banner: "#170C3A"
 
 # Add blog-post class to the banner header area
-format: 
+format:
   html:
     code-tools: true
     comments:
-      giscus: 
-        repo: andrewheiss/ath-quarto
+      giscus:
+        repo: hossainlab/hossainlab.github.io
         category: Blog comments
         category-id: DIC_kwDOIg6EJc4CSz92
         mapping: pathname

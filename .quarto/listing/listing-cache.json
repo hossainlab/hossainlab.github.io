@@ -7,7 +7,8 @@
       "project_1",
       "project_2",
       "pkg_1",
-      "pkg_2"
+      "pkg_2",
+      "projects"
     ],
     "talks\\index.qmd": [
       "talk_1",
@@ -62,7 +63,10 @@
     ],
     "publications\\index.qmd": [
       "publications/*/**.qmd",
-      "publications/*/*.qmd"
+      "publications/*/*.qmd",
+      "publications/*/index.qmd",
+      "articles/*/index.qmd",
+      "articles/*.qmd"
     ],
     "research\\index.qmd": [
       "articles/*/index.qmd",
@@ -71,7 +75,12 @@
       "reviews/*/index.qmd",
       "dormant-working-papers/*/index.qmd",
       "seminar-papers/*/index.qmd",
-      "translations/*/index.qmd"
+      "translations/*/index.qmd",
+      "in-reviews/*/index.qmd",
+      "conference-papers/*/index.qmd"
+    ],
+    "projects.qmd": [
+      "projects"
     ]
   }
 }

@@ -37,9 +37,9 @@
   {
     "objectID": "projects/pkg_1/index.html",
     "href": "projects/pkg_1/index.html",
-    "title": "pkg_1",
+    "title": "Infectious Disease Epidemiology - a Model-based Approach",
     "section": "",
-    "text": "This package does this."
+    "text": "An online book (perpetually under construction) convering infectious disease epidemiology using a model-based approach. Some parts of the book are fairly readable and complete enough that I use it when I teach a course on that topic. Other sections are currently only templates/outlines. While I try to ensure that what I write is correct, the whole book is not thoroughly fact-checked, error-corrected, properly referenced, etc. While I have been considering the idea of turning this into a full/real book, in my current thinking the cost-benefit analysis doesn’t pan out. I thus plan to leave it online for free as is, with occasional updates and fixes, but without an attempt to make it polished and complete enough for a printed book."
   },
   {
     "objectID": "blog.html",
@@ -95,7 +95,7 @@
     "href": "projects/index.html",
     "title": "Projects",
     "section": "",
-    "text": "This is an example of grid listing. You can specify the content in the yaml header in the .qmd file.\nIt is convenient to use id to link to multiple folders.\n\n\n\n\n\n\n\n\n\n\nproject_1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nproject_2\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "No matching items"
   },
   {
     "objectID": "projects/index.html#grid-listing",
@@ -459,7 +459,7 @@
     "href": "publications/index.html",
     "title": "Publications",
     "section": "",
-    "text": "No matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n         \n          Publication\n        \n         \n          Year\n        \n     \n  \n    \n      \n      \n    \n\n\n  \n    In-Silico Structural and Functional Annotation of Hypothetical Glycosyltransferase Protein\n    Shahnaj Akter , Sheikh Ambia, Sabiha Rafa, and Md. Jubayer Hossain\n    Structural and Functional Annotation\n    (2023)\n    \n      Details\n    \n    \n      DOI\n    \n    \n       Materials\n    \n  \n\n\nNo matching items"
   },
   {
     "objectID": "research/working-papers/heiss-ye-np-causal-inference/index.html",
@@ -1040,7 +1040,7 @@
     "href": "research/index.html#journal-articles",
     "title": "Research",
     "section": "Journal Articles",
-    "text": "Journal Articles\n\n\n\n\n        \n            \n                Suparna Chaudhry, Marc Dotson, and Andrew Heiss, “Who Cares About Crackdowns? Exploring the Role of Trust in Individual Philanthropy,” Global Policy 12, no. S5 (July 2021): 45–58, doi: 10.1111/1758-5899.12984\n            \n            \n                    \n                            Philanthropy\n                        \n                    \n                            Experiment\n                        \n                    \n                            Conjoint analysis\n                        \n                    \n                            Simulation\n                        \n                    \n                            Bayes\n                        \n                    \n                            INGOs\n                        \n            \n            \n                When seeing crackdown,\n                 / people with low social trust\n                 / are fairweather friends.\n            \n            \n                \n                    \n                        \n                             Full details »\n                        \n                    \n                    \n                        \n                             Preprint\n                        \n                    \n                    \n                        \n                             Final version\n                        \n                    \n                    \n                        \n                             Code\n                        \n                    \n                    \n                        \n                             Data\n                        \n                    \n                    \n                        \n                             Add to Zotero\n                        \n                    \n                \n            \n        \n\n\n\nNo matching items"
+    "text": "Journal Articles\n\n\n\n\n        \n            \n                Suparna Chaudhry, Marc Dotson, and Andrew Heiss, “Who Cares About Crackdowns? Exploring the Role of Trust in Individual Philanthropy,” Global Policy 12, no. S5 (July 2021): 45–58, doi: 10.1111/1758-5899.12984\n            \n            \n                    \n                            Philanthropy\n                        \n                    \n                            Experiment\n                        \n                    \n                            Conjoint analysis\n                        \n                    \n                            Simulation\n                        \n                    \n                            Bayes\n                        \n                    \n                            INGOs\n                        \n            \n            \n                \n                    \n                        \n                             Full details »\n                        \n                    \n                    \n                        \n                             Preprint\n                        \n                    \n                    \n                        \n                             Final version\n                        \n                    \n                    \n                        \n                             Code\n                        \n                    \n                    \n                        \n                             Data\n                        \n                    \n                    \n                        \n                             Add to Zotero\n                        \n                    \n                \n            \n        \n\n\n\nNo matching items"
   },
   {
     "objectID": "research/index.html#working-papers",
@@ -1279,5 +1279,47 @@
     "title": "Talks",
     "section": "2013",
     "text": "2013\n\n\n    \n                  \n            September 12, 2013\n        \n        \n            Telling Stories with Data\n            MPP workshop at the Sanford School of Public Policy | Durham, North Carolina\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub repository\n                    \n                \n            \n        \n    \n    \n                  \n            September 12, 2013\n        \n        \n            Practically Perfect Professional Policy Presentations\n            MPP workshop at the Sanford School of Public Policy | Durham, North Carolina\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub repository\n                    \n                \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "research/index.html#in-review",
+    "href": "research/index.html#in-review",
+    "title": "Research",
+    "section": "In Review",
+    "text": "In Review"
+  },
+  {
+    "objectID": "research/in-reviews/heiss-voluntas-review-2014/index.html",
+    "href": "research/in-reviews/heiss-voluntas-review-2014/index.html",
+    "title": "Review of Manufacturing Civil Society: Principles, Practices, and Effects, ed. Taco Brandsen, Willem Trommel, and Bram Verschuere",
+    "section": "",
+    "text": "Add to Zotero \n\n@article{Heiss:2015,\n    author = {Andrew Heiss},\n    doi = {10.1007/s11266-014-9541-3},\n    journal = {Voluntas: International Journal of Voluntary and Nonprofit Organizations},\n    pages = {728--730},\n    titleaddon = {\\bibstring{reviewof} Taco Brandsen, Willem Trommel, and Bram Verschuere (eds.), \\mkbibemph{Manufacturing Civil Society: Principles, Practices, and Effects}},\n    volume = {26},\n    year = {2015}}"
+  },
+  {
+    "objectID": "research/in-reviews/heiss-voluntas-review-2014/index.html#citation",
+    "href": "research/in-reviews/heiss-voluntas-review-2014/index.html#citation",
+    "title": "Review of Manufacturing Civil Society: Principles, Practices, and Effects, ed. Taco Brandsen, Willem Trommel, and Bram Verschuere",
+    "section": "",
+    "text": "Add to Zotero \n\n@article{Heiss:2015,\n    author = {Andrew Heiss},\n    doi = {10.1007/s11266-014-9541-3},\n    journal = {Voluntas: International Journal of Voluntary and Nonprofit Organizations},\n    pages = {728--730},\n    titleaddon = {\\bibstring{reviewof} Taco Brandsen, Willem Trommel, and Bram Verschuere (eds.), \\mkbibemph{Manufacturing Civil Society: Principles, Practices, and Effects}},\n    volume = {26},\n    year = {2015}}"
+  },
+  {
+    "objectID": "research/index.html#conference-papers",
+    "href": "research/index.html#conference-papers",
+    "title": "Research",
+    "section": "Conference Papers",
+    "text": "Conference Papers\n\n\n\n        \n            \n                “Explaining Support for Undemocratic Leaders in Democracies in the Middle East”Replication and extension of Amaney Jamal and Mark Tessler. 2008. “Attitudes in the Arab World.\" Journal of Democracy 19, no. 1 (January): 97–110.\n            \n            \n                    \n                            Authoritarianism\n                        \n            \n            \n                \n                    \n                        \n                             Full details »\n                        \n                    \n                    \n                        \n                             PDF\n                        \n                    \n                    \n                        \n                             Code\n                        \n                    \n                    \n                        \n                             Raw output\n                        \n                    \n                    \n                        \n                             Poster\n                        \n                    \n                \n            \n        \n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nCalories Burnt Prediction using Machine Learning\n\n\n\nMachine Learning\n\n\nCalories Burnt\n\n\nEpidemiology\n\n\nPublic Health\n\n\n\nThe Gradient Boosting Regressor model provides 99% accuracy in prediction of Calories Burn.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nESOL: Estimating Aqueous Solubility Directly from Molecular Structure\n\n\n\nMachine Learning\n\n\nDisease Diagnosis\n\n\nEpidemiology\n\n\nPublic Health\n\n\n\nThe Gradient Boosting Regressor model achieves an exceptional accuracy of 99% in predicting calories burnt during physical activities.\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/esol/index.html",
+    "href": "projects/esol/index.html",
+    "title": "ESOL: Estimating Aqueous Solubility Directly from Molecular Structure",
+    "section": "",
+    "text": "An online book (perpetually under construction) convering infectious disease epidemiology using a model-based approach. Some parts of the book are fairly readable and complete enough that I use it when I teach a course on that topic. Other sections are currently only templates/outlines. While I try to ensure that what I write is correct, the whole book is not thoroughly fact-checked, error-corrected, properly referenced, etc. While I have been considering the idea of turning this into a full/real book, in my current thinking the cost-benefit analysis doesn’t pan out. I thus plan to leave it online for free as is, with occasional updates and fixes, but without an attempt to make it polished and complete enough for a printed book."
   }
 ]

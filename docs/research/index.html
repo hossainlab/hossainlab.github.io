@@ -72,13 +72,69 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-project','listing-execute','listing-description-meta','listing-engine','listing-website','listing-format','listing-_quarto-vars','listing-language','listing-date-format','listing-title-block-banner','listing-toc','listing-toc-title','listing-toc-location','listing-include-back-link','listing-title','listing-date','listing-author','listing-categories','listing-pub-info','listing-doi','listing-haiku','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
+      valueNames: ['listing-project','listing-execute','listing-description-meta','listing-engine','listing-website','listing-format','listing-_quarto-vars','listing-language','listing-date-format','listing-title-block-banner','listing-toc','listing-toc-title','listing-toc-location','listing-include-back-link','listing-title','listing-date','listing-author','listing-categories','listing-pub-info','listing-doi','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
       
-      searchColumns: ["listing-project","listing-execute","listing-description-meta","listing-engine","listing-website","listing-format","listing-_quarto-vars","listing-language","listing-date-format","listing-title-block-banner","listing-toc","listing-toc-title","listing-toc-location","listing-include-back-link","listing-title","listing-date","listing-author","listing-categories","listing-pub-info","listing-doi","listing-haiku","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time"],
+      searchColumns: ["listing-project","listing-execute","listing-description-meta","listing-engine","listing-website","listing-format","listing-_quarto-vars","listing-language","listing-date-format","listing-title-block-banner","listing-toc","listing-toc-title","listing-toc-location","listing-include-back-link","listing-title","listing-date","listing-author","listing-categories","listing-pub-info","listing-doi","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
     window['quarto-listings']['listing-articles'] = new List('listing-articles', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-in-reviews .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-project','listing-execute','listing-description-meta','listing-engine','listing-website','listing-format','listing-_quarto-vars','listing-language','listing-date-format','listing-title-block-banner','listing-toc','listing-toc-title','listing-toc-location','listing-include-back-link','listing-title','listing-date','listing-author','listing-categories','listing-pub-info','listing-doi','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
+      
+      searchColumns: ["listing-project","listing-execute","listing-description-meta","listing-engine","listing-website","listing-format","listing-_quarto-vars","listing-language","listing-date-format","listing-title-block-banner","listing-toc","listing-toc-title","listing-toc-location","listing-include-back-link","listing-title","listing-date","listing-author","listing-categories","listing-pub-info","listing-doi","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-in-reviews'] = new List('listing-in-reviews', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-conference-papers .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-project','listing-execute','listing-description-meta','listing-engine','listing-website','listing-format','listing-_quarto-vars','listing-language','listing-date-format','listing-title-block-banner','listing-toc','listing-toc-title','listing-toc-location','listing-include-back-link','listing-title','listing-date','listing-author','listing-categories','listing-pub-info','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
+      
+      searchColumns: ["listing-project","listing-execute","listing-description-meta","listing-engine","listing-website","listing-format","listing-_quarto-vars","listing-language","listing-date-format","listing-title-block-banner","listing-toc","listing-toc-title","listing-toc-location","listing-include-back-link","listing-title","listing-date","listing-author","listing-categories","listing-pub-info","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-conference-papers'] = new List('listing-conference-papers', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -146,118 +202,6 @@ ul.task-list li input[type="checkbox"] {
       window['quarto-listing-loaded']();
     }
   })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-reviews .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-project','listing-execute','listing-description-meta','listing-engine','listing-website','listing-format','listing-_quarto-vars','listing-language','listing-date-format','listing-title-block-banner','listing-toc','listing-toc-title','listing-toc-location','listing-include-back-link','listing-title','listing-date','listing-author','listing-categories','listing-pub-info','listing-doi','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
-      
-      searchColumns: ["listing-project","listing-execute","listing-description-meta","listing-engine","listing-website","listing-format","listing-_quarto-vars","listing-language","listing-date-format","listing-title-block-banner","listing-toc","listing-toc-title","listing-toc-location","listing-include-back-link","listing-title","listing-date","listing-author","listing-categories","listing-pub-info","listing-doi","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-reviews'] = new List('listing-reviews', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-dormant-working-papers .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-project','listing-execute','listing-description-meta','listing-engine','listing-website','listing-format','listing-_quarto-vars','listing-language','listing-date-format','listing-title-block-banner','listing-toc','listing-toc-title','listing-toc-location','listing-include-back-link','listing-title','listing-date','listing-author','listing-categories','listing-pub-info','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
-      
-      searchColumns: ["listing-project","listing-execute","listing-description-meta","listing-engine","listing-website","listing-format","listing-_quarto-vars","listing-language","listing-date-format","listing-title-block-banner","listing-toc","listing-toc-title","listing-toc-location","listing-include-back-link","listing-title","listing-date","listing-author","listing-categories","listing-pub-info","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-dormant-working-papers'] = new List('listing-dormant-working-papers', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-seminar-papers .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-project','listing-execute','listing-description-meta','listing-engine','listing-website','listing-format','listing-_quarto-vars','listing-language','listing-date-format','listing-title-block-banner','listing-toc','listing-toc-title','listing-toc-location','listing-include-back-link','listing-title','listing-date','listing-author','listing-categories','listing-pub-info','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
-      
-      searchColumns: ["listing-project","listing-execute","listing-description-meta","listing-engine","listing-website","listing-format","listing-_quarto-vars","listing-language","listing-date-format","listing-title-block-banner","listing-toc","listing-toc-title","listing-toc-location","listing-include-back-link","listing-title","listing-date","listing-author","listing-categories","listing-pub-info","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-seminar-papers'] = new List('listing-seminar-papers', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-translations .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-project','listing-execute','listing-description-meta','listing-engine','listing-website','listing-format','listing-_quarto-vars','listing-language','listing-date-format','listing-title-block-banner','listing-toc','listing-toc-title','listing-toc-location','listing-include-back-link','listing-title','listing-date','listing-author','listing-pub-info','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
-      
-      searchColumns: ["listing-project","listing-execute","listing-description-meta","listing-engine","listing-website","listing-format","listing-_quarto-vars","listing-language","listing-date-format","listing-title-block-banner","listing-toc","listing-toc-title","listing-toc-location","listing-include-back-link","listing-title","listing-date","listing-author","listing-pub-info","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-translations'] = new List('listing-translations', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
   </script>
 <style>
 
@@ -298,8 +242,8 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../research/index.html" rel="" target="" aria-current="page">
- <span class="menu-text">Research</span></a>
+    <a class="nav-link" href="../publications/index.html" rel="" target="">
+ <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../talks/index.html" rel="" target="">
@@ -392,12 +336,12 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#journal-articles" id="toc-journal-articles" class="nav-link active" data-scroll-target="#journal-articles">Journal Articles</a></li>
+  <li><a href="#conference-papers" id="toc-conference-papers" class="nav-link" data-scroll-target="#conference-papers">Conference Papers</a></li>
+  <li><a href="#in-review" id="toc-in-review" class="nav-link" data-scroll-target="#in-review">In Review</a></li>
   <li><a href="#working-papers" id="toc-working-papers" class="nav-link" data-scroll-target="#working-papers">Working Papers</a></li>
-  <li><a href="#book-chapters" id="toc-book-chapters" class="nav-link" data-scroll-target="#book-chapters">Book Chapters</a></li>
-  <li><a href="#reviews" id="toc-reviews" class="nav-link" data-scroll-target="#reviews">Reviews</a></li>
   </ul>
 </nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="Authoritarianism">Authoritarianism <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Bayes">Bayes <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Causal inference">Causal inference <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Civil society">Civil society <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Conjoint analysis">Conjoint analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Egypt">Egypt <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Experiment">Experiment <span class="quarto-category-count">(1)</span></div><div class="category" data-category="INGOs">INGOs <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Institutions">Institutions <span class="quarto-category-count">(1)</span></div><div class="category" data-category="International relations">International relations <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Methods">Methods <span class="quarto-category-count">(1)</span></div><div class="category" data-category="NGOs">NGOs <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Nonprofits">Nonprofits <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Philanthropy">Philanthropy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Simulation">Simulation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Text analysis">Text analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Topic modeling">Topic modeling <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Authoritarianism">Authoritarianism <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Bayes">Bayes <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Causal inference">Causal inference <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Civil society">Civil society <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Conjoint analysis">Conjoint analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Experiment">Experiment <span class="quarto-category-count">(1)</span></div><div class="category" data-category="INGOs">INGOs <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Institutions">Institutions <span class="quarto-category-count">(1)</span></div><div class="category" data-category="International relations">International relations <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Methods">Methods <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Nonprofits">Nonprofits <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Philanthropy">Philanthropy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Simulation">Simulation <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -410,7 +354,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="research project-list">
 <ul class="list">
-        <li class="project" data-index="0" data-categories="Philanthropy,Experiment,Conjoint analysis,Simulation,Bayes,INGOs" data-listing-date-sort="1619460000000" data-listing-file-modified-sort="1688399916000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+        <li class="project" data-index="0" data-categories="Philanthropy,Experiment,Conjoint analysis,Simulation,Bayes,INGOs" data-listing-date-sort="1619460000000" data-listing-file-modified-sort="1689706150571" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
             <div class="project-content listing-pub-info">
                 <p><a href="http://www.suparnachaudhry.com/">Suparna Chaudhry</a>, <a href="https://marriottschool.byu.edu/directory/details?id=50683">Marc Dotson</a>, and <strong>Andrew Heiss</strong>, “Who Cares About Crackdowns? Exploring the Role of Trust in Individual Philanthropy,” <em>Global Policy</em> 12, no. S5 (July 2021): 45–58, doi: <a href="https://doi.org/10.1111/1758-5899.12984"><code>10.1111/1758-5899.12984</code></a></p>
             </div>
@@ -433,11 +377,6 @@ ul.task-list li input[type="checkbox"] {
                     <div class="project-category"><a href="#category=INGOs">
                             INGOs
                         </a></div>
-            </div>
-            <div class="haiku">
-                When seeing crackdown,
-                 / people with low social trust
-                 / are fairweather friends.
             </div>
             <div class="project-details-listing">
                 <ul class="project-links">
@@ -481,6 +420,63 @@ No matching items
 </div>
 </div>
 </section>
+<section id="conference-papers" class="level2">
+<h2 class="anchored" data-anchor-id="conference-papers">Conference Papers</h2>
+<div id="listing-conference-papers" class="quarto-listing quarto-listing-container-custom">
+<div class="research project-list">
+<ul class="list">
+        <li class="project" data-index="0" data-categories="Authoritarianism" data-listing-date-sort="1367258400000" data-listing-file-modified-sort="1688399916000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+            <div class="project-content listing-pub-info">
+                <p>“Explaining Support for Undemocratic Leaders in Democracies in the Middle East”<br>Replication and extension of Amaney Jamal and Mark Tessler. 2008. <a href="https://www.princeton.edu/~ajamal/Jamal_Tessler.97-110.pdf">“Attitudes in the Arab World."</a> <em>Journal of Democracy</em> 19, no. 1 (January): 97–110.</p>
+            </div>
+            <div class="project-categories">
+                    <div class="project-category"><a href="#category=Authoritarianism">
+                            Authoritarianism
+                        </a></div>
+            </div>
+            <div class="project-details-listing">
+                <ul class="project-links">
+                    <li class="project-link details">
+                        <a href="../research/conference-papers/heiss-undemocratic-leaders/index.html" class="listing-name">
+                            <i class="fa-solid fa-circle-info"></i> Full details »
+                        </a>
+                    </li>
+                    <li class="project-link">
+                        <a href="../2013-seminar-heiss-undemocratic-leaders.pdf">
+                            <i class="fa-solid fa-file-pdf"></i> PDF
+                        </a>
+                    </li>
+                    <li class="project-link">
+                        <a href="https://github.com/andrewheiss/Attitudes-in-the-Arab-World">
+                            <i class="fa-brands fa-github"></i> Code
+                        </a>
+                    </li>
+                    <li class="project-link">
+                        <a href="../2013-seminar-heiss-undemocratic-leaders-replication.html">
+                            <i class="fa-solid fa-chart-simple"></i> Raw output
+                        </a>
+                    </li>
+                    <li class="project-link">
+                        <a href="../2013-seminar-heiss-undemocratic-leaders-poster.pdf">
+                            <i class="fa-solid fa-square"></i> Poster
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+</ul>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="in-review" class="level2">
+<h2 class="anchored" data-anchor-id="in-review">In Review</h2>
+<div id="reviews">
+
+</div>
+</section>
 <section id="working-papers" class="level2">
 <h2 class="anchored" data-anchor-id="working-papers">Working Papers</h2>
 <div id="listing-working-papers" class="quarto-listing quarto-listing-container-custom">
@@ -522,10 +518,54 @@ No matching items
 No matching items
 </div>
 </div>
+
+
+
 </section>
-<section id="book-chapters" class="level2">
-<h2 class="anchored" data-anchor-id="book-chapters">Book Chapters</h2>
-<div id="listing-book-chapters" class="quarto-listing quarto-listing-container-custom">
+
+<div class="quarto-listing quarto-listing-container-custom" id="listing-in-reviews">
+<div class="research project-list">
+<ul class="list">
+        <li class="project" data-index="0" data-categories="Civil society" data-listing-date-sort="1427824800000" data-listing-file-modified-sort="1688399916000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+            <div class="project-content listing-pub-info">
+                <p><strong>Andrew Heiss</strong>, review of Taco Brandsen, Willem Trommel, and Bram Verschuere (eds.), <em>Manufacturing Civil Society: Principles, Practices, and Effects</em>, <em>Voluntas: International Journal of Voluntary and Nonprofit Organizations</em> 26, no. 2 (April 2014): 728–30, doi: <a href="https://doi.org/10.1007/s11266-014-9541-3"><code>10.1007/s11266-014-9541-3</code></a>.</p>
+            </div>
+            <div class="project-categories">
+                    <div class="project-category"><a href="#category=Civil society">
+                            Civil society
+                        </a></div>
+            </div>
+            <div class="project-details-listing">
+                <ul class="project-links">
+                    <li class="project-link details">
+                        <a href="../research/in-reviews/heiss-voluntas-review-2014/index.html" class="listing-name">
+                            <i class="fa-solid fa-circle-info"></i> Full details »
+                        </a>
+                    </li>
+                    <li class="project-link">
+                        <a href="../2015-heiss-voluntas-review.pdf">
+                            <i class="fa-solid fa-file-pdf"></i> Preprint
+                        </a>
+                    </li>
+                    <li class="project-link">
+                        <a href="https://doi.org/10.1007/s11266-014-9541-3">
+                            <i class="fa-solid fa-scroll"></i> Final version
+                        </a>
+                    </li>
+                    <li class="project-link">
+                        <a href="https://www.zotero.org/save?type=doi&amp;q=10.1007/s11266-014-9541-3">
+                            <i class="ai ai-zotero"></i> Add to Zotero
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+</ul>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div><div class="quarto-listing quarto-listing-container-custom" id="listing-book-chapters">
 <div class="research project-list">
 <ul class="list">
         <li class="project" data-index="0" data-categories="International relations,Institutions" data-listing-date-sort="1493575200000" data-listing-file-modified-sort="1688399916000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
@@ -565,183 +605,6 @@ No matching items
                     <li class="project-link">
                         <a href="https://www.zotero.org/save?type=doi&amp;q=10.4324/9781315301914">
                             <i class="ai ai-zotero"></i> Add to Zotero
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </li>
-</ul>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-</section>
-<section id="reviews" class="level2">
-<h2 class="anchored" data-anchor-id="reviews">Reviews</h2>
-<div id="listing-reviews" class="quarto-listing quarto-listing-container-custom">
-<div class="research project-list">
-<ul class="list">
-        <li class="project" data-index="0" data-categories="Civil society" data-listing-date-sort="1427824800000" data-listing-file-modified-sort="1688399916000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-            <div class="project-content listing-pub-info">
-                <p><strong>Andrew Heiss</strong>, review of Taco Brandsen, Willem Trommel, and Bram Verschuere (eds.), <em>Manufacturing Civil Society: Principles, Practices, and Effects</em>, <em>Voluntas: International Journal of Voluntary and Nonprofit Organizations</em> 26, no. 2 (April 2014): 728–30, doi: <a href="https://doi.org/10.1007/s11266-014-9541-3"><code>10.1007/s11266-014-9541-3</code></a>.</p>
-            </div>
-            <div class="project-categories">
-                    <div class="project-category"><a href="#category=Civil society">
-                            Civil society
-                        </a></div>
-            </div>
-            <div class="project-details-listing">
-                <ul class="project-links">
-                    <li class="project-link details">
-                        <a href="../research/reviews/heiss-voluntas-review-2014/index.html" class="listing-name">
-                            <i class="fa-solid fa-circle-info"></i> Full details »
-                        </a>
-                    </li>
-                    <li class="project-link">
-                        <a href="../2015-heiss-voluntas-review.pdf">
-                            <i class="fa-solid fa-file-pdf"></i> Preprint
-                        </a>
-                    </li>
-                    <li class="project-link">
-                        <a href="https://doi.org/10.1007/s11266-014-9541-3">
-                            <i class="fa-solid fa-scroll"></i> Final version
-                        </a>
-                    </li>
-                    <li class="project-link">
-                        <a href="https://www.zotero.org/save?type=doi&amp;q=10.1007/s11266-014-9541-3">
-                            <i class="ai ai-zotero"></i> Add to Zotero
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </li>
-</ul>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-
-
-
-</section>
-
-<div class="quarto-listing quarto-listing-container-custom" id="listing-dormant-working-papers">
-<div class="research project-list">
-<ul class="list">
-        <li class="project" data-index="0" data-categories="Egypt,Text analysis,Topic modeling,NGOs" data-listing-date-sort="1408471200000" data-listing-file-modified-sort="1688399916000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-            <div class="project-content listing-pub-info">
-                <p>"Sources of Advocacy: When Does the Media Give Voice to Egyptian Advocacy NGOs?" (with Ken Rogerson, Duke University)</p>
-            </div>
-            <div class="project-categories">
-                    <div class="project-category"><a href="#category=Egypt">
-                            Egypt
-                        </a></div>
-                    <div class="project-category"><a href="#category=Text analysis">
-                            Text analysis
-                        </a></div>
-                    <div class="project-category"><a href="#category=Topic modeling">
-                            Topic modeling
-                        </a></div>
-                    <div class="project-category"><a href="#category=NGOs">
-                            NGOs
-                        </a></div>
-            </div>
-            <div class="project-details-listing">
-                <ul class="project-links">
-                    <li class="project-link details">
-                        <a href="../research/dormant-working-papers/heiss-rogerson-sources/index.html" class="listing-name">
-                            <i class="fa-solid fa-circle-info"></i> Full details »
-                        </a>
-                    </li>
-                    <li class="project-link">
-                        <a href="../2014-heiss-rogerson-sources.pdf">
-                            <i class="fa-solid fa-file-pdf"></i> PDF
-                        </a>
-                    </li>
-                    <li class="project-link">
-                        <a href="https://github.com/andrewheiss/Egyptian-NGO-sources-in-media">
-                            <i class="fa-brands fa-github"></i> Code
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </li>
-</ul>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div><div class="quarto-listing quarto-listing-container-custom" id="listing-seminar-papers">
-<div class="research project-list">
-<ul class="list">
-        <li class="project" data-index="0" data-categories="Authoritarianism" data-listing-date-sort="1367258400000" data-listing-file-modified-sort="1688399916000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-            <div class="project-content listing-pub-info">
-                <p>“Explaining Support for Undemocratic Leaders in Democracies in the Middle East”<br>Replication and extension of Amaney Jamal and Mark Tessler. 2008. <a href="https://www.princeton.edu/~ajamal/Jamal_Tessler.97-110.pdf">“Attitudes in the Arab World."</a> <em>Journal of Democracy</em> 19, no. 1 (January): 97–110.</p>
-            </div>
-            <div class="project-categories">
-                    <div class="project-category"><a href="#category=Authoritarianism">
-                            Authoritarianism
-                        </a></div>
-            </div>
-            <div class="project-details-listing">
-                <ul class="project-links">
-                    <li class="project-link details">
-                        <a href="../research/seminar-papers/heiss-undemocratic-leaders/index.html" class="listing-name">
-                            <i class="fa-solid fa-circle-info"></i> Full details »
-                        </a>
-                    </li>
-                    <li class="project-link">
-                        <a href="../2013-seminar-heiss-undemocratic-leaders.pdf">
-                            <i class="fa-solid fa-file-pdf"></i> PDF
-                        </a>
-                    </li>
-                    <li class="project-link">
-                        <a href="https://github.com/andrewheiss/Attitudes-in-the-Arab-World">
-                            <i class="fa-brands fa-github"></i> Code
-                        </a>
-                    </li>
-                    <li class="project-link">
-                        <a href="../2013-seminar-heiss-undemocratic-leaders-replication.html">
-                            <i class="fa-solid fa-chart-simple"></i> Raw output
-                        </a>
-                    </li>
-                    <li class="project-link">
-                        <a href="../2013-seminar-heiss-undemocratic-leaders-poster.pdf">
-                            <i class="fa-solid fa-square"></i> Poster
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </li>
-</ul>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div><div class="quarto-listing quarto-listing-container-custom" id="listing-translations">
-<div class="research project-list">
-<ul class="list">
-        <li class="project" data-index="0" data-listing-date-sort="1293818400000" data-listing-file-modified-sort="1688399916000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-            <div class="project-content listing-pub-info">
-                <p>Prince, Mona. 2011. "Three Suitcases for Departure (<em>Thalatha Haqaʾib lil-Safar</em> / <span class="rtl">ثلاثة حقائب للسفر</span>)." In <em>The Literary Life of Cairo: One Hundred Years in the Heart of the City</em>, edited by Samia Mehrez, translated by Andrew Heiss, 212–13. Cairo: American University in Cairo Press.</p>
-            </div>
-            <div class="project-details-listing">
-                <ul class="project-links">
-                    <li class="project-link details">
-                        <a href="../research/translations/heiss-prince-2011/index.html" class="listing-name">
-                            <i class="fa-solid fa-circle-info"></i> Full details »
-                        </a>
-                    </li>
-                    <li class="project-link">
-                        <a href="http://www.amazon.com/The-Literary-Life-Cairo-Hundred/dp/9774163907">
-                            <i class="fa-solid fa-book"></i> Book
-                        </a>
-                    </li>
-                    <li class="project-link">
-                        <a href="../2011-heiss-prince.pdf">
-                            <i class="fa-solid fa-file-pdf"></i> PDF
                         </a>
                     </li>
                 </ul>

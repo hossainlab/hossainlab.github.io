@@ -1,0 +1,14 @@
+---
+title: "ESOL: Estimating Aqueous Solubility Directly from Molecular Structure"
+description: "The Gradient Boosting Regressor model achieves an exceptional accuracy of 99% in predicting calories burnt during physical activities."
+image: featured.png
+image-alt: IDEMA book logo
+categories:
+  - Machine Learning 
+  - Disease Diagnosis 
+  - Epidemiology
+  - Public Health
+about:
+  template: solana
+  image: featured.png
+---

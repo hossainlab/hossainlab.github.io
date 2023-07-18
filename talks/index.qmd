@@ -5,7 +5,7 @@ listing:
     contents: talks_2022.yml
     sort: "date desc"
     template: ../html/talks/listing.ejs
-title-block-banner: "#FB9E07"
+# title-block-banner: "#FB9E07"
 page-layout: full
 toc: true
 toc-location: right

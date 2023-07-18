@@ -40,12 +40,12 @@ website:
           file: index.qmd
         - text: "Blog"
           file: blog/index.qmd
-        - text: "Research"
-          file: research/index.qmd
+        - text: "Publications"
+          file: publications/index.qmd
         - text: "Talks"
           file: talks/index.qmd
         - text: "Projects"
-          file: projects/index.qmd
+          file: projects.qmd
         - text: "Resources"
           file: resources.qmd
         - text: "Teaching"

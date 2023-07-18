@@ -6,28 +6,20 @@ listing:
     sort: "date desc"
     template: ../html/research/listing.ejs
     categories: true
+  - id: in-reviews
+    contents: "in-reviews/*/index.qmd"
+    sort: "date desc"
+    template: ../html/research/listing.ejs
+  - id: conference-papers
+    contents: "conference-papers/*/index.qmd"
+    sort: "date desc"
+    template: ../html/research/listing.ejs
   - id: working-papers
     contents: "working-papers/*/index.qmd"
     sort: "date desc"
     template: ../html/research/listing.ejs
   - id: book-chapters
     contents: "chapters/*/index.qmd"
-    sort: "date desc"
-    template: ../html/research/listing.ejs
-  - id: reviews
-    contents: "reviews/*/index.qmd"
-    sort: "date desc"
-    template: ../html/research/listing.ejs
-  - id: dormant-working-papers
-    contents: "dormant-working-papers/*/index.qmd"
-    sort: "date desc"
-    template: ../html/research/listing.ejs
-  - id: seminar-papers
-    contents: "seminar-papers/*/index.qmd"
-    sort: "date desc"
-    template: ../html/research/listing.ejs
-  - id: translations
-    contents: "translations/*/index.qmd"
     sort: "date desc"
     template: ../html/research/listing.ejs
 page-layout: full
@@ -44,6 +36,16 @@ Welcome to my publications page! Here you will find a curated collection of my r
 :::{#articles}
 :::
 
+## Conference Papers 
+
+:::{#conference-papers}
+:::
+
+
+## In Review 
+
+:::{#reviews}
+:::
 
 ## Working Papers
 
@@ -51,14 +53,5 @@ Welcome to my publications page! Here you will find a curated collection of my r
 :::
 
 
-## Book Chapters
 
-:::{#book-chapters}
-:::
-
-
-## Reviews
-
-:::{#reviews}
-:::
 

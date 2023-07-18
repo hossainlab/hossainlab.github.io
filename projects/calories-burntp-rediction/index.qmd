@@ -1,0 +1,14 @@
+---
+title: "Calories Burnt Prediction using Machine Learning"
+description: "The Gradient Boosting Regressor model provides 99% accuracy in prediction of Calories Burn."
+image: featured.jpg
+image-alt: images
+categories:
+  - Machine Learning 
+  - Calories Burnt
+  - Epidemiology
+  - Public Health
+about:
+  template: solana
+  image: featured.png
+---

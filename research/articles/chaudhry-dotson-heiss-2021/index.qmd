@@ -43,10 +43,6 @@ pub-info:
   extra: >-
     Presented at a workshop for a special issue of *Global Policy* entitled “Restricting NGOs: From Pushback to Accommodation,” University of Amsterdam, The Netherlands, June 2020 (held online due to COVID-19)
 doi: 10.1111/1758-5899.12984
-haiku:
-  - When seeing crackdown,
-  - people with low social trust
-  - are fairweather friends.
 ---
 
 ![Preregistered](preregistered_large_color.png) &emsp; ![Open data](data_large_color.png) &emsp; ![Open](materials_large_color.png)

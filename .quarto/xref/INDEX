@@ -193,5 +193,20 @@
   },
   "research/working-papers/heiss-ye-np-causal-inference/index.qmd": {
     "index.html": "5d668fb6"
+  },
+  "research/in-reviews/heiss-voluntas-review-2014/index.qmd": {
+    "index.html": "61f1c671"
+  },
+  "research/conference-papers/heiss-undemocratic-leaders/index.qmd": {
+    "index.html": "bcf4bf2d"
+  },
+  "projects.qmd": {
+    "projects.html": "a57199f4"
+  },
+  "projects/esol/index.qmd": {
+    "index.html": "0aa16312"
+  },
+  "projects/calories-burntp-rediction/index.qmd": {
+    "index.html": "491bb908"
   }
 }
