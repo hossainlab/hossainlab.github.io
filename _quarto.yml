@@ -32,6 +32,7 @@ website:
     left: "&copy; Copyright 2022, Md. Jubayer Hossain"
     right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
   navbar:
+      pinned: true
       background: "#99ccff"
       logo: /files/logo.png
       left:
@@ -39,8 +40,8 @@ website:
           file: index.qmd
         - text: "Blog"
           file: blog/index.qmd
-        - text: "Publications"
-          file: publications.qmd
+        - text: "Research"
+          file: research/index.qmd
         - text: "Talks"
           file: talks/index.qmd
         - text: "Projects"

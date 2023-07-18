@@ -1,41 +1,28 @@
 ---
 title: "Talks"
 listing:
-  - id: rstats
-    max-description-length: 500
-    image-height: 150px
-    fields: [title, description, image, date]
-    contents: 
-      - talk_1
-    type: default
-    grid-item-border: false
-    sort-ui: false
-    filter-ui: false
-
-  - id: ehr
-    max-description-length: 500
-    image-height: 150px
-    fields: [title, description, image, date]
-    contents: 
-      - talk_2
-    type: default
-    grid-item-border: false
-    sort-ui: false
-    sort: "priority asc"
-    filter-ui: false
+  - id: talks_2022
+    contents: talks_2022.yml
+    sort: "date desc"
+    template: ../html/talks/listing.ejs
+title-block-banner: "#FB9E07"
+page-layout: full
+toc: true
+toc-location: right
+toc-title: Year
+date-format: "MMMM D, YYYY"
 ---
 
-## Rstats
 
-::: {#rstats}
+This page contains the source code, links, and slides for various workshops, talks, lectures, and presentations I've given. Research presentations given at conferences are typically stored in their respective repositories on GitHub; one-off workshops and talks can all be found in a [catch-all GitHub repository](https://github.com/hossainlab/talks).
+
+::: {.callout-note}
+### Copyright
+
+Except where noted, all content is © Md. Jubayer Hossain and licensed under [Creative Commons](https://creativecommons.org/licenses/by-sa/4.0/).
 :::
 
+## 2022
 
-## Electronic Health Records 
-
-::: {#ehr}
+:::{#talks_2022}
 :::
-
-
-
-

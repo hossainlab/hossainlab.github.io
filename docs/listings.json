@@ -1,10 +1,7 @@
 [
   {
     "listing": "/talks/index.html",
-    "items": [
-      "/talks/talk_1/index.html",
-      "/talks/talk_2/index.html"
-    ]
+    "items": []
   },
   {
     "listing": "/blog.html",
@@ -43,5 +40,21 @@
   {
     "listing": "/teaching/index.html",
     "items": []
+  },
+  {
+    "listing": "/publications/index.html",
+    "items": []
+  },
+  {
+    "listing": "/research/index.html",
+    "items": [
+      "/research/articles/chaudhry-dotson-heiss-2021/index.html",
+      "/research/working-papers/heiss-ye-np-causal-inference/index.html",
+      "/research/chapters/johnson-heiss-2018/index.html",
+      "/research/reviews/heiss-voluntas-review-2014/index.html",
+      "/research/dormant-working-papers/heiss-rogerson-sources/index.html",
+      "/research/seminar-papers/heiss-undemocratic-leaders/index.html",
+      "/research/translations/heiss-prince-2011/index.html"
+    ]
   }
 ]

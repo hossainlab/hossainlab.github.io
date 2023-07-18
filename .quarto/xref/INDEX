@@ -88,5 +88,110 @@
   },
   "blog/2023/01/09/syllabus-csl-pandoc/index.qmd": {
     "index.html": "a0ed7bb4"
+  },
+  "publications/index.qmd": {
+    "index.html": "b981176f"
+  },
+  "research/articles/chaudhry-dotson-heiss-2021/index.qmd": {
+    "index.html": "11efdf29"
+  },
+  "research/articles/chaudhry-heiss-ngos-philanthropy/index.qmd": {
+    "index.html": "052dfae2"
+  },
+  "research/articles/chaudhry-heiss-ngos-repression/index.qmd": {
+    "index.html": "b0be9923"
+  },
+  "research/articles/heiss-2012/index.qmd": {
+    "index.html": "08b4dfe3"
+  },
+  "research/articles/heiss-2019-taking-control/index.qmd": {
+    "index.html": "3832d080"
+  },
+  "research/articles/heiss-johnson-2016/index.qmd": {
+    "index.html": "47064503"
+  },
+  "research/articles/heiss-kelley-2017/index.qmd": {
+    "index.html": "5820c6cf"
+  },
+  "research/articles/heiss-kelley-2017a/index.qmd": {
+    "index.html": "1f8a5367"
+  },
+  "research/articles/peck-heiss-2021/index.qmd": {
+    "index.html": "b8b70574"
+  },
+  "research/articles/witesman-heiss-2016/index.qmd": {
+    "index.html": "a75db8cf"
+  },
+  "research/chapters/chaudhry-heiss-closing-space/index.qmd": {
+    "index.html": "bdf23ddc"
+  },
+  "research/chapters/heiss-causal-inference-2021/index.qmd": {
+    "index.html": "a6952624"
+  },
+  "research/chapters/heiss-ngo-ir-2019/index.qmd": {
+    "index.html": "16ac0e12"
+  },
+  "research/chapters/johnson-heiss-2018/index.qmd": {
+    "index.html": "2dfd6cfa"
+  },
+  "research/dormant-working-papers/heiss-rogerson-discourse/index.qmd": {
+    "index.html": "323488f0"
+  },
+  "research/dormant-working-papers/heiss-rogerson-sources/index.qmd": {
+    "index.html": "f22f5b51"
+  },
+  "research/index.qmd": {
+    "index.html": "789d101f"
+  },
+  "research/reviews/heiss-death-idealism/index.qmd": {
+    "index.html": "50ed2d00"
+  },
+  "research/reviews/heiss-voluntas-review-2014/index.qmd": {
+    "index.html": "0af9bfb8"
+  },
+  "research/seminar-papers/heiss-ngo-cooperation/index.qmd": {
+    "index.html": "eee92b9e"
+  },
+  "research/seminar-papers/heiss-undemocratic-leaders/index.qmd": {
+    "index.html": "59feec05"
+  },
+  "research/translations/heiss-abdel-samad-2011/index.qmd": {
+    "index.html": "a68cf3a0"
+  },
+  "research/translations/heiss-prince-2011/index.qmd": {
+    "index.html": "fa8093b9"
+  },
+  "research/working-papers/arel-bundock-greifer-heiss-mfxplainer/index.qmd": {
+    "index.html": "c457e500"
+  },
+  "research/working-papers/chaudhry-comstock-heiss-pandemic-pass/index.qmd": {
+    "index.html": "71b69584"
+  },
+  "research/working-papers/chaudhry-dotson-heiss-why-donors-donate/index.qmd": {
+    "index.html": "23b1ffeb"
+  },
+  "research/working-papers/chaudhry-heiss-derogations/index.qmd": {
+    "index.html": "016ab394"
+  },
+  "research/working-papers/chaudhry-heiss-ngos-aid/index.qmd": {
+    "index.html": "4d3e081c"
+  },
+  "research/working-papers/heiss-amicable-contempt/index.qmd": {
+    "index.html": "808bb00e"
+  },
+  "research/working-papers/heiss-mission-money-environment/index.qmd": {
+    "index.html": "7dcc41a3"
+  },
+  "research/working-papers/heiss-nafa-bayes-ipw/index.qmd": {
+    "index.html": "42f8adc9"
+  },
+  "research/working-papers/heiss-program-capture-ingos/index.qmd": {
+    "index.html": "66df8d2d"
+  },
+  "research/working-papers/heiss-ye-china-ongos/index.qmd": {
+    "index.html": "e9a1e3df"
+  },
+  "research/working-papers/heiss-ye-np-causal-inference/index.qmd": {
+    "index.html": "5d668fb6"
   }
 }

@@ -11,7 +11,16 @@
     ],
     "talks\\index.qmd": [
       "talk_1",
-      "talk_2"
+      "talk_2",
+      "talks_2022.yml",
+      "talks_2021.yml",
+      "talks_2020.yml",
+      "talks_2019.yml",
+      "talks_2018.yml",
+      "talks_2016.yml",
+      "talks_2015.yml",
+      "talks_2014.yml",
+      "talks_2013.yml"
     ],
     "blog\\blog.qmd": [
       "blog"
@@ -50,6 +59,19 @@
       "ay_18-19.yml",
       "ay_17-18.yml",
       "ay_older.yml"
+    ],
+    "publications\\index.qmd": [
+      "publications/*/**.qmd",
+      "publications/*/*.qmd"
+    ],
+    "research\\index.qmd": [
+      "articles/*/index.qmd",
+      "working-papers/*/index.qmd",
+      "chapters/*/index.qmd",
+      "reviews/*/index.qmd",
+      "dormant-working-papers/*/index.qmd",
+      "seminar-papers/*/index.qmd",
+      "translations/*/index.qmd"
     ]
   }
 }

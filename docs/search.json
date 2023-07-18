@@ -11,7 +11,7 @@
     "href": "talks/index.html",
     "title": "Talks",
     "section": "",
-    "text": "Talk at Oslo UseR meetup\n\n\n\n\n\n\nApr 2, 2019\n\n\n\n\n\n\nNo matching items"
+    "text": "This page contains the source code, links, and slides for various workshops, talks, lectures, and presentations I’ve given. Research presentations given at conferences are typically stored in their respective repositories on GitHub; one-off workshops and talks can all be found in a catch-all GitHub repository."
   },
   {
     "objectID": "talks/index.html#rstats",
@@ -453,5 +453,831 @@
     "title": "How to migrate from BibDesk to Zotero for pandoc-based writing",
     "section": "Example workflow with Quarto / R Markdown / pandoc",
     "text": "Example workflow with Quarto / R Markdown / pandoc\nPart of the reason I’ve been hesitant to switch away from BibDesk for so long is because I couldn’t figure out a way to connect a Markdown document to my Zotero database. With documents that get parsed through pandoc (like R Markdown or Quarto), you add a line in the YAML front matter to specify what file contains your references:\n---\ntitle: Whatever\nauthor: Whoever\nbibliography: references.bib\n---\nSince Zotero keeps everything in one big database, I didn’t see a way to add something like bibliography: My Zotero Database to the YAML front matter—pandoc requires that you point to a plain text file like .bib or .json or .yml, not a Zotero database.\nHowever, the magical Better BibTeX add-on clarified everything for me and makes it super easy to point pandoc at a single file that contains a collection of reference items.\nExport collection to .bib file\nFirst, create a collection of items that you want to cite in your writing project. Since collections are like playlists and items can belong to multiple collections, there’s no need to manage duplicate entries or anything (like I was running into with Problem 2 above).\nRight click on the collection name and choose “Export collection…”.\n\n\nExporting a Zotero collection\n\nChange the format to “Better BibLaTeX”, check “Keep updated”, and choose a place to save the resulting .bib file.\n\n\nChanging the export format\n\n\n\n\n\n\n\nTip\n\n\n\nYou could also export it as “Better CSL JSON” or “Better CSL YAML”, which would create a .json or .yml file that you could then point to in your YAML front matter, which would keep everything in CSL format instead of converting things to .bib and back again (see Problem 3 above). However, in my academic writing projects I still like to let LaTeX, BibLaTeX, and biber handle the citation generation instead of pandoc for PDFs, so I still rely on .bib files. But if you’re not converting to PDF, or if you’re letting the CSL style template handle the citations instead of BibLaTeX, you should probably keep everything as JSON or YAML instead of .bib.\n\n\nThe “Keep updated” option is the magical part of this whole thing. If you add an item or edit an existing item in the collection in Zotero, Better BibTeX will automatically re-export the collection to the .bib file. You can have one central repository of citations and lots of dynamically updated plain text .bib files that you don’t have to edit or keep track of. Truly magical.\nPoint the .qmd / .Rmd / .md to the exported file\nYou’ll now have a .bib file that contains all the references that you can cite. Put that filename in your front matter (use .json or .yml if you export the file as JSON or YAML instead):\n---\ntitle: Whatever\nauthor: Whoever\nbibliography: name_of_file_you_exported_from_zotero.bib\n---\nCite things\nCite things like normal.\nBecause the front matter is pointed at a plain text .bib file that contains all the bibliographic references, it’ll generate the citations correctly. And because Better BibTeX is configured to automatically update the exported plain text file, any changes you make in Zotero will automatically be reflected. Again, this is magic.\n\n\nVisual Studio Code with a Quarto Markdown file configured to look at an auto-updating .bib file exported from Zotero\n\nRStudio-based alternative\nAlternatively, if you write in RStudio, you can connect RStudio to your Zotero database and have it do a similar auto-export thing. You can also tell it to use Better BibTeX to keep things automatically synced:\n\n\nRStudio preferences pane for enabling Zotero\n\n(See here for more details about Zotero citations in RStudio)\nOne extra nice thing about using RStudio is its fancy Insert Citation dialog, which makes adding citations in Markdown just like adding citations in Word or Google Docs. It only works in the Visual Markdown Editor, though, which I don’t normally use, so I just use Better BibTeX alone rather than RStudio’s Zotero connection when I write in RStudio."
+  },
+  {
+    "objectID": "publications/index.html",
+    "href": "publications/index.html",
+    "title": "Publications",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "research/working-papers/heiss-ye-np-causal-inference/index.html",
+    "href": "research/working-papers/heiss-ye-np-causal-inference/index.html",
+    "title": "Clarifying Correlation and Causation: A Guide to Modern Quantitative Causal Inference in Nonprofit Studies",
+    "section": "",
+    "text": "GitHub repository"
+  },
+  {
+    "objectID": "research/working-papers/heiss-ye-np-causal-inference/index.html#important-links",
+    "href": "research/working-papers/heiss-ye-np-causal-inference/index.html#important-links",
+    "title": "Clarifying Correlation and Causation: A Guide to Modern Quantitative Causal Inference in Nonprofit Studies",
+    "section": "",
+    "text": "GitHub repository"
+  },
+  {
+    "objectID": "research/working-papers/heiss-ye-np-causal-inference/index.html#abstract",
+    "href": "research/working-papers/heiss-ye-np-causal-inference/index.html#abstract",
+    "title": "Clarifying Correlation and Causation: A Guide to Modern Quantitative Causal Inference in Nonprofit Studies",
+    "section": "Abstract",
+    "text": "Abstract\nDiscovering causal relationships and testing theoretical mechanisms is a core endeavor of social science. Randomized experiments have long served as a gold standard for making valid causal inferences, but most of the data social scientists work with is observational and non-experimental. However, with newer methodological developments in economics, political science, epidemiology, and other disciplines, an increasing number of studies in social science make causal claims with observational data. As a newer interdisciplinary field, however, nonprofit studies has lagged behind other disciplines in its use of observational causal inference. In this article, we present a hands-on introduction and guide to design-based observational causal inference methods. We first review and categorize all studies making causal claims in top nonprofit studies journals over the past decade to illustrate the field’s current of experimental and observational approaches to causal inference. We then introduce a framework for modeling and identifying causal processes using directed acyclic graphs (DAGs) and provide a walk-through of the assumptions and procedures for making inferences with a range of different methods, including matching, inverse probability weighting, difference-in-differences, regression discontinuity designs, and instrumental variables. We illustrate each approach with synthetic and empirical examples and provide sample R and Stata code for implementing these methods. We conclude by encouraging scholars and practitioners to make more careful and explicit causal claims in their observational empirical research, collectively developing and improving quantitative work in the broader field of nonprofit studies."
+  },
+  {
+    "objectID": "research/working-papers/heiss-program-capture-ingos/index.html",
+    "href": "research/working-papers/heiss-program-capture-ingos/index.html",
+    "title": "‘Some State Officials Want Your Services’: International NGO Responses to Authoritarian Program Capture Regulations",
+    "section": "",
+    "text": "GitHub repository"
+  },
+  {
+    "objectID": "research/working-papers/heiss-program-capture-ingos/index.html#important-links",
+    "href": "research/working-papers/heiss-program-capture-ingos/index.html#important-links",
+    "title": "‘Some State Officials Want Your Services’: International NGO Responses to Authoritarian Program Capture Regulations",
+    "section": "",
+    "text": "GitHub repository"
+  },
+  {
+    "objectID": "research/working-papers/heiss-mission-money-environment/index.html",
+    "href": "research/working-papers/heiss-mission-money-environment/index.html",
+    "title": "‘We Changed Our Strategy… Without Losing Our Values, Vision and Mission’: Mission, Money, and the Practical Operating Environment for International NGOs",
+    "section": "",
+    "text": "GitHub repository"
+  },
+  {
+    "objectID": "research/working-papers/heiss-mission-money-environment/index.html#important-links",
+    "href": "research/working-papers/heiss-mission-money-environment/index.html#important-links",
+    "title": "‘We Changed Our Strategy… Without Losing Our Values, Vision and Mission’: Mission, Money, and the Practical Operating Environment for International NGOs",
+    "section": "",
+    "text": "GitHub repository"
+  },
+  {
+    "objectID": "research/working-papers/chaudhry-heiss-ngos-aid/index.html",
+    "href": "research/working-papers/chaudhry-heiss-ngos-aid/index.html",
+    "title": "Are Donors Really Responding? Analyzing the Impact of Global Restrictions on NGOs",
+    "section": "",
+    "text": "Paper (preprint)\nSupplement (preprint)\nStatistical analysis notebook\nGitHub repository"
+  },
+  {
+    "objectID": "research/working-papers/chaudhry-heiss-ngos-aid/index.html#important-links",
+    "href": "research/working-papers/chaudhry-heiss-ngos-aid/index.html#important-links",
+    "title": "Are Donors Really Responding? Analyzing the Impact of Global Restrictions on NGOs",
+    "section": "",
+    "text": "Paper (preprint)\nSupplement (preprint)\nStatistical analysis notebook\nGitHub repository"
+  },
+  {
+    "objectID": "research/working-papers/chaudhry-heiss-ngos-aid/index.html#abstract",
+    "href": "research/working-papers/chaudhry-heiss-ngos-aid/index.html#abstract",
+    "title": "Are Donors Really Responding? Analyzing the Impact of Global Restrictions on NGOs",
+    "section": "Abstract",
+    "text": "Abstract\nForeign donors routinely use nongovernmental organizations (NGOs) to deliver foreign aid. However, states are increasingly relying on repressive legislation to crack down on NGOs within their borders. How have foreign aid donors responded to this legal crackdown on NGOs? Using original data from all countries that received aid from 1981–2012, we assess the impact of anti-NGO laws on total flows of official foreign aid, the nature of projects funded, and the channels used for distributing this aid. Overall, we find that donors scale back their operations in repressive countries. However, rather than completely withdraw, we find that donors redirect funds within restrictive countries by decreasing funds for politically sensitive issues, and channeling more aid through domestic rather than foreign NGOs. While our findings challenge existing notions of foreign aid running on “autopilot,” they also have worrying implications for Western donors and domestic NGOs working on contentious issues."
+  },
+  {
+    "objectID": "research/working-papers/chaudhry-heiss-ngos-aid/index.html#figure",
+    "href": "research/working-papers/chaudhry-heiss-ngos-aid/index.html#figure",
+    "title": "Are Donors Really Responding? Analyzing the Impact of Global Restrictions on NGOs",
+    "section": "Figure",
+    "text": "Figure\nFigure 5: Predicted ODA (foreign aid) across a range of differences from average number of anti-NGO laws in an average country; dark line shows average of 500 draws from posterior distribution.\n\n\n\nFigure 5: Predicted ODA (foreign aid) across a range of differences from average number of anti-NGO laws in an average country; dark line shows average of 500 draws from posterior distribution."
+  },
+  {
+    "objectID": "research/working-papers/chaudhry-heiss-ngos-aid/index.html#bibtex-citation",
+    "href": "research/working-papers/chaudhry-heiss-ngos-aid/index.html#bibtex-citation",
+    "title": "Are Donors Really Responding? Analyzing the Impact of Global Restrictions on NGOs",
+    "section": "BibTeX citation",
+    "text": "BibTeX citation\n@unpublished{ChaudhryHeiss:2023,\n    Author = {Suparna Chaudhry and Andrew Heiss},\n    Note = {Working paper},\n    Title = {Are Donors Really Responding? Analyzing the Impact of Global Restrictions on {NGO}s},\n    Year = {2023}}"
+  },
+  {
+    "objectID": "research/working-papers/chaudhry-dotson-heiss-why-donors-donate/index.html",
+    "href": "research/working-papers/chaudhry-dotson-heiss-why-donors-donate/index.html",
+    "title": "Why Donors Donate: Disentangling Organizational and Structural Heuristics for International Philanthropy",
+    "section": "",
+    "text": "GitHub repository\nExperiment preregistration (research question #1)"
+  },
+  {
+    "objectID": "research/working-papers/chaudhry-dotson-heiss-why-donors-donate/index.html#important-links",
+    "href": "research/working-papers/chaudhry-dotson-heiss-why-donors-donate/index.html#important-links",
+    "title": "Why Donors Donate: Disentangling Organizational and Structural Heuristics for International Philanthropy",
+    "section": "",
+    "text": "GitHub repository\nExperiment preregistration (research question #1)"
+  },
+  {
+    "objectID": "research/working-papers/chaudhry-dotson-heiss-why-donors-donate/index.html#abstract",
+    "href": "research/working-papers/chaudhry-dotson-heiss-why-donors-donate/index.html#abstract",
+    "title": "Why Donors Donate: Disentangling Organizational and Structural Heuristics for International Philanthropy",
+    "section": "Abstract",
+    "text": "Abstract\nAs space for civil society has closed around the world, transnational NGOs have faced a crisis of funding. We explore how NGOs have shifted from traditionally Northern funding sources toward grassroots private philanthropic money. How do individual donors in the US feel about donating to legally besieged NGOs abroad? Do legal restrictions on NGOs influence donors’ decision to donate? We use a conjoint survey experiment to argue that domestic political environments of NGO host countries influence preferences of private donors and that legal crackdowns on NGOs serve as a heuristic of organizational deservingness."
+  },
+  {
+    "objectID": "research/working-papers/arel-bundock-greifer-heiss-mfxplainer/index.html",
+    "href": "research/working-papers/arel-bundock-greifer-heiss-mfxplainer/index.html",
+    "title": "The Marginal Effects Zoo: A Guide to Interpretation Using marginaleffects for R",
+    "section": "",
+    "text": "GitHub repository"
+  },
+  {
+    "objectID": "research/working-papers/arel-bundock-greifer-heiss-mfxplainer/index.html#important-links",
+    "href": "research/working-papers/arel-bundock-greifer-heiss-mfxplainer/index.html#important-links",
+    "title": "The Marginal Effects Zoo: A Guide to Interpretation Using marginaleffects for R",
+    "section": "",
+    "text": "GitHub repository"
+  },
+  {
+    "objectID": "research/working-papers/arel-bundock-greifer-heiss-mfxplainer/index.html#abstract",
+    "href": "research/working-papers/arel-bundock-greifer-heiss-mfxplainer/index.html#abstract",
+    "title": "The Marginal Effects Zoo: A Guide to Interpretation Using marginaleffects for R",
+    "section": "Abstract",
+    "text": "Abstract\nAnalysts often transform their models’ parameter estimates to report more meaningful and interpretable quantities of interest. This article presents a simple conceptual framework to describe a vast array of estimands which are reported under imprecise and inconsistent terminology across disciplines: predictions, marginal predictions, marginal means, marginal effects, conditional effects, slopes, contrasts, risk ratios, etc. We introduce marginaleffects, an R package which offers a simple and powerful interface to compute all of those quantites, and to conduct hypothesis tests on them. marginaleffects is lightweight; extensible; it works well in combination with other R packages; and it supports over 70 classes of models, including Generalized Linear, Generalized Additive, Mixed Effects, and Bayesian models."
+  },
+  {
+    "objectID": "research/reviews/heiss-death-idealism/index.html",
+    "href": "research/reviews/heiss-death-idealism/index.html",
+    "title": "What Kills Idealism? Review of The Death of Idealism: Development and Anti-Politics in the Peace Corps, by Meghan Elizabeth Kallman",
+    "section": "",
+    "text": "Add to Zotero \n\n@article{Heiss:20211,\n    author = {Andrew Heiss},\n    doi = {10.1177/00943061211050046g},\n    journal = {Contemporary Sociology},\n    number = {6},\n    pages = {486--488},\n    titleaddon = {\\bibstring{reviewof} Meghan Elizabeth Kallman, \\mkbibemph{The Death of Idealism: Development and Anti-Politics in the Peace Corps}},\n    volume = {50},\n    year = {2021}}"
+  },
+  {
+    "objectID": "research/reviews/heiss-death-idealism/index.html#citation",
+    "href": "research/reviews/heiss-death-idealism/index.html#citation",
+    "title": "What Kills Idealism? Review of The Death of Idealism: Development and Anti-Politics in the Peace Corps, by Meghan Elizabeth Kallman",
+    "section": "",
+    "text": "Add to Zotero \n\n@article{Heiss:20211,\n    author = {Andrew Heiss},\n    doi = {10.1177/00943061211050046g},\n    journal = {Contemporary Sociology},\n    number = {6},\n    pages = {486--488},\n    titleaddon = {\\bibstring{reviewof} Meghan Elizabeth Kallman, \\mkbibemph{The Death of Idealism: Development and Anti-Politics in the Peace Corps}},\n    volume = {50},\n    year = {2021}}"
+  },
+  {
+    "objectID": "research/chapters/johnson-heiss-2018/index.html",
+    "href": "research/chapters/johnson-heiss-2018/index.html",
+    "title": "Liberal Institutionalism",
+    "section": "",
+    "text": "Liberal institutionalism presumes that domestic and international institutions play central roles in facilitating cooperation and peace between states. But currently, this influential approach to thinking and practice appears to be in jeopardy. The United Kingdom seeks to be the first state ever to withdraw from the European Union (EU). The United States threatens to renegotiate or leave several international arrangements that it has recently signed or long supported. Meanwhile, China hints that it would be happy to take on greater global leadership if the United States retreats from this traditional role."
+  },
+  {
+    "objectID": "research/chapters/johnson-heiss-2018/index.html#abstract",
+    "href": "research/chapters/johnson-heiss-2018/index.html#abstract",
+    "title": "Liberal Institutionalism",
+    "section": "",
+    "text": "Liberal institutionalism presumes that domestic and international institutions play central roles in facilitating cooperation and peace between states. But currently, this influential approach to thinking and practice appears to be in jeopardy. The United Kingdom seeks to be the first state ever to withdraw from the European Union (EU). The United States threatens to renegotiate or leave several international arrangements that it has recently signed or long supported. Meanwhile, China hints that it would be happy to take on greater global leadership if the United States retreats from this traditional role."
+  },
+  {
+    "objectID": "research/chapters/johnson-heiss-2018/index.html#citation",
+    "href": "research/chapters/johnson-heiss-2018/index.html#citation",
+    "title": "Liberal Institutionalism",
+    "section": "Citation",
+    "text": "Citation\n\n Add to Zotero \n\n@incollection{JohnsonHeiss:2018,\n    Address = {London},\n    Author = {Tana Johnson and Andrew Heiss},\n    Booktitle = {International Organization and Global Governance},\n    Chapter = {8},\n    Doi = {10.4324/9781315301914},\n    Edition = {2},\n    Editor = {Thomas G. Weiss and Rorden Wilkinson},\n    Pages = {123--34},\n    Publisher = {Routledge},\n    Title = {Liberal Institutionalism},\n    Year = {2018}}"
+  },
+  {
+    "objectID": "research/chapters/heiss-causal-inference-2021/index.html",
+    "href": "research/chapters/heiss-causal-inference-2021/index.html",
+    "title": "Causal Inference",
+    "section": "",
+    "text": "One of the most repeated phrases in any introductory statistics class is the warning that “correlation is not causation.” This chapter presents new non-statistical language for creating, measuring, and evaluating causal stories and relationships using observational (i.e. non-experimental) data. It introduces the concept of causal directed acyclic graphs (DAGs) that allow us to formally encode our understanding of causal stories. With well-crafted DAGs, one can use a set of rules called do-calculus to make specific adjustments to statistical models and isolate or identify causal relationships between variables of interest. Edges (or arrows) transmit associations between nodes. Following the fundamental problem of causal inference, answering causal questions without an experiment appears impossible. The chapter explores different methods of making adjustments using synthetic data. Instead of throwing away potentially useful data, one can use other methods to create matches that are less discrete and more informative."
+  },
+  {
+    "objectID": "research/chapters/heiss-causal-inference-2021/index.html#abstract",
+    "href": "research/chapters/heiss-causal-inference-2021/index.html#abstract",
+    "title": "Causal Inference",
+    "section": "",
+    "text": "One of the most repeated phrases in any introductory statistics class is the warning that “correlation is not causation.” This chapter presents new non-statistical language for creating, measuring, and evaluating causal stories and relationships using observational (i.e. non-experimental) data. It introduces the concept of causal directed acyclic graphs (DAGs) that allow us to formally encode our understanding of causal stories. With well-crafted DAGs, one can use a set of rules called do-calculus to make specific adjustments to statistical models and isolate or identify causal relationships between variables of interest. Edges (or arrows) transmit associations between nodes. Following the fundamental problem of causal inference, answering causal questions without an experiment appears impossible. The chapter explores different methods of making adjustments using synthetic data. Instead of throwing away potentially useful data, one can use other methods to create matches that are less discrete and more informative."
+  },
+  {
+    "objectID": "research/chapters/heiss-causal-inference-2021/index.html#important-figures",
+    "href": "research/chapters/heiss-causal-inference-2021/index.html#important-figures",
+    "title": "Causal Inference",
+    "section": "Important figures",
+    "text": "Important figures\nFigure 6: More complicated DAG showing the relationship between campaign spending and votes won in an election\n\n\n\nFigure 6: More complicated DAG showing the relationship between campaign spending and votes won in an election\n\n\nFigure 17: Adjustment set to identify the relationship between mosquito net use and malaria risk\n\n\n\nFigure 17: Adjustment set to identify the relationship between mosquito net use and malaria risk"
+  },
+  {
+    "objectID": "research/chapters/heiss-causal-inference-2021/index.html#citation",
+    "href": "research/chapters/heiss-causal-inference-2021/index.html#citation",
+    "title": "Causal Inference",
+    "section": "Citation",
+    "text": "Citation\n\n Add to Zotero \n\n@incollection{Heiss:2021,\n    address = {Boca Raton, Florida},\n    author = {Andrew Heiss},\n    booktitle = {R for Political Data Science: A Practical Guide},\n    chapter = {10},\n    doi = {10.1201/9781003010623-10},\n    editor = {Francisco Urdinez and Andr{\\'e}s Cruz},\n    pages = {235--274},\n    publisher = {{Chapman and Hall} / CRC},\n    title = {Causal Inference},\n    year = {2021}}"
+  },
+  {
+    "objectID": "research/articles/witesman-heiss-2016/index.html",
+    "href": "research/articles/witesman-heiss-2016/index.html",
+    "title": "Nonprofit collaboration and the resurrection of market failure: How a resource sharing environment can suppress social objectives",
+    "section": "",
+    "text": "Collaboration and its promotion by funders continue to accelerate. Although research has identified significant transaction costs associated with collaboration, little empirical work has examined the broader, societal-level economic outcomes of a resource-sharing environment. Does an environment that encourages collaboration shift our focus toward certain types of social objectives and away from others? This paper uses agent-based Monte Carlo simulation to demonstrate that collaboration is particularly useful when resources are rare but a social objective is commonly held. However, collaboration can lead to bad outcomes when the objective is not commonly shared; in such cases, markets outperform collaborative arrangements. These findings suggest that encouraging a resource-sharing environment can lead to inefficiencies even worse than market failure. We also demonstrate that failure to account for transaction costs when prescribing collaboration can result in quantifiably lower outcome levels than expected."
+  },
+  {
+    "objectID": "research/articles/witesman-heiss-2016/index.html#abstract",
+    "href": "research/articles/witesman-heiss-2016/index.html#abstract",
+    "title": "Nonprofit collaboration and the resurrection of market failure: How a resource sharing environment can suppress social objectives",
+    "section": "",
+    "text": "Collaboration and its promotion by funders continue to accelerate. Although research has identified significant transaction costs associated with collaboration, little empirical work has examined the broader, societal-level economic outcomes of a resource-sharing environment. Does an environment that encourages collaboration shift our focus toward certain types of social objectives and away from others? This paper uses agent-based Monte Carlo simulation to demonstrate that collaboration is particularly useful when resources are rare but a social objective is commonly held. However, collaboration can lead to bad outcomes when the objective is not commonly shared; in such cases, markets outperform collaborative arrangements. These findings suggest that encouraging a resource-sharing environment can lead to inefficiencies even worse than market failure. We also demonstrate that failure to account for transaction costs when prescribing collaboration can result in quantifiably lower outcome levels than expected."
+  },
+  {
+    "objectID": "research/articles/witesman-heiss-2016/index.html#figure",
+    "href": "research/articles/witesman-heiss-2016/index.html#figure",
+    "title": "Nonprofit collaboration and the resurrection of market failure: How a resource sharing environment can suppress social objectives",
+    "section": "Figure",
+    "text": "Figure\nFigure 1: Simulation results\n\n\n\nFigure 1: Simulation results"
+  },
+  {
+    "objectID": "research/articles/witesman-heiss-2016/index.html#citation",
+    "href": "research/articles/witesman-heiss-2016/index.html#citation",
+    "title": "Nonprofit collaboration and the resurrection of market failure: How a resource sharing environment can suppress social objectives",
+    "section": "Citation",
+    "text": "Citation\n\n Add to Zotero \n\n@article{WitesmanHeiss:2016,\n    Author = {Eva Witesman and Andrew Heiss},\n    Doi = {10.1007/s11266-016-9684-5},\n    Journal = {Voluntas: International Journal of Voluntary and Nonprofit Organizations},\n    Month = {8},\n    Number = {4},\n    Pages = {1500--1528},\n    Title = {Nonprofit Collaboration and the Resurrection of Market Failure: How a Resource-Sharing Environment Can Suppress Social Objectives},\n    Volume = {28},\n    Year = {2016}}"
+  },
+  {
+    "objectID": "research/articles/heiss-kelley-2017a/index.html",
+    "href": "research/articles/heiss-kelley-2017a/index.html",
+    "title": "From the Trenches: A Global Survey of Anti-TIP NGOs and their Views of US Efforts",
+    "section": "",
+    "text": "Amid the academic and policy critiques of the United States 15-year push to eliminate human trafficking, the perspective of the nongovernmental organizations (NGOs) working with anti-trafficking advocacy and services has been largely ignored. This article presents the results of a global survey of nearly 500 anti-trafficking NGOs in working in 133 countries, and is the first NGO-focused survey of its kind. Based on the results of the survey, we provide an overview of the anti-trafficking NGO sector as a whole, detail the relationship between anti-trafficking NGOs and the US, and account for some of the variation in NGO opinions of US efforts. Notably, we find that NGOs are remarkably satisfied with US-led efforts—despite their acknowledged flaws—and that NGOs believe that American anti-TIP policies are important and, on balance, helpful. These results also provide a warning for the future of the United States’ anti-trafficking advocacy, suggesting that the US avoid politicizing its annual Trafficking in Persons Report."
+  },
+  {
+    "objectID": "research/articles/heiss-kelley-2017a/index.html#abstract",
+    "href": "research/articles/heiss-kelley-2017a/index.html#abstract",
+    "title": "From the Trenches: A Global Survey of Anti-TIP NGOs and their Views of US Efforts",
+    "section": "",
+    "text": "Amid the academic and policy critiques of the United States 15-year push to eliminate human trafficking, the perspective of the nongovernmental organizations (NGOs) working with anti-trafficking advocacy and services has been largely ignored. This article presents the results of a global survey of nearly 500 anti-trafficking NGOs in working in 133 countries, and is the first NGO-focused survey of its kind. Based on the results of the survey, we provide an overview of the anti-trafficking NGO sector as a whole, detail the relationship between anti-trafficking NGOs and the US, and account for some of the variation in NGO opinions of US efforts. Notably, we find that NGOs are remarkably satisfied with US-led efforts—despite their acknowledged flaws—and that NGOs believe that American anti-TIP policies are important and, on balance, helpful. These results also provide a warning for the future of the United States’ anti-trafficking advocacy, suggesting that the US avoid politicizing its annual Trafficking in Persons Report."
+  },
+  {
+    "objectID": "research/articles/heiss-kelley-2017a/index.html#important-figures",
+    "href": "research/articles/heiss-kelley-2017a/index.html#important-figures",
+    "title": "From the Trenches: A Global Survey of Anti-TIP NGOs and their Views of US Efforts",
+    "section": "Important figures",
+    "text": "Important figures\nFigure 1: Countries where NGOs work, excluding NGOs working only in the US\n\n\n\nFigure 1: Countries where NGOs work, excluding NGOs working only in the US\n\n\nFigure 4: Embassies or foreign governments NGOs reported as active partners in the fight against human trafficking\n\n\n\nFigure 4: Embassies or foreign governments NGOs reported as active partners in the fight against human trafficking\n\n\nFigure 7: Average importance and positivity of US anti-TIP efforts across regions\n\n\n\nFigure 7: Average importance and positivity of US anti-TIP efforts across regions"
+  },
+  {
+    "objectID": "research/articles/heiss-kelley-2017a/index.html#citation",
+    "href": "research/articles/heiss-kelley-2017a/index.html#citation",
+    "title": "From the Trenches: A Global Survey of Anti-TIP NGOs and their Views of US Efforts",
+    "section": "Citation",
+    "text": "Citation\n\n Add to Zotero \n\n@article{HeissKelley:2017,\n  Author = {Andrew Heiss and Judith G. Kelley},\n  Doi = {10.1080/23322705.2016.1199241},\n  Journal = {Journal of Human Trafficking},\n  Number = {3},\n  Pages = {231--254},\n  Title = {From the Trenches: A Global Survey of Anti-{TIP} {NGOs} and their Views of {US} Efforts},\n  Volume = {3},\n  Year = {2017}}"
+  },
+  {
+    "objectID": "research/articles/heiss-johnson-2016/index.html",
+    "href": "research/articles/heiss-johnson-2016/index.html",
+    "title": "Internal, Interactive, and Institutional Factors: Towards a Unified Theory of INGO Behavior",
+    "section": "",
+    "text": "Recent scholarship works to open the “black box” of international non-governmental organizations (INGOs), explaining their activities without conventional assumptions of altruism and high-mindedness. We review Borders Among Activists by Sarah Stroup, The Opening up of International Organizations by Jonas Tallberg, et al., and Internal Affairs by Wendy Wong and pinpoint how each book makes important contributions to understanding the determinants of INGO activities. After developing an organizing framework that permits careful analysis of the internal, interactive, and institutional factors that influence policy outcomes, we demonstrate the merits of the framework by applying it to each book. We evaluate each work’s contributions to individual layers in the framework, locating each book within its intended scholarly context. We identify ties between books, examining how each work implicitly treats the other layers of our framework. The conclusion identifies a new research agenda for INGO studies and outlines promising avenues for future INGO scholarship."
+  },
+  {
+    "objectID": "research/articles/heiss-johnson-2016/index.html#abstract",
+    "href": "research/articles/heiss-johnson-2016/index.html#abstract",
+    "title": "Internal, Interactive, and Institutional Factors: Towards a Unified Theory of INGO Behavior",
+    "section": "",
+    "text": "Recent scholarship works to open the “black box” of international non-governmental organizations (INGOs), explaining their activities without conventional assumptions of altruism and high-mindedness. We review Borders Among Activists by Sarah Stroup, The Opening up of International Organizations by Jonas Tallberg, et al., and Internal Affairs by Wendy Wong and pinpoint how each book makes important contributions to understanding the determinants of INGO activities. After developing an organizing framework that permits careful analysis of the internal, interactive, and institutional factors that influence policy outcomes, we demonstrate the merits of the framework by applying it to each book. We evaluate each work’s contributions to individual layers in the framework, locating each book within its intended scholarly context. We identify ties between books, examining how each work implicitly treats the other layers of our framework. The conclusion identifies a new research agenda for INGO studies and outlines promising avenues for future INGO scholarship."
+  },
+  {
+    "objectID": "research/articles/heiss-johnson-2016/index.html#important-figures",
+    "href": "research/articles/heiss-johnson-2016/index.html#important-figures",
+    "title": "Internal, Interactive, and Institutional Factors: Towards a Unified Theory of INGO Behavior",
+    "section": "Important figures",
+    "text": "Important figures\nFigure 1 from the paper, showing a unified framework for understanding the types of influences on INGO behavior and policy outcomes. The triangular shape conveys the specificity of the layers: from narrow “micro” phenomena at the internal layer to much wider “macro” phenomena at the institutional layer.\n\n\n\nFigure 1: A Unified Framework for Analyzing INGO Behavior and Outputs"
+  },
+  {
+    "objectID": "research/articles/heiss-johnson-2016/index.html#books-reviewed",
+    "href": "research/articles/heiss-johnson-2016/index.html#books-reviewed",
+    "title": "Internal, Interactive, and Institutional Factors: Towards a Unified Theory of INGO Behavior",
+    "section": "Books reviewed",
+    "text": "Books reviewed\n\nSarah S. Stroup, Borders among Activists: International NGOs in the United States, Britain, and France (Ithaca, New York: Cornell University Press, 2012), doi: 10.7591/9780801464256.\nJonas Tallberg, Thomas Sommerer, Theresa Squatrito, and Christer Jönsson, The Opening Up of International Organizations: Transnational Access in Global Governance (Cambridge: Cambridge University Press, 2013), doi: 10.1017/cbo9781107325135.\nWendy H. Wong, Internal Affairs: How the Structure of NGOs Transforms Human Rights (Ithaca: Cornell University Press, 2012), doi: 10.7591/9780801466069."
+  },
+  {
+    "objectID": "research/articles/heiss-johnson-2016/index.html#citation",
+    "href": "research/articles/heiss-johnson-2016/index.html#citation",
+    "title": "Internal, Interactive, and Institutional Factors: Towards a Unified Theory of INGO Behavior",
+    "section": "Citation",
+    "text": "Citation\n\n Add to Zotero \n\n@article{HeissJohnson:2016,\n    Author = {Andrew Heiss and Tana Johnson},\n    Doi = {10.1093/isr/viv014},\n    Journal = {International Studies Review},\n    Month = {9},\n    Number = {3},\n    Pages = {528--41},\n    Title = {Internal, Interactive, and Institutional Factors: Towards a Unified Theory of {INGO} Behavior},\n    Volume = {18},\n    Year = {2016}}"
+  },
+  {
+    "objectID": "research/articles/heiss-2012/index.html",
+    "href": "research/articles/heiss-2012/index.html",
+    "title": "The Failed Management of a Dying Regime: Hosni Mubarak, Egypt’s National Democratic Party, and the January 25 Revolution",
+    "section": "",
+    "text": "In the weeks since the January 25 revolution there have been dozens of explanations for Mubarak’s downfall. Political scientists, diplomats, economists, sociologists, and even international aid workers have proposed theories to explain the economic, political, historical, and social causes of the Egyptian revolution. Despite the plethora of interdisciplinary theories in the press and in academia, few—if any—have analyzed Mubarak’s resignation in the light of managerial dynamics and behavior.\nIn addition to a ripe political environment, horrible economic conditions, and a mobilized and angry population, Mubarak’s fall from power can be attributed to his failure as a public manager. This paper analyzes Mubarak’s managerial strategy throughout the course of his presidency by (1) reviewing the structure of the National Democratic Party (NDP) and Mubarak’s relationship with it; (2) analyzing the foundational principles and assumptions of his strategy‚ both as the leader of Egypt and as the chairman of the NDP; and (3) tracing the application of that strategy and determining its effectiveness in confronting “the management challenge” over a period of 30 years."
+  },
+  {
+    "objectID": "research/articles/heiss-2012/index.html#abstract",
+    "href": "research/articles/heiss-2012/index.html#abstract",
+    "title": "The Failed Management of a Dying Regime: Hosni Mubarak, Egypt’s National Democratic Party, and the January 25 Revolution",
+    "section": "",
+    "text": "In the weeks since the January 25 revolution there have been dozens of explanations for Mubarak’s downfall. Political scientists, diplomats, economists, sociologists, and even international aid workers have proposed theories to explain the economic, political, historical, and social causes of the Egyptian revolution. Despite the plethora of interdisciplinary theories in the press and in academia, few—if any—have analyzed Mubarak’s resignation in the light of managerial dynamics and behavior.\nIn addition to a ripe political environment, horrible economic conditions, and a mobilized and angry population, Mubarak’s fall from power can be attributed to his failure as a public manager. This paper analyzes Mubarak’s managerial strategy throughout the course of his presidency by (1) reviewing the structure of the National Democratic Party (NDP) and Mubarak’s relationship with it; (2) analyzing the foundational principles and assumptions of his strategy‚ both as the leader of Egypt and as the chairman of the NDP; and (3) tracing the application of that strategy and determining its effectiveness in confronting “the management challenge” over a period of 30 years."
+  },
+  {
+    "objectID": "research/articles/heiss-2012/index.html#figure",
+    "href": "research/articles/heiss-2012/index.html#figure",
+    "title": "The Failed Management of a Dying Regime: Hosni Mubarak, Egypt’s National Democratic Party, and the January 25 Revolution",
+    "section": "Figure",
+    "text": "Figure\nFigure 1: NDP Leadership Organizational Chart, 2010 (based on original chart by The Arabist)\n\n\n\nFigure 1: NDP Leadership Organizational Chart, 2010"
+  },
+  {
+    "objectID": "research/articles/heiss-2012/index.html#citation",
+    "href": "research/articles/heiss-2012/index.html#citation",
+    "title": "The Failed Management of a Dying Regime: Hosni Mubarak, Egypt’s National Democratic Party, and the January 25 Revolution",
+    "section": "Citation",
+    "text": "Citation\n@article{Heiss:2012,\n    Author = {Andrew Heiss},\n    Issue = {Spring},\n    Journal = {Journal of Third World Studies},\n    Number = {1},\n    Pages = {155-171},\n    Title = {The Failed Management of a Dying Regime: {Hosni Mubarak}, {Egypt's National Democratic Party}, and the {January} 25 Revolution},\n    Volume = {28},\n    Year = {2012}}"
+  },
+  {
+    "objectID": "research/articles/chaudhry-heiss-ngos-philanthropy/index.html#important-links",
+    "href": "research/articles/chaudhry-heiss-ngos-philanthropy/index.html#important-links",
+    "title": "Dynamics of International Giving: How Heuristics Shape Individual Donor Preferences",
+    "section": "Important links",
+    "text": "Important links\n\nPaper (preprint)\nSupplement (preprint)\nStatistical analysis notebook\nGitHub repository\nExperiment preregistration"
+  },
+  {
+    "objectID": "research/articles/chaudhry-heiss-ngos-philanthropy/index.html#media-coverage",
+    "href": "research/articles/chaudhry-heiss-ngos-philanthropy/index.html#media-coverage",
+    "title": "Dynamics of International Giving: How Heuristics Shape Individual Donor Preferences",
+    "section": "Media coverage",
+    "text": "Media coverage\n\n“Donors grow more generous when they support nonprofits facing hostile environments abroad,” The Conversation, December 7, 2020"
+  },
+  {
+    "objectID": "research/articles/chaudhry-heiss-ngos-philanthropy/index.html#abstract",
+    "href": "research/articles/chaudhry-heiss-ngos-philanthropy/index.html#abstract",
+    "title": "Dynamics of International Giving: How Heuristics Shape Individual Donor Preferences",
+    "section": "Abstract",
+    "text": "Abstract\nState restrictions on non-governmental organizations (NGOs) have become increasingly pervasive across the globe. While this crackdown has been shown to have a negative impact on public funding flows, we know little about how it impacts private philanthropy. How does information about crackdown abroad, as well as organizational attributes of nonprofits affect individual donors’ willingness to donate internationally? Using a survey experiment, we find that learning about repressive NGO environments increases generosity in that already-likely donors are willing to donate substantially more to legally besieged nonprofits. This generosity persists when mediated by two organizational-level heuristics: NGO issue areas and main funding sources. We discuss the implications of our results on how nonprofits can use different framing appeals to increase fundraising at a time when traditional public donor funding to such organizations is decreasing."
+  },
+  {
+    "objectID": "research/articles/chaudhry-heiss-ngos-philanthropy/index.html#important-figures",
+    "href": "research/articles/chaudhry-heiss-ngos-philanthropy/index.html#important-figures",
+    "title": "Dynamics of International Giving: How Heuristics Shape Individual Donor Preferences",
+    "section": "Important figures",
+    "text": "Important figures\nFigures 2 & 3: Difference in likelihood of donation across crackdown and no crackdown groups, conditioned by other experimental frames + difference in amount donated across crackdown and no crackdown groups, conditioned by other experimental frames\n\n\n\nFigures 2 & 3: Difference in likelihood of donation across crackdown and no crackdown groups, conditioned by other experimental frames + difference in amount donated across crackdown and no crackdown groups, conditioned by other experimental frames"
+  },
+  {
+    "objectID": "research/articles/chaudhry-heiss-ngos-philanthropy/index.html#citation",
+    "href": "research/articles/chaudhry-heiss-ngos-philanthropy/index.html#citation",
+    "title": "Dynamics of International Giving: How Heuristics Shape Individual Donor Preferences",
+    "section": "Citation",
+    "text": "Citation\n\n Add to Zotero \n\n@article{ChaudhryHeiss:2021,\n    Author = {Suparna Chaudhry and Andrew Heiss},\n    Doi = {10.1177/0899764020971045},\n    Journal = {Nonprofit and Voluntary Sector Quarterly},\n    Month = {6},\n    Number = {3},\n    Pages = {481--505},\n    Title = {Dynamics of International Giving: How Heuristics Shape Individual Donor Preferences},\n    Volume = {50},\n    Year = {2021}}"
+  },
+  {
+    "objectID": "research/articles/chaudhry-dotson-heiss-2021/index.html#important-links",
+    "href": "research/articles/chaudhry-dotson-heiss-2021/index.html#important-links",
+    "title": "Who Cares About Crackdowns? Exploring the Role of Trust in Individual Philanthropy",
+    "section": "Important links",
+    "text": "Important links\n\nPaper (preprint)\nAppendix (preprint)\nStatistical analysis notebook\nGitHub repository\nExperiment preregistration (research question #2)"
+  },
+  {
+    "objectID": "research/articles/chaudhry-dotson-heiss-2021/index.html#abstract",
+    "href": "research/articles/chaudhry-dotson-heiss-2021/index.html#abstract",
+    "title": "Who Cares About Crackdowns? Exploring the Role of Trust in Individual Philanthropy",
+    "section": "Abstract",
+    "text": "Abstract\nThe phenomenon of closing civic space has adversely impacted INGO funding. We argue that individual private donors can be important in sustaining the operations of INGOs working in repressive contexts. Individual donors do not use the same performance-based metrics as official aid donors. Rather, trust can be an important component of individual donor support for nonprofits working towards difficult goals. How does trust in charitable organizations influence individuals’ preferences to donate, especially when these groups face crackdown? Using a simulated market for philanthropic donations based on data from a nationally representative sample of individuals in the United States who regularly donate to charity, we find that trust in INGOs matters substantially in shaping donor preferences. Donor profiles with high levels of social trust are likely to donate to INGOs with friendly relationships with host governments. This support holds steady if INGOs face criticism or crackdown. In contrast, donor profiles with lower levels of social trust prefer to donate to organizations that do not face criticism or crackdown abroad. The global crackdown on NGOs may thus possibly sour NGOs’ least trusting individual donors. Our findings have practical implications for INGOs raising funds from individuals amid closing civic space."
+  },
+  {
+    "objectID": "research/articles/chaudhry-dotson-heiss-2021/index.html#important-figure",
+    "href": "research/articles/chaudhry-dotson-heiss-2021/index.html#important-figure",
+    "title": "Who Cares About Crackdowns? Exploring the Role of Trust in Individual Philanthropy",
+    "section": "Important figure",
+    "text": "Important figure\nFigure 4: Average predicted donation market shares across all personas, segmented by persona public affairs knowledge, political ideology, and social trust across different NGO–host government relationships\n\n\n\nFigure 4: Average predicted donation market shares across all personas, segmented by persona public affairs knowledge, political ideology, and social trust across different NGO–host government relationships"
+  },
+  {
+    "objectID": "research/articles/chaudhry-dotson-heiss-2021/index.html#data-and-code",
+    "href": "research/articles/chaudhry-dotson-heiss-2021/index.html#data-and-code",
+    "title": "Who Cares About Crackdowns? Exploring the Role of Trust in Individual Philanthropy",
+    "section": "Data and code",
+    "text": "Data and code\nThe project is reproducible with R code available at GitHub. Follow the instructions there to install all supporting files and R packages.\nThis project includes the following data files:\n\ndata/raw_data/final_data.rds: Original results from the Qualtrics survey. This is hosted at OSF because of its size. Running targets::tar_make(survey_results_file) will download the .rds file from OSF and place it in data/raw_data. The code for cleaning and processing this data is part of a separate project, “Why Donors Donate”.\ndata/derived_data/survey_results.csv: CSV version of the survey data.\ndata/derived_data/survey_results.yaml: YAML metadata describing the syntax of the survey data.\ndata/raw_data/posterior_draws/public_political_social_charity_demo.rds: Gamma (Γ) coefficients from our multilevel Bayesian model. This is hosted at OSF because of its size. Running targets::tar_make(gamma_draws_file) will download the .rds file from OSF and place it in data/raw_data/posterior_draws. The code for running this model is part of a separate project, “Why Donors Donate”.\ndata/raw_data/Market Simulator Version 01.xlsx: An interactive Excel version of the market simulator to help demonstrate the intuition behind all the moving parts of the simulation."
+  },
+  {
+    "objectID": "research/articles/chaudhry-dotson-heiss-2021/index.html#citation",
+    "href": "research/articles/chaudhry-dotson-heiss-2021/index.html#citation",
+    "title": "Who Cares About Crackdowns? Exploring the Role of Trust in Individual Philanthropy",
+    "section": "Citation",
+    "text": "Citation\n\n Add to Zotero \n\n@article{ChaudhryDotsonHeiss:2021,\n    Author = {Suparna Chaudhry and Marc Dotson and Andrew Heiss},\n    Doi = {10.1111/1758-5899.12984},\n    Journal = {Global Policy},\n    Month = {7},\n    Number = {S5},\n    Pages = {45--58},\n    Title = {Who Cares About Crackdowns? Exploring the Role of Trust in Individual Philanthropy},\n    Volume = {12},\n    Year = {2021}}"
+  },
+  {
+    "objectID": "research/articles/chaudhry-heiss-ngos-repression/index.html",
+    "href": "research/articles/chaudhry-heiss-ngos-repression/index.html",
+    "title": "NGO Repression as a Predictor of Worsening Human Rights Abuses",
+    "section": "",
+    "text": "Paper (preprint)\nStatistical analysis notebook\nGitHub repository"
+  },
+  {
+    "objectID": "research/articles/chaudhry-heiss-ngos-repression/index.html#important-links",
+    "href": "research/articles/chaudhry-heiss-ngos-repression/index.html#important-links",
+    "title": "NGO Repression as a Predictor of Worsening Human Rights Abuses",
+    "section": "",
+    "text": "Paper (preprint)\nStatistical analysis notebook\nGitHub repository"
+  },
+  {
+    "objectID": "research/articles/chaudhry-heiss-ngos-repression/index.html#abstract",
+    "href": "research/articles/chaudhry-heiss-ngos-repression/index.html#abstract",
+    "title": "NGO Repression as a Predictor of Worsening Human Rights Abuses",
+    "section": "Abstract",
+    "text": "Abstract\nAn increasing number of countries have recently cracked down on non-governmental organizations (NGOs). Much of this crackdown is sanctioned by law and represents a bureaucratic form of repression that could indicate more severe human rights abuses in the future. This is especially the case for democracies, which unlike autocracies, may not aggressively attack civic space. We explore if crackdowns on NGOs predict broader human rights repression. Anti-NGO laws are among the most subtle means of repression and attract lesser domestic and international condemnation compared to the use of violence. Using original data on NGO repression, we test whether NGO crackdown is a predictor of political terror, and violations of physical integrity rights and civil liberties. We find that while de jure anti-NGO laws provide little information in predicting future repression, their patterns of implementation—or de facto civil society repression—predicts worsening respect for physical integrity rights and civil liberties."
+  },
+  {
+    "objectID": "research/articles/chaudhry-heiss-ngos-repression/index.html#important-figures",
+    "href": "research/articles/chaudhry-heiss-ngos-repression/index.html#important-figures",
+    "title": "NGO Repression as a Predictor of Worsening Human Rights Abuses",
+    "section": "Important figures",
+    "text": "Important figures\n\n\n\nFigure 6: Marginal effects of changing levels of civil society repression on the probability of specific levels of political terror and predicted latent human rights values\n\n\n\n\n\nFigure 7: The disconnect between Egypt’s de jure 2002 law and the widespread de facto repression of civil society a decade later"
+  },
+  {
+    "objectID": "research/articles/chaudhry-heiss-ngos-repression/index.html#citation",
+    "href": "research/articles/chaudhry-heiss-ngos-repression/index.html#citation",
+    "title": "NGO Repression as a Predictor of Worsening Human Rights Abuses",
+    "section": "Citation",
+    "text": "Citation\n\n Add to Zotero \n\n@article{ChaudhryHeiss:2022,\n    Author = {Suparna Chaudhry and Andrew Heiss},\n    Doi = {10.1080/14754835.2022.2030205},\n    Journal = {Journal of Human Rights},\n    Number = {2},\n    Pages = {123--140},\n    Title = {NGO Repression as a Predictor of Worsening Human Rights Abuses},\n    Volume = {21},\n    Year = {2022}}"
+  },
+  {
+    "objectID": "research/articles/heiss-2019-taking-control/index.html",
+    "href": "research/articles/heiss-2019-taking-control/index.html",
+    "title": "Taking Control of Regulations: How International Advocacy NGOs Shape the Regulatory Environments of their Target Countries",
+    "section": "",
+    "text": "Paper (preprint)\nGitHub repository\nRead-only PDF"
+  },
+  {
+    "objectID": "research/articles/heiss-2019-taking-control/index.html#important-links",
+    "href": "research/articles/heiss-2019-taking-control/index.html#important-links",
+    "title": "Taking Control of Regulations: How International Advocacy NGOs Shape the Regulatory Environments of their Target Countries",
+    "section": "",
+    "text": "Paper (preprint)\nGitHub repository\nRead-only PDF"
+  },
+  {
+    "objectID": "research/articles/heiss-2019-taking-control/index.html#abstract",
+    "href": "research/articles/heiss-2019-taking-control/index.html#abstract",
+    "title": "Taking Control of Regulations: How International Advocacy NGOs Shape the Regulatory Environments of their Target Countries",
+    "section": "Abstract",
+    "text": "Abstract\nA wave of legislative and regulatory crackdown on international nongovernmental organizations (INGOs) has constricted the legal environment for foreign advocacy groups interested in influencing domestic and global policy. Although the legal space for advocacy is shrinking, many INGOs have continued their work and found creative ways to adapt to these restrictions, sometimes even reshaping the regulatory environments of their target countries in their favor. In this article, I explore what enables INGOs to cope with and reshape their regulatory environments. I bridge international relations and interest group literatures to examine the interaction between INGO resource configurations and institutional arrangements. I argue that specific resource and managerial characteristics provide organizations with ‘programmatic flexibility’ that enables groups to adjust their strategies without changing their core mission. I illustrate and test this argument with case studies of Article 19 and AMERA International and demonstrate how organizations with high programmatic flexibility can navigate regulations and shape policy in their target country, while those without this flexibility are shut out of policy discussions and often the target country itself. I conclude by exploring how the interaction between internal characteristics and institutional environments shape and constrain the effects of interest groups in global governance."
+  },
+  {
+    "objectID": "research/articles/heiss-2019-taking-control/index.html#important-figures",
+    "href": "research/articles/heiss-2019-taking-control/index.html#important-figures",
+    "title": "Taking Control of Regulations: How International Advocacy NGOs Shape the Regulatory Environments of their Target Countries",
+    "section": "Important figures",
+    "text": "Important figures\nFigure 1: Relationship between institutional constraints, resource configurations, programmatic flexibility, and advocacy effects\n\n\n\nFigure 1: Relationship between institutional constraints, resource configurations, programmatic flexibility, and advocacy effects"
+  },
+  {
+    "objectID": "research/articles/heiss-2019-taking-control/index.html#citation",
+    "href": "research/articles/heiss-2019-taking-control/index.html#citation",
+    "title": "Taking Control of Regulations: How International Advocacy NGOs Shape the Regulatory Environments of their Target Countries",
+    "section": "Citation",
+    "text": "Citation\n\n Add to Zotero \n\n@article{Heiss:2019,\n    Author = {Andrew Heiss},\n    Doi = {10.1057/s41309-019-00061-0},\n    Journal = {Interest Groups and Advocacy},\n    Month = {9},\n    Number = {3},\n    Pages = {356--375},\n    Title = {Taking Control of Regulations: How International Advocacy {NGOs} Shape the Regulatory Environments of their Target Countries},\n    Volume = {8},\n    Year = {2019}}"
+  },
+  {
+    "objectID": "research/articles/heiss-kelley-2017/index.html",
+    "href": "research/articles/heiss-kelley-2017/index.html",
+    "title": "Between a Rock and a Hard Place: International NGOs and the Dual Pressures of Donors and Host Governments",
+    "section": "",
+    "text": "How do the preferences and behavior of both donor organizations and host countries affect the strategies, activities, and effectiveness of international NGOs (INGOs)? Recent books by Sarah Bush, Jessica Teets, and Amanda Murdie bring unique ideas and empirical evidence to illustrate different parts of this question. To discuss the arguments in each book, as well as explore incidental ties between the three, we suggest a simple framework for organizing and understanding the dual institutional constraints on INGOs. In this essay, we use this framework to identify how each book addresses these influences on INGOs and how, in some cases, INGOs can reverse the direction of influence."
+  },
+  {
+    "objectID": "research/articles/heiss-kelley-2017/index.html#abstract",
+    "href": "research/articles/heiss-kelley-2017/index.html#abstract",
+    "title": "Between a Rock and a Hard Place: International NGOs and the Dual Pressures of Donors and Host Governments",
+    "section": "",
+    "text": "How do the preferences and behavior of both donor organizations and host countries affect the strategies, activities, and effectiveness of international NGOs (INGOs)? Recent books by Sarah Bush, Jessica Teets, and Amanda Murdie bring unique ideas and empirical evidence to illustrate different parts of this question. To discuss the arguments in each book, as well as explore incidental ties between the three, we suggest a simple framework for organizing and understanding the dual institutional constraints on INGOs. In this essay, we use this framework to identify how each book addresses these influences on INGOs and how, in some cases, INGOs can reverse the direction of influence."
+  },
+  {
+    "objectID": "research/articles/heiss-kelley-2017/index.html#figure",
+    "href": "research/articles/heiss-kelley-2017/index.html#figure",
+    "title": "Between a Rock and a Hard Place: International NGOs and the Dual Pressures of Donors and Host Governments",
+    "section": "Figure",
+    "text": "Figure\nFigure 2: The dual environmental constraints confronting INGOs\n\n\n\nFigure 2: The dual environmental constraints confronting INGOs"
+  },
+  {
+    "objectID": "research/articles/heiss-kelley-2017/index.html#books-reviewed",
+    "href": "research/articles/heiss-kelley-2017/index.html#books-reviewed",
+    "title": "Between a Rock and a Hard Place: International NGOs and the Dual Pressures of Donors and Host Governments",
+    "section": "Books reviewed",
+    "text": "Books reviewed\n\nSarah Sunn Bush, The Taming of Democracy Assistance: Why Democracy Promotion Does Not Confront Dictators (Cambridge, UK: Cambridge University Press, 2015), doi: 10.1017/cbo9781107706934.\nJessica C. Teets, Civil Society under Authoritarianism: The China Model (New York: Cambridge University Press, 2014), doi: 10.1017/cbo9781139839396.\nAmanda Murdie, Help or Harm: The Human Security Effects of International NGOs (Stanford: Stanford University Press, 2014), doi: 10.2307/j.ctvqsdpq8."
+  },
+  {
+    "objectID": "research/articles/heiss-kelley-2017/index.html#citation",
+    "href": "research/articles/heiss-kelley-2017/index.html#citation",
+    "title": "Between a Rock and a Hard Place: International NGOs and the Dual Pressures of Donors and Host Governments",
+    "section": "Citation",
+    "text": "Citation\n\n Add to Zotero \n\n@article{HeissKelley:2017,\n    Author = {Andrew Heiss and Judith G. Kelley},\n    Doi = {10.1086/691218},\n    Journal = {Journal of Politics},\n    Month = {4},\n    Number = {2},\n    Pages = {732--41},\n    Title = {Between a Rock and a Hard Place: International {NGOs} and the Dual Pressures of Donors and Host Governments},\n    Volume = {79},\n    Year = {2017}}"
+  },
+  {
+    "objectID": "research/articles/peck-heiss-2021/index.html",
+    "href": "research/articles/peck-heiss-2021/index.html",
+    "title": "Can Constraint Closure Provide a Generalized Understanding of Community Dynamics in Ecosystems?",
+    "section": "",
+    "text": "Paper (preprint)\nStatistical analysis notebook\nGitHub repository"
+  },
+  {
+    "objectID": "research/articles/peck-heiss-2021/index.html#important-links",
+    "href": "research/articles/peck-heiss-2021/index.html#important-links",
+    "title": "Can Constraint Closure Provide a Generalized Understanding of Community Dynamics in Ecosystems?",
+    "section": "",
+    "text": "Paper (preprint)\nStatistical analysis notebook\nGitHub repository"
+  },
+  {
+    "objectID": "research/articles/peck-heiss-2021/index.html#abstract",
+    "href": "research/articles/peck-heiss-2021/index.html#abstract",
+    "title": "Can Constraint Closure Provide a Generalized Understanding of Community Dynamics in Ecosystems?",
+    "section": "Abstract",
+    "text": "Abstract\nEcological theorists have generated several yet unresolved disputes that try to untangle the difficulty in understanding the nature of complex ecological communities. In this paper, we combine two recent theoretical approaches that used together suggest a promising way to consider how evolutionary and ecological processes may be used to frame a general theory of community ecology and its functional stability. First, we consider the theoretical proposal by Mark Vellend (2016) to focus on a small set of higher-level evolutionary and ecological processes that act on species within an ecological community. These processes provide a basis for ecological theory similar to the way in which theoretical population genetics has focused on a small set of mathematical descriptions to undergird its theory. Second, we explore ideas that might be applied to ecosystem functioning developed by Alvaro Moreno and Matteo Mossio’s (2015) work on how biologically autonomous systems emerge from closure of relevant constraints. To explore the possibility that combining these two ideas may provide a more general theoretical understanding of ecological communities, we have developed a stochastic, agent-based model, with agents representing species, that explores the potential of using evolutionary and ecological processes as a constraint on the flow of species through an ecosystem. We explore how these ideas help illuminate aspects of stability found in many ecological communities. These agent-based modeling results provide in-principle arguments that suggest that constraint closure, using evolutionary and ecological processes, explains general features of ecological communities. In particular, we find that our model suggests a perspective useful in explaining repeated patterns of stability in ecological evenness, species turnover, species richness, and in measures of fitness."
+  },
+  {
+    "objectID": "research/articles/peck-heiss-2021/index.html#important-figure",
+    "href": "research/articles/peck-heiss-2021/index.html#important-figure",
+    "title": "Can Constraint Closure Provide a Generalized Understanding of Community Dynamics in Ecosystems?",
+    "section": "Important figure",
+    "text": "Important figure\nFigure 4: Boxplots show ecological measures across parameter space for different numbers of constraints generated by 2000 iterations of the simulation model across all 64 possible permutations of the proposed constraints being present or absent, and with uniform random values of parameters pulled from their possible values in the model iterations. The whiskers in the box plot show the range of variation. The actual data used to construct the boxplots are shown as fine gray dots to the right of each box plot. (a) Effect of the number of constraints on landscape fitness. (b) Effect of the number of constraints on ecological evenness. (c) Effect of the number of constraints on the average cell species richness (number of species defined as functional groups) present in the cell-niche. (d) Effect of the number of constraints on the difference between turnover in mutualistic linked and unlinked species. The turnover rate is the number of new species created at each time step in each cell.\n\n\n\nFigure 4: Boxplots show ecological measures across parameter space for different numbers of constraints generated by 2000 iterations of the simulation model across all 64 possible permutations of the proposed constraints being present or absent"
+  },
+  {
+    "objectID": "research/articles/peck-heiss-2021/index.html#citation",
+    "href": "research/articles/peck-heiss-2021/index.html#citation",
+    "title": "Can Constraint Closure Provide a Generalized Understanding of Community Dynamics in Ecosystems?",
+    "section": "Citation",
+    "text": "Citation\n\n Add to Zotero \n\n@article{PeckHeiss:2021,\n    Author = {Steven L. Peck and Andrew Heiss},\n    Doi = {10.1111/oik.07621},\n    Journal = {Oikos},\n    Month = {9},\n    Number = {9},\n    Pages = {1425--1439},\n    Title = {Can Constraint Closure Provide a Generalized Understanding of Community Dynamics in Ecosystems?},\n    Volume = {130},\n    Year = {2021}}"
+  },
+  {
+    "objectID": "research/chapters/chaudhry-heiss-closing-space/index.html",
+    "href": "research/chapters/chaudhry-heiss-closing-space/index.html",
+    "title": "Closing Space and the Restructuring of Global Activism: Causes and Consequences of the Global Crackdown on NGOs",
+    "section": "",
+    "text": "Figure 1: 2017 CIVICUS Monitor civic space ratings\n\n\n\nFigure 1: 2017 CIVICUS Monitor civic space ratings"
+  },
+  {
+    "objectID": "research/chapters/chaudhry-heiss-closing-space/index.html#important-figure",
+    "href": "research/chapters/chaudhry-heiss-closing-space/index.html#important-figure",
+    "title": "Closing Space and the Restructuring of Global Activism: Causes and Consequences of the Global Crackdown on NGOs",
+    "section": "",
+    "text": "Figure 1: 2017 CIVICUS Monitor civic space ratings\n\n\n\nFigure 1: 2017 CIVICUS Monitor civic space ratings"
+  },
+  {
+    "objectID": "research/chapters/chaudhry-heiss-closing-space/index.html#citation",
+    "href": "research/chapters/chaudhry-heiss-closing-space/index.html#citation",
+    "title": "Closing Space and the Restructuring of Global Activism: Causes and Consequences of the Global Crackdown on NGOs",
+    "section": "Citation",
+    "text": "Citation\n\n Add to Zotero \n\n@incollection{ChaudhryHeiss:2022,\n    Address = {Tuscaloosa, AL},\n    Author = {Suparna Chaudhry and Andrew Heiss},\n    Booktitle = {Beyond the Boomerang: New Patterns in Transcalar Advocacy},\n    Editor = {Christopher L. Pallas and Elizabeth Bloodgood},\n    Publisher = {University of Alabama Press},\n    Title = {Closing Space and the Restructuring of Global Activism: Causes and Consequences of the Global Crackdown on {NGOs}},\n    Chapter = {2},\n    Year = {2022}}"
+  },
+  {
+    "objectID": "research/chapters/heiss-ngo-ir-2019/index.html",
+    "href": "research/chapters/heiss-ngo-ir-2019/index.html",
+    "title": "NGOs and Authoritarianism",
+    "section": "",
+    "text": "Authoritarian restrictions on domestic and international civil society have increased over the past decade, but authoritarian states continue to allow—and even invite—NGOs to work in their countries. Though the services and advocacy provided by NGOs can challenge the legitimacy and power of authoritarian regimes, the majority of autocratic states allow NGO activities, and NGOs in turn continue to work in these countries in spite of the heavy legal restrictions and attempts to limit their activities. This chapter examines the theories about and the experiences of domestic and international NGOs working in authoritarian countries. The review is premised on the theory of authoritarian institutions: dictators delegate political authority to democratic-appearing institutions in order to remain in power and maintain stability. After providing a brief overview of authoritarian institutionalism and balancing, I discuss how domestic and international NGOs fit into authoritarian stability-seeking calculus. I then look at three forms of state–NGO relationships in the context of authoritarianism and explore how autocrats have addressed and regulated international NGOs in particular. Finally, I conclude with suggestions for future research on NGOs and their relationship with and role in authoritarian regimes."
+  },
+  {
+    "objectID": "research/chapters/heiss-ngo-ir-2019/index.html#abstract",
+    "href": "research/chapters/heiss-ngo-ir-2019/index.html#abstract",
+    "title": "NGOs and Authoritarianism",
+    "section": "",
+    "text": "Authoritarian restrictions on domestic and international civil society have increased over the past decade, but authoritarian states continue to allow—and even invite—NGOs to work in their countries. Though the services and advocacy provided by NGOs can challenge the legitimacy and power of authoritarian regimes, the majority of autocratic states allow NGO activities, and NGOs in turn continue to work in these countries in spite of the heavy legal restrictions and attempts to limit their activities. This chapter examines the theories about and the experiences of domestic and international NGOs working in authoritarian countries. The review is premised on the theory of authoritarian institutions: dictators delegate political authority to democratic-appearing institutions in order to remain in power and maintain stability. After providing a brief overview of authoritarian institutionalism and balancing, I discuss how domestic and international NGOs fit into authoritarian stability-seeking calculus. I then look at three forms of state–NGO relationships in the context of authoritarianism and explore how autocrats have addressed and regulated international NGOs in particular. Finally, I conclude with suggestions for future research on NGOs and their relationship with and role in authoritarian regimes."
+  },
+  {
+    "objectID": "research/chapters/heiss-ngo-ir-2019/index.html#figure",
+    "href": "research/chapters/heiss-ngo-ir-2019/index.html#figure",
+    "title": "NGOs and Authoritarianism",
+    "section": "Figure",
+    "text": "Figure\nFigure 2: Civil society repression and regulations\n\n\n\nFigure 2: Civil society repression and regulations"
+  },
+  {
+    "objectID": "research/chapters/heiss-ngo-ir-2019/index.html#citation",
+    "href": "research/chapters/heiss-ngo-ir-2019/index.html#citation",
+    "title": "NGOs and Authoritarianism",
+    "section": "Citation",
+    "text": "Citation\n\n Add to Zotero \n\n@incollection{Heiss:2019,\n    Address = {London},\n    Author = {Andrew Heiss},\n    Booktitle = {Routledge Handbook of {NGOs} and International Relations},\n    Editor = {Thomas Davies},\n    Publisher = {Routledge},\n    Title = {{NGOs} and Authoritarianism},\n    Chapter = {38},\n    Year = {2019}}"
+  },
+  {
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "Research",
+    "section": "",
+    "text": "Welcome to my publications page! Here you will find a curated collection of my research contributions and scientific publications. Explore a diverse range of topics spanning health data analysis, bioinformatics, machine learning, and public health research. Dive into the insights and discoveries derived from my work as I strive to advance knowledge and make a meaningful impact in the scientific community."
+  },
+  {
+    "objectID": "research/index.html#journal-articles",
+    "href": "research/index.html#journal-articles",
+    "title": "Research",
+    "section": "Journal Articles",
+    "text": "Journal Articles\n\n\n\n\n        \n            \n                Suparna Chaudhry, Marc Dotson, and Andrew Heiss, “Who Cares About Crackdowns? Exploring the Role of Trust in Individual Philanthropy,” Global Policy 12, no. S5 (July 2021): 45–58, doi: 10.1111/1758-5899.12984\n            \n            \n                    \n                            Philanthropy\n                        \n                    \n                            Experiment\n                        \n                    \n                            Conjoint analysis\n                        \n                    \n                            Simulation\n                        \n                    \n                            Bayes\n                        \n                    \n                            INGOs\n                        \n            \n            \n                When seeing crackdown,\n                 / people with low social trust\n                 / are fairweather friends.\n            \n            \n                \n                    \n                        \n                             Full details »\n                        \n                    \n                    \n                        \n                             Preprint\n                        \n                    \n                    \n                        \n                             Final version\n                        \n                    \n                    \n                        \n                             Code\n                        \n                    \n                    \n                        \n                             Data\n                        \n                    \n                    \n                        \n                             Add to Zotero\n                        \n                    \n                \n            \n        \n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "research/index.html#working-papers",
+    "href": "research/index.html#working-papers",
+    "title": "Research",
+    "section": "Working Papers",
+    "text": "Working Papers\n\n\n\n        \n            \n                Andrew Heiss and Meng Ye, “Clarifying Correlation and Causation: A Guide to Modern Quantitative Causal Inference in Nonprofit Studies”\n            \n            \n                    \n                            Causal inference\n                        \n                    \n                            Nonprofits\n                        \n                    \n                            Methods\n                        \n            \n            \n                \n                    \n                        \n                             Full details »\n                        \n                    \n                    \n                        \n                             Code\n                        \n                    \n                \n            \n        \n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "research/index.html#book-chapters",
+    "href": "research/index.html#book-chapters",
+    "title": "Research",
+    "section": "Book Chapters",
+    "text": "Book Chapters\n\n\n\n        \n            \n                Tana Johnson and Andrew Heiss, “Liberal Institutionalism,” chap. 8 in International Organization and Global Governance, 2nd ed., ed. Thomas G. Weiss and Rorden Wilkinson (London: Routledge, 2018), 123–34, doi: 10.4324/9781315301914.\n            \n            \n                    \n                            International relations\n                        \n                    \n                            Institutions\n                        \n            \n            \n                Stuck between “ism”s,\n                 / liberal global theory\n                 / has rich past; future.\n            \n            \n                \n                    \n                        \n                             Full details »\n                        \n                    \n                    \n                        \n                             Preprint\n                        \n                    \n                    \n                        \n                             Final version\n                        \n                    \n                    \n                        \n                             Add to Zotero\n                        \n                    \n                \n            \n        \n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "research/index.html#reviews",
+    "href": "research/index.html#reviews",
+    "title": "Research",
+    "section": "Reviews",
+    "text": "Reviews\n\n\n\n        \n            \n                Andrew Heiss, review of Taco Brandsen, Willem Trommel, and Bram Verschuere (eds.), Manufacturing Civil Society: Principles, Practices, and Effects, Voluntas: International Journal of Voluntary and Nonprofit Organizations 26, no. 2 (April 2014): 728–30, doi: 10.1007/s11266-014-9541-3.\n            \n            \n                    \n                            Civil society\n                        \n            \n            \n                \n                    \n                        \n                             Full details »\n                        \n                    \n                    \n                        \n                             Preprint\n                        \n                    \n                    \n                        \n                             Final version\n                        \n                    \n                    \n                        \n                             Add to Zotero\n                        \n                    \n                \n            \n        \n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "research/index.html#dormant-working-papers",
+    "href": "research/index.html#dormant-working-papers",
+    "title": "Research",
+    "section": "Dormant working papers",
+    "text": "Dormant working papers\n\n\n\n        \n            \n                \"Sources of Advocacy: When Does the Media Give Voice to Egyptian Advocacy NGOs?\" (with Ken Rogerson, Duke University)\n            \n            \n                    \n                            Egypt\n                        \n                    \n                            Text analysis\n                        \n                    \n                            Topic modeling\n                        \n                    \n                            NGOs\n                        \n            \n            \n                \n                    \n                        \n                             Full details »\n                        \n                    \n                    \n                        \n                             PDF\n                        \n                    \n                    \n                        \n                             Code\n                        \n                    \n                \n            \n        \n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "research/index.html#selected-seminar-papers",
+    "href": "research/index.html#selected-seminar-papers",
+    "title": "Research",
+    "section": "Selected seminar papers",
+    "text": "Selected seminar papers\n\n\n\n        \n            \n                “Explaining Support for Undemocratic Leaders in Democracies in the Middle East”Replication and extension of Amaney Jamal and Mark Tessler. 2008. “Attitudes in the Arab World.\" Journal of Democracy 19, no. 1 (January): 97–110.\n            \n            \n                    \n                            Authoritarianism\n                        \n            \n            \n                \n                    \n                        \n                             Full details »\n                        \n                    \n                    \n                        \n                             PDF\n                        \n                    \n                    \n                        \n                             Code\n                        \n                    \n                    \n                        \n                             Raw output\n                        \n                    \n                    \n                        \n                             Poster\n                        \n                    \n                \n            \n        \n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "research/index.html#translations",
+    "href": "research/index.html#translations",
+    "title": "Research",
+    "section": "Translations",
+    "text": "Translations\n\n\n\n        \n            \n                Prince, Mona. 2011. \"Three Suitcases for Departure (Thalatha Haqaʾib lil-Safar / ثلاثة حقائب للسفر).\" In The Literary Life of Cairo: One Hundred Years in the Heart of the City, edited by Samia Mehrez, translated by Andrew Heiss, 212–13. Cairo: American University in Cairo Press.\n            \n            \n                \n                    \n                        \n                             Full details »\n                        \n                    \n                    \n                        \n                             Book\n                        \n                    \n                    \n                        \n                             PDF\n                        \n                    \n                \n            \n        \n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "research/reviews/heiss-voluntas-review-2014/index.html",
+    "href": "research/reviews/heiss-voluntas-review-2014/index.html",
+    "title": "Review of Manufacturing Civil Society: Principles, Practices, and Effects, ed. Taco Brandsen, Willem Trommel, and Bram Verschuere",
+    "section": "",
+    "text": "Add to Zotero \n\n@article{Heiss:2015,\n    author = {Andrew Heiss},\n    doi = {10.1007/s11266-014-9541-3},\n    journal = {Voluntas: International Journal of Voluntary and Nonprofit Organizations},\n    pages = {728--730},\n    titleaddon = {\\bibstring{reviewof} Taco Brandsen, Willem Trommel, and Bram Verschuere (eds.), \\mkbibemph{Manufacturing Civil Society: Principles, Practices, and Effects}},\n    volume = {26},\n    year = {2015}}"
+  },
+  {
+    "objectID": "research/reviews/heiss-voluntas-review-2014/index.html#citation",
+    "href": "research/reviews/heiss-voluntas-review-2014/index.html#citation",
+    "title": "Review of Manufacturing Civil Society: Principles, Practices, and Effects, ed. Taco Brandsen, Willem Trommel, and Bram Verschuere",
+    "section": "",
+    "text": "Add to Zotero \n\n@article{Heiss:2015,\n    author = {Andrew Heiss},\n    doi = {10.1007/s11266-014-9541-3},\n    journal = {Voluntas: International Journal of Voluntary and Nonprofit Organizations},\n    pages = {728--730},\n    titleaddon = {\\bibstring{reviewof} Taco Brandsen, Willem Trommel, and Bram Verschuere (eds.), \\mkbibemph{Manufacturing Civil Society: Principles, Practices, and Effects}},\n    volume = {26},\n    year = {2015}}"
+  },
+  {
+    "objectID": "research/working-papers/chaudhry-comstock-heiss-pandemic-pass/index.html",
+    "href": "research/working-papers/chaudhry-comstock-heiss-pandemic-pass/index.html",
+    "title": "Pandemic Pass? Treaty Derogations and Human Rights Practices During COVID-19",
+    "section": "",
+    "text": "Statistical analysis notebook\nGitHub repository"
+  },
+  {
+    "objectID": "research/working-papers/chaudhry-comstock-heiss-pandemic-pass/index.html#important-links",
+    "href": "research/working-papers/chaudhry-comstock-heiss-pandemic-pass/index.html#important-links",
+    "title": "Pandemic Pass? Treaty Derogations and Human Rights Practices During COVID-19",
+    "section": "",
+    "text": "Statistical analysis notebook\nGitHub repository"
+  },
+  {
+    "objectID": "research/working-papers/chaudhry-heiss-derogations/index.html",
+    "href": "research/working-papers/chaudhry-heiss-derogations/index.html",
+    "title": "Derogations and Democratic Backsliding: Exploring the Pandemic’s Effects on Civic Spaces",
+    "section": "",
+    "text": "Paper (preprint)\nStatistical analysis notebook\nGitHub repository"
+  },
+  {
+    "objectID": "research/working-papers/chaudhry-heiss-derogations/index.html#important-links",
+    "href": "research/working-papers/chaudhry-heiss-derogations/index.html#important-links",
+    "title": "Derogations and Democratic Backsliding: Exploring the Pandemic’s Effects on Civic Spaces",
+    "section": "",
+    "text": "Paper (preprint)\nStatistical analysis notebook\nGitHub repository"
+  },
+  {
+    "objectID": "research/working-papers/chaudhry-heiss-derogations/index.html#abstract",
+    "href": "research/working-papers/chaudhry-heiss-derogations/index.html#abstract",
+    "title": "Derogations and Democratic Backsliding: Exploring the Pandemic’s Effects on Civic Spaces",
+    "section": "Abstract",
+    "text": "Abstract\nIn an effort to combat the COVID-19 pandemic, most governments have imposed restrictions on movement, association, and other civic freedoms in the interest of public health. In many cases, such as New Zealand, these emergency measures have been temporary and respect for human rights has returned to normal. In many other instances, however, governments have used these restrictions to suppress opposition and more permanently restrict civic space. Systematically measuring the consequences of COVID restrictions, however, is a difficult task. We will examine two possible quantitative measures of the relationship between of COVID restrictions and civil society space. First, we will use the Variety of Democracy project’s newly released Pandemic Violations of Democratic Standards Index to explore if and how civil society restrictions predict pandemic backsliding. Second, while many countries sign international human rights treaties that ostensibly bind states to respect rights, several treaties allow for emergency derogations from these obligations. We will tabulate formal human rights treaty derogations due to the pandemic and explore whether these emergency measures led to lasting declines in associational and human rights. We hope that our exploration of these two measures will provide rich data-based descriptions of the relationship between COVID restrictions and civic space that will allow for more causal work in the future."
+  },
+  {
+    "objectID": "research/working-papers/chaudhry-heiss-derogations/index.html#important-figure",
+    "href": "research/working-papers/chaudhry-heiss-derogations/index.html#important-figure",
+    "title": "Derogations and Democratic Backsliding: Exploring the Pandemic’s Effects on Civic Spaces",
+    "section": "Important figure",
+    "text": "Important figure\nFigure 5: Derogation decisions across pandemic violations and pandemic backsliding\n\n\n\nFigure 5: Derogation decisions across pandemic violations and pandemic backsliding"
+  },
+  {
+    "objectID": "research/working-papers/chaudhry-heiss-derogations/index.html#bibtex-citation",
+    "href": "research/working-papers/chaudhry-heiss-derogations/index.html#bibtex-citation",
+    "title": "Derogations and Democratic Backsliding: Exploring the Pandemic’s Effects on Civic Spaces",
+    "section": "BibTeX citation",
+    "text": "BibTeX citation\n@unpublished{ChaudhryHeiss:2021,\n    Author = {Suparna Chaudhry and Andrew Heiss},\n    Note = {Working paper},\n    Title = {Derogations and Democratic Backsliding: Exploring the Pandemic's Effects on Civic Spaces},\n    Year = {2021}}"
+  },
+  {
+    "objectID": "research/working-papers/heiss-amicable-contempt/index.html",
+    "href": "research/working-papers/heiss-amicable-contempt/index.html",
+    "title": "Amicable Contempt: A Conceptual Framework for Understanding International NGO Behavior in the Era of Closing Civic Space",
+    "section": "",
+    "text": "GitHub repository"
+  },
+  {
+    "objectID": "research/working-papers/heiss-amicable-contempt/index.html#important-links",
+    "href": "research/working-papers/heiss-amicable-contempt/index.html#important-links",
+    "title": "Amicable Contempt: A Conceptual Framework for Understanding International NGO Behavior in the Era of Closing Civic Space",
+    "section": "",
+    "text": "GitHub repository"
+  },
+  {
+    "objectID": "research/working-papers/heiss-amicable-contempt/index.html#abstract",
+    "href": "research/working-papers/heiss-amicable-contempt/index.html#abstract",
+    "title": "Amicable Contempt: A Conceptual Framework for Understanding International NGO Behavior in the Era of Closing Civic Space",
+    "section": "Abstract",
+    "text": "Abstract\nOver the past decade, international NGOs (INGOs) have become increasingly active in authoritarian regimes as they respond to emergencies, assist with development, or advocate for human rights. Though these services and advocacy can challenge the legitimacy and power of the regime, many autocratic states permit INGO activities and INGOs continue to work in these countries despite the sometimes heavy restrictions on their activities. In my dissertation, I theorize that this relationship between INGOs and autocrats creates a state of amicable contempt, where each party is aware that the other threatens—yet sustains—their existence. Autocrats and INGOs engage in a dance of cost-benefit calculus, each trying to advance their own agenda without upsetting their counterpart. Regimes work to set the optimal level of INGO regulations, maximizing the practical and reputational benefits that INGOs provide and minimizing the potential destabilizing costs of INGO activities. Meanwhile, INGOs work to find the optimal mix of programming within a country that allows them to pursue their principled objectives within the boundaries the regime has set—affecting as much change and providing as many services as possible without risking expulsion from the country. I use evidence from a global survey of international NGOs to define each INGO-related element of the theory of amicable contempt. I find that INGOs are primarily motivated by their core vision and values, but that they have to balance the pursuit of their missions with instrumental concerns such as fundraising, time, staffing, and collaboration. These concerns both limit and enable INGO activities—without substantial instrumental resources and programmatic flexibility, organizations are unable to carry out their mission, while too much emphasis on resource concerns distracts organizations from their core programming and reduces their effectiveness."
+  },
+  {
+    "objectID": "research/working-papers/heiss-nafa-bayes-ipw/index.html",
+    "href": "research/working-papers/heiss-nafa-bayes-ipw/index.html",
+    "title": "Taking Uncertainty Seriously: Bayesian Marginal Structural Models for Causal Inference in Political Science",
+    "section": "",
+    "text": "GitHub repository"
+  },
+  {
+    "objectID": "research/working-papers/heiss-nafa-bayes-ipw/index.html#important-links",
+    "href": "research/working-papers/heiss-nafa-bayes-ipw/index.html#important-links",
+    "title": "Taking Uncertainty Seriously: Bayesian Marginal Structural Models for Causal Inference in Political Science",
+    "section": "",
+    "text": "GitHub repository"
+  },
+  {
+    "objectID": "research/working-papers/heiss-nafa-bayes-ipw/index.html#abstract",
+    "href": "research/working-papers/heiss-nafa-bayes-ipw/index.html#abstract",
+    "title": "Taking Uncertainty Seriously: Bayesian Marginal Structural Models for Causal Inference in Political Science",
+    "section": "Abstract",
+    "text": "Abstract\nThe past two decades have been characterized by considerable progress in developing approaches to causal inference in situations where true experimental manipulation is either impractical or impossible. With few exceptions, however, commonly employed techniques in political science have developed largely within the frequentist framework (i.e., Blackwell and Glynn 2018; Imai and Kim 2019; Torres 2020). In this article, we argue that common approaches rest fundamentally upon assumptions that are difficult to defend in many areas of political research and highlight the benefits of quantifying uncertainty in the estimation of causal effects (Gill 1999; Gill and Heuberger 2020; Schrodt 2014; Western and Jackman 1994). Extending the approach to causal inference for cross-sectional time series and panel data under selection on observables introduced by Blackwell and Glynn (2018), we develop a two-step Bayesian approach to the estimation of marginal structural models. We demonstrate our proposed procedure in the context of parametric survival analysis and linear mixed effects models via a simulation study and two empirical examples. Finally, we provide flexible open-source software implementing the proposed method."
+  },
+  {
+    "objectID": "research/working-papers/heiss-nafa-bayes-ipw/index.html#bibtex-citation",
+    "href": "research/working-papers/heiss-nafa-bayes-ipw/index.html#bibtex-citation",
+    "title": "Taking Uncertainty Seriously: Bayesian Marginal Structural Models for Causal Inference in Political Science",
+    "section": "BibTeX citation",
+    "text": "BibTeX citation\n@unpublished{HeissNafa:2022,\n    Author = {Andrew Heiss and A. Jordan Nafa},\n    Note = {Working paper},\n    Title = {Taking Uncertainty Seriously: Bayesian Marginal Structural Models for Causal Inference in Political Science},\n    Year = {2022}}"
+  },
+  {
+    "objectID": "research/working-papers/heiss-ye-china-ongos/index.html",
+    "href": "research/working-papers/heiss-ye-china-ongos/index.html",
+    "title": "The Implementation of China’s Overseas NGO Law and the Operating Space for International Civil Society",
+    "section": "",
+    "text": "GitHub repository"
+  },
+  {
+    "objectID": "research/working-papers/heiss-ye-china-ongos/index.html#important-links",
+    "href": "research/working-papers/heiss-ye-china-ongos/index.html#important-links",
+    "title": "The Implementation of China’s Overseas NGO Law and the Operating Space for International Civil Society",
+    "section": "",
+    "text": "GitHub repository"
+  },
+  {
+    "objectID": "research/working-papers/heiss-ye-china-ongos/index.html#abstract",
+    "href": "research/working-papers/heiss-ye-china-ongos/index.html#abstract",
+    "title": "The Implementation of China’s Overseas NGO Law and the Operating Space for International Civil Society",
+    "section": "Abstract",
+    "text": "Abstract\nChina’s 2017 Overseas NGO (ONGO) Law is part of a larger global trend of legal restrictions on international NGOs (INGOs). However, the effects of this global crackdown on INGOs have been difficult to measure since there is often divergence between the formal de jure regulations and the de facto implementation of these laws. The enforcement of these laws also depends on the services provided by these organizations. In particular, authoritarian regimes display conflicting attitudes towards claim-making (e.g. advocacy) INGOs versus service-providing (e.g. humanitarian assistance) INGOs. In this paper, we measure the effect of China’s ONGO law on INGO operations since 2017. We test how INGO operational flexibility under the ONGO law is influenced by organizations’ issue areas. We argue that service provision INGOs have greater flexibility and are allowed to work in a larger number of provinces than their claim-making counterparts. China provides an excellent setting for testing our claim—the 2017 ONGO law regulates both claim-making and service-providing NGOs, and ambiguity in the law gives ample room for arbitrary discretion by authorities. We test our argument using multilevel Bayesian models with administrative data from 635 registered representative offices of INGOs registered in China between 2017–2021. Our results speak to the broader literature on closing civic space and provide an empirical illustration of the practical effect of NGO restrictions on global civil society."
+  },
+  {
+    "objectID": "talks/index.html#section",
+    "href": "talks/index.html#section",
+    "title": "Talks",
+    "section": "2022",
+    "text": "2022\n\n\n    \n                  \n            September 12, 2022\n        \n        \n            APIs and web scraping with R\n            Workshop for SEACEN's September 2022 online course on \"Data Analytics for Macroeconomic Surveillance\" | Kuala Lumpur, Malaysia (via Zoom)\n            \n                \n                    \n                         Companion site, slides, and materials\n                    \n                \n                \n                    \n                         GitHub repository\n                    \n                \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "talks/index.html#section-1",
+    "href": "talks/index.html#section-1",
+    "title": "Talks",
+    "section": "2021",
+    "text": "2021\n\n\n    \n                  \n            November 16, 2021\n        \n        \n            Introduction to the tidyverse + data visualization with ggplot2\n            Two sessions for SEACEN's November 2021 online course on \"Data Analytics for Macroeconomic Surveillance\" | Kuala Lumpur, Malaysia (via Zoom)\n            \n                \n                    \n                         Companion site, slides, and materials\n                    \n                \n                \n                    \n                         GitHub repository\n                    \n                \n            \n        \n    \n    \n                  \n            August 17, 2021\n        \n        \n            Making documents, websites, and dashboards with R\n            Workshop for the Georgia Policy Labs at the Andrew Young School of Policy Studies | Atlanta, Georgia (via Zoom)\n            \n                \n                    \n                         Companion site and slides\n                    \n                \n            \n        \n    \n    \n                  \n            July 13, 2021\n        \n        \n            Introduction to Geographic Information Systems (GIS) data with R\n            Workshop for the Georgia Policy Labs at the Andrew Young School of Policy Studies | Atlanta, Georgia (via Zoom)\n            \n                \n                    \n                         Companion site and slides\n                    \n                \n            \n        \n    \n    \n                  \n            June 29, 2021\n        \n        \n            Graphic design for public administrators\n            Workshop for the Georgia Policy Labs at the Andrew Young School of Policy Studies | Atlanta, Georgia (via Zoom)\n            \n                \n                    \n                         Companion site and slides\n                    \n                \n            \n        \n    \n    \n                  \n            March 4, 2021\n        \n        \n            Universal documents and reproducibility\n            Workshop for EPID 9100 (PhD/MS seminar), Department of Epidemiology & Biostatistics, University of Georgia | Athens, Georgia (via Zoom)\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         Companion site\n                    \n                \n                \n                    \n                         GitHub repository for talk\n                    \n                \n            \n        \n    \n    \n                  \n            February 5, 2021\n        \n        \n            What does the internet say about you?\n            Workshop for the Political Science Graduate Student Association, Department of Political Science, Georgia State University | Atlanta, Georgia (via Zoom)\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         Handout page\n                    \n                \n                \n                    \n                         GitHub repository for talk\n                    \n                \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "talks/index.html#section-2",
+    "href": "talks/index.html#section-2",
+    "title": "Talks",
+    "section": "2020",
+    "text": "2020\n\n\n    \n                  \n            October 29, 2020\n        \n        \n            The US and the 2020 Election\n            Guest lecture for KIEN 2263 (English Academic and Professional Skills II), Centre for Language & Communication Studies, University of Turku | Turku, Finland (via Zoom)\n            \n        \n    \n    \n                  \n            October 23, 2020\n        \n        \n            Universal documents and reproducibility\n            \"Unpacking the Hidden Curriculum\": Graduate Student Professionalization Workshop, Department of Political Science, University of Utah | Salt Lake City, Utah (via Zoom)\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         Companion site\n                    \n                \n                \n                    \n                         GitHub repository for talk\n                    \n                \n            \n        \n    \n    \n                  \n            October 23, 2020\n        \n        \n            What does the internet say about you?\n            \"Unpacking the Hidden Curriculum\": Graduate Student Professionalization Workshop, Department of Political Science, University of Utah | Salt Lake City, Utah (via Zoom)\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         Handout page\n                    \n                \n                \n                    \n                         GitHub repository for talk\n                    \n                \n            \n        \n    \n    \n                  \n            September 17, 2020\n        \n        \n            Truth, beauty, and data: Why data visualization matters in research\n            Methods workshop in the Département de science politique, Université de Montréal | Montréal, Canada (via Zoom)\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         Handout page\n                    \n                \n                \n                    \n                         GitHub repository for talk\n                    \n                \n            \n        \n    \n    \n                  \n            August 21, 2020\n        \n        \n            Program evaluation and causal inference with R\n            Workshop for the Georgia Policy Labs at the Andrew Young School of Policy Studies | Atlanta, Georgia (via Zoom)\n            \n                \n                    \n                         Slides and materials\n                    \n                \n            \n        \n    \n    \n                  \n            July 20, 2020\n        \n        \n            Data visualization with R\n            Workshop for the Georgia Policy Labs at the Andrew Young School of Policy Studies | Atlanta, Georgia (via Zoom)\n            \n                \n                    \n                         Slides and materials\n                    \n                \n            \n        \n    \n    \n                  \n            July 16, 2020\n        \n        \n            What does the internet say about you?\n            Workshop for members of the International Society for Third-Sector Research (ISTR) | Online workshop via Zoom\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub repository for talk\n                    \n                \n            \n        \n    \n    \n                  \n            July 9, 2020\n        \n        \n            Welcome to the tidyverse: Introduction to R and tidy data analysis\n            Workshop for the Georgia Policy Labs at the Andrew Young School of Policy Studies | Atlanta, Georgia (via Zoom)\n            \n                \n                    \n                         Slides and materials\n                    \n                \n            \n        \n    \n    \n                  \n            July 7, 2020\n        \n        \n            Truth, Beauty, and Data\n            Workshop on data visualization for employees of the Church of Jesus Christ of Latter-day Saints | Salt Lake City, Utah (via Zoom)\n            \n                \n                    \n                         Slides\n                    \n                \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "talks/index.html#section-3",
+    "href": "talks/index.html#section-3",
+    "title": "Talks",
+    "section": "2019",
+    "text": "2019\n\n\n    \n                  \n            November 21, 2019\n        \n        \n            Why Donors Donate: Disentangling Organizational and Structural Heuristics for International Philanthropy\n            2019 Conference for the Association for Research on Nonprofit Organizations and Voluntary Action (ARNOVA) | San Diego, California\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub repository\n                    \n                \n            \n        \n    \n    \n                  \n            November 5, 2019\n        \n        \n            NGOs and authoritarianism\n            Guest lecture for International NGOs (PMAP 8201) | Atlanta, Georgia\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub repository\n                    \n                \n            \n        \n    \n    \n                  \n            October 18, 2019\n        \n        \n            Open source resources for teaching data public service-focused data science courses\n            2019 Conference for the Network of Schools of Public Policy, Affairs, and Administration (NASPAA) | Los Angeles, California\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub repository\n                    \n                \n                \n                    \n                         Handout page\n                    \n                \n            \n        \n    \n    \n                  \n            October 10, 2019\n        \n        \n            Data Science, Open Source, and Radical Transparency\n            Brown bag presentation to PhD students in the Andrew Young School of Policy Studies | Atlanta, Georgia\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub repository\n                    \n                \n            \n        \n    \n    \n                  \n            September 19, 2019\n        \n        \n            Curiosity, Transparency, and Failure\n            Guest talk to epidemiology PhD students at the University of Georgia | Athens, Georgia\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub repository\n                    \n                \n            \n        \n    \n    \n                  \n            May 14, 2019\n        \n        \n            \"Why won't this run again?!\": Making R analysis more reproducible\n            Utah County R Users Group | Provo, Utah\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub repository for talk\n                    \n                \n                \n                    \n                         Handout page\n                    \n                \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "talks/index.html#section-4",
+    "href": "talks/index.html#section-4",
+    "title": "Talks",
+    "section": "2018",
+    "text": "2018\n\n\n    \n                  \n            September 19, 2018\n        \n        \n            A lightning quick introduction to data visualization\n            Utah Valley University Department of Biology Seminar | Orem, Utah\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub repository\n                    \n                \n                \n                    \n                         Handout page\n                    \n                \n            \n        \n    \n    \n                  \n            July 11, 2018\n        \n        \n            Introduction to data visualization with R\n            Utah R Users Group | Salt Lake City, Utah\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub repository for talk\n                    \n                \n                \n                    \n                         Resources and code examples\n                    \n                \n                \n                    \n                         Video\n                    \n                \n            \n        \n    \n    \n                  \n            June 12, 2018\n        \n        \n            Taking Control of Regulations: How International Advocacy NGOs Shape the Regulatory Environments of their Target Countries\n            Interest Groups, International Organizations, and Global Problem-solving Capacity workshop | Stockholm, Sweden\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub repository for paper\n                    \n                \n            \n        \n    \n    \n                  \n            April 27, 2018\n        \n        \n            A lightning quick introduction to data visualization\n            West Coast Nonprofit Data Conference | Salt Lake City, Utah\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub repository for talk\n                    \n                \n                \n                    \n                         Handout page\n                    \n                \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "talks/index.html#section-5",
+    "href": "talks/index.html#section-5",
+    "title": "Talks",
+    "section": "2016",
+    "text": "2016\n\n\n    \n                  \n            March 7, 2016\n        \n        \n            Telling Stories with Data\n            MPP workshop at the Sanford School of Public Policy, Duke University | Durham, North Carolina\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub repository\n                    \n                \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "talks/index.html#section-6",
+    "href": "talks/index.html#section-6",
+    "title": "Talks",
+    "section": "2015",
+    "text": "2015\n\n\n    \n                  \n            October 16, 2015\n        \n        \n            Enhancing basic statistical figures: Make pretty pictures like the New York Times\n            MPP workshop at the Sanford School of Public Policy | Durham, North Carolina\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub repository\n                    \n                \n            \n        \n    \n    \n                  \n            October 2, 2015\n        \n        \n            Graphic Design for Non-Designers\n            MPP workshop at the Sanford School of Public Policy | Durham, North Carolina\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub repository\n                    \n                \n            \n        \n    \n    \n                  \n            September 15, 2015\n        \n        \n            A Very Brief Overview of Topics in Data Visualization\n            MPP workshop at the Sanford School of Public Policy | Durham, North Carolina\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub repository\n                    \n                \n            \n        \n    \n    \n                  \n            April 17, 2015\n        \n        \n            Telling Stories with Data\n            PhD workshop at the Sanford School of Public Policy | Durham, North Carolina\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub repository\n                    \n                \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "talks/index.html#section-7",
+    "href": "talks/index.html#section-7",
+    "title": "Talks",
+    "section": "2014",
+    "text": "2014\n\n\n    \n                  \n            September 11, 2014\n        \n        \n            Data Visualization and Exploratory Data Analysis\n            MPP workshop at the Sanford School of Public Policy | Durham, North Carolina\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub repository\n                    \n                \n            \n        \n    \n    \n                  \n            September 2, 2014\n        \n        \n            Practically Perfect Professional Policy Presentations\n            MPP workshop at the Sanford School of Public Policy | Durham, North Carolina\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub repository\n                    \n                \n            \n        \n    \n    \n                  \n            January 22, 2014\n        \n        \n            Data Visualization and Exploratory Data Analysis\n            MPP workshop at the Sanford School of Public Policy | Durham, North Carolina\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub repository\n                    \n                \n            \n        \n    \n\n\nNo matching items"
+  },
+  {
+    "objectID": "talks/index.html#section-8",
+    "href": "talks/index.html#section-8",
+    "title": "Talks",
+    "section": "2013",
+    "text": "2013\n\n\n    \n                  \n            September 12, 2013\n        \n        \n            Telling Stories with Data\n            MPP workshop at the Sanford School of Public Policy | Durham, North Carolina\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub repository\n                    \n                \n            \n        \n    \n    \n                  \n            September 12, 2013\n        \n        \n            Practically Perfect Professional Policy Presentations\n            MPP workshop at the Sanford School of Public Policy | Durham, North Carolina\n            \n                \n                    \n                         Slides\n                    \n                \n                \n                    \n                         GitHub repository\n                    \n                \n            \n        \n    \n\n\nNo matching items"
   }
 ]
