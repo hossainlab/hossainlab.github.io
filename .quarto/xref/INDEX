@@ -76,5 +76,17 @@
   },
   "teaching/index.qmd": {
     "index.html": "15456e1d"
+  },
+  "blog/2017/09/15/create-supply-and-demand-economics-curves-with-ggplot2/index.qmd": {
+    "index.html": "9ce3c1b8"
+  },
+  "blog/2017/09/27/working-with-r-cairo-graphics-custom-fonts-and-ggplot/index.qmd": {
+    "index.html": "3a4234ff"
+  },
+  "blog/2023/01/08/bibdesk-to-zotero-pandoc/index.qmd": {
+    "index.html": "ca26fa1c"
+  },
+  "blog/2023/01/09/syllabus-csl-pandoc/index.qmd": {
+    "index.html": "a0ed7bb4"
   }
 }
