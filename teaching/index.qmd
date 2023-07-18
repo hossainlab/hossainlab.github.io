@@ -7,7 +7,11 @@ listing:
     contents: ay_22-23.yml
     sort: "date desc"
     template: ../html/teaching/listing.ejs
-
+  - id: ay_19-20
+    contents: ay_19-20.yml
+    sort: "date desc"
+    template: ../html/teaching/listing.ejs
+    
 # title-block-banner: "#EE6A24"
 page-layout: full
 toc: true
@@ -18,4 +22,11 @@ toc-title: Academic Year
 ## 2022–23
 
 :::{#ay_22-23}
+:::
+
+
+
+## 2019–20
+
+:::{#ay_19-20}
 :::

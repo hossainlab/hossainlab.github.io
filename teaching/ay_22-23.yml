@@ -12,6 +12,18 @@
   - name: Fall 2023
     url: https://docs.google.com/spreadsheets/d/1YuwhJA6eR2hlwgIce3YNQuUnJphE-nr9rUJfslR3-Js/edit?usp=sharing
 
+- title: Applied Machine Learning for Healthcare (AML4H)
+  description: "Empowering Healthcare with Intelligent Solutions: Applied Machine Learning for Healthcare (AML4H)"
+  university: CHIRAL Bangladesh
+  number: AML4H01
+  url: https://github.com/chiraltraining/PY4HDS
+  logo: logos/aml4h.png
+  semester:
+  - name: Cohort 01, June 2023
+    url: hhttps://github.com/chiraltraining/PY4HDS
+  - name: Cohort 02, October 2023
+    url: https://github.com/chiraltraining/PY4HDS
+
 - title: R for Research
   description: "Unleash the Power of R: Empowering Research with Data Analysis"
   university: CHIRAL Bangladesh
@@ -61,4 +73,14 @@
   - name: Cohort 02, October 2023
     url:
 
-
+- title: Machine Learning for Bioinformatics
+  description: "Unleashing the Power of Data in Life Sciences: Machine Learning for Bioinformatics"
+  university: CHIRAL Bangladesh
+  number: R4B01
+  url:
+  logo: logos/bioconductor.gif
+  semester:
+  - name: Cohort 01, October 2023
+    url:
+  - name: Cohort 02, December 2023
+    url:

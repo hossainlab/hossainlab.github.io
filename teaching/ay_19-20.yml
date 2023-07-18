@@ -1,0 +1,82 @@
+- title: Introduction to Linux for Biologists
+  description: "This course provides biologists with essential skills to navigate the Linux operating system, enabling seamless access to powerful bioinformatics tools and facilitating efficient data analysis and research workflows."
+  university: CHIRAL Bangladesh
+  number: ISCB20.01
+  url: https://github.com/chiraltraining/ISCB20.01
+  logo: logos/evalsp20.png
+  semester:
+  - name: Introduction to Scientific Computing for Biologists, 2020
+    url: https://github.com/chiraltraining/ISCB20.01
+
+- title: Scientific Typesetting with LaTex
+  description: "This course equips researchers and academics with the essential skills to create professional and visually appealing scientific documents, including research papers, presentations, and posters, using LaTeX, a powerful typesetting system."
+  university: CHIRAL Bangladesh
+  number: ISCB20.02
+  url: https://github.com/chiraltraining/ISCB20.02
+  logo: logos/evalsp20.png
+  semester:
+  - name: Introduction to Scientific Computing for Biologists, 2020
+    url: https://github.com/chiraltraining/ISCB20.02
+
+
+- title: Version Control with Git & Github
+  description: "Mastering Collaboration and Code Management: Version Control with Git & GitHub. This course provides a comprehensive introduction to the Git version control system and GitHub platform, empowering individuals and teams to efficiently track changes, collaborate on projects, and streamline software development workflows."
+  university: CHIRAL Bangladesh
+  number: ISCB20.02
+  url: https://github.com/chiraltraining/ISCB20.03
+  logo: logos/evalsp20.png
+  semester:
+  - name: Introduction to Scientific Computing for Biologists, 2020
+    url: https://github.com/chiraltraining/ISCB20.03
+
+- title: Introduction to Python
+  description: "Unlock the Power of Programming: Introduction to Python. This beginner-friendly course provides a solid foundation in Python programming, equipping learners with essential skills to write efficient and versatile code for a wide range of applications, from data analysis to web development."
+  university: CHIRAL Bangladesh
+  number: ISCB20.02
+  url: https://github.com/chiraltraining/ISCB20.04
+  logo: logos/evalsp20.png
+  semester:
+  - name: Introduction to Scientific Computing for Biologists, 2020
+    url: https://github.com/chiraltraining/ISCB20.04
+
+- title: Introduction to Biostatistics
+  description: "This course introduces the fundamental concepts and techniques of biostatistics, empowering learners to effectively analyze and interpret data in the field of health sciences, make informed decisions, and contribute to evidence-based research and healthcare practices."
+  university: CHIRAL Bangladesh
+  number: ISCB20.02
+  url: https://github.com/chiraltraining/ISCB20.05
+  logo: logos/evalsp20.png
+  semester:
+  - name: Introduction to Scientific Computing for Biologists, 2020
+    url: https://github.com/chiraltraining/ISCB20.05
+
+- title: Python for Scientific Computing
+  description: "This course explores how Python, with its rich ecosystem of libraries and tools, can be leveraged for efficient data analysis, numerical computations, and visualization in scientific research, enabling researchers to tackle complex scientific problems with ease."
+  university: CHIRAL Bangladesh
+  number: ISCB20.02
+  url: https://github.com/chiraltraining/ISCB20.06
+  logo: logos/evalsp20.png
+  semester:
+  - name: Introduction to Scientific Computing for Biologists, 2020
+    url: https://github.com/chiraltraining/ISCB20.06
+
+
+- title: Introduction to Bioinformatics
+  description: "Exploring the Intersection of Biology and Data Science: Introduction to Bioinformatics. This course provides an overview of bioinformatics, equipping learners with the foundational knowledge and practical skills needed to analyze biological data, apply computational tools, and gain insights into the complexities of genomics, proteomics, and other areas of life sciences."
+  university: CHIRAL Bangladesh
+  number: ISCB20.02
+  url: https://github.com/chiraltraining/ISCB20.07
+  logo: logos/evalsp20.png
+  semester:
+  - name: Introduction to Scientific Computing for Biologists, 2020
+    url: https://github.com/chiraltraining/ISCB20.07
+
+- title: Python for Bioinformatics
+  description: "Unlocking Biological Insights with Python: Python for Bioinformatics. This course provides a comprehensive introduction to utilizing Python programming for bioinformatics applications. From sequence analysis to data manipulation, participants will gain the skills needed to leverage Python's versatility and powerful libraries in order to extract meaningful information from biological datasets and drive discoveries in the field of bioinformatics."
+  university: CHIRAL Bangladesh
+  number: ISCB20.02
+  url: https://github.com/chiraltraining/ISCB20.08
+  logo: logos/evalsp20.png
+  semester:
+  - name: Introduction to Scientific Computing for Biologists, 2020
+    url: https://github.com/chiraltraining/ISCB20.08
+

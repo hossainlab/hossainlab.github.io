@@ -91,6 +91,34 @@ ul.task-list li input[type="checkbox"] {
       window['quarto-listing-loaded']();
     }
   })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-ay_19-20 .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-description','listing-university','listing-number','listing-url','listing-logo','listing-semester',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-description","listing-university","listing-number","listing-url","listing-logo","listing-semester"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-ay_19-20'] = new List('listing-ay_19-20', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
   </script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -197,6 +225,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">2022–23</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">2019–20</a></li>
   </ul>
 </nav>
     </div>
@@ -210,7 +239,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    <p>Welcome to my personal teaching webpage! Here, you will find a curated collection of educational resources and insights aimed at empowering learners in their academic journey. Explore a range of engaging topics, tutorials, and practical exercises designed to enhance your understanding and ignite a passion for learning. Join me on this educational adventure and unlock your full potential.</p>
+    <p>Welcome to my personal teaching page! Here, you will find a curated collection of educational resources and insights aimed at empowering learners in their academic journey. Explore a range of engaging topics, tutorials, and practical exercises designed to enhance your understanding and ignite a passion for learning. Join me on this educational adventure and unlock your full potential.</p>
   </div>
 </div>
 
@@ -246,6 +275,25 @@ ul.task-list li input[type="checkbox"] {
                 <li><a href="https://docs.google.com/spreadsheets/d/1YuwhJA6eR2hlwgIce3YNQuUnJphE-nr9rUJfslR3-Js/edit?usp=sharing"><i class="fa-solid fa-building-columns"></i> Spring 2023</a></li>
                 <li><a href="https://docs.google.com/spreadsheets/d/1YuwhJA6eR2hlwgIce3YNQuUnJphE-nr9rUJfslR3-Js/edit?usp=sharing"><i class="fa-solid fa-building-columns"></i> Summer 2023</a></li>
                 <li><a href="https://docs.google.com/spreadsheets/d/1YuwhJA6eR2hlwgIce3YNQuUnJphE-nr9rUJfslR3-Js/edit?usp=sharing"><i class="fa-solid fa-building-columns"></i> Fall 2023</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="course-entry">
+        <div class="logo">
+            <a href="https://github.com/chiraltraining/PY4HDS" target="_blank"><img src="logos/aml4h.png" alt="Applied Machine Learning for Healthcare (AML4H)" title="Applied Machine Learning for Healthcare (AML4H)"></a>
+        </div>
+        <div class="body">
+            <p class="course-title">
+                <a href="https://github.com/chiraltraining/PY4HDS" target="_blank">Applied Machine Learning for Healthcare (AML4H)</a> 
+            </p>
+            <p class="course-details">
+                <span class="course-number">AML4H01</span> | 
+                <span class="course-university">CHIRAL Bangladesh</span>
+            </p>
+            <p class="course-description">Empowering Healthcare with Intelligent Solutions: Applied Machine Learning for Healthcare (AML4H)</p>
+            <ul class="course-semesters">
+                <li><a href="hhttps://github.com/chiraltraining/PY4HDS"><i class="fa-solid fa-building-columns"></i> Cohort 01, June 2023</a></li>
+                <li><a href="https://github.com/chiraltraining/PY4HDS"><i class="fa-solid fa-building-columns"></i> Cohort 02, October 2023</a></li>
             </ul>
         </div>
     </div>
@@ -322,6 +370,179 @@ ul.task-list li input[type="checkbox"] {
             <ul class="course-semesters">
                 <li class="no-link"><i class="fa-solid fa-building-columns"></i> Cohort 01, August 2023</li>
                 <li class="no-link"><i class="fa-solid fa-building-columns"></i> Cohort 02, October 2023</li>
+            </ul>
+        </div>
+    </div>
+    <div class="course-entry">
+        <div class="logo">
+            <img src="logos/bioconductor.gif" alt="Machine Learning for Bioinformatics" title="Machine Learning for Bioinformatics">
+        </div>
+        <div class="body">
+            <p class="course-title">
+                Machine Learning for Bioinformatics 
+            </p>
+            <p class="course-details">
+                <span class="course-number">R4B01</span> | 
+                <span class="course-university">CHIRAL Bangladesh</span>
+            </p>
+            <p class="course-description">Unleashing the Power of Data in Life Sciences: Machine Learning for Bioinformatics</p>
+            <ul class="course-semesters">
+                <li class="no-link"><i class="fa-solid fa-building-columns"></i> Cohort 01, October 2023</li>
+                <li class="no-link"><i class="fa-solid fa-building-columns"></i> Cohort 02, December 2023</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1">2019–20</h2>
+<div id="listing-ay_19-20" class="quarto-listing quarto-listing-container-custom">
+<div class="teaching">
+    <div class="course-entry">
+        <div class="logo">
+            <a href="https://github.com/chiraltraining/ISCB20.01" target="_blank"><img src="logos/evalsp20.png" alt="Introduction to Linux for Biologists" title="Introduction to Linux for Biologists"></a>
+        </div>
+        <div class="body">
+            <p class="course-title">
+                <a href="https://github.com/chiraltraining/ISCB20.01" target="_blank">Introduction to Linux for Biologists</a> 
+            </p>
+            <p class="course-details">
+                <span class="course-number">ISCB20.01</span> | 
+                <span class="course-university">CHIRAL Bangladesh</span>
+            </p>
+            <p class="course-description">This course provides biologists with essential skills to navigate the Linux operating system, enabling seamless access to powerful bioinformatics tools and facilitating efficient data analysis and research workflows.</p>
+            <ul class="course-semesters">
+                <li><a href="https://github.com/chiraltraining/ISCB20.01"><i class="fa-solid fa-building-columns"></i> Introduction to Scientific Computing for Biologists, 2020</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="course-entry">
+        <div class="logo">
+            <a href="https://github.com/chiraltraining/ISCB20.02" target="_blank"><img src="logos/evalsp20.png" alt="Scientific Typesetting with LaTex" title="Scientific Typesetting with LaTex"></a>
+        </div>
+        <div class="body">
+            <p class="course-title">
+                <a href="https://github.com/chiraltraining/ISCB20.02" target="_blank">Scientific Typesetting with LaTex</a> 
+            </p>
+            <p class="course-details">
+                <span class="course-number">ISCB20.02</span> | 
+                <span class="course-university">CHIRAL Bangladesh</span>
+            </p>
+            <p class="course-description">This course equips researchers and academics with the essential skills to create professional and visually appealing scientific documents, including research papers, presentations, and posters, using LaTeX, a powerful typesetting system.</p>
+            <ul class="course-semesters">
+                <li><a href="https://github.com/chiraltraining/ISCB20.02"><i class="fa-solid fa-building-columns"></i> Introduction to Scientific Computing for Biologists, 2020</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="course-entry">
+        <div class="logo">
+            <a href="https://github.com/chiraltraining/ISCB20.03" target="_blank"><img src="logos/evalsp20.png" alt="Version Control with Git &amp; Github" title="Version Control with Git &amp; Github"></a>
+        </div>
+        <div class="body">
+            <p class="course-title">
+                <a href="https://github.com/chiraltraining/ISCB20.03" target="_blank">Version Control with Git &amp; Github</a> 
+            </p>
+            <p class="course-details">
+                <span class="course-number">ISCB20.02</span> | 
+                <span class="course-university">CHIRAL Bangladesh</span>
+            </p>
+            <p class="course-description">Mastering Collaboration and Code Management: Version Control with Git &amp; GitHub. This course provides a comprehensive introduction to the Git version control system and GitHub platform, empowering individuals and teams to efficiently track changes, collaborate on projects, and streamline software development workflows.</p>
+            <ul class="course-semesters">
+                <li><a href="https://github.com/chiraltraining/ISCB20.03"><i class="fa-solid fa-building-columns"></i> Introduction to Scientific Computing for Biologists, 2020</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="course-entry">
+        <div class="logo">
+            <a href="https://github.com/chiraltraining/ISCB20.04" target="_blank"><img src="logos/evalsp20.png" alt="Introduction to Python" title="Introduction to Python"></a>
+        </div>
+        <div class="body">
+            <p class="course-title">
+                <a href="https://github.com/chiraltraining/ISCB20.04" target="_blank">Introduction to Python</a> 
+            </p>
+            <p class="course-details">
+                <span class="course-number">ISCB20.02</span> | 
+                <span class="course-university">CHIRAL Bangladesh</span>
+            </p>
+            <p class="course-description">Unlock the Power of Programming: Introduction to Python. This beginner-friendly course provides a solid foundation in Python programming, equipping learners with essential skills to write efficient and versatile code for a wide range of applications, from data analysis to web development.</p>
+            <ul class="course-semesters">
+                <li><a href="https://github.com/chiraltraining/ISCB20.04"><i class="fa-solid fa-building-columns"></i> Introduction to Scientific Computing for Biologists, 2020</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="course-entry">
+        <div class="logo">
+            <a href="https://github.com/chiraltraining/ISCB20.05" target="_blank"><img src="logos/evalsp20.png" alt="Introduction to Biostatistics" title="Introduction to Biostatistics"></a>
+        </div>
+        <div class="body">
+            <p class="course-title">
+                <a href="https://github.com/chiraltraining/ISCB20.05" target="_blank">Introduction to Biostatistics</a> 
+            </p>
+            <p class="course-details">
+                <span class="course-number">ISCB20.02</span> | 
+                <span class="course-university">CHIRAL Bangladesh</span>
+            </p>
+            <p class="course-description">This course introduces the fundamental concepts and techniques of biostatistics, empowering learners to effectively analyze and interpret data in the field of health sciences, make informed decisions, and contribute to evidence-based research and healthcare practices.</p>
+            <ul class="course-semesters">
+                <li><a href="https://github.com/chiraltraining/ISCB20.05"><i class="fa-solid fa-building-columns"></i> Introduction to Scientific Computing for Biologists, 2020</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="course-entry">
+        <div class="logo">
+            <a href="https://github.com/chiraltraining/ISCB20.06" target="_blank"><img src="logos/evalsp20.png" alt="Python for Scientific Computing" title="Python for Scientific Computing"></a>
+        </div>
+        <div class="body">
+            <p class="course-title">
+                <a href="https://github.com/chiraltraining/ISCB20.06" target="_blank">Python for Scientific Computing</a> 
+            </p>
+            <p class="course-details">
+                <span class="course-number">ISCB20.02</span> | 
+                <span class="course-university">CHIRAL Bangladesh</span>
+            </p>
+            <p class="course-description">This course explores how Python, with its rich ecosystem of libraries and tools, can be leveraged for efficient data analysis, numerical computations, and visualization in scientific research, enabling researchers to tackle complex scientific problems with ease.</p>
+            <ul class="course-semesters">
+                <li><a href="https://github.com/chiraltraining/ISCB20.06"><i class="fa-solid fa-building-columns"></i> Introduction to Scientific Computing for Biologists, 2020</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="course-entry">
+        <div class="logo">
+            <a href="https://github.com/chiraltraining/ISCB20.07" target="_blank"><img src="logos/evalsp20.png" alt="Introduction to Bioinformatics" title="Introduction to Bioinformatics"></a>
+        </div>
+        <div class="body">
+            <p class="course-title">
+                <a href="https://github.com/chiraltraining/ISCB20.07" target="_blank">Introduction to Bioinformatics</a> 
+            </p>
+            <p class="course-details">
+                <span class="course-number">ISCB20.02</span> | 
+                <span class="course-university">CHIRAL Bangladesh</span>
+            </p>
+            <p class="course-description">Exploring the Intersection of Biology and Data Science: Introduction to Bioinformatics. This course provides an overview of bioinformatics, equipping learners with the foundational knowledge and practical skills needed to analyze biological data, apply computational tools, and gain insights into the complexities of genomics, proteomics, and other areas of life sciences.</p>
+            <ul class="course-semesters">
+                <li><a href="https://github.com/chiraltraining/ISCB20.07"><i class="fa-solid fa-building-columns"></i> Introduction to Scientific Computing for Biologists, 2020</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="course-entry">
+        <div class="logo">
+            <a href="https://github.com/chiraltraining/ISCB20.08" target="_blank"><img src="logos/evalsp20.png" alt="Python for Bioinformatics" title="Python for Bioinformatics"></a>
+        </div>
+        <div class="body">
+            <p class="course-title">
+                <a href="https://github.com/chiraltraining/ISCB20.08" target="_blank">Python for Bioinformatics</a> 
+            </p>
+            <p class="course-details">
+                <span class="course-number">ISCB20.02</span> | 
+                <span class="course-university">CHIRAL Bangladesh</span>
+            </p>
+            <p class="course-description">Unlocking Biological Insights with Python: Python for Bioinformatics. This course provides a comprehensive introduction to utilizing Python programming for bioinformatics applications. From sequence analysis to data manipulation, participants will gain the skills needed to leverage Python's versatility and powerful libraries in order to extract meaningful information from biological datasets and drive discoveries in the field of bioinformatics.</p>
+            <ul class="course-semesters">
+                <li><a href="https://github.com/chiraltraining/ISCB20.08"><i class="fa-solid fa-building-columns"></i> Introduction to Scientific Computing for Biologists, 2020</a></li>
             </ul>
         </div>
     </div>
