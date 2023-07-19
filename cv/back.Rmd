@@ -1,0 +1,33 @@
+# Projects 
+**<span style="font-size:1em;">Bioinformatics Approach for Profiling Antibiotic Resistance genes from Metagenomic DNA Sequence</span>** \hfill _\href{https://github.com/hossainlab/ARGs}{\faGithub}_ 
+ 
+- **Aims:** To Profiling and predicting of antimicrobial-resistant  genes from  metagenomic DNA sequences
+- **Technical Skills:** QIME2, DADA2, Bash 
+
+**<span style="font-size:1em;">Heart Disease Analysis and Prediction Using Machine Learning</span>** \hfill _\href{https://github.com/hossainlab/Heart-Study}{\faGithub}_ 
+ 
+- **Aims:** With the dataset provided for heart analysis, we have to analyse the possibilities of heart attack on the basis of various features, and then the prediction from the analysis will tell us that whether an individual is prone to heart attack or not
+- **Technical Skills:** Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn 
+
+```{r tutoring}
+tribble(
+  ~ title, ~ code, ~ campus, ~ semester, ~ purple,
+  "Applied forecasting", "ETC3550/ETC5550", "Clayton", "2022 S1", TRUE,
+  "Communicating with Data", "ETC5523", "Clayton", "2021 S2", FALSE,
+  "Applied forecasting", "ETC3550/ETC5550", "Clayton", "2021 S1", TRUE,
+  "Communicating with Data", "ETC5523", "Clayton", "2020 S2", TRUE,
+  "Applied forecasting", "ETC3550/ETC5550", "Clayton", "2020 S1", TRUE,
+  "Advanced statistical modelling", "ETC3580", "Clayton", "2019 S2", TRUE,
+  "Data modelling and computing", "ETC1010", "Clayton", "2019 S2", FALSE,
+  "Data modelling and computing", "ETC1010", "Clayton", "2019 S1", FALSE,
+  "Applied forecasting for business and economics", "ETC3550/ETC5550", "Clayton", "2019 S1", TRUE,
+  "Data modelling and computing", "ETC1010", "Clayton", "2018 S2", FALSE,
+  "Advanced statistical modelling", "ETC3580", "Clayton", "2018 S2", TRUE,
+  "Business forecasting", "ETF3231/ETF5231", "Caulfield", "2018 S1", TRUE,
+  "Data modelling and computing", "ETC1010", "Clayton", "2017 S2", FALSE,
+  "Business forecasting", "ETF3231/ETF5231", "Caulfield", "2017 S1", FALSE,
+  "Mathematics for business", "ETF2700", "Caulfield", "2016 S2", FALSE,
+  "Business forecasting", "ETF3231/ETF5231", "Caulfield", "2016 S1", FALSE
+) %>% 
+  brief_entries(glue::glue("\\textbf{<code>}: <title> (Monash <campus>)", .open = "<", .close = ">"), semester, .protect = FALSE)
+```
