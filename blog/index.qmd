@@ -4,7 +4,7 @@ author: ""
 description-meta: "Md. Jubayer Hossain's blog"
 listing:
   - id: posts_2023
-    contents: "2023/**/index.qmd"
+    contents: "2023/*/*.qmd"
     sort: "date desc"
     template: ../html/blog/listing.ejs
     categories: true

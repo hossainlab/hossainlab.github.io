@@ -44,7 +44,12 @@
       "2011/**/index.md",
       "2010/**/index.md",
       "2009/**/index.md",
-      "2007/**/index.md"
+      "2007/**/index.md",
+      "2023/*/index.qmd",
+      "2023/*index.qmd",
+      "2023/*.qmd",
+      "2023/**.qmd",
+      "2023/*/*.qmd"
     ],
     "research.qmd": [
       "publications/*/**.qmd"

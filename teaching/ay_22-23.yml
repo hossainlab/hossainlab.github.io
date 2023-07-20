@@ -54,7 +54,7 @@
 - title: R for Bioinformatics
   description: "Learn to Analyze Genomics, Metagenomics, and Transcriptomics Data with R"
   university: CHIRAL Bangladesh
-  number: R4B01
+  number: RforBioinformatics
   url: https://chiraltraining.github.io/RforBioinformatics/
   logo: logos/bioconductor.gif
   semester:
@@ -66,35 +66,35 @@
 - title: RNASeq Data Aanalysis with R
   description: "Harness the Power of R: Simplifying RNA-Seq Data Analysis."
   university: CHIRAL Bangladesh
-  number: R4B01
-  url:
+  number: RNASeqwithR
+  url: https://omicscenter.github.io/RNASeqwithR/
   logo: logos/bioconductor.gif
   semester:
   - name: Cohort 01
-    url:
+    url: https://omicscenter.github.io/RNASeqwithR/
   - name: Cohort 02
-    url:
+    url: https://omicscenter.github.io/RNASeqwithR/
 
 - title: Single Cell RNASeq Data Aanalysis with R
   description: "Unleashing Insights: Analyzing Single Cell RNA-Seq Data with R."
   university: CHIRAL Bangladesh
-  number: R4B01
-  url:
+  number: scRNASeqwithR
+  url: https://omicscenter.github.io/scRNASeqwithR/
   logo: logos/bioconductor.gif
   semester:
   - name: Cohort 01
-    url:
+    url: https://omicscenter.github.io/scRNASeqwithR/
   - name: Cohort 02
-    url:
+    url: https://omicscenter.github.io/scRNASeqwithR/
 
 - title: Machine Learning for Bioinformatics
   description: "Unleashing the Power of Data in Life Sciences: Machine Learning for Bioinformatics"
   university: CHIRAL Bangladesh
-  number: R4B01
-  url:
+  number: MLforBioinformatics
+  url: https://omicscenter.github.io/MLforBioinformatics/
   logo: logos/bioconductor.gif
   semester:
   - name: Cohort 01
-    url:
+    url: https://omicscenter.github.io/MLforBioinformatics/
   - name: Cohort 02
-    url:
+    url: https://omicscenter.github.io/MLforBioinformatics/

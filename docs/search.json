@@ -151,14 +151,14 @@
     "href": "blog/index.html",
     "title": "Blog",
     "section": "",
-    "text": "January 8, 2023\n        \n        \n            How to migrate from BibDesk to Zotero for pandoc-based writing\n            \n                \n                    writing\n                \n                \n                    markdown\n                \n                \n                    citations\n                \n                \n                    pandoc\n                \n                \n                    zotero\n                \n            \n            Tips, tricks, and rationale for converting from a single big BibTeX file to a Zotero database\n        \n        \n            \n        \n    \n\n\nNo matching items"
+    "text": "July 20, 2023\n        \n        \n            Powerful Benefits of Using R to Analyze Your Research Data\n            \n                \n                    Research\n                \n                \n                    Data Aanalysis\n                \n                \n                    R Programming\n                \n            \n            R is a free and powerful tool for researchers to analyze complex data without spending money, thanks to its open-source nature and strong statistical features supported by a helpful community.\n        \n        \n            \n        \n    \n\n\nNo matching items"
   },
   {
     "objectID": "blog/index.html#section",
     "href": "blog/index.html#section",
     "title": "Blog",
     "section": "",
-    "text": "January 8, 2023\n        \n        \n            How to migrate from BibDesk to Zotero for pandoc-based writing\n            \n                \n                    writing\n                \n                \n                    markdown\n                \n                \n                    citations\n                \n                \n                    pandoc\n                \n                \n                    zotero\n                \n            \n            Tips, tricks, and rationale for converting from a single big BibTeX file to a Zotero database\n        \n        \n            \n        \n    \n\n\nNo matching items"
+    "text": "July 20, 2023\n        \n        \n            Powerful Benefits of Using R to Analyze Your Research Data\n            \n                \n                    Research\n                \n                \n                    Data Aanalysis\n                \n                \n                    R Programming\n                \n            \n            R is a free and powerful tool for researchers to analyze complex data without spending money, thanks to its open-source nature and strong statistical features supported by a helpful community.\n        \n        \n            \n        \n    \n\n\nNo matching items"
   },
   {
     "objectID": "blog/index.html#section-1",
@@ -219,63 +219,63 @@
   {
     "objectID": "resources.html",
     "href": "resources.html",
-    "title": "",
+    "title": "Resources",
     "section": "",
     "text": "The Cancer Genome Atlas (TCGA): TCGA is a comprehensive collection of multi-dimensional cancer genomics data covering multiple cancer types.\nInternational Cancer Genome Consortium (ICGC): Description: ICGC provides high-quality genomic and clinical data from various cancer projects worldwide.\nGene Expression Omnibus (GEO): GEO is a public repository hosted by the National Center for Biotechnology Information (NCBI) containing a vast collection of gene expression data, including cancer datasets.\nEuropean Genome-phenome Archive (EGA): Description: EGA is a repository for secure storage and sharing of human genetic and phenotypic data, including cancer datasets.\nNational Cancer Institute (NCI) Genomic Data Commons (GDC): Description: GDC is an open-access data portal providing access to a wide range of cancer genomics datasets.\nOncoLnc: Description: OncoLnc is a web resource that provides survival analysis and expression correlation for genes of interest across multiple cancer datasets.\nUCSC Cancer Genomics Browser: The UCSC Cancer Genomics Browser offers a comprehensive collection of cancer genomics data integrated with genomic annotations.\nGREIN : GEO RNA-seq Experiments Interactive Navigator: GREIN is an interactive web platform that provides user-friendly options to explore and analyze GEO RNA-seq data. GREIN is powered by the back-end computational pipeline for uniform processing of RNA-seq data and the large number (&gt;6,000) of already processed datasets. These datasets were retrieved from GEO and reprocessed consistently by the back-end GEO RNA-seq experiments processing pipeline (GREP2).\nGEPIA2: GEPIA2 is a web-based tool for analyzing gene expression data in cancer. It stands for Gene Expression Profiling Interactive Analysis 2 and is an updated version of the original GEPIA tool. GEPIA2 allows users to explore gene expression patterns, perform survival analyses, and visualize gene expression data across various cancer types.\nUALCAN: UALCAN is a web-based platform that provides interactive and comprehensive analysis of cancer transcriptome data. It enables users to explore gene expression patterns, perform survival analyses, and compare gene expression between tumor and normal samples across different cancer types. UALCAN utilizes data from The Cancer Genome Atlas (TCGA) to facilitate cancer research and provide insights into tumor biology.\ncBioPortal for Cancer Genomics:: cBioPortal hosts a large collection of cancer genomics datasets, allowing users to explore and visualize the data.\nONCOMINE: ONCOMINE is a powerful web-based platform for the analysis and visualization of cancer transcriptomic data. It provides researchers with access to a vast collection of publicly available gene expression datasets derived from cancer studies. ONCOMINE allows users to explore gene expression patterns, identify potential biomarkers, and compare gene expression between different cancer types or subtypes."
   },
   {
     "objectID": "resources.html#data-and-tools-for-cancer-genomics",
     "href": "resources.html#data-and-tools-for-cancer-genomics",
-    "title": "",
+    "title": "Resources",
     "section": "",
     "text": "The Cancer Genome Atlas (TCGA): TCGA is a comprehensive collection of multi-dimensional cancer genomics data covering multiple cancer types.\nInternational Cancer Genome Consortium (ICGC): Description: ICGC provides high-quality genomic and clinical data from various cancer projects worldwide.\nGene Expression Omnibus (GEO): GEO is a public repository hosted by the National Center for Biotechnology Information (NCBI) containing a vast collection of gene expression data, including cancer datasets.\nEuropean Genome-phenome Archive (EGA): Description: EGA is a repository for secure storage and sharing of human genetic and phenotypic data, including cancer datasets.\nNational Cancer Institute (NCI) Genomic Data Commons (GDC): Description: GDC is an open-access data portal providing access to a wide range of cancer genomics datasets.\nOncoLnc: Description: OncoLnc is a web resource that provides survival analysis and expression correlation for genes of interest across multiple cancer datasets.\nUCSC Cancer Genomics Browser: The UCSC Cancer Genomics Browser offers a comprehensive collection of cancer genomics data integrated with genomic annotations.\nGREIN : GEO RNA-seq Experiments Interactive Navigator: GREIN is an interactive web platform that provides user-friendly options to explore and analyze GEO RNA-seq data. GREIN is powered by the back-end computational pipeline for uniform processing of RNA-seq data and the large number (&gt;6,000) of already processed datasets. These datasets were retrieved from GEO and reprocessed consistently by the back-end GEO RNA-seq experiments processing pipeline (GREP2).\nGEPIA2: GEPIA2 is a web-based tool for analyzing gene expression data in cancer. It stands for Gene Expression Profiling Interactive Analysis 2 and is an updated version of the original GEPIA tool. GEPIA2 allows users to explore gene expression patterns, perform survival analyses, and visualize gene expression data across various cancer types.\nUALCAN: UALCAN is a web-based platform that provides interactive and comprehensive analysis of cancer transcriptome data. It enables users to explore gene expression patterns, perform survival analyses, and compare gene expression between tumor and normal samples across different cancer types. UALCAN utilizes data from The Cancer Genome Atlas (TCGA) to facilitate cancer research and provide insights into tumor biology.\ncBioPortal for Cancer Genomics:: cBioPortal hosts a large collection of cancer genomics datasets, allowing users to explore and visualize the data.\nONCOMINE: ONCOMINE is a powerful web-based platform for the analysis and visualization of cancer transcriptomic data. It provides researchers with access to a vast collection of publicly available gene expression datasets derived from cancer studies. ONCOMINE allows users to explore gene expression patterns, identify potential biomarkers, and compare gene expression between different cancer types or subtypes."
   },
   {
     "objectID": "resources.html#guideline-for-bioconductor-users",
     "href": "resources.html#guideline-for-bioconductor-users",
-    "title": "",
+    "title": "Resources",
     "section": "Guideline for Bioconductor Users",
     "text": "Guideline for Bioconductor Users\nBioconductor is an open-source and open-development software project that provides a comprehensive collection of bioinformatics and computational biology tools in the R programming language. It focuses on the analysis and comprehension of high-throughput genomic data, including DNA sequencing, RNA sequencing, microarray analysis, proteomics, and more."
   },
   {
     "objectID": "resources.html#required-software",
     "href": "resources.html#required-software",
-    "title": "",
+    "title": "Resources",
     "section": "Required software",
     "text": "Required software\n\nR: http://www.r-project.org/ (FREE)\nRStudio (additional libraries required): http://www.rstudio.com/ (FREE)"
   },
   {
     "objectID": "resources.html#prework",
     "href": "resources.html#prework",
-    "title": "",
+    "title": "Resources",
     "section": "Prework",
     "text": "Prework\nBefore attending the any workshop please have the following installed and configured on your machine. - Recent version of R - Recent version of RStudio - Most recent release of the Bioconductor and other packages used in courses\nInstall the latest release of R, then get the latest version of Bioconductor by starting R and entering the commands.\n\nif (!require(\"BiocManager\", quietly = TRUE))\n    install.packages(\"BiocManager\")\nBiocManager::install(version = \"3.16\")\n\n\n\nEnsure you can knit R markdown documents\n\nOpen RStudio and create a new Rmarkdown document\nSave the document and check you are able to knit it."
   },
   {
     "objectID": "resources.html#install-bioconductor-packages",
     "href": "resources.html#install-bioconductor-packages",
-    "title": "",
+    "title": "Resources",
     "section": "Install Bioconductor Packages",
     "text": "Install Bioconductor Packages\n\nif (!require(\"BiocManager\", quietly = TRUE))\n    install.packages(\"BiocManager\")\nBiocManager::install()\n\nInstall specific packages, e.g., “GenomicFeatures” and “AnnotationDbi”, with\n\nBiocManager::install(c(\"GenomicFeatures\", \"AnnotationDbi\"))\n\nThe install() function (in the BiocManager package) has arguments that change its default behavior; type ?install for further help."
   },
   {
     "objectID": "resources.html#r-packages-rnaseq-and-single-cell-rna-seq-analysis",
     "href": "resources.html#r-packages-rnaseq-and-single-cell-rna-seq-analysis",
-    "title": "",
+    "title": "Resources",
     "section": "R Packages RNASeq and Single-cell RNA-seq Analysis",
     "text": "R Packages RNASeq and Single-cell RNA-seq Analysis\n\n\nDESeq2: DESeq2 is a widely used package for differential gene expression analysis in RNA-seq data.\n\nedgeR: edgeR is another popular package for differential gene expression analysis in RNA-seq data.\n\nlimma: limma is a package commonly used for the analysis of microarray and RNA-seq data, particularly for differential expression analysis.\n\nBallgown: Ballgown is a package for differential expression analysis and visualization of transcriptome assembly data.\n\nDEXSeq: DEXSeq is specifically designed for the detection of differential exon usage in RNA-seq data.\n\nNOISeq: NOISeq is a package for non-parametric analysis of differential expression in RNA-seq data.\n\nclusterProfiler: clusterProfiler is a package for functional enrichment analysis of gene clusters derived from RNA-seq data.\n\nGenomicFeatures: GenomicFeatures provides tools for working with genomic features, such as gene models, and is useful for annotating RNA-seq data.\n\nSeurat: Seurat is a package for single-cell RNA-seq data analysis, allowing exploration and visualization of cellular heterogeneity."
   },
   {
     "objectID": "resources.html#blogs-for-r-programming-statistics-and-data-analyis",
     "href": "resources.html#blogs-for-r-programming-statistics-and-data-analyis",
-    "title": "",
+    "title": "Resources",
     "section": "Blogs for R Programming, Statistics, and Data Analyis",
     "text": "Blogs for R Programming, Statistics, and Data Analyis\n\nProgramiz - https://www.datamentor.io/r-programming/\n\nPennState STAT 484 - https://online.stat.psu.edu/stat484/\n\nPennState Topics in R Statistical Language - https://online.stat.psu.edu/stat484/\n\nSimply Statistics - https://simplystatistics.org/\n\nTutorialPoint - https://www.tutorialspoint.com/r/index.htm\n\nR for Biologists - https://www.rforbiologists.org/\n\nComputational Genomics with R - https://compgenomr.github.io/book/\n\nStat and R - https://statsandr.com/\n\nRafa Lab - https://rafalab.github.io/pages/harvardx.html\n\nUniversity of Florida - https://bolt.mph.ufl.edu/software/r-phc-6055/"
   },
   {
     "objectID": "resources.html#videos",
     "href": "resources.html#videos",
-    "title": "",
+    "title": "Resources",
     "section": "Videos",
     "text": "Videos\n\n\nJuly 9, 2023: I’m thrilled to announce that the highly anticipated videos from our workshop on “R for Research: Fundamentals of R - Part 1” are now available for viewing. Whether you missed the live event or want to revisit the valuable insights shared during the session, these videos are your gateway to mastering the basics of R programming language for data analysis and research. Join us as we explore the foundations of R and learn essential skills to enhance your data analysis capabilities. Don’t wait any longer; dive into the videos today and take your research to new heights! Check it out: \n\n\n\nApril 12, 2023: Watch this informative 2-hour workshop on how NASA Earth Observing Data can help improve public health. Discover how we can use these data to monitor our environment and identify potential health risks. Learn about the different ways NASA Earth Observing Data can benefit our communities and keep us safe. Check it out:"
   },
@@ -284,14 +284,14 @@
     "href": "teaching/index.html",
     "title": "Teaching",
     "section": "",
-    "text": "Research Internship Program \n            \n            \n                Internship 2023 | \n                CHIRAL Bangladesh\n            \n            Our Research Internship Program offers aspiring researchers an immersive and hands-on experience in cutting-edge scientific investigations.\n            \n                 Spring 2023\n                 Summer 2023\n                 Fall 2023\n            \n        \n    \n    \n        \n            \n        \n        \n            \n                Bioinformatics BootCamp \n            \n            \n                BootCamp | \n                CHIRAL Bangladesh\n            \n            The Bioinformatics BootCamp is a comprehensive and immersive program that empowers participants with the necessary skills and tools to navigate the complex world of biological data analysis.\n            \n                 BootCamp 1.0\n                 BootCamp 2.0\n                 BootCamp 3.0\n            \n        \n    \n    \n        \n            \n        \n        \n            \n                Applied Machine Learning for Healthcare (AML4H) \n            \n            \n                AML4H01 | \n                CHIRAL Bangladesh\n            \n            Empowering Healthcare with Intelligent Solutions: Applied Machine Learning for Healthcare (AML4H)\n            \n                 Cohort 01\n                 Cohort 02\n            \n        \n    \n    \n        \n            \n        \n        \n            \n                R for Research \n            \n            \n                R4R01 | \n                CHIRAL Bangladesh\n            \n            Unleash the Power of R: Empowering Research with Data Analysis\n            \n                 Cohort 01\n                 Cohort 02\n            \n        \n    \n    \n        \n            \n        \n        \n            \n                R for Bioinformatics \n            \n            \n                R4B01 | \n                CHIRAL Bangladesh\n            \n            Learn to Analyze Genomics, Metagenomics, and Transcriptomics Data with R\n            \n                 Cohort 01\n                 Cohort 02\n            \n        \n    \n    \n        \n            \n        \n        \n            \n                RNASeq Data Aanalysis with R \n            \n            \n                R4B01 | \n                CHIRAL Bangladesh\n            \n            Harness the Power of R: Simplifying RNA-Seq Data Analysis.\n            \n                 Cohort 01\n                 Cohort 02\n            \n        \n    \n    \n        \n            \n        \n        \n            \n                Single Cell RNASeq Data Aanalysis with R \n            \n            \n                R4B01 | \n                CHIRAL Bangladesh\n            \n            Unleashing Insights: Analyzing Single Cell RNA-Seq Data with R.\n            \n                 Cohort 01\n                 Cohort 02\n            \n        \n    \n    \n        \n            \n        \n        \n            \n                Machine Learning for Bioinformatics \n            \n            \n                R4B01 | \n                CHIRAL Bangladesh\n            \n            Unleashing the Power of Data in Life Sciences: Machine Learning for Bioinformatics\n            \n                 Cohort 01\n                 Cohort 02\n            \n        \n    \n\n\nNo matching items"
+    "text": "Research Internship Program \n            \n            \n                Internship 2023 | \n                CHIRAL Bangladesh\n            \n            Our Research Internship Program offers aspiring researchers an immersive and hands-on experience in cutting-edge scientific investigations.\n            \n                 Spring 2023\n                 Summer 2023\n                 Fall 2023\n            \n        \n    \n    \n        \n            \n        \n        \n            \n                Bioinformatics BootCamp \n            \n            \n                BootCamp | \n                CHIRAL Bangladesh\n            \n            The Bioinformatics BootCamp is a comprehensive and immersive program that empowers participants with the necessary skills and tools to navigate the complex world of biological data analysis.\n            \n                 BootCamp 1.0\n                 BootCamp 2.0\n                 BootCamp 3.0\n            \n        \n    \n    \n        \n            \n        \n        \n            \n                Applied Machine Learning for Healthcare (AML4H) \n            \n            \n                AML4H01 | \n                CHIRAL Bangladesh\n            \n            Empowering Healthcare with Intelligent Solutions: Applied Machine Learning for Healthcare (AML4H)\n            \n                 Cohort 01\n                 Cohort 02\n            \n        \n    \n    \n        \n            \n        \n        \n            \n                R for Research \n            \n            \n                R4R01 | \n                CHIRAL Bangladesh\n            \n            Unleash the Power of R: Empowering Research with Data Analysis\n            \n                 Cohort 01\n                 Cohort 02\n            \n        \n    \n    \n        \n            \n        \n        \n            \n                R for Bioinformatics \n            \n            \n                RforBioinformatics | \n                CHIRAL Bangladesh\n            \n            Learn to Analyze Genomics, Metagenomics, and Transcriptomics Data with R\n            \n                 Cohort 01\n                 Cohort 02\n            \n        \n    \n    \n        \n            \n        \n        \n            \n                RNASeq Data Aanalysis with R \n            \n            \n                RNASeqwithR | \n                CHIRAL Bangladesh\n            \n            Harness the Power of R: Simplifying RNA-Seq Data Analysis.\n            \n                 Cohort 01\n                 Cohort 02\n            \n        \n    \n    \n        \n            \n        \n        \n            \n                Single Cell RNASeq Data Aanalysis with R \n            \n            \n                scRNASeqwithR | \n                CHIRAL Bangladesh\n            \n            Unleashing Insights: Analyzing Single Cell RNA-Seq Data with R.\n            \n                 Cohort 01\n                 Cohort 02\n            \n        \n    \n    \n        \n            \n        \n        \n            \n                Machine Learning for Bioinformatics \n            \n            \n                MLforBioinformatics | \n                CHIRAL Bangladesh\n            \n            Unleashing the Power of Data in Life Sciences: Machine Learning for Bioinformatics\n            \n                 Cohort 01\n                 Cohort 02\n            \n        \n    \n\n\nNo matching items"
   },
   {
     "objectID": "teaching/index.html#section",
     "href": "teaching/index.html#section",
     "title": "Teaching",
     "section": "",
-    "text": "Research Internship Program \n            \n            \n                Internship 2023 | \n                CHIRAL Bangladesh\n            \n            Our Research Internship Program offers aspiring researchers an immersive and hands-on experience in cutting-edge scientific investigations.\n            \n                 Spring 2023\n                 Summer 2023\n                 Fall 2023\n            \n        \n    \n    \n        \n            \n        \n        \n            \n                Bioinformatics BootCamp \n            \n            \n                BootCamp | \n                CHIRAL Bangladesh\n            \n            The Bioinformatics BootCamp is a comprehensive and immersive program that empowers participants with the necessary skills and tools to navigate the complex world of biological data analysis.\n            \n                 BootCamp 1.0\n                 BootCamp 2.0\n                 BootCamp 3.0\n            \n        \n    \n    \n        \n            \n        \n        \n            \n                Applied Machine Learning for Healthcare (AML4H) \n            \n            \n                AML4H01 | \n                CHIRAL Bangladesh\n            \n            Empowering Healthcare with Intelligent Solutions: Applied Machine Learning for Healthcare (AML4H)\n            \n                 Cohort 01\n                 Cohort 02\n            \n        \n    \n    \n        \n            \n        \n        \n            \n                R for Research \n            \n            \n                R4R01 | \n                CHIRAL Bangladesh\n            \n            Unleash the Power of R: Empowering Research with Data Analysis\n            \n                 Cohort 01\n                 Cohort 02\n            \n        \n    \n    \n        \n            \n        \n        \n            \n                R for Bioinformatics \n            \n            \n                R4B01 | \n                CHIRAL Bangladesh\n            \n            Learn to Analyze Genomics, Metagenomics, and Transcriptomics Data with R\n            \n                 Cohort 01\n                 Cohort 02\n            \n        \n    \n    \n        \n            \n        \n        \n            \n                RNASeq Data Aanalysis with R \n            \n            \n                R4B01 | \n                CHIRAL Bangladesh\n            \n            Harness the Power of R: Simplifying RNA-Seq Data Analysis.\n            \n                 Cohort 01\n                 Cohort 02\n            \n        \n    \n    \n        \n            \n        \n        \n            \n                Single Cell RNASeq Data Aanalysis with R \n            \n            \n                R4B01 | \n                CHIRAL Bangladesh\n            \n            Unleashing Insights: Analyzing Single Cell RNA-Seq Data with R.\n            \n                 Cohort 01\n                 Cohort 02\n            \n        \n    \n    \n        \n            \n        \n        \n            \n                Machine Learning for Bioinformatics \n            \n            \n                R4B01 | \n                CHIRAL Bangladesh\n            \n            Unleashing the Power of Data in Life Sciences: Machine Learning for Bioinformatics\n            \n                 Cohort 01\n                 Cohort 02\n            \n        \n    \n\n\nNo matching items"
+    "text": "Research Internship Program \n            \n            \n                Internship 2023 | \n                CHIRAL Bangladesh\n            \n            Our Research Internship Program offers aspiring researchers an immersive and hands-on experience in cutting-edge scientific investigations.\n            \n                 Spring 2023\n                 Summer 2023\n                 Fall 2023\n            \n        \n    \n    \n        \n            \n        \n        \n            \n                Bioinformatics BootCamp \n            \n            \n                BootCamp | \n                CHIRAL Bangladesh\n            \n            The Bioinformatics BootCamp is a comprehensive and immersive program that empowers participants with the necessary skills and tools to navigate the complex world of biological data analysis.\n            \n                 BootCamp 1.0\n                 BootCamp 2.0\n                 BootCamp 3.0\n            \n        \n    \n    \n        \n            \n        \n        \n            \n                Applied Machine Learning for Healthcare (AML4H) \n            \n            \n                AML4H01 | \n                CHIRAL Bangladesh\n            \n            Empowering Healthcare with Intelligent Solutions: Applied Machine Learning for Healthcare (AML4H)\n            \n                 Cohort 01\n                 Cohort 02\n            \n        \n    \n    \n        \n            \n        \n        \n            \n                R for Research \n            \n            \n                R4R01 | \n                CHIRAL Bangladesh\n            \n            Unleash the Power of R: Empowering Research with Data Analysis\n            \n                 Cohort 01\n                 Cohort 02\n            \n        \n    \n    \n        \n            \n        \n        \n            \n                R for Bioinformatics \n            \n            \n                RforBioinformatics | \n                CHIRAL Bangladesh\n            \n            Learn to Analyze Genomics, Metagenomics, and Transcriptomics Data with R\n            \n                 Cohort 01\n                 Cohort 02\n            \n        \n    \n    \n        \n            \n        \n        \n            \n                RNASeq Data Aanalysis with R \n            \n            \n                RNASeqwithR | \n                CHIRAL Bangladesh\n            \n            Harness the Power of R: Simplifying RNA-Seq Data Analysis.\n            \n                 Cohort 01\n                 Cohort 02\n            \n        \n    \n    \n        \n            \n        \n        \n            \n                Single Cell RNASeq Data Aanalysis with R \n            \n            \n                scRNASeqwithR | \n                CHIRAL Bangladesh\n            \n            Unleashing Insights: Analyzing Single Cell RNA-Seq Data with R.\n            \n                 Cohort 01\n                 Cohort 02\n            \n        \n    \n    \n        \n            \n        \n        \n            \n                Machine Learning for Bioinformatics \n            \n            \n                MLforBioinformatics | \n                CHIRAL Bangladesh\n            \n            Unleashing the Power of Data in Life Sciences: Machine Learning for Bioinformatics\n            \n                 Cohort 01\n                 Cohort 02\n            \n        \n    \n\n\nNo matching items"
   },
   {
     "objectID": "teaching/index.html#section-1",
@@ -1321,5 +1321,222 @@
     "title": "ESOL: Estimating Aqueous Solubility Directly from Molecular Structure",
     "section": "",
     "text": "An online book (perpetually under construction) convering infectious disease epidemiology using a model-based approach. Some parts of the book are fairly readable and complete enough that I use it when I teach a course on that topic. Other sections are currently only templates/outlines. While I try to ensure that what I write is correct, the whole book is not thoroughly fact-checked, error-corrected, properly referenced, etc. While I have been considering the idea of turning this into a full/real book, in my current thinking the cost-benefit analysis doesn’t pan out. I thus plan to leave it online for free as is, with occasional updates and fixes, but without an attempt to make it polished and complete enough for a printed book."
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html",
+    "href": "blog/2023/why-r/index.html",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "",
+    "text": "R is a widely-used open-source programming language and software environment specifically designed for statistical computing and graphics. It was created by Ross Ihaka and Robert Gentleman at the University of Auckland, New Zealand, and first released in 1995. Since then, it has gained immense popularity and has become one of the most prominent tools for statistical analysis and data visualization.\nKey features of R:\n\nStatistical Analysis: R provides a comprehensive suite of statistical and graphical techniques, making it a powerful tool for data analysis, hypothesis testing, linear and nonlinear modeling, time-series analysis, clustering, and more.\nData Manipulation: R offers various data manipulation and transformation functions that allow users to clean, reshape, and process datasets efficiently.\nData Visualization: R has excellent data visualization capabilities, enabling users to create a wide range of static and interactive plots, charts, and graphs to explore and present data visually.\nExtensibility: R’s functionality can be extended through packages. Thousands of packages developed by the R community cover diverse domains like genomics, bioinformatics, machine learning, spatial analysis, and social sciences.\nData Import/Export: R supports a wide range of data formats, allowing users to import data from various sources and export results to different file formats for further analysis or presentation.\nReproducible Research: R’s support for literate programming using tools like RMarkdown and Sweave facilitates reproducible research, where data analysis and results can be documented in a single document.\nCommunity Support: R has a vibrant and active community of users and developers who contribute to its continuous improvement by developing packages, sharing knowledge, and providing support through forums and mailing lists."
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#what-is-r",
+    "href": "blog/2023/why-r/index.html#what-is-r",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "",
+    "text": "R is a widely-used open-source programming language and software environment specifically designed for statistical computing and graphics. It was created by Ross Ihaka and Robert Gentleman at the University of Auckland, New Zealand, and first released in 1995. Since then, it has gained immense popularity and has become one of the most prominent tools for statistical analysis and data visualization.\nKey features of R:\n\nStatistical Analysis: R provides a comprehensive suite of statistical and graphical techniques, making it a powerful tool for data analysis, hypothesis testing, linear and nonlinear modeling, time-series analysis, clustering, and more.\nData Manipulation: R offers various data manipulation and transformation functions that allow users to clean, reshape, and process datasets efficiently.\nData Visualization: R has excellent data visualization capabilities, enabling users to create a wide range of static and interactive plots, charts, and graphs to explore and present data visually.\nExtensibility: R’s functionality can be extended through packages. Thousands of packages developed by the R community cover diverse domains like genomics, bioinformatics, machine learning, spatial analysis, and social sciences.\nData Import/Export: R supports a wide range of data formats, allowing users to import data from various sources and export results to different file formats for further analysis or presentation.\nReproducible Research: R’s support for literate programming using tools like RMarkdown and Sweave facilitates reproducible research, where data analysis and results can be documented in a single document.\nCommunity Support: R has a vibrant and active community of users and developers who contribute to its continuous improvement by developing packages, sharing knowledge, and providing support through forums and mailing lists."
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#how-to-get-r-and-get-started",
+    "href": "blog/2023/why-r/index.html#how-to-get-r-and-get-started",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "How to Get R and Get Started",
+    "text": "How to Get R and Get Started\nGetting started with R is easy! Follow these steps to get R installed on your computer and begin using it:\n\nDownload R: Visit the official R website at https://www.r-project.org/. On the homepage, click on “CRAN” (Comprehensive R Archive Network) under the \"Download and Install R\" section. Choose the appropriate download link based on your operating system (Windows, macOS, or Linux).\nInstall R: Once the download is complete, run the installer and follow the installation instructions specific to your operating system. The process is typically straightforward and involves accepting the license agreement and selecting the installation location.\nDownload RStudio (Optional but Recommended): While R itself provides a command-line interface, many users prefer using RStudio, an integrated development environment (IDE) designed for R. RStudio provides a more user-friendly and feature-rich interface for working with R. You can download RStudio from https://www.rstudio.com/products/rstudio/download/.\nInstall RStudio (Optional but Recommended): Run the RStudio installer and follow the installation instructions. RStudio will automatically detect the R installation and integrate with it.\nLaunch R or RStudio: After installation, you can open R by clicking on its icon or launching it from the Start menu (Windows) or Applications folder (macOS). If you installed RStudio, you can open it instead, and it will automatically connect to your R installation.\nStart Using R: In RStudio, you’ll see a console where you can type R commands and execute them. This is where you interact with R. You can enter simple commands, perform calculations, load datasets, create plots, and more. RStudio also provides an integrated text editor for writing scripts and saving your work.\nLearning R: To get started with R, there are plenty of online resources, tutorials, and courses available. The R website (https://www.r-project.org/) itself has useful documentation and manuals. RStudio’s website (https://rstudio.com/resources/cheatsheets/) offers helpful cheat sheets to get you started with R commands and data visualization.\nCommunity and Support: The R community is vast and supportive. If you encounter any issues or have questions, you can seek help from forums like Stack Overflow, RStudio Community (https://community.rstudio.com/), or various R-related mailing lists.\n\nRemember, learning a new programming language like R takes time and practice. Be patient, and gradually you’ll become more comfortable using R for data analysis, visualization, and other statistical tasks. Happy coding!"
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#reasons-r-rocks-for-scientific-research",
+    "href": "blog/2023/why-r/index.html#reasons-r-rocks-for-scientific-research",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "6 Reasons R Rocks for Scientific Research",
+    "text": "6 Reasons R Rocks for Scientific Research\nR is an excellent choice for scientific research due to several compelling reasons:\n\nStatistical Power: R is designed with a strong focus on statistics, making it a powerful tool for conducting complex statistical analyses. It offers a vast array of built-in statistical functions and packages developed by the community to handle a wide range of research questions.\nData Visualization: R’s data visualization capabilities are exceptional. It provides various libraries (e.g., ggplot2) that allow researchers to create high-quality plots, charts, and graphs to visualize their data effectively, aiding in data exploration and presentation.\nOpen-Source and Free: Being open-source, R is freely available for anyone to download and use. This accessibility eliminates budget constraints, making it an attractive choice for researchers who may not have access to expensive software packages.\nReproducible Research: R promotes the principles of reproducible research through literate programming tools like RMarkdown and Sweave. These tools enable researchers to combine code, analyses, and explanations in a single document, ensuring transparency and ease of sharing findings with others.\nCommunity and Packages: R has a large and active community of researchers, statisticians, and developers. This community continually contributes to the expansion of R’s capabilities by creating and maintaining a vast library of packages covering various research domains. These packages save researchers time by providing ready-to-use functions for specific analyses.\nFlexibility and Extensibility: R’s flexibility allows researchers to customize analyses and data manipulation processes to suit their specific research needs. Additionally, R’s extensibility allows users to develop their packages and contribute to the R ecosystem, fostering a collaborative environment for innovation.\n\nThese advantages have made R a preferred choice for scientific research in fields such as biology, ecology, psychology, social sciences, genetics, and many others. Its versatility, combined with its statistical prowess and graphical capabilities, makes it an indispensable tool for researchers seeking to analyze and visualize their data effectively."
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#six-reasons-r-rocks-for-scientific-research",
+    "href": "blog/2023/why-r/index.html#six-reasons-r-rocks-for-scientific-research",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "Six Reasons R Rocks for Scientific Research",
+    "text": "Six Reasons R Rocks for Scientific Research\nR is an excellent choice for scientific research due to several compelling reasons:\n\nStatistical Power: R is designed with a strong focus on statistics, making it a powerful tool for conducting complex statistical analyses. It offers a vast array of built-in statistical functions and packages developed by the community to handle a wide range of research questions.\nData Visualization: R’s data visualization capabilities are exceptional. It provides various libraries (e.g., ggplot2) that allow researchers to create high-quality plots, charts, and graphs to visualize their data effectively, aiding in data exploration and presentation.\nOpen-Source and Free: Being open-source, R is freely available for anyone to download and use. This accessibility eliminates budget constraints, making it an attractive choice for researchers who may not have access to expensive software packages.\nReproducible Research: R promotes the principles of reproducible research through literate programming tools like RMarkdown and Sweave. These tools enable researchers to combine code, analyses, and explanations in a single document, ensuring transparency and ease of sharing findings with others.\nCommunity and Packages: R has a large and active community of researchers, statisticians, and developers. This community continually contributes to the expansion of R’s capabilities by creating and maintaining a vast library of packages covering various research domains. These packages save researchers time by providing ready-to-use functions for specific analyses.\nFlexibility and Extensibility: R’s flexibility allows researchers to customize analyses and data manipulation processes to suit their specific research needs. Additionally, R’s extensibility allows users to develop their packages and contribute to the R ecosystem, fostering a collaborative environment for innovation.\n\nThese advantages have made R a preferred choice for scientific research in fields such as biology, ecology, psychology, social sciences, genetics, and many others. Its versatility, combined with its statistical prowess and graphical capabilities, makes it an indispensable tool for researchers seeking to analyze and visualize their data effectively."
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#installing-r",
+    "href": "blog/2023/why-r/index.html#installing-r",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "Installing R\n",
+    "text": "Installing R\n\nWe recommend installing the most recent version or R – 4.2.3 as of March 18, 2023 If you have had installed R already some time ago, we recommend updating/reinstalling it to the most recent version. Use a link below to launch download of R installers (if the download does not start, a fix may be to copy-paste the below link to your browser):\n\nFor Mac users: https://cran.r-project.org/bin/macosx/\nFor Windows users: https://cran.r-project.org/bin/windows/base/R-4.2.3-win.exe\nFor Ubuntu users: https://cran.r-project.org/bin/linux/ubuntu/\n\nFor other operating systems, or if you prefer to access the download link from the official website, visit http://cran.us.r-project.org and select Download R for Linux, Download R for macOS or Download R for Windows based on which device you have.\nOnce the proper installation package has been selected, run the package and follow the on-screen directions. This installation includes the R language and a graphical user interface (GUI). Rather using the GUI, we recommend installing RStudio - an integrated development environment (IDE) that lets you interact with R with some added benefits."
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#installing-rstudio",
+    "href": "blog/2023/why-r/index.html#installing-rstudio",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "Installing RStudio\n",
+    "text": "Installing RStudio\n\nTo install RStudio, visit https://posit.co/download/rstudio-desktop/. Once on the website, select DOWNLOAD tab (upper left corner), scroll down and click Download under the RStudio Desktop – Free version (1st out of 4 columns), and select the proper installation file for your platform (Windows or Mac).\nWhen you open up RStudio, it should look like this:\n\nClick the top left button to create a new script:\n\nRStudio, should now look like this:\n\nThere are four main windows.\n\nThe console is the lower-left window where you can run lines of code and see the output.\n\nThe script window is the upper-left window where you can edit and write scripts or markdown documents. From the script window, you can run the current line of code in your script (or multiple lines if you highlight multiple rows) by pressing\n\n\nCMD + Return on Mac\n\nCTRL + Enter on Windows\n\n\nThe workspace is the upper-right window where you can manage your data and variables and see previous commands entered (under the history tab).\nThe plots window allows you to see the output of plots. On the other tabs, you can also look at directories, install packages, and look at help files for various R commands.\n\nYou can customize the look of your RStudio IDE in Tools &gt; Global Options...."
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#r-packages",
+    "href": "blog/2023/why-r/index.html#r-packages",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "\nR Packages",
+    "text": "R Packages\nPackages are the fundamental units of reproducible R code. They are collections of R code that typically share some common purpose. Examples:\n\ndplyr - package of functions for fast data set manipulation (subsetting, summarizing, rearranging, and joining together data sets);\nggplot2 - “R’s famous package for making beautiful graphics”; allows to build multiple-layers, highly customizable plots."
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#installing-and-loading-r-packages",
+    "href": "blog/2023/why-r/index.html#installing-and-loading-r-packages",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "Installing and Loading R Packages",
+    "text": "Installing and Loading R Packages\n\n\nTo install an R package, type in the RStudio console\ninstall.packages(\"replace_with_package_name\")\nand press enter to execute the command.\n\n\nOnce a package is installed, to use its contents in current R session, we run in the RStudio console the command\nlibrary(replace_with_package_name)\n\n\n(Note the difference in presence of the quotation mark in the two above commands.)"
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#working-with-r-rstudio",
+    "href": "blog/2023/why-r/index.html#working-with-r-rstudio",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "Working with R – RStudio",
+    "text": "Working with R – RStudio\nRStudio is an Integrated Development Environment (IDE) for R\n\nIt helps the user effectively use R\nMakes things easier\nIs NOT a dropdown statistical tool (such as Stata)\n\nSee Rcmdr or Radiant\n\n\n\nAll R Studio snapshots are taken from http://ayeimanol-r.net/2013/04/21/289/\n\n\n\n\n\n\n\n\n\n\n[source]"
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#rstudio",
+    "href": "blog/2023/why-r/index.html#rstudio",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "RStudio",
+    "text": "RStudio\nEasier working with R\n\nSyntax highlighting, code completion, and smart indentation\nEasily manage multiple working directories and projects\n\nMore information\n\nWorkspace browser and data viewer\nPlot history, zooming, and flexible image and file export\nIntegrated R help and documentation\nSearchable command history"
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#rstudio-1",
+    "href": "blog/2023/why-r/index.html#rstudio-1",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "RStudio",
+    "text": "RStudio"
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#getting-the-editor",
+    "href": "blog/2023/why-r/index.html#getting-the-editor",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "Getting the editor",
+    "text": "Getting the editor"
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#working-with-r-in-r-studio---2-major-panes",
+    "href": "blog/2023/why-r/index.html#working-with-r-in-r-studio---2-major-panes",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "Working with R in R Studio - 2 major panes:",
+    "text": "Working with R in R Studio - 2 major panes:\n\nThe Source/Editor: “Analysis” Script + Interactive Exploration\n\nStatic copy of what you did (reproducibility)\nTop by default\n\n\nThe R Console: “interprets” whatever you type\n\nCalculator\nTry things out interactively, then add to your editor\nBottom by default"
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#source-editor",
+    "href": "blog/2023/why-r/index.html#source-editor",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "Source / Editor",
+    "text": "Source / Editor\n\nWhere files open to\nHave R code and comments in them\nCan highlight and press (CMD+Enter (Mac) or Ctrl+Enter (Windows)) to run the code\n\nIn a .R file (we call a script), code is saved on your disk"
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#r-console",
+    "href": "blog/2023/why-r/index.html#r-console",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "R Console",
+    "text": "R Console\n\n\n\n\n\n\n\n\n\n\nWhere code is executed (where things happen)\nYou can type here for things interactively\nCode is not saved on your disk"
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#rstudio-2",
+    "href": "blog/2023/why-r/index.html#rstudio-2",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "RStudio",
+    "text": "RStudio\nSuper useful “cheat sheet”: https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf"
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#rstudio-layout",
+    "href": "blog/2023/why-r/index.html#rstudio-layout",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "RStudio layout",
+    "text": "RStudio layout"
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#rstudio-layout-1",
+    "href": "blog/2023/why-r/index.html#rstudio-layout-1",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "RStudio Layout",
+    "text": "RStudio Layout\nIf RStudio doesn’t look the way you want (or like our RStudio), then do:\nRStudio –&gt; Preferences –&gt; Pane Layout"
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#workspaceenvironment",
+    "href": "blog/2023/why-r/index.html#workspaceenvironment",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "Workspace/Environment",
+    "text": "Workspace/Environment"
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#workspaceenvironment-1",
+    "href": "blog/2023/why-r/index.html#workspaceenvironment-1",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "Workspace/Environment",
+    "text": "Workspace/Environment\n\nTells you what objects are in R\nWhat exists in memory/what is loaded?/what did I read in?\n\nHistory\n\nShows previous commands. Good to look at for debugging, but don’t rely on it.\nInstead use RMarkdown!\nAlso type the “up” key in the Console to scroll through previous commands"
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#other-panes",
+    "href": "blog/2023/why-r/index.html#other-panes",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "Other Panes",
+    "text": "Other Panes\n\n\nFiles - shows the files on your computer of the directory you are working in\n\nViewer - can view data or R objects\n\nHelp - shows help of R commands\n\nPlots - pictures and figures\n\nPackages - list of R packages that are loaded in memory"
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#r-markdown-file",
+    "href": "blog/2023/why-r/index.html#r-markdown-file",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "R Markdown file",
+    "text": "R Markdown file\nR Markdown files (.Rmd) help generate reports that include your code and output. Think of them as fancier scripts.\n\nHelps you describe your code\nAllows you to check the output\nCan create many different file types"
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#create-an-r-markdown-file",
+    "href": "blog/2023/why-r/index.html#create-an-r-markdown-file",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "Create an R Markdown file",
+    "text": "Create an R Markdown file\nGo to File → New File → R Markdown\nCall your file “first_markdown”"
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#code-chunks",
+    "href": "blog/2023/why-r/index.html#code-chunks",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "Code chunks",
+    "text": "Code chunks\nWithin R Markdown files are code “chunks”\nThis is where you can type R code and run it!"
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#create-chunks",
+    "href": "blog/2023/why-r/index.html#create-chunks",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "Create Chunks",
+    "text": "Create Chunks\nTo create a new R code chunk:\nCopy paste an existing chunk in the R Markdown file and replace the code OR\n\nUse the insert code chunk button at the top of RStudio.\n\n\n\n\n\n\n\n\n\n\nSelect R as the language:"
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#run-previous-chunks-button",
+    "href": "blog/2023/why-r/index.html#run-previous-chunks-button",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "Run previous chunks button",
+    "text": "Run previous chunks button\nYou can run all chunks above a specific chunk using this button:"
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#chunk-settings",
+    "href": "blog/2023/why-r/index.html#chunk-settings",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "Chunk settings",
+    "text": "Chunk settings"
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#chunk-settings-1",
+    "href": "blog/2023/why-r/index.html#chunk-settings-1",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "Chunk settings",
+    "text": "Chunk settings\nYou can specify if a chunk will be seen in the report or not."
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#knit-file-to-html",
+    "href": "blog/2023/why-r/index.html#knit-file-to-html",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "Knit file to html",
+    "text": "Knit file to html\nThis will create a report from the R Markdown document!"
+  },
+  {
+    "objectID": "blog/2023/why-r/index.html#useful-r-studio-shortcuts",
+    "href": "blog/2023/why-r/index.html#useful-r-studio-shortcuts",
+    "title": "Powerful Benefits of Using R to Analyze Your Research Data",
+    "section": "Useful R Studio Shortcuts",
+    "text": "Useful R Studio Shortcuts\n\n\nCtrl + Enter in your script evaluates that line of code\n\nIt’s like copying and pasting the code into the console for it to run.\n\n\n\nCtrl+1 takes you to the script page\n\nCtrl+2 takes you to the console\nhttp://www.rstudio.com/ide/docs/using/keyboard_shortcuts"
   }
 ]

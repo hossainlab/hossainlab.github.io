@@ -208,5 +208,14 @@
   },
   "projects/calories-burntp-rediction/index.qmd": {
     "index.html": "491bb908"
+  },
+  "blog/2023/why-r/index.qmd": {
+    "index.html": "1e5ab2a1"
+  },
+  "cv/CV_Jubayer_Hossain.Rmd": {
+    "CV_Jubayer_Hossain.html": "073368ed"
+  },
+  "cv/CV_Jubayer_Hossain[Professional].Rmd": {
+    "CV_Jubayer_Hossain[Professional].html": "1a21864a"
   }
 }

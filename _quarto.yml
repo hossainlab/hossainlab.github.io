@@ -25,6 +25,8 @@ engine: knitr
 
 website:
   page-navigation: true
+  open-graph: true
+  twitter-card: true
   title: ""
   favicon: /files/profiles/favicon-512.png
 
