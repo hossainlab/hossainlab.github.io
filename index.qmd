@@ -16,7 +16,7 @@ about:
 
 ::: {#hero-heading}
 
-Hello, I am *Md. Jubayer Hossain*. I am the founder of [CHIRAL Bangladesh](https://chiralbd.org/), a non-profit organization dedicated to health research to improve lives in Bangladesh. I aspire to maximize the quality of life of the human around me by working at the intersection of education, technology, and health research.
+Hello, I am *[Md. Jubayer Hossain](https://hossainlab.github.io/)*. I am the founder of [CHIRAL Bangladesh](https://chiralbd.org/), a non-profit organization dedicated to health research to improve lives in Bangladesh. I aspire to maximize the quality of life of the human around me by working at the intersection of education, technology, and health research.
 
 I am interested in applying modern data science techniques in the context of disease diagnosis and large data analytics for public health while focusing on bridging the gap between computational and experimental laboratories through highly engaging and fruitful collaborations.
 
