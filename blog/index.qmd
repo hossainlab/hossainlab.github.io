@@ -1,6 +1,5 @@
 ---
 title: "Blog"
-author: ""
 description-meta: "Md. Jubayer Hossain's blog"
 listing:
   - id: posts_2023

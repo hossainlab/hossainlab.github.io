@@ -31,7 +31,7 @@ website:
   favicon: /files/profiles/favicon-512.png
 
   page-footer:
-    left: "&copy; Copyright 2022, Md. Jubayer Hossain"
+    left: "&copy; Copyright 2023, Md. Jubayer Hossain"
     right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
   navbar:
       pinned: true
@@ -42,8 +42,8 @@ website:
           file: index.qmd
         - text: "Blog"
           file: blog/index.qmd
-        - text: "Publications"
-          file: publications/index.qmd
+        - text: "Research"
+          file: research/index.qmd
         - text: "Talks"
           file: talks/index.qmd
         - text: "Projects"
@@ -55,9 +55,6 @@ website:
         - text: "CV"
           file: cv/index.qmd
       right:
-      - icon: rss
-        aria-label: rss
-        href: atom.xml
       - icon: envelope
         aria-label: email
         href: "mailto:hossainmj@gmail.com"

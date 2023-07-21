@@ -1,6 +1,6 @@
 ---
-layout: page
 title: Curriculum vitae
+layout: page
 excerpt: My current CV
 comments: false
 execute:

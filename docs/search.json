@@ -1313,7 +1313,7 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nCalories Burnt Prediction using Machine Learning\n\n\n\nMachine Learning\n\n\nCalories Burnt\n\n\nEpidemiology\n\n\nPublic Health\n\n\n\nThe Gradient Boosting Regressor model provides 99% accuracy in prediction of Calories Burn.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nESOL: Estimating Aqueous Solubility Directly from Molecular Structure\n\n\n\nMachine Learning\n\n\nDisease Diagnosis\n\n\nEpidemiology\n\n\nPublic Health\n\n\n\nThe Gradient Boosting Regressor model achieves an exceptional accuracy of 99% in predicting calories burnt during physical activities.\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nCalories Burnt Prediction using Machine Learning\n\n\n\n\n\n\n\nMachine Learning\n\n\nCalories Burnt\n\n\nEpidemiology\n\n\nPublic Health\n\n\n\n\nThe Gradient Boosting Regressor model provides 99% accuracy in prediction of Calories Burn.\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nESOL: Estimating Aqueous Solubility Directly from Molecular Structure\n\n\n\n\n\n\n\nMachine Learning\n\n\nDisease Diagnosis\n\n\nEpidemiology\n\n\nPublic Health\n\n\n\n\nThe Gradient Boosting Regressor model achieves an exceptional accuracy of 99% in predicting calories burnt during physical activities.\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/esol/index.html",
@@ -1538,5 +1538,26 @@
     "title": "Powerful Benefits of Using R to Analyze Your Research Data",
     "section": "Useful R Studio Shortcuts",
     "text": "Useful R Studio Shortcuts\n\n\nCtrl + Enter in your script evaluates that line of code\n\nIt’s like copying and pasting the code into the console for it to run.\n\n\n\nCtrl+1 takes you to the script page\n\nCtrl+2 takes you to the console\nhttp://www.rstudio.com/ide/docs/using/keyboard_shortcuts"
+  },
+  {
+    "objectID": "projects.html#meta-uncertainty-BMC",
+    "href": "projects.html#meta-uncertainty-BMC",
+    "title": "Projects",
+    "section": "",
+    "text": "Paper (AISTATS 2023) | Code | Project website | Poster | Presentation (15min)\nMeta-Uncertainty represents a fully probabilistic framework for quantifying the uncertainty over Bayesian posterior model probabilities (PMPs) using meta-models. Meta-models integrate simulated and observed data into a predictive distribution for new PMPs and help reduce overconfidence and estimate the PMPs in future replication studies."
+  },
+  {
+    "objectID": "projects.html#jana-jointly-amortized-neural-approximation-of-complex-bayesian-models",
+    "href": "projects.html#jana-jointly-amortized-neural-approximation-of-complex-bayesian-models",
+    "title": "Projects",
+    "section": "JANA: Jointly Amortized Neural Approximation of Complex Bayesian Models",
+    "text": "JANA: Jointly Amortized Neural Approximation of Complex Bayesian Models\n\nPaper (arXiv) | Python library\nJANA is a new amortized solution for intractable likelihood functions and posterior densities in Bayesian modeling. It trains three networks to learn both an approximate posterior and a surrogate model for the likelihood, enabling amortized marginal likelihood and posterior predictive estimation."
+  },
+  {
+    "objectID": "projects.html#sbi-model-misspecification",
+    "href": "projects.html#sbi-model-misspecification",
+    "title": "Projects",
+    "section": "Detecting Model Misspecification in Amortized Simulation-Based Inference with Neural Networks",
+    "text": "Detecting Model Misspecification in Amortized Simulation-Based Inference with Neural Networks\n\narXiv Preprint | Code | Poster Novel neural network based architectures enable amortized Bayesian inference in settings where the likelihood function is only implicitly defined by a simulation program. But how faithful is such inference when simulations represent reality somewhat inaccurately? This paper illustrates how imposing a probabilistic structure on the latent data summary space can help to detect potentially catastrophic misspecifications during inference."
   }
 ]

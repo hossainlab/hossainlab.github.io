@@ -3,7 +3,7 @@ title: "Projects"
 listing:
   contents: projects
   sort: "title"
-  type: grid
+  type: default
   image-height: 260px
   categories: true
   sort-ui: true
