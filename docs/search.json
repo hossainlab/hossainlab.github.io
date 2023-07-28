@@ -221,7 +221,7 @@
     "href": "resources.html",
     "title": "Resources",
     "section": "",
-    "text": "The Cancer Genome Atlas (TCGA): TCGA is a comprehensive collection of multi-dimensional cancer genomics data covering multiple cancer types.\nInternational Cancer Genome Consortium (ICGC): Description: ICGC provides high-quality genomic and clinical data from various cancer projects worldwide.\nGene Expression Omnibus (GEO): GEO is a public repository hosted by the National Center for Biotechnology Information (NCBI) containing a vast collection of gene expression data, including cancer datasets.\nEuropean Genome-phenome Archive (EGA): Description: EGA is a repository for secure storage and sharing of human genetic and phenotypic data, including cancer datasets.\nNational Cancer Institute (NCI) Genomic Data Commons (GDC): Description: GDC is an open-access data portal providing access to a wide range of cancer genomics datasets.\nOncoLnc: Description: OncoLnc is a web resource that provides survival analysis and expression correlation for genes of interest across multiple cancer datasets.\nUCSC Cancer Genomics Browser: The UCSC Cancer Genomics Browser offers a comprehensive collection of cancer genomics data integrated with genomic annotations.\nGREIN : GEO RNA-seq Experiments Interactive Navigator: GREIN is an interactive web platform that provides user-friendly options to explore and analyze GEO RNA-seq data. GREIN is powered by the back-end computational pipeline for uniform processing of RNA-seq data and the large number (&gt;6,000) of already processed datasets. These datasets were retrieved from GEO and reprocessed consistently by the back-end GEO RNA-seq experiments processing pipeline (GREP2).\nGEPIA2: GEPIA2 is a web-based tool for analyzing gene expression data in cancer. It stands for Gene Expression Profiling Interactive Analysis 2 and is an updated version of the original GEPIA tool. GEPIA2 allows users to explore gene expression patterns, perform survival analyses, and visualize gene expression data across various cancer types.\nUALCAN: UALCAN is a web-based platform that provides interactive and comprehensive analysis of cancer transcriptome data. It enables users to explore gene expression patterns, perform survival analyses, and compare gene expression between tumor and normal samples across different cancer types. UALCAN utilizes data from The Cancer Genome Atlas (TCGA) to facilitate cancer research and provide insights into tumor biology.\ncBioPortal for Cancer Genomics:: cBioPortal hosts a large collection of cancer genomics datasets, allowing users to explore and visualize the data.\nONCOMINE: ONCOMINE is a powerful web-based platform for the analysis and visualization of cancer transcriptomic data. It provides researchers with access to a vast collection of publicly available gene expression datasets derived from cancer studies. ONCOMINE allows users to explore gene expression patterns, identify potential biomarkers, and compare gene expression between different cancer types or subtypes."
+    "text": "(Academic) career related essays\nA collection of resources on (scientific) career planning from the Nature Publishing Group.\nA resource from the NIH toward Broadening Experiences in Scientific Training\nA good list of books on ‘learning how to learn’\n\n\n\nmyIDP from AAAS. Free IDP focused on scientific career planning.\n\n\nThoughts on doing a postdoc or not\n\n\n\nInsight Data Science arranges short internships with some of the big names.\n\n\n\nThis blog post provides a nice description how applications for faculty positions are reviewed. From my own experience having been on and chaired several faculty searches, I think it’s a fairly accurate description.\n\n\nTips to have a productive PhD"
   },
   {
     "objectID": "resources.html#data-and-tools-for-cancer-genomics",
@@ -1664,5 +1664,215 @@
     "title": "Scientific Publications",
     "section": "",
     "text": "Hossain, M.J., Akter, MM.,(2023). Food consumption patterns and sedentary behaviours among the university students: a cross-sectional study (Scientific Reports)\nHossain, M.J., Das,M., Shahjahan,Islam, M. W., M. Towhid, S. T., (2023). Clinical and hematological manifestation of dengue patients in 2022 outbreak: A tertiary care hospital-based study (Acta Tropica, ScienceDirect)\nHossain, M.J., Azad,A.K., Shahid, MSB,Shahjahan, M., Ferdous, J. (2023). Prevalence, Antibiotic Resistance Pattern for Bacteriuria from Patients with Urinary Tract Infections (BioMed Research International)\nHossain, M.J., Towhid, S. T., Akter, S., Shahjahan, M., Roy, T., Akter, B., & Nodee, T. A.(2023). Self‑Management of Diabetic Patients from the Urban Areas in Bangladesh (Microbial Bioactives)"
+  },
+  {
+    "objectID": "resources.html#general",
+    "href": "resources.html#general",
+    "title": "Resources",
+    "section": "",
+    "text": "(Academic) career related essays\nA collection of resources on (scientific) career planning from the Nature Publishing Group.\nA resource from the NIH toward Broadening Experiences in Scientific Training\nA good list of books on ‘learning how to learn’"
+  },
+  {
+    "objectID": "resources.html#individual-development-plan-idp",
+    "href": "resources.html#individual-development-plan-idp",
+    "title": "Resources",
+    "section": "",
+    "text": "myIDP from AAAS. Free IDP focused on scientific career planning."
+  },
+  {
+    "objectID": "resources.html#postdoc-related",
+    "href": "resources.html#postdoc-related",
+    "title": "Resources",
+    "section": "",
+    "text": "Thoughts on doing a postdoc or not"
+  },
+  {
+    "objectID": "resources.html#data-science-internships",
+    "href": "resources.html#data-science-internships",
+    "title": "Resources",
+    "section": "",
+    "text": "Insight Data Science arranges short internships with some of the big names."
+  },
+  {
+    "objectID": "resources.html#academic-job-searchhiring",
+    "href": "resources.html#academic-job-searchhiring",
+    "title": "Resources",
+    "section": "",
+    "text": "This blog post provides a nice description how applications for faculty positions are reviewed. From my own experience having been on and chaired several faculty searches, I think it’s a fairly accurate description."
+  },
+  {
+    "objectID": "resources.html#academic-career",
+    "href": "resources.html#academic-career",
+    "title": "Resources",
+    "section": "",
+    "text": "Tips to have a productive PhD"
+  },
+  {
+    "objectID": "resources.html#software",
+    "href": "resources.html#software",
+    "title": "Resources",
+    "section": "Software",
+    "text": "Software\n\n\nlearnr - R package that allows development of interactive web-based R tutorials.\n\nFeedback at scale - tutorial for using learnr and gradethis as teaching tools."
+  },
+  {
+    "objectID": "resources.html#books",
+    "href": "resources.html#books",
+    "title": "Resources",
+    "section": "Books",
+    "text": "Books\n\n\nrstudio4edu - A Handbook for Teaching and Learning with R and RStudio - still very much a draft."
+  },
+  {
+    "objectID": "resources.html#online-resources",
+    "href": "resources.html#online-resources",
+    "title": "Resources",
+    "section": "Online Resources",
+    "text": "Online Resources\n\n\nTeaching Statistics and Data Science Online - materials for several teacher workshops taught by Mine Çetinkaya-Rundel."
+  },
+  {
+    "objectID": "resources.html#other",
+    "href": "resources.html#other",
+    "title": "Resources",
+    "section": "Other",
+    "text": "Other\n\n\nBioicons - a collection of free drawings and diagrams on biological topics, which can be used in teaching (or research) presentations."
+  },
+  {
+    "objectID": "resources.html#r-programming",
+    "href": "resources.html#r-programming",
+    "title": "Resources",
+    "section": "R Programming",
+    "text": "R Programming"
+  },
+  {
+    "objectID": "resources.html#data-cleaning-and-checking",
+    "href": "resources.html#data-cleaning-and-checking",
+    "title": "Resources",
+    "section": "Data cleaning and checking",
+    "text": "Data cleaning and checking\n\nCheck out the R packages tidyr, plyr, dplyr, validate, vtreat (you can find good documentation for all of them)\nData Analysis and Visualization Using R\nA nice series of blog posts describing common data manipulations for dplyr"
+  },
+  {
+    "objectID": "resources.html#visualization",
+    "href": "resources.html#visualization",
+    "title": "Resources",
+    "section": "Visualization",
+    "text": "Visualization\n\n\nR Graph Gallery: Has lots of examples of graphs and plots in R, including the underlying code that produced the graph. Great place to find a graph similar to one you’d like to make, take the code and adjust it."
+  },
+  {
+    "objectID": "resources.html#missing-dataimputation",
+    "href": "resources.html#missing-dataimputation",
+    "title": "Resources",
+    "section": "Missing Data/Imputation",
+    "text": "Missing Data/Imputation\n\nCheck out R packages mi, mice, Amelia, missforest, imputation\nLittle & Rubin “Statistical Analysis with Missing Data, 2nd Edition”"
+  },
+  {
+    "objectID": "resources.html#p-values",
+    "href": "resources.html#p-values",
+    "title": "Resources",
+    "section": "p-values",
+    "text": "p-values\n\nNice discussion of p-values\nAnother stab at p-values\nAnother good discussion of the problem with p-values"
+  },
+  {
+    "objectID": "resources.html#epidemiology-specific-topics",
+    "href": "resources.html#epidemiology-specific-topics",
+    "title": "Resources",
+    "section": "Epidemiology specific topics",
+    "text": "Epidemiology specific topics\n\ntableone - A package that allows for convenient creation of a descriptive table based on a data frame.\ncompareGroups - A package that allows for convenient creation of result tables from linear and logistic (and related) models.\nThe R survival package - Lots of functionality for survival analysis."
+  },
+  {
+    "objectID": "resources.html#time-series-analysis",
+    "href": "resources.html#time-series-analysis",
+    "title": "Resources",
+    "section": "Time-series analysis",
+    "text": "Time-series analysis\n\nThe R survival package - Lots of functionality for survival analysis.\nForecasting: principles and practice"
+  },
+  {
+    "objectID": "resources.html#general-data-related-resources",
+    "href": "resources.html#general-data-related-resources",
+    "title": "Resources",
+    "section": "General Data Related Resources",
+    "text": "General Data Related Resources\n\nThe Project Open Data Dashboard gives overview statistics of available government data from various agencies.\nGuide to Open Data Publishing & Analytics - A good article describing best practices for publishing data openly. Is also a good read for those who want to analyze other’s data.\nA short list of data related R packages - packages that either access data or include data\nGoogle’s Data Search Engine"
+  },
+  {
+    "objectID": "resources.html#some-data-sources",
+    "href": "resources.html#some-data-sources",
+    "title": "Resources",
+    "section": "Some data Sources",
+    "text": "Some data Sources\n(listed in no particular order)\n\nKaggle Data - A growing number of datasets used in Kaggle data analysis contests and available for any other use.\nNasdaq Data Link - mainly finance related data\nNHANES - longstanding and thorough survey done by CDC\nSEER - Cancer data\nCDC WONDER - list of mainly CDC online databases\nHealthy People Website - contains among other things links to various data sources\nHCUP - collection of health related databases, focusing on US wide and state-specific samples of ER and hospital visits. Not free, but not too expensive.\nClinical Study Data Request - a way to get (tedious) access to clinical trial data\nEMA Clinical Data Portal - looks like a way to get access to some clinical trial data for EMA registered studies.\nMIMIC - a free and open database of critical care patient visits to a Boston hospital.\nData.gov - federak government data platform.\nAnalyze Survey Data for Free - Step by Step Instructions to Explore Public Microdata from an Easy to Type Website\nVaccine Safety Datalink (VSD)\nGlobal Health Data Exchange / IHME\nVaccine Adverse Event Reporting System (VAERS)\nNational EMS Data (NEMSIS)\nData from the UN\nInter-university Consortium for Political and Social Research (ICPSR) - access to various social and behavioral sciences data.\nFederal Reserve in Atlanta Data Center\nDatabase to search health related government data\nA list hosted by Microsoft with links to various data sources"
+  },
+  {
+    "objectID": "resources.html#infectious-disease-specific",
+    "href": "resources.html#infectious-disease-specific",
+    "title": "Resources",
+    "section": "Infectious Disease Specific",
+    "text": "Infectious Disease Specific\nGeneral\n\n\nProject Tycho - infectious disease data\nhttp://www.viprbrc.org\nhttp://eupathdb.org\n\nClinEpiDB - a database of (a few) clinical epidemiology studies, focusing on infectious diseases.\nImmPort\nInfluenza\n\nhttp://www.fludb.org\nWHO Flunet\ngisaid.org\nhttp://www.cdc.gov/flu/index.htm\nhttp://www.ncbi.nlm.nih.gov/genomes/FLU/FLU.html\nSystemsInfluenza.org\nTB\n\nOTIS on CDC WONDER: http://wonder.cdc.gov/tb.html"
+  },
+  {
+    "objectID": "resources.html#data",
+    "href": "resources.html#data",
+    "title": "Resources",
+    "section": "Data",
+    "text": "Data\n\nThe Cancer Genome Atlas (TCGA): TCGA is a comprehensive collection of multi-dimensional cancer genomics data covering multiple cancer types.\nInternational Cancer Genome Consortium (ICGC): Description: ICGC provides high-quality genomic and clinical data from various cancer projects worldwide.\nGene Expression Omnibus (GEO): GEO is a public repository hosted by the National Center for Biotechnology Information (NCBI) containing a vast collection of gene expression data, including cancer datasets.\nEuropean Genome-phenome Archive (EGA): Description: EGA is a repository for secure storage and sharing of human genetic and phenotypic data, including cancer datasets.\nNational Cancer Institute (NCI) Genomic Data Commons (GDC): Description: GDC is an open-access data portal providing access to a wide range of cancer genomics datasets.\nOncoLnc: Description: OncoLnc is a web resource that provides survival analysis and expression correlation for genes of interest across multiple cancer datasets.\nUCSC Cancer Genomics Browser: The UCSC Cancer Genomics Browser offers a comprehensive collection of cancer genomics data integrated with genomic annotations.\nGREIN : GEO RNA-seq Experiments Interactive Navigator: GREIN is an interactive web platform that provides user-friendly options to explore and analyze GEO RNA-seq data. GREIN is powered by the back-end computational pipeline for uniform processing of RNA-seq data and the large number (&gt;6,000) of already processed datasets. These datasets were retrieved from GEO and reprocessed consistently by the back-end GEO RNA-seq experiments processing pipeline (GREP2)."
+  },
+  {
+    "objectID": "resources.html#tools",
+    "href": "resources.html#tools",
+    "title": "Resources",
+    "section": "Tools",
+    "text": "Tools\n\nGEPIA2: GEPIA2 is a web-based tool for analyzing gene expression data in cancer. It stands for Gene Expression Profiling Interactive Analysis 2 and is an updated version of the original GEPIA tool. GEPIA2 allows users to explore gene expression patterns, perform survival analyses, and visualize gene expression data across various cancer types.\nUALCAN: UALCAN is a web-based platform that provides interactive and comprehensive analysis of cancer transcriptome data. It enables users to explore gene expression patterns, perform survival analyses, and compare gene expression between tumor and normal samples across different cancer types. UALCAN utilizes data from The Cancer Genome Atlas (TCGA) to facilitate cancer research and provide insights into tumor biology.\ncBioPortal for Cancer Genomics:: cBioPortal hosts a large collection of cancer genomics datasets, allowing users to explore and visualize the data.\nONCOMINE: ONCOMINE is a powerful web-based platform for the analysis and visualization of cancer transcriptomic data. It provides researchers with access to a vast collection of publicly available gene expression datasets derived from cancer studies. ONCOMINE allows users to explore gene expression patterns, identify potential biomarkers, and compare gene expression between different cancer types or subtypes."
+  },
+  {
+    "objectID": "resources.html#lists-by-others",
+    "href": "resources.html#lists-by-others",
+    "title": "Resources",
+    "section": "Lists by others",
+    "text": "Lists by others\n\n[A list of the best R tools] (https://github.com/qinwf/awesome-R)"
+  },
+  {
+    "objectID": "resources.html#online-courses-for-r",
+    "href": "resources.html#online-courses-for-r",
+    "title": "Resources",
+    "section": "Online Courses for R",
+    "text": "Online Courses for R\n\nSwirl - An R package that teaches R interactively inside R. Not as polished as DataCamp, but good interactivity, great motivating feedback/messages, beginner and intermediate levels. Completely free.\nTry R, a free course at codeschool.com"
+  },
+  {
+    "objectID": "resources.html#r-books-and-tutorials",
+    "href": "resources.html#r-books-and-tutorials",
+    "title": "Resources",
+    "section": "R books and Tutorials",
+    "text": "R books and Tutorials\n\nYaRrr! The Pirate’s Guide to R: A nice R introduction with a piratey bend\nComputerworld’s R beginner guide\n‘R Meta book’ - a list of resources on specific topics:\nSpringer has a series of books called ‘Use R’ - A long and growing series of books on a lot of different R topics. From beginner to advanced. Many university libraries have a subscription to Springer Online, which allows you to get the books for free.\nRoger Peng’s “R programming for data science” book on Leanpub. Name your own price.\n“Advanced R” by Hadley Wickham for more advanced R coding"
+  },
+  {
+    "objectID": "resources.html#general-r-online-resources",
+    "href": "resources.html#general-r-online-resources",
+    "title": "Resources",
+    "section": "General R Online Resources",
+    "text": "General R Online Resources\n\nQuick R - a great resource for many ‘how do I’ questions of common data analysis and graphics tasks.\nCookbook for R - another useful collection of ‘how do I do X’ information.\nR bloggers an aggregation of blogs about all things R\nConvenient reference/cheat sheets for some important R tasks\nResource collection to do useful data analysis related tasks in R\nR Documentation: - a webpage and R package that tries to enhance the help/documentation files for R and its packages.\nThe Task View sorting R packages into categories is often useful"
+  },
+  {
+    "objectID": "resources.html#r-and-shiny",
+    "href": "resources.html#r-and-shiny",
+    "title": "Resources",
+    "section": "R and Shiny",
+    "text": "R and Shiny\n\nOfficial shiny webpage\n\nCollection of Shiny tips and tricks, see also here and here\n\nEngineering Production-Grade Shiny Apps\n\nOutstanding User Interfaces with Shiny - a book covering advanced Shiny material, covering advanced styling, mobile development, integration with other web technologies, etc."
+  },
+  {
+    "objectID": "resources.html#r-markdown-and-related",
+    "href": "resources.html#r-markdown-and-related",
+    "title": "Resources",
+    "section": "R Markdown and related",
+    "text": "R Markdown and related\n\nCollection of R Markdown Tips and Tricks"
+  },
+  {
+    "objectID": "resources.html#r-package-development",
+    "href": "resources.html#r-package-development",
+    "title": "Resources",
+    "section": "R package development",
+    "text": "R package development\n\n\n“R packages” by Hadley Wickham. This (free online) book alone is enough to get a package done. Should definitely be the first (and maybe even only) source to read/use.\nHow to quickly write an R package\nA series of online videos talking about package development\n\ndevtools, roxygen2, etc. - almost required for development. See Hadley’s book.\n\navailable - tests if a specific name is still available\n\nusethis - helps with a lot of setup tasks for packages (and other R coding tasks)"
+  },
+  {
+    "objectID": "resources.html#other-lists",
+    "href": "resources.html#other-lists",
+    "title": "Resources",
+    "section": "Other lists",
+    "text": "Other lists\n\nAwesome data science - Someone else’s list of resources related to data science.\nMachine learning book list - A list of free online books concerning all things machine learning and data analysis.\nA machine learning list of terms and definitions."
   }
 ]
