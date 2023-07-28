@@ -36,16 +36,14 @@ website:
   navbar:
       pinned: true
       background: "#99ccff"
-      logo: /files/logo.png
+      # logo: /files/logo.png
       left:
         - text: "Home"
           file: index.qmd
         - text: "Blog"
           file: blog/index.qmd
         - text: "Research"
-          file: research/index.qmd
-        - text: "Talks"
-          file: talks/index.qmd
+          file: publications/index.qmd
         - text: "Projects"
           file: projects.qmd
         - text: "Resources"
@@ -77,7 +75,7 @@ website:
 format:
   html:
     theme:
-       - html/ath.scss
+       - html/hossainmj.scss 
     css: styles.css
     toc: false
     code-link: true
