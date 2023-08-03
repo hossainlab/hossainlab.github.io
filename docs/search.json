@@ -11,7 +11,7 @@
     "href": "talks/index.html",
     "title": "Talks",
     "section": "",
-    "text": "This page contains the source code, links, and slides for various workshops, talks, lectures, and presentations I’ve given. Research presentations given at conferences are typically stored in their respective repositories on GitHub; one-off workshops and talks can all be found in a catch-all GitHub repository."
+    "text": "Talk at Oslo UseR meetup\n\n\n\n\n\n\nApr 2, 2019\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "talks/index.html#rstats",
@@ -95,14 +95,14 @@
     "href": "projects/index.html",
     "title": "Projects",
     "section": "",
-    "text": "No matching items"
+    "text": "This is an example of grid listing. You can specify the content in the yaml header in the .qmd file.\nIt is convenient to use id to link to multiple folders."
   },
   {
     "objectID": "projects/index.html#grid-listing",
     "href": "projects/index.html#grid-listing",
     "title": "Projects",
     "section": "",
-    "text": "This is an example of grid listing. You can specify the content in the yaml header in the .qmd file.\nIt is convenient to use id to link to multiple folders.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "This is an example of grid listing. You can specify the content in the yaml header in the .qmd file.\nIt is convenient to use id to link to multiple folders."
   },
   {
     "objectID": "projects/index.html#table-listing",

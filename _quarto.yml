@@ -45,7 +45,9 @@ website:
         - text: "Research"
           file: publications/index.qmd
         - text: "Projects"
-          file: projects.qmd
+          href: projects/index.qmd
+        - text: "Talks"
+          href: talks/index.qmd
         - text: "Resources"
           file: resources.qmd
         - text: "Teaching"

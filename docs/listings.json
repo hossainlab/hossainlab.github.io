@@ -1,7 +1,10 @@
 [
   {
     "listing": "/talks/index.html",
-    "items": []
+    "items": [
+      "/talks/talk_1/index.html",
+      "/talks/talk_2/index.html"
+    ]
   },
   {
     "listing": "/blog.html",
@@ -12,7 +15,10 @@
   },
   {
     "listing": "/projects/index.html",
-    "items": []
+    "items": [
+      "/projects/project_1/index.html",
+      "/projects/project_2/index.html"
+    ]
   },
   {
     "listing": "/blog/blog.html",

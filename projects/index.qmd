@@ -1,0 +1,29 @@
+---
+title: "Projects"
+description: |
+  This page provides a mix of two types of listing, grouped by `id`.
+listing:
+  - id: ehr
+    max-description-length: 500
+    image-height: 150px
+    fields: [image, title, description]
+    contents: 
+      - project_1
+      - project_2
+    type: grid
+    grid-item-border: false    
+---
+
+
+
+## Grid listing
+
+This is an example of **grid** listing. You can specify the content in the `yaml` header in the `.qmd` file. 
+
+It is convenient to use `id` to link to multiple folders. 
+
+
+
+
+
+
