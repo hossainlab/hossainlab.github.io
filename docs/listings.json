@@ -40,9 +40,7 @@
   },
   {
     "listing": "/publications/index.html",
-    "items": [
-      "/publications/articles/shahnaj2023_01.html"
-    ]
+    "items": []
   },
   {
     "listing": "/research/index.html",
@@ -56,9 +54,12 @@
   },
   {
     "listing": "/projects.html",
+    "items": []
+  },
+  {
+    "listing": "/news.html",
     "items": [
-      "/projects/calories-burntp-rediction/index.html",
-      "/projects/esol/index.html"
+      "/posts/vail2022/index.html"
     ]
   }
 ]

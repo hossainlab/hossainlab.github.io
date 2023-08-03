@@ -72,9 +72,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -97,10 +97,8 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Projects">
-<meta property="og:image" content="./projects/calories-burntp-rediction/featured.jpg">
 <meta name="twitter:title" content="Projects">
-<meta name="twitter:image" content="./projects/calories-burntp-rediction/featured.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed">
@@ -120,8 +118,8 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog/index.html" rel="" target="">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="./news.html" rel="" target="">
+ <span class="menu-text">News</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./publications/index.html" rel="" target="">
@@ -136,7 +134,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./teaching/index.html" rel="" target="">
+    <a class="nav-link" href="./teaching.html" rel="" target="">
  <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
@@ -182,7 +180,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Calories Burnt">Calories Burnt <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Disease Diagnosis">Disease Diagnosis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Epidemiology">Epidemiology <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Machine Learning">Machine Learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Public Health">Public Health <span class="quarto-category-count">(2)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -209,99 +207,13 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Author
-        </option>
-     </select>
-  </div>
     <div class="input-group input-group-sm quarto-listing-filter">
       <span class="input-group-text"><i class="bi bi-search"></i></span>
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Machine Learning,Calories Burnt,Epidemiology,Public Health" data-listing-file-modified-sort="1690542812992" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./projects/calories-burntp-rediction/index.html"> <img src="./projects/calories-burntp-rediction/featured.jpg" class="thumbnail-image" style="height: 260px;" alt="images"> </a></p>
-</div>
-<div class="body">
-<a href="./projects/calories-burntp-rediction/index.html">
-<h3 class="no-anchor listing-title">
-Calories Burnt Prediction using Machine Learning
-</h3>
-<div class="listing-subtitle">
 
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Machine Learning'); return false;">
-Machine Learning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Calories Burnt'); return false;">
-Calories Burnt
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Epidemiology'); return false;">
-Epidemiology
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Public Health'); return false;">
-Public Health
-</div>
-</div>
-<a href="./projects/calories-burntp-rediction/index.html">
-<div class="listing-description">
-<p>The Gradient Boosting Regressor model provides 99% accuracy in prediction of Calories Burn.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./projects/calories-burntp-rediction/index.html"> </a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Machine Learning,Disease Diagnosis,Epidemiology,Public Health" data-listing-file-modified-sort="1690542812992" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./projects/esol/index.html"> <img src="./projects/esol/featured.png" class="thumbnail-image" style="height: 260px;" alt="IDEMA book logo"> </a></p>
-</div>
-<div class="body">
-<a href="./projects/esol/index.html">
-<h3 class="no-anchor listing-title">
-ESOL: Estimating Aqueous Solubility Directly from Molecular Structure
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Machine Learning'); return false;">
-Machine Learning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Disease Diagnosis'); return false;">
-Disease Diagnosis
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Epidemiology'); return false;">
-Epidemiology
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Public Health'); return false;">
-Public Health
-</div>
-</div>
-<a href="./projects/esol/index.html">
-<div class="listing-description">
-<p>The Gradient Boosting Regressor model achieves an exceptional accuracy of 99% in predicting calories burnt during physical activities.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./projects/esol/index.html"> </a>
-</div>
-</div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items

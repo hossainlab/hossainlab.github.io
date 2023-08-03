@@ -457,9 +457,9 @@
   {
     "objectID": "publications/index.html",
     "href": "publications/index.html",
-    "title": "Scientific Publications",
+    "title": "",
     "section": "",
-    "text": "Hossain, M.J., Akter, MM.,(2023). Food consumption patterns and sedentary behaviours among the university students: a cross-sectional study (Scientific Reports)\nHossain, M.J., Das,M., Shahjahan,Islam, M. W., M. Towhid, S. T., (2023). Clinical and hematological manifestation of dengue patients in 2022 outbreak: A tertiary care hospital-based study (Acta Tropica, ScienceDirect)\nHossain, M.J., Azad,A.K., Shahid, MSB,Shahjahan, M., Ferdous, J. (2023). Prevalence, Antibiotic Resistance Pattern for Bacteriuria from Patients with Urinary Tract Infections (BioMed Research International)\nHossain, M.J., Towhid, S. T., Akter, S., Shahjahan, M., Roy, T., Akter, B., & Nodee, T. A.(2023). Self‑Management of Diabetic Patients from the Urban Areas in Bangladesh (Microbial Bioactives)"
+    "text": "No matching items"
   },
   {
     "objectID": "research/working-papers/heiss-ye-np-causal-inference/index.html",
@@ -1313,7 +1313,7 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nCalories Burnt Prediction using Machine Learning\n\n\n\n\n\n\n\nMachine Learning\n\n\nCalories Burnt\n\n\nEpidemiology\n\n\nPublic Health\n\n\n\n\nThe Gradient Boosting Regressor model provides 99% accuracy in prediction of Calories Burn.\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nESOL: Estimating Aqueous Solubility Directly from Molecular Structure\n\n\n\n\n\n\n\nMachine Learning\n\n\nDisease Diagnosis\n\n\nEpidemiology\n\n\nPublic Health\n\n\n\n\nThe Gradient Boosting Regressor model achieves an exceptional accuracy of 99% in predicting calories burnt during physical activities.\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "No matching items"
   },
   {
     "objectID": "projects/esol/index.html",
@@ -1874,5 +1874,124 @@
     "title": "Resources",
     "section": "Other lists",
     "text": "Other lists\n\nAwesome data science - Someone else’s list of resources related to data science.\nMachine learning book list - A list of free online books concerning all things machine learning and data analysis.\nA machine learning list of terms and definitions."
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "2023",
+    "section": "",
+    "text": "Bioinformatics BootCamp is an intensive and comprehensive training program designed to equip participants with the essential skills and knowledge in bioinformatics. This bootcamp offers a hands-on learning experience, covering a wide range of topics such as sequence analysis, genomics, proteomics, and data analysis using popular bioinformatics tools and software. Led by experienced instructors, participants will gain practical expertise, enabling them to effectively analyze biological data and make meaningful discoveries in the field of bioinformatics.\nBootCamp 1.0\n\nBootCamp 2.0\n\n\n\nEssential course focusing on Linux for bioinformatics. Learn command-line navigation, file management, and text processing. Analyze biological data and perform sequence analysis. Gain foundational skills for bioinformatics research using Linux. No prior Linux experience required.\nProgram Website\n\nApply to the Program"
+  },
+  {
+    "objectID": "teaching.html#bioinformatics-bootcamp",
+    "href": "teaching.html#bioinformatics-bootcamp",
+    "title": "2023",
+    "section": "",
+    "text": "Bioinformatics BootCamp is an intensive and comprehensive training program designed to equip participants with the essential skills and knowledge in bioinformatics. This bootcamp offers a hands-on learning experience, covering a wide range of topics such as sequence analysis, genomics, proteomics, and data analysis using popular bioinformatics tools and software. Led by experienced instructors, participants will gain practical expertise, enabling them to effectively analyze biological data and make meaningful discoveries in the field of bioinformatics.\nBootCamp 1.0\n\nBootCamp 2.0"
+  },
+  {
+    "objectID": "teaching.html#introduction-to-linux-for-bioinformatics",
+    "href": "teaching.html#introduction-to-linux-for-bioinformatics",
+    "title": "2023",
+    "section": "",
+    "text": "Essential course focusing on Linux for bioinformatics. Learn command-line navigation, file management, and text processing. Analyze biological data and perform sequence analysis. Gain foundational skills for bioinformatics research using Linux. No prior Linux experience required.\nProgram Website\n\nApply to the Program"
+  },
+  {
+    "objectID": "teaching.html#nextflow-for-bioinformatics",
+    "href": "teaching.html#nextflow-for-bioinformatics",
+    "title": "2023",
+    "section": "Nextflow for Bioinformatics",
+    "text": "Nextflow for Bioinformatics\nLearn to create, optimize, and execute bioinformatics workflows using Nextflow. Gain hands-on experience with real-world projects and process large-scale biological data efficiently. Enhance your ability to tackle complex computational challenges. Basic bioinformatics and command-line knowledge recommended."
+  },
+  {
+    "objectID": "teaching.html#python-for-bioinformatics",
+    "href": "teaching.html#python-for-bioinformatics",
+    "title": "2023",
+    "section": "Python for Bioinformatics",
+    "text": "Python for Bioinformatics\nLearn Python programming and its applications in bioinformatics. Master manipulating biological data, sequence analysis, and biopython usage. Develop custom bioinformatics solutions and automate analyses with practical projects. No prior programming experience required.\nProgram Website\n\nApply to the Program"
+  },
+  {
+    "objectID": "teaching.html#r-for-bioinformatics",
+    "href": "teaching.html#r-for-bioinformatics",
+    "title": "2023",
+    "section": "R for Bioinformatics",
+    "text": "R for Bioinformatics\nSpecialized training program using R for biological data analysis. Covers data manipulation, statistics, visualization, and machine learning. Hands-on exercises and real-world case studies. Master R packages for bioinformatics tasks. Empower your bioinformatics research with R.\nProgram Website\n\nApply to the Program"
+  },
+  {
+    "objectID": "teaching.html#rna-seq-data-analysis-with-r",
+    "href": "teaching.html#rna-seq-data-analysis-with-r",
+    "title": "2023",
+    "section": "RNA-seq Data Analysis with R",
+    "text": "RNA-seq Data Analysis with R\nImmersive program for RNA-seq data analysis using R. Covers preprocessing, quality control, differential expression, pathway enrichment, and visualization. Hands-on exercises with real datasets. Master R packages and workflows for robust analysis. Contribute to genomics and molecular biology research.\nProgram Website\n\nApply to the Program"
+  },
+  {
+    "objectID": "teaching.html#single-cell-rna-seq-data-analysis-with-r",
+    "href": "teaching.html#single-cell-rna-seq-data-analysis-with-r",
+    "title": "2023",
+    "section": "Single Cell RNA-seq Data Analysis with R",
+    "text": "Single Cell RNA-seq Data Analysis with R\nIn-depth training program for scRNA-seq data analysis using R. Covers preprocessing, quality control, dimensionality reduction, clustering, and differential expression. Hands-on exercises with real datasets. Master R packages and workflows for scRNA-seq. Gain insights for breakthroughs in single-cell genomics.\nProgram Website\n\nApply to the Program"
+  },
+  {
+    "objectID": "teaching.html#machine-learning-for-bioinformatics",
+    "href": "teaching.html#machine-learning-for-bioinformatics",
+    "title": "2023",
+    "section": "Machine Learning for Bioinformatics",
+    "text": "Machine Learning for Bioinformatics\nComprehensive training program merging machine learning and bioinformatics. Covers feature selection, classification, regression, clustering, and deep learning. Hands-on exercises with real biological data. Master data-driven discoveries in genomics, proteomics, drug discovery, and precision medicine.\nProgram Website\n\nApply to the Program"
+  },
+  {
+    "objectID": "teaching.html#whole-genome-sequence-analysis",
+    "href": "teaching.html#whole-genome-sequence-analysis",
+    "title": "2023",
+    "section": "Whole Genome Sequence Analysis",
+    "text": "Whole Genome Sequence Analysis\nAdvanced course covering variant calling, functional annotation, and structural variation detection. Hands-on exercises with real genomic data. Gain expertise for impactful contributions in genomics. Prerequisite: strong background in bioinformatics and genomics.\nProgram Website\n\nApply to the Program"
+  },
+  {
+    "objectID": "teaching.html#metagenomics-data-analysis",
+    "href": "teaching.html#metagenomics-data-analysis",
+    "title": "2023",
+    "section": "Metagenomics Data Analysis",
+    "text": "Metagenomics Data Analysis\nComprehensive course on studying microbial communities. Covers preprocessing, taxonomic profiling, functional annotation, and statistical analysis. Hands-on projects with diverse datasets. Gain insights into microbial interactions and ecological dynamics. Prerequisite: basic bioinformatics and genomics knowledge.\nProgram Website\n\nApply to the Program"
+  },
+  {
+    "objectID": "news.html",
+    "href": "news.html",
+    "title": "",
+    "section": "",
+    "text": "ICMI 2022 Paper\n\n\n\n\n\n\n\nannouncement\n\n\npaper\n\n\n\n\nToward causal understanding of therapist-client relationships\n\n\n\n\n\n\nNov 7, 2022\n\n\nJeffrey Girard\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/vail2022/index.html",
+    "href": "posts/vail2022/index.html",
+    "title": "ICMI 2022 Paper",
+    "section": "",
+    "text": "I am very pleased to announce that a new conference paper from our team has been published in the Proceedings of the 2022 International Conference on Multimodal Interaction.\nThis paper, entitled “Toward causal understanding of therapist-client relationships: A study of language modality and social entrainment,” explores the associations between working alliance ratings and linguistic entrainment between therapist and patients with depression during brief psychotherapy.\nThis paper was authored by Vail, Girard, Bylsma, Cohn, Fournier, Swartz, and Morency and was supported in part by our “Dyadic Behavior Informatics for Psychotherapy Process and Outcome” grant from the National Science Foundation.\nClick here to access the paper"
+  },
+  {
+    "objectID": "publications/articles/shahnaj2023_02.html",
+    "href": "publications/articles/shahnaj2023_02.html",
+    "title": "Prediction of Structure and Function of Helicobacter pylori Hypothetical Protein MPG40_02440: An In-Silico Approach",
+    "section": "",
+    "text": "Hypothetical proteins (HPs) are the proteins whose occurrence has been predicted, yet in vivo function has not been manufactured up. {Helicobacter pylori (H. pylori) is a Gram-negative helical, microaerophilic bacterium, surviving in stomachs harsh acidic environment through mechanisms of acid resistance and colonization factors.} As H. pylori has been found to play a major etiological and pathogenic role in chronic gastritis, peptic ulcer disease and gastric cancer so it’s important to investigate H. pylori’s protein structures and functions. The current study aims to predict the structure and function of hypothetical protein MPG40_02440 from H. pylori [molybdopterin guanine dinucleotide-containing S/N-oxide reductases] Some server-based Bio-informatics tools are used to get physicochemical properties, secondary structure prediction, homology modeling etc. The study shows it is a stable, soluble and intracellular protein. It belongs to bisC_fam super family. These enzymes function in general to transfer oxygen to or from a physiological molecule."
+  },
+  {
+    "objectID": "publications/articles/shahnaj2023_02.html#abstract",
+    "href": "publications/articles/shahnaj2023_02.html#abstract",
+    "title": "Prediction of Structure and Function of Helicobacter pylori Hypothetical Protein MPG40_02440: An In-Silico Approach",
+    "section": "",
+    "text": "Hypothetical proteins (HPs) are the proteins whose occurrence has been predicted, yet in vivo function has not been manufactured up. {Helicobacter pylori (H. pylori) is a Gram-negative helical, microaerophilic bacterium, surviving in stomachs harsh acidic environment through mechanisms of acid resistance and colonization factors.} As H. pylori has been found to play a major etiological and pathogenic role in chronic gastritis, peptic ulcer disease and gastric cancer so it’s important to investigate H. pylori’s protein structures and functions. The current study aims to predict the structure and function of hypothetical protein MPG40_02440 from H. pylori [molybdopterin guanine dinucleotide-containing S/N-oxide reductases] Some server-based Bio-informatics tools are used to get physicochemical properties, secondary structure prediction, homology modeling etc. The study shows it is a stable, soluble and intracellular protein. It belongs to bisC_fam super family. These enzymes function in general to transfer oxygen to or from a physiological molecule."
+  },
+  {
+    "objectID": "publications/articles/shahnaj2023_03.html",
+    "href": "publications/articles/shahnaj2023_03.html",
+    "title": "In Silico Structural and Functional Prediction of Phaseolus Vulgaris Hypothetical Protein PHA VU_004G136400g",
+    "section": "",
+    "text": "In bacterial genomes, there are open reading frames (ORFs) that encode protein sequences without known functions or homologies to other proteins. These ORFs are often annotated as hypothetical proteins or conserved hypothetical proteins. These designations indicate that their functions are not yet understood or that their predicted functions are based on computational analysis rather than experimental evidence. Helicobacter pylori has been shown to induce chronic active gastritis and peptic ulcer and may contribute to the development of duodenal ulcer. Helicobacter pylori (H. pylori) is a Gram-negative bacterium that colonizes the human stomach. This bacterium is associated with various gastrointestinal disorders, including gastritis, peptic ulcers, gastric adenocarcinoma (stomach cancer), and gastric mucosa-associated lymphoid tissue (MALT) lymphoma. This study aims to investigate the structural and functional annotation of hypothetical protein MPF87_06725, which is basically a CagE domain containing protein encode a type IV transporter secretion system essential for pathogenesis in H. pylori induced gastritis and peptic ulceration. The in-silico approach included methods including physiochemical properties, secondary structure prediction, homology modeling, quality assessment of the 3D structure, protein-protein interaction, functional annotation and comparative genomics."
+  },
+  {
+    "objectID": "publications/articles/shahnaj2023_03.html#abstract",
+    "href": "publications/articles/shahnaj2023_03.html#abstract",
+    "title": "In Silico Structural and Functional Prediction of Phaseolus Vulgaris Hypothetical Protein PHA VU_004G136400g",
+    "section": "",
+    "text": "In bacterial genomes, there are open reading frames (ORFs) that encode protein sequences without known functions or homologies to other proteins. These ORFs are often annotated as hypothetical proteins or conserved hypothetical proteins. These designations indicate that their functions are not yet understood or that their predicted functions are based on computational analysis rather than experimental evidence. Helicobacter pylori has been shown to induce chronic active gastritis and peptic ulcer and may contribute to the development of duodenal ulcer. Helicobacter pylori (H. pylori) is a Gram-negative bacterium that colonizes the human stomach. This bacterium is associated with various gastrointestinal disorders, including gastritis, peptic ulcers, gastric adenocarcinoma (stomach cancer), and gastric mucosa-associated lymphoid tissue (MALT) lymphoma. This study aims to investigate the structural and functional annotation of hypothetical protein MPF87_06725, which is basically a CagE domain containing protein encode a type IV transporter secretion system essential for pathogenesis in H. pylori induced gastritis and peptic ulceration. The in-silico approach included methods including physiochemical properties, secondary structure prediction, homology modeling, quality assessment of the 3D structure, protein-protein interaction, functional annotation and comparative genomics."
   }
 ]

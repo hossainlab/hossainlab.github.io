@@ -71,7 +71,8 @@
       "publications/*/*.qmd",
       "publications/*/index.qmd",
       "articles/*/index.qmd",
-      "articles/*.qmd"
+      "articles/*.qmd",
+      "articles/*/**.qmd"
     ],
     "research\\index.qmd": [
       "articles/*/index.qmd",
@@ -86,6 +87,9 @@
     ],
     "projects.qmd": [
       "projects"
+    ],
+    "news.qmd": [
+      "posts/**/index.qmd"
     ]
   }
 }

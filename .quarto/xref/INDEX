@@ -217,5 +217,20 @@
   },
   "cv/CV_Jubayer_Hossain[Professional].Rmd": {
     "CV_Jubayer_Hossain[Professional].html": "1a21864a"
+  },
+  "teaching.qmd": {
+    "teaching.html": "12953a09"
+  },
+  "news.qmd": {
+    "news.html": "a946d5d8"
+  },
+  "posts/vail2022/index.qmd": {
+    "index.html": "67e6d8b1"
+  },
+  "publications/articles/shahnaj2023_02.qmd": {
+    "shahnaj2023_02.html": "169ae00e"
+  },
+  "publications/articles/shahnaj2023_03.qmd": {
+    "shahnaj2023_03.html": "d594d7fd"
   }
 }

@@ -1,36 +1,21 @@
 ---
-title: Scientific Publications
-excerpt: "A list of my scientific publications"
-page-layout: full
-toc: true
-toc-location: right
+pagetitle: "Publications | Md. Jubayer Hossain"
+toc: false
+listing:
+  - id: articles
+    contents: "articles/*/**.qmd"
+    template: ../ejs/article.ejs
+    categories: true
+    sort:
+      - "year desc"
+      - "title"
+    sort-ui: [title,author,publication,year]
+    filter-ui: [title,author,publication,year]
+    page-size: 10
+    field-display-names: 
+      publication: "Publication"
+      year: "Year"
 ---
 
-
-## Under Review
-- **Hossain, M.J.**, Akter, MM.,(2023). Food consumption patterns and sedentary behaviours among the university students: a cross-sectional study ([Scientific Reports](https://www.nature.com/srep/)) 
-- **Hossain, M.J.**, Das,M., Shahjahan,Islam, M. W.,  M. Towhid, S. T., (2023). Clinical and hematological manifestation of dengue patients in 2022 outbreak: A tertiary care hospital-based study ([Acta Tropica, ScienceDirect](https://www.sciencedirect.com/journal/acta-tropica))
-- **Hossain, M.J.**, Azad,A.K., Shahid, MSB,Shahjahan, M., Ferdous, J. (2023). Prevalence, Antibiotic Resistance Pattern for Bacteriuria from Patients with Urinary Tract Infections ([BioMed Research International](https://www.hindawi.com/journals/bmri/))
-- **Hossain, M.J.**, Towhid, S. T., Akter, S., Shahjahan, M., Roy, T., Akter, B., & Nodee, T. A.(2023). Self‑Management of Diabetic Patients from the Urban Areas in Bangladesh ([Microbial Bioactives](https://publishing.emanresearch.org/Journal/JournalDetails?JournalCode=MB))
-
-
-## Working Papers 
-- **Hossain, M.J.**, Azad,A.K., Islam, M. W.,Shahjahan, M.(2022). Factors influencing knowledge of antibiotic usage among patients of school-going children. 
-- **Hossain, M.J.**, Abul Kalam Azad, Md. Atik Shahriar Sammo (2022). A KAP Study on the Impact of C-section on Infant Gut Microbiota among Public University Students in Bangladesh
-- **Hossain, M.J.**, Towhid, S. T.,Azad,A.K.,Das,M., Islam, M. W., Shahjahan, M.(2022). The role of community participation and social engagement in the prevention and control of dengue fever in Dhaka City. 
-- **Hossain, M.J.**, Towhid, S. T.,Das,M., Islam, M. W., Shahjahan, M. (2023). Knowledge, Attitudes, and Practices among University Students regarding the Concept of “Safe Marriages” for Thalassemia Prevention in Bangladesh.
-
-
-## Journal Articiles  
-- **Hossain, M.J.**, Islam, M.W., Munni, U.R. et al. Health-related quality of life among thalassemia patients in Bangladesh using the SF-36 questionnaire. Scientific Reports 13, 7734 (2023). <https://doi.org/10.1038/s41598-023-34205-9>
-- Towhid, S. T., **Hossain, M. J.**, Sammo, M. A. S., & Akter, S. (2022). Perception of Students on Antibiotic Resistance and Prevention: An Online, Community-Based Case Study from Dhaka, Bangladesh. European Journal of Biology and Biotechnology, 3(3), 14–19. <https://doi.org/10.24018/ejbio.2022.3.3.341> 
-- **Hossain, M.J.**, Towhid ST, Sultana S, Mukta SA, Gulshan R, Miah MS (2022). *Knowledge and Attitudes towards Thalassemia among Public University Students in Bangladesh*. Microbial Bioactives, 5(2), <https://doi.org/10.25163/microbbioacts.526325.>
-
-
-## Conferences 
-- Nayeem,M.U.,Mrittika,M.A.,**Hossain, M.J.**, Azad,A.K.,Ferdous,J.,Ahmed,S.,Sanyal,S.K., Towhid,S.T(2023).
-*Quantitative Microbial Risk Assessment from Vancomycin-resistant Enterococcus faecalis and Enterococcus faecium from a specific neighbourhood in Dhaka City,Bangladesh(*[36th BSM Annual Conference, Bangladesh Society of Microbiologists](https://drive.google.com/file/d/1cW5BpYWZEZm-dF8UdBGsOvI7fq8fwtNU/view?usp=sharing))
-- Shahid,M.S.B., Azad,A.K.,Ferdous,J.,Towhid,S.T., **Hossain, M.J.** (2023). *Prevalence, Antibiotic Resistance Pattern for Bacteriuria from Patients with Urinary Track Infections*([36th BSM Annual Conference, Bangladesh Society of Microbiologists](https://drive.google.com/file/d/14YwHlHa93hwYAcpZB_4lDJBN6fRcLaC8/view?usp=sharing))
-- Das,M., Azad,A.K.,Barman,A.K.,Holy,N.A.,Akter,N., **Hossain, M.J.**(2023). *Experiences and Side Effects Following COVID-19 Vaccination in Bangladesh: a cross-sectional community-based e-survey(*[36th BSM Annual Conference, Bangladesh Society of Microbiologists](https://drive.google.com/file/d/11iXPMBtPNBSBT7g4Uul0FjgnFMyuLHyj/view?usp=sharing)) 
-- Akter, S.,**Hossain, M. J.**, Towhid, S. T., Sammo, M. A. S.(2022). *Perception of Students on Antibiotic Resistance and Prevention: An Online, Community-Based Case Study from Dhaka, Bangladesh.(*[36th BSM Annual Conference, Bangladesh Society of Microbiologists](https://drive.google.com/file/d/1BvFGBkU7xzBD8unzYeN5gbLH3pzAnB5h/view?usp=sharing)) 
-
+:::{#articles}
+:::

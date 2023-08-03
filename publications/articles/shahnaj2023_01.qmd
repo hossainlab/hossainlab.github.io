@@ -4,9 +4,9 @@ type: "article"
 author: "Shahnaj Akter , Sheikh Ambia, Sabiha Rafa, and Md. Jubayer Hossain"
 year: "2023"
 publication: "Structural and Functional Annotation"
-preprint: "#"
-doi: "https://doi.org/10.24018/ejbio.2022.3.3.341"
-materials: "https://doi.org/10.24018/ejbio.2022.3.3.341"
+preprint: ""
+doi: ""
+materials: ""
 toc: false
 categories:
   - Working Paper 
@@ -20,3 +20,4 @@ Using sequence homology-based approaches, we identified potential protein templa
 Functional annotation of the hypothetical GT protein was performed by analyzing conserved domains and motifs using InterProScan, Pfam, and PROSITE databases. In addition, we used sequence alignment tools to identify functionally important residues and predict potential donor and acceptor substrate binding sites.
 
 Furthermore, molecular docking simulations were carried out to predict the potential interactions between the modeled GT protein and potential substrates. Docking studies provided insights into the putative binding modes and key residues involved in substrate recognition and catalytic activity.
+
