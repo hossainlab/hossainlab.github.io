@@ -1,0 +1,15 @@
+---
+title: "Perception of Students on Antibiotic Resistance and Prevention: An Online, Community‑Based Case Study from Dhaka, Bangladesh"
+type: "conference"
+author: "Akter, S.,Hossain, M. J., Towhid, S. T., Sammo, M. A. S."
+year: "2023"
+publication: "36th BSM Annual Conference, Bangladesh Society of Microbiologists"
+preprint: ""
+doi: ""
+materials: "publications/conference/AkterS_BSM2023.pdf"
+toc: false
+categories:
+  - Conference
+---
+
+## Abstract

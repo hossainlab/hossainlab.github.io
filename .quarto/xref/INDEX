@@ -283,5 +283,17 @@
   },
   "publications/journal-articles/hossainmj2023_thals_kap.qmd": {
     "hossainmj2023_thals_kap.html": "9be1caa8"
+  },
+  "publications/conference/BSM23_TowhidST.qmd": {
+    "BSM23_TowhidST.html": "eda39568"
+  },
+  "publications/conference/BSM23_AkterS.qmd": {
+    "BSM23_AkterS.html": "37c7dabf"
+  },
+  "publications/conference/BSM23_DasM.qmd": {
+    "BSM23_DasM.html": "fd1c903a"
+  },
+  "publications/conference/BSM23_ShahidMSB.qmd": {
+    "BSM23_ShahidMSB.html": "35c4d619"
   }
 }

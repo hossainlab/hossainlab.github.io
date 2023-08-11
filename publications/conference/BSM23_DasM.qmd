@@ -1,0 +1,15 @@
+---
+title: "Experiences and Side Effects Following COVID‑19 Vaccination in Bangladesh: a cross‑sectional community‑based e‑survey"
+type: "conference"
+author: "Das,M., Azad,A.K.,Barman,A.K.,Holy,N.A.,Akter,N., Hossain, M.J."
+year: "2023"
+publication: "36th BSM Annual Conference, Bangladesh Society of Microbiologists"
+preprint: ""
+doi: ""
+materials: "publications/conference/DasM_BSM2023.pdf"
+toc: false
+categories:
+  - Conference
+---
+
+## Abstract

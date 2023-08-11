@@ -1,0 +1,15 @@
+---
+title: "Quantitative Microbial Risk Assessment from Vancomycin‑resistant Enterococcus faecalis and Enterococcus faecium from a specific neighbourhood in Dhaka City,Bangladesh"
+type: "conference"
+author: "Nayeem,M.U.,Mrittika,M.A.,Hossain, M.J., Azad,A.K.,Ferdous,J.,Ahmed,S.,Sanyal,S.K., Towhid,S.T"
+year: "2023"
+publication: "36th BSM Annual Conference, Bangladesh Society of Microbiologists"
+preprint: ""
+doi: ""
+materials: "publications/conference/TowhidST_BSM2023.pdf"
+toc: false
+categories:
+  - Conference
+---
+
+## Abstract

@@ -1,0 +1,15 @@
+---
+title: "Prevalence, Antibiotic Resistance Pattern for Bacteriuria from Patients with Urinary Track Infections"
+type: "conference"
+author: "Shahid,M.S.B., Azad,A.K.,Ferdous,J.,Towhid,S.T., Hossain, M.J"
+year: "2023"
+publication: "36th BSM Annual Conference, Bangladesh Society of Microbiologists"
+preprint: ""
+doi: ""
+materials: "publications/conference/ShahidMSB_BSM2023.pdf"
+toc: false
+categories:
+  - Conference
+---
+
+## Abstract
