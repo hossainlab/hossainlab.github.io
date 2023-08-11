@@ -232,5 +232,56 @@
   },
   "publications/articles/shahnaj2023_03.qmd": {
     "shahnaj2023_03.html": "d594d7fd"
+  },
+  "news/inidex.qmd": {
+    "inidex.html": "b34a77bb"
+  },
+  "news/vail2022/index.qmd": {
+    "index.html": "5d278472"
+  },
+  "talks.qmd": {
+    "talks.html": "ec76c563"
+  },
+  "teaching/spss/index.qmd": {
+    "index.html": "87bd79ad"
+  },
+  "teaching/r-for-bioinformatics/index.qmd": {
+    "index.html": "ac86e5d4"
+  },
+  "teaching/r-for-research/index.qmd": {
+    "index.html": "9eb87f8a"
+  },
+  "teaching/rna-seq-data-analysis-with-r/index.qmd": {
+    "index.html": "e91469df"
+  },
+  "teaching/scrna-seq-analysis-with-r/index.qmd": {
+    "index.html": "8735d67c"
+  },
+  "teaching/bioinformatics-bootcamp/index.qmd": {
+    "index.html": "e995e87c"
+  },
+  "teaching/single-cell-seq-analysis-with-r/index.qmd": {
+    "index.html": "8a180123"
+  },
+  "publications/journal-articles/hossainmj2023.qmd": {
+    "hossainmj2023.html": "3700fc55"
+  },
+  "publications/working-papers/shahnaj2023_01.qmd": {
+    "shahnaj2023_01.html": "cf346f93"
+  },
+  "publications/working-papers/shahnaj2023_02.qmd": {
+    "shahnaj2023_02.html": "d526a61e"
+  },
+  "publications/working-papers/shahnaj2023_03.qmd": {
+    "shahnaj2023_03.html": "e12e49e3"
+  },
+  "publications/journal-articles/hossainmj2022_antibiotics.qmd": {
+    "hossainmj2022_antibiotics.html": "0842c922"
+  },
+  "publications/journal-articles/hossainmj2023_thalas_qol.qmd": {
+    "hossainmj2023_thalas_qol.html": "b79181d2"
+  },
+  "publications/journal-articles/hossainmj2023_thals_kap.qmd": {
+    "hossainmj2023_thals_kap.html": "9be1caa8"
   }
 }

@@ -1,13 +1,12 @@
 ---
-title: "Projects"
+pagetitle: "Projects | Jubayer Hossain"
 listing:
   contents: projects
   sort: "title"
   type: default
-  image-height: 260px
   categories: true
-  sort-ui: true
-  filter-ui: true
+  sort-ui: false
+  filter-ui: false 
 page-layout: full
 title-block-banner: false
 comments: false

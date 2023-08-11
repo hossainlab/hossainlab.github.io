@@ -1,9 +1,27 @@
 [
   {
-    "listing": "/talks/index.html",
+    "listing": "/publications.html",
     "items": [
-      "/talks/talk_1/index.html",
-      "/talks/talk_2/index.html"
+      "/publications/journal-articles/hossainmj2023_thalas_qol.html",
+      "/publications/working-papers/shahnaj2023_03.html",
+      "/publications/working-papers/shahnaj2023_01.html",
+      "/publications/journal-articles/hossainmj2023_thals_kap.html",
+      "/publications/working-papers/shahnaj2023_02.html",
+      "/publications/journal-articles/hossainmj2022_antibiotics.html"
+    ]
+  },
+  {
+    "listing": "/talks.html",
+    "items": [
+      "/talks/talk_2/index.html",
+      "/talks/talk_1/index.html"
+    ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/project_2/index.html",
+      "/projects/project_1/index.html"
     ]
   },
   {
@@ -14,58 +32,18 @@
     ]
   },
   {
-    "listing": "/projects/index.html",
-    "items": [
-      "/projects/project_1/index.html",
-      "/projects/project_2/index.html"
-    ]
-  },
-  {
-    "listing": "/blog/blog.html",
-    "items": []
-  },
-  {
-    "listing": "/blog/index.html",
-    "items": [
-      "/blog/2023/why-r/index.html"
-    ]
-  },
-  {
-    "listing": "/research.html",
-    "items": []
-  },
-  {
-    "listing": "/publications.html",
-    "items": [
-      "/publications/articles/shahnaj2023_01.html"
-    ]
-  },
-  {
-    "listing": "/teaching/index.html",
-    "items": []
-  },
-  {
-    "listing": "/publications/index.html",
-    "items": []
-  },
-  {
-    "listing": "/research/index.html",
-    "items": [
-      "/research/articles/chaudhry-dotson-heiss-2021/index.html",
-      "/research/in-reviews/heiss-voluntas-review-2014/index.html",
-      "/research/conference-papers/heiss-undemocratic-leaders/index.html",
-      "/research/working-papers/heiss-ye-np-causal-inference/index.html",
-      "/research/chapters/johnson-heiss-2018/index.html"
-    ]
-  },
-  {
-    "listing": "/projects.html",
-    "items": []
-  },
-  {
     "listing": "/news.html",
+    "items": []
+  },
+  {
+    "listing": "/teaching.html",
     "items": [
-      "/posts/vail2022/index.html"
+      "/teaching/bioinformatics-bootcamp/index.html",
+      "/teaching/r-for-bioinformatics/index.html",
+      "/teaching/r-for-research/index.html",
+      "/teaching/rna-seq-data-analysis-with-r/index.html",
+      "/teaching/spss/index.html",
+      "/teaching/single-cell-seq-analysis-with-r/index.html"
     ]
   }
 ]

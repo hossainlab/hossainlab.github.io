@@ -28,11 +28,28 @@ website:
   open-graph: true
   twitter-card: true
   title: ""
-  favicon: /files/profiles/favicon-512.png
+  favicon: /files/profiles/icon.png
 
   page-footer:
+    background: "#99ccff"
+    border: false
     left: "&copy; Copyright 2023, Md. Jubayer Hossain"
-    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
+    right: 
+      - icon: twitter
+        aria-label: twitter
+        href: https://twitter.com/JHossain_28
+        rel: me
+      - icon: github
+        aria-label: github
+        href: https://github.com/hossainlab
+        rel: me
+      - icon: youtube
+        aria-label: youtube
+        href: https://www.youtube.com/@hossainlab
+        rel: me
+      - icon: linkedin
+        aria-label: linkedin
+        href: https://www.linkedin.com/in/hossainmj
   navbar:
       pinned: true
       background: "#99ccff"
@@ -40,16 +57,14 @@ website:
       left:
         - text: "Home"
           file: index.qmd
-        - text: "News"
-          file: news.qmd
-        - text: "Research"
-          file: publications/index.qmd
+        - text: "Blog"
+          file: blog.qmd
+        - text: "Publications"
+          file: publications.qmd
         - text: "Projects"
-          href: projects/index.qmd
+          href: projects.qmd
         - text: "Talks"
-          href: talks/index.qmd
-        - text: "Resources"
-          file: resources.qmd
+          href: talks.qmd
         - text: "Teaching"
           file: teaching.qmd
         - text: "CV"

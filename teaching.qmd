@@ -1,104 +1,13 @@
 ---
-pagetitle: "Teaching | Md. Jubayer Hossain"
-toc: true
-toc-title: Academic Year 
-toc-depth: 1
+pagetitle: "Teaching | Jubayer Hossain"
+listing:
+  contents: teaching 
+  sort: "title"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: false
+comments: false
 ---
-# 2023 
-
-## Bioinformatics BootCamp 
-Bioinformatics BootCamp  is an intensive and comprehensive training program designed to equip participants with the essential skills and knowledge in bioinformatics. This bootcamp offers a hands-on learning experience, covering a wide range of topics such as sequence analysis, genomics, proteomics, and data analysis using popular bioinformatics tools and software. Led by experienced instructors, participants will gain practical expertise, enabling them to effectively analyze biological data and make meaningful discoveries in the field of bioinformatics.
-
-```{=html}
-<a href="https://omicscenter.github.io/BioinformaticsBootCamp/" class="btn btn-primary rounded-pill me-2">BootCamp 1.0</a>
-
-<a href="" class="btn btn-primary rounded-pill">BootCamp 2.0</a>
-```
-
-##  Introduction to Linux for Bioinformatics
-Essential course focusing on Linux for bioinformatics. Learn command-line navigation, file management, and text processing. Analyze biological data and perform sequence analysis. Gain foundational skills for bioinformatics research using Linux. No prior Linux experience required.
-
-
-```{=html}
-<a href="https://omicscenter.github.io/BioinformaticsBootCamp/" class="btn btn-primary rounded-pill me-2">Program Website</a>
-
-<a href="" class="btn btn-primary rounded-pill">Apply to the Program</a>
-```
-
-# 2022
-
-## Nextflow for Bioinformatics
-Learn to create, optimize, and execute bioinformatics workflows using Nextflow. Gain hands-on experience with real-world projects and process large-scale biological data efficiently. Enhance your ability to tackle complex computational challenges. Basic bioinformatics and command-line knowledge recommended.
-
-
-##  Python for Bioinformatics
-Learn Python programming and its applications in bioinformatics. Master manipulating biological data, sequence analysis, and biopython usage. Develop custom bioinformatics solutions and automate analyses with practical projects. No prior programming experience required.
-
-```{=html}
-<a href="https://omicscenter.github.io/BioinformaticsBootCamp/" class="btn btn-primary rounded-pill me-2">Program Website</a>
-
-<a href="" class="btn btn-primary rounded-pill">Apply to the Program</a>
-```
-
-
-## R for Bioinformatics 
-Specialized training program using R for biological data analysis. Covers data manipulation, statistics, visualization, and machine learning. Hands-on exercises and real-world case studies. Master R packages for bioinformatics tasks. Empower your bioinformatics research with R.
-
-
-```{=html}
-<a href="https://omicscenter.github.io/RforBioinformatics/" class="btn btn-primary rounded-pill me-2">Program Website</a>
-
-<a href="" class="btn btn-primary rounded-pill">Apply to the Program</a>
-```
-
-
-## RNA-seq Data Analysis with R
-Immersive program for RNA-seq data analysis using R. Covers preprocessing, quality control, differential expression, pathway enrichment, and visualization. Hands-on exercises with real datasets. Master R packages and workflows for robust analysis. Contribute to genomics and molecular biology research.
-
-
-```{=html}
-<a href="https://omicscenter.github.io/RNASeqwithR/" class="btn btn-primary rounded-pill me-2">Program Website</a>
-
-<a href="" class="btn btn-primary rounded-pill">Apply to the Program</a>
-```
-
-
-## Single Cell RNA-seq Data Analysis with R
-In-depth training program for scRNA-seq data analysis using R. Covers preprocessing, quality control, dimensionality reduction, clustering, and differential expression. Hands-on exercises with real datasets. Master R packages and workflows for scRNA-seq. Gain insights for breakthroughs in single-cell genomics.
-
-
-```{=html}
-<a href="https://omicscenter.github.io/scRNASeqwithR/" class="btn btn-primary rounded-pill me-2">Program Website</a>
-
-<a href="" class="btn btn-primary rounded-pill">Apply to the Program</a>
-```
-
-
-## Machine Learning for Bioinformatics
-Comprehensive training program merging machine learning and bioinformatics. Covers feature selection, classification, regression, clustering, and deep learning. Hands-on exercises with real biological data. Master data-driven discoveries in genomics, proteomics, drug discovery, and precision medicine.
-
-
-```{=html}
-<a href="https://omicscenter.github.io/MLforBioinformatics/" class="btn btn-primary rounded-pill me-2">Program Website</a>
-
-<a href="" class="btn btn-primary rounded-pill">Apply to the Program</a>
-```
-
-## Whole Genome Sequence Analysis
-Advanced course covering variant calling, functional annotation, and structural variation detection. Hands-on exercises with real genomic data. Gain expertise for impactful contributions in genomics. Prerequisite: strong background in bioinformatics and genomics.
-
-```{=html}
-<a href="https://omicscenter.github.io/MLforBioinformatics/" class="btn btn-primary rounded-pill me-2">Program Website</a>
-
-<a href="" class="btn btn-primary rounded-pill">Apply to the Program</a>
-```
-## Metagenomics Data Analysis
-
-Comprehensive course on studying microbial communities. Covers preprocessing, taxonomic profiling, functional annotation, and statistical analysis. Hands-on projects with diverse datasets. Gain insights into microbial interactions and ecological dynamics. Prerequisite: basic bioinformatics and genomics knowledge.
-
-```{=html}
-<a href="https://omicscenter.github.io/MLforBioinformatics/" class="btn btn-primary rounded-pill me-2">Program Website</a>
-
-<a href="" class="btn btn-primary rounded-pill">Apply to the Program</a>
-```
-

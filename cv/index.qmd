@@ -1,5 +1,5 @@
 ---
-title: Curriculum vitae
+pagetitle: "Teaching | Jubayer Hossain"
 layout: page
 excerpt: My current CV
 comments: false

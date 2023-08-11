@@ -1,7 +1,8 @@
 {
   "listingMap": {
     "blog.qmd": [
-      "blog"
+      "blog",
+      "blog/**/index.qmd"
     ],
     "projects\\index.qmd": [
       "project_1",
@@ -21,7 +22,11 @@
       "talks_2016.yml",
       "talks_2015.yml",
       "talks_2014.yml",
-      "talks_2013.yml"
+      "talks_2013.yml",
+      "2022/**/index.qmd",
+      "talks/2022/**/index.qmd",
+      "talks/talks_2022/**/index.qmd",
+      "talks"
     ],
     "blog\\blog.qmd": [
       "blog"
@@ -49,7 +54,13 @@
       "2023/*index.qmd",
       "2023/*.qmd",
       "2023/**.qmd",
-      "2023/*/*.qmd"
+      "2023/*/*.qmd",
+      "blog/**/index.qmd",
+      "blog",
+      "blog/*.qmd",
+      "blog/**/.qmd",
+      "blog/why-r/index.qmd",
+      "blog/*/index.qmd"
     ],
     "research.qmd": [
       "publications/*/**.qmd"
@@ -89,7 +100,21 @@
       "projects"
     ],
     "news.qmd": [
-      "posts/**/index.qmd"
+      "posts/**/index.qmd",
+      "blog/**/index.qmd",
+      "news/**/index.qmd",
+      "news"
+    ],
+    "news\\inidex.qmd": [
+      "news/**/index.qmd"
+    ],
+    "talks.qmd": [
+      "talks"
+    ],
+    "teaching.qmd": [
+      "projects",
+      "teaching",
+      "teching"
     ]
   }
 }

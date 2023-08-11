@@ -1,0 +1,24 @@
+---
+title: "Knowledge and Attitudes towards Thalassemia among Public University Students in Bangladesh"
+type: "article" 
+author: "Hossain, M.J., Towhid ST, Sultana S, Mukta SA, Gulshan R, Miah MS"
+year: "2023"
+publication: "Microbial Bioactives"
+preprint: ""
+doi: "https://doi.org/10.25163/microbbioacts.526325"
+materials: ""
+toc: false
+categories:
+  - Journal Article
+---
+
+## Abstract
+Background: Thalassemia is the most common congenital single-gene condition globally, characterized by a lack of or reduced synthesis of either the α- or β-globin chains and passed down from parents to offspring. This study aimed to determine the level of knowledge of thalassemia among Bangladeshi students from universities and their opinion on prevention. 
+
+Methods: A cross-sectional descriptive online survey was conducted on public university students in Bangladesh using a structured questionnaire between June and November 2020, completed by students online. Demographic characteristics, knowledge, and attitude of the participants were assayed with 10 questions on each topic. The data were analyzed using Python. Descriptive statistics methods such as frequencies and percentages were used to present data. 
+
+Result: A total of 681 students participated in the online survey. The average age of the respondents in this study was 21.97 years, with a standard deviation of 2.9. Most of the students, 611(89.72%), had heard about Thalassemia, yet only 248 (36.42%) students had good knowledge of Thalassemia. The knowledge level of students had no significant relationship with sex (p-value = 0.0819), marital status (p-value = 0.2281), and year of study (p-value = 0.4619), but had a considerable difference with the field of study (0.0042). However, 478 (78.36%) participants showed a positive attitude toward "Premarital Screening" to prevent Thalassemia. 
+
+Conclusions: Long-term and target-based preventive initiatives are recommended for university students and the general population of Bangladesh, where the rate of consanguineous marriage is high. These initiatives would provide crucial information and increase awareness of premarital screening and genetic counseling to prevent thalassemia.
+
+Keywords: Thalassemia, Awareness, Student community, Bangladesh.

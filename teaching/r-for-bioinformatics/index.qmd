@@ -1,0 +1,11 @@
+---
+title: "R for Bioinformatics"
+categories: [Research, Data Analysis, Public Health]
+image: "logo.gif"
+---
+```{=html}
+<a href="" class="btn btn-primary rounded-pill me-2">Cohort 01</a>
+<a href="" class="btn btn-primary rounded-pill">Cohort 02</a>
+<a href="" class="btn btn-primary rounded-pill">Cohort 03</a>
+```
+

@@ -1,4 +1,5 @@
 ---
+pagetitle: "Home | Jubayer Hossain"
 title: "Md. Jubayer Hossain"
 image: files/profiles/hero-removebg.png
 about:
@@ -8,6 +9,8 @@ about:
   links:
     - icon: linkedin
       href: https://www.linkedin.com/in/hossainmj/
+    - icon: orcid 
+      href: 0000-0001-9323-4997
     - icon: github
       href: https://github.com/hossainlab
     - icon: twitter

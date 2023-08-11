@@ -1,0 +1,6 @@
+---
+title: "Single-Cell RNA-Seq Analysis with R"
+categories: [Bioinformatics, R, Transcriptomics]
+image: "image.jpg"
+---
+

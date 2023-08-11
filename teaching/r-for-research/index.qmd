@@ -1,0 +1,11 @@
+---
+title: "R for Research"
+categories: [Research, Data Analysis]
+image: "logo.png"
+---
+```{=html}
+<a href="" class="btn btn-primary rounded-pill me-2">Cohort 01</a>
+<a href="" class="btn btn-primary rounded-pill">Cohort 02</a>
+<a href="" class="btn btn-primary rounded-pill">Cohort 03</a>
+```
+
