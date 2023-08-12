@@ -1,0 +1,14 @@
+{
+  "hash": "05484d24966384a70ed0fda44b9479be",
+  "result": {
+    "markdown": "---\npagetitle: \"Teaching | Jubayer Hossain\"\n# listing:\n#   contents: teaching \n#   sort: \"title\"\n#   type: default\n#   categories: true\n#   sort-ui: false\n#   filter-ui: false\npage-layout: full\ntitle-block-banner: false\ncomments: false\n---\n\n::: {#tbl-example .cell layout-ncol=\"2\" tbl-cap='Example' tbl-subcap='[\"Cars\",\"Pressure\"]'}\n\n````{.cell-code}\n```{{r}}\n#| label: tbl-example\n#| tbl-cap: \"Example\"\n#| tbl-subcap:\n#|   - \"Cars\"\n#|   - \"Pressure\"\n#| layout-ncol: 2\n\nlibrary(knitr)\nkable(head(cars))\nkable(head(pressure))\n```\n````\n\n::: {.cell-output-display}\n| speed| dist|\n|-----:|----:|\n|     4|    2|\n|     4|   10|\n|     7|    4|\n|     7|   22|\n|     8|   16|\n|     9|   10|\n\n\n\n| temperature| pressure|\n|-----------:|--------:|\n|           0|   0.0002|\n|          20|   0.0012|\n|          40|   0.0060|\n|          60|   0.0300|\n|          80|   0.0900|\n|         100|   0.2700|\n:::\n:::",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

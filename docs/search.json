@@ -193,14 +193,14 @@
     "href": "blog.html",
     "title": "",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\n\n\n\n\n\n\nOct 25, 2022\n\n\nMd. Jubayer Hossain\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\n\n\n\n\n\nOct 22, 2022\n\n\nMd. Jubayer Hossain\n\n\n\n\n\n\nNo matching items"
+    "text": "Unlocking the Power of Data: Join the Journey on My Blog!\n\n\n\n\n\n\n\n\n\n\n\n\nOct 22, 2022\n\n\nMd. Jubayer Hossain\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog/welcome/index.html",
     "href": "blog/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "Welcome! Ahoy, fellow data adventurers! 🌊🔍 Our voyage through the vast ocean of data has been nothing short of exhilarating. We’ve navigated the twists and turns of data-driven decision-making, explored the tools that power our data collection, and unraveled the mysteries behind data analysis and visualization. We’ve braved the challenges that come with utilizing data and discovered how it can empower businesses, content creators, and even influence SEO strategies.\nHey there, data enthusiasts and curious minds! 📊🔍 Are you ready to embark on a thrilling expedition into the world of data? In today’s digital age, data isn’t just a buzzword; it’s the compass guiding successful businesses, creative endeavors, and innovative solutions. So, grab your virtual backpacks as we dive into the exciting realm of data-driven decision-making and exploration. Join me on this exhilarating journey, and together, we’ll uncover the boundless power that data holds!"
   },
   {
     "objectID": "news.html",
@@ -571,7 +571,7 @@
     "href": "teaching.html",
     "title": "",
     "section": "",
-    "text": "Bioinformatics BootCamp\n\n\n\n\n\n\n\nBioinformatics\n\n\nBootCamp\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nR for Bioinformatics\n\n\n\n\n\n\n\nResearch\n\n\nData Analysis\n\n\nPublic Health\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nR for Research\n\n\n\n\n\n\n\nResearch\n\n\nData Analysis\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nRNA-seq Data Aanalysis with R\n\n\n\n\n\n\n\nBioinformatics\n\n\nR\n\n\nTranscriptomics\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nResearch Data Analysis with SPSS\n\n\n\n\n\n\n\nResearch\n\n\nData Analysis\n\n\nPublic Health\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nSingle-Cell RNA-Seq Analysis with R\n\n\n\n\n\n\n\nBioinformatics\n\n\nR\n\n\nTranscriptomics\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "```{r}\n#| label: tbl-example\n#| tbl-cap: \"Example\"\n#| tbl-subcap:\n#|   - \"Cars\"\n#|   - \"Pressure\"\n#| layout-ncol: 2\n\nlibrary(knitr)\nkable(head(cars))\nkable(head(pressure))\n```\n\n\nTable 1: Example\n\n\n\n\n(a) Cars\n\nspeed\ndist\n\n\n\n4\n2\n\n\n4\n10\n\n\n7\n4\n\n\n7\n22\n\n\n8\n16\n\n\n9\n10\n\n\n\n\n\n\n(b) Pressure\n\ntemperature\npressure\n\n\n\n0\n0.0002\n\n\n20\n0.0012\n\n\n40\n0.0060\n\n\n60\n0.0300\n\n\n80\n0.0900\n\n\n100\n0.2700"
   },
   {
     "objectID": "teaching/r-for-bioinformatics/index.html",
@@ -642,5 +642,68 @@
     "title": "State the Art of Microbial Genome Analysis",
     "section": "",
     "text": "Genomics is the study of whole genomes of organisms, and incorporates elements from ge- netics. Genomics uses a combination of recombinant DNA, DNA sequencing methods, and bioinformatics to sequence, assemble, and analyse the structure and function of genomes. Genomics have become an inter-disciplinary(Computer Science, Statistics, Biology) sci- ence. The genomic data analysis steps typically include data collection, quality check and cleaning, processing, modeling, visualization and reporting."
+  },
+  {
+    "objectID": "blog/welcome/index.html#why-data-matters",
+    "href": "blog/welcome/index.html#why-data-matters",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "Why Data Matters?",
+    "text": "Why Data Matters?\nPicture this: a business owner armed with accurate insights that steer their company toward unprecedented growth. Data is the magic wand that makes it happen. Companies big and small are tapping into the goldmine of data to fine-tune their strategies, enhance customer experiences, and predict market trends. Remember the time you received a tailored recommendation on an online platform? Thank data for that! Let’s dive into how data transforms the ordinary into the extraordinary."
+  },
+  {
+    "objectID": "blog/welcome/index.html#the-data-journey-begins",
+    "href": "blog/welcome/index.html#the-data-journey-begins",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "The Data Journey Begins",
+    "text": "The Data Journey Begins\nData comes in various shapes and sizes—structured and unstructured. Think of structured data as well-organized puzzle pieces, while unstructured data is like the pieces of a jigsaw puzzle scattered across the table. From customer preferences to social media interactions, data is collected through various channels. But wait, collecting raw data is just the first step of our journey."
+  },
+  {
+    "objectID": "blog/welcome/index.html#tools-for-data-collection",
+    "href": "blog/welcome/index.html#tools-for-data-collection",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "Tools for Data Collection",
+    "text": "Tools for Data Collection\nImagine gathering pieces of a puzzle without missing a single one. That’s the level of accuracy data collection tools provide. Meet the heroes behind the scenes: Google Analytics, surveys, social media insights, and more. But remember, accuracy is the name of the game. Garbage in, garbage out, they say. Inaccurate data can lead you down the wrong path. So, gear up with reliable tools to collect gems, not gravel."
+  },
+  {
+    "objectID": "blog/welcome/index.html#making-sense-of-the-data",
+    "href": "blog/welcome/index.html#making-sense-of-the-data",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "Making Sense of the Data",
+    "text": "Making Sense of the Data\nGathering data is like mining, and now it’s time to extract the precious gems hidden within. Data analysis is our refining process. Whether it’s identifying trends, detecting anomalies, or uncovering correlations, data analysis tools are the chisels and magnifying glasses of our journey. From basic spreadsheets to complex algorithms, these tools unveil the stories buried beneath the numbers."
+  },
+  {
+    "objectID": "blog/welcome/index.html#visualizing-data-for-impact",
+    "href": "blog/welcome/index.html#visualizing-data-for-impact",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "Visualizing Data for Impact",
+    "text": "Visualizing Data for Impact\nData, in its raw form, can resemble a dense fog. That’s where data visualization swoops in. Imagine turning complex data sets into captivating visuals—charts, graphs, and infographics that tell a story at a glance. It’s like transforming fog into a clear roadmap, guiding your decisions with precision. After all, a picture is worth a thousand rows of data!"
+  },
+  {
+    "objectID": "blog/welcome/index.html#challenges-in-data-utilization",
+    "href": "blog/welcome/index.html#challenges-in-data-utilization",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "Challenges in Data Utilization",
+    "text": "Challenges in Data Utilization\nAhoy! Rough waters ahead. Navigating the sea of data isn’t without challenges. Data privacy concerns, incomplete or inconsistent data, and the noise of irrelevant information can make our voyage tricky. But fear not! With the right strategies, you can steer clear of these obstacles and set sail towards data-driven success."
+  },
+  {
+    "objectID": "blog/welcome/index.html#empowering-your-business-with-data",
+    "href": "blog/welcome/index.html#empowering-your-business-with-data",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "Empowering Your Business with Data",
+    "text": "Empowering Your Business with Data\nAvast, business owners! Data isn’t just a treasure for the brave; it’s a compass for the wise. Imagine adjusting your business strategies based on real-time insights. From product development to customer service, data-driven decisions can launch your business to new heights. Ready to hoist the sails of success?"
+  },
+  {
+    "objectID": "blog/welcome/index.html#the-human-element-in-data",
+    "href": "blog/welcome/index.html#the-human-element-in-data",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "The Human Element in Data",
+    "text": "The Human Element in Data\nData is our guide, but human judgment is our compass. While data analysis offers invaluable insights, remember that it’s humans who make the final call. Just like a ship’s captain relies on the stars while steering the ship, human intuition guides the course of action, ensuring a harmonious blend of data and wisdom."
+  },
+  {
+    "objectID": "blog/welcome/index.html#join-me-on-my-blogging-journey",
+    "href": "blog/welcome/index.html#join-me-on-my-blogging-journey",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "Join Me on My Blogging Journey",
+    "text": "Join Me on My Blogging Journey\nBut wait, our adventure doesn’t end here! There’s a treasure trove of insights waiting for you on my blog. Dive deeper into the world of data-driven strategies, technology trends, and real-life success stories. Unearth the secrets that can propel your journey to the next level. Stay tuned"
   }
 ]
