@@ -19,6 +19,8 @@ execute:
   message: true
   warning: true
 
+page-layout: article
+
 # Default author
 author:
   - name: Md. Jubayer Hossain

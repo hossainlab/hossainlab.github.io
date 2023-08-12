@@ -39,7 +39,7 @@
     "href": "talks.html",
     "title": "",
     "section": "",
-    "text": "Learning from Hospital EHR data with R\n\n\n\n\n\n\n\nehr\n\n\n\n\nA 15 minutes introduction to hospital EHR data\n\n\n\n\n\n\nOct 28, 2019\n\n\n\n\n\n\n  \n\n\n\n\nState the Art of Microbial Genome Analysis\n\n\n\n\n\n\n\nGenomics\n\n\nBioinformatics\n\n\n\n\nAcademic Presentation\n\n\n\n\n\n\nJul 28, 2022\n\n\n\n\n\n\nNo matching items"
+    "text": "State the Art of Microbial Genome Analysis\n\n\n\n\n\n\n\nGenomics\n\n\nBioinformatics\n\n\n\n\nAcademic Presentation\n\n\n\n\n\n\nJul 28, 2022\n\n\n\n\n\n\n  \n\n\n\n\nUndergraduate Research - Importance, Benefits, and Challenges\n\n\n\n\n\n\n\nResearch\n\n\nCareer\n\n\nHigher Studies\n\n\n\n\nCHIRAL Bangladesh\n\n\n\n\n\n\nAug 8, 2022\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "publications/working-papers/shahnaj2023_03.html",
@@ -614,5 +614,33 @@
     "title": "Md. Jubayer Hossain",
     "section": "",
     "text": "Hello, I am Md. Jubayer Hossain. I am the founder of CHIRAL Bangladesh, a non-profit organization dedicated to health research to improve lives in Bangladesh. I aspire to maximize the quality of life of the human around me by working at the intersection of education, technology, and health research.\nI am interested in applying modern data science techniques in the context of disease diagnosis and large data analytics for public health while focusing on bridging the gap between computational and experimental laboratories through highly engaging and fruitful collaborations."
+  },
+  {
+    "objectID": "publications/under-review/HossainMJ2023.html",
+    "href": "publications/under-review/HossainMJ2023.html",
+    "title": "Prevalence, Antibiotic Resistance Pattern for Bacteriuria from Patients with Urinary Tract Infections",
+    "section": "",
+    "text": "Background: Antibiotic resistance (AR) in urinary tract infections (UTIs) is a global public health concern, particularly in developing countries. This study aimed to analyze the antimicrobial susceptibility patterns of UTI-causing bacteria in patients at Mughda Medical College Hospital in Dhaka, Bangladesh.\nMethods: A one-year retrospective study was conducted at the Mugdha Medical College and Hospital in Dhaka (January 2019 to December 2020). The clinical information and laboratory findings of individuals with a positive urine culture (105 CFU/mL urine) were used. Patients were divided into four age groups: infants (1-18 years), young adults (18-33 years), late adults (33-50 years), and the elderly (50-95 years). The antibiotic sensitivity assay followed the standard Kirby-Bauer method for the 28 most common antibiotics.\nResults: In this study, 243 urine samples were analyzed, and Escherichia coli was the most prevalent uropathogen (65.84%) in UTIs, followed by Klebsiella spp. (12.34%) and Enterococcus spp. (8.23%), and Streptococcus spp. (6.58%) and Proteus spp. (2.88%) and Pseudomonas spp. (2.46%), and Staphylococcus spp. (1.64%). Proteus spp. were the most prevalent in infants and adolescents (86%), while Pseudomonas spp. were the most prevalent in the elderly (83%). Most UTIs occur in females (82%), with the highest prevalence among older people (34%). Antibiotic resistance was observed in E. coli, Klebsiella spp., Enterococcus spp., Streptococcus spp., Proteus spp., Pseudomonas spp., and Staphylococcus spp., all of which were resistant to varying numbers of antibiotics. Pseudomonas spp. showed maximum resistance (100) to ten antibiotics. Appropriate antibiotic selection is crucial for effective treatment of UTIs.\nConclusion: It can be concluded that older adults are the most vulnerable age group, and E. coli is the most prevalent causative organism of UTIs in the Mugdha Medical College Hospital area. Our results suggest that appropriate antibiotic selection is essential for effective treatment of UTIs in people of different ages.\nKeywords: Antibiotic Resistance, Susceptibility, Urinary Tract Infections (UTI), Uropathogen, Bangladesh"
+  },
+  {
+    "objectID": "publications/under-review/HossainMJ2023.html#abstract",
+    "href": "publications/under-review/HossainMJ2023.html#abstract",
+    "title": "Prevalence, Antibiotic Resistance Pattern for Bacteriuria from Patients with Urinary Tract Infections",
+    "section": "",
+    "text": "Background: Antibiotic resistance (AR) in urinary tract infections (UTIs) is a global public health concern, particularly in developing countries. This study aimed to analyze the antimicrobial susceptibility patterns of UTI-causing bacteria in patients at Mughda Medical College Hospital in Dhaka, Bangladesh.\nMethods: A one-year retrospective study was conducted at the Mugdha Medical College and Hospital in Dhaka (January 2019 to December 2020). The clinical information and laboratory findings of individuals with a positive urine culture (105 CFU/mL urine) were used. Patients were divided into four age groups: infants (1-18 years), young adults (18-33 years), late adults (33-50 years), and the elderly (50-95 years). The antibiotic sensitivity assay followed the standard Kirby-Bauer method for the 28 most common antibiotics.\nResults: In this study, 243 urine samples were analyzed, and Escherichia coli was the most prevalent uropathogen (65.84%) in UTIs, followed by Klebsiella spp. (12.34%) and Enterococcus spp. (8.23%), and Streptococcus spp. (6.58%) and Proteus spp. (2.88%) and Pseudomonas spp. (2.46%), and Staphylococcus spp. (1.64%). Proteus spp. were the most prevalent in infants and adolescents (86%), while Pseudomonas spp. were the most prevalent in the elderly (83%). Most UTIs occur in females (82%), with the highest prevalence among older people (34%). Antibiotic resistance was observed in E. coli, Klebsiella spp., Enterococcus spp., Streptococcus spp., Proteus spp., Pseudomonas spp., and Staphylococcus spp., all of which were resistant to varying numbers of antibiotics. Pseudomonas spp. showed maximum resistance (100) to ten antibiotics. Appropriate antibiotic selection is crucial for effective treatment of UTIs.\nConclusion: It can be concluded that older adults are the most vulnerable age group, and E. coli is the most prevalent causative organism of UTIs in the Mugdha Medical College Hospital area. Our results suggest that appropriate antibiotic selection is essential for effective treatment of UTIs in people of different ages.\nKeywords: Antibiotic Resistance, Susceptibility, Urinary Tract Infections (UTI), Uropathogen, Bangladesh"
+  },
+  {
+    "objectID": "talks/undergraduate-research-importance-benefits-and-challenges/index.html",
+    "href": "talks/undergraduate-research-importance-benefits-and-challenges/index.html",
+    "title": "Undergraduate Research - Importance, Benefits, and Challenges",
+    "section": "",
+    "text": "The Undergraduate Research Training Program(URTP) provides intermediate-level biomedical research training for undergraduates in a supportive environment with supplement educational activities. Furthermore, this course is designed to enhance the undergraduate research experience by focusing on critical communication skills for success in research and broadly transferable professional skills. Students will become part of a community of scholars in health sciences. The course is suitable for students beginning the first semester of undergraduate studies and completing their second or"
+  },
+  {
+    "objectID": "talks/state-the-art-of-microbial-genome-analysi/index.html",
+    "href": "talks/state-the-art-of-microbial-genome-analysi/index.html",
+    "title": "State the Art of Microbial Genome Analysis",
+    "section": "",
+    "text": "Genomics is the study of whole genomes of organisms, and incorporates elements from ge- netics. Genomics uses a combination of recombinant DNA, DNA sequencing methods, and bioinformatics to sequence, assemble, and analyse the structure and function of genomes. Genomics have become an inter-disciplinary(Computer Science, Statistics, Biology) sci- ence. The genomic data analysis steps typically include data collection, quality check and cleaning, processing, modeling, visualization and reporting."
   }
 ]

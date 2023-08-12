@@ -301,5 +301,14 @@
   },
   "publications/under-review/AkterMM2023.qmd": {
     "AkterMM2023.html": "aae06ff2"
+  },
+  "publications/under-review/HossainMJ2023.qmd": {
+    "HossainMJ2023.html": "f2469ab7"
+  },
+  "talks/undergraduate-research-importance-benefits-and-challenges/index.qmd": {
+    "index.html": "f12fbbce"
+  },
+  "talks/state-the-art-of-microbial-genome-analysi/index.qmd": {
+    "index.html": "3a0ac15e"
   }
 }
