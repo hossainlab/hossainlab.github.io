@@ -1,7 +1,7 @@
 ---
 title: "Unlocking the Power of Data: Join the Journey on My Blog!"
 date: "2022-10-22"
-categories: [news]
+categories: [News]
 ---
 
 Welcome! Ahoy, fellow data adventurers! 🌊🔍 Our voyage through the vast ocean of data has been nothing short of exhilarating. We've navigated the twists and turns of data-driven decision-making, explored the tools that power our data collection, and unraveled the mysteries behind data analysis and visualization. We've braved the challenges that come with utilizing data and discovered how it can empower businesses, content creators, and even influence SEO strategies.
