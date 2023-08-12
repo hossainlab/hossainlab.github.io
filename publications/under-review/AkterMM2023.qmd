@@ -1,0 +1,16 @@
+---
+title: "Food consumption patterns and sedentary behaviours among the university students: a cross-sectional study"
+type: "preprinit"
+author: "Mst. Mahfuza Akter, Md. Jubayer Hossain"
+year: "2023"
+publication: "Scientific Reports"
+preprint: "https://www.researchsquare.com/article/rs-3207448/v1"
+doi: "https://doi.org/10.21203/rs.3.rs-3207448/v1"
+materials: ""
+toc: false
+categories:
+  - Under Review 
+---
+
+## Abstract
+This cross-sectional study, conducted in Dhaka City, Bangladesh, aimed to examine the eating habits and physical inactivity levels of 444 randomly selected university students. Descriptive statistics, Student's t-test, Wilcoxon rank-sum test, and chi-square test were used for data analysis. Approximately 44% of the students had irregular breakfast consumption, with a slightly higher proportion of males (46%) than females (42%). Additionally, approximately 23% of the students exhibited irregular dinner habits, with a significant difference between males (9.6%) and females (31%) (p < 0.001). The prevalence of smoking was 13%, with a higher percentage of male smokers (22%) than of female smokers (7.6%) (p < 0.001). Only 19% of both male and female students consumed fruit daily. Rice and meat were the preferred food choices for 57% of students, with slightly higher among males (59%) than females (56%). The majority of students (70%) consumed their favourite food once or twice daily, with females (81%) showing a higher prevalence than males (70%) (p < 0.013). Junk was favoured by 55% of the students, with similar preferences among males (53%) and females (56%). Traditional cooking methods were preferred by 71% of the students. 66% of the students had a normal weight, with a slightly higher proportion of males (67%) than females (65%). Overweight and obesity were observed in 13% and 7.4% of the patients, respectively. Additionally, most females (87%) spent less than two hours watching television daily compared to 80% of males (p < 0.035). Furthermore, physical inactivity was more prevalent among female students (44%) than male students (p < 0.026). This study highlights unhealthy habits among Bangladeshi university students, stressing the need for intervention programs to promote healthier lifestyles.
