@@ -739,7 +739,7 @@
     "href": "teaching/spss/index.html",
     "title": "Research Data Analysis with SPSS",
     "section": "",
-    "text": "Cohort 01\nCohort 02\nCohort 03"
+    "text": "The Research Data Analysis with SPSS course is tailored for researchers, analysts, and students who want to acquire a strong foundation in using SPSS (Statistical Package for the Social Sciences) for conducting data analysis in research projects. The course covers a range of statistical techniques, data manipulation, and visualization tools within the SPSS environment. Participants will learn how to effectively prepare, analyze, and interpret research data, enabling evidence-based decision-making."
   },
   {
     "objectID": "teaching/bioinformatics-bootcamp/index.html#bootcamp-description",
@@ -789,5 +789,40 @@
     "title": "RNA-seq Data Aanalysis with R",
     "section": "Learning Objectives",
     "text": "Learning Objectives\n\nUnderstand the principles of RNA-seq technology and its applications in gene expression analysis.\nRecognize the steps involved in the RNA-seq workflow, from sample preparation to data analysis.\nPerform quality control assessments on raw RNA-seq data.\nTrim, filter, and preprocess raw reads to ensure data quality.\nAssess the impact of sequencing quality on downstream analyses.\nPerform differential expression analysis to identify genes with significant expression changes between conditions.\nApply statistical tests (e.g., DESeq2, edgeR) to assess differential expression.\nInterpret the results in terms of fold changes and adjusted p-values.\n\nProgram Website\n\nApply to the Program"
+  },
+  {
+    "objectID": "teaching/single-cell-seq-analysis-with-r/index.html",
+    "href": "teaching/single-cell-seq-analysis-with-r/index.html",
+    "title": "Single-Cell RNA-Seq Analysis with R",
+    "section": "",
+    "text": "The Single-Cell RNA-Seq Analysis with R course is designed for researchers and bioinformaticians interested in unlocking insights from single-cell transcriptomics data using the R programming language. Single-cell RNA sequencing (scRNA-seq) has revolutionized our understanding of cellular heterogeneity and gene expression dynamics. This course provides a comprehensive overview of scRNA-seq data analysis, covering preprocessing, quality control, dimensionality reduction, cell clustering, differential expression analysis, and visualization techniques."
+  },
+  {
+    "objectID": "teaching/single-cell-seq-analysis-with-r/index.html#course-description",
+    "href": "teaching/single-cell-seq-analysis-with-r/index.html#course-description",
+    "title": "Single-Cell RNA-Seq Analysis with R",
+    "section": "",
+    "text": "The Single-Cell RNA-Seq Analysis with R course is designed for researchers and bioinformaticians interested in unlocking insights from single-cell transcriptomics data using the R programming language. Single-cell RNA sequencing (scRNA-seq) has revolutionized our understanding of cellular heterogeneity and gene expression dynamics. This course provides a comprehensive overview of scRNA-seq data analysis, covering preprocessing, quality control, dimensionality reduction, cell clustering, differential expression analysis, and visualization techniques."
+  },
+  {
+    "objectID": "teaching/single-cell-seq-analysis-with-r/index.html#learning-objectives",
+    "href": "teaching/single-cell-seq-analysis-with-r/index.html#learning-objectives",
+    "title": "Single-Cell RNA-Seq Analysis with R",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of the Single-Cell RNA-Seq Analysis with R course, participants will be able to:\n\nIntroduction to Single-Cell RNA-Seq\nPreprocessing and Quality Control\nDimensionality Reduction Techniques\nCell Clustering and Annotation\nDifferential Expression Analysis\nTrajectory Analysis and Pseudotime\nFunctional Enrichment Analysis\nData Visualization\nIntegration with Other Omics Data\nInterpreting Results and Reporting\n\nProgram Website\n\nApply to the Program"
+  },
+  {
+    "objectID": "teaching/spss/index.html#course-description",
+    "href": "teaching/spss/index.html#course-description",
+    "title": "Research Data Analysis with SPSS",
+    "section": "",
+    "text": "The Research Data Analysis with SPSS course is tailored for researchers, analysts, and students who want to acquire a strong foundation in using SPSS (Statistical Package for the Social Sciences) for conducting data analysis in research projects. The course covers a range of statistical techniques, data manipulation, and visualization tools within the SPSS environment. Participants will learn how to effectively prepare, analyze, and interpret research data, enabling evidence-based decision-making."
+  },
+  {
+    "objectID": "teaching/spss/index.html#learning-objectives",
+    "href": "teaching/spss/index.html#learning-objectives",
+    "title": "Research Data Analysis with SPSS",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of the Research Data Analysis with SPSS course, participants will be able to:\n\nFamiliarize with the SPSS interface, tools, and data management features.\nUnderstand the role of SPSS in research data analysis across various fields.\nImport data from different sources (e.g., Excel, CSV) into SPSS.\nHandle missing data, outliers, and data inconsistencies.\nClean and prepare data for analysis.\nCalculate and interpret descriptive statistics, including measures of central tendency and dispersion.\nExploratory Data Analysis\nParametric Tests\nNon-Parametric Tests\nCorrelation and Regression Analysis\nCategorical Data Analysis\nMultivariate Analysis Techniques\nData Visualization in SPSS\nInterpreting and Presenting Results\nBest Practices and Ethical Considerations\n\nProgram Website\n\nApply to the Program"
   }
 ]
