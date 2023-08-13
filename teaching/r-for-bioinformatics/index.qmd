@@ -3,9 +3,33 @@ title: "R for Bioinformatics"
 categories: [Research, Data Analysis, Public Health]
 image: "logo.gif"
 ---
-```{=html}
-<a href="" class="btn btn-primary rounded-pill me-2">Cohort 01</a>
-<a href="" class="btn btn-primary rounded-pill">Cohort 02</a>
-<a href="" class="btn btn-primary rounded-pill">Cohort 03</a>
-```
 
+## Overview
+Welcome to the exciting world of bioinformatics! In this course, we will explore the application of the R programming language in the field of bioinformatics. Whether you are a biologist, a computer scientist, or simply someone interested in the intersection of biology and programming, this book is designed to help you get started with using R for bioinformatics.
+
+Bioinformatics combines biology, computer science, statistics, and math to understand complex biological processes. R is a powerful programming language widely used in bioinformatics for data analysis, visualization, and modeling. It has a rich set of packages and libraries for processing biological data.
+
+This course assumes no prior knowledge of R programming, but assumes basic understanding of statistics and bioinformatics. We’ll cover data manipulation, visualization, statistics, and common bioinformatics techniques.
+
+Remember, learning a new language and field takes time and practice. Stay persistent, ask questions, and engage actively with the material. Let’s embark on this exciting journey into bioinformatics with R. By the end, you’ll have the skills to explore and contribute to bioinformatics research.
+
+Enjoy your learning experience, and good luck!
+
+## Learning Objectives
+- Understand the fundamentals of bioinformatics and its application in biological research.
+
+- Gain a solid foundation in R programming, including data structures, control flow, and functions.
+
+- Learn data manipulation techniques specific to bioinformatics, such as working with DNA sequences and protein structures.
+
+- Gain hands-on experience by working with real-world bioinformatics datasets and applying R to extract valuable information.
+
+- Understand the importance of reproducibility and best practices in bioinformatics research using R.
+
+- Feel confident in applying R for basic bioinformatics tasks and be ready to explore more advanced topics in the field.
+
+```{=html}
+<a href="https://omicscenter.github.io/BioinformaticsBootCamp/" class="btn btn-primary rounded-pill me-2">Program Website</a>
+
+<a href="" class="btn btn-primary rounded-pill">Apply to the Program</a>
+```

@@ -3,9 +3,28 @@ title: "R for Research"
 categories: [Research, Data Analysis]
 image: "logo.png"
 ---
-```{=html}
-<a href="" class="btn btn-primary rounded-pill me-2">Cohort 01</a>
-<a href="" class="btn btn-primary rounded-pill">Cohort 02</a>
-<a href="" class="btn btn-primary rounded-pill">Cohort 03</a>
-```
 
+# Overview
+
+The purpose of this course is to provide a practical introduction to the programming language R for researchers in any field. We are convinced that R is a powerful tool that can ultimately make your life easier by enabling efficient solutions to your data analytical problems. Also, R is completely free. Who doesn't like that?
+
+This course aims to facilitate the participant's first steps in R and equip them with the tools and understanding to expand their technical know-how according to the needs of their specific research. It is neither a computer science nor a methodological course, but aimed at the practical needs of empirically working researchers.
+
+## Learning outcomes 
+
+By the end of the course students you shall be confident and equipped with all the
+knowledge required to perform analytical activities in R. Specifically, 
+
+- Understand the fundamental syntax of R through readings, practice exercises, demonstrations, and writing R code.
+- Apply critical programming language concepts such as data types, iteration, control structures, functions, and boolean operators by writing R programs and through examples
+- Import a variety of data formats into R using RStudio
+- Prepare or tidy data for in preparation for analysis
+- Query data using SQL and R
+- Analyze a data set in R and present findings using the appropriate R packages
+- Visualize data attributes using ggplot2 and other R packages. 
+
+```{=html}
+<a href="https://omicscenter.github.io/BioinformaticsBootCamp/" class="btn btn-primary rounded-pill me-2">Program Website</a>
+
+<a href="" class="btn btn-primary rounded-pill">Apply to the Program</a>
+```

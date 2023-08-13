@@ -4,6 +4,7 @@ listing:
   contents: projects
   sort: "title"
   type: default
+  image-height: 260px
   categories: true
   sort-ui: false
   filter-ui: false 

@@ -1,5 +1,16 @@
 [
   {
+    "listing": "/teaching/index.html",
+    "items": []
+  },
+  {
+    "listing": "/talks.html",
+    "items": [
+      "/talks/state-the-art-of-microbial-genome-analysi/index.html",
+      "/talks/undergraduate-research-importance-benefits-and-challenges/index.html"
+    ]
+  },
+  {
     "listing": "/publications.html",
     "items": [
       "/publications/conference/BSM23_DasM.html",
@@ -17,18 +28,8 @@
     ]
   },
   {
-    "listing": "/talks.html",
-    "items": [
-      "/talks/state-the-art-of-microbial-genome-analysi/index.html",
-      "/talks/undergraduate-research-importance-benefits-and-challenges/index.html"
-    ]
-  },
-  {
-    "listing": "/projects.html",
-    "items": [
-      "/projects/project_2/index.html",
-      "/projects/project_1/index.html"
-    ]
+    "listing": "/news.html",
+    "items": []
   },
   {
     "listing": "/blog.html",
@@ -37,8 +38,11 @@
     ]
   },
   {
-    "listing": "/news.html",
-    "items": []
+    "listing": "/projects.html",
+    "items": [
+      "/projects/project_2/index.html",
+      "/projects/project_1/index.html"
+    ]
   },
   {
     "listing": "/teaching.html",

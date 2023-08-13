@@ -310,5 +310,29 @@
   },
   "talks/state-the-art-of-microbial-genome-analysi/index.qmd": {
     "index.html": "3a0ac15e"
+  },
+  "teaching2/bioinformatics-bootcamp/index.qmd": {
+    "index.html": "2160159c"
+  },
+  "teaching2/r-for-bioinformatics/index.qmd": {
+    "index.html": "13705277"
+  },
+  "teaching2/r-for-research/index.qmd": {
+    "index.html": "f915af88"
+  },
+  "teaching2/rna-seq-data-analysis-with-r/index.qmd": {
+    "index.html": "bcf618dc"
+  },
+  "teaching2/single-cell-seq-analysis-with-r/index.qmd": {
+    "index.html": "d5f96a42"
+  },
+  "teaching2/spss/index.qmd": {
+    "index.html": "eb6664bd"
+  },
+  "cv/CV/CV_Jubayer_Hossain.Rmd": {
+    "CV_Jubayer_Hossain.html": "cd84f92a"
+  },
+  "cv/CV/CV_Jubayer_Hossain[Professional].Rmd": {
+    "CV_Jubayer_Hossain[Professional].html": "cb7190dd"
   }
 }
