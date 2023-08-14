@@ -67,6 +67,8 @@ website:
           href: talks.qmd
         - text: "Teaching"
           file: teaching.qmd
+        - text: "DataViz Gallery"
+          file: gallery.qmd
         - text: "CV"
           file: cv/index.qmd
       right:
