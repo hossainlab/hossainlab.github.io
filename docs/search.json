@@ -824,5 +824,19 @@
     "title": "Research Data Analysis with SPSS",
     "section": "Learning Objectives",
     "text": "Learning Objectives\nBy the end of the Research Data Analysis with SPSS course, participants will be able to:\n\nFamiliarize with the SPSS interface, tools, and data management features.\nUnderstand the role of SPSS in research data analysis across various fields.\nImport data from different sources (e.g., Excel, CSV) into SPSS.\nHandle missing data, outliers, and data inconsistencies.\nClean and prepare data for analysis.\nCalculate and interpret descriptive statistics, including measures of central tendency and dispersion.\nExploratory Data Analysis\nParametric Tests\nNon-Parametric Tests\nCorrelation and Regression Analysis\nCategorical Data Analysis\nMultivariate Analysis Techniques\nData Visualization in SPSS\nInterpreting and Presenting Results\nBest Practices and Ethical Considerations\n\nProgram Website\n\nApply to the Program"
+  },
+  {
+    "objectID": "use.html",
+    "href": "use.html",
+    "title": "What I Use",
+    "section": "",
+    "text": "dplyr, tidyr and others from the tidyverse for data preparation.\nggplot2 for the vast majority of the graphics, together with the hrbrtheme for styling.\npatchwork to put graphics together.\nggraph and igraph for most of the network related graphics\nplotly and other html widgets for interactive graphics.\nR Markdown to build 95% of the website, together with this list of tips.\nRColorBrewer and viridis and colormap to control color in charts.\nGgrepel and other ggplot2 extension that make your life simpler.\nHeatmaply for most of the heatmaps"
+  },
+  {
+    "objectID": "use.html#r-packages",
+    "href": "use.html#r-packages",
+    "title": "What I Use",
+    "section": "",
+    "text": "dplyr, tidyr and others from the tidyverse for data preparation.\nggplot2 for the vast majority of the graphics, together with the hrbrtheme for styling.\npatchwork to put graphics together.\nggraph and igraph for most of the network related graphics\nplotly and other html widgets for interactive graphics.\nR Markdown to build 95% of the website, together with this list of tips.\nRColorBrewer and viridis and colormap to control color in charts.\nGgrepel and other ggplot2 extension that make your life simpler.\nHeatmaply for most of the heatmaps"
   }
 ]

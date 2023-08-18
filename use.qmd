@@ -1,0 +1,19 @@
+---
+pagetitle: "What I Use | Jubayer Hossain"
+title: "What I Use"
+page-layout: full
+title-block-banner: false
+comments: false
+---
+
+
+## R Packages
+- dplyr, tidyr and others from the [tidyverse](https://www.tidyverse.org/) for data preparation. 
+- [ggplot2](https://ggplot2.tidyverse.org/) for the vast majority of the graphics, together with the [hrbrtheme](https://github.com/hrbrmstr/hrbrthemes) for styling.
+- [patchwork](https://github.com/thomasp85/patchwork) to put graphics together. 
+- [ggraph](https://github.com/thomasp85/ggraph) and igraph for most of the network related graphics 
+- [plotly](https://r-graph-gallery.com/interactive-charts) and other html widgets for interactive graphics. 
+- [R Markdown](https://rmarkdown.rstudio.com/) to build 95% of the website, together with this list of tips. 
+- [RColorBrewer](https://github.com/cran/RColorBrewer) and [viridis](https://github.com/sjmgarnier/viridis) and colormap to control color in charts.
+- [Ggrepel](https://github.com/slowkow/ggrepel) and other ggplot2 extension that make your life simpler. 
+- [Heatmaply](https://github.com/talgalili/heatmaply) for most of the heatmaps

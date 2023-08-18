@@ -69,6 +69,8 @@ website:
           file: teaching.qmd
         - text: "DataViz Gallery"
           file: gallery.qmd
+        - text: "What I Use"
+          file: use.qmd
         - text: "CV"
           file: cv/index.qmd
       right:
