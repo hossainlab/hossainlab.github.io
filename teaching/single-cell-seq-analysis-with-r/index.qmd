@@ -23,7 +23,7 @@ By the end of the Single-Cell RNA-Seq Analysis with R course, participants will 
 
 
 ```{=html}
-<a href="https://omicscenter.github.io/BioinformaticsBootCamp/" class="btn btn-primary rounded-pill me-2">Program Website</a>
+<a href="https://omicscenter.github.io/scRNASeqwithR/" class="btn btn-primary rounded-pill me-2">Program Website</a>
 
 <a href="" class="btn btn-primary rounded-pill">Apply to the Program</a>
 ```

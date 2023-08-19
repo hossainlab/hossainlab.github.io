@@ -24,7 +24,7 @@ knowledge required to perform analytical activities in R. Specifically,
 - Visualize data attributes using ggplot2 and other R packages. 
 
 ```{=html}
-<a href="https://omicscenter.github.io/BioinformaticsBootCamp/" class="btn btn-primary rounded-pill me-2">Program Website</a>
+<a href="https://chiraltraining.github.io/RforResearch/" class="btn btn-primary rounded-pill me-2">Program Website</a>
 
 <a href="" class="btn btn-primary rounded-pill">Apply to the Program</a>
 ```

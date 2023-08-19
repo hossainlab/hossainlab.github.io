@@ -340,5 +340,8 @@
   },
   "use.qmd": {
     "use.html": "4bff318e"
+  },
+  "teaching/ml-for-bioinformatics/index.qmd": {
+    "index.html": "35d7d01a"
   }
 }

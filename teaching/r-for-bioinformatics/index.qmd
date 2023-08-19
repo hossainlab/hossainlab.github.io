@@ -29,7 +29,7 @@ Enjoy your learning experience, and good luck!
 - Feel confident in applying R for basic bioinformatics tasks and be ready to explore more advanced topics in the field.
 
 ```{=html}
-<a href="https://omicscenter.github.io/BioinformaticsBootCamp/" class="btn btn-primary rounded-pill me-2">Program Website</a>
+<a href="https://omicscenter.github.io/RforBioinformatics/" class="btn btn-primary rounded-pill me-2">Program Website</a>
 
 <a href="" class="btn btn-primary rounded-pill">Apply to the Program</a>
 ```

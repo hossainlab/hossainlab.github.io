@@ -683,7 +683,7 @@
     "href": "teaching.html",
     "title": "",
     "section": "",
-    "text": "Bioinformatics BootCamp\n\n\n\n\n\n\n\nBioinformatics\n\n\nBootCamp\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nR for Bioinformatics\n\n\n\n\n\n\n\nResearch\n\n\nData Analysis\n\n\nPublic Health\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nR for Research\n\n\n\n\n\n\n\nResearch\n\n\nData Analysis\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nRNA-seq Data Aanalysis with R\n\n\n\n\n\n\n\nBioinformatics\n\n\nR\n\n\nTranscriptomics\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nResearch Data Analysis with SPSS\n\n\n\n\n\n\n\nResearch\n\n\nData Analysis\n\n\nPublic Health\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nSingle-Cell RNA-Seq Analysis with R\n\n\n\n\n\n\n\nBioinformatics\n\n\nR\n\n\nTranscriptomics\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "Bioinformatics BootCamp\n\n\n\n\n\n\n\nBioinformatics\n\n\nBootCamp\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nMachine Learning for Bioinformatics with Python\n\n\n\n\n\n\n\nMachine Learning\n\n\nBioinformatics\n\n\nOmics Data Science\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nR for Bioinformatics\n\n\n\n\n\n\n\nResearch\n\n\nData Analysis\n\n\nPublic Health\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nR for Research\n\n\n\n\n\n\n\nResearch\n\n\nData Analysis\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nRNA-seq Data Aanalysis with R\n\n\n\n\n\n\n\nBioinformatics\n\n\nR\n\n\nTranscriptomics\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nResearch Data Analysis with SPSS\n\n\n\n\n\n\n\nResearch\n\n\nData Analysis\n\n\nPublic Health\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nSingle-Cell RNA-Seq Analysis with R\n\n\n\n\n\n\n\nBioinformatics\n\n\nR\n\n\nTranscriptomics\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "teaching2/r-for-bioinformatics/index.html",
@@ -838,5 +838,26 @@
     "title": "What I Use",
     "section": "",
     "text": "dplyr, tidyr and others from the tidyverse for data preparation.\nggplot2 for the vast majority of the graphics, together with the hrbrtheme for styling.\npatchwork to put graphics together.\nggraph and igraph for most of the network related graphics\nplotly and other html widgets for interactive graphics.\nR Markdown to build 95% of the website, together with this list of tips.\nRColorBrewer and viridis and colormap to control color in charts.\nGgrepel and other ggplot2 extension that make your life simpler.\nHeatmaply for most of the heatmaps"
+  },
+  {
+    "objectID": "teaching/ml-for-bioinformatics/index.html",
+    "href": "teaching/ml-for-bioinformatics/index.html",
+    "title": "Machine Learning for Bioinformatics with Python",
+    "section": "",
+    "text": "The “Machine Learning for Bioinformatics with Python” course is designed to provide participants with a solid foundation in applying machine learning techniques to solve complex problems in bioinformatics. Through hands-on exercises and practical examples, participants will learn how to leverage Python’s powerful libraries for machine learning to analyze biological data, make predictions, and extract meaningful insights. This course bridges the gap between bioinformatics and machine learning, enabling participants to develop skills at the intersection of these fields."
+  },
+  {
+    "objectID": "teaching/ml-for-bioinformatics/index.html#overview",
+    "href": "teaching/ml-for-bioinformatics/index.html#overview",
+    "title": "Machine Learning for Bioinformatics with Python",
+    "section": "",
+    "text": "The “Machine Learning for Bioinformatics with Python” course is designed to provide participants with a solid foundation in applying machine learning techniques to solve complex problems in bioinformatics. Through hands-on exercises and practical examples, participants will learn how to leverage Python’s powerful libraries for machine learning to analyze biological data, make predictions, and extract meaningful insights. This course bridges the gap between bioinformatics and machine learning, enabling participants to develop skills at the intersection of these fields."
+  },
+  {
+    "objectID": "teaching/ml-for-bioinformatics/index.html#learning-objectives",
+    "href": "teaching/ml-for-bioinformatics/index.html#learning-objectives",
+    "title": "Machine Learning for Bioinformatics with Python",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nAt the end of the tutorial, participants will be able to:\n\nUnderstand the Basics of Machine Learning in Bioinformatics\nPreprocess Biological Data for Machine Learning\nExplore Feature Selection and Dimensionality Reduction\nImplement Classification Algorithms\nPerform Regression Analysis on Biological Data\nUse Clustering Techniques for Pattern Discovery\n\nProgram Website\n\nApply to the Program"
   }
 ]

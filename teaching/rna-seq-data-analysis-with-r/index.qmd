@@ -19,7 +19,7 @@ The RNA-seq Data Analysis with R course is designed to provide participants with
 
 
 ```{=html}
-<a href="https://omicscenter.github.io/BioinformaticsBootCamp/" class="btn btn-primary rounded-pill me-2">Program Website</a>
+<a href="https://omicscenter.github.io/RNASeqwithR/" class="btn btn-primary rounded-pill me-2">Program Website</a>
 
 <a href="" class="btn btn-primary rounded-pill">Apply to the Program</a>
 ```
