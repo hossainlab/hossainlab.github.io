@@ -343,5 +343,26 @@
   },
   "teaching/ml-for-bioinformatics/index.qmd": {
     "index.html": "35d7d01a"
+  },
+  "projects/ESOL/01_ESOL.ipynb": {
+    "01_ESOL.html": "08cc571a"
+  },
+  "projects/Choronic_Kidney/01_Choronic Kidney.ipynb": {
+    "01_Choronic Kidney.html": "73873730"
+  },
+  "projects/Breast_Cancer/03_Breast Cancer.ipynb": {
+    "03_Breast Cancer.html": "15d2fd4b"
+  },
+  "projects/Calories_Burnt/02_Calories Burnt Prediction.ipynb": {
+    "02_Calories Burnt Prediction.html": "9aa44aad"
+  },
+  "projects/Heart_Disease/05_Heart Diseases.ipynb": {
+    "05_Heart Diseases.html": "23e015ff"
+  },
+  "projects/Hepatitis/02_Hepatitis.ipynb": {
+    "02_Hepatitis.html": "435ed1e0"
+  },
+  "projects/Liver_Disorder/04_Liver Disorder.ipynb": {
+    "04_Liver Disorder.html": "5d8cee81"
   }
 }

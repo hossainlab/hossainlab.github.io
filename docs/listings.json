@@ -1,9 +1,5 @@
 [
   {
-    "listing": "/teaching/index.html",
-    "items": []
-  },
-  {
     "listing": "/talks.html",
     "items": [
       "/talks/state-the-art-of-microbial-genome-analysi/index.html",
@@ -40,8 +36,13 @@
   {
     "listing": "/projects.html",
     "items": [
-      "/projects/project_2/index.html",
-      "/projects/project_1/index.html"
+      "/projects/Calories_Burnt/02_Calories Burnt Prediction.html",
+      "/projects/ESOL/01_ESOL.html",
+      "/projects/Heart_Disease/05_Heart Diseases.html",
+      "/projects/Hepatitis/02_Hepatitis.html",
+      "/projects/Breast_Cancer/03_Breast Cancer.html",
+      "/projects/Liver_Disorder/04_Liver Disorder.html",
+      "/projects/Choronic_Kidney/01_Choronic Kidney.html"
     ]
   },
   {
