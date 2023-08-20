@@ -8,7 +8,7 @@
 
 <meta name="description" content="Jubayer Hossain’s personal website.">
 
-<title>Visualization Gallery | Jubayer Hossain</title>
+<title>Public Health Insights: Clinical Reporting Using {gtsummary}</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,28 +21,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href=".//files/profiles/icon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../..//files/profiles/icon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -65,11 +96,13 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.scss">
-<meta property="og:title" content="Visualization Gallery | Jubayer Hossain">
-<meta property="og:image" content="https://source.unsplash.com/jlzxJuSINsw.png">
-<meta name="twitter:title" content="Visualization Gallery | Jubayer Hossain">
-<meta name="twitter:image" content="https://source.unsplash.com/jlzxJuSINsw.png">
+<link rel="stylesheet" href="../../styles.scss">
+<meta property="og:title" content="Public Health Insights: Clinical Reporting Using {gtsummary}">
+<meta property="og:description" content="">
+<meta property="og:image" content="logo.jpg">
+<meta name="twitter:title" content="Public Health Insights: Clinical Reporting Using {gtsummary}">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="logo.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -86,39 +119,39 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
+    <a class="nav-link" href="../../index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html" rel="" target="">
+    <a class="nav-link" href="../../blog.html" rel="" target="">
  <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./publications.html" rel="" target="">
+    <a class="nav-link" href="../../publications.html" rel="" target="">
  <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html" rel="" target="">
+    <a class="nav-link" href="../../projects.html" rel="" target="">
  <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./talks.html" rel="" target="">
+    <a class="nav-link" href="../../talks.html" rel="" target="">
  <span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./teaching.html" rel="" target="">
+    <a class="nav-link" href="../../teaching.html" rel="" target="">
  <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./gallery.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../../gallery.html" rel="" target="">
  <span class="menu-text">DataViz Gallery</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./use.html" rel="" target="">
+    <a class="nav-link" href="../../use.html" rel="" target="">
  <span class="menu-text">What I Use</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv/index.html" rel="" target="">
+    <a class="nav-link" href="../../cv/index.html" rel="" target="">
  <span class="menu-text">CV</span></a>
   </li>  
 </ul>
@@ -163,57 +196,77 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Public Health Insights: Clinical Reporting Using {gtsummary}</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Workshop</div>
+    <div class="quarto-category">Public Health</div>
+    <div class="quarto-category">Clinical Reporting</div>
+  </div>
+  </div>
 
 
-<div style="display: grid;grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));grid-gap: 1em;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://source.unsplash.com/jlzxJuSINsw.png" class="lightbox" data-gallery="my-gallery"><img src="https://source.unsplash.com/jlzxJuSINsw.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://source.unsplash.com/a-brown-dog-laying-on-top-of-a-white-bed-90ub4oBH1WU.png" class="lightbox" data-gallery="my-gallery"><img src="https://source.unsplash.com/a-brown-dog-laying-on-top-of-a-white-bed-90ub4oBH1WU.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://source.unsplash.com/ZJVXcRmaSJM.png" class="lightbox" data-gallery="my-gallery"><img src="https://source.unsplash.com/ZJVXcRmaSJM.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://source.unsplash.com/cVpfbLcm0Bo.png" class="lightbox" data-gallery="my-gallery"><img src="https://source.unsplash.com/cVpfbLcm0Bo.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://source.unsplash.com/a-white-cat-laying-on-top-of-a-white-curtain-fIkdTouhWMg.png" class="lightbox" data-gallery="my-gallery"><img src="https://source.unsplash.com/a-white-cat-laying-on-top-of-a-white-curtain-fIkdTouhWMg.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://source.unsplash.com/78YxP3PP05A.png" class="lightbox" data-gallery="my-gallery"><img src="https://source.unsplash.com/78YxP3PP05A.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://source.unsplash.com/PU1Yqe9kNpg.png" class="lightbox" data-gallery="my-gallery"><img src="https://source.unsplash.com/PU1Yqe9kNpg.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://source.unsplash.com/uutHQEjfx3g.png" class="lightbox" data-gallery="my-gallery"><img src="https://source.unsplash.com/uutHQEjfx3g.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://source.unsplash.com/JcIFJnZDUHQ.png" class="lightbox" data-gallery="my-gallery"><img src="https://source.unsplash.com/JcIFJnZDUHQ.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div>
-</div>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="workshop-overview" class="level1">
+<h1>Workshop Overview</h1>
+<p>Join us for an engaging and informative workshop on “Public Health Insights: Clinical Reporting Using {gtsummary}.” This workshop is designed to equip public health professionals, researchers, and analysts with the skills and knowledge to effectively utilize the <code>{gtsummary}</code> package for creating comprehensive clinical reports. <code>{gtsummary}</code> is a powerful tool that streamlines the process of summarizing data, making it an invaluable asset for deriving meaningful insights and driving evidence-based decisions in public health contexts.</p>
+<p>Through hands-on demonstrations and interactive sessions, participants will learn how to leverage <code>{gtsummary}</code> to generate visually appealing and interpretable clinical reports. The workshop will cover essential concepts, best practices, and practical examples that demonstrate the application of <code>{gtsummary}</code> in real-world public health scenarios. Whether you’re a seasoned data analyst or new to the world of data reporting, this workshop will provide you with the tools and techniques needed to elevate your clinical reporting capabilities.</p>
+<section id="what-is-gtsummary" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-gtsummary">What is gtsummary?</h2>
+<p>The <a href="https://www.danieldsjoberg.com/gtsummary/"><strong>gtsummary</strong></a> package provides an elegant and flexible way to create publication-ready summary tables in <strong>R</strong>.</p>
+<p>A critical part of the work of statisticians, data scientists, and analysts is summarizing data sets and regression models in R and publishing or sharing polished summary tables.</p>
+<p>The <a href="https://www.danieldsjoberg.com/gtsummary/"><strong>gtsummary</strong></a> package was created to streamline these everyday analysis tasks by allowing users to easily create reproducible summaries of data sets, regression models, survey data, and survival data with a simple interface and very little code.</p>
+<p>The package follows a tidy framework, making it easy to integrate with standard data workflows, and offers many table customization features through function arguments, helper functions, and custom themes.</p>
+</section>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
+<p>Build, customize, and report tables often found in medical journals and other research-related publications.</p>
+</section>
+<section id="is-this-course-for-me" class="level2">
+<h2 class="anchored" data-anchor-id="is-this-course-for-me">Is this course for me?</h2>
+<p>If your answer to any of the following questions is “yes”, then this is the right workshop for you.</p>
+<ul>
+<li><p>Do you make summary tables in R (data, survey data, regression models, time-to-event data, adverse event reports)?</p></li>
+<li><p>Do you want your workflow to be reproducible?</p></li>
+<li><p>Are you often frustrated with the immense amount of code required to create great-looking tables in R?</p></li>
+</ul>
+<p>The workshop is designed for those with some experience in R. It will be expected that you can perform basic data manipulation. Experience with the {tidyverse} and the <code>%&gt;%</code> operator is a plus, but not required.</p>
+</section>
+<section id="prework" class="level2">
+<h2 class="anchored" data-anchor-id="prework">Prework</h2>
+<p>Before attending the workshop please have the following installed and configured on your machine.</p>
+<ul>
+<li><p>Recent version of <strong>R</strong></p></li>
+<li><p>Recent version of <strong>RStudio</strong></p></li>
+<li><p>Most recent release of the <a href="https://www.danieldsjoberg.com/gtsummary/"><strong>gtsummary</strong></a> and other packages used in workshop.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>instll_pkgs <span class="ot">&lt;-</span> </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="st">"gtsummary"</span>, <span class="st">"tidyverse"</span>, <span class="st">"labelled"</span>, <span class="st">"usethis"</span>, </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"causaldata"</span>, <span class="st">"fs"</span>, <span class="st">"skimr"</span>, <span class="st">"car"</span>, <span class="st">"emmeans"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(instll_pkgs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Ensure you can knit R markdown documents</p>
+<ul>
+<li>Open RStudio and create a new Rmarkdown document</li>
+<li>Save the document and check you are able to knit it.</li>
+</ul></li>
+</ul>
+<a href="https://chiraltraining.github.io/gtsummary4publichealth/" class="btn btn-primary rounded-pill me-2">Workshop Website</a>
+
+<a href="" class="btn btn-primary rounded-pill">Register</a>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -486,7 +539,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","openEffect":"zoom","loop":true});</script>
 
 
 

@@ -364,5 +364,11 @@
   },
   "projects/Liver_Disorder/04_Liver Disorder.ipynb": {
     "04_Liver Disorder.html": "5d8cee81"
+  },
+  "teaching/data-analysis-with-r/index.qmd": {
+    "index.html": "c3a9ef3e"
+  },
+  "teaching/gtsummary-for-public-health/index.qmd": {
+    "index.html": "7503cf06"
   }
 }

@@ -1,36 +1,16 @@
 [
   {
-    "listing": "/talks.html",
+    "listing": "/teaching.html",
     "items": [
-      "/talks/state-the-art-of-microbial-genome-analysi/index.html",
-      "/talks/undergraduate-research-importance-benefits-and-challenges/index.html"
-    ]
-  },
-  {
-    "listing": "/publications.html",
-    "items": [
-      "/publications/conference/BSM23_DasM.html",
-      "/publications/under-review/AkterMM2023.html",
-      "/publications/journal-articles/hossainmj2023_thalas_qol.html",
-      "/publications/working-papers/shahnaj2023_03.html",
-      "/publications/working-papers/shahnaj2023_01.html",
-      "/publications/journal-articles/hossainmj2023_thals_kap.html",
-      "/publications/conference/BSM23_AkterS.html",
-      "/publications/working-papers/shahnaj2023_02.html",
-      "/publications/conference/BSM23_ShahidMSB.html",
-      "/publications/under-review/HossainMJ2023.html",
-      "/publications/conference/BSM23_TowhidST.html",
-      "/publications/journal-articles/hossainmj2022_antibiotics.html"
-    ]
-  },
-  {
-    "listing": "/news.html",
-    "items": []
-  },
-  {
-    "listing": "/blog.html",
-    "items": [
-      "/blog/welcome/index.html"
+      "/teaching/bioinformatics-bootcamp/index.html",
+      "/teaching/data-analysis-with-r/index.html",
+      "/teaching/ml-for-bioinformatics/index.html",
+      "/teaching/gtsummary-for-public-health/index.html",
+      "/teaching/r-for-bioinformatics/index.html",
+      "/teaching/r-for-research/index.html",
+      "/teaching/rna-seq-data-analysis-with-r/index.html",
+      "/teaching/spss/index.html",
+      "/teaching/single-cell-seq-analysis-with-r/index.html"
     ]
   },
   {
@@ -43,18 +23,6 @@
       "/projects/Breast_Cancer/03_Breast Cancer.html",
       "/projects/Liver_Disorder/04_Liver Disorder.html",
       "/projects/Choronic_Kidney/01_Choronic Kidney.html"
-    ]
-  },
-  {
-    "listing": "/teaching.html",
-    "items": [
-      "/teaching/bioinformatics-bootcamp/index.html",
-      "/teaching/ml-for-bioinformatics/index.html",
-      "/teaching/r-for-bioinformatics/index.html",
-      "/teaching/r-for-research/index.html",
-      "/teaching/rna-seq-data-analysis-with-r/index.html",
-      "/teaching/spss/index.html",
-      "/teaching/single-cell-seq-analysis-with-r/index.html"
     ]
   }
 ]
