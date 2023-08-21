@@ -37,14 +37,16 @@ I am interested in applying modern data science techniques in the context of dis
 # **Highlighted Projects**
 
 # **Experience**
-**Founder & Management Lead** \|  [Center for Bioinformatics Learning Advancement and Systematic Training (cBLAST)](https://chiralbd.org/) (2020 - Present)
+**Founder & Management Lead** \|  [Center for Health Innovation, Research Action, and Learning -  Bangladesh (CHIRAL Bangladesh)](https://chiralbd.org/) | Dhaka, Bangladesh |  (2020 - Present)
 
-**Instructor** \|  [Center for Health Innovation, Research Action, and Learning -  Bangladesh (CHIRAL Bangladesh)](https://www.cblastdu.xyz/) (August 2023 - Present)
+**Instructor** \|  [Center for Bioinformatics Learning Advancement and Systematic Training (cBLAST)](https://www.cblastdu.xyz/) \|  Dhaka, Bangladesh \|  (August 2023 - Present)
 
-**Teaching Assistant** \|  Public Health & Hygiene, Department of Microbiology \| [Jagannath University, Dhaka)](https://jnu.ac.bd/dept/portal/web/microbiology) (October 2022 - December 2022)
+**Program Lead** \| Research Internship Program |  [Center for Health Innovation, Research Action, and Learning -  Bangladesh (CHIRAL Bangladesh)](https://chiralbd.org/) \|  Dhaka, Bangladesh \| (January 2023 - Present)
 
-**Research Intern** \| Health Systems and Population Health Studies Division |  [International Centre for Diarrhoeal Disease Research, Bangladesh)](https://www.icddrb.org/) (February 2022 - June 2022)
+**Teaching Assistant** \|  Public Health & Hygiene, Department of Microbiology \| [Jagannath University)](https://jnu.ac.bd/dept/portal/web/microbiology) \| Dhaka, Bangladesh \|  (October 2022 - December 2022)
 
-**Team Member** \|  [Bio-Bio-1:: Bioinformatics Research Discussion Group)]() (February 2017 - June 2019)
+**Research Intern** \| Health Systems and Population Health Studies Division |  [International Centre for Diarrhoeal Disease Research, Bangladesh)](https://www.icddrb.org/) \|  Dhaka, Bangladesh \| (February 2022 - June 2022)
+
+**Team Member** \|  [Bio-Bio-1:: Bioinformatics Research Discussion Group)]() \|  Dhaka, Bangladesh \| (February 2017 - June 2019)
 
 :::
