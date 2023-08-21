@@ -4,6 +4,7 @@ categories: [Bioinformatics, BootCamp]
 image: "logo.png"
 ---
 
+
 ## BootCamp Description
 Bioinformatics BootCamp is an intensive and comprehensive training program designed to equip participants with the essential skills and knowledge in bioinformatics. This bootcamp offers a hands-on learning experience, covering a wide range of topics such as sequence analysis, genomics, proteomics, and data analysis using popular bioinformatics tools and software. Led by experienced instructors, participants will gain practical expertise, enabling them to effectively analyze biological data and make meaningful discoveries in the field of bioinformatics.
 

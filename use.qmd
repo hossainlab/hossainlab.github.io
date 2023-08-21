@@ -6,14 +6,38 @@ title-block-banner: false
 comments: false
 ---
 
-
 ## R Packages
+### Data Wrangling 
+- [readxl](https://readxl.tidyverse.org/) for importing data into R 
 - dplyr, tidyr and others from the [tidyverse](https://www.tidyverse.org/) for data preparation. 
+
+### Data Visualization
 - [ggplot2](https://ggplot2.tidyverse.org/) for the vast majority of the graphics, together with the [hrbrtheme](https://github.com/hrbrmstr/hrbrthemes) for styling.
 - [patchwork](https://github.com/thomasp85/patchwork) to put graphics together. 
 - [ggraph](https://github.com/thomasp85/ggraph) and igraph for most of the network related graphics 
 - [plotly](https://r-graph-gallery.com/interactive-charts) and other html widgets for interactive graphics. 
-- [R Markdown](https://rmarkdown.rstudio.com/) to build 95% of the website, together with this list of tips. 
 - [RColorBrewer](https://github.com/cran/RColorBrewer) and [viridis](https://github.com/sjmgarnier/viridis) and colormap to control color in charts.
 - [Ggrepel](https://github.com/slowkow/ggrepel) and other ggplot2 extension that make your life simpler. 
 - [Heatmaply](https://github.com/talgalili/heatmaply) for most of the heatmaps
+
+### Publication-ready Tables 
+- [gtsummary ](https://www.danieldsjoberg.com/gtsummary/) for creating publication-ready descriptives and analytical tables. 
+- [gt](https://gt.rstudio.com/) to customize tables and export as docs or tex. 
+
+### Reproducible Research 
+- [R Markdown](https://rmarkdown.rstudio.com/) to produce statistical reports. 
+- [Quarto](https://quarto.org/) to build 95% of the website for my courses and others. 
+
+### Statistical Modeling 
+- [easystats](https://easystats.github.io/easystats/) for easy statistical modeling, visualization, and reporting 
+
+## Python Packages 
+- [NumPy](https://numpy.org/doc/stable/index.html) for scientific computing. 
+- [Pandas](https://pandas.pydata.org/) for data wrangling and analysis 
+- [Matplotlib](https://matplotlib.org/) for data visulization 
+- [Seaborn](https://seaborn.pydata.org/) for advance statistical visualizations 
+- [Plotly](https://plotly.com/python/) for interative data visualization 
+- [researchpy](https://researchpy.readthedocs.io/en/latest/) to summarize data and perform statistical tests. 
+- [Dask](https://www.dask.org/) for big data analysis 
+- [scikit-learn](https://scikit-learn.org/stable/) for machine learning 
+- [scikit-image](https://scikit-image.org/) for life science image manipulation 
