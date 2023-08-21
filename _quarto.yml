@@ -98,7 +98,8 @@ format:
   html:
     theme:
        - journal
-    css: styles.scss
+    page-layout: full
+    mainfont: Nunito
     toc: false
     code-link: true
     anchor-sections: true
