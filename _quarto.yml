@@ -99,7 +99,6 @@ format:
     theme:
        - journal
     page-layout: full
-    mainfont: Nunito
     toc: false
     code-link: true
     anchor-sections: true
