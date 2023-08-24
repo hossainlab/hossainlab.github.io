@@ -373,5 +373,8 @@
   },
   "teaching/tcga-data-analysis-with-r/index.qmd": {
     "index.html": "8e2cc204"
+  },
+  "teaching/python-for-health-data-analysis/index.qmd": {
+    "index.html": "62b7bbf1"
   }
 }
