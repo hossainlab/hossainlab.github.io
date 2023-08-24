@@ -370,5 +370,8 @@
   },
   "teaching/gtsummary-for-public-health/index.qmd": {
     "index.html": "7503cf06"
+  },
+  "teaching/tcga-data-analysis-with-r/index.qmd": {
+    "index.html": "8e2cc204"
   }
 }

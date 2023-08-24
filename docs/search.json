@@ -1194,7 +1194,7 @@
     "href": "teaching.html",
     "title": "",
     "section": "",
-    "text": "Bioinformatics BootCamp\n\n\n\n\n\n\n\nBioinformatics\n\n\nBootCamp\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nData Analysis with R\n\n\n\n\n\n\n\nR Programming\n\n\nData Analysi\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nMachine Learning for Bioinformatics with Python\n\n\n\n\n\n\n\nMachine Learning\n\n\nBioinformatics\n\n\nOmics Data Science\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nPublic Health Insights: Clinical Reporting Using {gtsummary}\n\n\n\n\n\n\n\nWorkshop\n\n\nPublic Health\n\n\nClinical Reporting\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nR for Bioinformatics\n\n\n\n\n\n\n\nResearch\n\n\nData Analysis\n\n\nPublic Health\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nR for Research\n\n\n\n\n\n\n\nResearch\n\n\nData Analysis\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nRNA-seq Data Aanalysis with R\n\n\n\n\n\n\n\nBioinformatics\n\n\nR\n\n\nTranscriptomics\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nResearch Data Analysis with SPSS\n\n\n\n\n\n\n\nResearch\n\n\nData Analysis\n\n\nPublic Health\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nSingle-Cell RNA-Seq Analysis with R\n\n\n\n\n\n\n\nBioinformatics\n\n\nR\n\n\nTranscriptomics\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "Bioinformatics BootCamp\n\n\n\n\n\n\n\nBioinformatics\n\n\nBootCamp\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nData Analysis with R\n\n\n\n\n\n\n\nR Programming\n\n\nData Analysi\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nMachine Learning for Bioinformatics with Python\n\n\n\n\n\n\n\nMachine Learning\n\n\nBioinformatics\n\n\nOmics Data Science\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nPublic Health Insights: Clinical Reporting Using {gtsummary}\n\n\n\n\n\n\n\nWorkshop\n\n\nPublic Health\n\n\nClinical Reporting\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nR for Bioinformatics\n\n\n\n\n\n\n\nResearch\n\n\nData Analysis\n\n\nPublic Health\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nR for Research\n\n\n\n\n\n\n\nResearch\n\n\nData Analysis\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nRNA-seq Data Aanalysis with R\n\n\n\n\n\n\n\nBioinformatics\n\n\nR\n\n\nTranscriptomics\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nResearch Data Analysis with SPSS\n\n\n\n\n\n\n\nResearch\n\n\nData Analysis\n\n\nPublic Health\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nSingle-Cell RNA-Seq Analysis with R\n\n\n\n\n\n\n\nBioinformatics\n\n\nR\n\n\nTranscriptomics\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nTCGA Data Analysis with R\n\n\n\n\n\n\n\nBioinformatics\n\n\nR Programming\n\n\nTranscriptomics\n\n\nTCGA\n\n\nCancer\n\n\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "teaching/data-analysis-with-r/index.html",
@@ -1671,5 +1671,40 @@
     "title": "",
     "section": "",
     "text": "{group=“cancer-visualizations”, height=“500”}"
+  },
+  {
+    "objectID": "teaching/tcga-data-analysis-with-r/index.html",
+    "href": "teaching/tcga-data-analysis-with-r/index.html",
+    "title": "TCGA Data Analysis with R",
+    "section": "",
+    "text": "The TCGA Data Analysis with R course is designed to equip participants with the knowledge and skills necessary to effectively analyze and interpret data from The Cancer Genome Atlas (TCGA) using the R programming language. TCGA is a valuable resource for cancer researchers, providing comprehensive genomic and clinical data on various cancer types. This course will cover essential concepts, tools, and techniques for data preprocessing, exploratory data analysis, differential gene expression analysis, survival analysis, and data visualization using R. Participants will gain hands-on experience by working with real TCGA datasets and will learn to derive meaningful insights from complex cancer genomics data."
+  },
+  {
+    "objectID": "teaching/tcga-data-analysis-with-r/index.html#course-description",
+    "href": "teaching/tcga-data-analysis-with-r/index.html#course-description",
+    "title": "TCGA Data Analysis with R",
+    "section": "",
+    "text": "The TCGA Data Analysis with R course is designed to equip participants with the knowledge and skills necessary to effectively analyze and interpret data from The Cancer Genome Atlas (TCGA) using the R programming language. TCGA is a valuable resource for cancer researchers, providing comprehensive genomic and clinical data on various cancer types. This course will cover essential concepts, tools, and techniques for data preprocessing, exploratory data analysis, differential gene expression analysis, survival analysis, and data visualization using R. Participants will gain hands-on experience by working with real TCGA datasets and will learn to derive meaningful insights from complex cancer genomics data."
+  },
+  {
+    "objectID": "teaching/tcga-data-analysis-with-r/index.html#learning-objectives",
+    "href": "teaching/tcga-data-analysis-with-r/index.html#learning-objectives",
+    "title": "TCGA Data Analysis with R",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nIntroduce you to the TCGA (The Cancer Genome Atlas) data available at the NCI’s Genomic Data Commons (GDC).\nDemonstrate how to access and import TCGA data using the R/Bioconductor package TCGAbiolinks (Colaprico et al. 2015).\nProvide instruction to visualize copy number alteration and mutation data using the R/Bioconductor package maftools."
+  },
+  {
+    "objectID": "teaching/tcga-data-analysis-with-r/index.html#pre-requisites",
+    "href": "teaching/tcga-data-analysis-with-r/index.html#pre-requisites",
+    "title": "TCGA Data Analysis with R",
+    "section": "Pre-requisites",
+    "text": "Pre-requisites\n\nBasic knowledge of R syntax\nUnderstand the pipe operator (“%&gt;%”) (help material https://r4ds.had.co.nz/pipes.html)\nUnderstand the SummarizedExperiment data structure (help material http://bioconductor.org/packages/SummarizedExperiment/)"
+  },
+  {
+    "objectID": "teaching/tcga-data-analysis-with-r/index.html#course-format",
+    "href": "teaching/tcga-data-analysis-with-r/index.html#course-format",
+    "title": "TCGA Data Analysis with R",
+    "section": "Course Format",
+    "text": "Course Format\nThe course will be delivered through a combination of lectures, hands-on practical sessions, and interactive discussions. Participants will have access to real TCGA datasets and will be guided through step-by-step analysis using R. Additionally, participants will be provided with relevant learning resources, including code examples and data repositories, to support their learning outside the course hours.\nProgram Website\n\nApply to the Program"
   }
 ]
