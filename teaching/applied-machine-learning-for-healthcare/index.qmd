@@ -1,0 +1,31 @@
+---
+title: "Applied Machine Learning for Healthcare (AML4H)"
+categories: [Python, Machine Learning, Healthcare, Health Data]
+image: "logo.png"
+---
+
+## Overview
+Applied Machine Learning for Healthcare (AML4H) is an advanced-level course that focuses on the intersection of machine learning and healthcare. This course is designed to provide students with the knowledge and skills needed to effectively apply machine learning techniques to healthcare data, leading to improved medical diagnostics, treatment plans, and patient outcomes. Through a combination of lectures, hands-on projects, and case studies, students will gain a deep understanding of the challenges and opportunities in this rapidly evolving field.
+
+
+
+## Learning Objectives
+
+Upon completion of the course, students will be able to:
+
+- Understand the unique characteristics and challenges of healthcare data.
+- Identify and preprocess various types of healthcare data, including electronic health records (EHR), medical images, and genomics data.
+- Apply a wide range of machine learning algorithms to healthcare problems, such as classification, regression, clustering, and sequence analysis.
+- Evaluate the performance of machine learning models using appropriate metrics for healthcare tasks.
+- Interpret and communicate the results of machine learning models to healthcare professionals and stakeholders.
+- Explore ethical considerations and potential biases when applying machine learning in healthcare.
+- Implement techniques to handle imbalanced datasets and small sample sizes common in medical applications.
+- Develop predictive models for disease diagnosis, prognosis, and patient risk stratification.
+- Utilize deep learning techniques for medical image analysis, such as image segmentation and object detection.
+
+
+```{=html}
+<a href="https://github.com/chiraltraining/PY4HDS" class="btn btn-primary rounded-pill me-2">Program Website</a>
+
+<a href="" class="btn btn-primary rounded-pill">Apply to the Program</a>
+```

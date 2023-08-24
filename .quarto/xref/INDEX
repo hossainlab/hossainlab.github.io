@@ -376,5 +376,8 @@
   },
   "teaching/python-for-health-data-analysis/index.qmd": {
     "index.html": "62b7bbf1"
+  },
+  "teaching/applied-machine-learning-for-healthcare/index.qmd": {
+    "index.html": "94eabab8"
   }
 }

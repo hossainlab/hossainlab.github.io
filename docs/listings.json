@@ -48,6 +48,7 @@
   {
     "listing": "/teaching.html",
     "items": [
+      "/teaching/applied-machine-learning-for-healthcare/index.html",
       "/teaching/bioinformatics-bootcamp/index.html",
       "/teaching/data-analysis-with-r/index.html",
       "/teaching/ml-for-bioinformatics/index.html",
