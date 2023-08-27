@@ -20,7 +20,7 @@ project:
 execute:
   # Re-render only when source changes
   freeze: auto
-description-meta: "Jubayer Hossain's personal website."
+description-meta: "Personal Website for Md. Jubayer Hossain (Learner, Educator and Data Analyst)"
 engine: knitr
 
 
