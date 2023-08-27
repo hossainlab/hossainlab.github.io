@@ -60,6 +60,8 @@ website:
           file: index.qmd
         - text: "Blog"
           file: blog.qmd
+        - text: "Research"
+          file: research.qmd
         - text: "Publications"
           file: publications.qmd
         - text: "Projects"

@@ -1,0 +1,40 @@
+---
+pagetitle: "Research | Jubayer Hossain"
+title: "Research Projects"
+page-layout: full
+title-block-banner: false
+comments: false
+---
+
+:::  panel-tabset
+# AI for Healthcare  
+## AI-Based Approaches to Improving eHealth Literacy and Combating Infodemic
+
+**Team:** Md. Jubayer Hossain (Team Lead)
+
+### Abstract 
+The rapid evolution of digital health platforms and the proliferation of online health information have highlighted the critical importance of eHealth literacy. However, the current digital landscape also gives rise to the spread of misinformation, leading to an infodemic that can have detrimental effects on public health. This paper explores how artificial intelligence (AI) can be harnessed to enhance eHealth literacy and counter the challenges posed by the infodemic.
+
+This study employs a comprehensive review of existing literature and case studies, focusing on AI-driven solutions aimed at improving eHealth literacy and mitigating the impact of health-related misinformation. Examples include chatbots that provide accurate health information, AI-powered content verification tools, and personalized eHealth platforms.
+
+Leveraging AI to enhance eHealth literacy offers a promising avenue for tackling the challenges posed by the infodemic. By tailoring information delivery to users' needs, AI can foster a better understanding of health information and encourage critical thinking. Moreover, AI's capability to identify and combat misinformation contributes to a more informed and resilient society. Collaborative efforts among technology developers, healthcare professionals, and policymakers are crucial to realizing the full potential of AI in promoting accurate health information and mitigating the harmful effects of the infodemic.
+
+### Public Health Relevance Statement
+In response to the evolving landscape of digital health information and the challenges posed by the rapid spread of misinformation, innovative AI-based solutions have emerged as powerful tools to enhance eHealth literacy and mitigate the impact of infodemics. By leveraging natural language processing and machine learning algorithms, these approaches can efficiently analyze and categorize health-related content, providing individuals with accurate and tailored information. Through personalized recommendations, interactive educational platforms, and real-time fact-checking, AI-driven interventions hold the potential to empower individuals with the skills and knowledge necessary to make informed decisions about their health, thereby fostering healthier communities and curbing the detrimental effects of rampant misinformation.
+
+**Keywords:** eHealth literacy, infodemic, artificial intelligence, misinformation, health information, digital health.
+
+# Geospatial Health 
+## Monitoring Water-borne and Vector-borne Disease Using NASA Earth Observing Data 
+
+**Team:** Md. Jubayer Hossain (Team Lead)
+
+### Abstract 
+The utilization of NASA Earth Observing Data for monitoring water-borne and vector-borne diseases presents a promising approach to advancing public health surveillance and response systems. This project explores the integration of satellite imagery, climate data, and geographic information systems (GIS) to enhance the detection, prediction, and management of diseases transmitted through water and vectors. By harnessing the power of remote sensing technology, this research highlights the potential to identify disease hotspots, track environmental risk factors, and inform targeted interventions. The interdisciplinary collaboration between space agencies and public health entities opens new avenues for early warning systems and evidence-based decision-making, ultimately contributing to the reduction of disease burdens and the promotion of global health.
+
+### Public Health Relevance Statement
+In the ongoing battle against water-borne and vector-borne diseases, the synergy between NASA Earth Observing Data and public health objectives marks a pivotal advancement. By leveraging satellite imagery and climate information, we can enhance our understanding of disease dynamics, identifying regions vulnerable to outbreaks and improving our preparedness. This integration allows for proactive measures, such as deploying resources for disease prevention, implementing targeted vector control, and disseminating timely health advisories to affected populations. As climate change continues to impact disease transmission patterns, harnessing the insights from remote sensing data becomes essential for public health agencies, aiding in their mission to safeguard communities, reduce illness burdens, and save lives.
+
+**Keyword:** Water-borne diseases, factors, vibrio cholerae, public health, health impacts, calamities, water.
+
+::: 
