@@ -41,3 +41,26 @@ comments: false
 - [Dask](https://www.dask.org/) for big data analysis 
 - [scikit-learn](https://scikit-learn.org/stable/) for machine learning 
 - [scikit-image](https://scikit-image.org/) for life science image manipulation 
+
+## Data and Tools for Cancer Genomics  
+
+- [The Cancer Genome Atlas (TCGA):](https://portal.gdc.cancer.gov/) TCGA is a comprehensive collection of multi-dimensional cancer genomics data covering multiple cancer types.
+- [International Cancer Genome Consortium (ICGC):](https://icgc.org/) Description: ICGC provides high-quality genomic and clinical data from various cancer projects worldwide.
+- [Gene Expression Omnibus (GEO):](https://www.ncbi.nlm.nih.gov/geo/) GEO is a public repository hosted by the National Center for Biotechnology Information (NCBI) containing a vast collection of gene expression data, including cancer datasets.
+- [European Genome-phenome Archive (EGA):](https://ega-archive.org/) Description: EGA is a repository for secure storage and sharing of human genetic and phenotypic data, including cancer datasets.
+- [National Cancer Institute (NCI) Genomic Data Commons (GDC):](https://gdc.cancer.gov/) Description: GDC is an open-access data portal providing access to a wide range of cancer genomics datasets.
+
+- [OncoLnc](http://www.oncolnc.org/): Description: OncoLnc is a web resource that provides survival analysis and expression correlation for genes of interest across multiple cancer datasets.
+
+- [UCSC Cancer Genomics Browser:](https://genome-cancer.ucsc.edu/) The UCSC Cancer Genomics Browser offers a comprehensive collection of cancer genomics data integrated with genomic annotations.
+
+- [GREIN : GEO RNA-seq Experiments Interactive Navigator:](http://www.ilincs.org/apps/grein/) GREIN is an interactive web platform that provides user-friendly options to explore and analyze GEO RNA-seq data. GREIN is powered by the back-end computational pipeline for uniform processing of RNA-seq data and the large number (>6,000) of already processed datasets. These datasets were retrieved from GEO and reprocessed consistently by the back-end GEO RNA-seq experiments processing pipeline (GREP2).
+
+- [GEPIA2](http://gepia2.cancer-pku.cn/): GEPIA2 is a web-based tool for analyzing gene expression data in cancer. It stands for Gene Expression Profiling Interactive Analysis 2 and is an updated version of the original GEPIA tool. GEPIA2 allows users to explore gene expression patterns, perform survival analyses, and visualize gene expression data across various cancer types.
+
+- [UALCAN](http://ualcan.path.uab.edu/): UALCAN is a web-based platform that provides interactive and comprehensive analysis of cancer transcriptome data. It enables users to explore gene expression patterns, perform survival analyses, and compare gene expression between tumor and normal samples across different cancer types. UALCAN utilizes data from The Cancer Genome Atlas (TCGA) to facilitate cancer research and provide insights into tumor biology.
+
+- [cBioPortal for Cancer Genomics:](https://www.cbioportal.org/): cBioPortal hosts a large collection of cancer genomics datasets, allowing users to explore and visualize the data.
+
+- [ONCOMINE](https://www.oncomine.org/resource/login.html): ONCOMINE is a powerful web-based platform for the analysis and visualization of cancer transcriptomic data. It provides researchers with access to a vast collection of publicly available gene expression datasets derived from cancer studies. ONCOMINE allows users to explore gene expression patterns, identify potential biomarkers, and compare gene expression between different cancer types or subtypes.
+
