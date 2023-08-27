@@ -3,7 +3,7 @@ pagetitle: "Home | Jubayer Hossain"
 title: "Md. Jubayer Hossain"
 subtitle: "Learner, Educator, Data Analyst"
 page-layout: full
-image: files/profiles/hossainmj.png
+image: files/profiles/profile.png
 about:
   id: hero-heading
   template: trestles
