@@ -1,6 +1,7 @@
 ---
 title: "Unlocking the Power of Data: Join the Journey on My Blog!"
 date: "2022-10-22"
+citation: true
 categories: [News]
 ---
 
