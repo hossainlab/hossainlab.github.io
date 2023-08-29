@@ -4,6 +4,7 @@ title: "Research Projects"
 page-layout: full
 title-block-banner: false
 comments: false
+callout-icon: false
 ---
 
 :::  panel-tabset
@@ -36,5 +37,19 @@ The utilization of NASA Earth Observing Data for monitoring water-borne and vect
 In the ongoing battle against water-borne and vector-borne diseases, the synergy between NASA Earth Observing Data and public health objectives marks a pivotal advancement. By leveraging satellite imagery and climate information, we can enhance our understanding of disease dynamics, identifying regions vulnerable to outbreaks and improving our preparedness. This integration allows for proactive measures, such as deploying resources for disease prevention, implementing targeted vector control, and disseminating timely health advisories to affected populations. As climate change continues to impact disease transmission patterns, harnessing the insights from remote sensing data becomes essential for public health agencies, aiding in their mission to safeguard communities, reduce illness burdens, and save lives.
 
 **Keyword:** Water-borne diseases, factors, vibrio cholerae, public health, health impacts, calamities, water.
+
+
+# Public Health 
+## Prevention and Control of Thalassemia in Bangladesh 
+### Abstract 
+Thalassemia, a hereditary blood disorder characterized by abnormal hemoglobin production, poses a significant public health challenge in Bangladesh. This project outlines a comprehensive initiative aimed at the prevention and control of thalassemia within the country. The multifaceted approach integrates awareness campaigns, genetic screening, accessible healthcare services, and community engagement to mitigate the prevalence and impact of thalassemia.
+
+The project's primary objectives include raising public awareness about thalassemia, educating communities about its genetic nature, and promoting informed family planning decisions. Additionally, the initiative seeks to establish a robust infrastructure for genetic screening, enabling early detection and intervention. This involves collaboration with healthcare institutions, laboratories, and medical professionals to ensure accurate and affordable testing.
+
+To ensure equitable access to quality healthcare, the project focuses on enhancing healthcare facilities' capacity to provide specialized thalassemia care. This involves training healthcare personnel, ensuring the availability of necessary treatments, and creating a supportive environment for patients and their families. Moreover, the project emphasizes the importance of support groups and counseling services to address the psychological and emotional aspects of thalassemia.
+
+### Public Health Relevance Statement
+This project's importance within the realm of public health cannot be overstated. By focusing on awareness campaigns and educational initiatives, the project aims to dispel misconceptions surrounding thalassemia, empower communities with accurate information, and reduce the stigma attached to the disorder. This proactive approach fosters a culture of informed decision-making, particularly in matters of family planning and genetic counseling.
+
 
 ::: 

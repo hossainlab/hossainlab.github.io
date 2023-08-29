@@ -1866,7 +1866,7 @@
     "href": "research.html",
     "title": "Research Projects",
     "section": "",
-    "text": "AI for Good"
+    "text": ":::"
   },
   {
     "objectID": "research.html#ai-based-approaches-to-improving-ehealth-literacy-and-combating-infodemic",
@@ -1888,5 +1888,19 @@
     "title": "Research Projects",
     "section": "Monitoring Water-borne and Vector-borne Disease Using NASA Earth Observing Data",
     "text": "Monitoring Water-borne and Vector-borne Disease Using NASA Earth Observing Data\nTeam: Md. Jubayer Hossain (Team Lead)\n\nAbstract\nThe utilization of NASA Earth Observing Data for monitoring water-borne and vector-borne diseases presents a promising approach to advancing public health surveillance and response systems. This project explores the integration of satellite imagery, climate data, and geographic information systems (GIS) to enhance the detection, prediction, and management of diseases transmitted through water and vectors. By harnessing the power of remote sensing technology, this research highlights the potential to identify disease hotspots, track environmental risk factors, and inform targeted interventions. The interdisciplinary collaboration between space agencies and public health entities opens new avenues for early warning systems and evidence-based decision-making, ultimately contributing to the reduction of disease burdens and the promotion of global health.\n\n\nPublic Health Relevance Statement\nIn the ongoing battle against water-borne and vector-borne diseases, the synergy between NASA Earth Observing Data and public health objectives marks a pivotal advancement. By leveraging satellite imagery and climate information, we can enhance our understanding of disease dynamics, identifying regions vulnerable to outbreaks and improving our preparedness. This integration allows for proactive measures, such as deploying resources for disease prevention, implementing targeted vector control, and disseminating timely health advisories to affected populations. As climate change continues to impact disease transmission patterns, harnessing the insights from remote sensing data becomes essential for public health agencies, aiding in their mission to safeguard communities, reduce illness burdens, and save lives.\nKeyword: Water-borne diseases, factors, vibrio cholerae, public health, health impacts, calamities, water."
+  },
+  {
+    "objectID": "research.html#thalassemia-prevention-and-control",
+    "href": "research.html#thalassemia-prevention-and-control",
+    "title": "Research Projects",
+    "section": "Thalassemia Prevention and Control",
+    "text": "Thalassemia Prevention and Control\n\n\n\n\n\n\nThalassemia Prevention and Control\n\n\n\n\n\nThis is a callout with a title."
+  },
+  {
+    "objectID": "research.html#prevention-and-control-of-thalassemia-in-bangladesh",
+    "href": "research.html#prevention-and-control-of-thalassemia-in-bangladesh",
+    "title": "Research Projects",
+    "section": "Prevention and Control of Thalassemia in Bangladesh",
+    "text": "Prevention and Control of Thalassemia in Bangladesh\n\nAbstract\nThalassemia, a hereditary blood disorder characterized by abnormal hemoglobin production, poses a significant public health challenge in Bangladesh. This project outlines a comprehensive initiative aimed at the prevention and control of thalassemia within the country. The multifaceted approach integrates awareness campaigns, genetic screening, accessible healthcare services, and community engagement to mitigate the prevalence and impact of thalassemia.\nThe project’s primary objectives include raising public awareness about thalassemia, educating communities about its genetic nature, and promoting informed family planning decisions. Additionally, the initiative seeks to establish a robust infrastructure for genetic screening, enabling early detection and intervention. This involves collaboration with healthcare institutions, laboratories, and medical professionals to ensure accurate and affordable testing.\nTo ensure equitable access to quality healthcare, the project focuses on enhancing healthcare facilities’ capacity to provide specialized thalassemia care. This involves training healthcare personnel, ensuring the availability of necessary treatments, and creating a supportive environment for patients and their families. Moreover, the project emphasizes the importance of support groups and counseling services to address the psychological and emotional aspects of thalassemia."
   }
 ]
