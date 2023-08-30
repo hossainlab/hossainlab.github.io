@@ -730,23 +730,23 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "Md. Jubayer Hossain",
+    "title": "About me",
     "section": "",
     "text": "CHIRAL Bangladesh | Dhaka, Bangladesh Founder & Management Lead | 2020–Current Lead Organizer & Instructor of the CHIRAL Training | 2019–Current Program Lead of the Research Internship Program| 2023–Current\nJagannath University, Dhaka | Dhaka, Bangladesh Teaching Assistant, Department of Microbiology | 2022–2023\n\n\n\n\n\nJagannath University, Dhaka | Dhaka, Bangladesh MS in Microbiology | 2019–2020\nJagannath University, Dhaka | Dhaka, Bangladesh BS in Microbiology | 2016–2019"
   },
   {
     "objectID": "about.html#experience",
     "href": "about.html#experience",
-    "title": "Md. Jubayer Hossain",
+    "title": "About me",
     "section": "",
     "text": "CHIRAL Bangladesh | Dhaka, Bangladesh Founder & Management Lead | 2020–Current Lead Organizer & Instructor of the CHIRAL Training | 2019–Current Program Lead of the Research Internship Program| 2023–Current\nJagannath University, Dhaka | Dhaka, Bangladesh Teaching Assistant, Department of Microbiology | 2022–2023"
   },
   {
     "objectID": "about.html#education",
     "href": "about.html#education",
-    "title": "Md. Jubayer Hossain",
-    "section": "",
-    "text": "Jagannath University, Dhaka | Dhaka, Bangladesh MS in Microbiology | 2019–2020\nJagannath University, Dhaka | Dhaka, Bangladesh BS in Microbiology | 2016–2019"
+    "title": "About me",
+    "section": "Education",
+    "text": "Education\n\nJagannath University, Dhaka | Dhaka, Bangladesh MS in Microbiology | 2019–2020\nJagannath University, Dhaka | Dhaka, Bangladesh BS in Microbiology | 2016–2019"
   },
   {
     "objectID": "about_template.html",
@@ -1901,6 +1901,20 @@
     "href": "research.html#prevention-and-control-of-thalassemia-in-bangladesh",
     "title": "Research Projects",
     "section": "Prevention and Control of Thalassemia in Bangladesh",
-    "text": "Prevention and Control of Thalassemia in Bangladesh\n\nAbstract\nThalassemia, a hereditary blood disorder characterized by abnormal hemoglobin production, poses a significant public health challenge in Bangladesh. This project outlines a comprehensive initiative aimed at the prevention and control of thalassemia within the country. The multifaceted approach integrates awareness campaigns, genetic screening, accessible healthcare services, and community engagement to mitigate the prevalence and impact of thalassemia.\nThe project’s primary objectives include raising public awareness about thalassemia, educating communities about its genetic nature, and promoting informed family planning decisions. Additionally, the initiative seeks to establish a robust infrastructure for genetic screening, enabling early detection and intervention. This involves collaboration with healthcare institutions, laboratories, and medical professionals to ensure accurate and affordable testing.\nTo ensure equitable access to quality healthcare, the project focuses on enhancing healthcare facilities’ capacity to provide specialized thalassemia care. This involves training healthcare personnel, ensuring the availability of necessary treatments, and creating a supportive environment for patients and their families. Moreover, the project emphasizes the importance of support groups and counseling services to address the psychological and emotional aspects of thalassemia."
+    "text": "Prevention and Control of Thalassemia in Bangladesh\n\nAbstract\nThalassemia, a hereditary blood disorder characterized by abnormal hemoglobin production, poses a significant public health challenge in Bangladesh. This project outlines a comprehensive initiative aimed at the prevention and control of thalassemia within the country. The multifaceted approach integrates awareness campaigns, genetic screening, accessible healthcare services, and community engagement to mitigate the prevalence and impact of thalassemia.\nThe project’s primary objectives include raising public awareness about thalassemia, educating communities about its genetic nature, and promoting informed family planning decisions. Additionally, the initiative seeks to establish a robust infrastructure for genetic screening, enabling early detection and intervention. This involves collaboration with healthcare institutions, laboratories, and medical professionals to ensure accurate and affordable testing.\nTo ensure equitable access to quality healthcare, the project focuses on enhancing healthcare facilities’ capacity to provide specialized thalassemia care. This involves training healthcare personnel, ensuring the availability of necessary treatments, and creating a supportive environment for patients and their families. Moreover, the project emphasizes the importance of support groups and counseling services to address the psychological and emotional aspects of thalassemia.\n\n\nPublic Health Relevance Statement\nThis project’s importance within the realm of public health cannot be overstated. By focusing on awareness campaigns and educational initiatives, the project aims to dispel misconceptions surrounding thalassemia, empower communities with accurate information, and reduce the stigma attached to the disorder. This proactive approach fosters a culture of informed decision-making, particularly in matters of family planning and genetic counseling."
+  },
+  {
+    "objectID": "about.html#research-experience",
+    "href": "about.html#research-experience",
+    "title": "About me",
+    "section": "Research Experience",
+    "text": "Research Experience\nFounder & Management Lead | Center for Health Innovation, Research Action, and Learning - Bangladesh (CHIRAL Bangladesh) | Dhaka, Bangladesh | (2020 - Present)\nThe Center for Health Innovation, Research, Action and Learning – Bangladesh (CHIRAL Bangladesh) is a voluntary non-profit research organization, resolving to promote interdisciplinary research in the field of health data science, computational biology and genomics. As the Founder & Management Lead at CHIRAL Bangladesh, I established and now lead a pioneering healthcare innovation and research center dedicated to driving positive change in the health sector. Our focus lies in fostering innovation, conducting impactful research, and facilitating continuous learning to enhance healthcare practices in Bangladesh.\nResearch Intern | Health Systems and Population Health Studies Division | International Centre for Diarrhoeal Disease Research, Bangladesh) | Dhaka, Bangladesh | (February 2022 - June 2022)\nAs a Research Intern in the Health Systems and Population Health Studies Division at icddr,b, I had the opportunity to contribute to impactful research projects focusing on health systems and population health. Working in a dynamic research environment, I gained valuable insights into the complexities of healthcare challenges and solutions."
+  },
+  {
+    "objectID": "about.html#teaching-experience",
+    "href": "about.html#teaching-experience",
+    "title": "About me",
+    "section": "Teaching Experience",
+    "text": "Teaching Experience\nInstructor | Center for Bioinformatics Learning Advancement and Systematic Training (cBLAST) | Dhaka, Bangladesh | (August 2023 - Present)\nAs an Instructor at cBLAST, I contribute to the advancement of bioinformatics knowledge and skills by designing and delivering engaging educational programs. Through hands-on training and systematic learning, I empower students and professionals to harness the potential of bioinformatics in various scientific and healthcare applications.\nProgram Lead | Research Internship Program | Center for Health Innovation, Research Action, and Learning - Bangladesh (CHIRAL Bangladesh) | Dhaka, Bangladesh | (January 2023 - Present)\nIn my capacity as the Program Lead for the Research Internship Program at CHIRAL Bangladesh, I am responsible for overseeing the planning, execution, and impact of the internship program. I play a pivotal role in providing aspiring researchers with valuable learning experiences in the healthcare innovation and research domain.\nTeaching Assistant | Public Health & Hygiene, Department of Microbiology | Jagannath University) | Dhaka, Bangladesh | (October 2022 - December 2022)\nAs a Teaching Assistant for the Public Health & Hygiene course, I provided vital support to the Department of Microbiology at Jagannath University. I assisted in delivering an impactful educational experience that emphasized public health principles and hygiene practices to aspiring microbiologists."
   }
 ]

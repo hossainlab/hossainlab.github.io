@@ -43,6 +43,7 @@ I am interested in applying modern data science techniques in the context of dis
 **Team Member** \|  [Bio-Bio-1:: Bioinformatics Research Discussion Group)]() \|  Dhaka, Bangladesh \| (February 2017 - June 2019)
 
 # **Skills**
+
 **Programming Languages:** Python, R, SQL, Julia, JavaScript; **Data Science:** scikit-learn, PyCaret, Dask, PySpark; **GIS & Remote Sensing:** ArcGIS, Geopandas, Xarray, Giovani, Google Earth Engiine; **Analytics Softwares:** SPSS, PowerBI, Microsoft Excel; **Survey Tools:** RedCap, KoboToolBox, EpiCollect, Google Forms; **Academic Writing Tools:** Microsoft Word, LaTeX, Mendeley; **Bioinformatics:** BioPython, Bioconductor, BioPandas, Galaxy, NGS, RNASeq, ssRNASeq; **Miscellaneous Skills:** UNIX, Version Control(Git), Web Scraping, APIs
 
 

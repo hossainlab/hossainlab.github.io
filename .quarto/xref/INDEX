@@ -382,5 +382,8 @@
   },
   "teaching/python-for-geospatial-health-data-science/index.qmd": {
     "index.html": "60b782d4"
+  },
+  "certifications.qmd": {
+    "certifications.html": "5ecc1a34"
   }
 }
