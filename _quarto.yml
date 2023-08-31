@@ -72,7 +72,7 @@ website:
           href: talks.qmd
         - text: "Teaching"
           file: teaching.qmd
-        - text: "DataViz Gallery"
+        - text: "Gallery"
           file: gallery.qmd
         - text: "What I Use"
           file: use.qmd

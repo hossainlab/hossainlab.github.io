@@ -1,0 +1,12 @@
+---
+title: "Data Professionals Survey Report"
+description: "The aims of this dashboard is to explore the dataprofessionals activity and their perceptions."
+image: featured.png
+image-height: "500"
+image-width: "1200"
+categories:
+  - PowerBI Dashboard
+  - Visualization
+---
+
+

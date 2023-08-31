@@ -5,8 +5,13 @@ filters:
 lightbox: auto
 ---
 
-::: {style="display: grid;grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));grid-gap: 1em;"}
+::: {style="display: grid;grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));grid-gap: 1em;"}
 
-![](./gallery/cancer/pancancer-plot.png){group="cancer-visualizations"}
+![](./gallery/dashboards/dengue-dashboard.png){group="dashboard"}
+
+![](./gallery/dashboards/school-distance-learning.png){group="dashboard"}
+
+![](./gallery/dashboards/data-professionals.png){group="dashboard"}
+
 
 :::

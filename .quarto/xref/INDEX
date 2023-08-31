@@ -385,5 +385,20 @@
   },
   "certifications.qmd": {
     "certifications.html": "5ecc1a34"
+  },
+  "projects/dengue-situation-dashboard/index.qmd": {
+    "index.html": "f0758f2c"
+  },
+  "projects/amazon-top-50-bestselling-books-dashboard/index.qmd": {
+    "index.html": "5fae03c0"
+  },
+  "projects/data-professionals-survey-report/index.qmd": {
+    "index.html": "6c2d35b8"
+  },
+  "projects/health-impact-of-distance-learning-on-high-school-students/index.qmd": {
+    "index.html": "0ceb3594"
+  },
+  "projects/monkeypox-data-explorer/index.qmd": {
+    "index.html": "0e45e31b"
   }
 }

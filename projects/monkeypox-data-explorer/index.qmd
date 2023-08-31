@@ -1,0 +1,7 @@
+---
+title: "Monkeypox Data Explorer"
+description: "Visualizing the data produced by the World Health Organization on the 2022 monkeypox outbreak."
+image: featured.png 
+categories:
+  - Flexdashboard
+---

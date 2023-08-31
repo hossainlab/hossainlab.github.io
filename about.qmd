@@ -14,13 +14,16 @@ I am *[Md. Jubayer Hossain](https://hossainlab.github.io/)*. I am the founder of
 
 I am interested in applying modern data science techniques in the context of disease diagnosis and large data analytics for public health while focusing on bridging the gap between computational and experimental laboratories through highly engaging and fruitful collaborations.
 
+# Research Interests
+
+
 # Education
 
 - **Jagannath University, Dhaka** | Dhaka, Bangladesh<br />
-  MS in Microbiology | 2019–2020
+  Master of Science in Microbiology | 2019–2020
 
 - **Jagannath University, Dhaka** | Dhaka, Bangladesh<br />
-  BS in Microbiology | 2016–2019
+  Bachelor of Science in Microbiology | 2016–2019
 
 # Experience
 
@@ -56,6 +59,13 @@ As a dedicated member of the Bio-Bio-1 Bioinformatics Research Discussion Group,
 
 # Skills
 
+**Programming Languages:** Python, R, SQL, Julia, JavaScript; **Data Science:** scikit-learn, PyCaret, Dask, PySpark; **GIS & Remote Sensing:** ArcGIS, Geopandas, Xarray, Giovani, Google Earth Engiine; **Analytics Softwares:** SPSS, PowerBI, Microsoft Excel; **Survey Tools:** RedCap, KoboToolBox, EpiCollect, Google Forms; **Academic Writing Tools:** Microsoft Word, LaTeX, Mendeley; **Bioinformatics:** BioPython, Bioconductor, BioPandas, Galaxy, NGS, RNASeq, ssRNASeq; **Miscellaneous Skills:** UNIX, Version Control(Git), Web Scraping, APIs
+
+
 # Accomplishments
+
+
+
+
 :::
 

@@ -1,0 +1,16 @@
+{
+  "hash": "3078c039bc010c2329ee13e2781fd0cf",
+  "result": {
+    "markdown": "---\npagetitle: \"Visualization Gallery | Jubayer Hossain\"\nfilters:\n   - lightbox\nlightbox: auto\n---\n\n\n::: {style=\"display: grid;grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));grid-gap: 1em;\"}\n\n![](./gallery/cancer/pancancer-plot.png){group=\"cancer-visualizations\"}\n\n![](./gallery/dashboards/dengue-dashboard.png){group=\"dashboard\"}\n\n\n\n::: {.cell lightbox='{\"group\":\"r-graph\",\"description\":\"This is 1 to 10 plot\"}'}\n\n```{.r .cell-code}\nplot(1:10, rnorm(10))\n```\n\n::: {.cell-output-display}\n![Simple demo R plot](gallery_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\n:::",
+    "supporting": [
+      "gallery_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

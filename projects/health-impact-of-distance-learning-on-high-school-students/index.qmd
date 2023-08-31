@@ -1,0 +1,7 @@
+---
+title: "Health Impact of Distance Learning on High School Students"
+description: "The aim of this survey is to determine the health impact of distance learning on high school students during the COVID-19 pandemic."
+image: featured.png 
+categories:
+  - PowerBI Dashboard
+---
