@@ -1,7 +1,0 @@
----
-title: "Amazon Top 50 Bestselling Booksd"
-description: "Amazon Top 50 Bestselling Books Dashboard using flexdashboard and highercharter"
-image: featured.png 
-categories:
-  - Flexdashboard
----

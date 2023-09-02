@@ -400,5 +400,17 @@
   },
   "projects/monkeypox-data-explorer/index.qmd": {
     "index.html": "0e45e31b"
+  },
+  "projects/2022-12-26-monkeypox-data-explorer/index.qmd": {
+    "index.html": "9b435622"
+  },
+  "projects/2023-01-02-data-professionals-survey-report/index.qmd": {
+    "index.html": "8e0da099"
+  },
+  "projects/2023-01-02-health-impact-of-distance-learning-on-high-school-students/index.qmd": {
+    "index.html": "ea3517ac"
+  },
+  "teaching/building-dashboard-with-r/index.qmd": {
+    "index.html": "5f719b3e"
   }
 }
