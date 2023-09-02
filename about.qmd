@@ -18,8 +18,6 @@ I am interested in applying modern data science techniques in the context of dis
 
 - **Public Health:** My research is centered on understanding and enhancing the quality of life for individuals and communities. I explore various aspects of well-being, including physical, mental, social, and environmental factors that influence people's overall satisfaction and happiness. Through empirical studies and interdisciplinary approaches, I aim to identify strategies and interventions that can improve the quality of life, promote resilience, and create more equitable and fulfilling living conditions for diverse populations.
 
-
-
 - **Multi-Omics Data Integration:** I am deeply engaged in the integration of multi-omics data sets, including genomics, transcriptomics, proteomics, and more. This holistic approach allows me to gain a comprehensive view of the molecular landscape of cancer. By analyzing multiple layers of molecular information, I strive to identify novel biomarkers, therapeutic targets, and pathways that can significantly impact cancer diagnosis and treatment.
 
 ::: {layout-ncol=2}

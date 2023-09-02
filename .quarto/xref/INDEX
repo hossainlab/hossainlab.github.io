@@ -412,5 +412,8 @@
   },
   "teaching/building-dashboard-with-r/index.qmd": {
     "index.html": "5f719b3e"
+  },
+  "blog/multi-omics-data-integration/index.qmd": {
+    "index.html": "554f9ae3"
   }
 }
