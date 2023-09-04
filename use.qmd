@@ -170,6 +170,17 @@ comments: false
 
 - [ONCOMINE](https://www.oncomine.org/resource/login.html): ONCOMINE is a powerful web-based platform for the analysis and visualization of cancer transcriptomic data. It provides researchers with access to a vast collection of publicly available gene expression datasets derived from cancer studies. ONCOMINE allows users to explore gene expression patterns, identify potential biomarkers, and compare gene expression between different cancer types or subtypes.
 
+## R Packages 
+- [TCGAbiolinks](https://bioconductor.org/packages/release/bioc/vignettes/TCGAbiolinks/inst/doc/index.html#Required_libraries): An R/Bioconductor package for integrative analysis with GDC data. TCGAbiolinks is able to access The National Cancer Institute (NCI) Genomic Data Commons (GDC) thorough its GDC Application Programming Interface (API) to search, download and prepare relevant data for analysis in R.
+
+- [maftools](https://bioconductor.org/packages/release/bioc/vignettes/maftools/inst/doc/maftools.html): Summarize, Analyze and Visualize MAF Files.  This package attempts to summarize, analyze, annotate and visualize MAF files in an efficient manner from either TCGA sources or any in-house studies as long as the data is in MAF format.
+
+- [SummarizedExperiment](https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html): The SummarizedExperiment container contains one or more assays, each represented by a matrix-like object of numeric or other mode. The rows typically represent genomic ranges of interest and the columns represent samples.
+
+- [MutationalPatterns](https://bioconductor.org/packages/release/bioc/vignettes/MutationalPatterns/inst/doc/Introduction_to_MutationalPatterns.html): Comprehensive genome-wide analysis of mutational processes. he package covers a wide range of patterns including: mutational signatures, transcriptional and replicative strand bias, lesion segregation, genomic distribution and association with genomic features, which are collectively meaningful for studying the activity of mutational processes. The package works with single nucleotide variants (SNVs), insertions and deletions (Indels), double base substitutions (DBSs) and larger multi base substitutions (MBSs). The package provides functionalities for both extracting mutational signatures de novo and determining the contribution of previously identified mutational signatures on a single sample level. MutationalPatterns integrates with common R genomic analysis workflows and allows easy association with (publicly available) annotation data.
+
+
+
 # Teaching Tools 
 - [Bioicons](https://bioicons.com/) - a collection of free drawings and diagrams on biological topics, which can be used in teaching (or research) presentations.
 - [learnr](https://rstudio.github.io/learnr/) - R package that allows development of interactive web-based R tutorials.
