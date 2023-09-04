@@ -5,3 +5,7 @@ image: featured.png
 categories:
   - Flexdashboard
 ---
+
+```{=html}
+<a href="https://hossainlab.github.io/monkeypox/" class="btn btn-primary rounded-pill me-2">Live Dashboard</a>
+```

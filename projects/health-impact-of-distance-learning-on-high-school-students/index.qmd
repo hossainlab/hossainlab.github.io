@@ -5,3 +5,7 @@ image: featured.png
 categories:
   - PowerBI Dashboard
 ---
+
+```{=html}
+<a href="https://app.powerbi.com/view?r=eyJrIjoiY2ZhNjUzN2YtYmZhNS00ZWFmLWEzNWYtNTM0NzgxNmNjYzc2IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9&pageName=ReportSection " class="btn btn-primary rounded-pill me-2">Live Dashboard</a>
+```

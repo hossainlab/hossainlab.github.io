@@ -6,8 +6,8 @@ listing:
   type: default
   image-height: 260px
   categories: true
-  sort-ui: false
-  filter-ui: false 
+  sort-ui: true 
+  filter-ui: true  
 page-layout: full
 title-block-banner: false
 comments: false

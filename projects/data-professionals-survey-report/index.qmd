@@ -10,3 +10,6 @@ categories:
 ---
 
 
+```{=html}
+<a href="https://app.powerbi.com/view?r=eyJrIjoiZWIyNWZmOWYtOTFiNi00MTVkLWFjMTAtOTU2OGJlOTJjYjcyIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9&pageName=ReportSection" class="btn btn-primary rounded-pill me-2">Live Dashboard</a>
+```

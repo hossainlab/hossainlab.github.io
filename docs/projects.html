@@ -208,6 +208,25 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-author" data-direction="asc">
+          Author
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
 <div class="list quarto-listing-default">
 <div class="quarto-post image-right" data-index="0" data-categories="Machine Learning,Physical Activity,Calories" data-listing-file-modified-sort="1692468545443" data-listing-reading-time-sort="1">
 <div class="thumbnail">
@@ -243,7 +262,7 @@ The goal of this project is to develop a machine learning model that can accurat
 <a href="./projects/Calories_Burnt/02_Calories Burnt Prediction.html"> </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="PowerBI Dashboard,Visualization" data-listing-file-modified-sort="1693470385698" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="1" data-categories="PowerBI Dashboard,Visualization" data-listing-file-modified-sort="1693852544984" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./projects/data-professionals-survey-report/index.html"> <img src="./projects/data-professionals-survey-report/featured.png" class="thumbnail-image" style="height: 260px;"> </a></p>
 </div>
@@ -342,7 +361,7 @@ This paper describes a simple method for estimating the aqueous solubility (ESOL
 <a href="./projects/ESOL/01_ESOL.html"> </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="PowerBI Dashboard" data-listing-file-modified-sort="1693470569371" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="4" data-categories="PowerBI Dashboard" data-listing-file-modified-sort="1693852586805" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./projects/health-impact-of-distance-learning-on-high-school-students/index.html"> <img src="./projects/health-impact-of-distance-learning-on-high-school-students/featured.png" class="thumbnail-image" style="height: 260px;"> </a></p>
 </div>
@@ -528,7 +547,7 @@ Chronic kidney disease (CKD) is a prevalent and potentially life-threatening con
 <a href="./projects/Choronic_Kidney/01_Choronic Kidney.html"> </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="Flexdashboard" data-listing-file-modified-sort="1693470557438" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="10" data-categories="Flexdashboard" data-listing-file-modified-sort="1693852627520" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./projects/monkeypox-data-explorer/index.html"> <img src="./projects/monkeypox-data-explorer/featured.png" class="thumbnail-image" style="height: 260px;"> </a></p>
 </div>
