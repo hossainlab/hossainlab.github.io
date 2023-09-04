@@ -3,7 +3,11 @@ pagetitle: "Projects | Jubayer Hossain"
 listing:
   contents: projects
   sort: "title"
-  type: default
+  type: grid
+  grid-columns: 2
+  grid-item-border: true 
+  grid-item-align: left
+  max-items: 10
   image-height: 260px
   categories: true
   sort-ui: true 
