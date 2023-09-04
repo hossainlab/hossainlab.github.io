@@ -8,6 +8,30 @@ comments: false
 
 :::  panel-tabset
 
+
+# Research Tools
+## Literature Review 
+- [typeset.io](https://typeset.io/) - Typeset.io is a platform designed to assist researchers, academics, and authors in the process of writing, formatting, and preparing documents for publication. 
+- [scholarcy](https://www.scholarcy.com/) - The AI-powered article summarizer. 
+- [elicit](https://elicit.org/) - AI-based research assistant. 
+
+## Journal Finders 
+- [Journal Finder by Elsevier](https://journalfinder.elsevier.com/): This tool allows you to enter your manuscript title and abstract to find journals that are a good match for your research. It also provides information on journal metrics and submission guidelines.
+
+- [Springer Journal Suggester](https://journalsuggester.springer.com/): Springer's tool helps you find the right journal for your research by analyzing your abstract or keywords and suggesting journals that publish articles in your field.
+
+- [PubMed Journal Selector](https://www.ncbi.nlm.nih.gov/pmc/journals/): If your research is in the biomedical or life sciences, PubMed's Journal Selector can assist you in finding journals that match your keywords and research area.
+
+- [JANE (Journal/Author Name Estimator)](https://jane.biosemantics.org/): JANE is a free online tool that helps you find journals and authors based on the text of your article's title and abstract.
+
+- [JournalGuide](https://www.journalguide.com/): This tool provides a comprehensive database of journals in various fields and allows you to search for journals by keywords or browse by subject area.
+
+- [Scopus Journal Finder](https://www.scopus.com/sources.uri): Scopus, a bibliographic database, offers a journal finder feature that helps you find journals related to your research area based on keywords or article titles.
+
+- [DOAJ (Directory of Open Access Journals)](https://doaj.org/): If you're interested in open-access journals, DOAJ is a directory of freely available scholarly journals that you can search by subject or keyword.
+
+- [Scimago Journal & Country Rank](https://www.scimagojr.com/): On the Scimago platform, you can find information about journals, their rankings, citation data, and more, which can be useful for researchers looking to identify suitable journals for their research or assess the impact and prestige of journals in their field. It's a valuable tool for academic research and evaluation.
+
 # R 
 ## Data Wrangling 
 - [readxl](https://readxl.tidyverse.org/) for importing data into R 
