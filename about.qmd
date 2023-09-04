@@ -20,12 +20,6 @@ I am interested in applying modern data science techniques in the context of dis
 
 - **Multi-Omics Data Integration:** I am deeply engaged in the integration of multi-omics data sets, including genomics, transcriptomics, proteomics, and more. This holistic approach allows me to gain a comprehensive view of the molecular landscape of cancer. By analyzing multiple layers of molecular information, I strive to identify novel biomarkers, therapeutic targets, and pathways that can significantly impact cancer diagnosis and treatment.
 
-::: {layout-ncol=2}
-![BRCA1 Expression Level](files/img/brca1.jpg){#fig-brca1}
-
-![BRCA2 Expression Level](files/img/brca2.jpg){#fig-brca2}
-:::
-
 # Education
 
 - **Jagannath University, Dhaka** | Dhaka, Bangladesh<br />
