@@ -18,6 +18,8 @@ I am interested in applying modern data science techniques in the context of dis
 
 - **Public Health:** My research is centered on understanding and enhancing the quality of life for individuals and communities. I explore various aspects of well-being, including physical, mental, social, and environmental factors that influence people's overall satisfaction and happiness. Through empirical studies and interdisciplinary approaches, I aim to identify strategies and interventions that can improve the quality of life, promote resilience, and create more equitable and fulfilling living conditions for diverse populations.
 
+- **AI for Public Health(AI4PH):** AI for Public Health is a multidisciplinary research field focused on leveraging artificial intelligence and machine learning techniques to address various challenges in the realm of public health. Researchers in this field explore innovative ways to analyze large datasets, improve disease surveillance, predict health trends, develop diagnostic tools, optimize healthcare delivery, and enhance decision-making processes within the public health sector. The ultimate goal is to harness AI's capabilities to enhance public health outcomes, prevent diseases, and promote well-being on a population scale.
+
 - **Multi-Omics Data Integration:** I am deeply engaged in the integration of multi-omics data sets, including genomics, transcriptomics, proteomics, and more. This holistic approach allows me to gain a comprehensive view of the molecular landscape of cancer. By analyzing multiple layers of molecular information, I strive to identify novel biomarkers, therapeutic targets, and pathways that can significantly impact cancer diagnosis and treatment.
 
 # Education
