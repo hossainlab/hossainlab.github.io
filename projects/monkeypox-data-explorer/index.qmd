@@ -6,6 +6,12 @@ categories:
   - Flexdashboard
 ---
 
+
+```{=html}
+<iframe width="780" height="500" src="https://hossainlab.github.io/monkeypox/" title="Webpage example"></iframe>
+```
+
+
 ```{=html}
 <a href="https://hossainlab.github.io/monkeypox/" class="btn btn-primary rounded-pill me-2">Live Dashboard</a>
 ```

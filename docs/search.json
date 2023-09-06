@@ -1229,14 +1229,14 @@
     "href": "projects/dengue-situation-dashboard/index.html",
     "title": "Dengue Situation Dashboard",
     "section": "",
-    "text": "As of 20 November 2022, a total of 52 807 laboratory-confirmed dengue cases and 230 related deaths have been reported by the Ministry of Health & Family Welfare of Bangladesh since 1 January 2022 with a case fatality rate (CFR) of 0.44%. Dengue is endemic in Bangladesh however a surge of cases started in June 2022. Currently, all eight divisions in the country are reporting cases and deaths. This is the second-largest outbreak since 2000, with the largest having occurred in 2019. The current dengue outbreak is unusual in its scale and seasonality. Between 1 January and 20 November 2022, a total of 52 807 dengue cases including 230 related deaths (case fatality rate = 0.44%) were reported by the Ministry of Health & Family Welfare (MOHFW) (Figure 1). The cases were confirmed either by non-structural protein (NS1) diagnostic kits or by Immunoglobulin M (IgM) tests. According to information available for 40% of reported cases (n=20 982) the median age is 25 years (range: 0 – 89) with males accounting for 60% of the cases. This is the second highest annual number of cases since 2000, the highest having occurred in 2019, when 101 354 cases including 164 deaths were reported (Figure 2 & 3).\nThe most affected division is Dhaka, accounting for 70.6% of cases and 60.4% of deaths. Dhaka city, the largest city in Bangladesh, located in Dhaka division, has reported 64.5% (n= 34 071) of the total number of cases. Other affected divisions include Chattogram division (13.2% of cases and 24.8% of deaths) and Khulna division (5.5% of cases and 4.8% of deaths) (Figure 4).\nThe high incidence of dengue cases this year is taking place in the context of an unusual amount of rainfall since June 2022, accompanied by high temperatures and high humidity which have resulted in an increased mosquito population throughout Bangladesh.\nSource: https://www.who.int/emergencies/disease-outbreak-news/item/2022-DON424\nLive Dashboard"
+    "text": "Live Dashboard"
   },
   {
     "objectID": "projects/dengue-situation-dashboard/index.html#dengue-outbreaks-in-bangladesh",
     "href": "projects/dengue-situation-dashboard/index.html#dengue-outbreaks-in-bangladesh",
     "title": "Dengue Situation Dashboard",
     "section": "",
-    "text": "As of 20 November 2022, a total of 52 807 laboratory-confirmed dengue cases and 230 related deaths have been reported by the Ministry of Health & Family Welfare of Bangladesh since 1 January 2022 with a case fatality rate (CFR) of 0.44%. Dengue is endemic in Bangladesh however a surge of cases started in June 2022. Currently, all eight divisions in the country are reporting cases and deaths. This is the second-largest outbreak since 2000, with the largest having occurred in 2019. The current dengue outbreak is unusual in its scale and seasonality. Between 1 January and 20 November 2022, a total of 52 807 dengue cases including 230 related deaths (case fatality rate = 0.44%) were reported by the Ministry of Health & Family Welfare (MOHFW) (Figure 1). The cases were confirmed either by non-structural protein (NS1) diagnostic kits or by Immunoglobulin M (IgM) tests. According to information available for 40% of reported cases (n=20 982) the median age is 25 years (range: 0 – 89) with males accounting for 60% of the cases. This is the second highest annual number of cases since 2000, the highest having occurred in 2019, when 101 354 cases including 164 deaths were reported (Figure 2 & 3).\nThe most affected division is Dhaka, accounting for 70.6% of cases and 60.4% of deaths. Dhaka city, the largest city in Bangladesh, located in Dhaka division, has reported 64.5% (n= 34 071) of the total number of cases. Other affected divisions include Chattogram division (13.2% of cases and 24.8% of deaths) and Khulna division (5.5% of cases and 4.8% of deaths) (Figure 4).\nThe high incidence of dengue cases this year is taking place in the context of an unusual amount of rainfall since June 2022, accompanied by high temperatures and high humidity which have resulted in an increased mosquito population throughout Bangladesh.\nSource: https://www.who.int/emergencies/disease-outbreak-news/item/2022-DON424\nLive Dashboard"
+    "text": "As of 20 November 2022, a total of 52 807 laboratory-confirmed dengue cases and 230 related deaths have been reported by the Ministry of Health & Family Welfare of Bangladesh since 1 January 2022 with a case fatality rate (CFR) of 0.44%. Dengue is endemic in Bangladesh however a surge of cases started in June 2022. Currently, all eight divisions in the country are reporting cases and deaths. This is the second-largest outbreak since 2000, with the largest having occurred in 2019. The current dengue outbreak is unusual in its scale and seasonality. Between 1 January and 20 November 2022, a total of 52 807 dengue cases including 230 related deaths (case fatality rate = 0.44%) were reported by the Ministry of Health & Family Welfare (MOHFW) (Figure 1). The cases were confirmed either by non-structural protein (NS1) diagnostic kits or by Immunoglobulin M (IgM) tests. According to information available for 40% of reported cases (n=20 982) the median age is 25 years (range: 0 – 89) with males accounting for 60% of the cases. This is the second highest annual number of cases since 2000, the highest having occurred in 2019, when 101 354 cases including 164 deaths were reported (Figure 2 & 3).\nThe most affected division is Dhaka, accounting for 70.6% of cases and 60.4% of deaths. Dhaka city, the largest city in Bangladesh, located in Dhaka division, has reported 64.5% (n= 34 071) of the total number of cases. Other affected divisions include Chattogram division (13.2% of cases and 24.8% of deaths) and Khulna division (5.5% of cases and 4.8% of deaths) (Figure 4).\nThe high incidence of dengue cases this year is taking place in the context of an unusual amount of rainfall since June 2022, accompanied by high temperatures and high humidity which have resulted in an increased mosquito population throughout Bangladesh.\nSource: https://www.who.int/emergencies/disease-outbreak-news/item/2022-DON424\n\nLive Dashboard"
   },
   {
     "objectID": "publications/conference/BSM23_AkterS.html",
@@ -1985,6 +1985,20 @@
     "href": "projects/data-professionals-survey-report/index.html",
     "title": "Data Professionals Survey Report",
     "section": "",
-    "text": "The Data Professionals Survey Report Dashboard is a digital tool or platform that provides an interactive and visual representation of key findings and insights from a survey conducted among data professionals. It typically includes charts, graphs, and other visual elements to help users quickly and easily understand the survey data. Users can explore and analyze the data, filter results, and gain valuable insights into trends, preferences, and opinions within the data profession. These dashboards are designed to make complex survey data more accessible and actionable for decision-makers and researchers.\nLive Dashboard"
+    "text": "Live Dashboard"
+  },
+  {
+    "objectID": "projects/monkeypox-data-explorer/index.html",
+    "href": "projects/monkeypox-data-explorer/index.html",
+    "title": "Monkeypox Data Explorer",
+    "section": "",
+    "text": "Live Dashboard"
+  },
+  {
+    "objectID": "projects/health-impact-of-distance-learning-on-high-school-students/index.html",
+    "href": "projects/health-impact-of-distance-learning-on-high-school-students/index.html",
+    "title": "Health Impact of Distance Learning on High School Students",
+    "section": "",
+    "text": "Live Dashboard"
   }
 ]
