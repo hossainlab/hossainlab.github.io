@@ -13,3 +13,7 @@ categories:
 ```{=html}
 <iframe frameborder="0" scrolling="yes" seamless="seamless" style="display:block; width:100%; height:100vh;" src="https://hossainlab.github.io/dengue-situation-dashboard/" title="Dengue Dashboard"></iframe>
 ```
+
+```{=html}
+<a href="https://hossainlab.github.io/dengue-situation-dashboard/" class="btn btn-primary rounded-pill me-2">Live Dashboard</a>
+```

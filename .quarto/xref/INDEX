@@ -415,5 +415,8 @@
   },
   "blog/multi-omics-data-integration/index.qmd": {
     "index.html": "554f9ae3"
+  },
+  "projects/nipah-virus/index.qmd": {
+    "index.html": "2114e32d"
   }
 }
