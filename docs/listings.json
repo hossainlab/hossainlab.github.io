@@ -1,16 +1,5 @@
 [
   {
-    "listing": "/blog.html",
-    "items": [
-      "/blog/multi-omics-data-integration/index.html",
-      "/blog/welcome/index.html"
-    ]
-  },
-  {
-    "listing": "/news.html",
-    "items": []
-  },
-  {
     "listing": "/teaching.html",
     "items": [
       "/teaching/applied-machine-learning-for-healthcare/index.html",
@@ -62,6 +51,17 @@
       "/projects/monkeypox-data-explorer/index.html",
       "/projects/nipah-virus/index.html"
     ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/blog/multi-omics-data-integration/index.html",
+      "/blog/welcome/index.html"
+    ]
+  },
+  {
+    "listing": "/news.html",
+    "items": []
   },
   {
     "listing": "/talks.html",
