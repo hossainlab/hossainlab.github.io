@@ -1,22 +1,14 @@
 [
   {
-    "listing": "/teaching.html",
+    "listing": "/talks.html",
     "items": [
-      "/teaching/applied-machine-learning-for-healthcare/index.html",
-      "/teaching/bioinformatics-bootcamp/index.html",
-      "/teaching/building-dashboard-with-r/index.html",
-      "/teaching/data-analysis-with-r/index.html",
-      "/teaching/ml-for-bioinformatics/index.html",
-      "/teaching/gtsummary-for-public-health/index.html",
-      "/teaching/python-for-geospatial-health-data-science/index.html",
-      "/teaching/python-for-health-data-analysis/index.html",
-      "/teaching/r-for-bioinformatics/index.html",
-      "/teaching/r-for-research/index.html",
-      "/teaching/rna-seq-data-analysis-with-r/index.html",
-      "/teaching/spss/index.html",
-      "/teaching/single-cell-seq-analysis-with-r/index.html",
-      "/teaching/tcga-data-analysis-with-r/index.html"
+      "/talks/state-the-art-of-microbial-genome-analysi/index.html",
+      "/talks/undergraduate-research-importance-benefits-and-challenges/index.html"
     ]
+  },
+  {
+    "listing": "/news.html",
+    "items": []
   },
   {
     "listing": "/publications.html",
@@ -36,6 +28,32 @@
     ]
   },
   {
+    "listing": "/teaching.html",
+    "items": [
+      "/teaching/applied-machine-learning-for-healthcare/index.html",
+      "/teaching/bioinformatics-bootcamp/index.html",
+      "/teaching/building-dashboard-with-r/index.html",
+      "/teaching/data-analysis-with-r/index.html",
+      "/teaching/ml-for-bioinformatics/index.html",
+      "/teaching/gtsummary-for-public-health/index.html",
+      "/teaching/python-for-geospatial-health-data-science/index.html",
+      "/teaching/python-for-health-data-analysis/index.html",
+      "/teaching/r-for-bioinformatics/index.html",
+      "/teaching/r-for-research/index.html",
+      "/teaching/rna-seq-data-analysis-with-r/index.html",
+      "/teaching/spss/index.html",
+      "/teaching/single-cell-seq-analysis-with-r/index.html",
+      "/teaching/tcga-data-analysis-with-r/index.html"
+    ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/blog/multi-omics-data-integration/index.html",
+      "/blog/welcome/index.html"
+    ]
+  },
+  {
     "listing": "/projects.html",
     "items": [
       "/projects/Calories_Burnt/02_Calories Burnt Prediction.html",
@@ -48,26 +66,8 @@
       "/projects/Breast_Cancer/03_Breast Cancer.html",
       "/projects/Liver_Disorder/04_Liver Disorder.html",
       "/projects/Choronic_Kidney/01_Choronic Kidney.html",
-      "/projects/monkeypox-data-explorer/index.html",
+      "/projects/monkeypox-outbreak-insights/index.html",
       "/projects/nipah-virus/index.html"
-    ]
-  },
-  {
-    "listing": "/blog.html",
-    "items": [
-      "/blog/multi-omics-data-integration/index.html",
-      "/blog/welcome/index.html"
-    ]
-  },
-  {
-    "listing": "/news.html",
-    "items": []
-  },
-  {
-    "listing": "/talks.html",
-    "items": [
-      "/talks/state-the-art-of-microbial-genome-analysi/index.html",
-      "/talks/undergraduate-research-importance-benefits-and-challenges/index.html"
     ]
   }
 ]

@@ -418,5 +418,8 @@
   },
   "projects/nipah-virus/index.qmd": {
     "index.html": "2114e32d"
+  },
+  "projects/monkeypox-outbreak-insights/index.qmd": {
+    "index.html": "10f7a8df"
   }
 }
