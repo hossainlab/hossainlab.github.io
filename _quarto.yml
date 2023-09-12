@@ -35,7 +35,7 @@ website:
     background: "#99ccff"
     border: false
     left: "&copy; Copyright 2023, Md. Jubayer Hossain"
-    right: 
+    right:
       - icon: twitter
         aria-label: twitter
         href: https://twitter.com/JHossain_28
@@ -68,6 +68,8 @@ website:
           file: publications.qmd
         - text: "Projects"
           href: projects.qmd
+        - text: "Dashboards"
+          href: dashboards.qmd
         - text: "Talks"
           href: talks.qmd
         - text: "Teaching"

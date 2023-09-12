@@ -421,5 +421,8 @@
   },
   "projects/monkeypox-outbreak-insights/index.qmd": {
     "index.html": "10f7a8df"
+  },
+  "dashboards.qmd": {
+    "dashboards.html": "3b4abacb"
   }
 }

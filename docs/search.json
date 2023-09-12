@@ -1958,5 +1958,40 @@
     "title": "What I Use",
     "section": "R Packages",
     "text": "R Packages\n\nTCGAbiolinks: An R/Bioconductor package for integrative analysis with GDC data. TCGAbiolinks is able to access The National Cancer Institute (NCI) Genomic Data Commons (GDC) thorough its GDC Application Programming Interface (API) to search, download and prepare relevant data for analysis in R.\nmaftools: Summarize, Analyze and Visualize MAF Files. This package attempts to summarize, analyze, annotate and visualize MAF files in an efficient manner from either TCGA sources or any in-house studies as long as the data is in MAF format.\nSummarizedExperiment: The SummarizedExperiment container contains one or more assays, each represented by a matrix-like object of numeric or other mode. The rows typically represent genomic ranges of interest and the columns represent samples.\nMutationalPatterns: Comprehensive genome-wide analysis of mutational processes. he package covers a wide range of patterns including: mutational signatures, transcriptional and replicative strand bias, lesion segregation, genomic distribution and association with genomic features, which are collectively meaningful for studying the activity of mutational processes. The package works with single nucleotide variants (SNVs), insertions and deletions (Indels), double base substitutions (DBSs) and larger multi base substitutions (MBSs). The package provides functionalities for both extracting mutational signatures de novo and determining the contribution of previously identified mutational signatures on a single sample level. MutationalPatterns integrates with common R genomic analysis workflows and allows easy association with (publicly available) annotation data."
+  },
+  {
+    "objectID": "dashboards.html#nipah-virus-transmission-in-bangladesh",
+    "href": "dashboards.html#nipah-virus-transmission-in-bangladesh",
+    "title": "Dashboards",
+    "section": "Nipah Virus Transmission in Bangladesh",
+    "text": "Nipah Virus Transmission in Bangladesh\nNipah virus transmission in Bangladesh primarily occurs through direct contact with infected bats, their excretions, or consumption of contaminated fruits or raw date palm sap. This zoonotic virus can also be transmitted from person to person through close contact, making it a potential threat in healthcare settings. Public health measures, such as avoiding contact with sick individuals and practicing good hygiene, are essential to prevent its spread in Bangladesh and other affected regions."
+  },
+  {
+    "objectID": "dashboards.html",
+    "href": "dashboards.html",
+    "title": "Dashboards",
+    "section": "",
+    "text": "The dashboard typically includes various features and components to help stakeholders, such as public health authorities, researchers, and the general public, understand and analyze the dengue situation."
+  },
+  {
+    "objectID": "dashboards.html#monkeypox-outbreak-insights",
+    "href": "dashboards.html#monkeypox-outbreak-insights",
+    "title": "Dashboards",
+    "section": "Monkeypox Outbreak Insights",
+    "text": "Monkeypox Outbreak Insights\nVisualizing the data produced by the World Health Organization on the 2022 monkeypox outbreak."
+  },
+  {
+    "objectID": "dashboards.html#dengue-situation-dashboard",
+    "href": "dashboards.html#dengue-situation-dashboard",
+    "title": "Dashboards",
+    "section": "",
+    "text": "The dashboard typically includes various features and components to help stakeholders, such as public health authorities, researchers, and the general public, understand and analyze the dengue situation."
+  },
+  {
+    "objectID": "dashboards.html#dengue-situation-monitoring-dashboard",
+    "href": "dashboards.html#dengue-situation-monitoring-dashboard",
+    "title": "Dashboards",
+    "section": "",
+    "text": "The dashboard typically includes various features and components to help stakeholders, such as public health authorities, researchers, and the general public, understand and analyze the dengue situation."
   }
 ]
