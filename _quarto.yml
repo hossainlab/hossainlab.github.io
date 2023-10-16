@@ -74,8 +74,6 @@ website:
           href: talks.qmd
         - text: "Teaching"
           file: teaching.qmd
-        - text: "Gallery"
-          file: gallery.qmd
         - text: "What I Use"
           file: use.qmd
         - text: "CV"
