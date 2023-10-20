@@ -32,7 +32,7 @@ website:
   favicon: /files/profiles/icon.png
 
   page-footer:
-    background: "#99ccff"
+    background: "#636363"
     border: false
     left: "&copy; Copyright 2023, Md. Jubayer Hossain"
     right:
@@ -53,7 +53,7 @@ website:
         href: https://www.linkedin.com/in/hossainmj
   navbar:
       pinned: true
-      background: "#99ccff"
+      background: "#636363"
       # logo: /files/logo.png
       left:
         - text: "Home"
