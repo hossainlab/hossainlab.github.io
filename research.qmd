@@ -57,7 +57,34 @@ In the ongoing battle against water-borne and vector-borne diseases, the synergy
 **Keyword:** Water-borne diseases, factors, vibrio cholerae, public health, health impacts, calamities, water.
 
 
-# Public Health 
+# Mental Health
+
+## University Mental Health Screening System(UMHSS)
+### Abstract 
+The University Mental Health Screening System (UMHSS) aims to assess and address the mental health needs of Bangladeshi university students. With a focus on user-friendly interfaces and robust privacy measures, UMHSS aims to provide a comprehensive mental health screening for over 4000 university students. This study encompasses diverse demographics to ensure a representative sample and employs rigorous data analysis to identify prevalent mental health concerns. The findings contribute valuable insights into the mental well-being of Bangladeshi university students, paving the way for targeted interventions and support services.
+
+
+### Public Health Relevance 
+Mental health challenges among university students are a growing concern globally, and the Bangladeshi context is no exception. The UMHSS study holds significant public health relevance by shedding light on the unique mental health landscape of Bangladeshi university students. The findings will inform evidence-based interventions, policy development, and resource allocation aimed at improving mental health outcomes in higher education. Addressing mental health at this critical juncture not only enhances individual well-being but also contributes to the overall societal productivity and resilience of the nation.
+
+**Keywords:** Mental Health, Bangladesh, Early Detection, Student Well-being, Privacy, Support Services, Research, Intervention, Community
+
+## School Mental Health Screening Program(SMHSP)
+### Abstract 
+The School Mental Health Screening Program (SMHSP) is an initiative led by the Center for Health Innovation, Research, Action, and Learning (CHIRAL Bangladesh). This project aims to introduce a comprehensive mental health screening system in schools across Bangladesh. With a focus on early detection and intervention, SMHSP seeks to create a supportive environment for students by identifying mental health concerns at an early stage. The implementation will involve collaboration with educational institutions, ensuring a holistic approach to student well-being. By fostering mental health awareness and providing necessary resources, SMHSP strives to contribute to the overall mental well-being of school communities in Bangladesh.
+
+### Public Health Relevance 
+The SMHSP project holds profound public health relevance by addressing the mental health needs of students within the educational landscape of Bangladesh. By integrating mental health screening into schools, the initiative recognizes the crucial role educational environments play in shaping the well-being of young minds. The outcomes of this project are poised to enhance mental health literacy, facilitate timely interventions, and contribute to a resilient and thriving future generation in Bangladesh. This initiative aligns with broader public health goals by promoting mental well-being as an integral component of overall health and development.
+
+**Keywords:** School Mental Health, Mental Health Screening, Bangladesh Education, Early Intervention, Student Well-being, Public Health, Youth Mental Health, Educational Initiatives, Community Health Innovation
+
+
+
+
+
+
+
+# NTDs
 ## Prevention and Control of Thalassemia in Bangladesh 
 ### Abstract 
 Thalassemia, a hereditary blood disorder characterized by abnormal hemoglobin production, poses a significant public health challenge in Bangladesh. This project outlines a comprehensive initiative aimed at the prevention and control of thalassemia within the country. The multifaceted approach integrates awareness campaigns, genetic screening, accessible healthcare services, and community engagement to mitigate the prevalence and impact of thalassemia.
