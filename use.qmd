@@ -152,6 +152,12 @@ comments: false
 - [European Genome-phenome Archive (EGA):](https://ega-archive.org/) Description: EGA is a repository for secure storage and sharing of human genetic and phenotypic data, including cancer datasets.
 - [National Cancer Institute (NCI) Genomic Data Commons (GDC):](https://gdc.cancer.gov/) Description: GDC is an open-access data portal providing access to a wide range of cancer genomics datasets.
 
+- [cellxgene.cziscience.com](https://cellxgene.cziscience.com/) - Download and visually explore reference-quality data to understand the functionality of human tissues at the cellular level with Chan Zuckerberg CELL by GENE Discover (CZ CELLxGENE Discover).
+
+- [10XGenomics](https://www.10xgenomics.com/) - High-performance in situ from the single cell leader
+
+
+
 ## Analysis Tools 
 
 - [GEPIA2](http://gepia2.cancer-pku.cn/): GEPIA2 is a web-based tool for analyzing gene expression data in cancer. It stands for Gene Expression Profiling Interactive Analysis 2 and is an updated version of the original GEPIA tool. GEPIA2 allows users to explore gene expression patterns, perform survival analyses, and visualize gene expression data across various cancer types.
