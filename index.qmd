@@ -59,7 +59,7 @@ I am interested in applying modern data science techniques in the context of dis
 
 - Participated in a cutting‑edge project focused on the application of bioinformatics techniques for profiling antibiotic resistance genes within complex metagenomic DNA sequences. 
 
-**AI in Public Health** \| Child Health Research Foundation (CHRF), Dhaka, Bangladesh(September 2023)
+**AI in Public Health** \| Child Health Research Foundation (CHRF), Dhaka, Bangladesh (September 2023)
 
 - Participated in a comprehensive 4‑day workshop focused on utilizing AI techniques in public health research and decision‑making
 

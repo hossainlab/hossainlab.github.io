@@ -24,11 +24,22 @@ I am interested in applying modern data science techniques in the context of dis
 
 # Education
 
-- **Jagannath University, Dhaka** | Dhaka, Bangladesh<br />
-  Master of Science in Microbiology | 2019–2020
 
-- **Jagannath University, Dhaka** | Dhaka, Bangladesh<br />
-  Bachelor of Science in Microbiology | 2016–2019
+**Master of Science in Microbiology** \| Jagannath University, Dhaka (2020 - 2021)
+
+- Conducted an in‑depth project as part of my master’s program, centered on investigating and analyzing a Chikungunya outbreak, showcasing a dedicated commitment to advancing knowledge in the field of public health. 
+
+**Bachelor of Science in Microbiology** \| Jagannath University, Dhaka (2016 - 2019)
+
+- Participated in a cutting‑edge project focused on the application of bioinformatics techniques for profiling antibiotic resistance genes within complex metagenomic DNA sequences. 
+
+**AI in Public Health** \| Child Health Research Foundation (CHRF), Dhaka, Bangladesh (September 2023)
+
+- Participated in a comprehensive 4‑day workshop focused on utilizing AI techniques in public health research and decision‑making
+
+- Recipient of the scholarship, which provided financial support for my enrollment in the ’AI In Public Health’ workshop, as part of the Democra‑
+tizing Public Health Modeling Using AI‑based Tools grant by the Bill and Melinda Gates Foundation made to CHRF
+
 
 # Experience
 
