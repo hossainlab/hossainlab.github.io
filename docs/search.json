@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "cv/index.html",
-    "href": "cv/index.html",
-    "title": "",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Md. Jubayer Hossain",
     "section": "",
-    "text": "Download current CV"
+    "text": "Welcome!ExperienceSkillsEducation\n\n\nHello, I am Md. Jubayer Hossain. I am the founder of CHIRAL Bangladesh, a non-profit organization dedicated to health research to improve lives in Bangladesh. I am also working as a health data analysis instructor at cBLAST. I aspire to maximize the quality of life of the human around me by working at the intersection of education, technology, and health research.\nI am interested in applying modern data science techniques in the context of disease diagnosis and large data analytics for public health while focusing on bridging the gap between computational and experimental laboratories through highly engaging and fruitful collaborations.\n\n\nFounder & Management Lead | Center for Health Innovation, Research Action, and Learning - Bangladesh (CHIRAL Bangladesh) | Dhaka, Bangladesh | (2020 - Present)\nInstructor | Center for Bioinformatics Learning Advancement and Systematic Training (cBLAST) | Dhaka, Bangladesh | (August 2023 - Present)\nProgram Lead | Research Internship Program | Center for Health Innovation, Research Action, and Learning - Bangladesh (CHIRAL Bangladesh) | Dhaka, Bangladesh | (January 2023 - Present)\nTeaching Assistant | Public Health & Hygiene, Department of Microbiology | Jagannath University) | Dhaka, Bangladesh | (October 2022 - December 2022)\nResearch Intern | Health Systems and Population Health Studies Division | International Centre for Diarrhoeal Disease Research, Bangladesh) | Dhaka, Bangladesh | (February 2022 - June 2022)\nTeam Member | Bio-Bio-1:: Bioinformatics Research Discussion Group) | Dhaka, Bangladesh | (February 2017 - June 2019)\n\n\nProgramming Languages: Python, R, SQL, Julia, JavaScript; Data Science: scikit-learn, PyCaret, Dask, PySpark; GIS & Remote Sensing: ArcGIS, Geopandas, Xarray, Giovani, Google Earth Engiine; Analytics Softwares: SPSS, PowerBI, Microsoft Excel; Survey Tools: RedCap, KoboToolBox, EpiCollect, Google Forms; Academic Writing Tools: Microsoft Word, LaTeX, Mendeley; Bioinformatics: BioPython, Bioconductor, BioPandas, Galaxy, NGS, RNASeq, ssRNASeq; Miscellaneous Skills: UNIX, Version Control(Git), Web Scraping, APIs\n\n\nMaster of Science in Microbiology | Jagannath University, Dhaka (2020 - 2021)\nBachelor of Science in Microbiology | Jagannath University, Dhaka (2016 - 2019)"
   },
   {
     "objectID": "projects/Liver_Disorder/04_Liver Disorder.html",
@@ -1043,109 +1043,11 @@
     "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nCalories Burn Prediction using Machine Learning\n\n\n\nMachine Learning\n\n\nPhysical Activity\n\n\nCalories\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Professionals Survey Report\n\n\n\nPowerBI Dashboard\n\n\nVisualization\n\n\n\nThe aims of this dashboard is to explore the dataprofessionals activity and their perceptions.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDengue Situation Dashboard\n\n\n\nDashboard\n\n\nVisualization\n\n\nDeangue\n\n\n\nThe dashboard typically includes various features and components to help stakeholders, such as public health authorities, researchers, and the general public, understand and…\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nESOL: Estimating Aqueous Solubility Directly from Molecular Structure\n\n\n\nMachine Learning\n\n\nSolubility\n\n\nCheminformatics\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHealth Impact of Distance Learning on High School Students\n\n\n\nPowerBI Dashboard\n\n\n\nThe aim of this survey is to determine the health impact of distance learning on high school students during the COVID-19 pandemic.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHeart Disease Analysis and Prediction Using Machine Learning\n\n\n\nMachine Learning\n\n\nHeart Disease\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHepatitis Risk Assessment: Predictive Modeling with Machine Learning\n\n\n\nMachine Learning\n\n\nHepatitis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImproved Breast Cancer Detection using Machine Learning\n\n\n\nMachine Learning\n\n\nCheminformatics\n\n\nRegression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMachine Learning-Based Liver Disorder Prediction: Towards Early Detection and Diagnosis\n\n\n\nMachine Learning\n\n\nLiver Disorder\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMachine Learning-Based Prediction of Chronic Kidney Disease: An Analysis of Risk Factors\n\n\n\nMachine Learning\n\n\nChronic Kidney\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMonkeypox Outbreak Insights\n\n\n\nFlexdashboard\n\n\n\nVisualizing the data produced by the World Health Organization on the 2022 monkeypox outbreak.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNipah Virus Transmission in Bangladesh\n\n\n\nDashboard\n\n\nVisualization\n\n\nDeangue\n\n\n\nNipah virus transmission in Bangladesh primarily occurs through direct contact with infected bats, their excretions, or consumption of contaminated fruits or raw date palm…\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "blog/welcome/index.html",
-    "href": "blog/welcome/index.html",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "",
-    "text": "Welcome! Ahoy, fellow data adventurers! 🌊🔍 Our voyage through the vast ocean of data has been nothing short of exhilarating. We’ve navigated the twists and turns of data-driven decision-making, explored the tools that power our data collection, and unraveled the mysteries behind data analysis and visualization. We’ve braved the challenges that come with utilizing data and discovered how it can empower businesses, content creators, and even influence SEO strategies.\nHey there, data enthusiasts and curious minds! 📊🔍 Are you ready to embark on a thrilling expedition into the world of data? In today’s digital age, data isn’t just a buzzword; it’s the compass guiding successful businesses, creative endeavors, and innovative solutions. So, grab your virtual backpacks as we dive into the exciting realm of data-driven decision-making and exploration. Join me on this exhilarating journey, and together, we’ll uncover the boundless power that data holds!"
-  },
-  {
-    "objectID": "blog/welcome/index.html#why-data-matters",
-    "href": "blog/welcome/index.html#why-data-matters",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "Why Data Matters?",
-    "text": "Why Data Matters?\nPicture this: a business owner armed with accurate insights that steer their company toward unprecedented growth. Data is the magic wand that makes it happen. Companies big and small are tapping into the goldmine of data to fine-tune their strategies, enhance customer experiences, and predict market trends. Remember the time you received a tailored recommendation on an online platform? Thank data for that! Let’s dive into how data transforms the ordinary into the extraordinary."
-  },
-  {
-    "objectID": "blog/welcome/index.html#the-data-journey-begins",
-    "href": "blog/welcome/index.html#the-data-journey-begins",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "The Data Journey Begins",
-    "text": "The Data Journey Begins\nData comes in various shapes and sizes—structured and unstructured. Think of structured data as well-organized puzzle pieces, while unstructured data is like the pieces of a jigsaw puzzle scattered across the table. From customer preferences to social media interactions, data is collected through various channels. But wait, collecting raw data is just the first step of our journey."
-  },
-  {
-    "objectID": "blog/welcome/index.html#tools-for-data-collection",
-    "href": "blog/welcome/index.html#tools-for-data-collection",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "Tools for Data Collection",
-    "text": "Tools for Data Collection\nImagine gathering pieces of a puzzle without missing a single one. That’s the level of accuracy data collection tools provide. Meet the heroes behind the scenes: Google Analytics, surveys, social media insights, and more. But remember, accuracy is the name of the game. Garbage in, garbage out, they say. Inaccurate data can lead you down the wrong path. So, gear up with reliable tools to collect gems, not gravel."
-  },
-  {
-    "objectID": "blog/welcome/index.html#making-sense-of-the-data",
-    "href": "blog/welcome/index.html#making-sense-of-the-data",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "Making Sense of the Data",
-    "text": "Making Sense of the Data\nGathering data is like mining, and now it’s time to extract the precious gems hidden within. Data analysis is our refining process. Whether it’s identifying trends, detecting anomalies, or uncovering correlations, data analysis tools are the chisels and magnifying glasses of our journey. From basic spreadsheets to complex algorithms, these tools unveil the stories buried beneath the numbers."
-  },
-  {
-    "objectID": "blog/welcome/index.html#visualizing-data-for-impact",
-    "href": "blog/welcome/index.html#visualizing-data-for-impact",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "Visualizing Data for Impact",
-    "text": "Visualizing Data for Impact\nData, in its raw form, can resemble a dense fog. That’s where data visualization swoops in. Imagine turning complex data sets into captivating visuals—charts, graphs, and infographics that tell a story at a glance. It’s like transforming fog into a clear roadmap, guiding your decisions with precision. After all, a picture is worth a thousand rows of data!"
-  },
-  {
-    "objectID": "blog/welcome/index.html#challenges-in-data-utilization",
-    "href": "blog/welcome/index.html#challenges-in-data-utilization",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "Challenges in Data Utilization",
-    "text": "Challenges in Data Utilization\nAhoy! Rough waters ahead. Navigating the sea of data isn’t without challenges. Data privacy concerns, incomplete or inconsistent data, and the noise of irrelevant information can make our voyage tricky. But fear not! With the right strategies, you can steer clear of these obstacles and set sail towards data-driven success."
-  },
-  {
-    "objectID": "blog/welcome/index.html#empowering-your-business-with-data",
-    "href": "blog/welcome/index.html#empowering-your-business-with-data",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "Empowering Your Business with Data",
-    "text": "Empowering Your Business with Data\nAvast, business owners! Data isn’t just a treasure for the brave; it’s a compass for the wise. Imagine adjusting your business strategies based on real-time insights. From product development to customer service, data-driven decisions can launch your business to new heights. Ready to hoist the sails of success?"
-  },
-  {
-    "objectID": "blog/welcome/index.html#the-human-element-in-data",
-    "href": "blog/welcome/index.html#the-human-element-in-data",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "The Human Element in Data",
-    "text": "The Human Element in Data\nData is our guide, but human judgment is our compass. While data analysis offers invaluable insights, remember that it’s humans who make the final call. Just like a ship’s captain relies on the stars while steering the ship, human intuition guides the course of action, ensuring a harmonious blend of data and wisdom."
-  },
-  {
-    "objectID": "blog/welcome/index.html#join-me-on-my-blogging-journey",
-    "href": "blog/welcome/index.html#join-me-on-my-blogging-journey",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "Join Me on My Blogging Journey",
-    "text": "Join Me on My Blogging Journey\nBut wait, our adventure doesn’t end here! There’s a treasure trove of insights waiting for you on my blog. Dive deeper into the world of data-driven strategies, technology trends, and real-life success stories. Unearth the secrets that can propel your journey to the next level. Stay tuned"
-  },
-  {
-    "objectID": "blog.html",
-    "href": "blog.html",
+    "objectID": "cv/index.html",
+    "href": "cv/index.html",
     "title": "",
     "section": "",
-    "text": "Multi-omics Data Integration for Cancer Research\n\n\n\n\n\n\n\nMulti-omics Data Integration\n\n\nCancer Research\n\n\nMachine Learning\n\n\nOmics Data Analysis\n\n\n\n\nExplore the power of multi-omics data integration in cancer research. Learn from real-world case studies and groundbreaking discoveries. Find out more about this cutting-edge approach.\n\n\n\n\n\n\nSep 2, 2023\n\n\nMd. Jubayer Hossain\n\n\n\n\n\n\n  \n\n\n\n\nUnlocking the Power of Data: Join the Journey on My Blog!\n\n\n\n\n\n\n\nNews\n\n\n\n\n\n\n\n\n\n\n\nOct 22, 2022\n\n\nMd. Jubayer Hossain\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "about.html#research-experience",
-    "href": "about.html#research-experience",
-    "title": "About me",
-    "section": "Research Experience",
-    "text": "Research Experience\nFounder & Management Lead | Center for Health Innovation, Research Action, and Learning - Bangladesh (CHIRAL Bangladesh) | Dhaka, Bangladesh | (2020 - Present)\nThe Center for Health Innovation, Research, Action and Learning – Bangladesh (CHIRAL Bangladesh) is a voluntary non-profit research organization, resolving to promote interdisciplinary research in the field of health data science, computational biology and genomics. As the Founder & Management Lead at CHIRAL Bangladesh, I established and now lead a pioneering healthcare innovation and research center dedicated to driving positive change in the health sector. Our focus lies in fostering innovation, conducting impactful research, and facilitating continuous learning to enhance healthcare practices in Bangladesh.\nResearch Intern | Health Systems and Population Health Studies Division | International Centre for Diarrhoeal Disease Research, Bangladesh) | Dhaka, Bangladesh | (February 2022 - June 2022)\nAs a Research Intern in the Health Systems and Population Health Studies Division at icddr,b, I had the opportunity to contribute to impactful research projects focusing on health systems and population health. Working in a dynamic research environment, I gained valuable insights into the complexities of healthcare challenges and solutions."
-  },
-  {
-    "objectID": "about.html#teaching-experience",
-    "href": "about.html#teaching-experience",
-    "title": "About me",
-    "section": "Teaching Experience",
-    "text": "Teaching Experience\nInstructor | Center for Bioinformatics Learning Advancement and Systematic Training (cBLAST) | Dhaka, Bangladesh | (August 2023 - Present)\nAs an Instructor at cBLAST, I contribute to the advancement of bioinformatics knowledge and skills by designing and delivering engaging educational programs. Through hands-on training and systematic learning, I empower students and professionals to harness the potential of bioinformatics in various scientific and healthcare applications.\nProgram Lead | Research Internship Program | Center for Health Innovation, Research Action, and Learning - Bangladesh (CHIRAL Bangladesh) | Dhaka, Bangladesh | (January 2023 - Present)\nIn my capacity as the Program Lead for the Research Internship Program at CHIRAL Bangladesh, I am responsible for overseeing the planning, execution, and impact of the internship program. I play a pivotal role in providing aspiring researchers with valuable learning experiences in the healthcare innovation and research domain.\nTeaching Assistant | Public Health & Hygiene, Department of Microbiology | Jagannath University) | Dhaka, Bangladesh | (October 2022 - December 2022)\nAs a Teaching Assistant for the Public Health & Hygiene course, I provided vital support to the Department of Microbiology at Jagannath University. I assisted in delivering an impactful educational experience that emphasized public health principles and hygiene practices to aspiring microbiologists."
-  },
-  {
-    "objectID": "about.html#volunteering",
-    "href": "about.html#volunteering",
-    "title": "About me",
-    "section": "Volunteering",
-    "text": "Volunteering\nTeam Member | Bio-Bio-1:: Bioinformatics Research Discussion Group) | Dhaka, Bangladesh | (February 2017 - June 2019)\nAs a dedicated member of the Bio-Bio-1 Bioinformatics Research Discussion Group, I actively participated in collaborative discussions and initiatives aimed at advancing knowledge and insights in the field of bioinformatics. Through engaging with fellow researchers, I contributed to a vibrant intellectual community focused on bioinformatics research."
-  },
-  {
-    "objectID": "about_template.html",
-    "href": "about_template.html",
-    "title": "About this template",
-    "section": "",
-    "text": "About this template\n\n\n\nThis page contains some elaborated background information about your workshop, or the instructors.\n\n\nThis is to demonstrate how to make a drop-down page from the navigation bar."
+    "text": "Download current CV"
   },
   {
     "objectID": "blog/multi-omics-data-integration/index.html",
@@ -1223,6 +1125,90 @@
     "title": "Multi-omics Data Integration for Cancer Research",
     "section": "References",
     "text": "References\n\nNCBI - Integrative Multi-Omics Approaches in Cancer Research\nScienceDirect - Machine learning for multi-omics data integration in cancer\nNature - Multi-omics data integration and modeling unravels new mechanisms\nResearchGate - Machine learning for multi-omics data integration in cancer\nFrontiers in Genetics - Integration of Online Omics-Data Resources for Cancer\nFrontiers in Oncology - Integrated Multi-Omics Analyses in Oncology"
+  },
+  {
+    "objectID": "about_template.html",
+    "href": "about_template.html",
+    "title": "About this template",
+    "section": "",
+    "text": "About this template\n\n\n\nThis page contains some elaborated background information about your workshop, or the instructors.\n\n\nThis is to demonstrate how to make a drop-down page from the navigation bar."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "",
+    "section": "",
+    "text": "Multi-omics Data Integration for Cancer Research\n\n\n\n\n\n\n\nMulti-omics Data Integration\n\n\nCancer Research\n\n\nMachine Learning\n\n\nOmics Data Analysis\n\n\n\n\nExplore the power of multi-omics data integration in cancer research. Learn from real-world case studies and groundbreaking discoveries. Find out more about this cutting-edge approach.\n\n\n\n\n\n\nSep 2, 2023\n\n\nMd. Jubayer Hossain\n\n\n\n\n\n\n  \n\n\n\n\nUnlocking the Power of Data: Join the Journey on My Blog!\n\n\n\n\n\n\n\nNews\n\n\n\n\n\n\n\n\n\n\n\nOct 22, 2022\n\n\nMd. Jubayer Hossain\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/welcome/index.html",
+    "href": "blog/welcome/index.html",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "",
+    "text": "Welcome! Ahoy, fellow data adventurers! 🌊🔍 Our voyage through the vast ocean of data has been nothing short of exhilarating. We’ve navigated the twists and turns of data-driven decision-making, explored the tools that power our data collection, and unraveled the mysteries behind data analysis and visualization. We’ve braved the challenges that come with utilizing data and discovered how it can empower businesses, content creators, and even influence SEO strategies.\nHey there, data enthusiasts and curious minds! 📊🔍 Are you ready to embark on a thrilling expedition into the world of data? In today’s digital age, data isn’t just a buzzword; it’s the compass guiding successful businesses, creative endeavors, and innovative solutions. So, grab your virtual backpacks as we dive into the exciting realm of data-driven decision-making and exploration. Join me on this exhilarating journey, and together, we’ll uncover the boundless power that data holds!"
+  },
+  {
+    "objectID": "blog/welcome/index.html#why-data-matters",
+    "href": "blog/welcome/index.html#why-data-matters",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "Why Data Matters?",
+    "text": "Why Data Matters?\nPicture this: a business owner armed with accurate insights that steer their company toward unprecedented growth. Data is the magic wand that makes it happen. Companies big and small are tapping into the goldmine of data to fine-tune their strategies, enhance customer experiences, and predict market trends. Remember the time you received a tailored recommendation on an online platform? Thank data for that! Let’s dive into how data transforms the ordinary into the extraordinary."
+  },
+  {
+    "objectID": "blog/welcome/index.html#the-data-journey-begins",
+    "href": "blog/welcome/index.html#the-data-journey-begins",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "The Data Journey Begins",
+    "text": "The Data Journey Begins\nData comes in various shapes and sizes—structured and unstructured. Think of structured data as well-organized puzzle pieces, while unstructured data is like the pieces of a jigsaw puzzle scattered across the table. From customer preferences to social media interactions, data is collected through various channels. But wait, collecting raw data is just the first step of our journey."
+  },
+  {
+    "objectID": "blog/welcome/index.html#tools-for-data-collection",
+    "href": "blog/welcome/index.html#tools-for-data-collection",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "Tools for Data Collection",
+    "text": "Tools for Data Collection\nImagine gathering pieces of a puzzle without missing a single one. That’s the level of accuracy data collection tools provide. Meet the heroes behind the scenes: Google Analytics, surveys, social media insights, and more. But remember, accuracy is the name of the game. Garbage in, garbage out, they say. Inaccurate data can lead you down the wrong path. So, gear up with reliable tools to collect gems, not gravel."
+  },
+  {
+    "objectID": "blog/welcome/index.html#making-sense-of-the-data",
+    "href": "blog/welcome/index.html#making-sense-of-the-data",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "Making Sense of the Data",
+    "text": "Making Sense of the Data\nGathering data is like mining, and now it’s time to extract the precious gems hidden within. Data analysis is our refining process. Whether it’s identifying trends, detecting anomalies, or uncovering correlations, data analysis tools are the chisels and magnifying glasses of our journey. From basic spreadsheets to complex algorithms, these tools unveil the stories buried beneath the numbers."
+  },
+  {
+    "objectID": "blog/welcome/index.html#visualizing-data-for-impact",
+    "href": "blog/welcome/index.html#visualizing-data-for-impact",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "Visualizing Data for Impact",
+    "text": "Visualizing Data for Impact\nData, in its raw form, can resemble a dense fog. That’s where data visualization swoops in. Imagine turning complex data sets into captivating visuals—charts, graphs, and infographics that tell a story at a glance. It’s like transforming fog into a clear roadmap, guiding your decisions with precision. After all, a picture is worth a thousand rows of data!"
+  },
+  {
+    "objectID": "blog/welcome/index.html#challenges-in-data-utilization",
+    "href": "blog/welcome/index.html#challenges-in-data-utilization",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "Challenges in Data Utilization",
+    "text": "Challenges in Data Utilization\nAhoy! Rough waters ahead. Navigating the sea of data isn’t without challenges. Data privacy concerns, incomplete or inconsistent data, and the noise of irrelevant information can make our voyage tricky. But fear not! With the right strategies, you can steer clear of these obstacles and set sail towards data-driven success."
+  },
+  {
+    "objectID": "blog/welcome/index.html#empowering-your-business-with-data",
+    "href": "blog/welcome/index.html#empowering-your-business-with-data",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "Empowering Your Business with Data",
+    "text": "Empowering Your Business with Data\nAvast, business owners! Data isn’t just a treasure for the brave; it’s a compass for the wise. Imagine adjusting your business strategies based on real-time insights. From product development to customer service, data-driven decisions can launch your business to new heights. Ready to hoist the sails of success?"
+  },
+  {
+    "objectID": "blog/welcome/index.html#the-human-element-in-data",
+    "href": "blog/welcome/index.html#the-human-element-in-data",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "The Human Element in Data",
+    "text": "The Human Element in Data\nData is our guide, but human judgment is our compass. While data analysis offers invaluable insights, remember that it’s humans who make the final call. Just like a ship’s captain relies on the stars while steering the ship, human intuition guides the course of action, ensuring a harmonious blend of data and wisdom."
+  },
+  {
+    "objectID": "blog/welcome/index.html#join-me-on-my-blogging-journey",
+    "href": "blog/welcome/index.html#join-me-on-my-blogging-journey",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "Join Me on My Blogging Journey",
+    "text": "Join Me on My Blogging Journey\nBut wait, our adventure doesn’t end here! There’s a treasure trove of insights waiting for you on my blog. Dive deeper into the world of data-driven strategies, technology trends, and real-life success stories. Unearth the secrets that can propel your journey to the next level. Stay tuned"
   },
   {
     "objectID": "dashboards.html",
@@ -1363,6 +1349,20 @@
     "title": "Research Projects",
     "section": "Monitoring Water-borne and Vector-borne Disease Using NASA Earth Observing Data",
     "text": "Monitoring Water-borne and Vector-borne Disease Using NASA Earth Observing Data\nTeam: Md. Jubayer Hossain (Team Lead)\n\nAbstract\nThe utilization of NASA Earth Observing Data for monitoring water-borne and vector-borne diseases presents a promising approach to advancing public health surveillance and response systems. This project explores the integration of satellite imagery, climate data, and geographic information systems (GIS) to enhance the detection, prediction, and management of diseases transmitted through water and vectors. By harnessing the power of remote sensing technology, this research highlights the potential to identify disease hotspots, track environmental risk factors, and inform targeted interventions. The interdisciplinary collaboration between space agencies and public health entities opens new avenues for early warning systems and evidence-based decision-making, ultimately contributing to the reduction of disease burdens and the promotion of global health.\n\n\nPublic Health Relevance Statement\nIn the ongoing battle against water-borne and vector-borne diseases, the synergy between NASA Earth Observing Data and public health objectives marks a pivotal advancement. By leveraging satellite imagery and climate information, we can enhance our understanding of disease dynamics, identifying regions vulnerable to outbreaks and improving our preparedness. This integration allows for proactive measures, such as deploying resources for disease prevention, implementing targeted vector control, and disseminating timely health advisories to affected populations. As climate change continues to impact disease transmission patterns, harnessing the insights from remote sensing data becomes essential for public health agencies, aiding in their mission to safeguard communities, reduce illness burdens, and save lives.\nKeyword: Water-borne diseases, factors, vibrio cholerae, public health, health impacts, calamities, water."
+  },
+  {
+    "objectID": "research.html#university-mental-health-screening-systemumhss",
+    "href": "research.html#university-mental-health-screening-systemumhss",
+    "title": "Research Projects",
+    "section": "University Mental Health Screening System(UMHSS)",
+    "text": "University Mental Health Screening System(UMHSS)\n\nAbstract\nThe University Mental Health Screening System (UMHSS) aims to assess and address the mental health needs of Bangladeshi university students. With a focus on user-friendly interfaces and robust privacy measures, UMHSS aims to provide a comprehensive mental health screening for over 4000 university students. This study encompasses diverse demographics to ensure a representative sample and employs rigorous data analysis to identify prevalent mental health concerns. The findings contribute valuable insights into the mental well-being of Bangladeshi university students, paving the way for targeted interventions and support services.\n\n\nPublic Health Relevance\nMental health challenges among university students are a growing concern globally, and the Bangladeshi context is no exception. The UMHSS study holds significant public health relevance by shedding light on the unique mental health landscape of Bangladeshi university students. The findings will inform evidence-based interventions, policy development, and resource allocation aimed at improving mental health outcomes in higher education. Addressing mental health at this critical juncture not only enhances individual well-being but also contributes to the overall societal productivity and resilience of the nation.\nKeywords: Mental Health, Bangladesh, Early Detection, Student Well-being, Privacy, Support Services, Research, Intervention, Community"
+  },
+  {
+    "objectID": "research.html#school-mental-health-screening-programsmhsp",
+    "href": "research.html#school-mental-health-screening-programsmhsp",
+    "title": "Research Projects",
+    "section": "School Mental Health Screening Program(SMHSP)",
+    "text": "School Mental Health Screening Program(SMHSP)\n\nAbstract\nThe School Mental Health Screening Program (SMHSP) is an initiative led by the Center for Health Innovation, Research, Action, and Learning (CHIRAL Bangladesh). This project aims to introduce a comprehensive mental health screening system in schools across Bangladesh. With a focus on early detection and intervention, SMHSP seeks to create a supportive environment for students by identifying mental health concerns at an early stage. The implementation will involve collaboration with educational institutions, ensuring a holistic approach to student well-being. By fostering mental health awareness and providing necessary resources, SMHSP strives to contribute to the overall mental well-being of school communities in Bangladesh.\n\n\nPublic Health Relevance\nThe SMHSP project holds profound public health relevance by addressing the mental health needs of students within the educational landscape of Bangladesh. By integrating mental health screening into schools, the initiative recognizes the crucial role educational environments play in shaping the well-being of young minds. The outcomes of this project are poised to enhance mental health literacy, facilitate timely interventions, and contribute to a resilient and thriving future generation in Bangladesh. This initiative aligns with broader public health goals by promoting mental well-being as an integral component of overall health and development.\nKeywords: School Mental Health, Mental Health Screening, Bangladesh Education, Early Intervention, Student Well-being, Public Health, Youth Mental Health, Educational Initiatives, Community Health Innovation"
   },
   {
     "objectID": "research.html#prevention-and-control-of-thalassemia-in-bangladesh",
@@ -2007,26 +2007,5 @@
     "title": "Hepatitis Risk Assessment: Predictive Modeling with Machine Learning",
     "section": "Save Model",
     "text": "Save Model\n\n# save pipeline\nsave_model(dt, '../models/hepatitis')\n\nTransformation Pipeline and Model Successfully Saved\n\n\n(Pipeline(memory=FastMemory(location=C:\\Users\\JHossain\\AppData\\Local\\Temp\\joblib),\n          steps=[('label_encoding',\n                  TransformerWrapperWithInverse(exclude=None, include=None,\n                                                transformer=LabelEncoder())),\n                 ('numerical_imputer',\n                  TransformerWrapper(exclude=None,\n                                     include=['AGE', 'STEROID', 'ANTIVIRALS',\n                                              'FATIGUE', 'MALAISE', 'ANOREXIA',\n                                              'LIVER BIG', 'LIVER FIRM',\n                                              'SPLEEN PALPABL...\n                                     transformer=CleanColumnNames(match='[\\\\]\\\\[\\\\,\\\\{\\\\}\\\\\"\\\\:]+'))),\n                 ('trained_model',\n                  DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None,\n                                         criterion='gini', max_depth=None,\n                                         max_features=None, max_leaf_nodes=None,\n                                         min_impurity_decrease=0.0,\n                                         min_samples_leaf=1, min_samples_split=2,\n                                         min_weight_fraction_leaf=0.0,\n                                         random_state=123, splitter='best'))],\n          verbose=False),\n '../models/hepatitis.pkl')\n\n\n\n# load pipeline\nloaded_best_pipeline = load_model('../models/hepatitis')\nloaded_best_pipeline\n\nTransformation Pipeline and Model Successfully Loaded\n\n\nPipeline(memory=FastMemory(location=C:\\Users\\JHossain\\AppData\\Local\\Temp\\joblib),\n         steps=[('label_encoding',\n                 TransformerWrapperWithInverse(exclude=None, include=None,\n                                               transformer=LabelEncoder())),\n                ('numerical_imputer',\n                 TransformerWrapper(exclude=None,\n                                    include=['AGE', 'STEROID', 'ANTIVIRALS',\n                                             'FATIGUE', 'MALAISE', 'ANOREXIA',\n                                             'LIVER BIG', 'LIVER FIRM',\n                                             'SPLEEN PALPABL...\n                                    transformer=CleanColumnNames(match='[\\\\]\\\\[\\\\,\\\\{\\\\}\\\\\"\\\\:]+'))),\n                ('trained_model',\n                 DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None,\n                                        criterion='gini', max_depth=None,\n                                        max_features=None, max_leaf_nodes=None,\n                                        min_impurity_decrease=0.0,\n                                        min_samples_leaf=1, min_samples_split=2,\n                                        min_weight_fraction_leaf=0.0,\n                                        random_state=123, splitter='best'))],\n         verbose=False)In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.PipelinePipeline(memory=FastMemory(location=C:\\Users\\JHossain\\AppData\\Local\\Temp\\joblib),\n         steps=[('label_encoding',\n                 TransformerWrapperWithInverse(exclude=None, include=None,\n                                               transformer=LabelEncoder())),\n                ('numerical_imputer',\n                 TransformerWrapper(exclude=None,\n                                    include=['AGE', 'STEROID', 'ANTIVIRALS',\n                                             'FATIGUE', 'MALAISE', 'ANOREXIA',\n                                             'LIVER BIG', 'LIVER FIRM',\n                                             'SPLEEN PALPABL...\n                                    transformer=CleanColumnNames(match='[\\\\]\\\\[\\\\,\\\\{\\\\}\\\\\"\\\\:]+'))),\n                ('trained_model',\n                 DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None,\n                                        criterion='gini', max_depth=None,\n                                        max_features=None, max_leaf_nodes=None,\n                                        min_impurity_decrease=0.0,\n                                        min_samples_leaf=1, min_samples_split=2,\n                                        min_weight_fraction_leaf=0.0,\n                                        random_state=123, splitter='best'))],\n         verbose=False)label_encoding: TransformerWrapperWithInverseTransformerWrapperWithInverse(exclude=None, include=None,\n                              transformer=LabelEncoder())transformer: LabelEncoderLabelEncoder()LabelEncoderLabelEncoder()numerical_imputer: TransformerWrapperTransformerWrapper(exclude=None,\n                   include=['AGE', 'STEROID', 'ANTIVIRALS', 'FATIGUE',\n                            'MALAISE', 'ANOREXIA', 'LIVER BIG', 'LIVER FIRM',\n                            'SPLEEN PALPABLE', 'SPIDERS', 'ASCITES', 'VARICES',\n                            'BILIRUBIN', 'ALK PHOSPHATE', 'SGOT', 'ALBUMIN',\n                            'PROTIME', 'HISTOLOGY'],\n                   transformer=SimpleImputer(add_indicator=False, copy=True,\n                                             fill_value=None,\n                                             keep_empty_features=False,\n                                             missing_values=nan,\n                                             strategy='mean',\n                                             verbose='deprecated'))transformer: SimpleImputerSimpleImputer()SimpleImputerSimpleImputer()categorical_imputer: TransformerWrapperTransformerWrapper(exclude=None, include=['SEX'],\n                   transformer=SimpleImputer(add_indicator=False, copy=True,\n                                             fill_value=None,\n                                             keep_empty_features=False,\n                                             missing_values=nan,\n                                             strategy='most_frequent',\n                                             verbose='deprecated'))transformer: SimpleImputerSimpleImputer(strategy='most_frequent')SimpleImputerSimpleImputer(strategy='most_frequent')ordinal_encoding: TransformerWrapperTransformerWrapper(exclude=None, include=['SEX'],\n                   transformer=OrdinalEncoder(cols=['SEX'],\n                                              drop_invariant=False,\n                                              handle_missing='return_nan',\n                                              handle_unknown='value',\n                                              mapping=[{'col': 'SEX',\n                                                        'data_type': dtype('float64'),\n                                                        'mapping': 1.0    0\n2.0    1\nNaN   -1\ndtype: int64}],\n                                              return_df=True, verbose=0))transformer: OrdinalEncoderOrdinalEncoder(cols=['SEX'], handle_missing='return_nan',\n               mapping=[{'col': 'SEX', 'data_type': dtype('float64'),\n                         'mapping': 1.0    0\n2.0    1\nNaN   -1\ndtype: int64}])OrdinalEncoderOrdinalEncoder(cols=['SEX'], handle_missing='return_nan',\n               mapping=[{'col': 'SEX', 'data_type': dtype('float64'),\n                         'mapping': 1.0    0\n2.0    1\nNaN   -1\ndtype: int64}])clean_column_names: TransformerWrapperTransformerWrapper(exclude=None, include=None,\n                   transformer=CleanColumnNames(match='[\\\\]\\\\[\\\\,\\\\{\\\\}\\\\\"\\\\:]+'))transformer: CleanColumnNamesCleanColumnNames()CleanColumnNamesCleanColumnNames()DecisionTreeClassifierDecisionTreeClassifier(random_state=123)"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Md. Jubayer Hossain",
-    "section": "",
-    "text": "Welcome!ExperienceSkillsEducation\n\n\nHello, I am Md. Jubayer Hossain. I am the founder of CHIRAL Bangladesh, a non-profit organization dedicated to health research to improve lives in Bangladesh. I am also working as a health data analysis instructor at cBLAST. I aspire to maximize the quality of life of the human around me by working at the intersection of education, technology, and health research.\nI am interested in applying modern data science techniques in the context of disease diagnosis and large data analytics for public health while focusing on bridging the gap between computational and experimental laboratories through highly engaging and fruitful collaborations.\n\n\nFounder & Management Lead | Center for Health Innovation, Research Action, and Learning - Bangladesh (CHIRAL Bangladesh) | Dhaka, Bangladesh | (2020 - Present)\nInstructor | Center for Bioinformatics Learning Advancement and Systematic Training (cBLAST) | Dhaka, Bangladesh | (August 2023 - Present)\nProgram Lead | Research Internship Program | Center for Health Innovation, Research Action, and Learning - Bangladesh (CHIRAL Bangladesh) | Dhaka, Bangladesh | (January 2023 - Present)\nTeaching Assistant | Public Health & Hygiene, Department of Microbiology | Jagannath University) | Dhaka, Bangladesh | (October 2022 - December 2022)\nResearch Intern | Health Systems and Population Health Studies Division | International Centre for Diarrhoeal Disease Research, Bangladesh) | Dhaka, Bangladesh | (February 2022 - June 2022)\nTeam Member | Bio-Bio-1:: Bioinformatics Research Discussion Group) | Dhaka, Bangladesh | (February 2017 - June 2019)\n\n\nProgramming Languages: Python, R, SQL, Julia, JavaScript; Data Science: scikit-learn, PyCaret, Dask, PySpark; GIS & Remote Sensing: ArcGIS, Geopandas, Xarray, Giovani, Google Earth Engiine; Analytics Softwares: SPSS, PowerBI, Microsoft Excel; Survey Tools: RedCap, KoboToolBox, EpiCollect, Google Forms; Academic Writing Tools: Microsoft Word, LaTeX, Mendeley; Bioinformatics: BioPython, Bioconductor, BioPandas, Galaxy, NGS, RNASeq, ssRNASeq; Miscellaneous Skills: UNIX, Version Control(Git), Web Scraping, APIs\n\n\nMaster of Science in Microbiology | Jagannath University, Dhaka (2020 - 2021)\nBachelor of Science in Microbiology | Jagannath University, Dhaka (2016 - 2019)"
-  },
-  {
-    "objectID": "research.html#university-mental-health-screening-systemumhss",
-    "href": "research.html#university-mental-health-screening-systemumhss",
-    "title": "Research Projects",
-    "section": "University Mental Health Screening System(UMHSS)",
-    "text": "University Mental Health Screening System(UMHSS)\n\nAbstract\nThe University Mental Health Screening System (UMHSS) aims to assess and address the mental health needs of Bangladeshi university students. With a focus on user-friendly interfaces and robust privacy measures, UMHSS aims to provide a comprehensive mental health screening for over 4000 university students. This study encompasses diverse demographics to ensure a representative sample and employs rigorous data analysis to identify prevalent mental health concerns. The findings contribute valuable insights into the mental well-being of Bangladeshi university students, paving the way for targeted interventions and support services.\n\n\nPublic Health Relevance\nMental health challenges among university students are a growing concern globally, and the Bangladeshi context is no exception. The UMHSS study holds significant public health relevance by shedding light on the unique mental health landscape of Bangladeshi university students. The findings will inform evidence-based interventions, policy development, and resource allocation aimed at improving mental health outcomes in higher education. Addressing mental health at this critical juncture not only enhances individual well-being but also contributes to the overall societal productivity and resilience of the nation.\nKeywords: Mental Health, Bangladesh, Early Detection, Student Well-being, Privacy, Support Services, Research, Intervention, Community"
-  },
-  {
-    "objectID": "research.html#school-mental-health-screening-programsmhsp",
-    "href": "research.html#school-mental-health-screening-programsmhsp",
-    "title": "Research Projects",
-    "section": "School Mental Health Screening Program(SMHSP)",
-    "text": "School Mental Health Screening Program(SMHSP)\n\nAbstract\nThe School Mental Health Screening Program (SMHSP) is an initiative led by the Center for Health Innovation, Research, Action, and Learning (CHIRAL Bangladesh). This project aims to introduce a comprehensive mental health screening system in schools across Bangladesh. With a focus on early detection and intervention, SMHSP seeks to create a supportive environment for students by identifying mental health concerns at an early stage. The implementation will involve collaboration with educational institutions, ensuring a holistic approach to student well-being. By fostering mental health awareness and providing necessary resources, SMHSP strives to contribute to the overall mental well-being of school communities in Bangladesh.\n\n\nPublic Health Relevance\nThe SMHSP project holds profound public health relevance by addressing the mental health needs of students within the educational landscape of Bangladesh. By integrating mental health screening into schools, the initiative recognizes the crucial role educational environments play in shaping the well-being of young minds. The outcomes of this project are poised to enhance mental health literacy, facilitate timely interventions, and contribute to a resilient and thriving future generation in Bangladesh. This initiative aligns with broader public health goals by promoting mental well-being as an integral component of overall health and development.\nKeywords: School Mental Health, Mental Health Screening, Bangladesh Education, Early Intervention, Student Well-being, Public Health, Youth Mental Health, Educational Initiatives, Community Health Innovation"
   }
 ]
