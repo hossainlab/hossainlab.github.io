@@ -3,12 +3,12 @@ pagetitle: "Home | Jubayer Hossain"
 title: "Md. Jubayer Hossain"
 subtitle: "Learner, Educator, Data Analyst"
 page-layout: full
-image: files/profiles/profile.png
+image: files/profiles/hossainmj.png
 about:
   id: hero-heading
   template: trestles
   image-shape: rounded
-  image-width: 10cm
+  image-width: 8cm
   links:
     - icon: linkedin
       href: https://www.linkedin.com/in/hossainmj/
