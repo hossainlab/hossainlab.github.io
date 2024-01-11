@@ -27,7 +27,9 @@ engine: knitr
 website:
   page-navigation: true
   open-graph: true
-  twitter-card: true
+  twitter-card: 
+    creator: "@hossainlab"
+    image: "/files/img/banner.jpg"
   title: ""
   favicon: /files/profiles/icon.png
 

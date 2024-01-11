@@ -41,5 +41,12 @@
       "/teaching/single-cell-seq-analysis-with-r/index.html",
       "/teaching/tcga-data-analysis-with-r/index.html"
     ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/blog/multi-omics-data-integration/index.html",
+      "/blog/welcome/index.html"
+    ]
   }
 ]
