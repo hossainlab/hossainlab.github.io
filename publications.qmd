@@ -10,6 +10,7 @@ callout-icon: false
 :::  panel-tabset
 
 # Journal Articles 
+## Published 
 1. **Hossain, M. J.**, Islam, M. W., Munni, U. R., Gulshan, R., Mukta, S. A., Miah, M. S., Sultana, S., Karmakar, M., Ferdous, J., & Islam, M.A. (2023). Health‑related quality of life among thalassemia patients in Bangladesh using the SF‑36 questionnaire. Scientific Reports,13(1). <https://doi.org/10.1038/s41598-023-34205-9>
 
 2. Towhid, S. T., **Hossain, M. J.**, Sammo, M. A. S., & Akter, S. (2022). Perception of Students on Antibiotic Resistance and Prevention: An Online, Community‑Based Case Study from Dhaka, Bangladesh. European Journal of Biology and Biotechnology, 3(3), 14–19. <https://doi.org/10.24018/ejbio.2022.3.3.341>
@@ -17,7 +18,7 @@ callout-icon: false
 3. **Hossain, M.J.**, Towhid ST, Sultana S, Mukta SA, Gulshan R, Miah MS (2022). Knowledge and Attitudes towards
 Thalassemia among Public University Students in Bangladesh. Microbial Bioactives, 5(2), <https://doi.org/10.25163/microbbioacts.526325.>
 
-# Accepted
+## Accepted
 1. **Hossain, M.J.**, Towhid, S. T., Akter, S., Shahjahan, M., Roy, T., Akter, B., & Nodee, T. A.(2023). Self‑Management of Diabetic Patients from the Urban Areas in Bangladesh.( Accepted by Microbial Bioactives, October 2022)
 
 # Under Review
