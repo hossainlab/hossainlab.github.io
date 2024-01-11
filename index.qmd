@@ -67,3 +67,4 @@ I am interested in applying modern data science techniques in the context of dis
 tizing Public Health Modeling Using AI‑based Tools grant by the Bill and Melinda Gates Foundation made to CHRF
 
 :::
+<iframe src="https://hossainlab.substack.com/embed" width="800" height="200" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
