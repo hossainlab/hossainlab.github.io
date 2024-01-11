@@ -1,21 +1,23 @@
 ---
+pagetitle: "Publications | Jubayer Hossain"
 title: "Publications"
-toc: false
-listing:
-  - id: articles
-    contents: "publications/*/**.qmd"
-    template: ./ejs/article.ejs
-    categories: true
-    sort:
-      - "year desc"
-      - "title"
-    sort-ui: [title,author,publication,year]
-    filter-ui: [title,author,publication,year]
-    page-size: 10
-    field-display-names: 
-      publication: "Publication"
-      year: "Year"
+page-layout: full
+title-block-banner: false
+comments: false
+callout-icon: false
 ---
 
-:::{#articles}
+:::  panel-tabset
+
+# Journal Articles 
+1. **Hossain, M. J.**, Islam, M. W., Munni, U. R., Gulshan, R., Mukta, S. A., Miah, M. S., Sultana, S., Karmakar, M., Ferdous, J., & Islam, M.A. (2023). Health‑related quality of life among thalassemia patients in Bangladesh using the SF‑36 questionnaire. Scientific Reports,13(1). <https://doi.org/10.1038/s41598-023-34205-9>
+
+2. Towhid, S. T., **Hossain, M. J.**, Sammo, M. A. S., & Akter, S. (2022). Perception of Students on Antibiotic Resis‑
+tance and Prevention: An Online, Community‑Based Case Study from Dhaka, Bangladesh. European Journal of Biology and Biotechnology, 3(3), 14–19. <https://doi.org/10.24018/ejbio.2022.3.3.341>
+
+3. **Hossain, M.J.**, Towhid ST, Sultana S, Mukta SA, Gulshan R, Miah MS (2022). Knowledge and Attitudes towards
+Thalassemia among Public University Students in Bangladesh. Microbial Bioactives, 5(2), <https://doi.org/10.25163/microbbioacts.526325.>
+
+
 :::
+

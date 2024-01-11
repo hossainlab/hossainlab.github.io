@@ -115,6 +115,9 @@
       "projects",
       "teaching",
       "teching"
+    ],
+    "publications\\publications.qmd": [
+      "publications/*/**.qmd"
     ]
   }
 }
