@@ -1663,7 +1663,7 @@
     "href": "publications.html#accepted",
     "title": "Publications",
     "section": "Accepted",
-    "text": "Accepted\n\nHossain, M.J., Towhid, S. T., Akter, S., Shahjahan, M., Roy, T., Akter, B., & Nodee, T. A.(2023). Self‑Management of Diabetic Patients from the Urban Areas in Bangladesh.( Accepted by Microbial Bioactives, October 2022)"
+    "text": "Accepted\n\nHossain, M.J., Towhid, S. T., Akter, S., Shahjahan, M., Roy, T., Akter, B., & Nodee, T. A.(2023). Self‑Management of Diabetic Patients from the Urban Areas in Bangladesh.( Accepted by Microbial Bioactives, October 2022)\nIslam, M.W., Shahjahan, M., Azad, A.K., Hossain, M.J.(2023). Factors contributing to antibiotic misuse among parents of school-going children in Dhaka City, Bangladesh. http://dx.doi.org/10.21203/rs.3.rs-3382034/v1 (Accepted by Scientific Reports)"
   },
   {
     "objectID": "index.html#newsletter",
@@ -1699,5 +1699,33 @@
     "title": "",
     "section": "",
     "text": "Multi-omics Data Integration for Cancer Research\n\n\n\n\n\n\n\nMulti-omics Data Integration\n\n\nCancer Research\n\n\nMachine Learning\n\n\nOmics Data Analysis\n\n\n\n\nExplore the power of multi-omics data integration in cancer research. Learn from real-world case studies and groundbreaking discoveries. Find out more about this cutting-edge approach.\n\n\n\n\n\n\nSep 2, 2023\n\n\nMd. Jubayer Hossain\n\n\n\n\n\n\n  \n\n\n\n\nUnlocking the Power of Data: Join the Journey on My Blog!\n\n\n\n\n\n\n\nNews\n\n\n\n\n\n\n\n\n\n\n\nOct 22, 2022\n\n\nMd. Jubayer Hossain\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "dashboards.html",
+    "href": "dashboards.html",
+    "title": "Dashboards",
+    "section": "",
+    "text": "The dashboard typically includes various features and components to help stakeholders, such as public health authorities, researchers, and the general public, understand and analyze the dengue situation."
+  },
+  {
+    "objectID": "dashboards.html#dengue-situation-monitoring-dashboard",
+    "href": "dashboards.html#dengue-situation-monitoring-dashboard",
+    "title": "Dashboards",
+    "section": "",
+    "text": "The dashboard typically includes various features and components to help stakeholders, such as public health authorities, researchers, and the general public, understand and analyze the dengue situation."
+  },
+  {
+    "objectID": "dashboards.html#nipah-virus-transmission-in-bangladesh",
+    "href": "dashboards.html#nipah-virus-transmission-in-bangladesh",
+    "title": "Dashboards",
+    "section": "Nipah Virus Transmission in Bangladesh",
+    "text": "Nipah Virus Transmission in Bangladesh\nNipah virus transmission in Bangladesh primarily occurs through direct contact with infected bats, their excretions, or consumption of contaminated fruits or raw date palm sap. This zoonotic virus can also be transmitted from person to person through close contact, making it a potential threat in healthcare settings. Public health measures, such as avoiding contact with sick individuals and practicing good hygiene, are essential to prevent its spread in Bangladesh and other affected regions."
+  },
+  {
+    "objectID": "dashboards.html#monkeypox-outbreak-insights",
+    "href": "dashboards.html#monkeypox-outbreak-insights",
+    "title": "Dashboards",
+    "section": "Monkeypox Outbreak Insights",
+    "text": "Monkeypox Outbreak Insights\nVisualizing the data produced by the World Health Organization on the 2022 monkeypox outbreak."
   }
 ]
