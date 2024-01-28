@@ -11,6 +11,8 @@ callout-icon: false
 
 # Journal Articles 
 ## Published 
+- Islam, M.W., Shahjahan, M., Azad, A.K., **Hossain, M. J.** Factors contributing to antibiotic misuse among parents of school-going children in Dhaka City, Bangladesh. Sci Rep 14, 2318 (2024). <https://doi.org/10.1038/s41598-024-52313-y>
+
 - **Hossain, M. J.**, Islam, M. W., Munni, U. R., Gulshan, R., Mukta, S. A., Miah, M. S., Sultana, S., Karmakar, M., Ferdous, J., & Islam, M.A. (2023). Health‑related quality of life among thalassemia patients in Bangladesh using the SF‑36 questionnaire. Scientific Reports,13(1). <https://doi.org/10.1038/s41598-023-34205-9>
 
 - Towhid, S. T., **Hossain, M. J.**, Sammo, M. A. S., & Akter, S. (2022). Perception of Students on Antibiotic Resistance and Prevention: An Online, Community‑Based Case Study from Dhaka, Bangladesh. European Journal of Biology and Biotechnology, 3(3), 14–19. <https://doi.org/10.24018/ejbio.2022.3.3.341>
@@ -21,7 +23,6 @@ Thalassemia among Public University Students in Bangladesh. Microbial Bioactives
 ## Accepted
 - **Hossain, M.J.**, Towhid, S. T., Akter, S., Shahjahan, M., Roy, T., Akter, B., & Nodee, T. A.(2023). Self‑Management of Diabetic Patients from the Urban Areas in Bangladesh.( Accepted by Microbial Bioactives, October 2022)
 
-- Islam, M.W., Shahjahan, M., Azad, A.K., **Hossain, M.J.**(2023). Factors contributing to antibiotic misuse among parents of school-going children in Dhaka City, Bangladesh. <http://dx.doi.org/10.21203/rs.3.rs-3382034/v1> (Accepted by Scientific Reports)
 
 # Under Review
 - Akter, MM., **Hossain, M.J.**(2023).Food consumption patterns and sedentary behaviours among the university students: a cross-sectional study. <http://dx.doi.org/10.21203/rs.3.rs-3207448/v1> (Submitted to Health Science Reports)
