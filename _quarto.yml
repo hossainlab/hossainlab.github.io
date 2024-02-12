@@ -23,7 +23,6 @@ execute:
 description-meta: "Personal Website for Md. Jubayer Hossain (Learner, Educator and Data Analyst)"
 engine: knitr
 
-
 website:
   page-navigation: true
   open-graph: true
@@ -64,8 +63,8 @@ website:
           file: about.qmd
         - text: "Blog"
           file: blog.qmd
-        - text: "Research"
-          file: research.qmd
+        - text: "Press"
+          file: press.qmd
         - text: "Publications"
           file: publications.qmd
         - text: "Projects"

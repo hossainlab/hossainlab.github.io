@@ -1,0 +1,15 @@
+---
+pagetitle: "Press | Jubayer Hossain"
+title: "Press"
+page-layout: full
+title-block-banner: false
+comments: false
+callout-icon: false
+---
+
+:::  panel-tabset
+
+# Newspaper 
+Parental lack of antibiotic knowledge imperils child health in Bangladesh: Study. *The Business Standard* (08 February, 2024, 12:00 pm). <https://www.tbsnews.net/bangladesh/health/parental-lack-antibiotic-knowledge-imperils-child-health-bangladesh-study-789250>
+
+::: 
