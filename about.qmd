@@ -36,7 +36,6 @@ I am interested in applying modern data science techniques in the context of dis
 **AI in Public Health** \| Child Health Research Foundation (CHRF), Dhaka, Bangladesh (September 2023)
 
 - Participated in a comprehensive 4‑day workshop focused on utilizing AI techniques in public health research and decision‑making
-
 - Recipient of the scholarship, which provided financial support for my enrollment in the ’AI In Public Health’ workshop, as part of the Democra‑
 tizing Public Health Modeling Using AI‑based Tools grant by the Bill and Melinda Gates Foundation made to CHRF
 
@@ -44,23 +43,43 @@ tizing Public Health Modeling Using AI‑based Tools grant by the Bill and Melin
 # Experience
 
 ## Research Experience 
-**Founder & Management Lead** \|  [Center for Health Innovation, Research Action, and Learning -  Bangladesh (CHIRAL Bangladesh)](https://chiralbd.org/) | Dhaka, Bangladesh |  (2020 - Present)
 
-The Center for Health Innovation, Research, Action and Learning – Bangladesh (CHIRAL Bangladesh) is a voluntary non-profit research organization, resolving to promote interdisciplinary research in the field of health data science, computational biology and genomics. As the Founder & Management Lead at CHIRAL Bangladesh, I established and now lead a pioneering healthcare innovation and research center dedicated to driving positive change in the health sector. Our focus lies in fostering innovation, conducting impactful research, and facilitating continuous learning to enhance healthcare practices in Bangladesh.
+**Founder & Executive Director** \|  [Center for Health Innovation, Research Action, and Learning -  Bangladesh (CHIRAL Bangladesh)](https://chiralbd.org/) | Dhaka, Bangladesh |  (January 2023 - Present)
+
+As the Founder & Executive Director of CHIRAL Bangladesh, I have a pivotal role in shaping the organization's direction and ensuring its impact on society. 
+
+**Responsibilities:**
+
+- Lead multidisciplinary research teams and the Research Internship Program and Training Unit
+- Develop and communicate the overarching vision, mission, and strategic direction of the organization
+- Ensure alignment of these elements with the organization’s long‑term goals and societal impact
+- Set and reinforce the organizational culture, emphasizing values such as innovation, integrity, and collaboration
+- 
+
+**Founder & Management Lead** \|  [Center for Health Innovation, Research Action, and Learning -  Bangladesh (CHIRAL Bangladesh)](https://chiralbd.org/) | Dhaka, Bangladesh |  (June 2020 - Present)
+
+As the Founder & Management Lead at CHIRAL Bangladesh, I established and now lead the team to driving positive change in the health sector in Bangladesh. Our focus lies in fostering innovation, conducting impactful research, and facilitating continuous learning to enhance healthcare practices in Bangladesh.
+
+- Develop and communicate the overall vision, mission, and strategic direction of the organization
+- Provide strong leadership and set the tone for the organization culture and values
 
 **Research Intern** \| Health Systems and Population Health Studies Division |  [International Centre for Diarrhoeal Disease Research, Bangladesh)](https://www.icddrb.org/) \|  Dhaka, Bangladesh \| (February 2022 - June 2022)
 
-As a Research Intern in the Health Systems and Population Health Studies Division at icddr,b, I had the opportunity to contribute to impactful research projects focusing on health systems and population health. Working in a dynamic research environment, I gained valuable insights into the complexities of healthcare challenges and solutions.
+- Conducted literature reviews and data analysis to support research projects
+- Participated in fieldwork, including data collection and data entry
+
+
+**Data Enumerator** \| School of Allied Health |  [Curtin University](#) \| Australia \| (October 2022 ‑ November 2022) 
+
+- Delphi Study on Patient Outcomes Measurement for Interprofessional Tuberculosis Care Bangladesh
+- Successfully collected and recorded quantitative and qualitative data from participants, ensuring a comprehensive dataset for the Delphi study
+
 
 
 ## Teaching Experience 
 **Instructor** \|  [Center for Bioinformatics Learning Advancement and Systematic Training (cBLAST)](https://www.cblastdu.xyz/) \|  Dhaka, Bangladesh \|  (August 2023 - Present) 
 
 As an Instructor at cBLAST, I contribute to the advancement of bioinformatics knowledge and skills by designing and delivering engaging educational programs. Through hands-on training and systematic learning, I empower students and professionals to harness the potential of bioinformatics in various scientific and healthcare applications.
-
-**Program Lead** \| Research Internship Program |  [Center for Health Innovation, Research Action, and Learning -  Bangladesh (CHIRAL Bangladesh)](https://chiralbd.org/) \|  Dhaka, Bangladesh \| (January 2023 - Present)
-
-In my capacity as the Program Lead for the Research Internship Program at CHIRAL Bangladesh, I am responsible for overseeing the planning, execution, and impact of the internship program. I play a pivotal role in providing aspiring researchers with valuable learning experiences in the healthcare innovation and research domain.
 
 **Teaching Assistant** \|  Public Health & Hygiene, Department of Microbiology \| [Jagannath University)](https://jnu.ac.bd/dept/portal/web/microbiology) \| Dhaka, Bangladesh \|  (October 2022 - December 2022)
 

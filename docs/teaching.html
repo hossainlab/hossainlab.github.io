@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -48,7 +48,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -57,6 +63,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -95,8 +102,34 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <meta property="og:title" content="Teaching | Jubayer Hossain">
-<meta property="og:image" content="./teaching/applied-machine-learning-for-healthcare/logo.png">
 <meta name="twitter:title" content="Teaching | Jubayer Hossain">
 <meta name="twitter:image" content="/files/img/banner.jpg">
 <meta name="twitter:creator" content="@hossainlab">
@@ -107,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
             <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -116,80 +149,80 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html" rel="" target="">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="./blog.html"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./research.html" rel="" target="">
- <span class="menu-text">Research</span></a>
+    <a class="nav-link" href="./press.html"> 
+<span class="menu-text">Press</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./publications.html" rel="" target="">
- <span class="menu-text">Publications</span></a>
+    <a class="nav-link" href="./publications.html"> 
+<span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html" rel="" target="">
- <span class="menu-text">Projects</span></a>
+    <a class="nav-link" href="./projects.html"> 
+<span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./dashboards.html" rel="" target="">
- <span class="menu-text">Dashboards</span></a>
+    <a class="nav-link" href="./dashboards.html"> 
+<span class="menu-text">Dashboards</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./talks.html" rel="" target="">
- <span class="menu-text">Talks</span></a>
+    <a class="nav-link" href="./talks.html"> 
+<span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./teaching.html" rel="" target="" aria-current="page">
- <span class="menu-text">Teaching</span></a>
+    <a class="nav-link active" href="./teaching.html" aria-current="page"> 
+<span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./use.html" rel="" target="">
- <span class="menu-text">What I Use</span></a>
+    <a class="nav-link" href="./use.html"> 
+<span class="menu-text">What I Use</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv/index.html" rel="" target="">
- <span class="menu-text">CV</span></a>
+    <a class="nav-link" href="./cv/index.html"> 
+<span class="menu-text">CV</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="mailto:hossainmj@gmail.com" rel="" target=""><i class="bi bi-envelope" role="img" aria-label="email">
+    <a class="nav-link" href="mailto:hossainmj@gmail.com"> <i class="bi bi-envelope" role="img" aria-label="email">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/JHossain_28" rel="me" target=""><i class="bi bi-twitter" role="img" aria-label="twitter">
+    <a class="nav-link" href="https://twitter.com/JHossain_28" rel="me"> <i class="bi bi-twitter" role="img" aria-label="twitter">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/hossainlab" rel="me" target=""><i class="bi bi-github" role="img" aria-label="github">
+    <a class="nav-link" href="https://github.com/hossainlab" rel="me"> <i class="bi bi-github" role="img" aria-label="github">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.youtube.com/@hossainlab" rel="me" target=""><i class="bi bi-youtube" role="img" aria-label="youtube">
+    <a class="nav-link" href="https://www.youtube.com/@hossainlab" rel="me"> <i class="bi bi-youtube" role="img" aria-label="youtube">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/hossainmj" rel="" target=""><i class="bi bi-linkedin" role="img" aria-label="linkedin">
+    <a class="nav-link" href="https://www.linkedin.com/in/hossainmj"> <i class="bi bi-linkedin" role="img" aria-label="linkedin">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -198,7 +231,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(14)</span></div><div class="category" data-category="Bioinformatics">Bioinformatics <span class="quarto-category-count">(5)</span></div><div class="category" data-category="BootCamp">BootCamp <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Cancer">Cancer <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Clinical Reporting">Clinical Reporting <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Dashboard">Dashboard <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Data Analysi">Data Analysi <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Data Analysis">Data Analysis <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Geospatial Health Data Science">Geospatial Health Data Science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Health Data">Health Data <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Healthcare">Healthcare <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Machine Learning">Machine Learning <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Omics Data Science">Omics Data Science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Public Health">Public Health <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Python">Python <span class="quarto-category-count">(3)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(2)</span></div><div class="category" data-category="R Programming">R Programming <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Research">Research <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Shiny">Shiny <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TCGA">TCGA <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Transcriptomics">Transcriptomics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Workshop">Workshop <span class="quarto-category-count">(1)</span></div><div class="category" data-category="flexdashoard">flexdashoard <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(15)</span></div><div class="category" data-category="AI Tools">AI Tools <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Bioinformatics">Bioinformatics <span class="quarto-category-count">(5)</span></div><div class="category" data-category="BootCamp">BootCamp <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Cancer">Cancer <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ChatGPT">ChatGPT <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Clinical Reporting">Clinical Reporting <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Dashboard">Dashboard <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Data Analysi">Data Analysi <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Data Analysis">Data Analysis <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Geospatial Health Data Science">Geospatial Health Data Science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Health Data">Health Data <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Healthcare">Healthcare <span class="quarto-category-count">(3)</span></div><div class="category" data-category="LLMs">LLMs <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Machine Learning">Machine Learning <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Omics Data Science">Omics Data Science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Public Health">Public Health <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Python">Python <span class="quarto-category-count">(3)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(2)</span></div><div class="category" data-category="R Programming">R Programming <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Research">Research <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Shiny">Shiny <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TCGA">TCGA <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Transcriptomics">Transcriptomics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Workshop">Workshop <span class="quarto-category-count">(1)</span></div><div class="category" data-category="flexdashoard">flexdashoard <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -208,21 +241,22 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Python,Machine Learning,Healthcare,Health Data" data-listing-file-modified-sort="1692900257484" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="0" data-categories="Python,Machine Learning,Healthcare,Health Data" data-listing-file-modified-sort="1692900257484" data-listing-reading-time-sort="2" data-listing-word-count-sort="227">
 <div class="thumbnail">
-<p><a href="./teaching/applied-machine-learning-for-healthcare/index.html"> <img src="./teaching/applied-machine-learning-for-healthcare/logo.png" class="thumbnail-image"> </a></p>
+<p><a href="./teaching/applied-machine-learning-for-healthcare/index.html" class="no-external"></a></p><a href="./teaching/applied-machine-learning-for-healthcare/index.html" class="no-external">
+<p><img src="./teaching/applied-machine-learning-for-healthcare/logo.png" class="thumbnail-image"></p>
+</a><p><a href="./teaching/applied-machine-learning-for-healthcare/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./teaching/applied-machine-learning-for-healthcare/index.html">
 <h3 class="no-anchor listing-title">
-Applied Machine Learning for Healthcare (AML4H)
+<a href="./teaching/applied-machine-learning-for-healthcare/index.html" class="no-external">Applied Machine Learning for Healthcare (AML4H)</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./teaching/applied-machine-learning-for-healthcare/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
 Python
@@ -237,29 +271,28 @@ Healthcare
 Health Data
 </div>
 </div>
-<a href="./teaching/applied-machine-learning-for-healthcare/index.html">
 <div class="listing-description">
-Applied Machine Learning for Healthcare (AML4H) is an advanced-level course that focuses on the intersection of machine learning and healthcare. This course is designed to…
+<a href="./teaching/applied-machine-learning-for-healthcare/index.html" class="no-external">Applied Machine Learning for Healthcare (AML4H) is an advanced-level course that focuses on the intersection of machine learning and healthcare. This course is designed to…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./teaching/applied-machine-learning-for-healthcare/index.html"> </a>
+<p><a href="./teaching/applied-machine-learning-for-healthcare/index.html" class="no-external"></a></p><a href="./teaching/applied-machine-learning-for-healthcare/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="Bioinformatics,BootCamp" data-listing-file-modified-sort="1692598665377" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="1" data-categories="Bioinformatics,BootCamp" data-listing-file-modified-sort="1692598665377" data-listing-reading-time-sort="1" data-listing-word-count-sort="126">
 <div class="thumbnail">
-<p><a href="./teaching/bioinformatics-bootcamp/index.html"> <img src="./teaching/bioinformatics-bootcamp/logo.png" class="thumbnail-image"> </a></p>
+<p><a href="./teaching/bioinformatics-bootcamp/index.html" class="no-external"></a></p><a href="./teaching/bioinformatics-bootcamp/index.html" class="no-external">
+<p><img src="./teaching/bioinformatics-bootcamp/logo.png" class="thumbnail-image"></p>
+</a><p><a href="./teaching/bioinformatics-bootcamp/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./teaching/bioinformatics-bootcamp/index.html">
 <h3 class="no-anchor listing-title">
-Bioinformatics BootCamp
+<a href="./teaching/bioinformatics-bootcamp/index.html" class="no-external">Bioinformatics BootCamp</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./teaching/bioinformatics-bootcamp/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Bioinformatics'); return false;">
 Bioinformatics
@@ -268,29 +301,28 @@ Bioinformatics
 BootCamp
 </div>
 </div>
-<a href="./teaching/bioinformatics-bootcamp/index.html">
 <div class="listing-description">
-Bioinformatics BootCamp is an intensive and comprehensive training program designed to equip participants with the essential skills and knowledge in bioinformatics. This…
+<a href="./teaching/bioinformatics-bootcamp/index.html" class="no-external">Bioinformatics BootCamp is an intensive and comprehensive training program designed to equip participants with the essential skills and knowledge in bioinformatics. This…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./teaching/bioinformatics-bootcamp/index.html"> </a>
+<p><a href="./teaching/bioinformatics-bootcamp/index.html" class="no-external"></a></p><a href="./teaching/bioinformatics-bootcamp/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="Dashboard,flexdashoard,Shiny" data-listing-file-modified-sort="1693654574296" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="2" data-categories="Dashboard,flexdashoard,Shiny" data-listing-file-modified-sort="1693654574296" data-listing-reading-time-sort="1" data-listing-word-count-sort="100">
 <div class="thumbnail">
-<p><a href="./teaching/building-dashboard-with-r/index.html"> <img src="./teaching/building-dashboard-with-r/logo.png" class="thumbnail-image"> </a></p>
+<p><a href="./teaching/building-dashboard-with-r/index.html" class="no-external"></a></p><a href="./teaching/building-dashboard-with-r/index.html" class="no-external">
+<p><img src="./teaching/building-dashboard-with-r/logo.png" class="thumbnail-image"></p>
+</a><p><a href="./teaching/building-dashboard-with-r/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./teaching/building-dashboard-with-r/index.html">
 <h3 class="no-anchor listing-title">
-Building Dashboard with R
+<a href="./teaching/building-dashboard-with-r/index.html" class="no-external">Building Dashboard with R</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./teaching/building-dashboard-with-r/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Dashboard'); return false;">
 Dashboard
@@ -302,29 +334,28 @@ flexdashoard
 Shiny
 </div>
 </div>
-<a href="./teaching/building-dashboard-with-r/index.html">
 <div class="listing-description">
-In this comprehensive course, you will learn how to create interactive and informative dashboards using the R programming language. Dashboards are essential tools for data…
+<a href="./teaching/building-dashboard-with-r/index.html" class="no-external">In this comprehensive course, you will learn how to create interactive and informative dashboards using the R programming language. Dashboards are essential tools for data…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./teaching/building-dashboard-with-r/index.html"> </a>
+<p><a href="./teaching/building-dashboard-with-r/index.html" class="no-external"></a></p><a href="./teaching/building-dashboard-with-r/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="R Programming,Data Analysi" data-listing-file-modified-sort="1692524338349" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="3" data-categories="R Programming,Data Analysi" data-listing-file-modified-sort="1692524338349" data-listing-reading-time-sort="2" data-listing-word-count-sort="398">
 <div class="thumbnail">
-<p><a href="./teaching/data-analysis-with-r/index.html"> <img src="./teaching/data-analysis-with-r/logo.png" class="thumbnail-image"> </a></p>
+<p><a href="./teaching/data-analysis-with-r/index.html" class="no-external"></a></p><a href="./teaching/data-analysis-with-r/index.html" class="no-external">
+<p><img src="./teaching/data-analysis-with-r/logo.png" class="thumbnail-image"></p>
+</a><p><a href="./teaching/data-analysis-with-r/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./teaching/data-analysis-with-r/index.html">
 <h3 class="no-anchor listing-title">
-Data Analysis with R
+<a href="./teaching/data-analysis-with-r/index.html" class="no-external">Data Analysis with R</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./teaching/data-analysis-with-r/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R Programming'); return false;">
 R Programming
@@ -333,29 +364,61 @@ R Programming
 Data Analysi
 </div>
 </div>
-<a href="./teaching/data-analysis-with-r/index.html">
 <div class="listing-description">
-The purpose of this course is to provide a practical introduction to the programming language R for researchers in any field. We are convinced that R…
+<a href="./teaching/data-analysis-with-r/index.html" class="no-external">The purpose of this course is to provide a practical introduction to the programming language R for researchers in any field. We are convinced that R is a powerful tool that…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./teaching/data-analysis-with-r/index.html"> </a>
+<p><a href="./teaching/data-analysis-with-r/index.html" class="no-external"></a></p><a href="./teaching/data-analysis-with-r/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="Machine Learning,Bioinformatics,Omics Data Science" data-listing-file-modified-sort="1692467493987" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="4" data-categories="LLMs,AI Tools,ChatGPT" data-listing-file-modified-sort="1708453114027" data-listing-reading-time-sort="1" data-listing-word-count-sort="189">
 <div class="thumbnail">
-<p><a href="./teaching/ml-for-bioinformatics/index.html"> <img src="./teaching/ml-for-bioinformatics/logo.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./teaching/ethics-of-llms-in-biomedical-research/index.html" class="no-external"></a></p><a href="./teaching/ethics-of-llms-in-biomedical-research/index.html" class="no-external">
+<p><img src="./teaching/ethics-of-llms-in-biomedical-research/logo.png" class="thumbnail-image"></p>
+</a><p><a href="./teaching/ethics-of-llms-in-biomedical-research/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./teaching/ml-for-bioinformatics/index.html">
 <h3 class="no-anchor listing-title">
-Machine Learning for Bioinformatics with Python
+<a href="./teaching/ethics-of-llms-in-biomedical-research/index.html" class="no-external">Ethics of Large Language Models (LLMs) in Biomedical Research</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./teaching/ethics-of-llms-in-biomedical-research/index.html" class="no-external"></a>
 </div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('LLMs'); return false;">
+LLMs
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('AI Tools'); return false;">
+AI Tools
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('ChatGPT'); return false;">
+ChatGPT
+</div>
+</div>
+<div class="listing-description">
+<a href="./teaching/ethics-of-llms-in-biomedical-research/index.html" class="no-external">The purpose of this course is to critically examine and explore the ethical considerations surrounding the utilization of Large Language Models (LLMs) in the context of…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./teaching/ethics-of-llms-in-biomedical-research/index.html" class="no-external"></a></p><a href="./teaching/ethics-of-llms-in-biomedical-research/index.html" class="no-external">
 </a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-categories="Machine Learning,Bioinformatics,Omics Data Science" data-listing-file-modified-sort="1692467493987" data-listing-reading-time-sort="1" data-listing-word-count-sort="142">
+<div class="thumbnail">
+<p><a href="./teaching/ml-for-bioinformatics/index.html" class="no-external"></a></p><a href="./teaching/ml-for-bioinformatics/index.html" class="no-external">
+<p><img src="./teaching/ml-for-bioinformatics/logo.jpg" class="thumbnail-image"></p>
+</a><p><a href="./teaching/ml-for-bioinformatics/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./teaching/ml-for-bioinformatics/index.html" class="no-external">Machine Learning for Bioinformatics with Python</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./teaching/ml-for-bioinformatics/index.html" class="no-external"></a>
+</div>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Machine Learning'); return false;">
 Machine Learning
@@ -367,29 +430,28 @@ Bioinformatics
 Omics Data Science
 </div>
 </div>
-<a href="./teaching/ml-for-bioinformatics/index.html">
 <div class="listing-description">
-The “Machine Learning for Bioinformatics with Python” course is designed to provide participants with a solid foundation in applying machine learning techniques to solve…
+<a href="./teaching/ml-for-bioinformatics/index.html" class="no-external">The “Machine Learning for Bioinformatics with Python” course is designed to provide participants with a solid foundation in applying machine learning techniques to solve…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./teaching/ml-for-bioinformatics/index.html"> </a>
+<p><a href="./teaching/ml-for-bioinformatics/index.html" class="no-external"></a></p><a href="./teaching/ml-for-bioinformatics/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="Workshop,Public Health,Clinical Reporting" data-listing-file-modified-sort="1692531290804" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="6" data-categories="Workshop,Public Health,Clinical Reporting" data-listing-file-modified-sort="1692531290804" data-listing-reading-time-sort="3" data-listing-word-count-sort="505">
 <div class="thumbnail">
-<p><a href="./teaching/gtsummary-for-public-health/index.html"> <img src="./teaching/gtsummary-for-public-health/logo.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./teaching/gtsummary-for-public-health/index.html" class="no-external"></a></p><a href="./teaching/gtsummary-for-public-health/index.html" class="no-external">
+<p><img src="./teaching/gtsummary-for-public-health/logo.jpg" class="thumbnail-image"></p>
+</a><p><a href="./teaching/gtsummary-for-public-health/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./teaching/gtsummary-for-public-health/index.html">
 <h3 class="no-anchor listing-title">
-Public Health Insights: Clinical Reporting Using {gtsummary}
+<a href="./teaching/gtsummary-for-public-health/index.html" class="no-external">Public Health Insights: Clinical Reporting Using {gtsummary}</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./teaching/gtsummary-for-public-health/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Workshop'); return false;">
 Workshop
@@ -401,29 +463,28 @@ Public Health
 Clinical Reporting
 </div>
 </div>
-<a href="./teaching/gtsummary-for-public-health/index.html">
 <div class="listing-description">
-Join us for an engaging and informative workshop on “Public Health Insights: Clinical…<code></code><code></code>
+<a href="./teaching/gtsummary-for-public-health/index.html" class="no-external">Join us for an engaging and informative workshop on “Public Health Insights: Clinical Reporting Using {gtsummary}.” This workshop is designed to equip public health…<code></code><code></code></a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./teaching/gtsummary-for-public-health/index.html"> </a>
+<p><a href="./teaching/gtsummary-for-public-health/index.html" class="no-external"></a></p><a href="./teaching/gtsummary-for-public-health/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="Python,Machine Learning,Healthcare,Geospatial Health Data Science" data-listing-file-modified-sort="1692900625951" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="7" data-categories="Python,Machine Learning,Healthcare,Geospatial Health Data Science" data-listing-file-modified-sort="1692900625951" data-listing-reading-time-sort="2" data-listing-word-count-sort="287">
 <div class="thumbnail">
-<p><a href="./teaching/python-for-geospatial-health-data-science/index.html"> <img src="./teaching/python-for-geospatial-health-data-science/logo.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./teaching/python-for-geospatial-health-data-science/index.html" class="no-external"></a></p><a href="./teaching/python-for-geospatial-health-data-science/index.html" class="no-external">
+<p><img src="./teaching/python-for-geospatial-health-data-science/logo.jpg" class="thumbnail-image"></p>
+</a><p><a href="./teaching/python-for-geospatial-health-data-science/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./teaching/python-for-geospatial-health-data-science/index.html">
 <h3 class="no-anchor listing-title">
-Python for Geospatial Health Data Science (PY4GHDS)
+<a href="./teaching/python-for-geospatial-health-data-science/index.html" class="no-external">Python for Geospatial Health Data Science (PY4GHDS)</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./teaching/python-for-geospatial-health-data-science/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
 Python
@@ -438,29 +499,28 @@ Healthcare
 Geospatial Health Data Science
 </div>
 </div>
-<a href="./teaching/python-for-geospatial-health-data-science/index.html">
 <div class="listing-description">
-The Python for Geospatial Health Data Science (PY4GHDS) course is designed to provide an introduction to using…
+<a href="./teaching/python-for-geospatial-health-data-science/index.html" class="no-external">The Python for Geospatial Health Data Science (PY4GHDS) course is designed to provide an introduction to using Python for analyzing and visualizing geospatial health data.…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./teaching/python-for-geospatial-health-data-science/index.html"> </a>
+<p><a href="./teaching/python-for-geospatial-health-data-science/index.html" class="no-external"></a></p><a href="./teaching/python-for-geospatial-health-data-science/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="Python,Healthcare,Health Data" data-listing-file-modified-sort="1692899210347" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="8" data-categories="Python,Healthcare,Health Data" data-listing-file-modified-sort="1692899210347" data-listing-reading-time-sort="3" data-listing-word-count-sort="422">
 <div class="thumbnail">
-<p><a href="./teaching/python-for-health-data-analysis/index.html"> <img src="./teaching/python-for-health-data-analysis/logo.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./teaching/python-for-health-data-analysis/index.html" class="no-external"></a></p><a href="./teaching/python-for-health-data-analysis/index.html" class="no-external">
+<p><img src="./teaching/python-for-health-data-analysis/logo.jpg" class="thumbnail-image"></p>
+</a><p><a href="./teaching/python-for-health-data-analysis/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./teaching/python-for-health-data-analysis/index.html">
 <h3 class="no-anchor listing-title">
-Python for Health Data Analysis
+<a href="./teaching/python-for-health-data-analysis/index.html" class="no-external">Python for Health Data Analysis</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./teaching/python-for-health-data-analysis/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
 Python
@@ -472,29 +532,28 @@ Healthcare
 Health Data
 </div>
 </div>
-<a href="./teaching/python-for-health-data-analysis/index.html">
 <div class="listing-description">
-This comprehensive 12-week course was designed to equip participants with essential skills to analyze health data using Python.…
+<a href="./teaching/python-for-health-data-analysis/index.html" class="no-external">This comprehensive 12-week course was designed to equip participants with essential skills to analyze health data using Python. Health data analysis is a critical aspect of…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./teaching/python-for-health-data-analysis/index.html"> </a>
+<p><a href="./teaching/python-for-health-data-analysis/index.html" class="no-external"></a></p><a href="./teaching/python-for-health-data-analysis/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="Research,Data Analysis,Public Health" data-listing-file-modified-sort="1692467055535" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="9" data-categories="Research,Data Analysis,Public Health" data-listing-file-modified-sort="1692467055535" data-listing-reading-time-sort="2" data-listing-word-count-sort="280">
 <div class="thumbnail">
-<p><a href="./teaching/r-for-bioinformatics/index.html"> <img src="./teaching/r-for-bioinformatics/logo.gif" class="thumbnail-image"> </a></p>
+<p><a href="./teaching/r-for-bioinformatics/index.html" class="no-external"></a></p><a href="./teaching/r-for-bioinformatics/index.html" class="no-external">
+<p><img src="./teaching/r-for-bioinformatics/logo.gif" class="thumbnail-image"></p>
+</a><p><a href="./teaching/r-for-bioinformatics/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./teaching/r-for-bioinformatics/index.html">
 <h3 class="no-anchor listing-title">
-R for Bioinformatics
+<a href="./teaching/r-for-bioinformatics/index.html" class="no-external">R for Bioinformatics</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./teaching/r-for-bioinformatics/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Research'); return false;">
 Research
@@ -506,29 +565,28 @@ Data Analysis
 Public Health
 </div>
 </div>
-<a href="./teaching/r-for-bioinformatics/index.html">
 <div class="listing-description">
-Welcome to the exciting world of bioinformatics! In this course, we will explore the application of the R programming language in the field of bioinformatics. Whether you…
+<a href="./teaching/r-for-bioinformatics/index.html" class="no-external">Welcome to the exciting world of bioinformatics! In this course, we will explore the application of the R programming language in the field of bioinformatics. Whether you…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./teaching/r-for-bioinformatics/index.html"> </a>
+<p><a href="./teaching/r-for-bioinformatics/index.html" class="no-external"></a></p><a href="./teaching/r-for-bioinformatics/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="Research,Data Analysis" data-listing-file-modified-sort="1692467105953" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="10" data-categories="Research,Data Analysis" data-listing-file-modified-sort="1692467105953" data-listing-reading-time-sort="2" data-listing-word-count-sort="233">
 <div class="thumbnail">
-<p><a href="./teaching/r-for-research/index.html"> <img src="./teaching/r-for-research/logo.png" class="thumbnail-image"> </a></p>
+<p><a href="./teaching/r-for-research/index.html" class="no-external"></a></p><a href="./teaching/r-for-research/index.html" class="no-external">
+<p><img src="./teaching/r-for-research/logo.png" class="thumbnail-image"></p>
+</a><p><a href="./teaching/r-for-research/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./teaching/r-for-research/index.html">
 <h3 class="no-anchor listing-title">
-R for Research
+<a href="./teaching/r-for-research/index.html" class="no-external">R for Research</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./teaching/r-for-research/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Research'); return false;">
 Research
@@ -537,29 +595,28 @@ Research
 Data Analysis
 </div>
 </div>
-<a href="./teaching/r-for-research/index.html">
 <div class="listing-description">
-The purpose of this course is to provide a practical introduction to the programming language R for researchers in any field. We are convinced that R…
+<a href="./teaching/r-for-research/index.html" class="no-external">The purpose of this course is to provide a practical introduction to the programming language R for researchers in any field. We are convinced that R is a powerful tool that…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./teaching/r-for-research/index.html"> </a>
+<p><a href="./teaching/r-for-research/index.html" class="no-external"></a></p><a href="./teaching/r-for-research/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="Bioinformatics,R,Transcriptomics" data-listing-file-modified-sort="1692467218011" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="11" data-categories="Bioinformatics,R,Transcriptomics" data-listing-file-modified-sort="1692467218011" data-listing-reading-time-sort="1" data-listing-word-count-sort="170">
 <div class="thumbnail">
-<p><a href="./teaching/rna-seq-data-analysis-with-r/index.html"> <img src="./teaching/rna-seq-data-analysis-with-r/logo.png" class="thumbnail-image"> </a></p>
+<p><a href="./teaching/rna-seq-data-analysis-with-r/index.html" class="no-external"></a></p><a href="./teaching/rna-seq-data-analysis-with-r/index.html" class="no-external">
+<p><img src="./teaching/rna-seq-data-analysis-with-r/logo.png" class="thumbnail-image"></p>
+</a><p><a href="./teaching/rna-seq-data-analysis-with-r/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./teaching/rna-seq-data-analysis-with-r/index.html">
 <h3 class="no-anchor listing-title">
-RNA-seq Data Aanalysis with R
+<a href="./teaching/rna-seq-data-analysis-with-r/index.html" class="no-external">RNA-seq Data Aanalysis with R</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./teaching/rna-seq-data-analysis-with-r/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Bioinformatics'); return false;">
 Bioinformatics
@@ -571,29 +628,28 @@ R
 Transcriptomics
 </div>
 </div>
-<a href="./teaching/rna-seq-data-analysis-with-r/index.html">
 <div class="listing-description">
-The RNA-seq Data Analysis with R course is designed to provide participants with the knowledge and skills needed to effectively analyze and interpret RNA sequencing…
+<a href="./teaching/rna-seq-data-analysis-with-r/index.html" class="no-external">The RNA-seq Data Analysis with R course is designed to provide participants with the knowledge and skills needed to effectively analyze and interpret RNA sequencing…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./teaching/rna-seq-data-analysis-with-r/index.html"> </a>
+<p><a href="./teaching/rna-seq-data-analysis-with-r/index.html" class="no-external"></a></p><a href="./teaching/rna-seq-data-analysis-with-r/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="Research,Data Analysis,Public Health" data-listing-file-modified-sort="1691901959560" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="12" data-categories="Research,Data Analysis,Public Health" data-listing-file-modified-sort="1691901959560" data-listing-reading-time-sort="1" data-listing-word-count-sort="186">
 <div class="thumbnail">
-<p><a href="./teaching/spss/index.html"> <img src="./teaching/spss/logo.png" class="thumbnail-image"> </a></p>
+<p><a href="./teaching/spss/index.html" class="no-external"></a></p><a href="./teaching/spss/index.html" class="no-external">
+<p><img src="./teaching/spss/logo.png" class="thumbnail-image"></p>
+</a><p><a href="./teaching/spss/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./teaching/spss/index.html">
 <h3 class="no-anchor listing-title">
-Research Data Analysis with SPSS
+<a href="./teaching/spss/index.html" class="no-external">Research Data Analysis with SPSS</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./teaching/spss/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Research'); return false;">
 Research
@@ -605,29 +661,28 @@ Data Analysis
 Public Health
 </div>
 </div>
-<a href="./teaching/spss/index.html">
 <div class="listing-description">
-The Research Data Analysis with SPSS course is tailored for researchers, analysts, and students who want to acquire a strong foundation in using SPSS (Statistical Package…
+<a href="./teaching/spss/index.html" class="no-external">The Research Data Analysis with SPSS course is tailored for researchers, analysts, and students who want to acquire a strong foundation in using SPSS (Statistical Package…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./teaching/spss/index.html"> </a>
+<p><a href="./teaching/spss/index.html" class="no-external"></a></p><a href="./teaching/spss/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="Bioinformatics,R,Transcriptomics" data-listing-file-modified-sort="1692467192614" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="13" data-categories="Bioinformatics,R,Transcriptomics" data-listing-file-modified-sort="1692467192614" data-listing-reading-time-sort="1" data-listing-word-count-sort="132">
 <div class="thumbnail">
-<p><a href="./teaching/single-cell-seq-analysis-with-r/index.html"> <img src="./teaching/single-cell-seq-analysis-with-r/logo.png" class="thumbnail-image"> </a></p>
+<p><a href="./teaching/single-cell-seq-analysis-with-r/index.html" class="no-external"></a></p><a href="./teaching/single-cell-seq-analysis-with-r/index.html" class="no-external">
+<p><img src="./teaching/single-cell-seq-analysis-with-r/logo.png" class="thumbnail-image"></p>
+</a><p><a href="./teaching/single-cell-seq-analysis-with-r/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./teaching/single-cell-seq-analysis-with-r/index.html">
 <h3 class="no-anchor listing-title">
-Single-Cell RNA-Seq Analysis with R
+<a href="./teaching/single-cell-seq-analysis-with-r/index.html" class="no-external">Single-Cell RNA-Seq Analysis with R</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./teaching/single-cell-seq-analysis-with-r/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Bioinformatics'); return false;">
 Bioinformatics
@@ -639,29 +694,28 @@ R
 Transcriptomics
 </div>
 </div>
-<a href="./teaching/single-cell-seq-analysis-with-r/index.html">
 <div class="listing-description">
-The Single-Cell RNA-Seq Analysis with R course is designed for researchers and bioinformaticians interested in unlocking insights from single-cell transcriptomics data using…
+<a href="./teaching/single-cell-seq-analysis-with-r/index.html" class="no-external">The Single-Cell RNA-Seq Analysis with R course is designed for researchers and bioinformaticians interested in unlocking insights from single-cell transcriptomics data using…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./teaching/single-cell-seq-analysis-with-r/index.html"> </a>
+<p><a href="./teaching/single-cell-seq-analysis-with-r/index.html" class="no-external"></a></p><a href="./teaching/single-cell-seq-analysis-with-r/index.html" class="no-external">
+</a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="Bioinformatics,R Programming,Transcriptomics,TCGA,Cancer" data-listing-file-modified-sort="1692898784407" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="14" data-categories="Bioinformatics,R Programming,Transcriptomics,TCGA,Cancer" data-listing-file-modified-sort="1692898784407" data-listing-reading-time-sort="2" data-listing-word-count-sort="258">
 <div class="thumbnail">
-<p><a href="./teaching/tcga-data-analysis-with-r/index.html"> <img src="./teaching/tcga-data-analysis-with-r/logo.png" class="thumbnail-image"> </a></p>
+<p><a href="./teaching/tcga-data-analysis-with-r/index.html" class="no-external"></a></p><a href="./teaching/tcga-data-analysis-with-r/index.html" class="no-external">
+<p><img src="./teaching/tcga-data-analysis-with-r/logo.png" class="thumbnail-image"></p>
+</a><p><a href="./teaching/tcga-data-analysis-with-r/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./teaching/tcga-data-analysis-with-r/index.html">
 <h3 class="no-anchor listing-title">
-TCGA Data Analysis with R
+<a href="./teaching/tcga-data-analysis-with-r/index.html" class="no-external">TCGA Data Analysis with R</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./teaching/tcga-data-analysis-with-r/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Bioinformatics'); return false;">
 Bioinformatics
@@ -679,14 +733,13 @@ TCGA
 Cancer
 </div>
 </div>
-<a href="./teaching/tcga-data-analysis-with-r/index.html">
 <div class="listing-description">
-The TCGA Data Analysis with R course is designed to equip participants with the knowledge and skills necessary to effectively analyze and interpret data from The Cancer…
+<a href="./teaching/tcga-data-analysis-with-r/index.html" class="no-external">The TCGA Data Analysis with R course is designed to equip participants with the knowledge and skills necessary to effectively analyze and interpret data from The Cancer…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./teaching/tcga-data-analysis-with-r/index.html"> </a>
+<p><a href="./teaching/tcga-data-analysis-with-r/index.html" class="no-external"></a></p><a href="./teaching/tcga-data-analysis-with-r/index.html" class="no-external">
+</a>
 </div>
 </div>
 </div>
@@ -773,10 +826,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -786,8 +838,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -800,6 +861,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -843,6 +1023,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -868,6 +1049,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -930,26 +1137,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">© Copyright 2023, Md. Jubayer Hossain</div>   
+    <div class="nav-footer-left">
+<p>© Copyright 2023, Md. Jubayer Hossain</p>
+</div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/JHossain_28">
+    <a class="nav-link" href="https://twitter.com/JHossain_28" rel="me">
       <i class="bi bi-twitter" role="img" aria-label="twitter">
 </i> 
     </a>
   </li>  
     <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/hossainlab">
+    <a class="nav-link" href="https://github.com/hossainlab" rel="me">
       <i class="bi bi-github" role="img" aria-label="github">
 </i> 
     </a>
   </li>  
     <li class="nav-item compact">
-    <a class="nav-link" href="https://www.youtube.com/@hossainlab">
+    <a class="nav-link" href="https://www.youtube.com/@hossainlab" rel="me">
       <i class="bi bi-youtube" role="img" aria-label="youtube">
 </i> 
     </a>
@@ -964,6 +1173,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+
 
 
 

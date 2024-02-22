@@ -427,5 +427,11 @@
   },
   "press.qmd": {
     "press.html": "2275a47a"
+  },
+  "teaching/ethics-of-llms-in-biomedical-research/index.qmd": {
+    "index.html": "57343941"
+  },
+  "cv/index.Rmd": {
+    "index.html": "d9cc3f7a"
   }
 }

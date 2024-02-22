@@ -1,5 +1,12 @@
 [
   {
+    "listing": "/talks.html",
+    "items": [
+      "/talks/state-the-art-of-microbial-genome-analysi/index.html",
+      "/talks/undergraduate-research-importance-benefits-and-challenges/index.html"
+    ]
+  },
+  {
     "listing": "/projects.html",
     "items": [
       "/projects/Calories_Burnt/02_Calories Burnt Prediction.html",
@@ -17,19 +24,13 @@
     ]
   },
   {
-    "listing": "/talks.html",
-    "items": [
-      "/talks/state-the-art-of-microbial-genome-analysi/index.html",
-      "/talks/undergraduate-research-importance-benefits-and-challenges/index.html"
-    ]
-  },
-  {
     "listing": "/teaching.html",
     "items": [
       "/teaching/applied-machine-learning-for-healthcare/index.html",
       "/teaching/bioinformatics-bootcamp/index.html",
       "/teaching/building-dashboard-with-r/index.html",
       "/teaching/data-analysis-with-r/index.html",
+      "/teaching/ethics-of-llms-in-biomedical-research/index.html",
       "/teaching/ml-for-bioinformatics/index.html",
       "/teaching/gtsummary-for-public-health/index.html",
       "/teaching/python-for-geospatial-health-data-science/index.html",
@@ -40,13 +41,6 @@
       "/teaching/spss/index.html",
       "/teaching/single-cell-seq-analysis-with-r/index.html",
       "/teaching/tcga-data-analysis-with-r/index.html"
-    ]
-  },
-  {
-    "listing": "/blog.html",
-    "items": [
-      "/blog/multi-omics-data-integration/index.html",
-      "/blog/welcome/index.html"
     ]
   }
 ]

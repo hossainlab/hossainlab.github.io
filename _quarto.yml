@@ -26,7 +26,7 @@ engine: knitr
 website:
   page-navigation: true
   open-graph: true
-  twitter-card: 
+  twitter-card:
     creator: "@hossainlab"
     image: "/files/img/banner.jpg"
   title: ""
@@ -78,7 +78,7 @@ website:
         - text: "What I Use"
           file: use.qmd
         - text: "CV"
-          file: cv/index.qmd
+          file: https://hossainlab.github.io/CV/
       right:
       - icon: envelope
         aria-label: email
