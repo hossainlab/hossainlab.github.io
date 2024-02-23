@@ -1,9 +1,21 @@
 [
   {
-    "listing": "/talks.html",
+    "listing": "/teaching.html",
     "items": [
-      "/talks/state-the-art-of-microbial-genome-analysi/index.html",
-      "/talks/undergraduate-research-importance-benefits-and-challenges/index.html"
+      "/teaching/applied-machine-learning-for-healthcare/index.html",
+      "/teaching/bioinformatics-bootcamp/index.html",
+      "/teaching/building-dashboard-with-r/index.html",
+      "/teaching/data-analysis-with-r/index.html",
+      "/teaching/ml-for-bioinformatics/index.html",
+      "/teaching/gtsummary-for-public-health/index.html",
+      "/teaching/python-for-geospatial-health-data-science/index.html",
+      "/teaching/python-for-health-data-analysis/index.html",
+      "/teaching/r-for-bioinformatics/index.html",
+      "/teaching/r-for-research/index.html",
+      "/teaching/rna-seq-data-analysis-with-r/index.html",
+      "/teaching/spss/index.html",
+      "/teaching/single-cell-seq-analysis-with-r/index.html",
+      "/teaching/tcga-data-analysis-with-r/index.html"
     ]
   },
   {
@@ -24,23 +36,17 @@
     ]
   },
   {
-    "listing": "/teaching.html",
+    "listing": "/blog.html",
     "items": [
-      "/teaching/applied-machine-learning-for-healthcare/index.html",
-      "/teaching/bioinformatics-bootcamp/index.html",
-      "/teaching/building-dashboard-with-r/index.html",
-      "/teaching/data-analysis-with-r/index.html",
-      "/teaching/ethics-of-llms-in-biomedical-research/index.html",
-      "/teaching/ml-for-bioinformatics/index.html",
-      "/teaching/gtsummary-for-public-health/index.html",
-      "/teaching/python-for-geospatial-health-data-science/index.html",
-      "/teaching/python-for-health-data-analysis/index.html",
-      "/teaching/r-for-bioinformatics/index.html",
-      "/teaching/r-for-research/index.html",
-      "/teaching/rna-seq-data-analysis-with-r/index.html",
-      "/teaching/spss/index.html",
-      "/teaching/single-cell-seq-analysis-with-r/index.html",
-      "/teaching/tcga-data-analysis-with-r/index.html"
+      "/blog/multi-omics-data-integration/index.html",
+      "/blog/welcome/index.html"
+    ]
+  },
+  {
+    "listing": "/talks.html",
+    "items": [
+      "/talks/state-the-art-of-microbial-genome-analysi/index.html",
+      "/talks/undergraduate-research-importance-benefits-and-challenges/index.html"
     ]
   }
 ]
