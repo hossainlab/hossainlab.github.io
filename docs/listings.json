@@ -1,0 +1,21 @@
+[
+  {
+    "listing": "/teaching.html",
+    "items": [
+      "/teaching/applied-machine-learning-for-healthcare/index.html",
+      "/teaching/bioinformatics-bootcamp/index.html",
+      "/teaching/building-dashboard-with-r/index.html",
+      "/teaching/data-analysis-with-r/index.html",
+      "/teaching/ml-for-bioinformatics/index.html",
+      "/teaching/gtsummary-for-public-health/index.html",
+      "/teaching/python-for-geospatial-health-data-science/index.html",
+      "/teaching/python-for-health-data-analysis/index.html",
+      "/teaching/r-for-bioinformatics/index.html",
+      "/teaching/r-for-research/index.html",
+      "/teaching/rna-seq-data-analysis-with-r/index.html",
+      "/teaching/spss/index.html",
+      "/teaching/single-cell-seq-analysis-with-r/index.html",
+      "/teaching/tcga-data-analysis-with-r/index.html"
+    ]
+  }
+]
