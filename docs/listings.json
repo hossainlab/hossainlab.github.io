@@ -17,5 +17,36 @@
       "/teaching/single-cell-seq-analysis-with-r/index.html",
       "/teaching/tcga-data-analysis-with-r/index.html"
     ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/Calories_Burnt/02_Calories Burnt Prediction.html",
+      "/projects/data-professionals-survey-report/index.html",
+      "/projects/dengue-situation-dashboard/index.html",
+      "/projects/ESOL/01_ESOL.html",
+      "/projects/health-impact-of-distance-learning-on-high-school-students/index.html",
+      "/projects/Heart_Disease/05_Heart Diseases.html",
+      "/projects/Hepatitis/02_Hepatitis.html",
+      "/projects/Breast_Cancer/03_Breast Cancer.html",
+      "/projects/Liver_Disorder/04_Liver Disorder.html",
+      "/projects/Choronic_Kidney/01_Choronic Kidney.html",
+      "/projects/monkeypox-outbreak-insights/index.html",
+      "/projects/nipah-virus/index.html"
+    ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/blog/multi-omics-data-integration/index.html",
+      "/blog/welcome/index.html"
+    ]
+  },
+  {
+    "listing": "/talks.html",
+    "items": [
+      "/talks/state-the-art-of-microbial-genome-analysi/index.html",
+      "/talks/undergraduate-research-importance-benefits-and-challenges/index.html"
+    ]
   }
 ]

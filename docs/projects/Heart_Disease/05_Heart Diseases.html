@@ -1,0 +1,3503 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.550">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Personal Website for Md. Jubayer Hossain (Learner, Educator and Data Analyst)">
+
+<title>Heart Disease Analysis and Prediction Using Machine Learning</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../..//files/profiles/icon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+<script src="https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js" crossorigin="anonymous"></script>
+
+
+<meta property="og:title" content="Heart Disease Analysis and Prediction Using Machine Learning">
+<meta property="og:description" content="">
+<meta property="og:image" content="featured.svg">
+<meta name="twitter:title" content="Heart Disease Analysis and Prediction Using Machine Learning">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="featured.svg">
+<meta name="twitter:creator" content="@hossainlab">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../press.html"> 
+<span class="menu-text">Press</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../publications.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../dashboards.html"> 
+<span class="menu-text">Dashboards</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../talks.html"> 
+<span class="menu-text">Talks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../teaching.html"> 
+<span class="menu-text">Teaching</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../use.html"> 
+<span class="menu-text">What I Use</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../cv/index.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:hossainmj@gmail.com"> <i class="bi bi-envelope" role="img" aria-label="email">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/JHossain_28" rel="me"> <i class="bi bi-twitter" role="img" aria-label="twitter">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/hossainlab" rel="me"> <i class="bi bi-github" role="img" aria-label="github">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/@hossainlab" rel="me"> <i class="bi bi-youtube" role="img" aria-label="youtube">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/hossainmj"> <i class="bi bi-linkedin" role="img" aria-label="linkedin">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#problem" id="toc-problem" class="nav-link active" data-scroll-target="#problem">Problem</a></li>
+  <li><a href="#objective" id="toc-objective" class="nav-link" data-scroll-target="#objective">Objective</a></li>
+  <li><a href="#exploring-data" id="toc-exploring-data" class="nav-link" data-scroll-target="#exploring-data">Exploring Data</a></li>
+  <li><a href="#descriptive-statistics" id="toc-descriptive-statistics" class="nav-link" data-scroll-target="#descriptive-statistics">Descriptive statistics</a></li>
+  <li><a href="#correlations-between-variables" id="toc-correlations-between-variables" class="nav-link" data-scroll-target="#correlations-between-variables">Correlations between Variables</a></li>
+  <li><a href="#skewness" id="toc-skewness" class="nav-link" data-scroll-target="#skewness">Skewness</a></li>
+  <li><a href="#data-visualizations" id="toc-data-visualizations" class="nav-link" data-scroll-target="#data-visualizations">Data visualizations</a></li>
+  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">Setup</a></li>
+  <li><a href="#compare-models" id="toc-compare-models" class="nav-link" data-scroll-target="#compare-models">Compare Models</a></li>
+  <li><a href="#create-model" id="toc-create-model" class="nav-link" data-scroll-target="#create-model">Create Model</a></li>
+  <li><a href="#tune-model" id="toc-tune-model" class="nav-link" data-scroll-target="#tune-model">Tune Model</a></li>
+  <li><a href="#analyze-model" id="toc-analyze-model" class="nav-link" data-scroll-target="#analyze-model">Analyze Model</a></li>
+  <li><a href="#evaluate-model" id="toc-evaluate-model" class="nav-link" data-scroll-target="#evaluate-model">Evaluate Model</a></li>
+  <li><a href="#finalize-model" id="toc-finalize-model" class="nav-link" data-scroll-target="#finalize-model">Finalize Model</a></li>
+  <li><a href="#prediction" id="toc-prediction" class="nav-link" data-scroll-target="#prediction">Prediction</a></li>
+  <li><a href="#save-model" id="toc-save-model" class="nav-link" data-scroll-target="#save-model">Save Model</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Heart Disease Analysis and Prediction Using Machine Learning</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Machine Learning</div>
+    <div class="quarto-category">Heart Disease</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta column-page-left">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="problem" class="level2">
+<h2 class="anchored" data-anchor-id="problem">Problem</h2>
+<p>Heart disease is a leading cause of mortality and morbidity worldwide, making its timely detection and accurate prediction crucial for effective management and prevention. However, the diagnosis of heart disease can be challenging due to its complex nature and the presence of various risk factors. Traditional diagnostic methods may lack the precision and efficiency needed for early detection and prediction. Therefore, there is a pressing need to develop advanced machine learning models that can analyze patient data and accurately predict the likelihood of heart disease, enabling proactive healthcare interventions.</p>
+</section>
+<section id="objective" class="level2">
+<h2 class="anchored" data-anchor-id="objective">Objective</h2>
+<p>The objective of this study is to utilize machine learning techniques for the analysis and prediction of heart disease.</p>
+<p><strong>Data Source:</strong> https://www.kaggle.com/datasets/johnsmith88/heart-disease-dataset</p>
+<div id="4af9006e-b3d8-427d-98be-1e5050d7a853" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load libraries</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> researchpy <span class="im">as</span> rp </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cf06737c-4e0d-4c5b-ae33-9094a409aeba" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load dataset</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">"../data/heart.csv"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>data.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<div>
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">age</th>
+<th data-quarto-table-cell-role="th">sex</th>
+<th data-quarto-table-cell-role="th">cp</th>
+<th data-quarto-table-cell-role="th">trestbps</th>
+<th data-quarto-table-cell-role="th">chol</th>
+<th data-quarto-table-cell-role="th">fbs</th>
+<th data-quarto-table-cell-role="th">restecg</th>
+<th data-quarto-table-cell-role="th">thalach</th>
+<th data-quarto-table-cell-role="th">exang</th>
+<th data-quarto-table-cell-role="th">oldpeak</th>
+<th data-quarto-table-cell-role="th">slope</th>
+<th data-quarto-table-cell-role="th">ca</th>
+<th data-quarto-table-cell-role="th">thal</th>
+<th data-quarto-table-cell-role="th">target</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>63</td>
+<td>1</td>
+<td>3</td>
+<td>145</td>
+<td>233</td>
+<td>1</td>
+<td>0</td>
+<td>150</td>
+<td>0</td>
+<td>2.3</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>37</td>
+<td>1</td>
+<td>2</td>
+<td>130</td>
+<td>250</td>
+<td>0</td>
+<td>1</td>
+<td>187</td>
+<td>0</td>
+<td>3.5</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>41</td>
+<td>0</td>
+<td>1</td>
+<td>130</td>
+<td>204</td>
+<td>0</td>
+<td>0</td>
+<td>172</td>
+<td>0</td>
+<td>1.4</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>56</td>
+<td>1</td>
+<td>1</td>
+<td>120</td>
+<td>236</td>
+<td>0</td>
+<td>1</td>
+<td>178</td>
+<td>0</td>
+<td>0.8</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>57</td>
+<td>0</td>
+<td>0</td>
+<td>120</td>
+<td>354</td>
+<td>0</td>
+<td>1</td>
+<td>163</td>
+<td>1</td>
+<td>0.6</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="exploring-data" class="level2">
+<h2 class="anchored" data-anchor-id="exploring-data">Exploring Data</h2>
+<div id="6b5ea086-8f78-468c-b19c-69c0a7def5da" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># check shape of data </span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>data.shape</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<pre><code>(303, 14)</code></pre>
+</div>
+</div>
+<div id="f9f5d7f0-210a-4e86-969d-a80161fc31b9" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># dtypes </span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>data.dtypes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<pre><code>age           int64
+sex           int64
+cp            int64
+trestbps      int64
+chol          int64
+fbs           int64
+restecg       int64
+thalach       int64
+exang         int64
+oldpeak     float64
+slope         int64
+ca            int64
+thal          int64
+target        int64
+dtype: object</code></pre>
+</div>
+</div>
+<div id="413dab67-47df-4bf3-bd6e-cf271fda8207" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># info </span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>data.info() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 303 entries, 0 to 302
+Data columns (total 14 columns):
+ #   Column    Non-Null Count  Dtype  
+---  ------    --------------  -----  
+ 0   age       303 non-null    int64  
+ 1   sex       303 non-null    int64  
+ 2   cp        303 non-null    int64  
+ 3   trestbps  303 non-null    int64  
+ 4   chol      303 non-null    int64  
+ 5   fbs       303 non-null    int64  
+ 6   restecg   303 non-null    int64  
+ 7   thalach   303 non-null    int64  
+ 8   exang     303 non-null    int64  
+ 9   oldpeak   303 non-null    float64
+ 10  slope     303 non-null    int64  
+ 11  ca        303 non-null    int64  
+ 12  thal      303 non-null    int64  
+ 13  target    303 non-null    int64  
+dtypes: float64(1), int64(13)
+memory usage: 33.3 KB</code></pre>
+</div>
+</div>
+<div id="45b67313-2bbd-4c6b-8007-914f31fa3516" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>data[[<span class="st">'sex'</span>,<span class="st">'target'</span>]] <span class="op">=</span> data[[<span class="st">'sex'</span>,<span class="st">'target'</span>]].astype(<span class="bu">object</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="33a57bef-0cf2-4afe-b8b5-e8686b4ceaa9" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># check missing data </span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>data.isnull().<span class="bu">sum</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<pre><code>age         0
+sex         0
+cp          0
+trestbps    0
+chol        0
+fbs         0
+restecg     0
+thalach     0
+exang       0
+oldpeak     0
+slope       0
+ca          0
+thal        0
+target      0
+dtype: int64</code></pre>
+</div>
+</div>
+</section>
+<section id="descriptive-statistics" class="level2">
+<h2 class="anchored" data-anchor-id="descriptive-statistics">Descriptive statistics</h2>
+<div id="abf89de2-74f5-48f3-9306-102820f4f1de" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># select numeric data </span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>num_cols <span class="op">=</span> data.select_dtypes(exclude <span class="op">=</span> <span class="st">'object'</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>num_cols.head() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<div>
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">age</th>
+<th data-quarto-table-cell-role="th">cp</th>
+<th data-quarto-table-cell-role="th">trestbps</th>
+<th data-quarto-table-cell-role="th">chol</th>
+<th data-quarto-table-cell-role="th">fbs</th>
+<th data-quarto-table-cell-role="th">restecg</th>
+<th data-quarto-table-cell-role="th">thalach</th>
+<th data-quarto-table-cell-role="th">exang</th>
+<th data-quarto-table-cell-role="th">oldpeak</th>
+<th data-quarto-table-cell-role="th">slope</th>
+<th data-quarto-table-cell-role="th">ca</th>
+<th data-quarto-table-cell-role="th">thal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>63</td>
+<td>3</td>
+<td>145</td>
+<td>233</td>
+<td>1</td>
+<td>0</td>
+<td>150</td>
+<td>0</td>
+<td>2.3</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>37</td>
+<td>2</td>
+<td>130</td>
+<td>250</td>
+<td>0</td>
+<td>1</td>
+<td>187</td>
+<td>0</td>
+<td>3.5</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>41</td>
+<td>1</td>
+<td>130</td>
+<td>204</td>
+<td>0</td>
+<td>0</td>
+<td>172</td>
+<td>0</td>
+<td>1.4</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>56</td>
+<td>1</td>
+<td>120</td>
+<td>236</td>
+<td>0</td>
+<td>1</td>
+<td>178</td>
+<td>0</td>
+<td>0.8</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>57</td>
+<td>0</td>
+<td>120</td>
+<td>354</td>
+<td>0</td>
+<td>1</td>
+<td>163</td>
+<td>1</td>
+<td>0.6</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+<div id="e358e734-3578-4537-9287-0fcfea157d9f" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># summary statistics of numerical variables </span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>rp.summarize(num_cols[[<span class="st">'age'</span>, <span class="st">'cp'</span>, <span class="st">'trestbps'</span>, <span class="st">'chol'</span>, <span class="st">'fbs'</span>, <span class="st">'restecg'</span>, <span class="st">'thalach'</span>, <span class="st">'exang'</span>,</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>       <span class="st">'oldpeak'</span>, <span class="st">'slope'</span>, <span class="st">'ca'</span>, <span class="st">'thal'</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="9">
+<div>
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Name</th>
+<th data-quarto-table-cell-role="th">N</th>
+<th data-quarto-table-cell-role="th">Mean</th>
+<th data-quarto-table-cell-role="th">Median</th>
+<th data-quarto-table-cell-role="th">Variance</th>
+<th data-quarto-table-cell-role="th">SD</th>
+<th data-quarto-table-cell-role="th">SE</th>
+<th data-quarto-table-cell-role="th">95% Conf. Interval</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>age</td>
+<td>303</td>
+<td>54.3663</td>
+<td>55.0</td>
+<td>82.4846</td>
+<td>9.0821</td>
+<td>0.5218</td>
+<td>age</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>cp</td>
+<td>303</td>
+<td>0.967</td>
+<td>1.0</td>
+<td>1.0651</td>
+<td>1.0321</td>
+<td>0.0593</td>
+<td>cp</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>trestbps</td>
+<td>303</td>
+<td>131.6238</td>
+<td>130.0</td>
+<td>307.5865</td>
+<td>17.5381</td>
+<td>1.0075</td>
+<td>trestbps</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>chol</td>
+<td>303</td>
+<td>246.264</td>
+<td>240.0</td>
+<td>2686.4267</td>
+<td>51.8308</td>
+<td>2.9776</td>
+<td>chol</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>fbs</td>
+<td>303</td>
+<td>0.1485</td>
+<td>0.0</td>
+<td>0.1269</td>
+<td>0.3562</td>
+<td>0.0205</td>
+<td>fbs</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>restecg</td>
+<td>303</td>
+<td>0.5281</td>
+<td>1.0</td>
+<td>0.2765</td>
+<td>0.5259</td>
+<td>0.0302</td>
+<td>restecg</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>thalach</td>
+<td>303</td>
+<td>149.6469</td>
+<td>153.0</td>
+<td>524.6464</td>
+<td>22.9052</td>
+<td>1.3159</td>
+<td>thalach</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">7</td>
+<td>exang</td>
+<td>303</td>
+<td>0.3267</td>
+<td>0.0</td>
+<td>0.2207</td>
+<td>0.4698</td>
+<td>0.027</td>
+<td>exang</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">8</td>
+<td>oldpeak</td>
+<td>303</td>
+<td>1.0396</td>
+<td>0.8</td>
+<td>1.3481</td>
+<td>1.1611</td>
+<td>0.0667</td>
+<td>oldpeak</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">9</td>
+<td>slope</td>
+<td>303</td>
+<td>1.3993</td>
+<td>1.0</td>
+<td>0.3797</td>
+<td>0.6162</td>
+<td>0.0354</td>
+<td>slope</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">10</td>
+<td>ca</td>
+<td>303</td>
+<td>0.7294</td>
+<td>0.0</td>
+<td>1.0457</td>
+<td>1.0226</td>
+<td>0.0587</td>
+<td>ca</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">11</td>
+<td>thal</td>
+<td>303</td>
+<td>2.3135</td>
+<td>2.0</td>
+<td>0.3749</td>
+<td>0.6123</td>
+<td>0.0352</td>
+<td>thal</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+<div id="f78e05db-c0d5-41ac-978d-56ca4fa426c2" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># select categorical data </span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>cat_cols <span class="op">=</span> data.select_dtypes(include <span class="op">=</span> <span class="st">'object'</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>cat_cols.head() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="10">
+<div>
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">sex</th>
+<th data-quarto-table-cell-role="th">target</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+<div id="2f7c1425-6482-40b4-8f2c-86645774ef22" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># summary statistics of categorical variables </span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>rp.summary_cat(cat_cols[[<span class="st">'sex'</span>, <span class="st">'target'</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>C:\Users\JHossain\anaconda3\lib\site-packages\researchpy\summary.py:225: FutureWarning: iteritems is deprecated and will be removed in a future version. Use .items instead.
+  for ix, df_col in group1.iteritems():</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="11">
+<div>
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Variable</th>
+<th data-quarto-table-cell-role="th">Outcome</th>
+<th data-quarto-table-cell-role="th">Count</th>
+<th data-quarto-table-cell-role="th">Percent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>sex</td>
+<td>1</td>
+<td>207</td>
+<td>68.32</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td></td>
+<td>0</td>
+<td>96</td>
+<td>31.68</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>target</td>
+<td>1</td>
+<td>165</td>
+<td>54.46</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td></td>
+<td>0</td>
+<td>138</td>
+<td>45.54</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="correlations-between-variables" class="level2">
+<h2 class="anchored" data-anchor-id="correlations-between-variables">Correlations between Variables</h2>
+<div id="5d00e58e-a859-42a0-8133-153031ee82f6" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># correlation: Pearson’s by default </span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>num_cols.corr(method<span class="op">=</span><span class="st">'pearson'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="12">
+<div>
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">age</th>
+<th data-quarto-table-cell-role="th">cp</th>
+<th data-quarto-table-cell-role="th">trestbps</th>
+<th data-quarto-table-cell-role="th">chol</th>
+<th data-quarto-table-cell-role="th">fbs</th>
+<th data-quarto-table-cell-role="th">restecg</th>
+<th data-quarto-table-cell-role="th">thalach</th>
+<th data-quarto-table-cell-role="th">exang</th>
+<th data-quarto-table-cell-role="th">oldpeak</th>
+<th data-quarto-table-cell-role="th">slope</th>
+<th data-quarto-table-cell-role="th">ca</th>
+<th data-quarto-table-cell-role="th">thal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">age</td>
+<td>1.000000</td>
+<td>-0.068653</td>
+<td>0.279351</td>
+<td>0.213678</td>
+<td>0.121308</td>
+<td>-0.116211</td>
+<td>-0.398522</td>
+<td>0.096801</td>
+<td>0.210013</td>
+<td>-0.168814</td>
+<td>0.276326</td>
+<td>0.068001</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">cp</td>
+<td>-0.068653</td>
+<td>1.000000</td>
+<td>0.047608</td>
+<td>-0.076904</td>
+<td>0.094444</td>
+<td>0.044421</td>
+<td>0.295762</td>
+<td>-0.394280</td>
+<td>-0.149230</td>
+<td>0.119717</td>
+<td>-0.181053</td>
+<td>-0.161736</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">trestbps</td>
+<td>0.279351</td>
+<td>0.047608</td>
+<td>1.000000</td>
+<td>0.123174</td>
+<td>0.177531</td>
+<td>-0.114103</td>
+<td>-0.046698</td>
+<td>0.067616</td>
+<td>0.193216</td>
+<td>-0.121475</td>
+<td>0.101389</td>
+<td>0.062210</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">chol</td>
+<td>0.213678</td>
+<td>-0.076904</td>
+<td>0.123174</td>
+<td>1.000000</td>
+<td>0.013294</td>
+<td>-0.151040</td>
+<td>-0.009940</td>
+<td>0.067023</td>
+<td>0.053952</td>
+<td>-0.004038</td>
+<td>0.070511</td>
+<td>0.098803</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">fbs</td>
+<td>0.121308</td>
+<td>0.094444</td>
+<td>0.177531</td>
+<td>0.013294</td>
+<td>1.000000</td>
+<td>-0.084189</td>
+<td>-0.008567</td>
+<td>0.025665</td>
+<td>0.005747</td>
+<td>-0.059894</td>
+<td>0.137979</td>
+<td>-0.032019</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">restecg</td>
+<td>-0.116211</td>
+<td>0.044421</td>
+<td>-0.114103</td>
+<td>-0.151040</td>
+<td>-0.084189</td>
+<td>1.000000</td>
+<td>0.044123</td>
+<td>-0.070733</td>
+<td>-0.058770</td>
+<td>0.093045</td>
+<td>-0.072042</td>
+<td>-0.011981</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">thalach</td>
+<td>-0.398522</td>
+<td>0.295762</td>
+<td>-0.046698</td>
+<td>-0.009940</td>
+<td>-0.008567</td>
+<td>0.044123</td>
+<td>1.000000</td>
+<td>-0.378812</td>
+<td>-0.344187</td>
+<td>0.386784</td>
+<td>-0.213177</td>
+<td>-0.096439</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">exang</td>
+<td>0.096801</td>
+<td>-0.394280</td>
+<td>0.067616</td>
+<td>0.067023</td>
+<td>0.025665</td>
+<td>-0.070733</td>
+<td>-0.378812</td>
+<td>1.000000</td>
+<td>0.288223</td>
+<td>-0.257748</td>
+<td>0.115739</td>
+<td>0.206754</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">oldpeak</td>
+<td>0.210013</td>
+<td>-0.149230</td>
+<td>0.193216</td>
+<td>0.053952</td>
+<td>0.005747</td>
+<td>-0.058770</td>
+<td>-0.344187</td>
+<td>0.288223</td>
+<td>1.000000</td>
+<td>-0.577537</td>
+<td>0.222682</td>
+<td>0.210244</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">slope</td>
+<td>-0.168814</td>
+<td>0.119717</td>
+<td>-0.121475</td>
+<td>-0.004038</td>
+<td>-0.059894</td>
+<td>0.093045</td>
+<td>0.386784</td>
+<td>-0.257748</td>
+<td>-0.577537</td>
+<td>1.000000</td>
+<td>-0.080155</td>
+<td>-0.104764</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">ca</td>
+<td>0.276326</td>
+<td>-0.181053</td>
+<td>0.101389</td>
+<td>0.070511</td>
+<td>0.137979</td>
+<td>-0.072042</td>
+<td>-0.213177</td>
+<td>0.115739</td>
+<td>0.222682</td>
+<td>-0.080155</td>
+<td>1.000000</td>
+<td>0.151832</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">thal</td>
+<td>0.068001</td>
+<td>-0.161736</td>
+<td>0.062210</td>
+<td>0.098803</td>
+<td>-0.032019</td>
+<td>-0.011981</td>
+<td>-0.096439</td>
+<td>0.206754</td>
+<td>0.210244</td>
+<td>-0.104764</td>
+<td>0.151832</td>
+<td>1.000000</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="skewness" class="level2">
+<h2 class="anchored" data-anchor-id="skewness">Skewness</h2>
+<div id="ba58d2cc-e76c-4ae1-a5ad-eec09200562a" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># skew </span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>num_cols.skew() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="13">
+<pre><code>age        -0.202463
+cp          0.484732
+trestbps    0.713768
+chol        1.143401
+fbs         1.986652
+restecg     0.162522
+thalach    -0.537410
+exang       0.742532
+oldpeak     1.269720
+slope      -0.508316
+ca          1.310422
+thal       -0.476722
+dtype: float64</code></pre>
+</div>
+</div>
+</section>
+<section id="data-visualizations" class="level2">
+<h2 class="anchored" data-anchor-id="data-visualizations">Data visualizations</h2>
+<div id="13b72642-0f91-44af-881d-cf472e17d283" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Univariate distributions with histogram</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>data.select_dtypes(exclude <span class="op">=</span> <span class="st">"object"</span>).hist(figsize<span class="op">=</span>(<span class="dv">20</span>,<span class="dv">10</span>), edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>plt.show() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="05_Heart Diseases_files/figure-html/cell-15-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="36af60ee-c668-48ed-b04f-ff98633fa9ba" class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Univariate distributions with density plot </span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>data.select_dtypes(exclude <span class="op">=</span> <span class="st">"object"</span>).plot(kind<span class="op">=</span><span class="st">'density'</span>, subplots<span class="op">=</span><span class="va">True</span>, sharex<span class="op">=</span><span class="va">False</span>, figsize<span class="op">=</span>(<span class="dv">20</span>,<span class="dv">10</span>), layout<span class="op">=</span>(<span class="dv">4</span>,<span class="dv">3</span>))</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>plt.show() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="05_Heart Diseases_files/figure-html/cell-16-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="79a961fd-5aa7-4953-a66a-202c521f1758" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Univariate distributions with box plots </span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>data.select_dtypes(exclude <span class="op">=</span> <span class="st">"object"</span>).plot(kind<span class="op">=</span><span class="st">'box'</span>, subplots<span class="op">=</span><span class="va">True</span>, sharex<span class="op">=</span><span class="va">False</span>, figsize<span class="op">=</span>(<span class="dv">20</span>,<span class="dv">10</span>), layout<span class="op">=</span>(<span class="dv">4</span>,<span class="dv">3</span>))</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>plt.show() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="05_Heart Diseases_files/figure-html/cell-17-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="66f0195b-936c-4fb4-a8c3-7f838ce206a9" class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Multivariate plots with correlations </span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">20</span>,<span class="dv">6</span>))</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>corr <span class="op">=</span> num_cols.corr() </span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>sns.heatmap(corr, annot<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="05_Heart Diseases_files/figure-html/cell-18-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="setup" class="level2">
+<h2 class="anchored" data-anchor-id="setup">Setup</h2>
+<div id="958ee088-215c-48fb-9695-0660fd706db7" class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># exmine first few rows of data </span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>data.head() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="18">
+<div>
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">age</th>
+<th data-quarto-table-cell-role="th">sex</th>
+<th data-quarto-table-cell-role="th">cp</th>
+<th data-quarto-table-cell-role="th">trestbps</th>
+<th data-quarto-table-cell-role="th">chol</th>
+<th data-quarto-table-cell-role="th">fbs</th>
+<th data-quarto-table-cell-role="th">restecg</th>
+<th data-quarto-table-cell-role="th">thalach</th>
+<th data-quarto-table-cell-role="th">exang</th>
+<th data-quarto-table-cell-role="th">oldpeak</th>
+<th data-quarto-table-cell-role="th">slope</th>
+<th data-quarto-table-cell-role="th">ca</th>
+<th data-quarto-table-cell-role="th">thal</th>
+<th data-quarto-table-cell-role="th">target</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>63</td>
+<td>1</td>
+<td>3</td>
+<td>145</td>
+<td>233</td>
+<td>1</td>
+<td>0</td>
+<td>150</td>
+<td>0</td>
+<td>2.3</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>37</td>
+<td>1</td>
+<td>2</td>
+<td>130</td>
+<td>250</td>
+<td>0</td>
+<td>1</td>
+<td>187</td>
+<td>0</td>
+<td>3.5</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>41</td>
+<td>0</td>
+<td>1</td>
+<td>130</td>
+<td>204</td>
+<td>0</td>
+<td>0</td>
+<td>172</td>
+<td>0</td>
+<td>1.4</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>56</td>
+<td>1</td>
+<td>1</td>
+<td>120</td>
+<td>236</td>
+<td>0</td>
+<td>1</td>
+<td>178</td>
+<td>0</td>
+<td>0.8</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>57</td>
+<td>0</td>
+<td>0</td>
+<td>120</td>
+<td>354</td>
+<td>0</td>
+<td>1</td>
+<td>163</td>
+<td>1</td>
+<td>0.6</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+<div id="8395aebb-0f36-4ddb-bdb4-bbbde683eddd" class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import pycaret classification and init setup</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pycaret.classification <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>setup(data, target <span class="op">=</span> <span class="st">'target'</span>, session_id <span class="op">=</span> <span class="dv">123</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<style type="text/css">
+#T_81032_row10_col1 {
+  background-color: lightgreen;
+}
+</style>
+
+<table id="T_81032" data-quarto-postprocess="true" class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th class="blank level0" data-quarto-table-cell-role="th">&nbsp;</th>
+<th id="T_81032_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Description</th>
+<th id="T_81032_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td id="T_81032_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">0</td>
+<td id="T_81032_row0_col0" class="data row0 col0">Session id</td>
+<td id="T_81032_row0_col1" class="data row0 col1">123</td>
+</tr>
+<tr class="even">
+<td id="T_81032_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">1</td>
+<td id="T_81032_row1_col0" class="data row1 col0">Target</td>
+<td id="T_81032_row1_col1" class="data row1 col1">target</td>
+</tr>
+<tr class="odd">
+<td id="T_81032_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">2</td>
+<td id="T_81032_row2_col0" class="data row2 col0">Target type</td>
+<td id="T_81032_row2_col1" class="data row2 col1">Binary</td>
+</tr>
+<tr class="even">
+<td id="T_81032_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">3</td>
+<td id="T_81032_row3_col0" class="data row3 col0">Original data shape</td>
+<td id="T_81032_row3_col1" class="data row3 col1">(303, 14)</td>
+</tr>
+<tr class="odd">
+<td id="T_81032_level0_row4" class="row_heading level0 row4" data-quarto-table-cell-role="th">4</td>
+<td id="T_81032_row4_col0" class="data row4 col0">Transformed data shape</td>
+<td id="T_81032_row4_col1" class="data row4 col1">(303, 14)</td>
+</tr>
+<tr class="even">
+<td id="T_81032_level0_row5" class="row_heading level0 row5" data-quarto-table-cell-role="th">5</td>
+<td id="T_81032_row5_col0" class="data row5 col0">Transformed train set shape</td>
+<td id="T_81032_row5_col1" class="data row5 col1">(212, 14)</td>
+</tr>
+<tr class="odd">
+<td id="T_81032_level0_row6" class="row_heading level0 row6" data-quarto-table-cell-role="th">6</td>
+<td id="T_81032_row6_col0" class="data row6 col0">Transformed test set shape</td>
+<td id="T_81032_row6_col1" class="data row6 col1">(91, 14)</td>
+</tr>
+<tr class="even">
+<td id="T_81032_level0_row7" class="row_heading level0 row7" data-quarto-table-cell-role="th">7</td>
+<td id="T_81032_row7_col0" class="data row7 col0">Ordinal features</td>
+<td id="T_81032_row7_col1" class="data row7 col1">1</td>
+</tr>
+<tr class="odd">
+<td id="T_81032_level0_row8" class="row_heading level0 row8" data-quarto-table-cell-role="th">8</td>
+<td id="T_81032_row8_col0" class="data row8 col0">Numeric features</td>
+<td id="T_81032_row8_col1" class="data row8 col1">12</td>
+</tr>
+<tr class="even">
+<td id="T_81032_level0_row9" class="row_heading level0 row9" data-quarto-table-cell-role="th">9</td>
+<td id="T_81032_row9_col0" class="data row9 col0">Categorical features</td>
+<td id="T_81032_row9_col1" class="data row9 col1">1</td>
+</tr>
+<tr class="odd">
+<td id="T_81032_level0_row10" class="row_heading level0 row10" data-quarto-table-cell-role="th">10</td>
+<td id="T_81032_row10_col0" class="data row10 col0">Preprocess</td>
+<td id="T_81032_row10_col1" class="data row10 col1">True</td>
+</tr>
+<tr class="even">
+<td id="T_81032_level0_row11" class="row_heading level0 row11" data-quarto-table-cell-role="th">11</td>
+<td id="T_81032_row11_col0" class="data row11 col0">Imputation type</td>
+<td id="T_81032_row11_col1" class="data row11 col1">simple</td>
+</tr>
+<tr class="odd">
+<td id="T_81032_level0_row12" class="row_heading level0 row12" data-quarto-table-cell-role="th">12</td>
+<td id="T_81032_row12_col0" class="data row12 col0">Numeric imputation</td>
+<td id="T_81032_row12_col1" class="data row12 col1">mean</td>
+</tr>
+<tr class="even">
+<td id="T_81032_level0_row13" class="row_heading level0 row13" data-quarto-table-cell-role="th">13</td>
+<td id="T_81032_row13_col0" class="data row13 col0">Categorical imputation</td>
+<td id="T_81032_row13_col1" class="data row13 col1">mode</td>
+</tr>
+<tr class="odd">
+<td id="T_81032_level0_row14" class="row_heading level0 row14" data-quarto-table-cell-role="th">14</td>
+<td id="T_81032_row14_col0" class="data row14 col0">Maximum one-hot encoding</td>
+<td id="T_81032_row14_col1" class="data row14 col1">25</td>
+</tr>
+<tr class="even">
+<td id="T_81032_level0_row15" class="row_heading level0 row15" data-quarto-table-cell-role="th">15</td>
+<td id="T_81032_row15_col0" class="data row15 col0">Encoding method</td>
+<td id="T_81032_row15_col1" class="data row15 col1">None</td>
+</tr>
+<tr class="odd">
+<td id="T_81032_level0_row16" class="row_heading level0 row16" data-quarto-table-cell-role="th">16</td>
+<td id="T_81032_row16_col0" class="data row16 col0">Fold Generator</td>
+<td id="T_81032_row16_col1" class="data row16 col1">StratifiedKFold</td>
+</tr>
+<tr class="even">
+<td id="T_81032_level0_row17" class="row_heading level0 row17" data-quarto-table-cell-role="th">17</td>
+<td id="T_81032_row17_col0" class="data row17 col0">Fold Number</td>
+<td id="T_81032_row17_col1" class="data row17 col1">10</td>
+</tr>
+<tr class="odd">
+<td id="T_81032_level0_row18" class="row_heading level0 row18" data-quarto-table-cell-role="th">18</td>
+<td id="T_81032_row18_col0" class="data row18 col0">CPU Jobs</td>
+<td id="T_81032_row18_col1" class="data row18 col1">-1</td>
+</tr>
+<tr class="even">
+<td id="T_81032_level0_row19" class="row_heading level0 row19" data-quarto-table-cell-role="th">19</td>
+<td id="T_81032_row19_col0" class="data row19 col0">Use GPU</td>
+<td id="T_81032_row19_col1" class="data row19 col1">False</td>
+</tr>
+<tr class="odd">
+<td id="T_81032_level0_row20" class="row_heading level0 row20" data-quarto-table-cell-role="th">20</td>
+<td id="T_81032_row20_col0" class="data row20 col0">Log Experiment</td>
+<td id="T_81032_row20_col1" class="data row20 col1">False</td>
+</tr>
+<tr class="even">
+<td id="T_81032_level0_row21" class="row_heading level0 row21" data-quarto-table-cell-role="th">21</td>
+<td id="T_81032_row21_col0" class="data row21 col0">Experiment Name</td>
+<td id="T_81032_row21_col1" class="data row21 col1">clf-default-name</td>
+</tr>
+<tr class="odd">
+<td id="T_81032_level0_row22" class="row_heading level0 row22" data-quarto-table-cell-role="th">22</td>
+<td id="T_81032_row22_col0" class="data row22 col0">USI</td>
+<td id="T_81032_row22_col1" class="data row22 col1">b6bb</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="19">
+<pre><code>&lt;pycaret.classification.oop.ClassificationExperiment at 0x203efa84a00&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="compare-models" class="level2">
+<h2 class="anchored" data-anchor-id="compare-models">Compare Models</h2>
+<div id="99d089ca-e534-4dbe-a76d-d8a2c5a62ac6" class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># compare baseline models</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>best <span class="op">=</span> compare_models()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<style type="text/css">
+#T_003d2 th {
+  text-align: left;
+}
+#T_003d2_row0_col0, #T_003d2_row0_col3, #T_003d2_row0_col4, #T_003d2_row0_col5, #T_003d2_row0_col7, #T_003d2_row1_col0, #T_003d2_row1_col2, #T_003d2_row1_col3, #T_003d2_row1_col4, #T_003d2_row1_col6, #T_003d2_row2_col0, #T_003d2_row2_col2, #T_003d2_row2_col3, #T_003d2_row2_col4, #T_003d2_row2_col5, #T_003d2_row2_col6, #T_003d2_row2_col7, #T_003d2_row3_col0, #T_003d2_row3_col2, #T_003d2_row3_col3, #T_003d2_row3_col4, #T_003d2_row3_col6, #T_003d2_row4_col0, #T_003d2_row4_col1, #T_003d2_row4_col2, #T_003d2_row4_col3, #T_003d2_row4_col4, #T_003d2_row4_col5, #T_003d2_row4_col6, #T_003d2_row4_col7, #T_003d2_row5_col0, #T_003d2_row5_col1, #T_003d2_row5_col2, #T_003d2_row5_col3, #T_003d2_row5_col4, #T_003d2_row5_col5, #T_003d2_row5_col6, #T_003d2_row5_col7, #T_003d2_row6_col0, #T_003d2_row6_col1, #T_003d2_row6_col2, #T_003d2_row6_col3, #T_003d2_row6_col5, #T_003d2_row6_col6, #T_003d2_row6_col7, #T_003d2_row7_col0, #T_003d2_row7_col1, #T_003d2_row7_col2, #T_003d2_row7_col3, #T_003d2_row7_col4, #T_003d2_row7_col5, #T_003d2_row7_col6, #T_003d2_row7_col7, #T_003d2_row8_col0, #T_003d2_row8_col1, #T_003d2_row8_col2, #T_003d2_row8_col3, #T_003d2_row8_col4, #T_003d2_row8_col5, #T_003d2_row8_col6, #T_003d2_row8_col7, #T_003d2_row9_col0, #T_003d2_row9_col1, #T_003d2_row9_col2, #T_003d2_row9_col3, #T_003d2_row9_col4, #T_003d2_row9_col5, #T_003d2_row9_col6, #T_003d2_row9_col7, #T_003d2_row10_col0, #T_003d2_row10_col1, #T_003d2_row10_col2, #T_003d2_row10_col3, #T_003d2_row10_col4, #T_003d2_row10_col5, #T_003d2_row10_col6, #T_003d2_row10_col7, #T_003d2_row11_col0, #T_003d2_row11_col1, #T_003d2_row11_col2, #T_003d2_row11_col3, #T_003d2_row11_col4, #T_003d2_row11_col5, #T_003d2_row11_col6, #T_003d2_row11_col7, #T_003d2_row12_col0, #T_003d2_row12_col1, #T_003d2_row12_col2, #T_003d2_row12_col3, #T_003d2_row12_col4, #T_003d2_row12_col5, #T_003d2_row12_col6, #T_003d2_row12_col7, #T_003d2_row13_col0, #T_003d2_row13_col1, #T_003d2_row13_col2, #T_003d2_row13_col4, #T_003d2_row13_col5, #T_003d2_row13_col6, #T_003d2_row13_col7 {
+  text-align: left;
+}
+#T_003d2_row0_col1, #T_003d2_row0_col2, #T_003d2_row0_col6, #T_003d2_row1_col1, #T_003d2_row1_col5, #T_003d2_row1_col7, #T_003d2_row2_col1, #T_003d2_row3_col1, #T_003d2_row3_col5, #T_003d2_row3_col7, #T_003d2_row6_col4, #T_003d2_row13_col3 {
+  text-align: left;
+  background-color: yellow;
+}
+#T_003d2_row0_col8, #T_003d2_row2_col8, #T_003d2_row3_col8, #T_003d2_row4_col8, #T_003d2_row5_col8, #T_003d2_row6_col8, #T_003d2_row7_col8, #T_003d2_row8_col8, #T_003d2_row9_col8, #T_003d2_row10_col8, #T_003d2_row11_col8, #T_003d2_row12_col8, #T_003d2_row13_col8 {
+  text-align: left;
+  background-color: lightgrey;
+}
+#T_003d2_row1_col8 {
+  text-align: left;
+  background-color: yellow;
+  background-color: lightgrey;
+}
+</style>
+
+<table id="T_003d2" data-quarto-postprocess="true" class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th class="blank level0" data-quarto-table-cell-role="th">&nbsp;</th>
+<th id="T_003d2_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Model</th>
+<th id="T_003d2_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Accuracy</th>
+<th id="T_003d2_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">AUC</th>
+<th id="T_003d2_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">Recall</th>
+<th id="T_003d2_level0_col4" class="col_heading level0 col4" data-quarto-table-cell-role="th">Prec.</th>
+<th id="T_003d2_level0_col5" class="col_heading level0 col5" data-quarto-table-cell-role="th">F1</th>
+<th id="T_003d2_level0_col6" class="col_heading level0 col6" data-quarto-table-cell-role="th">Kappa</th>
+<th id="T_003d2_level0_col7" class="col_heading level0 col7" data-quarto-table-cell-role="th">MCC</th>
+<th id="T_003d2_level0_col8" class="col_heading level0 col8" data-quarto-table-cell-role="th">TT (Sec)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td id="T_003d2_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">nb</td>
+<td id="T_003d2_row0_col0" class="data row0 col0">Naive Bayes</td>
+<td id="T_003d2_row0_col1" class="data row0 col1">0.8201</td>
+<td id="T_003d2_row0_col2" class="data row0 col2">0.9212</td>
+<td id="T_003d2_row0_col3" class="data row0 col3">0.8576</td>
+<td id="T_003d2_row0_col4" class="data row0 col4">0.8186</td>
+<td id="T_003d2_row0_col5" class="data row0 col5">0.8303</td>
+<td id="T_003d2_row0_col6" class="data row0 col6">0.6358</td>
+<td id="T_003d2_row0_col7" class="data row0 col7">0.6510</td>
+<td id="T_003d2_row0_col8" class="data row0 col8">0.3820</td>
+</tr>
+<tr class="even">
+<td id="T_003d2_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">ridge</td>
+<td id="T_003d2_row1_col0" class="data row1 col0">Ridge Classifier</td>
+<td id="T_003d2_row1_col1" class="data row1 col1">0.8201</td>
+<td id="T_003d2_row1_col2" class="data row1 col2">0.0000</td>
+<td id="T_003d2_row1_col3" class="data row1 col3">0.8841</td>
+<td id="T_003d2_row1_col4" class="data row1 col4">0.8069</td>
+<td id="T_003d2_row1_col5" class="data row1 col5">0.8359</td>
+<td id="T_003d2_row1_col6" class="data row1 col6">0.6346</td>
+<td id="T_003d2_row1_col7" class="data row1 col7">0.6558</td>
+<td id="T_003d2_row1_col8" class="data row1 col8">0.3800</td>
+</tr>
+<tr class="odd">
+<td id="T_003d2_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">rf</td>
+<td id="T_003d2_row2_col0" class="data row2 col0">Random Forest Classifier</td>
+<td id="T_003d2_row2_col1" class="data row2 col1">0.8201</td>
+<td id="T_003d2_row2_col2" class="data row2 col2">0.8924</td>
+<td id="T_003d2_row2_col3" class="data row2 col3">0.8583</td>
+<td id="T_003d2_row2_col4" class="data row2 col4">0.8236</td>
+<td id="T_003d2_row2_col5" class="data row2 col5">0.8335</td>
+<td id="T_003d2_row2_col6" class="data row2 col6">0.6349</td>
+<td id="T_003d2_row2_col7" class="data row2 col7">0.6474</td>
+<td id="T_003d2_row2_col8" class="data row2 col8">0.4040</td>
+</tr>
+<tr class="even">
+<td id="T_003d2_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">lda</td>
+<td id="T_003d2_row3_col0" class="data row3 col0">Linear Discriminant Analysis</td>
+<td id="T_003d2_row3_col1" class="data row3 col1">0.8201</td>
+<td id="T_003d2_row3_col2" class="data row3 col2">0.9162</td>
+<td id="T_003d2_row3_col3" class="data row3 col3">0.8841</td>
+<td id="T_003d2_row3_col4" class="data row3 col4">0.8069</td>
+<td id="T_003d2_row3_col5" class="data row3 col5">0.8359</td>
+<td id="T_003d2_row3_col6" class="data row3 col6">0.6346</td>
+<td id="T_003d2_row3_col7" class="data row3 col7">0.6558</td>
+<td id="T_003d2_row3_col8" class="data row3 col8">0.3860</td>
+</tr>
+<tr class="odd">
+<td id="T_003d2_level0_row4" class="row_heading level0 row4" data-quarto-table-cell-role="th">lr</td>
+<td id="T_003d2_row4_col0" class="data row4 col0">Logistic Regression</td>
+<td id="T_003d2_row4_col1" class="data row4 col1">0.8154</td>
+<td id="T_003d2_row4_col2" class="data row4 col2">0.9189</td>
+<td id="T_003d2_row4_col3" class="data row4 col3">0.8750</td>
+<td id="T_003d2_row4_col4" class="data row4 col4">0.8061</td>
+<td id="T_003d2_row4_col5" class="data row4 col5">0.8310</td>
+<td id="T_003d2_row4_col6" class="data row4 col6">0.6245</td>
+<td id="T_003d2_row4_col7" class="data row4 col7">0.6463</td>
+<td id="T_003d2_row4_col8" class="data row4 col8">0.8670</td>
+</tr>
+<tr class="even">
+<td id="T_003d2_level0_row5" class="row_heading level0 row5" data-quarto-table-cell-role="th">et</td>
+<td id="T_003d2_row5_col0" class="data row5 col0">Extra Trees Classifier</td>
+<td id="T_003d2_row5_col1" class="data row5 col1">0.8108</td>
+<td id="T_003d2_row5_col2" class="data row5 col2">0.9003</td>
+<td id="T_003d2_row5_col3" class="data row5 col3">0.8508</td>
+<td id="T_003d2_row5_col4" class="data row5 col4">0.8150</td>
+<td id="T_003d2_row5_col5" class="data row5 col5">0.8240</td>
+<td id="T_003d2_row5_col6" class="data row5 col6">0.6180</td>
+<td id="T_003d2_row5_col7" class="data row5 col7">0.6342</td>
+<td id="T_003d2_row5_col8" class="data row5 col8">0.4090</td>
+</tr>
+<tr class="odd">
+<td id="T_003d2_level0_row6" class="row_heading level0 row6" data-quarto-table-cell-role="th">qda</td>
+<td id="T_003d2_row6_col0" class="data row6 col0">Quadratic Discriminant Analysis</td>
+<td id="T_003d2_row6_col1" class="data row6 col1">0.8013</td>
+<td id="T_003d2_row6_col2" class="data row6 col2">0.9013</td>
+<td id="T_003d2_row6_col3" class="data row6 col3">0.8152</td>
+<td id="T_003d2_row6_col4" class="data row6 col4">0.8273</td>
+<td id="T_003d2_row6_col5" class="data row6 col5">0.8112</td>
+<td id="T_003d2_row6_col6" class="data row6 col6">0.5986</td>
+<td id="T_003d2_row6_col7" class="data row6 col7">0.6111</td>
+<td id="T_003d2_row6_col8" class="data row6 col8">0.3820</td>
+</tr>
+<tr class="even">
+<td id="T_003d2_level0_row7" class="row_heading level0 row7" data-quarto-table-cell-role="th">gbc</td>
+<td id="T_003d2_row7_col0" class="data row7 col0">Gradient Boosting Classifier</td>
+<td id="T_003d2_row7_col1" class="data row7 col1">0.7972</td>
+<td id="T_003d2_row7_col2" class="data row7 col2">0.8802</td>
+<td id="T_003d2_row7_col3" class="data row7 col3">0.8152</td>
+<td id="T_003d2_row7_col4" class="data row7 col4">0.8122</td>
+<td id="T_003d2_row7_col5" class="data row7 col5">0.8084</td>
+<td id="T_003d2_row7_col6" class="data row7 col6">0.5900</td>
+<td id="T_003d2_row7_col7" class="data row7 col7">0.5992</td>
+<td id="T_003d2_row7_col8" class="data row7 col8">0.3940</td>
+</tr>
+<tr class="odd">
+<td id="T_003d2_level0_row8" class="row_heading level0 row8" data-quarto-table-cell-role="th">lightgbm</td>
+<td id="T_003d2_row8_col0" class="data row8 col0">Light Gradient Boosting Machine</td>
+<td id="T_003d2_row8_col1" class="data row8 col1">0.7872</td>
+<td id="T_003d2_row8_col2" class="data row8 col2">0.8706</td>
+<td id="T_003d2_row8_col3" class="data row8 col3">0.8152</td>
+<td id="T_003d2_row8_col4" class="data row8 col4">0.8199</td>
+<td id="T_003d2_row8_col5" class="data row8 col5">0.8024</td>
+<td id="T_003d2_row8_col6" class="data row8 col6">0.5683</td>
+<td id="T_003d2_row8_col7" class="data row8 col7">0.5907</td>
+<td id="T_003d2_row8_col8" class="data row8 col8">0.4850</td>
+</tr>
+<tr class="even">
+<td id="T_003d2_level0_row9" class="row_heading level0 row9" data-quarto-table-cell-role="th">dt</td>
+<td id="T_003d2_row9_col0" class="data row9 col0">Decision Tree Classifier</td>
+<td id="T_003d2_row9_col1" class="data row9 col1">0.7545</td>
+<td id="T_003d2_row9_col2" class="data row9 col2">0.7546</td>
+<td id="T_003d2_row9_col3" class="data row9 col3">0.7659</td>
+<td id="T_003d2_row9_col4" class="data row9 col4">0.7890</td>
+<td id="T_003d2_row9_col5" class="data row9 col5">0.7680</td>
+<td id="T_003d2_row9_col6" class="data row9 col6">0.5068</td>
+<td id="T_003d2_row9_col7" class="data row9 col7">0.5231</td>
+<td id="T_003d2_row9_col8" class="data row9 col8">0.3830</td>
+</tr>
+<tr class="odd">
+<td id="T_003d2_level0_row10" class="row_heading level0 row10" data-quarto-table-cell-role="th">ada</td>
+<td id="T_003d2_row10_col0" class="data row10 col0">Ada Boost Classifier</td>
+<td id="T_003d2_row10_col1" class="data row10 col1">0.7500</td>
+<td id="T_003d2_row10_col2" class="data row10 col2">0.8122</td>
+<td id="T_003d2_row10_col3" class="data row10 col3">0.7712</td>
+<td id="T_003d2_row10_col4" class="data row10 col4">0.7812</td>
+<td id="T_003d2_row10_col5" class="data row10 col5">0.7650</td>
+<td id="T_003d2_row10_col6" class="data row10 col6">0.4954</td>
+<td id="T_003d2_row10_col7" class="data row10 col7">0.5107</td>
+<td id="T_003d2_row10_col8" class="data row10 col8">0.3960</td>
+</tr>
+<tr class="even">
+<td id="T_003d2_level0_row11" class="row_heading level0 row11" data-quarto-table-cell-role="th">knn</td>
+<td id="T_003d2_row11_col0" class="data row11 col0">K Neighbors Classifier</td>
+<td id="T_003d2_row11_col1" class="data row11 col1">0.6370</td>
+<td id="T_003d2_row11_col2" class="data row11 col2">0.6556</td>
+<td id="T_003d2_row11_col3" class="data row11 col3">0.7197</td>
+<td id="T_003d2_row11_col4" class="data row11 col4">0.6572</td>
+<td id="T_003d2_row11_col5" class="data row11 col5">0.6818</td>
+<td id="T_003d2_row11_col6" class="data row11 col6">0.2587</td>
+<td id="T_003d2_row11_col7" class="data row11 col7">0.2650</td>
+<td id="T_003d2_row11_col8" class="data row11 col8">0.4010</td>
+</tr>
+<tr class="odd">
+<td id="T_003d2_level0_row12" class="row_heading level0 row12" data-quarto-table-cell-role="th">svm</td>
+<td id="T_003d2_row12_col0" class="data row12 col0">SVM - Linear Kernel</td>
+<td id="T_003d2_row12_col1" class="data row12 col1">0.5472</td>
+<td id="T_003d2_row12_col2" class="data row12 col2">0.0000</td>
+<td id="T_003d2_row12_col3" class="data row12 col3">0.6917</td>
+<td id="T_003d2_row12_col4" class="data row12 col4">0.5079</td>
+<td id="T_003d2_row12_col5" class="data row12 col5">0.5197</td>
+<td id="T_003d2_row12_col6" class="data row12 col6">0.1002</td>
+<td id="T_003d2_row12_col7" class="data row12 col7">0.1386</td>
+<td id="T_003d2_row12_col8" class="data row12 col8">0.3840</td>
+</tr>
+<tr class="even">
+<td id="T_003d2_level0_row13" class="row_heading level0 row13" data-quarto-table-cell-role="th">dummy</td>
+<td id="T_003d2_row13_col0" class="data row13 col0">Dummy Classifier</td>
+<td id="T_003d2_row13_col1" class="data row13 col1">0.5424</td>
+<td id="T_003d2_row13_col2" class="data row13 col2">0.5000</td>
+<td id="T_003d2_row13_col3" class="data row13 col3">1.0000</td>
+<td id="T_003d2_row13_col4" class="data row13 col4">0.5424</td>
+<td id="T_003d2_row13_col5" class="data row13 col5">0.7031</td>
+<td id="T_003d2_row13_col6" class="data row13 col6">0.0000</td>
+<td id="T_003d2_row13_col7" class="data row13 col7">0.0000</td>
+<td id="T_003d2_row13_col8" class="data row13 col8">0.3820</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+</div>
+</section>
+<section id="create-model" class="level2">
+<h2 class="anchored" data-anchor-id="create-model">Create Model</h2>
+<div id="ea0b40ce-1a8b-48ba-8aff-667ba42cb670" class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create model </span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>nb <span class="op">=</span> create_model(<span class="st">'nb'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<style type="text/css">
+#T_c5e6e_row10_col0, #T_c5e6e_row10_col1, #T_c5e6e_row10_col2, #T_c5e6e_row10_col3, #T_c5e6e_row10_col4, #T_c5e6e_row10_col5, #T_c5e6e_row10_col6 {
+  background: yellow;
+}
+</style>
+
+<table id="T_c5e6e" data-quarto-postprocess="true" class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th class="blank level0" data-quarto-table-cell-role="th">&nbsp;</th>
+<th id="T_c5e6e_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Accuracy</th>
+<th id="T_c5e6e_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">AUC</th>
+<th id="T_c5e6e_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">Recall</th>
+<th id="T_c5e6e_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">Prec.</th>
+<th id="T_c5e6e_level0_col4" class="col_heading level0 col4" data-quarto-table-cell-role="th">F1</th>
+<th id="T_c5e6e_level0_col5" class="col_heading level0 col5" data-quarto-table-cell-role="th">Kappa</th>
+<th id="T_c5e6e_level0_col6" class="col_heading level0 col6" data-quarto-table-cell-role="th">MCC</th>
+</tr>
+<tr class="odd">
+<th class="index_name level0" data-quarto-table-cell-role="th">Fold</th>
+<th class="blank col0" data-quarto-table-cell-role="th">&nbsp;</th>
+<th class="blank col1" data-quarto-table-cell-role="th">&nbsp;</th>
+<th class="blank col2" data-quarto-table-cell-role="th">&nbsp;</th>
+<th class="blank col3" data-quarto-table-cell-role="th">&nbsp;</th>
+<th class="blank col4" data-quarto-table-cell-role="th">&nbsp;</th>
+<th class="blank col5" data-quarto-table-cell-role="th">&nbsp;</th>
+<th class="blank col6" data-quarto-table-cell-role="th">&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td id="T_c5e6e_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">0</td>
+<td id="T_c5e6e_row0_col0" class="data row0 col0">0.9091</td>
+<td id="T_c5e6e_row0_col1" class="data row0 col1">0.9917</td>
+<td id="T_c5e6e_row0_col2" class="data row0 col2">1.0000</td>
+<td id="T_c5e6e_row0_col3" class="data row0 col3">0.8571</td>
+<td id="T_c5e6e_row0_col4" class="data row0 col4">0.9231</td>
+<td id="T_c5e6e_row0_col5" class="data row0 col5">0.8136</td>
+<td id="T_c5e6e_row0_col6" class="data row0 col6">0.8281</td>
+</tr>
+<tr class="even">
+<td id="T_c5e6e_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">1</td>
+<td id="T_c5e6e_row1_col0" class="data row1 col0">0.8636</td>
+<td id="T_c5e6e_row1_col1" class="data row1 col1">0.9583</td>
+<td id="T_c5e6e_row1_col2" class="data row1 col2">1.0000</td>
+<td id="T_c5e6e_row1_col3" class="data row1 col3">0.8000</td>
+<td id="T_c5e6e_row1_col4" class="data row1 col4">0.8889</td>
+<td id="T_c5e6e_row1_col5" class="data row1 col5">0.7179</td>
+<td id="T_c5e6e_row1_col6" class="data row1 col6">0.7483</td>
+</tr>
+<tr class="odd">
+<td id="T_c5e6e_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">2</td>
+<td id="T_c5e6e_row2_col0" class="data row2 col0">0.8571</td>
+<td id="T_c5e6e_row2_col1" class="data row2 col1">0.9815</td>
+<td id="T_c5e6e_row2_col2" class="data row2 col2">0.8333</td>
+<td id="T_c5e6e_row2_col3" class="data row2 col3">0.9091</td>
+<td id="T_c5e6e_row2_col4" class="data row2 col4">0.8696</td>
+<td id="T_c5e6e_row2_col5" class="data row2 col5">0.7123</td>
+<td id="T_c5e6e_row2_col6" class="data row2 col6">0.7156</td>
+</tr>
+<tr class="even">
+<td id="T_c5e6e_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">3</td>
+<td id="T_c5e6e_row3_col0" class="data row3 col0">0.8095</td>
+<td id="T_c5e6e_row3_col1" class="data row3 col1">0.9444</td>
+<td id="T_c5e6e_row3_col2" class="data row3 col2">1.0000</td>
+<td id="T_c5e6e_row3_col3" class="data row3 col3">0.7500</td>
+<td id="T_c5e6e_row3_col4" class="data row3 col4">0.8571</td>
+<td id="T_c5e6e_row3_col5" class="data row3 col5">0.5882</td>
+<td id="T_c5e6e_row3_col6" class="data row3 col6">0.6455</td>
+</tr>
+<tr class="odd">
+<td id="T_c5e6e_level0_row4" class="row_heading level0 row4" data-quarto-table-cell-role="th">4</td>
+<td id="T_c5e6e_row4_col0" class="data row4 col0">0.8571</td>
+<td id="T_c5e6e_row4_col1" class="data row4 col1">0.9815</td>
+<td id="T_c5e6e_row4_col2" class="data row4 col2">0.8333</td>
+<td id="T_c5e6e_row4_col3" class="data row4 col3">0.9091</td>
+<td id="T_c5e6e_row4_col4" class="data row4 col4">0.8696</td>
+<td id="T_c5e6e_row4_col5" class="data row4 col5">0.7123</td>
+<td id="T_c5e6e_row4_col6" class="data row4 col6">0.7156</td>
+</tr>
+<tr class="even">
+<td id="T_c5e6e_level0_row5" class="row_heading level0 row5" data-quarto-table-cell-role="th">5</td>
+<td id="T_c5e6e_row5_col0" class="data row5 col0">0.8571</td>
+<td id="T_c5e6e_row5_col1" class="data row5 col1">0.9455</td>
+<td id="T_c5e6e_row5_col2" class="data row5 col2">0.8182</td>
+<td id="T_c5e6e_row5_col3" class="data row5 col3">0.9000</td>
+<td id="T_c5e6e_row5_col4" class="data row5 col4">0.8571</td>
+<td id="T_c5e6e_row5_col5" class="data row5 col5">0.7149</td>
+<td id="T_c5e6e_row5_col6" class="data row5 col6">0.7182</td>
+</tr>
+<tr class="odd">
+<td id="T_c5e6e_level0_row6" class="row_heading level0 row6" data-quarto-table-cell-role="th">6</td>
+<td id="T_c5e6e_row6_col0" class="data row6 col0">0.9048</td>
+<td id="T_c5e6e_row6_col1" class="data row6 col1">0.9000</td>
+<td id="T_c5e6e_row6_col2" class="data row6 col2">1.0000</td>
+<td id="T_c5e6e_row6_col3" class="data row6 col3">0.8462</td>
+<td id="T_c5e6e_row6_col4" class="data row6 col4">0.9167</td>
+<td id="T_c5e6e_row6_col5" class="data row6 col5">0.8073</td>
+<td id="T_c5e6e_row6_col6" class="data row6 col6">0.8228</td>
+</tr>
+<tr class="even">
+<td id="T_c5e6e_level0_row7" class="row_heading level0 row7" data-quarto-table-cell-role="th">7</td>
+<td id="T_c5e6e_row7_col0" class="data row7 col0">0.6667</td>
+<td id="T_c5e6e_row7_col1" class="data row7 col1">0.8273</td>
+<td id="T_c5e6e_row7_col2" class="data row7 col2">0.7273</td>
+<td id="T_c5e6e_row7_col3" class="data row7 col3">0.6667</td>
+<td id="T_c5e6e_row7_col4" class="data row7 col4">0.6957</td>
+<td id="T_c5e6e_row7_col5" class="data row7 col5">0.3288</td>
+<td id="T_c5e6e_row7_col6" class="data row7 col6">0.3303</td>
+</tr>
+<tr class="odd">
+<td id="T_c5e6e_level0_row8" class="row_heading level0 row8" data-quarto-table-cell-role="th">8</td>
+<td id="T_c5e6e_row8_col0" class="data row8 col0">0.8571</td>
+<td id="T_c5e6e_row8_col1" class="data row8 col1">0.9364</td>
+<td id="T_c5e6e_row8_col2" class="data row8 col2">0.9091</td>
+<td id="T_c5e6e_row8_col3" class="data row8 col3">0.8333</td>
+<td id="T_c5e6e_row8_col4" class="data row8 col4">0.8696</td>
+<td id="T_c5e6e_row8_col5" class="data row8 col5">0.7123</td>
+<td id="T_c5e6e_row8_col6" class="data row8 col6">0.7156</td>
+</tr>
+<tr class="even">
+<td id="T_c5e6e_level0_row9" class="row_heading level0 row9" data-quarto-table-cell-role="th">9</td>
+<td id="T_c5e6e_row9_col0" class="data row9 col0">0.6190</td>
+<td id="T_c5e6e_row9_col1" class="data row9 col1">0.7455</td>
+<td id="T_c5e6e_row9_col2" class="data row9 col2">0.4545</td>
+<td id="T_c5e6e_row9_col3" class="data row9 col3">0.7143</td>
+<td id="T_c5e6e_row9_col4" class="data row9 col4">0.5556</td>
+<td id="T_c5e6e_row9_col5" class="data row9 col5">0.2500</td>
+<td id="T_c5e6e_row9_col6" class="data row9 col6">0.2697</td>
+</tr>
+<tr class="odd">
+<td id="T_c5e6e_level0_row10" class="row_heading level0 row10" data-quarto-table-cell-role="th">Mean</td>
+<td id="T_c5e6e_row10_col0" class="data row10 col0">0.8201</td>
+<td id="T_c5e6e_row10_col1" class="data row10 col1">0.9212</td>
+<td id="T_c5e6e_row10_col2" class="data row10 col2">0.8576</td>
+<td id="T_c5e6e_row10_col3" class="data row10 col3">0.8186</td>
+<td id="T_c5e6e_row10_col4" class="data row10 col4">0.8303</td>
+<td id="T_c5e6e_row10_col5" class="data row10 col5">0.6358</td>
+<td id="T_c5e6e_row10_col6" class="data row10 col6">0.6510</td>
+</tr>
+<tr class="even">
+<td id="T_c5e6e_level0_row11" class="row_heading level0 row11" data-quarto-table-cell-role="th">Std</td>
+<td id="T_c5e6e_row11_col0" class="data row11 col0">0.0930</td>
+<td id="T_c5e6e_row11_col1" class="data row11 col1">0.0742</td>
+<td id="T_c5e6e_row11_col2" class="data row11 col2">0.1631</td>
+<td id="T_c5e6e_row11_col3" class="data row11 col3">0.0803</td>
+<td id="T_c5e6e_row11_col4" class="data row11 col4">0.1092</td>
+<td id="T_c5e6e_row11_col5" class="data row11 col5">0.1836</td>
+<td id="T_c5e6e_row11_col6" class="data row11 col6">0.1832</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+</div>
+<div id="71e57f17-bd42-44dc-bedc-106748c604b1" class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># print model parameters</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(nb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>GaussianNB(priors=None, var_smoothing=1e-09)</code></pre>
+</div>
+</div>
+</section>
+<section id="tune-model" class="level2">
+<h2 class="anchored" data-anchor-id="tune-model">Tune Model</h2>
+<div id="c55b7b6a-08a8-4a2a-a61d-9bcba8725a61" class="cell" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># tune hyperparameters of rf</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>tuned_nb <span class="op">=</span> tune_model(nb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<style type="text/css">
+#T_05aaf_row10_col0, #T_05aaf_row10_col1, #T_05aaf_row10_col2, #T_05aaf_row10_col3, #T_05aaf_row10_col4, #T_05aaf_row10_col5, #T_05aaf_row10_col6 {
+  background: yellow;
+}
+</style>
+
+<table id="T_05aaf" data-quarto-postprocess="true" class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th class="blank level0" data-quarto-table-cell-role="th">&nbsp;</th>
+<th id="T_05aaf_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Accuracy</th>
+<th id="T_05aaf_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">AUC</th>
+<th id="T_05aaf_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">Recall</th>
+<th id="T_05aaf_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">Prec.</th>
+<th id="T_05aaf_level0_col4" class="col_heading level0 col4" data-quarto-table-cell-role="th">F1</th>
+<th id="T_05aaf_level0_col5" class="col_heading level0 col5" data-quarto-table-cell-role="th">Kappa</th>
+<th id="T_05aaf_level0_col6" class="col_heading level0 col6" data-quarto-table-cell-role="th">MCC</th>
+</tr>
+<tr class="odd">
+<th class="index_name level0" data-quarto-table-cell-role="th">Fold</th>
+<th class="blank col0" data-quarto-table-cell-role="th">&nbsp;</th>
+<th class="blank col1" data-quarto-table-cell-role="th">&nbsp;</th>
+<th class="blank col2" data-quarto-table-cell-role="th">&nbsp;</th>
+<th class="blank col3" data-quarto-table-cell-role="th">&nbsp;</th>
+<th class="blank col4" data-quarto-table-cell-role="th">&nbsp;</th>
+<th class="blank col5" data-quarto-table-cell-role="th">&nbsp;</th>
+<th class="blank col6" data-quarto-table-cell-role="th">&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td id="T_05aaf_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">0</td>
+<td id="T_05aaf_row0_col0" class="data row0 col0">0.9091</td>
+<td id="T_05aaf_row0_col1" class="data row0 col1">0.9917</td>
+<td id="T_05aaf_row0_col2" class="data row0 col2">1.0000</td>
+<td id="T_05aaf_row0_col3" class="data row0 col3">0.8571</td>
+<td id="T_05aaf_row0_col4" class="data row0 col4">0.9231</td>
+<td id="T_05aaf_row0_col5" class="data row0 col5">0.8136</td>
+<td id="T_05aaf_row0_col6" class="data row0 col6">0.8281</td>
+</tr>
+<tr class="even">
+<td id="T_05aaf_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">1</td>
+<td id="T_05aaf_row1_col0" class="data row1 col0">0.8636</td>
+<td id="T_05aaf_row1_col1" class="data row1 col1">0.9583</td>
+<td id="T_05aaf_row1_col2" class="data row1 col2">1.0000</td>
+<td id="T_05aaf_row1_col3" class="data row1 col3">0.8000</td>
+<td id="T_05aaf_row1_col4" class="data row1 col4">0.8889</td>
+<td id="T_05aaf_row1_col5" class="data row1 col5">0.7179</td>
+<td id="T_05aaf_row1_col6" class="data row1 col6">0.7483</td>
+</tr>
+<tr class="odd">
+<td id="T_05aaf_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">2</td>
+<td id="T_05aaf_row2_col0" class="data row2 col0">0.8571</td>
+<td id="T_05aaf_row2_col1" class="data row2 col1">0.9815</td>
+<td id="T_05aaf_row2_col2" class="data row2 col2">0.8333</td>
+<td id="T_05aaf_row2_col3" class="data row2 col3">0.9091</td>
+<td id="T_05aaf_row2_col4" class="data row2 col4">0.8696</td>
+<td id="T_05aaf_row2_col5" class="data row2 col5">0.7123</td>
+<td id="T_05aaf_row2_col6" class="data row2 col6">0.7156</td>
+</tr>
+<tr class="even">
+<td id="T_05aaf_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">3</td>
+<td id="T_05aaf_row3_col0" class="data row3 col0">0.8095</td>
+<td id="T_05aaf_row3_col1" class="data row3 col1">0.9444</td>
+<td id="T_05aaf_row3_col2" class="data row3 col2">1.0000</td>
+<td id="T_05aaf_row3_col3" class="data row3 col3">0.7500</td>
+<td id="T_05aaf_row3_col4" class="data row3 col4">0.8571</td>
+<td id="T_05aaf_row3_col5" class="data row3 col5">0.5882</td>
+<td id="T_05aaf_row3_col6" class="data row3 col6">0.6455</td>
+</tr>
+<tr class="odd">
+<td id="T_05aaf_level0_row4" class="row_heading level0 row4" data-quarto-table-cell-role="th">4</td>
+<td id="T_05aaf_row4_col0" class="data row4 col0">0.8571</td>
+<td id="T_05aaf_row4_col1" class="data row4 col1">0.9815</td>
+<td id="T_05aaf_row4_col2" class="data row4 col2">0.8333</td>
+<td id="T_05aaf_row4_col3" class="data row4 col3">0.9091</td>
+<td id="T_05aaf_row4_col4" class="data row4 col4">0.8696</td>
+<td id="T_05aaf_row4_col5" class="data row4 col5">0.7123</td>
+<td id="T_05aaf_row4_col6" class="data row4 col6">0.7156</td>
+</tr>
+<tr class="even">
+<td id="T_05aaf_level0_row5" class="row_heading level0 row5" data-quarto-table-cell-role="th">5</td>
+<td id="T_05aaf_row5_col0" class="data row5 col0">0.8571</td>
+<td id="T_05aaf_row5_col1" class="data row5 col1">0.9455</td>
+<td id="T_05aaf_row5_col2" class="data row5 col2">0.8182</td>
+<td id="T_05aaf_row5_col3" class="data row5 col3">0.9000</td>
+<td id="T_05aaf_row5_col4" class="data row5 col4">0.8571</td>
+<td id="T_05aaf_row5_col5" class="data row5 col5">0.7149</td>
+<td id="T_05aaf_row5_col6" class="data row5 col6">0.7182</td>
+</tr>
+<tr class="odd">
+<td id="T_05aaf_level0_row6" class="row_heading level0 row6" data-quarto-table-cell-role="th">6</td>
+<td id="T_05aaf_row6_col0" class="data row6 col0">0.9048</td>
+<td id="T_05aaf_row6_col1" class="data row6 col1">0.9000</td>
+<td id="T_05aaf_row6_col2" class="data row6 col2">1.0000</td>
+<td id="T_05aaf_row6_col3" class="data row6 col3">0.8462</td>
+<td id="T_05aaf_row6_col4" class="data row6 col4">0.9167</td>
+<td id="T_05aaf_row6_col5" class="data row6 col5">0.8073</td>
+<td id="T_05aaf_row6_col6" class="data row6 col6">0.8228</td>
+</tr>
+<tr class="even">
+<td id="T_05aaf_level0_row7" class="row_heading level0 row7" data-quarto-table-cell-role="th">7</td>
+<td id="T_05aaf_row7_col0" class="data row7 col0">0.6667</td>
+<td id="T_05aaf_row7_col1" class="data row7 col1">0.8273</td>
+<td id="T_05aaf_row7_col2" class="data row7 col2">0.7273</td>
+<td id="T_05aaf_row7_col3" class="data row7 col3">0.6667</td>
+<td id="T_05aaf_row7_col4" class="data row7 col4">0.6957</td>
+<td id="T_05aaf_row7_col5" class="data row7 col5">0.3288</td>
+<td id="T_05aaf_row7_col6" class="data row7 col6">0.3303</td>
+</tr>
+<tr class="odd">
+<td id="T_05aaf_level0_row8" class="row_heading level0 row8" data-quarto-table-cell-role="th">8</td>
+<td id="T_05aaf_row8_col0" class="data row8 col0">0.8571</td>
+<td id="T_05aaf_row8_col1" class="data row8 col1">0.9364</td>
+<td id="T_05aaf_row8_col2" class="data row8 col2">0.9091</td>
+<td id="T_05aaf_row8_col3" class="data row8 col3">0.8333</td>
+<td id="T_05aaf_row8_col4" class="data row8 col4">0.8696</td>
+<td id="T_05aaf_row8_col5" class="data row8 col5">0.7123</td>
+<td id="T_05aaf_row8_col6" class="data row8 col6">0.7156</td>
+</tr>
+<tr class="even">
+<td id="T_05aaf_level0_row9" class="row_heading level0 row9" data-quarto-table-cell-role="th">9</td>
+<td id="T_05aaf_row9_col0" class="data row9 col0">0.6190</td>
+<td id="T_05aaf_row9_col1" class="data row9 col1">0.7455</td>
+<td id="T_05aaf_row9_col2" class="data row9 col2">0.4545</td>
+<td id="T_05aaf_row9_col3" class="data row9 col3">0.7143</td>
+<td id="T_05aaf_row9_col4" class="data row9 col4">0.5556</td>
+<td id="T_05aaf_row9_col5" class="data row9 col5">0.2500</td>
+<td id="T_05aaf_row9_col6" class="data row9 col6">0.2697</td>
+</tr>
+<tr class="odd">
+<td id="T_05aaf_level0_row10" class="row_heading level0 row10" data-quarto-table-cell-role="th">Mean</td>
+<td id="T_05aaf_row10_col0" class="data row10 col0">0.8201</td>
+<td id="T_05aaf_row10_col1" class="data row10 col1">0.9212</td>
+<td id="T_05aaf_row10_col2" class="data row10 col2">0.8576</td>
+<td id="T_05aaf_row10_col3" class="data row10 col3">0.8186</td>
+<td id="T_05aaf_row10_col4" class="data row10 col4">0.8303</td>
+<td id="T_05aaf_row10_col5" class="data row10 col5">0.6358</td>
+<td id="T_05aaf_row10_col6" class="data row10 col6">0.6510</td>
+</tr>
+<tr class="even">
+<td id="T_05aaf_level0_row11" class="row_heading level0 row11" data-quarto-table-cell-role="th">Std</td>
+<td id="T_05aaf_row11_col0" class="data row11 col0">0.0930</td>
+<td id="T_05aaf_row11_col1" class="data row11 col1">0.0742</td>
+<td id="T_05aaf_row11_col2" class="data row11 col2">0.1631</td>
+<td id="T_05aaf_row11_col3" class="data row11 col3">0.0803</td>
+<td id="T_05aaf_row11_col4" class="data row11 col4">0.1092</td>
+<td id="T_05aaf_row11_col5" class="data row11 col5">0.1836</td>
+<td id="T_05aaf_row11_col6" class="data row11 col6">0.1832</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Fitting 10 folds for each of 10 candidates, totalling 100 fits
+Original model was better than the tuned model, hence it will be returned. NOTE: The display metrics are for the tuned model (not the original one).</code></pre>
+</div>
+</div>
+<div id="bb2ff7c3-4d89-40aa-9391-4be6f08c464f" class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># to access the tuner object you can set return_tuner = True</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>tuned_nb, tuner <span class="op">=</span> tune_model(nb, return_tuner<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<style type="text/css">
+#T_f4ab6_row10_col0, #T_f4ab6_row10_col1, #T_f4ab6_row10_col2, #T_f4ab6_row10_col3, #T_f4ab6_row10_col4, #T_f4ab6_row10_col5, #T_f4ab6_row10_col6 {
+  background: yellow;
+}
+</style>
+
+<table id="T_f4ab6" data-quarto-postprocess="true" class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th class="blank level0" data-quarto-table-cell-role="th">&nbsp;</th>
+<th id="T_f4ab6_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Accuracy</th>
+<th id="T_f4ab6_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">AUC</th>
+<th id="T_f4ab6_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">Recall</th>
+<th id="T_f4ab6_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">Prec.</th>
+<th id="T_f4ab6_level0_col4" class="col_heading level0 col4" data-quarto-table-cell-role="th">F1</th>
+<th id="T_f4ab6_level0_col5" class="col_heading level0 col5" data-quarto-table-cell-role="th">Kappa</th>
+<th id="T_f4ab6_level0_col6" class="col_heading level0 col6" data-quarto-table-cell-role="th">MCC</th>
+</tr>
+<tr class="odd">
+<th class="index_name level0" data-quarto-table-cell-role="th">Fold</th>
+<th class="blank col0" data-quarto-table-cell-role="th">&nbsp;</th>
+<th class="blank col1" data-quarto-table-cell-role="th">&nbsp;</th>
+<th class="blank col2" data-quarto-table-cell-role="th">&nbsp;</th>
+<th class="blank col3" data-quarto-table-cell-role="th">&nbsp;</th>
+<th class="blank col4" data-quarto-table-cell-role="th">&nbsp;</th>
+<th class="blank col5" data-quarto-table-cell-role="th">&nbsp;</th>
+<th class="blank col6" data-quarto-table-cell-role="th">&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td id="T_f4ab6_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">0</td>
+<td id="T_f4ab6_row0_col0" class="data row0 col0">0.9091</td>
+<td id="T_f4ab6_row0_col1" class="data row0 col1">0.9917</td>
+<td id="T_f4ab6_row0_col2" class="data row0 col2">1.0000</td>
+<td id="T_f4ab6_row0_col3" class="data row0 col3">0.8571</td>
+<td id="T_f4ab6_row0_col4" class="data row0 col4">0.9231</td>
+<td id="T_f4ab6_row0_col5" class="data row0 col5">0.8136</td>
+<td id="T_f4ab6_row0_col6" class="data row0 col6">0.8281</td>
+</tr>
+<tr class="even">
+<td id="T_f4ab6_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">1</td>
+<td id="T_f4ab6_row1_col0" class="data row1 col0">0.8636</td>
+<td id="T_f4ab6_row1_col1" class="data row1 col1">0.9583</td>
+<td id="T_f4ab6_row1_col2" class="data row1 col2">1.0000</td>
+<td id="T_f4ab6_row1_col3" class="data row1 col3">0.8000</td>
+<td id="T_f4ab6_row1_col4" class="data row1 col4">0.8889</td>
+<td id="T_f4ab6_row1_col5" class="data row1 col5">0.7179</td>
+<td id="T_f4ab6_row1_col6" class="data row1 col6">0.7483</td>
+</tr>
+<tr class="odd">
+<td id="T_f4ab6_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">2</td>
+<td id="T_f4ab6_row2_col0" class="data row2 col0">0.8571</td>
+<td id="T_f4ab6_row2_col1" class="data row2 col1">0.9815</td>
+<td id="T_f4ab6_row2_col2" class="data row2 col2">0.8333</td>
+<td id="T_f4ab6_row2_col3" class="data row2 col3">0.9091</td>
+<td id="T_f4ab6_row2_col4" class="data row2 col4">0.8696</td>
+<td id="T_f4ab6_row2_col5" class="data row2 col5">0.7123</td>
+<td id="T_f4ab6_row2_col6" class="data row2 col6">0.7156</td>
+</tr>
+<tr class="even">
+<td id="T_f4ab6_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">3</td>
+<td id="T_f4ab6_row3_col0" class="data row3 col0">0.8095</td>
+<td id="T_f4ab6_row3_col1" class="data row3 col1">0.9444</td>
+<td id="T_f4ab6_row3_col2" class="data row3 col2">1.0000</td>
+<td id="T_f4ab6_row3_col3" class="data row3 col3">0.7500</td>
+<td id="T_f4ab6_row3_col4" class="data row3 col4">0.8571</td>
+<td id="T_f4ab6_row3_col5" class="data row3 col5">0.5882</td>
+<td id="T_f4ab6_row3_col6" class="data row3 col6">0.6455</td>
+</tr>
+<tr class="odd">
+<td id="T_f4ab6_level0_row4" class="row_heading level0 row4" data-quarto-table-cell-role="th">4</td>
+<td id="T_f4ab6_row4_col0" class="data row4 col0">0.8571</td>
+<td id="T_f4ab6_row4_col1" class="data row4 col1">0.9815</td>
+<td id="T_f4ab6_row4_col2" class="data row4 col2">0.8333</td>
+<td id="T_f4ab6_row4_col3" class="data row4 col3">0.9091</td>
+<td id="T_f4ab6_row4_col4" class="data row4 col4">0.8696</td>
+<td id="T_f4ab6_row4_col5" class="data row4 col5">0.7123</td>
+<td id="T_f4ab6_row4_col6" class="data row4 col6">0.7156</td>
+</tr>
+<tr class="even">
+<td id="T_f4ab6_level0_row5" class="row_heading level0 row5" data-quarto-table-cell-role="th">5</td>
+<td id="T_f4ab6_row5_col0" class="data row5 col0">0.8571</td>
+<td id="T_f4ab6_row5_col1" class="data row5 col1">0.9455</td>
+<td id="T_f4ab6_row5_col2" class="data row5 col2">0.8182</td>
+<td id="T_f4ab6_row5_col3" class="data row5 col3">0.9000</td>
+<td id="T_f4ab6_row5_col4" class="data row5 col4">0.8571</td>
+<td id="T_f4ab6_row5_col5" class="data row5 col5">0.7149</td>
+<td id="T_f4ab6_row5_col6" class="data row5 col6">0.7182</td>
+</tr>
+<tr class="odd">
+<td id="T_f4ab6_level0_row6" class="row_heading level0 row6" data-quarto-table-cell-role="th">6</td>
+<td id="T_f4ab6_row6_col0" class="data row6 col0">0.9048</td>
+<td id="T_f4ab6_row6_col1" class="data row6 col1">0.9000</td>
+<td id="T_f4ab6_row6_col2" class="data row6 col2">1.0000</td>
+<td id="T_f4ab6_row6_col3" class="data row6 col3">0.8462</td>
+<td id="T_f4ab6_row6_col4" class="data row6 col4">0.9167</td>
+<td id="T_f4ab6_row6_col5" class="data row6 col5">0.8073</td>
+<td id="T_f4ab6_row6_col6" class="data row6 col6">0.8228</td>
+</tr>
+<tr class="even">
+<td id="T_f4ab6_level0_row7" class="row_heading level0 row7" data-quarto-table-cell-role="th">7</td>
+<td id="T_f4ab6_row7_col0" class="data row7 col0">0.6667</td>
+<td id="T_f4ab6_row7_col1" class="data row7 col1">0.8273</td>
+<td id="T_f4ab6_row7_col2" class="data row7 col2">0.7273</td>
+<td id="T_f4ab6_row7_col3" class="data row7 col3">0.6667</td>
+<td id="T_f4ab6_row7_col4" class="data row7 col4">0.6957</td>
+<td id="T_f4ab6_row7_col5" class="data row7 col5">0.3288</td>
+<td id="T_f4ab6_row7_col6" class="data row7 col6">0.3303</td>
+</tr>
+<tr class="odd">
+<td id="T_f4ab6_level0_row8" class="row_heading level0 row8" data-quarto-table-cell-role="th">8</td>
+<td id="T_f4ab6_row8_col0" class="data row8 col0">0.8571</td>
+<td id="T_f4ab6_row8_col1" class="data row8 col1">0.9364</td>
+<td id="T_f4ab6_row8_col2" class="data row8 col2">0.9091</td>
+<td id="T_f4ab6_row8_col3" class="data row8 col3">0.8333</td>
+<td id="T_f4ab6_row8_col4" class="data row8 col4">0.8696</td>
+<td id="T_f4ab6_row8_col5" class="data row8 col5">0.7123</td>
+<td id="T_f4ab6_row8_col6" class="data row8 col6">0.7156</td>
+</tr>
+<tr class="even">
+<td id="T_f4ab6_level0_row9" class="row_heading level0 row9" data-quarto-table-cell-role="th">9</td>
+<td id="T_f4ab6_row9_col0" class="data row9 col0">0.6190</td>
+<td id="T_f4ab6_row9_col1" class="data row9 col1">0.7455</td>
+<td id="T_f4ab6_row9_col2" class="data row9 col2">0.4545</td>
+<td id="T_f4ab6_row9_col3" class="data row9 col3">0.7143</td>
+<td id="T_f4ab6_row9_col4" class="data row9 col4">0.5556</td>
+<td id="T_f4ab6_row9_col5" class="data row9 col5">0.2500</td>
+<td id="T_f4ab6_row9_col6" class="data row9 col6">0.2697</td>
+</tr>
+<tr class="odd">
+<td id="T_f4ab6_level0_row10" class="row_heading level0 row10" data-quarto-table-cell-role="th">Mean</td>
+<td id="T_f4ab6_row10_col0" class="data row10 col0">0.8201</td>
+<td id="T_f4ab6_row10_col1" class="data row10 col1">0.9212</td>
+<td id="T_f4ab6_row10_col2" class="data row10 col2">0.8576</td>
+<td id="T_f4ab6_row10_col3" class="data row10 col3">0.8186</td>
+<td id="T_f4ab6_row10_col4" class="data row10 col4">0.8303</td>
+<td id="T_f4ab6_row10_col5" class="data row10 col5">0.6358</td>
+<td id="T_f4ab6_row10_col6" class="data row10 col6">0.6510</td>
+</tr>
+<tr class="even">
+<td id="T_f4ab6_level0_row11" class="row_heading level0 row11" data-quarto-table-cell-role="th">Std</td>
+<td id="T_f4ab6_row11_col0" class="data row11 col0">0.0930</td>
+<td id="T_f4ab6_row11_col1" class="data row11 col1">0.0742</td>
+<td id="T_f4ab6_row11_col2" class="data row11 col2">0.1631</td>
+<td id="T_f4ab6_row11_col3" class="data row11 col3">0.0803</td>
+<td id="T_f4ab6_row11_col4" class="data row11 col4">0.1092</td>
+<td id="T_f4ab6_row11_col5" class="data row11 col5">0.1836</td>
+<td id="T_f4ab6_row11_col6" class="data row11 col6">0.1832</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Fitting 10 folds for each of 10 candidates, totalling 100 fits
+Original model was better than the tuned model, hence it will be returned. NOTE: The display metrics are for the tuned model (not the original one).</code></pre>
+</div>
+</div>
+<div id="20bf4803-8192-4ff3-a667-a51663993fba" class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>tuned_nb</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="25">
+<style>#sk-container-id-1 {color: black;background-color: white;}#sk-container-id-1 pre{padding: 0;}#sk-container-id-1 div.sk-toggleable {background-color: white;}#sk-container-id-1 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-1 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-1 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-1 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-1 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-1 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-1 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-1 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-1 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-1 div.sk-item {position: relative;z-index: 1;}#sk-container-id-1 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-1 div.sk-item::before, #sk-container-id-1 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-1 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-1 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-1 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-1 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-1 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-1 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-1 div.sk-label-container {text-align: center;}#sk-container-id-1 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-1 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>GaussianNB(priors=None, var_smoothing=1e-09)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked=""><label for="sk-estimator-id-1" class="sk-toggleable__label sk-toggleable__label-arrow">GaussianNB</label><div class="sk-toggleable__content"><pre>GaussianNB(priors=None, var_smoothing=1e-09)</pre></div></div></div></div></div>
+</div>
+</div>
+<div id="3ab6aef4-0732-4430-9970-356d9ebd904a" class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>tuner</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="26">
+<style>#sk-container-id-2 {color: black;background-color: white;}#sk-container-id-2 pre{padding: 0;}#sk-container-id-2 div.sk-toggleable {background-color: white;}#sk-container-id-2 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-2 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-2 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-2 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-2 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-2 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-2 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-2 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-2 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-2 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-2 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-2 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-2 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-2 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-2 div.sk-item {position: relative;z-index: 1;}#sk-container-id-2 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-2 div.sk-item::before, #sk-container-id-2 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-2 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-2 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-2 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-2 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-2 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-2 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-2 div.sk-label-container {text-align: center;}#sk-container-id-2 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-2 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-2" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>RandomizedSearchCV(cv=StratifiedKFold(n_splits=10, random_state=None, shuffle=False),
+                   error_score=nan,
+                   estimator=Pipeline(memory=FastMemory(location=C:\Users\JHossain\AppData\Local\Temp\joblib),
+                                      steps=[('numerical_imputer',
+                                              TransformerWrapper(exclude=None,
+                                                                 include=['age',
+                                                                          'cp',
+                                                                          'trestbps',
+                                                                          'chol',
+                                                                          'fbs',
+                                                                          'restecg',
+                                                                          'thalach',
+                                                                          'exang',
+                                                                          'oldpeak',
+                                                                          'slope',
+                                                                          'ca',
+                                                                          'thal...
+                                      verbose=False),
+                   n_iter=10, n_jobs=-1,
+                   param_distributions={'actual_estimator__var_smoothing': [1e-09,
+                                                                            2e-09,
+                                                                            5e-09,
+                                                                            8e-09,
+                                                                            9e-09,
+                                                                            1e-07,
+                                                                            2e-07,
+                                                                            3e-07,
+                                                                            5e-07,
+                                                                            7e-07,
+                                                                            9e-07,
+                                                                            1e-05,
+                                                                            0.001,
+                                                                            0.002,
+                                                                            0.003,
+                                                                            0.004,
+                                                                            0.005,
+                                                                            0.007,
+                                                                            0.009,
+                                                                            0.004,
+                                                                            0.005,
+                                                                            0.006,
+                                                                            0.007,
+                                                                            0.008,
+                                                                            0.009,
+                                                                            0.01,
+                                                                            0.1,
+                                                                            1]},
+                   pre_dispatch='2*n_jobs', random_state=123, refit=False,
+                   return_train_score=False, scoring='accuracy', verbose=1)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox"><label for="sk-estimator-id-2" class="sk-toggleable__label sk-toggleable__label-arrow">RandomizedSearchCV</label><div class="sk-toggleable__content"><pre>RandomizedSearchCV(cv=StratifiedKFold(n_splits=10, random_state=None, shuffle=False),
+                   error_score=nan,
+                   estimator=Pipeline(memory=FastMemory(location=C:\Users\JHossain\AppData\Local\Temp\joblib),
+                                      steps=[('numerical_imputer',
+                                              TransformerWrapper(exclude=None,
+                                                                 include=['age',
+                                                                          'cp',
+                                                                          'trestbps',
+                                                                          'chol',
+                                                                          'fbs',
+                                                                          'restecg',
+                                                                          'thalach',
+                                                                          'exang',
+                                                                          'oldpeak',
+                                                                          'slope',
+                                                                          'ca',
+                                                                          'thal...
+                                      verbose=False),
+                   n_iter=10, n_jobs=-1,
+                   param_distributions={'actual_estimator__var_smoothing': [1e-09,
+                                                                            2e-09,
+                                                                            5e-09,
+                                                                            8e-09,
+                                                                            9e-09,
+                                                                            1e-07,
+                                                                            2e-07,
+                                                                            3e-07,
+                                                                            5e-07,
+                                                                            7e-07,
+                                                                            9e-07,
+                                                                            1e-05,
+                                                                            0.001,
+                                                                            0.002,
+                                                                            0.003,
+                                                                            0.004,
+                                                                            0.005,
+                                                                            0.007,
+                                                                            0.009,
+                                                                            0.004,
+                                                                            0.005,
+                                                                            0.006,
+                                                                            0.007,
+                                                                            0.008,
+                                                                            0.009,
+                                                                            0.01,
+                                                                            0.1,
+                                                                            1]},
+                   pre_dispatch='2*n_jobs', random_state=123, refit=False,
+                   return_train_score=False, scoring='accuracy', verbose=1)</pre></div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-3" type="checkbox"><label for="sk-estimator-id-3" class="sk-toggleable__label sk-toggleable__label-arrow">estimator: Pipeline</label><div class="sk-toggleable__content"><pre>Pipeline(memory=FastMemory(location=C:\Users\JHossain\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['age', 'cp', 'trestbps', 'chol',
+                                             'fbs', 'restecg', 'thalach',
+                                             'exang', 'oldpeak', 'slope', 'ca',
+                                             'thal'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_...
+                 TransformerWrapper(exclude=None, include=['sex'],
+                                    transformer=OrdinalEncoder(cols=['sex'],
+                                                               drop_invariant=False,
+                                                               handle_missing='return_nan',
+                                                               handle_unknown='value',
+                                                               mapping=[{'col': 'sex',
+                                                                         'data_type': dtype('float64'),
+                                                                         'mapping': 0.0    0
+1.0    1
+NaN   -1
+dtype: int64}],
+                                                               return_df=True,
+                                                               verbose=0))),
+                ('actual_estimator',
+                 GaussianNB(priors=None, var_smoothing=1e-09))],
+         verbose=False)</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-serial"><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-4" type="checkbox"><label for="sk-estimator-id-4" class="sk-toggleable__label sk-toggleable__label-arrow">numerical_imputer: TransformerWrapper</label><div class="sk-toggleable__content"><pre>TransformerWrapper(include=['age', 'cp', 'trestbps', 'chol', 'fbs', 'restecg',
+                            'thalach', 'exang', 'oldpeak', 'slope', 'ca',
+                            'thal'],
+                   transformer=SimpleImputer())</pre></div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-5" type="checkbox"><label for="sk-estimator-id-5" class="sk-toggleable__label sk-toggleable__label-arrow">transformer: SimpleImputer</label><div class="sk-toggleable__content"><pre>SimpleImputer()</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-6" type="checkbox"><label for="sk-estimator-id-6" class="sk-toggleable__label sk-toggleable__label-arrow">SimpleImputer</label><div class="sk-toggleable__content"><pre>SimpleImputer()</pre></div></div></div></div></div></div></div></div><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-7" type="checkbox"><label for="sk-estimator-id-7" class="sk-toggleable__label sk-toggleable__label-arrow">categorical_imputer: TransformerWrapper</label><div class="sk-toggleable__content"><pre>TransformerWrapper(include=['sex'],
+                   transformer=SimpleImputer(strategy='most_frequent'))</pre></div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-8" type="checkbox"><label for="sk-estimator-id-8" class="sk-toggleable__label sk-toggleable__label-arrow">transformer: SimpleImputer</label><div class="sk-toggleable__content"><pre>SimpleImputer(strategy='most_frequent')</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-9" type="checkbox"><label for="sk-estimator-id-9" class="sk-toggleable__label sk-toggleable__label-arrow">SimpleImputer</label><div class="sk-toggleable__content"><pre>SimpleImputer(strategy='most_frequent')</pre></div></div></div></div></div></div></div></div><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-10" type="checkbox"><label for="sk-estimator-id-10" class="sk-toggleable__label sk-toggleable__label-arrow">ordinal_encoding: TransformerWrapper</label><div class="sk-toggleable__content"><pre>TransformerWrapper(include=['sex'],
+                   transformer=OrdinalEncoder(cols=['sex'],
+                                              handle_missing='return_nan',
+                                              mapping=[{'col': 'sex',
+                                                        'data_type': dtype('float64'),
+                                                        'mapping': 0.0    0
+1.0    1
+NaN   -1
+dtype: int64}]))</pre></div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-11" type="checkbox"><label for="sk-estimator-id-11" class="sk-toggleable__label sk-toggleable__label-arrow">transformer: OrdinalEncoder</label><div class="sk-toggleable__content"><pre>OrdinalEncoder(cols=['sex'], handle_missing='return_nan',
+               mapping=[{'col': 'sex', 'data_type': dtype('float64'),
+                         'mapping': 0.0    0
+1.0    1
+NaN   -1
+dtype: int64}])</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-12" type="checkbox"><label for="sk-estimator-id-12" class="sk-toggleable__label sk-toggleable__label-arrow">OrdinalEncoder</label><div class="sk-toggleable__content"><pre>OrdinalEncoder(cols=['sex'], handle_missing='return_nan',
+               mapping=[{'col': 'sex', 'data_type': dtype('float64'),
+                         'mapping': 0.0    0
+1.0    1
+NaN   -1
+dtype: int64}])</pre></div></div></div></div></div></div></div></div><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-13" type="checkbox"><label for="sk-estimator-id-13" class="sk-toggleable__label sk-toggleable__label-arrow">GaussianNB</label><div class="sk-toggleable__content"><pre>GaussianNB()</pre></div></div></div></div></div></div></div></div></div></div></div></div>
+</div>
+</div>
+</section>
+<section id="analyze-model" class="level2">
+<h2 class="anchored" data-anchor-id="analyze-model">Analyze Model</h2>
+<div id="1d0b5c24-8ce9-4e6c-a65d-bbb093a7ebde" class="cell" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot confusion matrix</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>plot_model(nb, plot <span class="op">=</span> <span class="st">'confusion_matrix'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="05_Heart Diseases_files/figure-html/cell-28-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="89077748-318d-450a-a771-95671fad000b" class="cell" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot AUC</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>plot_model(nb, plot <span class="op">=</span> <span class="st">'auc'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+</div>
+<div class="cell-output cell-output-error">
+<pre><code>TypeError: unsupported operand type(s) for -: 'int' and 'Categorical'</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre><code>&lt;Figure size 800x550 with 0 Axes&gt;</code></pre>
+</div>
+</div>
+<div id="de9ad4da-d752-403d-9d88-c72df40cffa9" class="cell" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot class report</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>plot_model(nb, plot <span class="op">=</span> <span class="st">'class_report'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="05_Heart Diseases_files/figure-html/cell-30-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="3cb414d6-95ad-4f4a-b87c-7f2e747e9841" class="cell" data-execution_count="31">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot feature importance</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>plot_model(nb, plot <span class="op">=</span> <span class="st">'feature'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>TypeError: Feature Importance and RFE plots not available for estimators that doesnt support coef_ or feature_importances_ attribute.</code></pre>
+</div>
+</div>
+</section>
+<section id="evaluate-model" class="level2">
+<h2 class="anchored" data-anchor-id="evaluate-model">Evaluate Model</h2>
+<div id="8204d97d-ad75-44b9-81e7-ec97c817c14e" class="cell" data-execution_count="32">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># evaluate model </span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>evaluate_model(nb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"dd61c1c203dc45508bfd8592f9b10654","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+</div>
+</section>
+<section id="finalize-model" class="level2">
+<h2 class="anchored" data-anchor-id="finalize-model">Finalize Model</h2>
+<div id="24c84bab-e4b3-498d-bedf-c06697bd9dd7" class="cell" data-execution_count="33">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># finalize a model</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>finalize_model(nb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="33">
+<style>#sk-container-id-3 {color: black;background-color: white;}#sk-container-id-3 pre{padding: 0;}#sk-container-id-3 div.sk-toggleable {background-color: white;}#sk-container-id-3 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-3 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-3 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-3 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-3 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-3 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-3 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-3 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-3 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-3 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-3 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-3 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-3 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-3 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-3 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-3 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-3 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-3 div.sk-item {position: relative;z-index: 1;}#sk-container-id-3 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-3 div.sk-item::before, #sk-container-id-3 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-3 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-3 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-3 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-3 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-3 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-3 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-3 div.sk-label-container {text-align: center;}#sk-container-id-3 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-3 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-3" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>Pipeline(memory=FastMemory(location=C:\Users\JHossain\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['age', 'cp', 'trestbps', 'chol',
+                                             'fbs', 'restecg', 'thalach',
+                                             'exang', 'oldpeak', 'slope', 'ca',
+                                             'thal'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_...
+                 TransformerWrapper(exclude=None, include=['sex'],
+                                    transformer=OrdinalEncoder(cols=['sex'],
+                                                               drop_invariant=False,
+                                                               handle_missing='return_nan',
+                                                               handle_unknown='value',
+                                                               mapping=[{'col': 'sex',
+                                                                         'data_type': dtype('float64'),
+                                                                         'mapping': 0.0    0
+1.0    1
+NaN   -1
+dtype: int64}],
+                                                               return_df=True,
+                                                               verbose=0))),
+                ('actual_estimator',
+                 GaussianNB(priors=None, var_smoothing=1e-09))],
+         verbose=False)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-14" type="checkbox"><label for="sk-estimator-id-14" class="sk-toggleable__label sk-toggleable__label-arrow">Pipeline</label><div class="sk-toggleable__content"><pre>Pipeline(memory=FastMemory(location=C:\Users\JHossain\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['age', 'cp', 'trestbps', 'chol',
+                                             'fbs', 'restecg', 'thalach',
+                                             'exang', 'oldpeak', 'slope', 'ca',
+                                             'thal'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_...
+                 TransformerWrapper(exclude=None, include=['sex'],
+                                    transformer=OrdinalEncoder(cols=['sex'],
+                                                               drop_invariant=False,
+                                                               handle_missing='return_nan',
+                                                               handle_unknown='value',
+                                                               mapping=[{'col': 'sex',
+                                                                         'data_type': dtype('float64'),
+                                                                         'mapping': 0.0    0
+1.0    1
+NaN   -1
+dtype: int64}],
+                                                               return_df=True,
+                                                               verbose=0))),
+                ('actual_estimator',
+                 GaussianNB(priors=None, var_smoothing=1e-09))],
+         verbose=False)</pre></div></div></div><div class="sk-serial"><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-15" type="checkbox"><label for="sk-estimator-id-15" class="sk-toggleable__label sk-toggleable__label-arrow">numerical_imputer: TransformerWrapper</label><div class="sk-toggleable__content"><pre>TransformerWrapper(exclude=None,
+                   include=['age', 'cp', 'trestbps', 'chol', 'fbs', 'restecg',
+                            'thalach', 'exang', 'oldpeak', 'slope', 'ca',
+                            'thal'],
+                   transformer=SimpleImputer(add_indicator=False, copy=True,
+                                             fill_value=None,
+                                             keep_empty_features=False,
+                                             missing_values=nan,
+                                             strategy='mean',
+                                             verbose='deprecated'))</pre></div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-16" type="checkbox"><label for="sk-estimator-id-16" class="sk-toggleable__label sk-toggleable__label-arrow">transformer: SimpleImputer</label><div class="sk-toggleable__content"><pre>SimpleImputer()</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-17" type="checkbox"><label for="sk-estimator-id-17" class="sk-toggleable__label sk-toggleable__label-arrow">SimpleImputer</label><div class="sk-toggleable__content"><pre>SimpleImputer()</pre></div></div></div></div></div></div></div></div><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-18" type="checkbox"><label for="sk-estimator-id-18" class="sk-toggleable__label sk-toggleable__label-arrow">categorical_imputer: TransformerWrapper</label><div class="sk-toggleable__content"><pre>TransformerWrapper(exclude=None, include=['sex'],
+                   transformer=SimpleImputer(add_indicator=False, copy=True,
+                                             fill_value=None,
+                                             keep_empty_features=False,
+                                             missing_values=nan,
+                                             strategy='most_frequent',
+                                             verbose='deprecated'))</pre></div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-19" type="checkbox"><label for="sk-estimator-id-19" class="sk-toggleable__label sk-toggleable__label-arrow">transformer: SimpleImputer</label><div class="sk-toggleable__content"><pre>SimpleImputer(strategy='most_frequent')</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-20" type="checkbox"><label for="sk-estimator-id-20" class="sk-toggleable__label sk-toggleable__label-arrow">SimpleImputer</label><div class="sk-toggleable__content"><pre>SimpleImputer(strategy='most_frequent')</pre></div></div></div></div></div></div></div></div><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-21" type="checkbox"><label for="sk-estimator-id-21" class="sk-toggleable__label sk-toggleable__label-arrow">ordinal_encoding: TransformerWrapper</label><div class="sk-toggleable__content"><pre>TransformerWrapper(exclude=None, include=['sex'],
+                   transformer=OrdinalEncoder(cols=['sex'],
+                                              drop_invariant=False,
+                                              handle_missing='return_nan',
+                                              handle_unknown='value',
+                                              mapping=[{'col': 'sex',
+                                                        'data_type': dtype('float64'),
+                                                        'mapping': 0.0    0
+1.0    1
+NaN   -1
+dtype: int64}],
+                                              return_df=True, verbose=0))</pre></div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-22" type="checkbox"><label for="sk-estimator-id-22" class="sk-toggleable__label sk-toggleable__label-arrow">transformer: OrdinalEncoder</label><div class="sk-toggleable__content"><pre>OrdinalEncoder(cols=['sex'], handle_missing='return_nan',
+               mapping=[{'col': 'sex', 'data_type': dtype('float64'),
+                         'mapping': 0.0    0
+1.0    1
+NaN   -1
+dtype: int64}])</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-23" type="checkbox"><label for="sk-estimator-id-23" class="sk-toggleable__label sk-toggleable__label-arrow">OrdinalEncoder</label><div class="sk-toggleable__content"><pre>OrdinalEncoder(cols=['sex'], handle_missing='return_nan',
+               mapping=[{'col': 'sex', 'data_type': dtype('float64'),
+                         'mapping': 0.0    0
+1.0    1
+NaN   -1
+dtype: int64}])</pre></div></div></div></div></div></div></div></div><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-24" type="checkbox"><label for="sk-estimator-id-24" class="sk-toggleable__label sk-toggleable__label-arrow">GaussianNB</label><div class="sk-toggleable__content"><pre>GaussianNB()</pre></div></div></div></div></div></div></div>
+</div>
+</div>
+</section>
+<section id="prediction" class="level2">
+<h2 class="anchored" data-anchor-id="prediction">Prediction</h2>
+<div id="74caf2eb-7fcd-425c-8fcc-590d8626829a" class="cell" data-execution_count="34">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># predict on test set</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>holdout_pred <span class="op">=</span> predict_model(nb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<style type="text/css">
+</style>
+
+<table id="T_b19b5" data-quarto-postprocess="true" class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th class="blank level0" data-quarto-table-cell-role="th">&nbsp;</th>
+<th id="T_b19b5_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Model</th>
+<th id="T_b19b5_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Accuracy</th>
+<th id="T_b19b5_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">AUC</th>
+<th id="T_b19b5_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">Recall</th>
+<th id="T_b19b5_level0_col4" class="col_heading level0 col4" data-quarto-table-cell-role="th">Prec.</th>
+<th id="T_b19b5_level0_col5" class="col_heading level0 col5" data-quarto-table-cell-role="th">F1</th>
+<th id="T_b19b5_level0_col6" class="col_heading level0 col6" data-quarto-table-cell-role="th">Kappa</th>
+<th id="T_b19b5_level0_col7" class="col_heading level0 col7" data-quarto-table-cell-role="th">MCC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td id="T_b19b5_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">0</td>
+<td id="T_b19b5_row0_col0" class="data row0 col0">Naive Bayes</td>
+<td id="T_b19b5_row0_col1" class="data row0 col1">0.8132</td>
+<td id="T_b19b5_row0_col2" class="data row0 col2">0.8741</td>
+<td id="T_b19b5_row0_col3" class="data row0 col3">0.8600</td>
+<td id="T_b19b5_row0_col4" class="data row0 col4">0.8113</td>
+<td id="T_b19b5_row0_col5" class="data row0 col5">0.8350</td>
+<td id="T_b19b5_row0_col6" class="data row0 col6">0.6202</td>
+<td id="T_b19b5_row0_col7" class="data row0 col7">0.6216</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="8de62328-4010-4763-87ac-fb8f5e842aca" class="cell" data-execution_count="35">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># show predictions df</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>holdout_pred.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="35">
+<div>
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">age</th>
+<th data-quarto-table-cell-role="th">sex</th>
+<th data-quarto-table-cell-role="th">cp</th>
+<th data-quarto-table-cell-role="th">trestbps</th>
+<th data-quarto-table-cell-role="th">chol</th>
+<th data-quarto-table-cell-role="th">fbs</th>
+<th data-quarto-table-cell-role="th">restecg</th>
+<th data-quarto-table-cell-role="th">thalach</th>
+<th data-quarto-table-cell-role="th">exang</th>
+<th data-quarto-table-cell-role="th">oldpeak</th>
+<th data-quarto-table-cell-role="th">slope</th>
+<th data-quarto-table-cell-role="th">ca</th>
+<th data-quarto-table-cell-role="th">thal</th>
+<th data-quarto-table-cell-role="th">target</th>
+<th data-quarto-table-cell-role="th">prediction_label</th>
+<th data-quarto-table-cell-role="th">prediction_score</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">204</td>
+<td>62</td>
+<td>0</td>
+<td>0</td>
+<td>160</td>
+<td>164</td>
+<td>0</td>
+<td>0</td>
+<td>145</td>
+<td>0</td>
+<td>6.2</td>
+<td>0</td>
+<td>3</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>1.0000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">293</td>
+<td>67</td>
+<td>1</td>
+<td>2</td>
+<td>152</td>
+<td>212</td>
+<td>0</td>
+<td>0</td>
+<td>150</td>
+<td>0</td>
+<td>0.8</td>
+<td>1</td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td>1</td>
+<td>0.6576</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">84</td>
+<td>42</td>
+<td>0</td>
+<td>0</td>
+<td>102</td>
+<td>265</td>
+<td>0</td>
+<td>0</td>
+<td>122</td>
+<td>0</td>
+<td>0.6</td>
+<td>1</td>
+<td>0</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>0.9235</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">141</td>
+<td>43</td>
+<td>1</td>
+<td>0</td>
+<td>115</td>
+<td>303</td>
+<td>0</td>
+<td>1</td>
+<td>181</td>
+<td>0</td>
+<td>1.2</td>
+<td>1</td>
+<td>0</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>0.9485</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">290</td>
+<td>61</td>
+<td>1</td>
+<td>0</td>
+<td>148</td>
+<td>203</td>
+<td>0</td>
+<td>1</td>
+<td>161</td>
+<td>0</td>
+<td>0.0</td>
+<td>2</td>
+<td>1</td>
+<td>3</td>
+<td>0</td>
+<td>1</td>
+<td>0.7094</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+<div id="8577a025-fd59-484e-89ab-9852cf18b523" class="cell" data-execution_count="36">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co"># copy data and drop Class variable</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>new_data <span class="op">=</span> data.copy()</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>new_data.drop(<span class="st">'target'</span>, axis<span class="op">=</span><span class="dv">1</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>new_data.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="36">
+<div>
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">age</th>
+<th data-quarto-table-cell-role="th">sex</th>
+<th data-quarto-table-cell-role="th">cp</th>
+<th data-quarto-table-cell-role="th">trestbps</th>
+<th data-quarto-table-cell-role="th">chol</th>
+<th data-quarto-table-cell-role="th">fbs</th>
+<th data-quarto-table-cell-role="th">restecg</th>
+<th data-quarto-table-cell-role="th">thalach</th>
+<th data-quarto-table-cell-role="th">exang</th>
+<th data-quarto-table-cell-role="th">oldpeak</th>
+<th data-quarto-table-cell-role="th">slope</th>
+<th data-quarto-table-cell-role="th">ca</th>
+<th data-quarto-table-cell-role="th">thal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>63</td>
+<td>1</td>
+<td>3</td>
+<td>145</td>
+<td>233</td>
+<td>1</td>
+<td>0</td>
+<td>150</td>
+<td>0</td>
+<td>2.3</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>37</td>
+<td>1</td>
+<td>2</td>
+<td>130</td>
+<td>250</td>
+<td>0</td>
+<td>1</td>
+<td>187</td>
+<td>0</td>
+<td>3.5</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>41</td>
+<td>0</td>
+<td>1</td>
+<td>130</td>
+<td>204</td>
+<td>0</td>
+<td>0</td>
+<td>172</td>
+<td>0</td>
+<td>1.4</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>56</td>
+<td>1</td>
+<td>1</td>
+<td>120</td>
+<td>236</td>
+<td>0</td>
+<td>1</td>
+<td>178</td>
+<td>0</td>
+<td>0.8</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>57</td>
+<td>0</td>
+<td>0</td>
+<td>120</td>
+<td>354</td>
+<td>0</td>
+<td>1</td>
+<td>163</td>
+<td>1</td>
+<td>0.6</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+<div id="f0c3187e-a3ad-4463-80db-5268448313f3" class="cell" data-execution_count="37">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># predict model on new_data</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>predictions <span class="op">=</span> predict_model(nb, data <span class="op">=</span> new_data)</span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>predictions.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+</div>
+<div class="cell-output cell-output-display" data-execution_count="37">
+<div>
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">age</th>
+<th data-quarto-table-cell-role="th">sex</th>
+<th data-quarto-table-cell-role="th">cp</th>
+<th data-quarto-table-cell-role="th">trestbps</th>
+<th data-quarto-table-cell-role="th">chol</th>
+<th data-quarto-table-cell-role="th">fbs</th>
+<th data-quarto-table-cell-role="th">restecg</th>
+<th data-quarto-table-cell-role="th">thalach</th>
+<th data-quarto-table-cell-role="th">exang</th>
+<th data-quarto-table-cell-role="th">oldpeak</th>
+<th data-quarto-table-cell-role="th">slope</th>
+<th data-quarto-table-cell-role="th">ca</th>
+<th data-quarto-table-cell-role="th">thal</th>
+<th data-quarto-table-cell-role="th">prediction_label</th>
+<th data-quarto-table-cell-role="th">prediction_score</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>63</td>
+<td>1</td>
+<td>3</td>
+<td>145</td>
+<td>233</td>
+<td>1</td>
+<td>0</td>
+<td>150</td>
+<td>0</td>
+<td>2.3</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0.8095</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>37</td>
+<td>1</td>
+<td>2</td>
+<td>130</td>
+<td>250</td>
+<td>0</td>
+<td>1</td>
+<td>187</td>
+<td>0</td>
+<td>3.5</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>0.9799</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>41</td>
+<td>0</td>
+<td>1</td>
+<td>130</td>
+<td>204</td>
+<td>0</td>
+<td>0</td>
+<td>172</td>
+<td>0</td>
+<td>1.4</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+<td>1</td>
+<td>0.9980</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>56</td>
+<td>1</td>
+<td>1</td>
+<td>120</td>
+<td>236</td>
+<td>0</td>
+<td>1</td>
+<td>178</td>
+<td>0</td>
+<td>0.8</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+<td>1</td>
+<td>0.9932</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>57</td>
+<td>0</td>
+<td>0</td>
+<td>120</td>
+<td>354</td>
+<td>0</td>
+<td>1</td>
+<td>163</td>
+<td>1</td>
+<td>0.6</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+<td>1</td>
+<td>0.9513</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="save-model" class="level2">
+<h2 class="anchored" data-anchor-id="save-model">Save Model</h2>
+<div id="c04f0912-d07b-4ed5-88d4-282438597b96" class="cell" data-execution_count="38">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co"># save pipeline</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>save_model(nb, <span class="st">'../models/heart_diseases'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Transformation Pipeline and Model Successfully Saved</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="38">
+<pre><code>(Pipeline(memory=FastMemory(location=C:\Users\JHossain\AppData\Local\Temp\joblib),
+          steps=[('numerical_imputer',
+                  TransformerWrapper(exclude=None,
+                                     include=['age', 'cp', 'trestbps', 'chol',
+                                              'fbs', 'restecg', 'thalach',
+                                              'exang', 'oldpeak', 'slope', 'ca',
+                                              'thal'],
+                                     transformer=SimpleImputer(add_indicator=False,
+                                                               copy=True,
+                                                               fill_value=None,
+                                                               keep_empty_features=False,
+                                                               missing_...
+                  TransformerWrapper(exclude=None, include=['sex'],
+                                     transformer=OrdinalEncoder(cols=['sex'],
+                                                                drop_invariant=False,
+                                                                handle_missing='return_nan',
+                                                                handle_unknown='value',
+                                                                mapping=[{'col': 'sex',
+                                                                          'data_type': dtype('float64'),
+                                                                          'mapping': 0.0    0
+ 1.0    1
+ NaN   -1
+ dtype: int64}],
+                                                                return_df=True,
+                                                                verbose=0))),
+                 ('trained_model',
+                  GaussianNB(priors=None, var_smoothing=1e-09))],
+          verbose=False),
+ '../models/heart_diseases.pkl')</code></pre>
+</div>
+</div>
+<div id="8fa54ced-a3ac-4b06-a075-d787490b7dfb" class="cell" data-execution_count="39">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load pipeline</span></span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>loaded_best_pipeline <span class="op">=</span> load_model(<span class="st">'../models/heart_diseases'</span>)</span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>loaded_best_pipeline</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Transformation Pipeline and Model Successfully Loaded</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="39">
+<style>#sk-container-id-4 {color: black;background-color: white;}#sk-container-id-4 pre{padding: 0;}#sk-container-id-4 div.sk-toggleable {background-color: white;}#sk-container-id-4 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-4 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-4 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-4 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-4 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-4 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-4 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-4 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-4 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-4 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-4 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-4 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-4 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-4 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-4 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-4 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-4 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-4 div.sk-item {position: relative;z-index: 1;}#sk-container-id-4 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-4 div.sk-item::before, #sk-container-id-4 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-4 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-4 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-4 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-4 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-4 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-4 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-4 div.sk-label-container {text-align: center;}#sk-container-id-4 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-4 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-4" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>Pipeline(memory=FastMemory(location=C:\Users\JHossain\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['age', 'cp', 'trestbps', 'chol',
+                                             'fbs', 'restecg', 'thalach',
+                                             'exang', 'oldpeak', 'slope', 'ca',
+                                             'thal'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_...
+                 TransformerWrapper(exclude=None, include=['sex'],
+                                    transformer=OrdinalEncoder(cols=['sex'],
+                                                               drop_invariant=False,
+                                                               handle_missing='return_nan',
+                                                               handle_unknown='value',
+                                                               mapping=[{'col': 'sex',
+                                                                         'data_type': dtype('float64'),
+                                                                         'mapping': 0.0    0
+1.0    1
+NaN   -1
+dtype: int64}],
+                                                               return_df=True,
+                                                               verbose=0))),
+                ('trained_model',
+                 GaussianNB(priors=None, var_smoothing=1e-09))],
+         verbose=False)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-25" type="checkbox"><label for="sk-estimator-id-25" class="sk-toggleable__label sk-toggleable__label-arrow">Pipeline</label><div class="sk-toggleable__content"><pre>Pipeline(memory=FastMemory(location=C:\Users\JHossain\AppData\Local\Temp\joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['age', 'cp', 'trestbps', 'chol',
+                                             'fbs', 'restecg', 'thalach',
+                                             'exang', 'oldpeak', 'slope', 'ca',
+                                             'thal'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_...
+                 TransformerWrapper(exclude=None, include=['sex'],
+                                    transformer=OrdinalEncoder(cols=['sex'],
+                                                               drop_invariant=False,
+                                                               handle_missing='return_nan',
+                                                               handle_unknown='value',
+                                                               mapping=[{'col': 'sex',
+                                                                         'data_type': dtype('float64'),
+                                                                         'mapping': 0.0    0
+1.0    1
+NaN   -1
+dtype: int64}],
+                                                               return_df=True,
+                                                               verbose=0))),
+                ('trained_model',
+                 GaussianNB(priors=None, var_smoothing=1e-09))],
+         verbose=False)</pre></div></div></div><div class="sk-serial"><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-26" type="checkbox"><label for="sk-estimator-id-26" class="sk-toggleable__label sk-toggleable__label-arrow">numerical_imputer: TransformerWrapper</label><div class="sk-toggleable__content"><pre>TransformerWrapper(exclude=None,
+                   include=['age', 'cp', 'trestbps', 'chol', 'fbs', 'restecg',
+                            'thalach', 'exang', 'oldpeak', 'slope', 'ca',
+                            'thal'],
+                   transformer=SimpleImputer(add_indicator=False, copy=True,
+                                             fill_value=None,
+                                             keep_empty_features=False,
+                                             missing_values=nan,
+                                             strategy='mean',
+                                             verbose='deprecated'))</pre></div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-27" type="checkbox"><label for="sk-estimator-id-27" class="sk-toggleable__label sk-toggleable__label-arrow">transformer: SimpleImputer</label><div class="sk-toggleable__content"><pre>SimpleImputer()</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-28" type="checkbox"><label for="sk-estimator-id-28" class="sk-toggleable__label sk-toggleable__label-arrow">SimpleImputer</label><div class="sk-toggleable__content"><pre>SimpleImputer()</pre></div></div></div></div></div></div></div></div><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-29" type="checkbox"><label for="sk-estimator-id-29" class="sk-toggleable__label sk-toggleable__label-arrow">categorical_imputer: TransformerWrapper</label><div class="sk-toggleable__content"><pre>TransformerWrapper(exclude=None, include=['sex'],
+                   transformer=SimpleImputer(add_indicator=False, copy=True,
+                                             fill_value=None,
+                                             keep_empty_features=False,
+                                             missing_values=nan,
+                                             strategy='most_frequent',
+                                             verbose='deprecated'))</pre></div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-30" type="checkbox"><label for="sk-estimator-id-30" class="sk-toggleable__label sk-toggleable__label-arrow">transformer: SimpleImputer</label><div class="sk-toggleable__content"><pre>SimpleImputer(strategy='most_frequent')</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-31" type="checkbox"><label for="sk-estimator-id-31" class="sk-toggleable__label sk-toggleable__label-arrow">SimpleImputer</label><div class="sk-toggleable__content"><pre>SimpleImputer(strategy='most_frequent')</pre></div></div></div></div></div></div></div></div><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-32" type="checkbox"><label for="sk-estimator-id-32" class="sk-toggleable__label sk-toggleable__label-arrow">ordinal_encoding: TransformerWrapper</label><div class="sk-toggleable__content"><pre>TransformerWrapper(exclude=None, include=['sex'],
+                   transformer=OrdinalEncoder(cols=['sex'],
+                                              drop_invariant=False,
+                                              handle_missing='return_nan',
+                                              handle_unknown='value',
+                                              mapping=[{'col': 'sex',
+                                                        'data_type': dtype('float64'),
+                                                        'mapping': 0.0    0
+1.0    1
+NaN   -1
+dtype: int64}],
+                                              return_df=True, verbose=0))</pre></div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-33" type="checkbox"><label for="sk-estimator-id-33" class="sk-toggleable__label sk-toggleable__label-arrow">transformer: OrdinalEncoder</label><div class="sk-toggleable__content"><pre>OrdinalEncoder(cols=['sex'], handle_missing='return_nan',
+               mapping=[{'col': 'sex', 'data_type': dtype('float64'),
+                         'mapping': 0.0    0
+1.0    1
+NaN   -1
+dtype: int64}])</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-34" type="checkbox"><label for="sk-estimator-id-34" class="sk-toggleable__label sk-toggleable__label-arrow">OrdinalEncoder</label><div class="sk-toggleable__content"><pre>OrdinalEncoder(cols=['sex'], handle_missing='return_nan',
+               mapping=[{'col': 'sex', 'data_type': dtype('float64'),
+                         'mapping': 0.0    0
+1.0    1
+NaN   -1
+dtype: int64}])</pre></div></div></div></div></div></div></div></div><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-35" type="checkbox"><label for="sk-estimator-id-35" class="sk-toggleable__label sk-toggleable__label-arrow">GaussianNB</label><div class="sk-toggleable__content"><pre>GaussianNB()</pre></div></div></div></div></div></div></div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script type="application/vnd.jupyter.widget-state+json">
+{"state":{},"version_major":2,"version_minor":0}
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© Copyright 2023, Md. Jubayer Hossain</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/JHossain_28" rel="me">
+      <i class="bi bi-twitter" role="img" aria-label="twitter">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/hossainlab" rel="me">
+      <i class="bi bi-github" role="img" aria-label="github">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/@hossainlab" rel="me">
+      <i class="bi bi-youtube" role="img" aria-label="youtube">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/hossainmj">
+      <i class="bi bi-linkedin" role="img" aria-label="linkedin">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
