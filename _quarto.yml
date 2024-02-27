@@ -78,7 +78,7 @@ website:
         - text: "What I Use"
           file: use.qmd
         - text: "CV"
-          file: https://hossainlab.github.io/CV/
+          file: cv/index.qmd
       right:
       - icon: envelope
         aria-label: email
