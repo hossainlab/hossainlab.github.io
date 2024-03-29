@@ -80,7 +80,7 @@ website:
         - text: "What I Use"
           file: use.qmd
         - text: "CV"
-          file: cv.qmd
+          file: cv/index.qmd
       right:
       - icon: envelope
         aria-label: email
