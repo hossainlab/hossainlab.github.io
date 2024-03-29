@@ -433,5 +433,14 @@
   },
   "cv/index.Rmd": {
     "index.html": "d9cc3f7a"
+  },
+  "cv/cv.qmd": {
+    "cv.html": "7b57980d",
+    "cv.pdf": "33231505"
+  },
+  "cv.qmd": {
+    "cv.html": "c5863010",
+    "cv.pdf": "28d1160b",
+    "cv.tex": "a58578a7"
   }
 }
