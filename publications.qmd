@@ -5,6 +5,7 @@ page-layout: full
 title-block-banner: false
 comments: false
 callout-icon: false
+toc: true 
 ---
 
 :::  panel-tabset
@@ -22,9 +23,9 @@ Thalassemia among Public University Students in Bangladesh. Microbial Bioactives
 
 - **Hossain, M.J.**, Towhid, S. T., Akter, S., Shahjahan, M., Roy, T., Akter, B., & Nodee, T. A.(2023). Knowledge and Self-Management Practice Among Diabetic Patients from the Urban Areas in Bangladesh, Journal of Angiotherapy, 7(1), 1-10, <https://doi.org/10.25163/angiotherapy.717340>
 
-- **Hossain MJ**, Das M, Islam MW, Shahjahan M, Ferdous J. Community engagement and social participation in dengue prevention: A cross-sectional study in Dhaka City. Health Sci Rep. 2024; 7:e2022. doi:10.1002/hsr2.2022
+- **Hossain MJ**, Das M, Islam MW, Shahjahan M, Ferdous J. Community engagement and social participation in dengue prevention: A cross-sectional study in Dhaka City. Health Sci Rep. 2024; 7:e2022. <doi:10.1002/hsr2.2022>
 
-- **Hossain MJ**, Azad AK, Shahid MSB, Shahjahan M, Ferdous J. Prevalence, antibiotic resistance pattern for bacteriuria from patients with urinary tract infections. Health Sci Rep. 2024; 7:e2039. doi:10.1002/hsr2.2039
+- **Hossain MJ**, Azad AK, Shahid MSB, Shahjahan M, Ferdous J. Prevalence, antibiotic resistance pattern for bacteriuria from patients with urinary tract infections. Health Sci Rep. 2024; 7:e2039. <doi:10.1002/hsr2.2039>
 
 
 # Under Review
