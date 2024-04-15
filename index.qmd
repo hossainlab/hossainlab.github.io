@@ -1,7 +1,7 @@
 ---
 pagetitle: "Home | Jubayer Hossain"
 title: "Md. Jubayer Hossain"
-subtitle: "Learner, Educator, Data Analyst"
+subtitle: "Learner, Educator, Data Scientist"
 page-layout: full
 image: files/profiles/profile.jpg
 about:
