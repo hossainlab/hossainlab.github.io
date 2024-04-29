@@ -8,10 +8,7 @@ callout-icon: false
 toc: true 
 ---
 
-:::  panel-tabset
-
 # Journal Articles 
-## Published 
 - Islam, M.W., Shahjahan, M., Azad, A.K., **Hossain, M. J.** Factors contributing to antibiotic misuse among parents of school-going children in Dhaka City, Bangladesh. Sci Rep 14, 2318 (2024). <https://doi.org/10.1038/s41598-024-52313-y>
 
 - **Hossain, M. J.**, Islam, M. W., Munni, U. R., Gulshan, R., Mukta, S. A., Miah, M. S., Sultana, S., Karmakar, M., Ferdous, J., & Islam, M.A. (2023). Health‑related quality of life among thalassemia patients in Bangladesh using the SF‑36 questionnaire. Scientific Reports,13(1). <https://doi.org/10.1038/s41598-023-34205-9>
@@ -105,7 +102,3 @@ Thalassemia among Public University Students in Bangladesh. Microbial Bioactives
 - Das,M., Azad,A.K.,Barman,A.K.,Holy,N.A.,Akter,N., **Hossain, M.J.** Experiences and Side Effects Following COVID-19 Vaccination in Bangladesh: a cross-sectional community-based e-survey. 36th Bangladesh Society of Microbiologists Annual Conference, SUST, Sylhet, Bangladesh, January 2023 
 
 - Akter, S.,**Hossain, M. J.**, Towhid, S. T., Sammo, M. A. S.(2022). Perception of Students on Antibiotic Resistance and Prevention: An Online, Community-Based Case Study from Dhaka, Bangladesh. 36th Bangladesh Society of Microbiologists Annual Conference, SUST, Sylhet, Bangladesh, January 2023 
-
-
-:::
-
