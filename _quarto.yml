@@ -59,8 +59,8 @@ website:
       left:
         - text: "Home"
           file: index.qmd
-        - text: "About"
-          file: about.qmd
+        # - text: "About"
+        #   file: about.qmd
         - text: "Blog"
           file: blog.qmd
         - text: "Newsletter"
@@ -71,8 +71,8 @@ website:
           file: publications.qmd
         - text: "Projects"
           href: projects.qmd
-        - text: "Dashboards"
-          href: dashboards.qmd
+        # - text: "Dashboards"
+        #   href: dashboards.qmd
         - text: "Talks"
           href: talks.qmd
         - text: "Teaching"

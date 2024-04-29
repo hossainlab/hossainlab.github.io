@@ -442,5 +442,8 @@
     "cv.html": "c5863010",
     "cv.pdf": "28d1160b",
     "cv.tex": "a58578a7"
+  },
+  "talks/mastering-biomedical-data-management/index.qmd": {
+    "index.html": "7ec1f26f"
   }
 }

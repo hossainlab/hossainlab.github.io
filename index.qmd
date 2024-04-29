@@ -7,7 +7,7 @@ image: files/profiles/profile.jpg
 about:
   id: hero-heading
   template: trestles
-  image-shape: rounded
+  image-shape: round
   image-width: 8cm
   links:
     - icon: linkedin
@@ -23,10 +23,12 @@ about:
 
 :::  panel-tabset
 
-# **Welcome!**
-Hello, I am *[Md. Jubayer Hossain](https://hossainlab.github.io/)*. I am the founder and Executive Director of [CHIRAL Bangladesh](https://chiralbd.org/), a non-profit biomedical research organization dedicated to solving public health problems in Bangladesh. Additionally, I am also working as a health data analysis instructor at [cBLAST](https://www.cblastdu.xyz/). My professional endeavors aim to maximize the quality of life for individuals by operating at the intersection of education, technology, and health research.
+# **Bio**
+Hello, I am *[Md. Jubayer Hossain](https://hossainlab.github.io/)*. I am the founder and Executive Director of [CHIRAL Bangladesh](https://chiralbd.org/), a non-profit biomedical research organization dedicated to solving public health problems in Bangladesh. Additionally, I am also working as a health data analysis instructor at [cBLAST](https://www.cblastdu.xyz/). My to maximize the quality of life for individuals by operating at the intersection of education, technology, and health research.
 
 I am interested in applying modern data science techniques in the context of disease diagnosis and large data analytics for public health while focusing on bridging the gap between computational and experimental laboratories through highly engaging and fruitful collaborations.
+
+**Interests:** Cancer Epidemiology, Cancer Bioinformatics, Machine Learning, Deep Learning 
 
 
 # **Experience**
@@ -44,7 +46,21 @@ I am interested in applying modern data science techniques in the context of dis
 
 # **Skills**
 
-**Programming Languages:** Python, R, SQL, Julia, JavaScript; **Data Science:** scikit-learn, PyCaret, Dask, PySpark; **GIS & Remote Sensing:** ArcGIS, Geopandas, Xarray, Giovani, Google Earth Engiine; **Analytics Softwares:** SPSS, PowerBI, Microsoft Excel; **Survey Tools:** RedCap, KoboToolBox, EpiCollect, Google Forms; **Academic Writing Tools:** Microsoft Word, LaTeX, Mendeley; **Bioinformatics:** BioPython, Bioconductor, BioPandas, Galaxy, NGS, RNASeq, ssRNASeq; **Miscellaneous Skills:** UNIX, Version Control(Git), Web Scraping, APIs
+**Programming Languages:** Python, R, SQL, Julia, JavaScript
+
+**Data Science:** scikit-learn, PyCaret, Dask, PySpark
+
+**Bioinformatics:** BioPython, Bioconductor, BioPandas, Galaxy, NGS, RNASeq, ssRNASeq
+
+**GIS & Remote Sensing:** ArcGIS, Geopandas, Xarray, Giovani, Google Earth Engiine
+
+**Analytics Softwares:** SPSS, PowerBI, Microsoft Excel
+
+**Survey Tools:** RedCap, KoboToolBox, EpiCollect, Google Forms
+
+**Academic Writing Tools:** Microsoft Word, LaTeX, Mendeley, Zotero 
+
+**Miscellaneous Skills:** UNIX, Version Control(Git), Web Scraping, APIs
 
 
 # **Education & Training**
