@@ -3,7 +3,7 @@ pagetitle: "Projects | Jubayer Hossain"
 listing:
   contents: projects
   sort: "title"
-  type: grid
+  type: default
   grid-columns: 2
   grid-item-border: true 
   grid-item-align: left

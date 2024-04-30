@@ -445,5 +445,8 @@
   },
   "talks/mastering-biomedical-data-management/index.qmd": {
     "index.html": "7ec1f26f"
+  },
+  "projects/Early Breast Cancer Detection System/index.qmd": {
+    "index.html": "883f4c7f"
   }
 }
