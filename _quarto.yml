@@ -63,8 +63,6 @@ website:
           file: publications.qmd
         - text: "Projects"
           href: projects.qmd
-        # - text: "Dashboards"
-        #   href: dashboards.qmd
         - text: "Talks"
           href: talks.qmd
         - text: "Teaching"
@@ -82,6 +80,8 @@ website:
             file: blog.qmd
           - text: "Newsletter"
             file: https://hossainlab.substack.com
+          - text: "Dashboards"
+            href: dashboards.qmd
           - text: "Press"
             file: press.qmd
       right:
