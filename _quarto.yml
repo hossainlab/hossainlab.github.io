@@ -59,14 +59,8 @@ website:
       left:
         - text: "Home"
           file: index.qmd
-        # - text: "About"
-        #   file: about.qmd
         - text: "Blog"
           file: blog.qmd
-        - text: "Newsletter"
-          file: https://hossainlab.substack.com
-        - text: "Press"
-          file: press.qmd
         - text: "Publications"
           file: publications.qmd
         - text: "Projects"
@@ -81,6 +75,15 @@ website:
           file: use.qmd
         - text: "CV"
           file: cv/index.qmd
+        
+        - text: "More"
+          menu:
+          - text: "About"
+            file: about.qmd
+          - text: "Newsletter"
+            file: https://hossainlab.substack.com
+          - text: "Press"
+            file: press.qmd
       right:
       - icon: envelope
         aria-label: email
