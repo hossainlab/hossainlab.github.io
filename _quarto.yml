@@ -35,7 +35,7 @@ website:
   page-footer:
     background: "#74B9FF"
     border: false
-    left: "&copy; Copyright 2023, Md. Jubayer Hossain"
+    left: "&copy; Copyright 2024, Md. Jubayer Hossain"
     right:
       - icon: twitter
         aria-label: twitter
