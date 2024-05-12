@@ -3,8 +3,7 @@ pagetitle: "Projects | Jubayer Hossain"
 listing:
   contents: projects
   sort: "title"
-  type: default
-  grid-columns: 2
+  type: grid
   grid-item-border: true 
   grid-item-align: left
   image-height: 260px

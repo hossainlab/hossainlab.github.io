@@ -3,7 +3,7 @@ pagetitle: "Talks | Jubayer Hossain"
 listing:
   contents: talks
   sort: "title"
-  type: default
+  type: grid
   grid-item-border: true 
   categories: true
   sort-ui: true 
