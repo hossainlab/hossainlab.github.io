@@ -71,7 +71,6 @@ website:
           file: use.qmd
         - text: "CV"
           file: cv/index.qmd
-        
         - text: "More"
           menu:
           - text: "About"
