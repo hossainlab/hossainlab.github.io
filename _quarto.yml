@@ -37,10 +37,6 @@ website:
     border: false
     left: "&copy; Copyright 2024, Md. Jubayer Hossain"
     right:
-      - icon: twitter
-        aria-label: twitter
-        href: https://twitter.com/JHossain_28
-        rel: me
       - icon: github
         aria-label: github
         href: https://github.com/hossainlab
@@ -87,6 +83,18 @@ website:
       - icon: envelope
         aria-label: email
         href: "mailto:hossainmj@gmail.com"
+      - text: "{{< ai orcid>}}"
+        aria-label: orcid
+        href: https://orcid.org/0000-0001-9323-4997
+      - text: "{{< ai google-scholar >}}"
+        aria-label: google-scholar 
+        href: https://scholar.google.com/citations?user=9_K4ekoAAAAJ&hl=en&authuser=5
+      - text: "{{< ai researchgate >}}"
+        aria-label: researchgate
+        href: https://scholar.google.com/citations?user=9_K4ekoAAAAJ&hl=en&authuser=5
+      - icon: linkedin
+        aria-label: linkedin
+        href: https://www.linkedin.com/in/hossainmj
       - icon: twitter
         aria-label: twitter
         href: https://twitter.com/JHossain_28
@@ -99,10 +107,7 @@ website:
         aria-label: youtube
         href: https://www.youtube.com/@hossainlab
         rel: me
-      - icon: linkedin
-        aria-label: linkedin
-        href: https://www.linkedin.com/in/hossainmj
-
+  
 format:
   html:
     theme:
