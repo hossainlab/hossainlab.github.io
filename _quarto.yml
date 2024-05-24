@@ -32,22 +32,22 @@ website:
   title: ""
   favicon: /files/profiles/icon.png
 
-  page-footer:
-    background: "#74B9FF"
-    border: false
-    left: "&copy; Copyright 2024, Md. Jubayer Hossain"
-    right:
-      - icon: github
-        aria-label: github
-        href: https://github.com/hossainlab
-        rel: me
-      - icon: youtube
-        aria-label: youtube
-        href: https://www.youtube.com/@hossainlab
-        rel: me
-      - icon: linkedin
-        aria-label: linkedin
-        href: https://www.linkedin.com/in/hossainmj
+  # page-footer:
+  #   background: "#74B9FF"
+  #   border: false
+  #   left: "&copy; Copyright 2024, Md. Jubayer Hossain"
+  #   right:
+  #     - icon: github
+  #       aria-label: github
+  #       href: https://github.com/hossainlab
+  #       rel: me
+  #     - icon: youtube
+  #       aria-label: youtube
+  #       href: https://www.youtube.com/@hossainlab
+  #       rel: me
+  #     - icon: linkedin
+  #       aria-label: linkedin
+  #       href: https://www.linkedin.com/in/hossainmj
   navbar:
       pinned: true
       background: "#74B9FF"
