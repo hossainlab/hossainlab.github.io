@@ -3,10 +3,8 @@ pagetitle: "Teaching | Jubayer Hossain"
 listing:
   contents: teaching 
   sort: "title"
-  type: grid
+  type: default
   categories: true
-  sort-ui: true
-  filter-ui: true
 page-layout: full
 title-block-banner: false
 comments: false
