@@ -28,7 +28,7 @@ Hello, I am *[Md. Jubayer Hossain](https://hossainlab.github.io/)*. I am the fou
 
 I am interested in applying modern data science techniques in the context of disease diagnosis and large data analytics for public health while focusing on bridging the gap between computational and experimental laboratories through highly engaging and fruitful collaborations.
 
-**Interests:** Cancer Epidemiology, Cancer Bioinformatics, Machine Learning, Deep Learning 
+**Interests:** Neuroepidemiology, Cancer Epidemiology, Cancer Bioinformatics, Machine Learning, Deep Learning 
 
 
 # **Experience**

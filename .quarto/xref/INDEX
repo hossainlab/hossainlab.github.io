@@ -448,5 +448,8 @@
   },
   "projects/Early Breast Cancer Detection System/index.qmd": {
     "index.html": "883f4c7f"
+  },
+  "teaching/foundations-of-health-data-science/index.qmd": {
+    "index.html": "28688a2b"
   }
 }

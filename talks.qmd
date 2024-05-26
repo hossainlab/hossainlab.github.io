@@ -3,11 +3,10 @@ pagetitle: "Talks | Jubayer Hossain"
 listing:
   contents: talks
   sort: "title"
-  type: grid
+  type: default
+  image-height: 200px
   grid-item-border: true 
   categories: true
-  sort-ui: true 
-  filter-ui: true  
 page-layout: full
 title-block-banner: false
 comments: false
