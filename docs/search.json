@@ -627,14 +627,14 @@
     "href": "teaching/foundations-of-health-data-science/index.html#target-audience",
     "title": "Foundations of Health Data Science",
     "section": "Target Audience",
-    "text": "Target Audience\nThis course is suitable for individuals with varying backgrounds and interests, including: - Healthcare professionals seek to enhance their data-analysis skills. - Data analysts specialize in the healthcare domain. - Students are interested in pursuing careers in health informatics and data science. - Researchers have explored data-driven approaches in healthcare. - Public health professionals are interested in utilizing these data for policy development and epidemiological studies."
+    "text": "Target Audience\nThis course is suitable for individuals with varying backgrounds and interests, including:\n\nHealthcare professionals seek to enhance their data-analysis skills.\nData analysts specialize in the healthcare domain.\nStudents are interested in pursuing careers in health informatics and data science.\nResearchers have explored data-driven approaches in healthcare.\nPublic health professionals are interested in utilizing these data for policy development and epidemiological studies."
   },
   {
     "objectID": "teaching/foundations-of-health-data-science/index.html#course-objectives",
     "href": "teaching/foundations-of-health-data-science/index.html#course-objectives",
     "title": "Foundations of Health Data Science",
     "section": "Course Objectives",
-    "text": "Course Objectives\nBy the end of this course, participants will: - Gain a foundational understanding of key concepts in health data science. - Develop proficiency in data collection, preprocessing, and cleaning techniques specific to healthcare datasets. - Learn various statistical methods and machine learning algorithms that are commonly used in health data analyses. - Understand ethical considerations and privacy concerns related to health data usage. - Explore real-world applications of health data science in clinical settings, public health surveillance, and biomedical research. - Acquire practical skills through hands-on exercises and projects using relevant software tools and programming languages."
+    "text": "Course Objectives\nBy the end of this course, participants will: - Gain a foundational understanding of key concepts in health data science.\n\nDevelop proficiency in data collection, preprocessing, and cleaning techniques specific to healthcare datasets.\nLearn various statistical methods and machine learning algorithms that are commonly used in health data analyses.\nUnderstand ethical considerations and privacy concerns related to health data usage.\nExplore real-world applications of health data science in clinical settings, public health surveillance, and biomedical research.\nAcquire practical skills through hands-on exercises and projects using relevant software tools and programming languages."
   },
   {
     "objectID": "teaching/building-dashboard-with-r/index.html",

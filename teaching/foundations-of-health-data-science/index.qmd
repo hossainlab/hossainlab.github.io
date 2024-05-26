@@ -1,7 +1,7 @@
 ---
 title: "Foundations of Health Data Science"
 categories: [Data Science, Machine Learning, Deep Learning]
-# image: "logo.jpg"
+image: "logo.png"
 ---
 
 ## Course Overview
@@ -9,17 +9,27 @@ Foundations of Health Data Science (FHDS) is an interdisciplinary course designe
 
 ## Target Audience 
 This course is suitable for individuals with varying backgrounds and interests, including:
+
 - Healthcare professionals seek to enhance their data-analysis skills.
+  
 - Data analysts specialize in the healthcare domain.
+  
 - Students are interested in pursuing careers in health informatics and data science.
+  
 - Researchers have explored data-driven approaches in healthcare.
+  
 - Public health professionals are interested in utilizing these data for policy development and epidemiological studies.
 
 ## Course Objectives
 By the end of this course, participants will:
 - Gain a foundational understanding of key concepts in health data science.
+  
 - Develop proficiency in data collection, preprocessing, and cleaning techniques specific to healthcare datasets.
+  
 - Learn various statistical methods and machine learning algorithms that are commonly used in health data analyses.
+  
 - Understand ethical considerations and privacy concerns related to health data usage.
+  
 - Explore real-world applications of health data science in clinical settings, public health surveillance, and biomedical research.
+  
 - Acquire practical skills through hands-on exercises and projects using relevant software tools and programming languages.
