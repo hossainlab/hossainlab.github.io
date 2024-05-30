@@ -10,6 +10,8 @@ callout-icon: false
 :::  panel-tabset
 
 # Newspaper 
-Parental lack of antibiotic knowledge imperils child health in Bangladesh: Study. *The Business Standard* (08 February, 2024, 12:00 pm). <https://www.tbsnews.net/bangladesh/health/parental-lack-antibiotic-knowledge-imperils-child-health-bangladesh-study-789250>
+1. Parental lack of antibiotic knowledge imperils child health in Bangladesh: Study. *The Business Standard* (08 February, 2024, 12:00 pm). <https://www.tbsnews.net/bangladesh/health/parental-lack-antibiotic-knowledge-imperils-child-health-bangladesh-study-789250>
+
+2. What the rise in self-medication tells us about the country’s healthcare system. *The Business Standard* (27 May, 2024, 11:30 am). <https://www.tbsnews.net/features/panorama/what-rise-self-medication-tells-us-about-countrys-healthcare-system-861146>
 
 ::: 

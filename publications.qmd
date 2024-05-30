@@ -1,6 +1,5 @@
 ---
 pagetitle: "Publications | Jubayer Hossain"
-title: "Publications"
 page-layout: full
 title-block-banner: false
 comments: false

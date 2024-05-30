@@ -63,7 +63,8 @@
       "blog/*/index.qmd"
     ],
     "research.qmd": [
-      "publications/*/**.qmd"
+      "publications/*/**.qmd",
+      "research"
     ],
     "publications.qmd": [
       "publications/*/**.qmd"

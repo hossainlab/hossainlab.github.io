@@ -1,100 +1,15 @@
 ---
 pagetitle: "Research | Jubayer Hossain"
-title: "Research Projects"
+description: |
+  This is page is dedicated for research activities. 
+listing:
+  contents: research
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
 page-layout: full
 title-block-banner: false
-comments: false
-callout-icon: false
 ---
 
-:::  panel-tabset
-# AI for Healthcare  
-## AI-Based Approaches to Improving eHealth Literacy and Combating Infodemic
-
-**Team:** Md. Jubayer Hossain (Team Lead)
-
-### Abstract 
-The rapid evolution of digital health platforms and the proliferation of online health information have highlighted the critical importance of eHealth literacy. However, the current digital landscape also gives rise to the spread of misinformation, leading to an infodemic that can have detrimental effects on public health. This paper explores how artificial intelligence (AI) can be harnessed to enhance eHealth literacy and counter the challenges posed by the infodemic.
-
-This study employs a comprehensive review of existing literature and case studies, focusing on AI-driven solutions aimed at improving eHealth literacy and mitigating the impact of health-related misinformation. Examples include chatbots that provide accurate health information, AI-powered content verification tools, and personalized eHealth platforms.
-
-Leveraging AI to enhance eHealth literacy offers a promising avenue for tackling the challenges posed by the infodemic. By tailoring information delivery to users' needs, AI can foster a better understanding of health information and encourage critical thinking. Moreover, AI's capability to identify and combat misinformation contributes to a more informed and resilient society. Collaborative efforts among technology developers, healthcare professionals, and policymakers are crucial to realizing the full potential of AI in promoting accurate health information and mitigating the harmful effects of the infodemic.
-
-### Public Health Relevance Statement
-In response to the evolving landscape of digital health information and the challenges posed by the rapid spread of misinformation, innovative AI-based solutions have emerged as powerful tools to enhance eHealth literacy and mitigate the impact of infodemics. By leveraging natural language processing and machine learning algorithms, these approaches can efficiently analyze and categorize health-related content, providing individuals with accurate and tailored information. Through personalized recommendations, interactive educational platforms, and real-time fact-checking, AI-driven interventions hold the potential to empower individuals with the skills and knowledge necessary to make informed decisions about their health, thereby fostering healthier communities and curbing the detrimental effects of rampant misinformation.
-
-**Keywords:** eHealth literacy, infodemic, artificial intelligence, misinformation, health information, digital health.
-
-### Key AI Applications in Public Health
-- **Content Filtering and Fact-Checking**: AI algorithms can be used to automatically filter out false or misleading health information from online sources. Natural language processing (NLP) techniques can analyze text for credibility, accuracy, and consistency with established medical knowledge.
-- **Health Chatbots and Virtual Assistants**: AI-powered chatbots and virtual assistants can provide reliable and personalized health information to users. They can answer questions, offer guidance, and direct individuals to trustworthy sources of information, helping to improve eHealth literacy.
-- **Personalized Health Education**: AI can analyze user data and preferences to deliver personalized health education content. This ensures that individuals receive information tailored to their specific needs and knowledge levels.
-- **Predictive Analytics for Disease Outbreaks**: AI and machine learning can analyze vast amounts of health data to detect and predict disease outbreaks. Early warnings enable public health authorities to respond quickly and disseminate accurate information to the public, reducing panic and misinformation. 
-- **Sentiment Analysis and Social Media Monitoring**: AI can monitor social media platforms and news outlets for trending health topics and public sentiment. This helps identify emerging infodemics and enables timely interventions to counteract false information.
-- **Automated Multilingual Translation**: AI can facilitate the translation of health information into multiple languages, making it more accessible to diverse populations and reducing language-related barriers to eHealth literacy.
-- **Interactive Learning Platforms**: AI-driven interactive platforms can gamify health education, making it engaging and interactive. These platforms can track users' progress and adapt content to their evolving knowledge levels.
-- **Data Visualization and Infographics**: AI can assist in creating visually appealing and easy-to-understand infographics and data visualizations to convey complex health information effectively.
-- **Content Recommendation Systems**: AI algorithms can recommend reliable health websites, articles, and resources to users based on their interests and past behavior. This helps individuals access credible information more easily.
-- **Natural Language Understanding for Voice Assistants**: Voice-activated AI systems can provide spoken explanations and answers to health-related queries, making information accessible to those with limited literacy skills or visual impairments.
-- **Monitoring and Flagging Misinformation**: AI can continuously scan online platforms for the dissemination of false health information and flag or report it for review. This helps in quick content moderation.
-- **Collaboration with Healthcare Professionals**: AI can facilitate communication between healthcare professionals and patients by providing accurate and up-to-date information, aiding in diagnosis, and offering guidance on treatment options. 
-- **User Education and Training**: AI-powered platforms can assess users' eHealth literacy levels and provide tailored training and educational content to improve their ability to discern credible health information from misinformation.
-
-
-
-
-# Geospatial Health 
-## Monitoring Water-borne and Vector-borne Disease Using NASA Earth Observing Data 
-
-**Team:** Md. Jubayer Hossain (Team Lead)
-
-### Abstract 
-The utilization of NASA Earth Observing Data for monitoring water-borne and vector-borne diseases presents a promising approach to advancing public health surveillance and response systems. This project explores the integration of satellite imagery, climate data, and geographic information systems (GIS) to enhance the detection, prediction, and management of diseases transmitted through water and vectors. By harnessing the power of remote sensing technology, this research highlights the potential to identify disease hotspots, track environmental risk factors, and inform targeted interventions. The interdisciplinary collaboration between space agencies and public health entities opens new avenues for early warning systems and evidence-based decision-making, ultimately contributing to the reduction of disease burdens and the promotion of global health.
-
-### Public Health Relevance Statement
-In the ongoing battle against water-borne and vector-borne diseases, the synergy between NASA Earth Observing Data and public health objectives marks a pivotal advancement. By leveraging satellite imagery and climate information, we can enhance our understanding of disease dynamics, identifying regions vulnerable to outbreaks and improving our preparedness. This integration allows for proactive measures, such as deploying resources for disease prevention, implementing targeted vector control, and disseminating timely health advisories to affected populations. As climate change continues to impact disease transmission patterns, harnessing the insights from remote sensing data becomes essential for public health agencies, aiding in their mission to safeguard communities, reduce illness burdens, and save lives.
-
-**Keyword:** Water-borne diseases, factors, vibrio cholerae, public health, health impacts, calamities, water.
-
-
-# Mental Health
-
-## University Mental Health Screening System(UMHSS)
-### Abstract 
-The University Mental Health Screening System (UMHSS) aims to assess and address the mental health needs of Bangladeshi university students. With a focus on user-friendly interfaces and robust privacy measures, UMHSS aims to provide a comprehensive mental health screening for over 4000 university students. This study encompasses diverse demographics to ensure a representative sample and employs rigorous data analysis to identify prevalent mental health concerns. The findings contribute valuable insights into the mental well-being of Bangladeshi university students, paving the way for targeted interventions and support services.
-
-
-### Public Health Relevance 
-Mental health challenges among university students are a growing concern globally, and the Bangladeshi context is no exception. The UMHSS study holds significant public health relevance by shedding light on the unique mental health landscape of Bangladeshi university students. The findings will inform evidence-based interventions, policy development, and resource allocation aimed at improving mental health outcomes in higher education. Addressing mental health at this critical juncture not only enhances individual well-being but also contributes to the overall societal productivity and resilience of the nation.
-
-**Keywords:** Mental Health, Bangladesh, Early Detection, Student Well-being, Privacy, Support Services, Research, Intervention, Community
-
-## School Mental Health Screening Program(SMHSP)
-### Abstract 
-The School Mental Health Screening Program (SMHSP) is an initiative led by the Center for Health Innovation, Research, Action, and Learning (CHIRAL Bangladesh). This project aims to introduce a comprehensive mental health screening system in schools across Bangladesh. With a focus on early detection and intervention, SMHSP seeks to create a supportive environment for students by identifying mental health concerns at an early stage. The implementation will involve collaboration with educational institutions, ensuring a holistic approach to student well-being. By fostering mental health awareness and providing necessary resources, SMHSP strives to contribute to the overall mental well-being of school communities in Bangladesh.
-
-### Public Health Relevance 
-The SMHSP project holds profound public health relevance by addressing the mental health needs of students within the educational landscape of Bangladesh. By integrating mental health screening into schools, the initiative recognizes the crucial role educational environments play in shaping the well-being of young minds. The outcomes of this project are poised to enhance mental health literacy, facilitate timely interventions, and contribute to a resilient and thriving future generation in Bangladesh. This initiative aligns with broader public health goals by promoting mental well-being as an integral component of overall health and development.
-
-**Keywords:** School Mental Health, Mental Health Screening, Bangladesh Education, Early Intervention, Student Well-being, Public Health, Youth Mental Health, Educational Initiatives, Community Health Innovation
-
-
-
-
-
-
-
-# NTDs
-## Prevention and Control of Thalassemia in Bangladesh 
-### Abstract 
-Thalassemia, a hereditary blood disorder characterized by abnormal hemoglobin production, poses a significant public health challenge in Bangladesh. This project outlines a comprehensive initiative aimed at the prevention and control of thalassemia within the country. The multifaceted approach integrates awareness campaigns, genetic screening, accessible healthcare services, and community engagement to mitigate the prevalence and impact of thalassemia.
-
-The project's primary objectives include raising public awareness about thalassemia, educating communities about its genetic nature, and promoting informed family planning decisions. Additionally, the initiative seeks to establish a robust infrastructure for genetic screening, enabling early detection and intervention. This involves collaboration with healthcare institutions, laboratories, and medical professionals to ensure accurate and affordable testing.
-
-To ensure equitable access to quality healthcare, the project focuses on enhancing healthcare facilities' capacity to provide specialized thalassemia care. This involves training healthcare personnel, ensuring the availability of necessary treatments, and creating a supportive environment for patients and their families. Moreover, the project emphasizes the importance of support groups and counseling services to address the psychological and emotional aspects of thalassemia.
-
-### Public Health Relevance Statement
-This project's importance within the realm of public health cannot be overstated. By focusing on awareness campaigns and educational initiatives, the project aims to dispel misconceptions surrounding thalassemia, empower communities with accurate information, and reduce the stigma attached to the disorder. This proactive approach fosters a culture of informed decision-making, particularly in matters of family planning and genetic counseling.
-
-
-::: 

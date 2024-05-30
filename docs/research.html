@@ -31,6 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href=".//files/profiles/icon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -69,10 +71,70 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <meta property="og:title" content="Research | Jubayer Hossain">
+<meta property="og:description" content="This is page is dedicated for research activities.">
 <meta name="twitter:title" content="Research | Jubayer Hossain">
+<meta name="twitter:description" content="This is page is dedicated for research activities.">
 <meta name="twitter:image" content="/files/img/banner.jpg">
 <meta name="twitter:creator" content="@hossainlab">
 <meta name="twitter:card" content="summary_large_image">
@@ -93,6 +155,10 @@ ul.task-list li input[type="checkbox"] {
   <li class="nav-item">
     <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./research.html" aria-current="page"> 
+<span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./publications.html"> 
@@ -195,129 +261,26 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Research Projects</h1>
+
+
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+
 </div>
-
-
-
-<div class="quarto-title-meta column-page">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">AI for Healthcare</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Geospatial Health</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Mental Health</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">NTDs</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<section id="ai-based-approaches-to-improving-ehealth-literacy-and-combating-infodemic" class="level2">
-<h2 class="anchored" data-anchor-id="ai-based-approaches-to-improving-ehealth-literacy-and-combating-infodemic">AI-Based Approaches to Improving eHealth Literacy and Combating Infodemic</h2>
-<p><strong>Team:</strong> Md. Jubayer Hossain (Team Lead)</p>
-<section id="abstract" class="level3">
-<h3 class="anchored" data-anchor-id="abstract">Abstract</h3>
-<p>The rapid evolution of digital health platforms and the proliferation of online health information have highlighted the critical importance of eHealth literacy. However, the current digital landscape also gives rise to the spread of misinformation, leading to an infodemic that can have detrimental effects on public health. This paper explores how artificial intelligence (AI) can be harnessed to enhance eHealth literacy and counter the challenges posed by the infodemic.</p>
-<p>This study employs a comprehensive review of existing literature and case studies, focusing on AI-driven solutions aimed at improving eHealth literacy and mitigating the impact of health-related misinformation. Examples include chatbots that provide accurate health information, AI-powered content verification tools, and personalized eHealth platforms.</p>
-<p>Leveraging AI to enhance eHealth literacy offers a promising avenue for tackling the challenges posed by the infodemic. By tailoring information delivery to users’ needs, AI can foster a better understanding of health information and encourage critical thinking. Moreover, AI’s capability to identify and combat misinformation contributes to a more informed and resilient society. Collaborative efforts among technology developers, healthcare professionals, and policymakers are crucial to realizing the full potential of AI in promoting accurate health information and mitigating the harmful effects of the infodemic.</p>
-</section>
-<section id="public-health-relevance-statement" class="level3">
-<h3 class="anchored" data-anchor-id="public-health-relevance-statement">Public Health Relevance Statement</h3>
-<p>In response to the evolving landscape of digital health information and the challenges posed by the rapid spread of misinformation, innovative AI-based solutions have emerged as powerful tools to enhance eHealth literacy and mitigate the impact of infodemics. By leveraging natural language processing and machine learning algorithms, these approaches can efficiently analyze and categorize health-related content, providing individuals with accurate and tailored information. Through personalized recommendations, interactive educational platforms, and real-time fact-checking, AI-driven interventions hold the potential to empower individuals with the skills and knowledge necessary to make informed decisions about their health, thereby fostering healthier communities and curbing the detrimental effects of rampant misinformation.</p>
-<p><strong>Keywords:</strong> eHealth literacy, infodemic, artificial intelligence, misinformation, health information, digital health.</p>
-</section>
-<section id="key-ai-applications-in-public-health" class="level3">
-<h3 class="anchored" data-anchor-id="key-ai-applications-in-public-health">Key AI Applications in Public Health</h3>
-<ul>
-<li><strong>Content Filtering and Fact-Checking</strong>: AI algorithms can be used to automatically filter out false or misleading health information from online sources. Natural language processing (NLP) techniques can analyze text for credibility, accuracy, and consistency with established medical knowledge.</li>
-<li><strong>Health Chatbots and Virtual Assistants</strong>: AI-powered chatbots and virtual assistants can provide reliable and personalized health information to users. They can answer questions, offer guidance, and direct individuals to trustworthy sources of information, helping to improve eHealth literacy.</li>
-<li><strong>Personalized Health Education</strong>: AI can analyze user data and preferences to deliver personalized health education content. This ensures that individuals receive information tailored to their specific needs and knowledge levels.</li>
-<li><strong>Predictive Analytics for Disease Outbreaks</strong>: AI and machine learning can analyze vast amounts of health data to detect and predict disease outbreaks. Early warnings enable public health authorities to respond quickly and disseminate accurate information to the public, reducing panic and misinformation.</li>
-<li><strong>Sentiment Analysis and Social Media Monitoring</strong>: AI can monitor social media platforms and news outlets for trending health topics and public sentiment. This helps identify emerging infodemics and enables timely interventions to counteract false information.</li>
-<li><strong>Automated Multilingual Translation</strong>: AI can facilitate the translation of health information into multiple languages, making it more accessible to diverse populations and reducing language-related barriers to eHealth literacy.</li>
-<li><strong>Interactive Learning Platforms</strong>: AI-driven interactive platforms can gamify health education, making it engaging and interactive. These platforms can track users’ progress and adapt content to their evolving knowledge levels.</li>
-<li><strong>Data Visualization and Infographics</strong>: AI can assist in creating visually appealing and easy-to-understand infographics and data visualizations to convey complex health information effectively.</li>
-<li><strong>Content Recommendation Systems</strong>: AI algorithms can recommend reliable health websites, articles, and resources to users based on their interests and past behavior. This helps individuals access credible information more easily.</li>
-<li><strong>Natural Language Understanding for Voice Assistants</strong>: Voice-activated AI systems can provide spoken explanations and answers to health-related queries, making information accessible to those with limited literacy skills or visual impairments.</li>
-<li><strong>Monitoring and Flagging Misinformation</strong>: AI can continuously scan online platforms for the dissemination of false health information and flag or report it for review. This helps in quick content moderation.</li>
-<li><strong>Collaboration with Healthcare Professionals</strong>: AI can facilitate communication between healthcare professionals and patients by providing accurate and up-to-date information, aiding in diagnosis, and offering guidance on treatment options.</li>
-<li><strong>User Education and Training</strong>: AI-powered platforms can assess users’ eHealth literacy levels and provide tailored training and educational content to improve their ability to discern credible health information from misinformation.</li>
-</ul>
-</section>
-</section>
+<div class="listing-no-matching d-none">
+No matching items
 </div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<section id="monitoring-water-borne-and-vector-borne-disease-using-nasa-earth-observing-data" class="level2">
-<h2 class="anchored" data-anchor-id="monitoring-water-borne-and-vector-borne-disease-using-nasa-earth-observing-data">Monitoring Water-borne and Vector-borne Disease Using NASA Earth Observing Data</h2>
-<p><strong>Team:</strong> Md. Jubayer Hossain (Team Lead)</p>
-<section id="abstract-1" class="level3">
-<h3 class="anchored" data-anchor-id="abstract-1">Abstract</h3>
-<p>The utilization of NASA Earth Observing Data for monitoring water-borne and vector-borne diseases presents a promising approach to advancing public health surveillance and response systems. This project explores the integration of satellite imagery, climate data, and geographic information systems (GIS) to enhance the detection, prediction, and management of diseases transmitted through water and vectors. By harnessing the power of remote sensing technology, this research highlights the potential to identify disease hotspots, track environmental risk factors, and inform targeted interventions. The interdisciplinary collaboration between space agencies and public health entities opens new avenues for early warning systems and evidence-based decision-making, ultimately contributing to the reduction of disease burdens and the promotion of global health.</p>
-</section>
-<section id="public-health-relevance-statement-1" class="level3">
-<h3 class="anchored" data-anchor-id="public-health-relevance-statement-1">Public Health Relevance Statement</h3>
-<p>In the ongoing battle against water-borne and vector-borne diseases, the synergy between NASA Earth Observing Data and public health objectives marks a pivotal advancement. By leveraging satellite imagery and climate information, we can enhance our understanding of disease dynamics, identifying regions vulnerable to outbreaks and improving our preparedness. This integration allows for proactive measures, such as deploying resources for disease prevention, implementing targeted vector control, and disseminating timely health advisories to affected populations. As climate change continues to impact disease transmission patterns, harnessing the insights from remote sensing data becomes essential for public health agencies, aiding in their mission to safeguard communities, reduce illness burdens, and save lives.</p>
-<p><strong>Keyword:</strong> Water-borne diseases, factors, vibrio cholerae, public health, health impacts, calamities, water.</p>
-</section>
-</section>
-</div>
-<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<section id="university-mental-health-screening-systemumhss" class="level2">
-<h2 class="anchored" data-anchor-id="university-mental-health-screening-systemumhss">University Mental Health Screening System(UMHSS)</h2>
-<section id="abstract-2" class="level3">
-<h3 class="anchored" data-anchor-id="abstract-2">Abstract</h3>
-<p>The University Mental Health Screening System (UMHSS) aims to assess and address the mental health needs of Bangladeshi university students. With a focus on user-friendly interfaces and robust privacy measures, UMHSS aims to provide a comprehensive mental health screening for over 4000 university students. This study encompasses diverse demographics to ensure a representative sample and employs rigorous data analysis to identify prevalent mental health concerns. The findings contribute valuable insights into the mental well-being of Bangladeshi university students, paving the way for targeted interventions and support services.</p>
-</section>
-<section id="public-health-relevance" class="level3">
-<h3 class="anchored" data-anchor-id="public-health-relevance">Public Health Relevance</h3>
-<p>Mental health challenges among university students are a growing concern globally, and the Bangladeshi context is no exception. The UMHSS study holds significant public health relevance by shedding light on the unique mental health landscape of Bangladeshi university students. The findings will inform evidence-based interventions, policy development, and resource allocation aimed at improving mental health outcomes in higher education. Addressing mental health at this critical juncture not only enhances individual well-being but also contributes to the overall societal productivity and resilience of the nation.</p>
-<p><strong>Keywords:</strong> Mental Health, Bangladesh, Early Detection, Student Well-being, Privacy, Support Services, Research, Intervention, Community</p>
-</section>
-</section>
-<section id="school-mental-health-screening-programsmhsp" class="level2">
-<h2 class="anchored" data-anchor-id="school-mental-health-screening-programsmhsp">School Mental Health Screening Program(SMHSP)</h2>
-<section id="abstract-3" class="level3">
-<h3 class="anchored" data-anchor-id="abstract-3">Abstract</h3>
-<p>The School Mental Health Screening Program (SMHSP) is an initiative led by the Center for Health Innovation, Research, Action, and Learning (CHIRAL Bangladesh). This project aims to introduce a comprehensive mental health screening system in schools across Bangladesh. With a focus on early detection and intervention, SMHSP seeks to create a supportive environment for students by identifying mental health concerns at an early stage. The implementation will involve collaboration with educational institutions, ensuring a holistic approach to student well-being. By fostering mental health awareness and providing necessary resources, SMHSP strives to contribute to the overall mental well-being of school communities in Bangladesh.</p>
-</section>
-<section id="public-health-relevance-1" class="level3">
-<h3 class="anchored" data-anchor-id="public-health-relevance-1">Public Health Relevance</h3>
-<p>The SMHSP project holds profound public health relevance by addressing the mental health needs of students within the educational landscape of Bangladesh. By integrating mental health screening into schools, the initiative recognizes the crucial role educational environments play in shaping the well-being of young minds. The outcomes of this project are poised to enhance mental health literacy, facilitate timely interventions, and contribute to a resilient and thriving future generation in Bangladesh. This initiative aligns with broader public health goals by promoting mental well-being as an integral component of overall health and development.</p>
-<p><strong>Keywords:</strong> School Mental Health, Mental Health Screening, Bangladesh Education, Early Intervention, Student Well-being, Public Health, Youth Mental Health, Educational Initiatives, Community Health Innovation</p>
-</section>
-</section>
-</div>
-<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<section id="prevention-and-control-of-thalassemia-in-bangladesh" class="level2">
-<h2 class="anchored" data-anchor-id="prevention-and-control-of-thalassemia-in-bangladesh">Prevention and Control of Thalassemia in Bangladesh</h2>
-<section id="abstract-4" class="level3">
-<h3 class="anchored" data-anchor-id="abstract-4">Abstract</h3>
-<p>Thalassemia, a hereditary blood disorder characterized by abnormal hemoglobin production, poses a significant public health challenge in Bangladesh. This project outlines a comprehensive initiative aimed at the prevention and control of thalassemia within the country. The multifaceted approach integrates awareness campaigns, genetic screening, accessible healthcare services, and community engagement to mitigate the prevalence and impact of thalassemia.</p>
-<p>The project’s primary objectives include raising public awareness about thalassemia, educating communities about its genetic nature, and promoting informed family planning decisions. Additionally, the initiative seeks to establish a robust infrastructure for genetic screening, enabling early detection and intervention. This involves collaboration with healthcare institutions, laboratories, and medical professionals to ensure accurate and affordable testing.</p>
-<p>To ensure equitable access to quality healthcare, the project focuses on enhancing healthcare facilities’ capacity to provide specialized thalassemia care. This involves training healthcare personnel, ensuring the availability of necessary treatments, and creating a supportive environment for patients and their families. Moreover, the project emphasizes the importance of support groups and counseling services to address the psychological and emotional aspects of thalassemia.</p>
-</section>
-<section id="public-health-relevance-statement-2" class="level3">
-<h3 class="anchored" data-anchor-id="public-health-relevance-statement-2">Public Health Relevance Statement</h3>
-<p>This project’s importance within the realm of public health cannot be overstated. By focusing on awareness campaigns and educational initiatives, the project aims to dispel misconceptions surrounding thalassemia, empower communities with accurate information, and reduce the stigma attached to the disorder. This proactive approach fosters a culture of informed decision-making, particularly in matters of family planning and genetic counseling.</p>
-</section>
-</section>
-</div>
-</div>
-</div>
-
-
-
-</main> <!-- /main -->
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
