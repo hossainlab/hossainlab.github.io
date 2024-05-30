@@ -32,26 +32,8 @@ website:
   title: ""
   favicon: /files/profiles/icon.png
 
-  # page-footer:
-  #   background: "#74B9FF"
-  #   border: false
-  #   left: "&copy; Copyright 2024, Md. Jubayer Hossain"
-  #   right:
-  #     - icon: github
-  #       aria-label: github
-  #       href: https://github.com/hossainlab
-  #       rel: me
-  #     - icon: youtube
-  #       aria-label: youtube
-  #       href: https://www.youtube.com/@hossainlab
-  #       rel: me
-  #     - icon: linkedin
-  #       aria-label: linkedin
-  #       href: https://www.linkedin.com/in/hossainmj
   navbar:
       pinned: true
-      background: "#74B9FF"
-      # logo: /files/logo.png
       left:
         - text: "Home"
           file: index.qmd
@@ -89,7 +71,7 @@ website:
         aria-label: orcid
         href: https://orcid.org/0000-0001-9323-4997
       - text: "{{< ai google-scholar >}}"
-        aria-label: google-scholar 
+        aria-label: google-scholar
         href: https://scholar.google.com/citations?user=9_K4ekoAAAAJ&hl=en&authuser=5
       - text: "{{< ai researchgate >}}"
         aria-label: researchgate
@@ -109,11 +91,11 @@ website:
         aria-label: youtube
         href: https://www.youtube.com/@hossainlab
         rel: me
-  
+  page-footer: "&copy; Copyright 2024, Md. Jubayer Hossain"
 format:
   html:
     theme:
-       - journal
+       - litera
     page-layout: full
     toc: false
     code-link: true

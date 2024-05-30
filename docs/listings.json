@@ -54,6 +54,8 @@
   },
   {
     "listing": "/research.html",
-    "items": []
+    "items": [
+      "/research/neuroepidemiology/index.html"
+    ]
   }
 ]

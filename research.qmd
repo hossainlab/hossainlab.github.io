@@ -1,7 +1,7 @@
 ---
 pagetitle: "Research | Jubayer Hossain"
 description: |
-  This is page is dedicated for research activities. 
+  This part is the same as the Quarto default blog template. 
 listing:
   contents: research
   sort: "date desc"
@@ -12,4 +12,3 @@ listing:
 page-layout: full
 title-block-banner: false
 ---
-
