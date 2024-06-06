@@ -1,7 +1,0 @@
----
-title: "Neuroepidemiology"
-description: "Neuroepidemiology is the study of the distribution and determinants of neurological disorders in populations."
-date: "2024-05-31"
-citation: true
-categories: []
----

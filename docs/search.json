@@ -2013,7 +2013,7 @@
     "href": "research.html",
     "title": "",
     "section": "",
-    "text": "Neuroepidemiology\n\n\n\n\n\n\n\n\nNeuroepidemiology is the study of the distribution and determinants of neurological disorders in populations.\n\n\n\n\n\nMay 31, 2024\n\n\nMd. Jubayer Hossain\n\n\n\n\n\n\nNo matching items"
+    "text": "Deep learning, a subset of machine learning characterized by neural networks with multiple layers, has significantly advanced the field of neuroepidemiology. By harnessing the power of large neural networks and substantial datasets, researchers can uncover intricate patterns and correlations that traditional statistical methods might miss. In neuroepidemiology, deep learning algorithms analyze vast amounts of neurological data—ranging from MRI scans to genetic information—to identify biomarkers for disease, predict disease progression, and evaluate potential interventions. This approach not only enhances the accuracy of epidemiological predictions but also enables personalized medicine strategies by identifying the specific traits of neurological diseases in individual patients. By integrating deep learning techniques, my research aims to refine our understanding of neurological conditions, ultimately contributing to more effective and targeted treatments that are informed by a comprehensive analysis of big data insights."
   },
   {
     "objectID": "research/neuroepidemiology/index.html",
@@ -2021,5 +2021,12 @@
     "title": "Neuroepidemiology",
     "section": "",
     "text": "CitationBibTeX citation:@online{jubayer hossain2024,\n  author = {Jubayer Hossain, Md.},\n  title = {Neuroepidemiology},\n  date = {2024-05-31},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nJubayer Hossain, Md. 2024. “Neuroepidemiology.” May 31,\n2024."
+  },
+  {
+    "objectID": "research.html#neuroepidemiology",
+    "href": "research.html#neuroepidemiology",
+    "title": "",
+    "section": "",
+    "text": "Deep learning, a subset of machine learning characterized by neural networks with multiple layers, has significantly advanced the field of neuroepidemiology. By harnessing the power of large neural networks and substantial datasets, researchers can uncover intricate patterns and correlations that traditional statistical methods might miss. In neuroepidemiology, deep learning algorithms analyze vast amounts of neurological data—ranging from MRI scans to genetic information—to identify biomarkers for disease, predict disease progression, and evaluate potential interventions. This approach not only enhances the accuracy of epidemiological predictions but also enables personalized medicine strategies by identifying the specific traits of neurological diseases in individual patients. By integrating deep learning techniques, my research aims to refine our understanding of neurological conditions, ultimately contributing to more effective and targeted treatments that are informed by a comprehensive analysis of big data insights."
   }
 ]
