@@ -1311,9 +1311,9 @@
   {
     "objectID": "cv/index.html",
     "href": "cv/index.html",
-    "title": "",
+    "title": "Curriculum Vitae",
     "section": "",
-    "text": "Download current CV"
+    "text": "cynthia.huang@monash.edu"
   },
   {
     "objectID": "projects.html",
@@ -1635,7 +1635,7 @@
     "href": "use.html#r-packages",
     "title": "What I Use",
     "section": "R Packages",
-    "text": "R Packages\n\nTCGAbiolinks: An R/Bioconductor package for integrative analysis with GDC data. TCGAbiolinks is able to access The National Cancer Institute (NCI) Genomic Data Commons (GDC) thorough its GDC Application Programming Interface (API) to search, download and prepare relevant data for analysis in R.\nmaftools: Summarize, Analyze and Visualize MAF Files. This package attempts to summarize, analyze, annotate and visualize MAF files in an efficient manner from either TCGA sources or any in-house studies as long as the data is in MAF format.\nSummarizedExperiment: The SummarizedExperiment container contains one or more assays, each represented by a matrix-like object of numeric or other mode. The rows typically represent genomic ranges of interest and the columns represent samples.\nMutationalPatterns: Comprehensive genome-wide analysis of mutational processes. he package covers a wide range of patterns including: mutational signatures, transcriptional and replicative strand bias, lesion segregation, genomic distribution and association with genomic features, which are collectively meaningful for studying the activity of mutational processes. The package works with single nucleotide variants (SNVs), insertions and deletions (Indels), double base substitutions (DBSs) and larger multi base substitutions (MBSs). The package provides functionalities for both extracting mutational signatures de novo and determining the contribution of previously identified mutational signatures on a single sample level. MutationalPatterns integrates with common R genomic analysis workflows and allows easy association with (publicly available) annotation data."
+    "text": "R Packages\n\nTCGAbiolinks: An R/Bioconductor package for integrative analysis with GDC data. TCGAbiolinks is able to access The National Cancer Institute (NCI) Genomic Data Commons (GDC) thorough its GDC Application Programming Interface (API) to search, download and prepare relevant data for analysis in R.\nmaftools: Summarize, Analyze and Visualize MAF Files. This package attempts to summarize, analyze, annotate and visualize MAF files in an efficient manner from either TCGA sources or any in-house studies as long as the data is in MAF format.\nSummarizedExperiment: The SummarizedExperiment container contains one or more assays, each represented by a matrix-like object of numeric or other mode. The rows typically represent genomic ranges of interest and the columns represent samples.\nMutationalPatterns: Comprehensive genome-wide analysis of mutational processes. he package covers a wide range of patterns including: mutational signatures, transcriptional and replicative strand bias, lesion segregation, genomic distribution and association with genomic features, which are collectively meaningful for studying the activity of mutational processes.\nGenVisR: Short for “Genomic Visualizations in R,” this tool provides visualization capabilities tailored to a variety of genomic data types, including data common in cancer research such as somatic mutations, copy number variations, and more."
   },
   {
     "objectID": "projects/Calories_Burnt/02_Calories Burnt Prediction.html",
@@ -2028,5 +2028,33 @@
     "title": "",
     "section": "",
     "text": "Deep learning, a subset of machine learning characterized by neural networks with multiple layers, has significantly advanced the field of neuroepidemiology. By harnessing the power of large neural networks and substantial datasets, researchers can uncover intricate patterns and correlations that traditional statistical methods might miss. In neuroepidemiology, deep learning algorithms analyze vast amounts of neurological data—ranging from MRI scans to genetic information—to identify biomarkers for disease, predict disease progression, and evaluate potential interventions. This approach not only enhances the accuracy of epidemiological predictions but also enables personalized medicine strategies by identifying the specific traits of neurological diseases in individual patients. By integrating deep learning techniques, my research aims to refine our understanding of neurological conditions, ultimately contributing to more effective and targeted treatments that are informed by a comprehensive analysis of big data insights."
+  },
+  {
+    "objectID": "cv/index.html#education",
+    "href": "cv/index.html#education",
+    "title": "Curriculum Vitae",
+    "section": "EDUCATION",
+    "text": "EDUCATION\nDoctor of Philosophy – Econometrics and Business Statistics  Monash University Aug 2021 — Present\n\nNew principles and methods for complex data preparation and integration, with applications to official statistics, web-scrapped data and satellite raster images\nMonash Data Futures Institute PhD Top-Up Scholarship (2021-2024)\nExpected submission date: Nov 2024"
+  },
+  {
+    "objectID": "cv/index.html#work-experience",
+    "href": "cv/index.html#work-experience",
+    "title": "Curriculum Vitae",
+    "section": "WORK EXPERIENCE",
+    "text": "WORK EXPERIENCE\n\nData Scientist\nFreelance, Multiple Clients Jan 2020 – June 2021\nProviding data collection, pre-processing, exploratory analysis and modelling services to clients in the early R&D stages of developing data driven products. Projects include:\n\nData description and preliminary product feasibility insights for a start-up real estate bond platform; including assessing suitability of various property transaction databases for use in initial product prototype.\nDevelopment of statistical anomaly detection regimes and key historical insights from internet quality time-series data for use in parametric insurance products, including documenting analysis tools in an R package."
+  },
+  {
+    "objectID": "cv/index.html#presentations-and-workshops",
+    "href": "cv/index.html#presentations-and-workshops",
+    "title": "Curriculum Vitae",
+    "section": "PRESENTATIONS AND WORKSHOPS",
+    "text": "PRESENTATIONS AND WORKSHOPS\n\nTalk: Misadventures with Reproducibility in R (30 Nov 2022, R Ladies Melbourne Meetup)\nTalk: Designing R Packages (4 Oct 2022, Monash EBS Data Science Research Software Study Group)\nTalk: Quarto Websites as Research Compendiums (16 Aug 2022, Monash EBS Data Science Research Software Study Group)\nWorkshop: Writing academic papers with Rmarkdown and friends (9 Aug 2022, Monash University)"
+  },
+  {
+    "objectID": "cv/index.html#references",
+    "href": "cv/index.html#references",
+    "title": "Curriculum Vitae",
+    "section": "References",
+    "text": "References\nAvailable upon request"
   }
 ]
