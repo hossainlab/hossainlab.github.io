@@ -1,48 +1,41 @@
 ---
-title: "Curriculum Vitae"
-format:
-  html:
-    toc: true
-  pdf:
-    author: Md. Jubayer Hossain
-    pdf-engine: weasyprint 
-css: cv.css
-format-links: [pdf]
+pagetitle: "CV | Jubayer Hossain"
+layout: page
+excerpt: My Current CV
+comments: false
+execute:
+  freeze: true  # never re-render during project render
+engine: knitr 
+cv:
+  pdf: "CV_HossainMJ.pdf"
 ---
 
-::: {.print-only .contact-block}
-cynthia.huang@monash.edu
-:::
+```{css echo=FALSE}
+.embed-container {
+    position: relative;
+    padding-bottom: 129%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
 
-## EDUCATION
-
-**Doctor of Philosophy -- Econometrics and Business Statistics** <br> *Monash University* [*Aug 2021 --- Present*]{.cvdate}
-
--   New principles and methods for complex data preparation and integration, with applications to official statistics, web-scrapped data and satellite raster images
--   Monash Data Futures Institute PhD Top-Up Scholarship (2021-2024)
--   Expected submission date: Nov 2024
-
-## WORK EXPERIENCE{style="page-break-before: always"}
-
-### Data Scientist
-
-***Freelance, Multiple Clients*** [Jan 2020 -- June 2021]{.cvdate}
-
-Providing data collection, pre-processing, exploratory analysis and modelling services to clients in the early R&D stages of developing data driven products. Projects include:
-
--   Data description and preliminary product feasibility insights for a start-up real estate bond platform; including assessing suitability of various property transaction databases for use in initial product prototype.
--   Development of statistical anomaly detection regimes and key historical insights from internet quality time-series data for use in parametric insurance products, including documenting analysis tools in an R package.
-
-::: {.no-print}
-## PRESENTATIONS AND WORKSHOPS
-
--   Talk: [Misadventures with Reproducibility in R](https://github.com/cynthiahqy/rladies-2022-11) (30 Nov 2022, R Ladies Melbourne Meetup)
--   Talk: [Designing R Packages](https://github.com/cynthiahqy/design-r-magic_2022-10) (4 Oct 2022, Monash EBS Data Science Research Software Study Group)
--   Talk: [Quarto Websites as Research Compendiums](https://github.com/cynthiahqy/quarto-wiki-template) (16 Aug 2022, Monash EBS Data Science Research Software Study Group)
--   Workshop: [Writing academic papers with Rmarkdown and friends](https://www.cynthiahqy.com/posts/r-markdown-and-friends/) (9 Aug 2022, Monash University)
-:::
-
-::: {.print-only}
-## References
-Available upon request
-:::
+```{=html}
+<p class="text-center">
+  <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$cv$pdf`" target="_blank">
+    <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download current CV
+  </a>
+</p>
+<div class="embed-container">
+  <iframe src="`r rmarkdown::metadata$cv$pdf`" style="border: 0.5px"></iframe>
+</div>
+```

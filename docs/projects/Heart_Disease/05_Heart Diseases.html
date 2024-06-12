@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.5.45">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -34,7 +34,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -126,7 +126,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -134,6 +134,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li class="nav-item">
     <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../research.html"> 
+<span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../publications.html"> 
@@ -160,7 +164,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-more" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-more" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">More</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-more">    
@@ -227,7 +231,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -308,10 +312,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>data.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <div>
-<div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -423,7 +426,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-</div>
 </section>
 <section id="exploring-data" class="level2">
 <h2 class="anchored" data-anchor-id="exploring-data">Exploring Data</h2>
@@ -515,10 +517,9 @@ dtype: int64</code></pre>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>num_cols.head() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <div>
-<div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -618,17 +619,15 @@ dtype: int64</code></pre>
 </div>
 </div>
 </div>
-</div>
 <div id="e358e734-3578-4537-9287-0fcfea157d9f" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># summary statistics of numerical variables </span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>rp.summarize(num_cols[[<span class="st">'age'</span>, <span class="st">'cp'</span>, <span class="st">'trestbps'</span>, <span class="st">'chol'</span>, <span class="st">'fbs'</span>, <span class="st">'restecg'</span>, <span class="st">'thalach'</span>, <span class="st">'exang'</span>,</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>       <span class="st">'oldpeak'</span>, <span class="st">'slope'</span>, <span class="st">'ca'</span>, <span class="st">'thal'</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <div>
-<div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -781,17 +780,15 @@ dtype: int64</code></pre>
 </div>
 </div>
 </div>
-</div>
 <div id="f78e05db-c0d5-41ac-978d-56ca4fa426c2" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># select categorical data </span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>cat_cols <span class="op">=</span> data.select_dtypes(include <span class="op">=</span> <span class="st">'object'</span>)</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>cat_cols.head() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
 <div>
-<div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -831,7 +828,6 @@ dtype: int64</code></pre>
 </div>
 </div>
 </div>
-</div>
 <div id="2f7c1425-6482-40b4-8f2c-86645774ef22" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># summary statistics of categorical variables </span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>rp.summary_cat(cat_cols[[<span class="st">'sex'</span>, <span class="st">'target'</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -841,10 +837,9 @@ dtype: int64</code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="11">
 <div>
-<div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -889,7 +884,6 @@ dtype: int64</code></pre>
 </div>
 </div>
 </div>
-</div>
 </section>
 <section id="correlations-between-variables" class="level2">
 <h2 class="anchored" data-anchor-id="correlations-between-variables">Correlations between Variables</h2>
@@ -898,10 +892,9 @@ dtype: int64</code></pre>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>num_cols.corr(method<span class="op">=</span><span class="st">'pearson'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="12">
 <div>
-<div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -1106,7 +1099,6 @@ dtype: int64</code></pre>
 </div>
 </div>
 </div>
-</div>
 </section>
 <section id="skewness" class="level2">
 <h2 class="anchored" data-anchor-id="skewness">Skewness</h2>
@@ -1190,10 +1182,9 @@ dtype: float64</code></pre>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>data.head() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="18">
 <div>
-<div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -1305,20 +1296,18 @@ dtype: float64</code></pre>
 </div>
 </div>
 </div>
-</div>
 <div id="8395aebb-0f36-4ddb-bdb4-bbbde683eddd" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import pycaret classification and init setup</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pycaret.classification <span class="im">import</span> <span class="op">*</span></span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>setup(data, target <span class="op">=</span> <span class="st">'target'</span>, session_id <span class="op">=</span> <span class="dv">123</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div>
 <style type="text/css">
 #T_81032_row10_col1 {
   background-color: lightgreen;
 }
 </style>
 
-<table id="T_81032" data-quarto-postprocess="true" class="table table-sm table-striped small">
+<table id="T_81032" class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
 <th class="blank level0" data-quarto-table-cell-role="th">&nbsp;</th>
@@ -1445,7 +1434,6 @@ dtype: float64</code></pre>
 </tbody>
 </table>
 </div>
-</div>
 <div class="cell-output cell-output-display" data-execution_count="19">
 <pre><code>&lt;pycaret.classification.oop.ClassificationExperiment at 0x203efa84a00&gt;</code></pre>
 </div>
@@ -1460,7 +1448,6 @@ dtype: float64</code></pre>
 
 </div>
 <div class="cell-output cell-output-display">
-<div>
 <style type="text/css">
 #T_003d2 th {
   text-align: left;
@@ -1483,7 +1470,7 @@ dtype: float64</code></pre>
 }
 </style>
 
-<table id="T_003d2" data-quarto-postprocess="true" class="table table-sm table-striped small">
+<table id="T_003d2" class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
 <th class="blank level0" data-quarto-table-cell-role="th">&nbsp;</th>
@@ -1670,7 +1657,6 @@ dtype: float64</code></pre>
 </tbody>
 </table>
 </div>
-</div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id":"","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
@@ -1687,14 +1673,13 @@ dtype: float64</code></pre>
 
 </div>
 <div class="cell-output cell-output-display">
-<div>
 <style type="text/css">
 #T_c5e6e_row10_col0, #T_c5e6e_row10_col1, #T_c5e6e_row10_col2, #T_c5e6e_row10_col3, #T_c5e6e_row10_col4, #T_c5e6e_row10_col5, #T_c5e6e_row10_col6 {
   background: yellow;
 }
 </style>
 
-<table id="T_c5e6e" data-quarto-postprocess="true" class="table table-sm table-striped small">
+<table id="T_c5e6e" class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
 <th class="blank level0" data-quarto-table-cell-role="th">&nbsp;</th>
@@ -1841,7 +1826,6 @@ dtype: float64</code></pre>
 </tbody>
 </table>
 </div>
-</div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id":"","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
@@ -1865,14 +1849,13 @@ dtype: float64</code></pre>
 
 </div>
 <div class="cell-output cell-output-display">
-<div>
 <style type="text/css">
 #T_05aaf_row10_col0, #T_05aaf_row10_col1, #T_05aaf_row10_col2, #T_05aaf_row10_col3, #T_05aaf_row10_col4, #T_05aaf_row10_col5, #T_05aaf_row10_col6 {
   background: yellow;
 }
 </style>
 
-<table id="T_05aaf" data-quarto-postprocess="true" class="table table-sm table-striped small">
+<table id="T_05aaf" class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
 <th class="blank level0" data-quarto-table-cell-role="th">&nbsp;</th>
@@ -2019,7 +2002,6 @@ dtype: float64</code></pre>
 </tbody>
 </table>
 </div>
-</div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id":"","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
@@ -2037,14 +2019,13 @@ Original model was better than the tuned model, hence it will be returned. NOTE:
 
 </div>
 <div class="cell-output cell-output-display">
-<div>
 <style type="text/css">
 #T_f4ab6_row10_col0, #T_f4ab6_row10_col1, #T_f4ab6_row10_col2, #T_f4ab6_row10_col3, #T_f4ab6_row10_col4, #T_f4ab6_row10_col5, #T_f4ab6_row10_col6 {
   background: yellow;
 }
 </style>
 
-<table id="T_f4ab6" data-quarto-postprocess="true" class="table table-sm table-striped small">
+<table id="T_f4ab6" class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
 <th class="blank level0" data-quarto-table-cell-role="th">&nbsp;</th>
@@ -2190,7 +2171,6 @@ Original model was better than the tuned model, hence it will be returned. NOTE:
 </tr>
 </tbody>
 </table>
-</div>
 </div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
@@ -2383,15 +2363,196 @@ dtype: int64}])</pre></div></div></div></div></div></div></div></div><div class=
 
 </div>
 <div class="cell-output cell-output-error">
-<pre><code>TypeError: unsupported operand type(s) for -: 'int' and 'Categorical'</code></pre>
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg ansi-bold">TypeError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg ansi-bold">In[29], line 2</span>
+<span class="ansi-green-fg">      1</span> <span style="font-style:italic;color:rgb(95,135,135)"># plot AUC</span>
+<span class="ansi-green-fg ansi-bold">----&gt; 2</span> <span class="ansi-yellow-bg">plot_model</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">nb</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">plot</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">'</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">auc</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">'</span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg ansi-bold">~\anaconda3\lib\site-packages\pycaret\utils\generic.py:965</span>, in <span class="ansi-cyan-fg">check_if_global_is_not_none.&lt;locals&gt;.decorator.&lt;locals&gt;.wrapper</span><span class="ansi-blue-fg ansi-bold">(*args, **kwargs)</span>
+<span class="ansi-green-fg">    963</span>     <span style="font-weight:bold;color:rgb(0,135,0)">if</span> globals_d[name] <span style="font-weight:bold;color:rgb(175,0,255)">is</span> <span style="font-weight:bold;color:rgb(0,135,0)">None</span>:
+<span class="ansi-green-fg">    964</span>         <span style="font-weight:bold;color:rgb(0,135,0)">raise</span> <span style="font-weight:bold;color:rgb(215,95,95)">ValueError</span>(message)
+<span class="ansi-green-fg ansi-bold">--&gt; 965</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> func(<span style="color:rgb(98,98,98)">*</span>args, <span style="color:rgb(98,98,98)">*</span><span style="color:rgb(98,98,98)">*</span>kwargs)
+
+File <span class="ansi-green-fg ansi-bold">~\anaconda3\lib\site-packages\pycaret\classification\functional.py:1739</span>, in <span class="ansi-cyan-fg">plot_model</span><span class="ansi-blue-fg ansi-bold">(estimator, plot, scale, save, fold, fit_kwargs, plot_kwargs, groups, use_train_data, verbose, display_format)</span>
+<span class="ansi-green-fg">   1619</span> <span style="color:rgb(175,0,255)">@check_if_global_is_not_none</span>(<span style="color:rgb(0,135,0)">globals</span>(), _CURRENT_EXPERIMENT_DECORATOR_DICT)
+<span class="ansi-green-fg">   1620</span> <span style="font-weight:bold;color:rgb(0,135,0)">def</span> <span style="color:rgb(0,0,255)">plot_model</span>(
+<span class="ansi-green-fg">   1621</span>     estimator,
+<span class="ansi-green-fg ansi-bold">   (...)</span>
+<span class="ansi-green-fg">   1631</span>     display_format: Optional[<span style="color:rgb(0,135,0)">str</span>] <span style="color:rgb(98,98,98)">=</span> <span style="font-weight:bold;color:rgb(0,135,0)">None</span>,
+<span class="ansi-green-fg">   1632</span> ) <span style="color:rgb(98,98,98)">-</span><span style="color:rgb(98,98,98)">&gt;</span> Optional[<span style="color:rgb(0,135,0)">str</span>]:
+<span class="ansi-green-fg">   1633</span> <span style="color:rgb(188,188,188)">    </span><span style="font-style:italic;color:rgb(175,0,0)">"""</span>
+<span class="ansi-green-fg">   1634</span> <span style="font-style:italic;color:rgb(175,0,0)">    This function analyzes the performance of a trained model on holdout set.</span>
+<span class="ansi-green-fg">   1635</span> <span style="font-style:italic;color:rgb(175,0,0)">    It may require re-training the model in certain cases.</span>
+<span class="ansi-green-fg ansi-bold">   (...)</span>
+<span class="ansi-green-fg">   1736</span> 
+<span class="ansi-green-fg">   1737</span> <span style="font-style:italic;color:rgb(175,0,0)">    """</span>
+<span class="ansi-green-fg ansi-bold">-&gt; 1739</span>     <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">_CURRENT_EXPERIMENT</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">plot_model</span><span class="ansi-yellow-bg">(</span>
+<span class="ansi-green-fg">   1740</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">estimator</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">estimator</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1741</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">plot</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">plot</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1742</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">scale</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">scale</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1743</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">save</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">save</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1744</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">fold</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">fold</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1745</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">fit_kwargs</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">fit_kwargs</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1746</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">plot_kwargs</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">plot_kwargs</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1747</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">groups</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">groups</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1748</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">verbose</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">verbose</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1749</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">use_train_data</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">use_train_data</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1750</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">display_format</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">display_format</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1751</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg ansi-bold">~\anaconda3\lib\site-packages\pycaret\classification\oop.py:2087</span>, in <span class="ansi-cyan-fg">ClassificationExperiment.plot_model</span><span class="ansi-blue-fg ansi-bold">(self, estimator, plot, scale, save, fold, fit_kwargs, plot_kwargs, groups, use_train_data, verbose, display_format)</span>
+<span class="ansi-green-fg">   1967</span> <span style="font-weight:bold;color:rgb(0,135,0)">def</span> <span style="color:rgb(0,0,255)">plot_model</span>(
+<span class="ansi-green-fg">   1968</span>     <span style="color:rgb(0,135,0)">self</span>,
+<span class="ansi-green-fg">   1969</span>     estimator,
+<span class="ansi-green-fg ansi-bold">   (...)</span>
+<span class="ansi-green-fg">   1979</span>     display_format: Optional[<span style="color:rgb(0,135,0)">str</span>] <span style="color:rgb(98,98,98)">=</span> <span style="font-weight:bold;color:rgb(0,135,0)">None</span>,
+<span class="ansi-green-fg">   1980</span> ) <span style="color:rgb(98,98,98)">-</span><span style="color:rgb(98,98,98)">&gt;</span> Optional[<span style="color:rgb(0,135,0)">str</span>]:
+<span class="ansi-green-fg">   1981</span> <span style="color:rgb(188,188,188)">    </span><span style="font-style:italic;color:rgb(175,0,0)">"""</span>
+<span class="ansi-green-fg">   1982</span> <span style="font-style:italic;color:rgb(175,0,0)">    This function analyzes the performance of a trained model on holdout set.</span>
+<span class="ansi-green-fg">   1983</span> <span style="font-style:italic;color:rgb(175,0,0)">    It may require re-training the model in certain cases.</span>
+<span class="ansi-green-fg ansi-bold">   (...)</span>
+<span class="ansi-green-fg">   2084</span> 
+<span class="ansi-green-fg">   2085</span> <span style="font-style:italic;color:rgb(175,0,0)">    """</span>
+<span class="ansi-green-fg ansi-bold">-&gt; 2087</span>     <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">super</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">plot_model</span><span class="ansi-yellow-bg">(</span>
+<span class="ansi-green-fg">   2088</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">estimator</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">estimator</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2089</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">plot</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">plot</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2090</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">scale</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">scale</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2091</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">save</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">save</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2092</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">fold</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">fold</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2093</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">fit_kwargs</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">fit_kwargs</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2094</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">plot_kwargs</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">plot_kwargs</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2095</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">groups</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">groups</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2096</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">verbose</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">verbose</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2097</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">use_train_data</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">use_train_data</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2098</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">display_format</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">display_format</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2099</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg ansi-bold">~\anaconda3\lib\site-packages\pycaret\internal\pycaret_experiment\tabular_experiment.py:2052</span>, in <span class="ansi-cyan-fg">_TabularExperiment.plot_model</span><span class="ansi-blue-fg ansi-bold">(self, estimator, plot, scale, save, fold, fit_kwargs, plot_kwargs, groups, feature_name, label, use_train_data, verbose, display_format)</span>
+<span class="ansi-green-fg">   1939</span> <span style="font-weight:bold;color:rgb(0,135,0)">def</span> <span style="color:rgb(0,0,255)">plot_model</span>(
+<span class="ansi-green-fg">   1940</span>     <span style="color:rgb(0,135,0)">self</span>,
+<span class="ansi-green-fg">   1941</span>     estimator,
+<span class="ansi-green-fg ansi-bold">   (...)</span>
+<span class="ansi-green-fg">   1953</span>     display_format: Optional[<span style="color:rgb(0,135,0)">str</span>] <span style="color:rgb(98,98,98)">=</span> <span style="font-weight:bold;color:rgb(0,135,0)">None</span>,
+<span class="ansi-green-fg">   1954</span> ) <span style="color:rgb(98,98,98)">-</span><span style="color:rgb(98,98,98)">&gt;</span> Optional[<span style="color:rgb(0,135,0)">str</span>]:
+<span class="ansi-green-fg">   1955</span> <span style="color:rgb(188,188,188)">    </span><span style="font-style:italic;color:rgb(175,0,0)">"""</span>
+<span class="ansi-green-fg">   1956</span> <span style="font-style:italic;color:rgb(175,0,0)">    This function takes a trained model object and returns a plot based on the</span>
+<span class="ansi-green-fg">   1957</span> <span style="font-style:italic;color:rgb(175,0,0)">    test / hold-out set. The process may require the model to be re-trained in</span>
+<span class="ansi-green-fg ansi-bold">   (...)</span>
+<span class="ansi-green-fg">   2050</span> 
+<span class="ansi-green-fg">   2051</span> <span style="font-style:italic;color:rgb(175,0,0)">    """</span>
+<span class="ansi-green-fg ansi-bold">-&gt; 2052</span>     <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_plot_model</span><span class="ansi-yellow-bg">(</span>
+<span class="ansi-green-fg">   2053</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">estimator</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">estimator</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2054</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">plot</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">plot</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2055</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">scale</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">scale</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2056</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">save</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">save</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2057</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">fold</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">fold</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2058</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">fit_kwargs</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">fit_kwargs</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2059</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">plot_kwargs</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">plot_kwargs</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2060</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">groups</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">groups</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2061</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">feature_name</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">feature_name</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2062</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">label</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">label</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2063</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">use_train_data</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">use_train_data</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2064</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">verbose</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">verbose</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2065</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">display_format</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">display_format</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2066</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg ansi-bold">~\anaconda3\lib\site-packages\pycaret\internal\pycaret_experiment\tabular_experiment.py:1919</span>, in <span class="ansi-cyan-fg">_TabularExperiment._plot_model</span><span class="ansi-blue-fg ansi-bold">(self, estimator, plot, scale, save, fold, fit_kwargs, plot_kwargs, groups, feature_name, label, use_train_data, verbose, system, display, display_format)</span>
+<span class="ansi-green-fg">   1917</span> <span style="font-style:italic;color:rgb(95,135,135)"># execute the plot method</span>
+<span class="ansi-green-fg">   1918</span> <span style="font-weight:bold;color:rgb(0,135,0)">with</span> redirect_output(<span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>logger):
+<span class="ansi-green-fg ansi-bold">-&gt; 1919</span>     ret <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">locals</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg">plot</span><span class="ansi-yellow-bg">]</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">   1920</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> ret:
+<span class="ansi-green-fg">   1921</span>     plot_filename <span style="color:rgb(98,98,98)">=</span> ret
+
+File <span class="ansi-green-fg ansi-bold">~\anaconda3\lib\site-packages\pycaret\internal\pycaret_experiment\tabular_experiment.py:1145</span>, in <span class="ansi-cyan-fg">_TabularExperiment._plot_model.&lt;locals&gt;.auc</span><span class="ansi-blue-fg ansi-bold">()</span>
+<span class="ansi-green-fg">   1142</span> <span style="font-weight:bold;color:rgb(0,135,0)">from</span> <span style="font-weight:bold;color:rgb(0,0,255)">yellowbrick</span><span style="font-weight:bold;color:rgb(0,0,255)">.</span><span style="font-weight:bold;color:rgb(0,0,255)">classifier</span> <span style="font-weight:bold;color:rgb(0,135,0)">import</span> ROCAUC
+<span class="ansi-green-fg">   1144</span> visualizer <span style="color:rgb(98,98,98)">=</span> ROCAUC(estimator, <span style="color:rgb(98,98,98)">*</span><span style="color:rgb(98,98,98)">*</span>plot_kwargs)
+<span class="ansi-green-fg ansi-bold">-&gt; 1145</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">show_yellowbrick_plot</span><span class="ansi-yellow-bg">(</span>
+<span class="ansi-green-fg">   1146</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">visualizer</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">visualizer</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1147</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">X_train</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">X_train_transformed</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1148</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">y_train</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">y_train_transformed</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1149</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">X_test</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">X_test_transformed</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1150</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">y_test</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">y_test_transformed</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1151</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">name</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">plot_name</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1152</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">scale</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">scale</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1153</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">save</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">save</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1154</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">fit_kwargs</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">fit_kwargs</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1155</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">display_format</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">display_format</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1156</span> <span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg ansi-bold">~\anaconda3\lib\site-packages\pycaret\internal\plots\yellowbrick.py:103</span>, in <span class="ansi-cyan-fg">show_yellowbrick_plot</span><span class="ansi-blue-fg ansi-bold">(visualizer, X_train, y_train, X_test, y_test, name, handle_train, handle_test, scale, save, fit_kwargs, display_format, **kwargs)</span>
+<span class="ansi-green-fg">    101</span> <span style="font-weight:bold;color:rgb(0,135,0)">elif</span> handle_test <span style="color:rgb(98,98,98)">==</span> <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">score</span><span style="color:rgb(175,0,0)">"</span>:
+<span class="ansi-green-fg">    102</span>     logger<span style="color:rgb(98,98,98)">.</span>info(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">Scoring test/hold-out set</span><span style="color:rgb(175,0,0)">"</span>)
+<span class="ansi-green-fg ansi-bold">--&gt; 103</span>     <span class="ansi-yellow-bg">visualizer</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">score</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">X_test</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">y_test</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">    105</span> plot_filename <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(175,0,0)">f</span><span style="color:rgb(175,0,0)">"</span><span style="font-weight:bold;color:rgb(175,95,135)">{</span>name<span style="font-weight:bold;color:rgb(175,95,135)">}</span><span style="color:rgb(175,0,0)">.png</span><span style="color:rgb(175,0,0)">"</span>
+<span class="ansi-green-fg">    106</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> save:
+
+File <span class="ansi-green-fg ansi-bold">~\anaconda3\lib\site-packages\yellowbrick\classifier\rocauc.py:329</span>, in <span class="ansi-cyan-fg">ROCAUC.score</span><span class="ansi-blue-fg ansi-bold">(self, X, y)</span>
+<span class="ansi-green-fg">    325</span> <span style="font-style:italic;color:rgb(95,135,135)"># draw a curve for class 0 (the negative class)</span>
+<span class="ansi-green-fg">    326</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span style="color:rgb(0,135,0)">len</span>(y_pred<span style="color:rgb(98,98,98)">.</span>shape) <span style="color:rgb(98,98,98)">==</span> <span style="color:rgb(98,98,98)">2</span> <span style="font-weight:bold;color:rgb(175,0,255)">and</span> y_pred<span style="color:rgb(98,98,98)">.</span>shape[<span style="color:rgb(98,98,98)">1</span>] <span style="color:rgb(98,98,98)">==</span> <span style="color:rgb(98,98,98)">2</span>:
+<span class="ansi-green-fg">    327</span>     <span style="font-style:italic;color:rgb(95,135,135)"># predict_proba returns array of shape (n, 2), so use</span>
+<span class="ansi-green-fg">    328</span>     <span style="font-style:italic;color:rgb(95,135,135)"># probability of class 0 to compute ROC</span>
+<span class="ansi-green-fg ansi-bold">--&gt; 329</span>     <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>fpr[<span style="color:rgb(98,98,98)">0</span>], <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>tpr[<span style="color:rgb(98,98,98)">0</span>], _ <span style="color:rgb(98,98,98)">=</span> roc_curve(<span style="color:rgb(98,98,98)" class="ansi-yellow-bg">1</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">-</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">y</span>, y_pred[:, <span style="color:rgb(98,98,98)">0</span>])
+<span class="ansi-green-fg">    330</span> <span style="font-weight:bold;color:rgb(0,135,0)">else</span>:
+<span class="ansi-green-fg">    331</span>     <span style="font-style:italic;color:rgb(95,135,135)"># decision_function returns array of shape (n,).</span>
+<span class="ansi-green-fg">    332</span>     <span style="font-style:italic;color:rgb(95,135,135)"># To draw a ROC curve for class 0 we swap the classes 0 and 1 in y</span>
+<span class="ansi-green-fg">    333</span>     <span style="font-style:italic;color:rgb(95,135,135)"># and reverse classifiers predictions y_pred.</span>
+<span class="ansi-green-fg">    334</span>     <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>fpr[<span style="color:rgb(98,98,98)">0</span>], <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>tpr[<span style="color:rgb(98,98,98)">0</span>], _ <span style="color:rgb(98,98,98)">=</span> roc_curve(<span style="color:rgb(98,98,98)">1</span> <span style="color:rgb(98,98,98)">-</span> y, <span style="color:rgb(98,98,98)">-</span>y_pred)
+
+File <span class="ansi-green-fg ansi-bold">~\anaconda3\lib\site-packages\pandas\core\ops\common.py:72</span>, in <span class="ansi-cyan-fg">_unpack_zerodim_and_defer.&lt;locals&gt;.new_method</span><span class="ansi-blue-fg ansi-bold">(self, other)</span>
+<span class="ansi-green-fg">     68</span>             <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span style="color:rgb(0,135,0)">NotImplemented</span>
+<span class="ansi-green-fg">     70</span> other <span style="color:rgb(98,98,98)">=</span> item_from_zerodim(other)
+<span class="ansi-green-fg ansi-bold">---&gt; 72</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">method</span><span class="ansi-yellow-bg">(</span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">other</span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg ansi-bold">~\anaconda3\lib\site-packages\pandas\core\arraylike.py:114</span>, in <span class="ansi-cyan-fg">OpsMixin.__rsub__</span><span class="ansi-blue-fg ansi-bold">(self, other)</span>
+<span class="ansi-green-fg">    112</span> <span style="color:rgb(175,0,255)">@unpack_zerodim_and_defer</span>(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">__rsub__</span><span style="color:rgb(175,0,0)">"</span>)
+<span class="ansi-green-fg">    113</span> <span style="font-weight:bold;color:rgb(0,135,0)">def</span> <span style="color:rgb(0,0,255)">__rsub__</span>(<span style="color:rgb(0,135,0)">self</span>, other):
+<span class="ansi-green-fg ansi-bold">--&gt; 114</span>     <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_arith_method</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">other</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">roperator</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">rsub</span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg ansi-bold">~\anaconda3\lib\site-packages\pandas\core\series.py:6259</span>, in <span class="ansi-cyan-fg">Series._arith_method</span><span class="ansi-blue-fg ansi-bold">(self, other, op)</span>
+<span class="ansi-green-fg">   6257</span> <span style="font-weight:bold;color:rgb(0,135,0)">def</span> <span style="color:rgb(0,0,255)">_arith_method</span>(<span style="color:rgb(0,135,0)">self</span>, other, op):
+<span class="ansi-green-fg">   6258</span>     <span style="color:rgb(0,135,0)">self</span>, other <span style="color:rgb(98,98,98)">=</span> ops<span style="color:rgb(98,98,98)">.</span>align_method_SERIES(<span style="color:rgb(0,135,0)">self</span>, other)
+<span class="ansi-green-fg ansi-bold">-&gt; 6259</span>     <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">base</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">IndexOpsMixin</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_arith_method</span><span class="ansi-yellow-bg">(</span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">other</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">op</span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg ansi-bold">~\anaconda3\lib\site-packages\pandas\core\base.py:1325</span>, in <span class="ansi-cyan-fg">IndexOpsMixin._arith_method</span><span class="ansi-blue-fg ansi-bold">(self, other, op)</span>
+<span class="ansi-green-fg">   1322</span> rvalues <span style="color:rgb(98,98,98)">=</span> ensure_wrapped_if_datetimelike(rvalues)
+<span class="ansi-green-fg">   1324</span> <span style="font-weight:bold;color:rgb(0,135,0)">with</span> np<span style="color:rgb(98,98,98)">.</span>errstate(<span style="color:rgb(0,135,0)">all</span><span style="color:rgb(98,98,98)">=</span><span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">ignore</span><span style="color:rgb(175,0,0)">"</span>):
+<span class="ansi-green-fg ansi-bold">-&gt; 1325</span>     result <span style="color:rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">ops</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">arithmetic_op</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">lvalues</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">rvalues</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">op</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">   1327</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>_construct_result(result, name<span style="color:rgb(98,98,98)">=</span>res_name)
+
+File <span class="ansi-green-fg ansi-bold">~\anaconda3\lib\site-packages\pandas\core\ops\array_ops.py:218</span>, in <span class="ansi-cyan-fg">arithmetic_op</span><span class="ansi-blue-fg ansi-bold">(left, right, op)</span>
+<span class="ansi-green-fg">    205</span> <span style="font-style:italic;color:rgb(95,135,135)"># NB: We assume that extract_array and ensure_wrapped_if_datetimelike</span>
+<span class="ansi-green-fg">    206</span> <span style="font-style:italic;color:rgb(95,135,135)">#  have already been called on `left` and `right`,</span>
+<span class="ansi-green-fg">    207</span> <span style="font-style:italic;color:rgb(95,135,135)">#  and `maybe_prepare_scalar_for_op` has already been called on `right`</span>
+<span class="ansi-green-fg">    208</span> <span style="font-style:italic;color:rgb(95,135,135)"># We need to special-case datetime64/timedelta64 dtypes (e.g. because numpy</span>
+<span class="ansi-green-fg">    209</span> <span style="font-style:italic;color:rgb(95,135,135)"># casts integer dtypes to timedelta64 when operating with timedelta64 - GH#22390)</span>
+<span class="ansi-green-fg">    211</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> (
+<span class="ansi-green-fg">    212</span>     should_extension_dispatch(left, right)
+<span class="ansi-green-fg">    213</span>     <span style="font-weight:bold;color:rgb(175,0,255)">or</span> <span style="color:rgb(0,135,0)">isinstance</span>(right, (Timedelta, BaseOffset, Timestamp))
+<span class="ansi-green-fg ansi-bold">   (...)</span>
+<span class="ansi-green-fg">    216</span>     <span style="font-style:italic;color:rgb(95,135,135)"># Timedelta/Timestamp and other custom scalars are included in the check</span>
+<span class="ansi-green-fg">    217</span>     <span style="font-style:italic;color:rgb(95,135,135)"># because numexpr will fail on it, see GH#31457</span>
+<span class="ansi-green-fg ansi-bold">--&gt; 218</span>     res_values <span style="color:rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">op</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">left</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">right</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">    219</span> <span style="font-weight:bold;color:rgb(0,135,0)">else</span>:
+<span class="ansi-green-fg">    220</span>     <span style="font-style:italic;color:rgb(95,135,135)"># TODO we should handle EAs consistently and move this check before the if/else</span>
+<span class="ansi-green-fg">    221</span>     <span style="font-style:italic;color:rgb(95,135,135)"># (https://github.com/pandas-dev/pandas/issues/41165)</span>
+<span class="ansi-green-fg">    222</span>     _bool_arith_check(op, left, right)
+
+File <span class="ansi-green-fg ansi-bold">~\anaconda3\lib\site-packages\pandas\core\roperator.py:15</span>, in <span class="ansi-cyan-fg">rsub</span><span class="ansi-blue-fg ansi-bold">(left, right)</span>
+<span class="ansi-green-fg">     14</span> <span style="font-weight:bold;color:rgb(0,135,0)">def</span> <span style="color:rgb(0,0,255)">rsub</span>(left, right):
+<span class="ansi-green-fg ansi-bold">---&gt; 15</span>     <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">right</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">-</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">left</span>
+
+<span class="ansi-red-fg ansi-bold">TypeError</span>: unsupported operand type(s) for -: 'int' and 'Categorical'</pre>
+</div>
 </div>
 <div class="cell-output cell-output-display">
 <pre><code>&lt;Figure size 800x550 with 0 Axes&gt;</code></pre>
 </div>
 </div>
 <div id="de9ad4da-d752-403d-9d88-c72df40cffa9" class="cell" data-execution_count="30">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot class report</span></span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>plot_model(nb, plot <span class="op">=</span> <span class="st">'class_report'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot class report</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>plot_model(nb, plot <span class="op">=</span> <span class="st">'class_report'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
 </div>
@@ -2404,18 +2565,127 @@ dtype: int64}])</pre></div></div></div></div></div></div></div></div><div class=
 </div>
 </div>
 <div id="3cb414d6-95ad-4f4a-b87c-7f2e747e9841" class="cell" data-execution_count="31">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot feature importance</span></span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>plot_model(nb, plot <span class="op">=</span> <span class="st">'feature'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot feature importance</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>plot_model(nb, plot <span class="op">=</span> <span class="st">'feature'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
-<pre><code>TypeError: Feature Importance and RFE plots not available for estimators that doesnt support coef_ or feature_importances_ attribute.</code></pre>
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg ansi-bold">TypeError</span>                                 Traceback (most recent call last)
+Cell <span class="ansi-green-fg ansi-bold">In[31], line 2</span>
+<span class="ansi-green-fg">      1</span> <span style="font-style:italic;color:rgb(95,135,135)"># plot feature importance</span>
+<span class="ansi-green-fg ansi-bold">----&gt; 2</span> <span class="ansi-yellow-bg">plot_model</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">nb</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">plot</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">'</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">feature</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">'</span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg ansi-bold">~\anaconda3\lib\site-packages\pycaret\utils\generic.py:965</span>, in <span class="ansi-cyan-fg">check_if_global_is_not_none.&lt;locals&gt;.decorator.&lt;locals&gt;.wrapper</span><span class="ansi-blue-fg ansi-bold">(*args, **kwargs)</span>
+<span class="ansi-green-fg">    963</span>     <span style="font-weight:bold;color:rgb(0,135,0)">if</span> globals_d[name] <span style="font-weight:bold;color:rgb(175,0,255)">is</span> <span style="font-weight:bold;color:rgb(0,135,0)">None</span>:
+<span class="ansi-green-fg">    964</span>         <span style="font-weight:bold;color:rgb(0,135,0)">raise</span> <span style="font-weight:bold;color:rgb(215,95,95)">ValueError</span>(message)
+<span class="ansi-green-fg ansi-bold">--&gt; 965</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> func(<span style="color:rgb(98,98,98)">*</span>args, <span style="color:rgb(98,98,98)">*</span><span style="color:rgb(98,98,98)">*</span>kwargs)
+
+File <span class="ansi-green-fg ansi-bold">~\anaconda3\lib\site-packages\pycaret\classification\functional.py:1739</span>, in <span class="ansi-cyan-fg">plot_model</span><span class="ansi-blue-fg ansi-bold">(estimator, plot, scale, save, fold, fit_kwargs, plot_kwargs, groups, use_train_data, verbose, display_format)</span>
+<span class="ansi-green-fg">   1619</span> <span style="color:rgb(175,0,255)">@check_if_global_is_not_none</span>(<span style="color:rgb(0,135,0)">globals</span>(), _CURRENT_EXPERIMENT_DECORATOR_DICT)
+<span class="ansi-green-fg">   1620</span> <span style="font-weight:bold;color:rgb(0,135,0)">def</span> <span style="color:rgb(0,0,255)">plot_model</span>(
+<span class="ansi-green-fg">   1621</span>     estimator,
+<span class="ansi-green-fg ansi-bold">   (...)</span>
+<span class="ansi-green-fg">   1631</span>     display_format: Optional[<span style="color:rgb(0,135,0)">str</span>] <span style="color:rgb(98,98,98)">=</span> <span style="font-weight:bold;color:rgb(0,135,0)">None</span>,
+<span class="ansi-green-fg">   1632</span> ) <span style="color:rgb(98,98,98)">-</span><span style="color:rgb(98,98,98)">&gt;</span> Optional[<span style="color:rgb(0,135,0)">str</span>]:
+<span class="ansi-green-fg">   1633</span> <span style="color:rgb(188,188,188)">    </span><span style="font-style:italic;color:rgb(175,0,0)">"""</span>
+<span class="ansi-green-fg">   1634</span> <span style="font-style:italic;color:rgb(175,0,0)">    This function analyzes the performance of a trained model on holdout set.</span>
+<span class="ansi-green-fg">   1635</span> <span style="font-style:italic;color:rgb(175,0,0)">    It may require re-training the model in certain cases.</span>
+<span class="ansi-green-fg ansi-bold">   (...)</span>
+<span class="ansi-green-fg">   1736</span> 
+<span class="ansi-green-fg">   1737</span> <span style="font-style:italic;color:rgb(175,0,0)">    """</span>
+<span class="ansi-green-fg ansi-bold">-&gt; 1739</span>     <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">_CURRENT_EXPERIMENT</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">plot_model</span><span class="ansi-yellow-bg">(</span>
+<span class="ansi-green-fg">   1740</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">estimator</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">estimator</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1741</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">plot</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">plot</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1742</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">scale</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">scale</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1743</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">save</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">save</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1744</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">fold</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">fold</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1745</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">fit_kwargs</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">fit_kwargs</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1746</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">plot_kwargs</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">plot_kwargs</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1747</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">groups</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">groups</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1748</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">verbose</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">verbose</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1749</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">use_train_data</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">use_train_data</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1750</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">display_format</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">display_format</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   1751</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg ansi-bold">~\anaconda3\lib\site-packages\pycaret\classification\oop.py:2087</span>, in <span class="ansi-cyan-fg">ClassificationExperiment.plot_model</span><span class="ansi-blue-fg ansi-bold">(self, estimator, plot, scale, save, fold, fit_kwargs, plot_kwargs, groups, use_train_data, verbose, display_format)</span>
+<span class="ansi-green-fg">   1967</span> <span style="font-weight:bold;color:rgb(0,135,0)">def</span> <span style="color:rgb(0,0,255)">plot_model</span>(
+<span class="ansi-green-fg">   1968</span>     <span style="color:rgb(0,135,0)">self</span>,
+<span class="ansi-green-fg">   1969</span>     estimator,
+<span class="ansi-green-fg ansi-bold">   (...)</span>
+<span class="ansi-green-fg">   1979</span>     display_format: Optional[<span style="color:rgb(0,135,0)">str</span>] <span style="color:rgb(98,98,98)">=</span> <span style="font-weight:bold;color:rgb(0,135,0)">None</span>,
+<span class="ansi-green-fg">   1980</span> ) <span style="color:rgb(98,98,98)">-</span><span style="color:rgb(98,98,98)">&gt;</span> Optional[<span style="color:rgb(0,135,0)">str</span>]:
+<span class="ansi-green-fg">   1981</span> <span style="color:rgb(188,188,188)">    </span><span style="font-style:italic;color:rgb(175,0,0)">"""</span>
+<span class="ansi-green-fg">   1982</span> <span style="font-style:italic;color:rgb(175,0,0)">    This function analyzes the performance of a trained model on holdout set.</span>
+<span class="ansi-green-fg">   1983</span> <span style="font-style:italic;color:rgb(175,0,0)">    It may require re-training the model in certain cases.</span>
+<span class="ansi-green-fg ansi-bold">   (...)</span>
+<span class="ansi-green-fg">   2084</span> 
+<span class="ansi-green-fg">   2085</span> <span style="font-style:italic;color:rgb(175,0,0)">    """</span>
+<span class="ansi-green-fg ansi-bold">-&gt; 2087</span>     <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">super</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">plot_model</span><span class="ansi-yellow-bg">(</span>
+<span class="ansi-green-fg">   2088</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">estimator</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">estimator</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2089</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">plot</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">plot</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2090</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">scale</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">scale</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2091</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">save</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">save</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2092</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">fold</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">fold</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2093</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">fit_kwargs</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">fit_kwargs</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2094</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">plot_kwargs</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">plot_kwargs</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2095</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">groups</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">groups</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2096</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">verbose</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">verbose</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2097</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">use_train_data</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">use_train_data</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2098</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">display_format</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">display_format</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2099</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg ansi-bold">~\anaconda3\lib\site-packages\pycaret\internal\pycaret_experiment\tabular_experiment.py:2052</span>, in <span class="ansi-cyan-fg">_TabularExperiment.plot_model</span><span class="ansi-blue-fg ansi-bold">(self, estimator, plot, scale, save, fold, fit_kwargs, plot_kwargs, groups, feature_name, label, use_train_data, verbose, display_format)</span>
+<span class="ansi-green-fg">   1939</span> <span style="font-weight:bold;color:rgb(0,135,0)">def</span> <span style="color:rgb(0,0,255)">plot_model</span>(
+<span class="ansi-green-fg">   1940</span>     <span style="color:rgb(0,135,0)">self</span>,
+<span class="ansi-green-fg">   1941</span>     estimator,
+<span class="ansi-green-fg ansi-bold">   (...)</span>
+<span class="ansi-green-fg">   1953</span>     display_format: Optional[<span style="color:rgb(0,135,0)">str</span>] <span style="color:rgb(98,98,98)">=</span> <span style="font-weight:bold;color:rgb(0,135,0)">None</span>,
+<span class="ansi-green-fg">   1954</span> ) <span style="color:rgb(98,98,98)">-</span><span style="color:rgb(98,98,98)">&gt;</span> Optional[<span style="color:rgb(0,135,0)">str</span>]:
+<span class="ansi-green-fg">   1955</span> <span style="color:rgb(188,188,188)">    </span><span style="font-style:italic;color:rgb(175,0,0)">"""</span>
+<span class="ansi-green-fg">   1956</span> <span style="font-style:italic;color:rgb(175,0,0)">    This function takes a trained model object and returns a plot based on the</span>
+<span class="ansi-green-fg">   1957</span> <span style="font-style:italic;color:rgb(175,0,0)">    test / hold-out set. The process may require the model to be re-trained in</span>
+<span class="ansi-green-fg ansi-bold">   (...)</span>
+<span class="ansi-green-fg">   2050</span> 
+<span class="ansi-green-fg">   2051</span> <span style="font-style:italic;color:rgb(175,0,0)">    """</span>
+<span class="ansi-green-fg ansi-bold">-&gt; 2052</span>     <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_plot_model</span><span class="ansi-yellow-bg">(</span>
+<span class="ansi-green-fg">   2053</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">estimator</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">estimator</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2054</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">plot</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">plot</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2055</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">scale</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">scale</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2056</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">save</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">save</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2057</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">fold</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">fold</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2058</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">fit_kwargs</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">fit_kwargs</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2059</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">plot_kwargs</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">plot_kwargs</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2060</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">groups</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">groups</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2061</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">feature_name</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">feature_name</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2062</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">label</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">label</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2063</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">use_train_data</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">use_train_data</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2064</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">verbose</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">verbose</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2065</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">display_format</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">display_format</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">   2066</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg ansi-bold">~\anaconda3\lib\site-packages\pycaret\internal\pycaret_experiment\tabular_experiment.py:473</span>, in <span class="ansi-cyan-fg">_TabularExperiment._plot_model</span><span class="ansi-blue-fg ansi-bold">(self, estimator, plot, scale, save, fold, fit_kwargs, plot_kwargs, groups, feature_name, label, use_train_data, verbose, system, display, display_format)</span>
+<span class="ansi-green-fg">    469</span> <span style="font-style:italic;color:rgb(95,135,135)"># checking for feature plot</span>
+<span class="ansi-green-fg">    470</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span style="font-weight:bold;color:rgb(175,0,255)">not</span> (
+<span class="ansi-green-fg">    471</span>     <span style="color:rgb(0,135,0)">hasattr</span>(estimator, <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">coef_</span><span style="color:rgb(175,0,0)">"</span>) <span style="font-weight:bold;color:rgb(175,0,255)">or</span> <span style="color:rgb(0,135,0)">hasattr</span>(estimator, <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">feature_importances_</span><span style="color:rgb(175,0,0)">"</span>)
+<span class="ansi-green-fg">    472</span> ) <span style="font-weight:bold;color:rgb(175,0,255)">and</span> (plot <span style="color:rgb(98,98,98)">==</span> <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">feature</span><span style="color:rgb(175,0,0)">"</span> <span style="font-weight:bold;color:rgb(175,0,255)">or</span> plot <span style="color:rgb(98,98,98)">==</span> <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">feature_all</span><span style="color:rgb(175,0,0)">"</span> <span style="font-weight:bold;color:rgb(175,0,255)">or</span> plot <span style="color:rgb(98,98,98)">==</span> <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">rfe</span><span style="color:rgb(175,0,0)">"</span>):
+<span class="ansi-green-fg ansi-bold">--&gt; 473</span>     <span style="font-weight:bold;color:rgb(0,135,0)">raise</span> <span style="font-weight:bold;color:rgb(215,95,95)">TypeError</span>(
+<span class="ansi-green-fg">    474</span>         <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">Feature Importance and RFE plots not available for estimators that doesnt support coef_ or feature_importances_ attribute.</span><span style="color:rgb(175,0,0)">"</span>
+<span class="ansi-green-fg">    475</span>     )
+<span class="ansi-green-fg">    477</span> <span style="font-style:italic;color:rgb(95,135,135)"># checking fold parameter</span>
+<span class="ansi-green-fg">    478</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> fold <span style="font-weight:bold;color:rgb(175,0,255)">is</span> <span style="font-weight:bold;color:rgb(175,0,255)">not</span> <span style="font-weight:bold;color:rgb(0,135,0)">None</span> <span style="font-weight:bold;color:rgb(175,0,255)">and</span> <span style="font-weight:bold;color:rgb(175,0,255)">not</span> (
+<span class="ansi-green-fg">    479</span>     <span style="color:rgb(0,135,0)">type</span>(fold) <span style="font-weight:bold;color:rgb(175,0,255)">is</span> <span style="color:rgb(0,135,0)">int</span> <span style="font-weight:bold;color:rgb(175,0,255)">or</span> is_sklearn_cv_generator(fold)
+<span class="ansi-green-fg">    480</span> ):
+
+<span class="ansi-red-fg ansi-bold">TypeError</span>: Feature Importance and RFE plots not available for estimators that doesnt support coef_ or feature_importances_ attribute.</pre>
+</div>
 </div>
 </div>
 </section>
 <section id="evaluate-model" class="level2">
 <h2 class="anchored" data-anchor-id="evaluate-model">Evaluate Model</h2>
 <div id="8204d97d-ad75-44b9-81e7-ec97c817c14e" class="cell" data-execution_count="32">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># evaluate model </span></span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>evaluate_model(nb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># evaluate model </span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>evaluate_model(nb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id":"dd61c1c203dc45508bfd8592f9b10654","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
@@ -2426,8 +2696,8 @@ dtype: int64}])</pre></div></div></div></div></div></div></div></div><div class=
 <section id="finalize-model" class="level2">
 <h2 class="anchored" data-anchor-id="finalize-model">Finalize Model</h2>
 <div id="24c84bab-e4b3-498d-bedf-c06697bd9dd7" class="cell" data-execution_count="33">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># finalize a model</span></span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>finalize_model(nb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># finalize a model</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>finalize_model(nb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="33">
 <style>#sk-container-id-3 {color: black;background-color: white;}#sk-container-id-3 pre{padding: 0;}#sk-container-id-3 div.sk-toggleable {background-color: white;}#sk-container-id-3 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-3 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-3 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-3 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-3 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-3 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-3 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-3 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-3 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-3 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-3 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-3 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-3 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-3 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-3 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-3 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-3 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-3 div.sk-item {position: relative;z-index: 1;}#sk-container-id-3 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-3 div.sk-item::before, #sk-container-id-3 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-3 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-3 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-3 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-3 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-3 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-3 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-3 div.sk-label-container {text-align: center;}#sk-container-id-3 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-3 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-3" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>Pipeline(memory=FastMemory(location=C:\Users\JHossain\AppData\Local\Temp\joblib),
          steps=[('numerical_imputer',
@@ -2526,14 +2796,13 @@ dtype: int64}])</pre></div></div></div></div></div></div></div></div><div class=
 <section id="prediction" class="level2">
 <h2 class="anchored" data-anchor-id="prediction">Prediction</h2>
 <div id="74caf2eb-7fcd-425c-8fcc-590d8626829a" class="cell" data-execution_count="34">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># predict on test set</span></span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>holdout_pred <span class="op">=</span> predict_model(nb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># predict on test set</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>holdout_pred <span class="op">=</span> predict_model(nb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div>
 <style type="text/css">
 </style>
 
-<table id="T_b19b5" data-quarto-postprocess="true" class="table table-sm table-striped small">
+<table id="T_b19b5" class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
 <th class="blank level0" data-quarto-table-cell-role="th">&nbsp;</th>
@@ -2563,16 +2832,14 @@ dtype: int64}])</pre></div></div></div></div></div></div></div></div><div class=
 </table>
 </div>
 </div>
-</div>
 <div id="8de62328-4010-4763-87ac-fb8f5e842aca" class="cell" data-execution_count="35">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># show predictions df</span></span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>holdout_pred.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># show predictions df</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>holdout_pred.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="35">
 <div>
-<div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -2696,18 +2963,16 @@ dtype: int64}])</pre></div></div></div></div></div></div></div></div><div class=
 </div>
 </div>
 </div>
-</div>
 <div id="8577a025-fd59-484e-89ab-9852cf18b523" class="cell" data-execution_count="36">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co"># copy data and drop Class variable</span></span>
-<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>new_data <span class="op">=</span> data.copy()</span>
-<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>new_data.drop(<span class="st">'target'</span>, axis<span class="op">=</span><span class="dv">1</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>new_data.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># copy data and drop Class variable</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>new_data <span class="op">=</span> data.copy()</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>new_data.drop(<span class="st">'target'</span>, axis<span class="op">=</span><span class="dv">1</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>new_data.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="36">
 <div>
-<div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -2813,20 +3078,18 @@ dtype: int64}])</pre></div></div></div></div></div></div></div></div><div class=
 </div>
 </div>
 </div>
-</div>
 <div id="f0c3187e-a3ad-4463-80db-5268448313f3" class="cell" data-execution_count="37">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># predict model on new_data</span></span>
-<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>predictions <span class="op">=</span> predict_model(nb, data <span class="op">=</span> new_data)</span>
-<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>predictions.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># predict model on new_data</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>predictions <span class="op">=</span> predict_model(nb, data <span class="op">=</span> new_data)</span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>predictions.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
 </div>
 <div class="cell-output cell-output-display" data-execution_count="37">
 <div>
-<div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -2944,13 +3207,12 @@ dtype: int64}])</pre></div></div></div></div></div></div></div></div><div class=
 </div>
 </div>
 </div>
-</div>
 </section>
 <section id="save-model" class="level2">
 <h2 class="anchored" data-anchor-id="save-model">Save Model</h2>
 <div id="c04f0912-d07b-4ed5-88d4-282438597b96" class="cell" data-execution_count="38">
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co"># save pipeline</span></span>
-<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>save_model(nb, <span class="st">'../models/heart_diseases'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co"># save pipeline</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>save_model(nb, <span class="st">'../models/heart_diseases'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Transformation Pipeline and Model Successfully Saved</code></pre>
 </div>
@@ -2987,9 +3249,9 @@ dtype: int64}])</pre></div></div></div></div></div></div></div></div><div class=
 </div>
 </div>
 <div id="8fa54ced-a3ac-4b06-a075-d787490b7dfb" class="cell" data-execution_count="39">
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load pipeline</span></span>
-<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>loaded_best_pipeline <span class="op">=</span> load_model(<span class="st">'../models/heart_diseases'</span>)</span>
-<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>loaded_best_pipeline</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load pipeline</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>loaded_best_pipeline <span class="op">=</span> load_model(<span class="st">'../models/heart_diseases'</span>)</span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>loaded_best_pipeline</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Transformation Pipeline and Model Successfully Loaded</code></pre>
 </div>
@@ -3130,18 +3392,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -3173,7 +3424,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -3181,7 +3454,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -3505,6 +3778,19 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© Copyright 2024, Md. Jubayer Hossain</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 

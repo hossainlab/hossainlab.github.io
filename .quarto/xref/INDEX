@@ -46,7 +46,8 @@
   },
   "cv/index.qmd": {
     "index.html": "89c19ec3",
-    "index.pdf": "6d97cabe"
+    "index.pdf": "6d97cabe",
+    "index.tex": "be4f7b56"
   },
   "blog/4-realizations-from-atomic-habits/index.qmd": {
     "index.html": "434b843e"
