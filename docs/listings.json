@@ -4,6 +4,13 @@
     "items": []
   },
   {
+    "listing": "/blog.html",
+    "items": [
+      "/blog/multi-omics-data-integration/index.html",
+      "/blog/welcome/index.html"
+    ]
+  },
+  {
     "listing": "/projects.html",
     "items": [
       "/projects/Calories_Burnt/02_Calories Burnt Prediction.html",
@@ -19,6 +26,14 @@
       "/projects/Choronic_Kidney/01_Choronic Kidney.html",
       "/projects/monkeypox-outbreak-insights/index.html",
       "/projects/nipah-virus/index.html"
+    ]
+  },
+  {
+    "listing": "/talks.html",
+    "items": [
+      "/talks/mastering-biomedical-data-management/index.html",
+      "/talks/state-the-art-of-microbial-genome-analysi/index.html",
+      "/talks/undergraduate-research-importance-benefits-and-challenges/index.html"
     ]
   },
   {
@@ -39,21 +54,6 @@
       "/teaching/spss/index.html",
       "/teaching/single-cell-seq-analysis-with-r/index.html",
       "/teaching/tcga-data-analysis-with-r/index.html"
-    ]
-  },
-  {
-    "listing": "/talks.html",
-    "items": [
-      "/talks/mastering-biomedical-data-management/index.html",
-      "/talks/state-the-art-of-microbial-genome-analysi/index.html",
-      "/talks/undergraduate-research-importance-benefits-and-challenges/index.html"
-    ]
-  },
-  {
-    "listing": "/blog.html",
-    "items": [
-      "/blog/multi-omics-data-integration/index.html",
-      "/blog/welcome/index.html"
     ]
   }
 ]
