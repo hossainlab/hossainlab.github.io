@@ -13,29 +13,15 @@ page-layout: full
 title-block-banner: false
 ---
 
-## Neuroepidemiology
-::: {layout-ncol=2}
-![](files/img/brains_banner.png){.lightbox}
+## AI for Neuroepidemiology
+Deep learning, a subset of machine learning with neural networks of multiple layers, has revolutionized neuroepidemiology. By leveraging extensive datasets, it uncovers complex patterns in neurological data—like MRI scans and genetics—to pinpoint disease biomarkers, forecast progression, and assess interventions. This enhances predictive accuracy and supports personalized medicine, tailoring treatments based on individual neurological traits. Integrating deep learning aims to refine our grasp of neurological conditions, advancing precise and effective therapeutic strategies informed by comprehensive big data analysis.
 
-![](files/img/brain_gif-maker.gif){.lightbox}
+![](files/img/ai-for-neuroepidemiology.jpg){.lightbox}
 
-![](files/img/brains_banner.png){.lightbox}
 
-![](files/img/brains_banner.png){.lightbox}
+# Somatic Mutation Analysis 
+MAFtools in R is a versatile toolset for somatic mutation analysis in cancer research. It imports, visualizes, and analyzes Mutation Annotation Format (MAF) data, aiding in identifying mutation patterns, significant genes, and their clinical correlations.
 
-:::
-
-Deep learning, a subset of machine learning characterized by neural networks with multiple layers, has significantly advanced the field of neuroepidemiology. By harnessing the power of large neural networks and substantial datasets, researchers can uncover intricate patterns and correlations that traditional statistical methods might miss. In neuroepidemiology, deep learning algorithms analyze vast amounts of neurological data—ranging from MRI scans to genetic information—to identify biomarkers for disease, predict disease progression, and evaluate potential interventions. This approach not only enhances the accuracy of epidemiological predictions but also enables personalized medicine strategies by identifying the specific traits of neurological diseases in individual patients. By integrating deep learning techniques, my research aims to refine our understanding of neurological conditions, ultimately contributing to more effective and targeted treatments that are informed by a comprehensive analysis of big data insights.
-
-## Mutational Patterns Analysis 
-::: {layout-ncol=2}
-![](files/img/plot_spectrum.png){.lightbox}
-
-![](files/img/plot_compare_profiles.png){.lightbox}
-
-![](files/img/mut_matrix.png){.lightbox}
-
-![](files/img/plot_contribution_heatmap.png){.lightbox}
-:::
+![](files/img/maftools.png)
 
 

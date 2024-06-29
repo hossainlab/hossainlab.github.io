@@ -249,7 +249,7 @@
     "href": "resources.html",
     "title": "Resources",
     "section": "",
-    "text": "(Academic) career related essays\nA collection of resources on (scientific) career planning from the Nature Publishing Group.\nA resource from the NIH toward Broadening Experiences in Scientific Training\nA good list of books on ‘learning how to learn’\n\n\n\nmyIDP from AAAS. Free IDP focused on scientific career planning.\n\n\nThoughts on doing a postdoc or not\n\n\n\nInsight Data Science arranges short internships with some of the big names.\n\n\n\nThis blog post provides a nice description how applications for faculty positions are reviewed. From my own experience having been on and chaired several faculty searches, I think it’s a fairly accurate description.\n\n\nTips to have a productive PhD"
+    "text": "(Academic) career related essays\nA collection of resources on (scientific) career planning from the Nature Publishing Group.\nA resource from the NIH toward Broadening Experiences in Scientific Training\nA good list of books on ‘learning how to learn’\n\n\n\n\n\nmyIDP from AAAS. Free IDP focused on scientific career planning.\n\n\n\n\n\nThoughts on doing a postdoc or not\n\n\n\n\n\nInsight Data Science arranges short internships with some of the big names.\n\n\n\n\n\nThis blog post provides a nice description how applications for faculty positions are reviewed. From my own experience having been on and chaired several faculty searches, I think it’s a fairly accurate description.\n\n\n\n\n\nTips to have a productive PhD"
   },
   {
     "objectID": "resources.html#general",
@@ -298,28 +298,28 @@
     "href": "resources.html#software",
     "title": "Resources",
     "section": "Software",
-    "text": "Software\n\n\nlearnr - R package that allows development of interactive web-based R tutorials.\n\nFeedback at scale - tutorial for using learnr and gradethis as teaching tools."
+    "text": "Software\n\nlearnr - R package that allows development of interactive web-based R tutorials.\nFeedback at scale - tutorial for using learnr and gradethis as teaching tools."
   },
   {
     "objectID": "resources.html#books",
     "href": "resources.html#books",
     "title": "Resources",
     "section": "Books",
-    "text": "Books\n\n\nrstudio4edu - A Handbook for Teaching and Learning with R and RStudio - still very much a draft."
+    "text": "Books\n\nrstudio4edu - A Handbook for Teaching and Learning with R and RStudio - still very much a draft."
   },
   {
     "objectID": "resources.html#online-resources",
     "href": "resources.html#online-resources",
     "title": "Resources",
     "section": "Online Resources",
-    "text": "Online Resources\n\n\nTeaching Statistics and Data Science Online - materials for several teacher workshops taught by Mine Çetinkaya-Rundel."
+    "text": "Online Resources\n\nTeaching Statistics and Data Science Online - materials for several teacher workshops taught by Mine Çetinkaya-Rundel."
   },
   {
     "objectID": "resources.html#other",
     "href": "resources.html#other",
     "title": "Resources",
     "section": "Other",
-    "text": "Other\n\n\nBioicons - a collection of free drawings and diagrams on biological topics, which can be used in teaching (or research) presentations."
+    "text": "Other\n\nBioicons - a collection of free drawings and diagrams on biological topics, which can be used in teaching (or research) presentations."
   },
   {
     "objectID": "resources.html#r-programming",
@@ -361,7 +361,7 @@
     "href": "resources.html#r-and-shiny",
     "title": "Resources",
     "section": "R and Shiny",
-    "text": "R and Shiny\n\nOfficial shiny webpage\n\nCollection of Shiny tips and tricks, see also here and here\n\nEngineering Production-Grade Shiny Apps\n\nOutstanding User Interfaces with Shiny - a book covering advanced Shiny material, covering advanced styling, mobile development, integration with other web technologies, etc."
+    "text": "R and Shiny\n\nOfficial shiny webpage\nCollection of Shiny tips and tricks, see also here and here\nEngineering Production-Grade Shiny Apps\nOutstanding User Interfaces with Shiny - a book covering advanced Shiny material, covering advanced styling, mobile development, integration with other web technologies, etc."
   },
   {
     "objectID": "resources.html#r-markdown-and-related",
@@ -375,7 +375,7 @@
     "href": "resources.html#r-package-development",
     "title": "Resources",
     "section": "R package development",
-    "text": "R package development\n\n\n“R packages” by Hadley Wickham. This (free online) book alone is enough to get a package done. Should definitely be the first (and maybe even only) source to read/use.\nHow to quickly write an R package\nA series of online videos talking about package development\n\ndevtools, roxygen2, etc. - almost required for development. See Hadley’s book.\n\navailable - tests if a specific name is still available\n\nusethis - helps with a lot of setup tasks for packages (and other R coding tasks)"
+    "text": "R package development\n\n“R packages” by Hadley Wickham. This (free online) book alone is enough to get a package done. Should definitely be the first (and maybe even only) source to read/use.\nHow to quickly write an R package\nA series of online videos talking about package development\ndevtools, roxygen2, etc. - almost required for development. See Hadley’s book.\navailable - tests if a specific name is still available\nusethis - helps with a lot of setup tasks for packages (and other R coding tasks)"
   },
   {
     "objectID": "resources.html#other-lists",
@@ -396,7 +396,7 @@
     "href": "resources.html#visualization",
     "title": "Resources",
     "section": "Visualization",
-    "text": "Visualization\n\n\nR Graph Gallery: Has lots of examples of graphs and plots in R, including the underlying code that produced the graph. Great place to find a graph similar to one you’d like to make, take the code and adjust it."
+    "text": "Visualization\n\nR Graph Gallery: Has lots of examples of graphs and plots in R, including the underlying code that produced the graph. Great place to find a graph similar to one you’d like to make, take the code and adjust it."
   },
   {
     "objectID": "resources.html#missing-dataimputation",
@@ -445,7 +445,7 @@
     "href": "resources.html#infectious-disease-specific",
     "title": "Resources",
     "section": "Infectious Disease Specific",
-    "text": "Infectious Disease Specific\nGeneral\n\n\nProject Tycho - infectious disease data\nhttp://www.viprbrc.org\nhttp://eupathdb.org\n\nClinEpiDB - a database of (a few) clinical epidemiology studies, focusing on infectious diseases.\nImmPort\nInfluenza\n\nhttp://www.fludb.org\nWHO Flunet\ngisaid.org\nhttp://www.cdc.gov/flu/index.htm\nhttp://www.ncbi.nlm.nih.gov/genomes/FLU/FLU.html\nSystemsInfluenza.org\nTB\n\nOTIS on CDC WONDER: http://wonder.cdc.gov/tb.html"
+    "text": "Infectious Disease Specific\n\nGeneral\n\nProject Tycho - infectious disease data\nhttp://www.viprbrc.org\nhttp://eupathdb.org\nClinEpiDB - a database of (a few) clinical epidemiology studies, focusing on infectious diseases.\nImmPort\n\n\n\nInfluenza\n\nhttp://www.fludb.org\nWHO Flunet\ngisaid.org\nhttp://www.cdc.gov/flu/index.htm\nhttp://www.ncbi.nlm.nih.gov/genomes/FLU/FLU.html\nSystemsInfluenza.org\n\n\n\nTB\n\nOTIS on CDC WONDER: http://wonder.cdc.gov/tb.html"
   },
   {
     "objectID": "resources.html#data",
@@ -480,7 +480,7 @@
     "href": "resources.html#prework",
     "title": "Resources",
     "section": "Prework",
-    "text": "Prework\nBefore attending the any workshop please have the following installed and configured on your machine. - Recent version of R - Recent version of RStudio - Most recent release of the Bioconductor and other packages used in courses\nInstall the latest release of R, then get the latest version of Bioconductor by starting R and entering the commands.\n\nif (!require(\"BiocManager\", quietly = TRUE))\n    install.packages(\"BiocManager\")\nBiocManager::install(version = \"3.16\")\n\n\n\nEnsure you can knit R markdown documents\n\nOpen RStudio and create a new Rmarkdown document\nSave the document and check you are able to knit it."
+    "text": "Prework\nBefore attending the any workshop please have the following installed and configured on your machine. - Recent version of R - Recent version of RStudio - Most recent release of the Bioconductor and other packages used in courses\nInstall the latest release of R, then get the latest version of Bioconductor by starting R and entering the commands.\n\nif (!require(\"BiocManager\", quietly = TRUE))\n    install.packages(\"BiocManager\")\nBiocManager::install(version = \"3.16\")\n\n\nEnsure you can knit R markdown documents\n\nOpen RStudio and create a new Rmarkdown document\nSave the document and check you are able to knit it."
   },
   {
     "objectID": "resources.html#install-bioconductor-packages",
@@ -494,21 +494,21 @@
     "href": "resources.html#r-packages-rnaseq-and-single-cell-rna-seq-analysis",
     "title": "Resources",
     "section": "R Packages RNASeq and Single-cell RNA-seq Analysis",
-    "text": "R Packages RNASeq and Single-cell RNA-seq Analysis\n\n\nDESeq2: DESeq2 is a widely used package for differential gene expression analysis in RNA-seq data.\n\nedgeR: edgeR is another popular package for differential gene expression analysis in RNA-seq data.\n\nlimma: limma is a package commonly used for the analysis of microarray and RNA-seq data, particularly for differential expression analysis.\n\nBallgown: Ballgown is a package for differential expression analysis and visualization of transcriptome assembly data.\n\nDEXSeq: DEXSeq is specifically designed for the detection of differential exon usage in RNA-seq data.\n\nNOISeq: NOISeq is a package for non-parametric analysis of differential expression in RNA-seq data.\n\nclusterProfiler: clusterProfiler is a package for functional enrichment analysis of gene clusters derived from RNA-seq data.\n\nGenomicFeatures: GenomicFeatures provides tools for working with genomic features, such as gene models, and is useful for annotating RNA-seq data.\n\nSeurat: Seurat is a package for single-cell RNA-seq data analysis, allowing exploration and visualization of cellular heterogeneity."
+    "text": "R Packages RNASeq and Single-cell RNA-seq Analysis\n\nDESeq2: DESeq2 is a widely used package for differential gene expression analysis in RNA-seq data.\nedgeR: edgeR is another popular package for differential gene expression analysis in RNA-seq data.\nlimma: limma is a package commonly used for the analysis of microarray and RNA-seq data, particularly for differential expression analysis.\nBallgown: Ballgown is a package for differential expression analysis and visualization of transcriptome assembly data.\nDEXSeq: DEXSeq is specifically designed for the detection of differential exon usage in RNA-seq data.\nNOISeq: NOISeq is a package for non-parametric analysis of differential expression in RNA-seq data.\nclusterProfiler: clusterProfiler is a package for functional enrichment analysis of gene clusters derived from RNA-seq data.\nGenomicFeatures: GenomicFeatures provides tools for working with genomic features, such as gene models, and is useful for annotating RNA-seq data.\nSeurat: Seurat is a package for single-cell RNA-seq data analysis, allowing exploration and visualization of cellular heterogeneity."
   },
   {
     "objectID": "resources.html#blogs-for-r-programming-statistics-and-data-analyis",
     "href": "resources.html#blogs-for-r-programming-statistics-and-data-analyis",
     "title": "Resources",
     "section": "Blogs for R Programming, Statistics, and Data Analyis",
-    "text": "Blogs for R Programming, Statistics, and Data Analyis\n\nProgramiz - https://www.datamentor.io/r-programming/\n\nPennState STAT 484 - https://online.stat.psu.edu/stat484/\n\nPennState Topics in R Statistical Language - https://online.stat.psu.edu/stat484/\n\nSimply Statistics - https://simplystatistics.org/\n\nTutorialPoint - https://www.tutorialspoint.com/r/index.htm\n\nR for Biologists - https://www.rforbiologists.org/\n\nComputational Genomics with R - https://compgenomr.github.io/book/\n\nStat and R - https://statsandr.com/\n\nRafa Lab - https://rafalab.github.io/pages/harvardx.html\n\nUniversity of Florida - https://bolt.mph.ufl.edu/software/r-phc-6055/"
+    "text": "Blogs for R Programming, Statistics, and Data Analyis\n\nProgramiz - https://www.datamentor.io/r-programming/\nPennState STAT 484 - https://online.stat.psu.edu/stat484/\nPennState Topics in R Statistical Language - https://online.stat.psu.edu/stat484/\nSimply Statistics - https://simplystatistics.org/\nTutorialPoint - https://www.tutorialspoint.com/r/index.htm\nR for Biologists - https://www.rforbiologists.org/\nComputational Genomics with R - https://compgenomr.github.io/book/\nStat and R - https://statsandr.com/\nRafa Lab - https://rafalab.github.io/pages/harvardx.html\nUniversity of Florida - https://bolt.mph.ufl.edu/software/r-phc-6055/"
   },
   {
     "objectID": "resources.html#videos",
     "href": "resources.html#videos",
     "title": "Resources",
     "section": "Videos",
-    "text": "Videos\n\n\nJuly 9, 2023: I’m thrilled to announce that the highly anticipated videos from our workshop on “R for Research: Fundamentals of R - Part 1” are now available for viewing. Whether you missed the live event or want to revisit the valuable insights shared during the session, these videos are your gateway to mastering the basics of R programming language for data analysis and research. Join us as we explore the foundations of R and learn essential skills to enhance your data analysis capabilities. Don’t wait any longer; dive into the videos today and take your research to new heights! Check it out: \n\n\n\nApril 12, 2023: Watch this informative 2-hour workshop on how NASA Earth Observing Data can help improve public health. Discover how we can use these data to monitor our environment and identify potential health risks. Learn about the different ways NASA Earth Observing Data can benefit our communities and keep us safe. Check it out:"
+    "text": "Videos\n\nJuly 9, 2023: I’m thrilled to announce that the highly anticipated videos from our workshop on “R for Research: Fundamentals of R - Part 1” are now available for viewing. Whether you missed the live event or want to revisit the valuable insights shared during the session, these videos are your gateway to mastering the basics of R programming language for data analysis and research. Join us as we explore the foundations of R and learn essential skills to enhance your data analysis capabilities. Don’t wait any longer; dive into the videos today and take your research to new heights! Check it out: \nApril 12, 2023: Watch this informative 2-hour workshop on how NASA Earth Observing Data can help improve public health. Discover how we can use these data to monitor our environment and identify potential health risks. Learn about the different ways NASA Earth Observing Data can benefit our communities and keep us safe. Check it out:"
   },
   {
     "objectID": "projects/nipah-virus/index.html",
@@ -856,23 +856,23 @@
   {
     "objectID": "research.html",
     "href": "research.html",
-    "title": "",
+    "title": "Somatic Mutation Analysis",
     "section": "",
-    "text": "Deep learning, a subset of machine learning characterized by neural networks with multiple layers, has significantly advanced the field of neuroepidemiology. By harnessing the power of large neural networks and substantial datasets, researchers can uncover intricate patterns and correlations that traditional statistical methods might miss. In neuroepidemiology, deep learning algorithms analyze vast amounts of neurological data—ranging from MRI scans to genetic information—to identify biomarkers for disease, predict disease progression, and evaluate potential interventions. This approach not only enhances the accuracy of epidemiological predictions but also enables personalized medicine strategies by identifying the specific traits of neurological diseases in individual patients. By integrating deep learning techniques, my research aims to refine our understanding of neurological conditions, ultimately contributing to more effective and targeted treatments that are informed by a comprehensive analysis of big data insights."
+    "text": "Deep learning, a subset of machine learning with neural networks of multiple layers, has revolutionized neuroepidemiology. By leveraging extensive datasets, it uncovers complex patterns in neurological data—like MRI scans and genetics—to pinpoint disease biomarkers, forecast progression, and assess interventions. This enhances predictive accuracy and supports personalized medicine, tailoring treatments based on individual neurological traits. Integrating deep learning aims to refine our grasp of neurological conditions, advancing precise and effective therapeutic strategies informed by comprehensive big data analysis."
   },
   {
     "objectID": "research.html#neuroepidemiology",
     "href": "research.html#neuroepidemiology",
-    "title": "",
+    "title": "Somatic Mutation Analysis",
     "section": "",
-    "text": "Deep learning, a subset of machine learning characterized by neural networks with multiple layers, has significantly advanced the field of neuroepidemiology. By harnessing the power of large neural networks and substantial datasets, researchers can uncover intricate patterns and correlations that traditional statistical methods might miss. In neuroepidemiology, deep learning algorithms analyze vast amounts of neurological data—ranging from MRI scans to genetic information—to identify biomarkers for disease, predict disease progression, and evaluate potential interventions. This approach not only enhances the accuracy of epidemiological predictions but also enables personalized medicine strategies by identifying the specific traits of neurological diseases in individual patients. By integrating deep learning techniques, my research aims to refine our understanding of neurological conditions, ultimately contributing to more effective and targeted treatments that are informed by a comprehensive analysis of big data insights."
+    "text": "Deep learning, a subset of machine learning with neural networks of multiple layers, has revolutionized neuroepidemiology. By leveraging extensive datasets, it uncovers complex patterns in neurological data—like MRI scans and genetics—to pinpoint disease biomarkers, forecast progression, and assess interventions. This enhances predictive accuracy and supports personalized medicine, tailoring treatments based on individual neurological traits. Integrating deep learning aims to refine our grasp of neurological conditions, advancing precise and effective therapeutic strategies informed by comprehensive big data analysis."
   },
   {
     "objectID": "research.html#mutational-patterns-analysis",
     "href": "research.html#mutational-patterns-analysis",
-    "title": "",
+    "title": "Somatic Mutation Analysis",
     "section": "Mutational Patterns Analysis",
-    "text": "Mutational Patterns Analysis"
+    "text": "Mutational Patterns Analysis\nMutational patterns analysis investigates the types, frequencies, and contexts of genetic mutations within biological data. It aims to uncover patterns in mutation occurrence, such as specific mutation types (e.g., substitutions, insertions, deletions) and their associations with mutagenic processes or genomic contexts. This analysis is crucial in fields like cancer research, evolutionary genetics, and molecular epidemiology, providing insights into genetic variability and its implications for health, disease, and evolutionary dynamics."
   },
   {
     "objectID": "projects/Early Breast Cancer Detection System/index.html",
@@ -1642,14 +1642,14 @@
     "href": "cv/index.html#education",
     "title": "Curriculum Vitae",
     "section": "EDUCATION",
-    "text": "EDUCATION\nDoctor of Philosophy – Econometrics and Business Statistics Monash University Aug 2021 — Present\n\nNew principles and methods for complex data preparation and integration, with applications to official statistics, web-scrapped data and satellite raster images\nMonash Data Futures Institute PhD Top-Up Scholarship (2021-2024)\nExpected submission date: Nov 2024"
+    "text": "EDUCATION\nDoctor of Philosophy – Econometrics and Business Statistics  Monash University Aug 2021 — Present\n\nNew principles and methods for complex data preparation and integration, with applications to official statistics, web-scrapped data and satellite raster images\nMonash Data Futures Institute PhD Top-Up Scholarship (2021-2024)\nExpected submission date: Nov 2024"
   },
   {
     "objectID": "cv/index.html#work-experience",
     "href": "cv/index.html#work-experience",
     "title": "Curriculum Vitae",
     "section": "WORK EXPERIENCE",
-    "text": "WORK EXPERIENCE\nData Scientist\nFreelance, Multiple Clients Jan 2020 – June 2021\nProviding data collection, pre-processing, exploratory analysis and modelling services to clients in the early R&D stages of developing data driven products. Projects include:\n\nData description and preliminary product feasibility insights for a start-up real estate bond platform; including assessing suitability of various property transaction databases for use in initial product prototype.\nDevelopment of statistical anomaly detection regimes and key historical insights from internet quality time-series data for use in parametric insurance products, including documenting analysis tools in an R package."
+    "text": "WORK EXPERIENCE\n\nData Scientist\nFreelance, Multiple Clients Jan 2020 – June 2021\nProviding data collection, pre-processing, exploratory analysis and modelling services to clients in the early R&D stages of developing data driven products. Projects include:\n\nData description and preliminary product feasibility insights for a start-up real estate bond platform; including assessing suitability of various property transaction databases for use in initial product prototype.\nDevelopment of statistical anomaly detection regimes and key historical insights from internet quality time-series data for use in parametric insurance products, including documenting analysis tools in an R package."
   },
   {
     "objectID": "cv/index.html#presentations-and-workshops",
@@ -1951,5 +1951,12 @@
     "title": "Hepatitis Risk Assessment: Predictive Modeling with Machine Learning",
     "section": "Save Model",
     "text": "Save Model\n\n# save pipeline\nsave_model(dt, '../models/hepatitis')\n\nTransformation Pipeline and Model Successfully Saved\n\n\n(Pipeline(memory=FastMemory(location=C:\\Users\\JHossain\\AppData\\Local\\Temp\\joblib),\n          steps=[('label_encoding',\n                  TransformerWrapperWithInverse(exclude=None, include=None,\n                                                transformer=LabelEncoder())),\n                 ('numerical_imputer',\n                  TransformerWrapper(exclude=None,\n                                     include=['AGE', 'STEROID', 'ANTIVIRALS',\n                                              'FATIGUE', 'MALAISE', 'ANOREXIA',\n                                              'LIVER BIG', 'LIVER FIRM',\n                                              'SPLEEN PALPABL...\n                                     transformer=CleanColumnNames(match='[\\\\]\\\\[\\\\,\\\\{\\\\}\\\\\"\\\\:]+'))),\n                 ('trained_model',\n                  DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None,\n                                         criterion='gini', max_depth=None,\n                                         max_features=None, max_leaf_nodes=None,\n                                         min_impurity_decrease=0.0,\n                                         min_samples_leaf=1, min_samples_split=2,\n                                         min_weight_fraction_leaf=0.0,\n                                         random_state=123, splitter='best'))],\n          verbose=False),\n '../models/hepatitis.pkl')\n\n\n\n# load pipeline\nloaded_best_pipeline = load_model('../models/hepatitis')\nloaded_best_pipeline\n\nTransformation Pipeline and Model Successfully Loaded\n\n\nPipeline(memory=FastMemory(location=C:\\Users\\JHossain\\AppData\\Local\\Temp\\joblib),\n         steps=[('label_encoding',\n                 TransformerWrapperWithInverse(exclude=None, include=None,\n                                               transformer=LabelEncoder())),\n                ('numerical_imputer',\n                 TransformerWrapper(exclude=None,\n                                    include=['AGE', 'STEROID', 'ANTIVIRALS',\n                                             'FATIGUE', 'MALAISE', 'ANOREXIA',\n                                             'LIVER BIG', 'LIVER FIRM',\n                                             'SPLEEN PALPABL...\n                                    transformer=CleanColumnNames(match='[\\\\]\\\\[\\\\,\\\\{\\\\}\\\\\"\\\\:]+'))),\n                ('trained_model',\n                 DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None,\n                                        criterion='gini', max_depth=None,\n                                        max_features=None, max_leaf_nodes=None,\n                                        min_impurity_decrease=0.0,\n                                        min_samples_leaf=1, min_samples_split=2,\n                                        min_weight_fraction_leaf=0.0,\n                                        random_state=123, splitter='best'))],\n         verbose=False)In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.PipelinePipeline(memory=FastMemory(location=C:\\Users\\JHossain\\AppData\\Local\\Temp\\joblib),\n         steps=[('label_encoding',\n                 TransformerWrapperWithInverse(exclude=None, include=None,\n                                               transformer=LabelEncoder())),\n                ('numerical_imputer',\n                 TransformerWrapper(exclude=None,\n                                    include=['AGE', 'STEROID', 'ANTIVIRALS',\n                                             'FATIGUE', 'MALAISE', 'ANOREXIA',\n                                             'LIVER BIG', 'LIVER FIRM',\n                                             'SPLEEN PALPABL...\n                                    transformer=CleanColumnNames(match='[\\\\]\\\\[\\\\,\\\\{\\\\}\\\\\"\\\\:]+'))),\n                ('trained_model',\n                 DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None,\n                                        criterion='gini', max_depth=None,\n                                        max_features=None, max_leaf_nodes=None,\n                                        min_impurity_decrease=0.0,\n                                        min_samples_leaf=1, min_samples_split=2,\n                                        min_weight_fraction_leaf=0.0,\n                                        random_state=123, splitter='best'))],\n         verbose=False)label_encoding: TransformerWrapperWithInverseTransformerWrapperWithInverse(exclude=None, include=None,\n                              transformer=LabelEncoder())transformer: LabelEncoderLabelEncoder()LabelEncoderLabelEncoder()numerical_imputer: TransformerWrapperTransformerWrapper(exclude=None,\n                   include=['AGE', 'STEROID', 'ANTIVIRALS', 'FATIGUE',\n                            'MALAISE', 'ANOREXIA', 'LIVER BIG', 'LIVER FIRM',\n                            'SPLEEN PALPABLE', 'SPIDERS', 'ASCITES', 'VARICES',\n                            'BILIRUBIN', 'ALK PHOSPHATE', 'SGOT', 'ALBUMIN',\n                            'PROTIME', 'HISTOLOGY'],\n                   transformer=SimpleImputer(add_indicator=False, copy=True,\n                                             fill_value=None,\n                                             keep_empty_features=False,\n                                             missing_values=nan,\n                                             strategy='mean',\n                                             verbose='deprecated'))transformer: SimpleImputerSimpleImputer()SimpleImputerSimpleImputer()categorical_imputer: TransformerWrapperTransformerWrapper(exclude=None, include=['SEX'],\n                   transformer=SimpleImputer(add_indicator=False, copy=True,\n                                             fill_value=None,\n                                             keep_empty_features=False,\n                                             missing_values=nan,\n                                             strategy='most_frequent',\n                                             verbose='deprecated'))transformer: SimpleImputerSimpleImputer(strategy='most_frequent')SimpleImputerSimpleImputer(strategy='most_frequent')ordinal_encoding: TransformerWrapperTransformerWrapper(exclude=None, include=['SEX'],\n                   transformer=OrdinalEncoder(cols=['SEX'],\n                                              drop_invariant=False,\n                                              handle_missing='return_nan',\n                                              handle_unknown='value',\n                                              mapping=[{'col': 'SEX',\n                                                        'data_type': dtype('float64'),\n                                                        'mapping': 1.0    0\n2.0    1\nNaN   -1\ndtype: int64}],\n                                              return_df=True, verbose=0))transformer: OrdinalEncoderOrdinalEncoder(cols=['SEX'], handle_missing='return_nan',\n               mapping=[{'col': 'SEX', 'data_type': dtype('float64'),\n                         'mapping': 1.0    0\n2.0    1\nNaN   -1\ndtype: int64}])OrdinalEncoderOrdinalEncoder(cols=['SEX'], handle_missing='return_nan',\n               mapping=[{'col': 'SEX', 'data_type': dtype('float64'),\n                         'mapping': 1.0    0\n2.0    1\nNaN   -1\ndtype: int64}])clean_column_names: TransformerWrapperTransformerWrapper(exclude=None, include=None,\n                   transformer=CleanColumnNames(match='[\\\\]\\\\[\\\\,\\\\{\\\\}\\\\\"\\\\:]+'))transformer: CleanColumnNamesCleanColumnNames()CleanColumnNamesCleanColumnNames()DecisionTreeClassifierDecisionTreeClassifier(random_state=123)"
+  },
+  {
+    "objectID": "research.html#ai-for-neuroepidemiology",
+    "href": "research.html#ai-for-neuroepidemiology",
+    "title": "Somatic Mutation Analysis",
+    "section": "",
+    "text": "Deep learning, a subset of machine learning with neural networks of multiple layers, has revolutionized neuroepidemiology. By leveraging extensive datasets, it uncovers complex patterns in neurological data—like MRI scans and genetics—to pinpoint disease biomarkers, forecast progression, and assess interventions. This enhances predictive accuracy and supports personalized medicine, tailoring treatments based on individual neurological traits. Integrating deep learning aims to refine our grasp of neurological conditions, advancing precise and effective therapeutic strategies informed by comprehensive big data analysis."
   }
 ]
