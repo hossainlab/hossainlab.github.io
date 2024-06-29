@@ -93,7 +93,9 @@ website:
 format:
   html:
     theme:
-       - litera
+       light: flatly
+       dark: darkly
+    css: styles.css
     page-layout: full
     toc: false
     code-link: true
