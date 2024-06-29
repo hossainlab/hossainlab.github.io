@@ -1,10 +1,12 @@
 ---
-title: Scientific Talks and Posters
+pagetitle: "Talks | Jubayer Hossain"
+title: Talks 
 excerpt: "A list of selected talks of me"
 toc-location: right
+page-layout: full
 ---
 
-Below you can find a list of selected talks and posters of me and my group,along with slides, paper references, and recordings when available.
+Below you can find a list of selected talks of me and my group,along with slides, paper references, and recordings when available.
 Presenters are highlighted in **bold**.
 
 - **Hossain, M.J.** (2024). 

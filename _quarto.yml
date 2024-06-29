@@ -47,6 +47,8 @@ website:
           href: talks/index.qmd
         - text: "Teaching"
           file: teaching/index.qmd
+        - text: "Press"
+          file: press/index.qmd
         - text: "What I Use"
           file: use/index.qmd
         - text: "More"
