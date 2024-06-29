@@ -38,29 +38,29 @@ website:
         - text: "Home"
           file: index.qmd
         - text: "Research"
-          href: research.qmd
+          href: research/index.qmd
         - text: "Publications"
-          file: publications.qmd
+          file: publications/index.qmd
         - text: "Projects"
-          href: projects.qmd
+          href: projects/index.qmd
         - text: "Talks"
-          href: talks.qmd
+          href: talks/index.qmd
         - text: "Teaching"
-          file: teaching.qmd
+          file: teaching/index.qmd
         - text: "What I Use"
-          file: use.qmd
+          file: use/index.qmd
         - text: "More"
           menu:
           - text: "About"
-            file: about.qmd
+            file: about/index.qmd
           - text: "Blog"
-            file: blog.qmd
+            file: blog/index.qmd
           - text: "Newsletter"
             file: https://hossainlab.substack.com
           - text: "Dashboards"
             href: dashboards.qmd
           - text: "Press"
-            file: press.qmd
+            file: press/index.qmd
       right:
       - icon: envelope
         aria-label: email

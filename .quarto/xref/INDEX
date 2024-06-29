@@ -456,5 +456,17 @@
   },
   "research/neuroepidemiology/index.qmd": {
     "index.html": "d721ce89"
+  },
+  "use/index.qmd": {
+    "index.html": "49384ba8"
+  },
+  "resources/resources.qmd": {
+    "resources.html": "db9646f3"
+  },
+  "press/index.qmd": {
+    "index.html": "7ac7691f"
+  },
+  "about/index.qmd": {
+    "index.html": "6c043a95"
   }
 }

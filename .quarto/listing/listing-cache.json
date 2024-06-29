@@ -76,7 +76,8 @@
       "ay_19-20.yml",
       "ay_18-19.yml",
       "ay_17-18.yml",
-      "ay_older.yml"
+      "ay_older.yml",
+      "teaching"
     ],
     "publications\\index.qmd": [
       "publications/*/**.qmd",
@@ -95,7 +96,8 @@
       "seminar-papers/*/index.qmd",
       "translations/*/index.qmd",
       "in-reviews/*/index.qmd",
-      "conference-papers/*/index.qmd"
+      "conference-papers/*/index.qmd",
+      "research"
     ],
     "projects.qmd": [
       "projects"

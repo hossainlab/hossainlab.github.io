@@ -1,59 +1,22 @@
 [
   {
-    "listing": "/research.html",
+    "listing": "/talks/index.html",
     "items": []
   },
   {
-    "listing": "/blog.html",
-    "items": [
-      "/blog/multi-omics-data-integration/index.html",
-      "/blog/welcome/index.html"
-    ]
+    "listing": "/blog/index.html",
+    "items": []
   },
   {
-    "listing": "/projects.html",
-    "items": [
-      "/projects/Calories_Burnt/02_Calories Burnt Prediction.html",
-      "/projects/data-professionals-survey-report/index.html",
-      "/projects/dengue-situation-dashboard/index.html",
-      "/projects/ESOL/01_ESOL.html",
-      "/projects/Early Breast Cancer Detection System/index.html",
-      "/projects/health-impact-of-distance-learning-on-high-school-students/index.html",
-      "/projects/Heart_Disease/05_Heart Diseases.html",
-      "/projects/Hepatitis/02_Hepatitis.html",
-      "/projects/Breast_Cancer/03_Breast Cancer.html",
-      "/projects/Liver_Disorder/04_Liver Disorder.html",
-      "/projects/Choronic_Kidney/01_Choronic Kidney.html",
-      "/projects/monkeypox-outbreak-insights/index.html",
-      "/projects/nipah-virus/index.html"
-    ]
+    "listing": "/projects/index.html",
+    "items": []
   },
   {
-    "listing": "/talks.html",
-    "items": [
-      "/talks/mastering-biomedical-data-management/index.html",
-      "/talks/state-the-art-of-microbial-genome-analysi/index.html",
-      "/talks/undergraduate-research-importance-benefits-and-challenges/index.html"
-    ]
+    "listing": "/research/index.html",
+    "items": []
   },
   {
-    "listing": "/teaching.html",
-    "items": [
-      "/teaching/applied-machine-learning-for-healthcare/index.html",
-      "/teaching/bioinformatics-bootcamp/index.html",
-      "/teaching/building-dashboard-with-r/index.html",
-      "/teaching/data-analysis-with-r/index.html",
-      "/teaching/foundations-of-health-data-science/index.html",
-      "/teaching/ml-for-bioinformatics/index.html",
-      "/teaching/gtsummary-for-public-health/index.html",
-      "/teaching/python-for-geospatial-health-data-science/index.html",
-      "/teaching/python-for-health-data-analysis/index.html",
-      "/teaching/r-for-bioinformatics/index.html",
-      "/teaching/r-for-research/index.html",
-      "/teaching/rna-seq-data-analysis-with-r/index.html",
-      "/teaching/spss/index.html",
-      "/teaching/single-cell-seq-analysis-with-r/index.html",
-      "/teaching/tcga-data-analysis-with-r/index.html"
-    ]
+    "listing": "/teaching/index.html",
+    "items": []
   }
 ]

@@ -10,14 +10,17 @@ about:
   image-shape: round
   image-width: 8cm
   links:
+    - icon: envelope 
+      href: mailto:contact.jubayerhossain@gmail.com 
     - icon: linkedin
       href: https://www.linkedin.com/in/hossainmj/
+    - text: "{{< fa graduation-cap >}}"
+      href: https://scholar.google.com/citations?user=9_K4ekoAAAAJ&hl=en&authuser=5
     - icon: github
       href: https://github.com/hossainlab
     - icon: twitter
       href: https://twitter.com/JHossain_28
-    - icon: envelope 
-      href: mailto:hossainmj.me@gmail.com 
+
 ---
 I am a biomedical researcher with a focus on neuroepidemiology, cancer epidemiology, and cancer bioinformatics. My aim is to maximize the quality of life for individuals by operating at the intersection of education, technology, and health research. Currently, working as a founder and executive director at [CHIRAL Bangladesh](https://chiralbd.org/), a non-profit biomedical research organization dedicated to solving public health problems in Bangladesh. Having studied microbiology, my core research is currently located somewhere between public health and machine learning, with applications in almost all the quantitative sciences.
 
