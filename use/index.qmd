@@ -1,15 +1,13 @@
 ---
 pagetitle: "What I Use | Jubayer Hossain"
 title: "What I Use"
+toc: true
+toc-location: right
 page-layout: full
 title-block-banner: false
 comments: false
 ---
 
-:::  panel-tabset
-
-
-# Research Tools
 ## Literature Review 
 - [typeset.io](https://typeset.io/) - Typeset.io is a platform designed to assist researchers, academics, and authors in the process of writing, formatting, and preparing documents for publication. 
 - [scholarcy](https://www.scholarcy.com/) - The AI-powered article summarizer. 
@@ -32,7 +30,6 @@ comments: false
 
 - [Scimago Journal & Country Rank](https://www.scimagojr.com/): On the Scimago platform, you can find information about journals, their rankings, citation data, and more, which can be useful for researchers looking to identify suitable journals for their research or assess the impact and prestige of journals in their field. It's a valuable tool for academic research and evaluation.
 
-# R Programming 
 ## Data Wrangling 
 - [readxl](https://readxl.tidyverse.org/) for importing data into R 
 - dplyr, tidyr and others from the [tidyverse](https://www.tidyverse.org/) for data preparation. 
@@ -57,7 +54,7 @@ comments: false
 ## Statistical Modeling 
 - [easystats](https://easystats.github.io/easystats/) for easy statistical modeling, visualization, and reporting 
 
-# Python 
+## Data Science  
 - [NumPy](https://numpy.org/doc/stable/index.html) for scientific computing. 
 - [Pandas](https://pandas.pydata.org/) for data wrangling and analysis 
 - [Matplotlib](https://matplotlib.org/) for data visulization 
@@ -69,8 +66,7 @@ comments: false
 - [scikit-image](https://scikit-image.org/) for life science image manipulation 
 
 
-# Data Resources
-## Guides 
+## Data Resources
 * The [Project Open Data Dashboard](https://labs.data.gov/dashboard/) gives overview statistics of available government data from various agencies.
 
 * [Guide to Open Data Publishing & Analytics](http://blog.kaggle.com/2016/10/21/a-guide-to-open-data-publishing-analytics/) - A good article describing best practices for publishing data openly. Is also a good read for those who want to analyze other's data.
@@ -144,7 +140,7 @@ comments: false
 ### TB 
 *	OTIS on CDC WONDER: <http://wonder.cdc.gov/tb.html>
 
-# Cancer Genomics  
+# Cancer Bioinformatics   
 ## Data Sources 
 - [The Cancer Genome Atlas (TCGA):](https://portal.gdc.cancer.gov/) TCGA is a comprehensive collection of multi-dimensional cancer genomics data covering multiple cancer types.
 - [International Cancer Genome Consortium (ICGC):](https://icgc.org/) Description: ICGC provides high-quality genomic and clinical data from various cancer projects worldwide.
@@ -194,11 +190,9 @@ comments: false
 
 
 
-# Teaching Tools 
+## Teaching Tools 
 - [Bioicons](https://bioicons.com/) - a collection of free drawings and diagrams on biological topics, which can be used in teaching (or research) presentations.
 - [learnr](https://rstudio.github.io/learnr/) - R package that allows development of interactive web-based R tutorials.
 - [Feedback](https://minecr.shinyapps.io/feedback-at-scale/) at scale - tutorial for using learnr and gradethis as teaching tools.
 - [Teaching Statistics and Data Science Online](https://mine-cetinkaya-rundel.github.io/teach-r-online/) - materials for several teacher workshops taught by [Mine Çetinkaya-Rundel](https://mine-cr.com/).
 
-
-:::  

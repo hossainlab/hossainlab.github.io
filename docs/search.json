@@ -1369,7 +1369,7 @@
     "href": "teaching/index.html",
     "title": "",
     "section": "",
-    "text": "No matching items"
+    "text": "I am Lead Organizer and Instructor at CHIRAL Bangladesh, developed and delivered curriculum, organized workshops and hands-on sessions, mentored participants, evaluated performance. Below you can find a list of my courses and workshops."
   },
   {
     "objectID": "teaching/applied-machine-learning-for-healthcare/index.html",
@@ -1858,8 +1858,8 @@
     "objectID": "use/index.html#literature-review",
     "href": "use/index.html#literature-review",
     "title": "What I Use",
-    "section": "Literature Review",
-    "text": "Literature Review\n\ntypeset.io - Typeset.io is a platform designed to assist researchers, academics, and authors in the process of writing, formatting, and preparing documents for publication.\nscholarcy - The AI-powered article summarizer.\nelicit - AI-based research assistant."
+    "section": "",
+    "text": "typeset.io - Typeset.io is a platform designed to assist researchers, academics, and authors in the process of writing, formatting, and preparing documents for publication.\nscholarcy - The AI-powered article summarizer.\nelicit - AI-based research assistant."
   },
   {
     "objectID": "use/index.html#journal-finders",
@@ -1944,5 +1944,68 @@
     "title": "What I Use",
     "section": "R Packages",
     "text": "R Packages\n\nTCGAbiolinks: An R/Bioconductor package for integrative analysis with GDC data. TCGAbiolinks is able to access The National Cancer Institute (NCI) Genomic Data Commons (GDC) thorough its GDC Application Programming Interface (API) to search, download and prepare relevant data for analysis in R.\nmaftools: Summarize, Analyze and Visualize MAF Files. This package attempts to summarize, analyze, annotate and visualize MAF files in an efficient manner from either TCGA sources or any in-house studies as long as the data is in MAF format.\nSummarizedExperiment: The SummarizedExperiment container contains one or more assays, each represented by a matrix-like object of numeric or other mode. The rows typically represent genomic ranges of interest and the columns represent samples.\nMutationalPatterns: Comprehensive genome-wide analysis of mutational processes. he package covers a wide range of patterns including: mutational signatures, transcriptional and replicative strand bias, lesion segregation, genomic distribution and association with genomic features, which are collectively meaningful for studying the activity of mutational processes.\nGenVisR: Short for “Genomic Visualizations in R,” this tool provides visualization capabilities tailored to a variety of genomic data types, including data common in cancer research such as somatic mutations, copy number variations, and more."
+  },
+  {
+    "objectID": "teaching/index.html#bioinformatics",
+    "href": "teaching/index.html#bioinformatics",
+    "title": "",
+    "section": "Bioinformatics",
+    "text": "Bioinformatics\n\nJune 15, 2023 - August 3, 2023. Bioinformatics BootCamp 1.0 at Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh. Contents\nAugust 8, 2023 - August 26, 2023. Bioinformatics BootCamp 2.0 at Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh. Contents\nOctober 20, 2023 - November 9, 2023. Bioinformatics BootCamp 3.0 at Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh. Contents\nJanuary 25, 2024 - February 12, 2024. Bioinformatics BootCamp 4.0 at Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh. Contents\nJanuary 25, 2024 - February 12, 2024. Bioinformatics BootCamp 5.0 at Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh. Contents"
+  },
+  {
+    "objectID": "teaching/index.html#bioinformatics-bootcamp",
+    "href": "teaching/index.html#bioinformatics-bootcamp",
+    "title": "",
+    "section": "Bioinformatics BootCamp",
+    "text": "Bioinformatics BootCamp\n\nJune 15, 2023 - August 3, 2023. Bioinformatics BootCamp 1.0 at Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh. Contents\nAugust 8, 2023 - August 26, 2023. Bioinformatics BootCamp 2.0 at Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh. Contents\nOctober 20, 2023 - November 9, 2023. Bioinformatics BootCamp 3.0 at Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh. Contents\nJanuary 25, 2024 - February 12, 2024. Bioinformatics BootCamp 4.0 at Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh. Contents\nJanuary 25, 2024 - February 12, 2024. Bioinformatics BootCamp 5.0 at Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh. Contents"
+  },
+  {
+    "objectID": "teaching/index.html#cancer-bioinformatics",
+    "href": "teaching/index.html#cancer-bioinformatics",
+    "title": "",
+    "section": "Cancer Bioinformatics",
+    "text": "Cancer Bioinformatics"
+  },
+  {
+    "objectID": "teaching/index.html#r-for-research",
+    "href": "teaching/index.html#r-for-research",
+    "title": "",
+    "section": "R for Research",
+    "text": "R for Research"
+  },
+  {
+    "objectID": "teaching/index.html#cancer-bioinformatics-1",
+    "href": "teaching/index.html#cancer-bioinformatics-1",
+    "title": "",
+    "section": "Cancer Bioinformatics",
+    "text": "Cancer Bioinformatics\n\nMay 10, 2024 - May 10, 2024. Cancer Bioinformatics (Cohort 01) at Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh. Contents"
+  },
+  {
+    "objectID": "use/index.html",
+    "href": "use/index.html",
+    "title": "What I Use",
+    "section": "",
+    "text": "typeset.io - Typeset.io is a platform designed to assist researchers, academics, and authors in the process of writing, formatting, and preparing documents for publication.\nscholarcy - The AI-powered article summarizer.\nelicit - AI-based research assistant."
+  },
+  {
+    "objectID": "use/index.html#data-science",
+    "href": "use/index.html#data-science",
+    "title": "What I Use",
+    "section": "Data Science",
+    "text": "Data Science\n\nNumPy for scientific computing.\nPandas for data wrangling and analysis\nMatplotlib for data visulization\nSeaborn for advance statistical visualizations\nPlotly for interative data visualization\nresearchpy to summarize data and perform statistical tests.\nDask for big data analysis\nscikit-learn for machine learning\nscikit-image for life science image manipulation"
+  },
+  {
+    "objectID": "use/index.html#data-resources",
+    "href": "use/index.html#data-resources",
+    "title": "What I Use",
+    "section": "Data Resources",
+    "text": "Data Resources\n\nThe Project Open Data Dashboard gives overview statistics of available government data from various agencies.\nGuide to Open Data Publishing & Analytics - A good article describing best practices for publishing data openly. Is also a good read for those who want to analyze other’s data.\nA short list of data related R packages - packages that either access data or include data\nGoogle’s Data Search Engine"
+  },
+  {
+    "objectID": "use/index.html#teaching-tools",
+    "href": "use/index.html#teaching-tools",
+    "title": "What I Use",
+    "section": "Teaching Tools",
+    "text": "Teaching Tools\n\nBioicons - a collection of free drawings and diagrams on biological topics, which can be used in teaching (or research) presentations.\nlearnr - R package that allows development of interactive web-based R tutorials.\nFeedback at scale - tutorial for using learnr and gradethis as teaching tools.\nTeaching Statistics and Data Science Online - materials for several teacher workshops taught by Mine Çetinkaya-Rundel."
   }
 ]

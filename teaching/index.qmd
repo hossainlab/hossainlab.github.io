@@ -1,11 +1,80 @@
 ---
 pagetitle: "Teaching | Jubayer Hossain"
-listing:
-  contents: teaching 
-  sort: "title"
-  type: default
-  categories: true
+excerpt: "A list of selected courses of me"
 page-layout: full
-title-block-banner: false
-comments: false
 ---
+I am Lead Organizer and Instructor at [CHIRAL Bangladesh](https://chiralbd.org/), developed and delivered curriculum, organized workshops and hands-on sessions, mentored participants, evaluated performance. Below you can find a list of my courses and workshops. 
+
+
+## Cancer Bioinformatics 
+::: {layout-ncol=2}
+{{< video https://youtu.be/D6jEeuxZDGU?si=1gL22eVp2oRgAlsL >}}
+
+{{< video https://youtu.be/tdrE9vBv5_M?si=RQttOuETqT-Nk5UY >}}
+
+{{< video https://youtu.be/Kwf_zJ_N_Mo?si=bjLbPCKlAgSOS730 >}}
+
+{{< video https://youtu.be/xaql1cXTn0A?si=auyf0Wal1ysf_OYL >}}
+
+:::
+
+
+## R for Research 
+
+::: {layout-ncol=2}
+{{< video https://youtu.be/WiboyIkAFqo?si=MXq8fSH2Ykf93Ome >}}
+
+{{< video https://youtu.be/Zb_bgEcW9gk?si=CET9jGx2SdgTfAK8 >}}
+
+{{< video https://youtu.be/lLNEfn3eLY8?si=_H_Vwu-uJ6FOFtfw >}}
+
+{{< video https://youtu.be/g9BhM5LuXcE?si=JqzA0HBsekbnMxpt >}}
+
+{{< video https://youtu.be/PDPmsgo82hE?si=osYZpX1woOMhA5eJ >}}
+
+{{< video https://youtu.be/DBESvQjhslw?si=6Ve9LW-jX-s1otvn >}}
+
+{{< video https://youtu.be/Lu7utop2QJA?si=vqTbArNVbD0WRMsb >}}
+
+{{< video https://youtu.be/JcaGBHQGAWs?si=v-pqFI_bxi3RUAjF >}}
+
+:::
+
+
+
+## Bioinformatics BootCamp
+- **June 15, 2023 - August 3, 2023**. 
+*Bioinformatics BootCamp 1.0*
+at [Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh](https://chiralbd.org/bigbio-lab/).
+[Contents](https://docs.google.com/spreadsheets/d/1cSFujIb7EDt99mwYSzvizozX_off8jcb/edit?usp=sharing&ouid=105827344756324006071&rtpof=true&sd=true){.btn .btn-outline-primary .btn role="button" .btn-page-header .btn-xs}
+
+
+- **August 8, 2023 - August 26, 2023**. 
+*Bioinformatics BootCamp 2.0*
+at [Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh](https://chiralbd.org/bigbio-lab/).
+[Contents](https://docs.google.com/spreadsheets/d/1JHtlILH98Q0jN8N5lJdSCLNKSnhwCVk4lw0mKDOd6Qw/edit?usp=sharing){.btn .btn-outline-primary .btn role="button" .btn-page-header .btn-xs}
+
+- **October 20, 2023 - November 9, 2023**. 
+*Bioinformatics BootCamp 3.0*
+at [Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh](https://chiralbd.org/bigbio-lab/).
+[Contents](https://docs.google.com/spreadsheets/d/1dnr7e41BTTHlPonTtKAaeL6MNWincJ-0HcAX-eH6Uvw/edit?usp=sharing){.btn .btn-outline-primary .btn role="button" .btn-page-header .btn-xs}
+
+- **January 25, 2024 - February 12, 2024**. 
+*Bioinformatics BootCamp 4.0*
+at [Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh](https://chiralbd.org/bigbio-lab/).
+[Contents](https://docs.google.com/spreadsheets/d/1M9ezaQlKAMBE1KhlkK-YjMYG_dohv3yTLy9S1kfe8JM/edit?usp=sharing){.btn .btn-outline-primary .btn role="button" .btn-page-header .btn-xs}
+
+- **January 25, 2024 - February 12, 2024**. 
+*Bioinformatics BootCamp 5.0*
+at [Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh](https://chiralbd.org/bigbio-lab/).
+[Contents](https://docs.google.com/spreadsheets/d/1SbjK60CsHeDyhMV6MeM82qvWWtXSOPAvgd8E9W3SRW8/edit?usp=sharing){.btn .btn-outline-primary .btn role="button" .btn-page-header .btn-xs}
+
+
+## Cancer Bioinformatics 
+
+- **May 10, 2024 - May 10, 2024**. 
+*Cancer Bioinformatics (Cohort 01)*
+at [Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh](https://chiralbd.org/bigbio-lab/).
+[Contents](https://docs.google.com/spreadsheets/d/1o5Hkx_YqfJF-CatZcRX7_WsXTjLdoQ3C-GFvfY4htDI/edit?usp=sharing){.btn .btn-outline-primary .btn role="button" .btn-page-header .btn-xs}
+
+

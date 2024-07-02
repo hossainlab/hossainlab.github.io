@@ -22,6 +22,7 @@ about:
       href: https://twitter.com/JHossain_28
 
 ---
+
 I am a biomedical researcher with a focus on neuroepidemiology, cancer epidemiology, and cancer bioinformatics. My aim is to maximize the quality of life for individuals by operating at the intersection of education, technology, and health research. Currently, working as a founder and executive director at [CHIRAL Bangladesh](https://chiralbd.org/), a non-profit biomedical research organization dedicated to solving public health problems in Bangladesh. Having studied microbiology, my core research is currently located somewhere between public health and machine learning, with applications in almost all the quantitative sciences.
 
 As a lead instructor at [CHIRAL Training Unit](https://chiralbd.org/), I contribute to the advancement of biomedical data science knowledge and skills by designing and delivering engaging training programs. Through hands-on training and systematic learning, I empower students and professionals to harness the potential of AI in healthcare applications. Additionally, I am also working as a health data analysis instructor at [cBLAST, University of Dhaka](https://www.cblastdu.xyz/). 
