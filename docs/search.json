@@ -1339,9 +1339,9 @@
   {
     "objectID": "research/index.html",
     "href": "research/index.html",
-    "title": "Somatic Mutation Analysis",
+    "title": "Smartphones and Wearables for Cardiovascular Health",
     "section": "",
-    "text": "Deep learning, a subset of machine learning with neural networks of multiple layers, has revolutionized neuroepidemiology. By leveraging extensive datasets, it uncovers complex patterns in neurological data—like MRI scans and genetics—to pinpoint disease biomarkers, forecast progression, and assess interventions. This enhances predictive accuracy and supports personalized medicine, tailoring treatments based on individual neurological traits. Integrating deep learning aims to refine our grasp of neurological conditions, advancing precise and effective therapeutic strategies informed by comprehensive big data analysis."
+    "text": "Smartphones and Wearables for Cardiovascular Health\nGithub\nThe Mobile and Wearable Health Monitoring System (MW-HMS) is a proposed initiative to leverage data from smartphones and wearable devices to improve the understanding and management of cardiovascular health in Bangladesh. This project aims to merge personal monitoring data with existing health datasets to provide a comprehensive overview of cardiovascular health trends and risk factors within the population.\nThe MW-HMS project aims to revolutionize cardiovascular health management in Bangladesh by using cutting-edge technology and community engagement to provide timely and accurate health insights. This approach will not only enhance individual health outcomes but also improve public health strategies, significantly boosting the health system’s capacity to manage and prevent cardiovascular diseases.\n\n\nStroke Data Science Catalyst: Stroke Prevention and Management Data Initiative (SPMDI)\nGithub\nThe Stroke Prevention and Management Data Initiative (SPMDI) is a proposed five-year collaborative research project in Bangladesh aimed at enhancing stroke prevention and treatment through the strategic use of health data. The initiative plans to integrate real-world data from hospitals, general practitioners, and pharmacies to thoroughly analyze stroke risk factors unique to the Bangladeshi population and develop customized interventions.\nThe SPMDI aims to diminish the incidence and effects of stroke in Bangladesh by providing actionable insights into prevention and management, ultimately enhancing the quality of life for individuals at risk and improving the overall healthcare landscape.\n\n\nDengue Early Warning System for Bangladesh ( DEWS-BD)\nGithub\n\nDEWS-BD is an advanced early warning system designed to predict and mitigate dengue outbreaks in Bangladesh. By leveraging data science and machine learning techniques, DEWS-BD aims to provide accurate and timely predictions, enabling public health officials and policymakers to take proactive measures in combating dengue.\nThis project is ongoing and continuously updated to incorporate new data sources and improve prediction accuracy.\nWe would like to acknowledge the following organizations for their invaluable support and contributions to the DEWS-BD project:\n\nBangladesh Meteorological Department (BMD): For providing the crucial meteorological data that underpins our predictive models and enables accurate forecasting of dengue outbreaks.\nDirectorate General of Health Services (DGHS): For supplying the dengue case data, which is essential for training and validating our machine learning models and ensuring the reliability of our predictions.\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "research/index.html#ai-for-neuroepidemiology",
@@ -2007,5 +2007,145 @@
     "title": "What I Use",
     "section": "Teaching Tools",
     "text": "Teaching Tools\n\nBioicons - a collection of free drawings and diagrams on biological topics, which can be used in teaching (or research) presentations.\nlearnr - R package that allows development of interactive web-based R tutorials.\nFeedback at scale - tutorial for using learnr and gradethis as teaching tools.\nTeaching Statistics and Data Science Online - materials for several teacher workshops taught by Mine Çetinkaya-Rundel."
+  },
+  {
+    "objectID": "research/index.html#overview",
+    "href": "research/index.html#overview",
+    "title": "Smartphones and Wearables for Cardiovascular Health",
+    "section": "",
+    "text": "The Mobile and Wearable Health Monitoring System (MW-HMS) is a proposed initiative to leverage data from smartphones and wearable devices to improve the understanding and management of cardiovascular health in Bangladesh. This project aims to merge personal monitoring data with existing health datasets to provide a comprehensive overview of cardiovascular health trends and risk factors within the population."
+  },
+  {
+    "objectID": "research/index.html#potential-collaborative-partners",
+    "href": "research/index.html#potential-collaborative-partners",
+    "title": "Smartphones and Wearables for Cardiovascular Health",
+    "section": "",
+    "text": "National Heart Foundation Hospital and Research Institute\nBangladesh University of Engineering and Technology (BUET), Department of Biomedical Engineering\nCHIRAL Bangladesh (for data analytics and project management)"
+  },
+  {
+    "objectID": "research/index.html#goals-and-objectives",
+    "href": "research/index.html#goals-and-objectives",
+    "title": "Smartphones and Wearables for Cardiovascular Health",
+    "section": "",
+    "text": "Data Integration: Develop a system that combines data from mobile and wearable devices with electronic health records.\nPublic and Patient Engagement: Engage the public and patients actively in project development and implementation to ensure transparency and build trust.\nRisk Factor Analysis and Prediction: Use integrated data to identify risk factors and predict cardiovascular events to enhance prevention and early intervention efforts.\nPolicy and Health System Impact: Provide policymakers and healthcare providers with data-driven insights to refine cardiovascular health strategies and policies."
+  },
+  {
+    "objectID": "research/index.html#methodology",
+    "href": "research/index.html#methodology",
+    "title": "Smartphones and Wearables for Cardiovascular Health",
+    "section": "",
+    "text": "Data Collection: Utilize smartphones and wearable devices to collect passive data (e.g., heart rate, activity levels) and active data (e.g., dietary inputs, symptom tracking).\nData Security and Ethics: Implement robust data protection measures and ethical guidelines to manage privacy concerns and ensure compliance with national and international standards.\nAnalytical Framework: Apply advanced data analytics and machine learning techniques to analyze health trends and develop predictive models.\nCommunity Engagement: Conduct workshops, webinars, and surveys to engage with the public and solicit their input and feedback on the use of personal monitoring data in health research."
+  },
+  {
+    "objectID": "research/index.html#expected-outcomes",
+    "href": "research/index.html#expected-outcomes",
+    "title": "Smartphones and Wearables for Cardiovascular Health",
+    "section": "",
+    "text": "Comprehensive Health Monitoring Platform: A real-time platform that offers a holistic view of an individual’s cardiovascular health, enabling proactive health management.\nEnhanced Predictive Models: More accurate predictive models for cardiovascular diseases using real-time data, leading to improved preventive care and management.\nCommunity Trust and Engagement: A strong framework for public engagement and trust in the use of personal health data, supported by transparent practices and consistent communication.\nInformed Healthcare Policies: Insights from data that can guide national health policies, resource allocation, and optimize cardiovascular health interventions."
+  },
+  {
+    "objectID": "research/index.html#funding-and-support",
+    "href": "research/index.html#funding-and-support",
+    "title": "Smartphones and Wearables for Cardiovascular Health",
+    "section": "",
+    "text": "The project seeks funding from national health ministries, international health organizations, and private sector technology partners. Collaboration with global health data initiatives will be pursued to gain additional expertise and resources."
+  },
+  {
+    "objectID": "research/index.html#impact",
+    "href": "research/index.html#impact",
+    "title": "Smartphones and Wearables for Cardiovascular Health",
+    "section": "",
+    "text": "The MW-HMS project aims to revolutionize cardiovascular health management in Bangladesh by using cutting-edge technology and community engagement to provide timely and accurate health insights. This approach will not only enhance individual health outcomes but also improve public health strategies, significantly boosting the health system’s capacity to manage and prevent cardiovascular diseases."
+  },
+  {
+    "objectID": "research/index.html#overview-1",
+    "href": "research/index.html#overview-1",
+    "title": "Smartphones and Wearables for Cardiovascular Health",
+    "section": "Overview",
+    "text": "Overview\nThe Stroke Prevention and Management Data Initiative (SPMDI) is a proposed five-year collaborative research project in Bangladesh aimed at enhancing stroke prevention and treatment through the strategic use of health data. The initiative plans to integrate real-world data from hospitals, general practitioners, and pharmacies to thoroughly analyze stroke risk factors unique to the Bangladeshi population and develop customized interventions."
+  },
+  {
+    "objectID": "research/index.html#potential-collaborative-partners-1",
+    "href": "research/index.html#potential-collaborative-partners-1",
+    "title": "Smartphones and Wearables for Cardiovascular Health",
+    "section": "Potential Collaborative Partners",
+    "text": "Potential Collaborative Partners\n\nBangladesh Health Research Council (BHRC) - Possible research oversight and regulatory support.\nNational Institute of Neurosciences & Hospital, Dhaka - Potential clinical data provider and research collaborator.\nBangladesh Biotechnology Research Institute - Prospective collaborator for biotechnological and genetic studies.\nCHIRAL Bangladesh - Considered as a key partner for data analytics and research dissemination."
+  },
+  {
+    "objectID": "research/index.html#goals-and-objectives-1",
+    "href": "research/index.html#goals-and-objectives-1",
+    "title": "Smartphones and Wearables for Cardiovascular Health",
+    "section": "Goals and Objectives",
+    "text": "Goals and Objectives\n\nIdentify Local and Regional Stroke Risk Factors: Analyze health data to pinpoint prevalent risk factors in Bangladesh, such as dietary patterns, genetic predispositions, and environmental factors.\nDevelop Predictive Models: Construct machine learning models to predict stroke risks, enabling proactive intervention strategies.\nEnhance Stroke Prevention Strategies: Work alongside public health officials to execute effective prevention programs that address the identified risk factors.\nImprove Stroke Management and Rehabilitation: Use research findings to enhance protocols for acute stroke management and long-term rehabilitation services.\nCommunity Engagement and Education: Promote awareness and education programs involving stroke survivors, healthcare providers, and the public to foster preventive measures."
+  },
+  {
+    "objectID": "research/index.html#methodology-1",
+    "href": "research/index.html#methodology-1",
+    "title": "Smartphones and Wearables for Cardiovascular Health",
+    "section": "Methodology",
+    "text": "Methodology\n\nData Collection: Collaborate with hospitals, clinics, and pharmacies to gather de-identified patient data including demographics, medical histories, lifestyle factors, and treatment outcomes.\nData Security and Ethics: Securely store and access all data within Trusted Research Environments to uphold privacy and adhere to ethical standards.\nAnalytical Framework: Employ advanced data analytics, such as statistical analyses and machine learning algorithms, to detect patterns and predictive factors of stroke.\nStakeholder Involvement: Engage patients, healthcare professionals, and community leaders throughout the research process to ensure findings are relevant and actionable."
+  },
+  {
+    "objectID": "research/index.html#expected-outcomes-1",
+    "href": "research/index.html#expected-outcomes-1",
+    "title": "Smartphones and Wearables for Cardiovascular Health",
+    "section": "Expected Outcomes",
+    "text": "Expected Outcomes\n\nComprehensive Stroke Risk Profile: In-depth analysis identifying both major and minor risk factors for stroke in Bangladesh.\nTargeted Prevention Programs: Implementation of regional-specific stroke prevention initiatives based on discovered risk factors.\nEnhanced Patient Outcomes: Improved treatment and rehabilitation protocols informed by current research.\nPolicy Recommendations: Policy proposals for healthcare providers and policymakers derived from the research insights."
+  },
+  {
+    "objectID": "research/index.html#funding-and-support-1",
+    "href": "research/index.html#funding-and-support-1",
+    "title": "Smartphones and Wearables for Cardiovascular Health",
+    "section": "Funding and Support",
+    "text": "Funding and Support\nThe initiative seeks funding from international health organizations, local government, and private sector partnerships to support sustainable and impactful research. Additional collaboration for expertise and resource sharing will be pursued with global initiatives like the Stroke Data Science Catalyst in the UK."
+  },
+  {
+    "objectID": "research/index.html#impact-1",
+    "href": "research/index.html#impact-1",
+    "title": "Smartphones and Wearables for Cardiovascular Health",
+    "section": "Impact",
+    "text": "Impact\nThe SPMDI aims to diminish the incidence and effects of stroke in Bangladesh by providing actionable insights into prevention and management, ultimately enhancing the quality of life for individuals at risk and improving the overall healthcare landscape."
+  },
+  {
+    "objectID": "research/index.html#project-overview",
+    "href": "research/index.html#project-overview",
+    "title": "Smartphones and Wearables for Cardiovascular Health",
+    "section": "Project Overview",
+    "text": "Project Overview\nDEWS-BD is an advanced early warning system designed to predict and mitigate dengue outbreaks in Bangladesh. By leveraging data science and machine learning techniques, DEWS-BD aims to provide accurate and timely predictions, enabling public health officials and policymakers to take proactive measures in combating dengue."
+  },
+  {
+    "objectID": "research/index.html#key-features",
+    "href": "research/index.html#key-features",
+    "title": "Smartphones and Wearables for Cardiovascular Health",
+    "section": "Key Features",
+    "text": "Key Features\n\nLocalized Data Analysis: Tailored to handle and analyze data specific to the climatic and demographic conditions of Bangladesh.\nIntegration with Health Systems: Designed to seamlessly integrate with Bangladesh’s health infrastructure for real-time data updates.\nPredictive Analytics: Utilizes machine learning models to predict dengue outbreaks and identify high-risk areas.\nUser-Friendly Interface: Provides an intuitive interface for health professionals to access and interpret data."
+  },
+  {
+    "objectID": "research/index.html#objectives",
+    "href": "research/index.html#objectives",
+    "title": "Smartphones and Wearables for Cardiovascular Health",
+    "section": "Objectives",
+    "text": "Objectives\nThe primary objectives of the DEWS-BD project are: - To develop a reliable and scalable early warning system for dengue outbreaks. - To integrate multiple data sources, including climatic data, mosquito population data, and health records, for comprehensive analysis. - To employ machine learning algorithms for accurate prediction of dengue outbreaks. - To provide actionable insights for public health officials and policymakers to prevent and control dengue outbreaks."
+  },
+  {
+    "objectID": "research/index.html#methods",
+    "href": "research/index.html#methods",
+    "title": "Smartphones and Wearables for Cardiovascular Health",
+    "section": "Methods",
+    "text": "Methods\nThe DEWS-BD project utilizes a combination of data collection, preprocessing, and machine learning techniques to achieve its objectives. Key methodologies include: - Data Collection: Aggregating data from various sources such as weather reports, mosquito surveillance data, and hospital records. - Data Preprocessing: Cleaning and transforming the data to ensure quality and consistency. - Machine Learning: Implementing algorithms such as logistic regression, random forests, and neural networks for outbreak prediction. - Validation: Evaluating the performance of the models using metrics like accuracy, precision, recall, and the F1 score."
+  },
+  {
+    "objectID": "research/index.html#dews-bd-interface",
+    "href": "research/index.html#dews-bd-interface",
+    "title": "Smartphones and Wearables for Cardiovascular Health",
+    "section": "DEWS-BD Interface",
+    "text": "DEWS-BD Interface\n\nThis project is ongoing and continuously updated to incorporate new data sources and improve prediction accuracy."
+  },
+  {
+    "objectID": "research/index.html#acknowledgements",
+    "href": "research/index.html#acknowledgements",
+    "title": "Smartphones and Wearables for Cardiovascular Health",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\nWe would like to acknowledge the following organizations for their invaluable support and contributions to the DEWS-BD project:\n\nBangladesh Meteorological Department (BMD): For providing the crucial meteorological data that underpins our predictive models and enables accurate forecasting of dengue outbreaks.\nDirectorate General of Health Services (DGHS): For supplying the dengue case data, which is essential for training and validating our machine learning models and ensuring the reliability of our predictions."
   }
 ]
