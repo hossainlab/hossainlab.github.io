@@ -43,6 +43,32 @@ at [Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh](https://chiralbd.org
 
 # YouTube 
 
+## Machine Learning for Bioinformatics
+
+::: {layout-ncol=2}
+{{< video https://youtu.be/GHhojes3r1I?feature=shared >}}
+
+{{< video https://youtu.be/SB3iAEuea1g?feature=shared >}}
+
+{{< video https://youtu.be/HIXa9n1eWIM?feature=shared >}}
+
+{{< video https://youtu.be/0x6peaQWCME?feature=shared >}}
+
+{{< video https://youtu.be/hKoYa2lr5hI?feature=shared >}}
+
+{{< video https://youtu.be/RtCbHy6E5Ww?feature=shared >}}
+
+{{< video https://youtu.be/6wdDKmWgLBg?feature=shared >}}
+
+{{< video https://youtu.be/Cx2I8IDdVNI?feature=shared >}}
+
+{{< video https://youtu.be/uF16MEcOygU?feature=shared >}}
+
+{{< video https://youtu.be/Vjk4YE3d1WM?feature=shared >}}
+
+:::
+
+
 ## Cancer Bioinformatics 
 ::: {layout-ncol=2}
 {{< video https://youtu.be/D6jEeuxZDGU?si=1gL22eVp2oRgAlsL >}}

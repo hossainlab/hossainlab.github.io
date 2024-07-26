@@ -1367,7 +1367,7 @@
   {
     "objectID": "teaching/index.html",
     "href": "teaching/index.html",
-    "title": "",
+    "title": "YouTube",
     "section": "",
     "text": "I am Lead Organizer and Instructor at CHIRAL Bangladesh, developed and delivered curriculum, organized workshops and hands-on sessions, mentored participants, evaluated performance. Below you can find a list of my courses and workshops."
   },
@@ -1955,30 +1955,30 @@
   {
     "objectID": "teaching/index.html#bioinformatics-bootcamp",
     "href": "teaching/index.html#bioinformatics-bootcamp",
-    "title": "",
+    "title": "YouTube",
     "section": "Bioinformatics BootCamp",
     "text": "Bioinformatics BootCamp\n\nJune 15, 2023 - August 3, 2023. Bioinformatics BootCamp 1.0 at Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh. Contents\nAugust 8, 2023 - August 26, 2023. Bioinformatics BootCamp 2.0 at Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh. Contents\nOctober 20, 2023 - November 9, 2023. Bioinformatics BootCamp 3.0 at Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh. Contents\nJanuary 25, 2024 - February 12, 2024. Bioinformatics BootCamp 4.0 at Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh. Contents\nJanuary 25, 2024 - February 12, 2024. Bioinformatics BootCamp 5.0 at Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh. Contents"
   },
   {
     "objectID": "teaching/index.html#cancer-bioinformatics",
     "href": "teaching/index.html#cancer-bioinformatics",
-    "title": "",
+    "title": "YouTube",
     "section": "Cancer Bioinformatics",
-    "text": "Cancer Bioinformatics"
+    "text": "Cancer Bioinformatics\n\nMay 10, 2024 - May 10, 2024. Cancer Bioinformatics (Cohort 01) at Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh. Contents"
   },
   {
     "objectID": "teaching/index.html#r-for-research",
     "href": "teaching/index.html#r-for-research",
-    "title": "",
+    "title": "YouTube",
     "section": "R for Research",
     "text": "R for Research"
   },
   {
     "objectID": "teaching/index.html#cancer-bioinformatics-1",
     "href": "teaching/index.html#cancer-bioinformatics-1",
-    "title": "",
+    "title": "YouTube",
     "section": "Cancer Bioinformatics",
-    "text": "Cancer Bioinformatics\n\nMay 10, 2024 - May 10, 2024. Cancer Bioinformatics (Cohort 01) at Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh. Contents"
+    "text": "Cancer Bioinformatics"
   },
   {
     "objectID": "use/index.html",
@@ -2147,5 +2147,12 @@
     "title": "Smartphones and Wearables for Cardiovascular Health",
     "section": "Acknowledgements",
     "text": "Acknowledgements\nWe would like to acknowledge the following organizations for their invaluable support and contributions to the DEWS-BD project:\n\nBangladesh Meteorological Department (BMD): For providing the crucial meteorological data that underpins our predictive models and enables accurate forecasting of dengue outbreaks.\nDirectorate General of Health Services (DGHS): For supplying the dengue case data, which is essential for training and validating our machine learning models and ensuring the reliability of our predictions."
+  },
+  {
+    "objectID": "teaching/index.html#machine-learning-for-bioinformatics",
+    "href": "teaching/index.html#machine-learning-for-bioinformatics",
+    "title": "YouTube",
+    "section": "Machine Learning for Bioinformatics",
+    "text": "Machine Learning for Bioinformatics"
   }
 ]
