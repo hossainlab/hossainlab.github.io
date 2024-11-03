@@ -3,7 +3,7 @@ pagetitle: "Home | Jubayer Hossain"
 title: "Md. Jubayer Hossain"
 subtitle: "Health Data Science Enthusiast"
 page-layout: full
-image: files/profiles/profile.jpg
+image: files/profiles/jhossain.jpg
 about:
   id: hero-heading
   template: trestles
