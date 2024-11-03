@@ -31,38 +31,30 @@ Thalassemia among Public University Students in Bangladesh. Microbial Bioactives
 
 
 # Under Review
-
--  Hossain, M.J., Shahariar, M., Barsha, LHJ. Shahjahan, M., Towhid, ST., Sheikh, MK., Hasan, MM., Rahman, MH., Sazid, MS.(2024). Lack of knowledge and training about antibiotic resistance among community pharmacists in Bangladesh: a cross-sectional study.Preprints 2024, <https://www.researchsquare.com/article/rs-4344597/v1>(SubmittedtoScientificRe
-ports)
+-  Hossain, M.J., Shahariar, M., Barsha, LHJ. Shahjahan, M., Towhid, ST., Sheikh, MK., Hasan, MM., Rahman, MH., Sazid, MS.(2024). Lack of knowledge and training about antibiotic resistance among community pharmacists in Bangladesh: a cross-sectional study. (Submitted to Health Science Reports)
 
 - Akter, MM., **Hossain, M.J.**(2023).Food consumption patterns and sedentary behaviours among the university students: a cross-sectional study. <http://dx.doi.org/10.21203/rs.3.rs-3207448/v1> (Submitted to Health Science Reports)
 
 - **Hossain, M.J.**, Das, M.,Shahjahan, M.,Islam, M.W., Towhid, S.T.(2022).Clinical and hematological manifestation of dengue patients in 2022 outbreak: A tertiary care hospital-based study.(Submitted to Health Science Reports)
 
-- Munmun, RN., Bapon, PS., **Hossain, M.J.**, Das, Hasan, MK., Towhid, S.T.(2023).Detection of DEN2 NS1 Antigen and Pre-fibrinogen in Patient Serum Using ELISA from Dhaka Medical College and Hospital, Bangladesh. (Submitted to Health Science Reports)
-
-- Akter, S., M., Islam, M. W., Shahjahan., Faria, F.T.J.,(2023).**Hossain, M.J.** Structural and Functional Analysis of Hypothetical Protein HG570_03930 of Helicobacter Pylori: An In-Silico Approach. (Submitted to Genomics \& Informatics)
-
-- Rafa, S., Kundu, P., Rashid, R., Bhuiyan, H., Mahima, F.F., Sarker, T., **Hossain, M.J.**(2023). In-Silico Structural and Functional Annotation of Hypothetical Protein MPF87_06725 of Helicobacter pylori.(Submitted to Genomics \& Informatics)
-
-- Ambia, S., Ahmed, M.Z., Faria, F.T.J., Karim, K., Fuad, M., **Hossain, M.J.**(2023). Prediction of Structure &amp; Function of Helicobacter Pylori hypothetical protein MPG40_02440: An In-Silico approach. (Submitted to Genomics \& Informatics)
-
-- Akter, S., M., Rahman, T., Rahman., R.U., Afsari, S., Ferdous, J., Billah, M. R., **Hossain, M.J.**(2023). In-Silico Structural and Functional Annotation of Hypothetical Glycosyltransferase Protein. (Submitted to Genomics \& Informatics)
-  
-- **Hossain, M.J.**, Das, M., Maruf, M.F., Akter, M.M., Towhid, S.T. (2023). Safe Marriage for Thalassemia Prevention: The Gap Between Knowledge and Practices among Bangladeshi University Students. <https://www.researchsquare.com/article/rs-3801245/v1> (Submitted to Scientific Reports)
-
-
 - **Hossain, M.J.**, Das, M. Improving access to care and treatment for Hirayama patients in Bangladesh: a call for action (Submitted to Orphanet Journal of Rare Diseases)
 
-- **Hossain, M.J.** Urgent Need for Policy Action to Address the Rising Cancer Burden in Bangladesh (Submitted to BJC Reports)
+- Ahmed, M.Z., Billah, M.M., Ferdous, J., Antar, S.I., Mamun, A.A., **Hossain, M.J.** (2024). The role of CCT5 in human tumors: a pan-cancer analysis. (Submitted to Scientific Reports)
 
-- **Hossain, M.J.**, Shahjahan, M., Hasan, MM. Two out of five babies are born through c-section in Bangladesh: an urgent call for healthcare policy reforms. <https://www.researchsquare.com/article/rs-3936712/v1> (Submitted to BMC Pregnancy and Childbirth)
+- Islam, M.W., Fariha, F.T.J., Ahmed, M.Z., Ferdous, J., Lota, H.B., Hossain, M.S., Kundu, P., Shahjahan, M., **Hossain, M.J.** (2024). Differential Expression and Prognostic Significance of CDK1 and CDK6 in Breast Cancer: A Multi-Omics Approach. (Submitted to Heliyon)
+
+- Akter, M.M., Sakib, M.N., Bhuiyan, Z.R., Hossen, I., Paul, A., Limon, M.H., Munny, F.A., Tisha, A.T., Imita, R.T., Mehjabin, K., Bethi, K.B., Yusuf, S., Banik, P.C., Hossain, M.J. (2024). Eating disorders and associated mental health problems among the students at selected schools and colleges in Dhaka city, Bangladesh. (Submitted to The Lancent Child and Adolescent Health)
+
+
+
+
+
+
+
 
 
 
 # In Preparation
-
-- **Hossain, M.J.**,Shahariar, M., Barsha, L.H, Sheikh, M.K, Towhid, S.T. (2023). Lack of knowledge and training about antibiotic resistance among community pharmacists  
 
 - **Hossain, M.J.**, Azad, A.K, Sammo, A.S.(2023). A KAP Study on the Impact of C‑section on Infant Gut Microbiota among Public University Students in Bangladesh 
 
