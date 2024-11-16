@@ -1,0 +1,30 @@
+---
+pagetitle: "Home | Jubayer Hossain"
+title: "Md. Jubayer Hossain"
+subtitle: "Health Data Science Enthusiast"
+page-layout: full
+image: files/profiles/jhossain.jpg
+about:
+  id: hero-heading
+  template: trestles
+  image-shape: round
+  image-width: 8cm
+  links:
+    - icon: envelope 
+      href: mailto:contact.jubayerhossain@gmail.com 
+    - icon: linkedin
+      href: https://www.linkedin.com/in/hossainmj/
+    - text: "{{< fa graduation-cap >}}"
+      href: https://scholar.google.com/citations?user=9_K4ekoAAAAJ&hl=en&authuser=5
+    - icon: github
+      href: https://github.com/hossainlab
+    - icon: twitter
+      href: https://twitter.com/JHossain_28
+
+---
+
+I am a biomedical researcher with a focus on neuroepidemiology, cancer epidemiology, and cancer bioinformatics. My aim is to maximize the quality of life for individuals by operating at the intersection of education, technology, and health research. Currently, working as a founder and executive director at [CHIRAL Bangladesh](https://chiralbd.org/), a non-profit biomedical research organization dedicated to solving public health problems in Bangladesh. Having studied microbiology, my core research is currently located somewhere between public health and machine learning, with applications in almost all the quantitative sciences.
+
+As a lead instructor at [CHIRAL Training Unit](https://chiralbd.org/), I contribute to the advancement of biomedical data science knowledge and skills by designing and delivering engaging training programs. Through hands-on training and systematic learning, I empower students and professionals to harness the potential of AI in healthcare applications. Additionally, I am also working as a health data analysis instructor at [cBLAST, University of Dhaka](https://www.cblastdu.xyz/). 
+
+In [our lab](https://chiralbd.org/), we are working on a wide range of research topics related to big data in bioinformatics, population health, health data science, and geospatial health. If you are a scientist/student who wants to collaborate with me, a research assistant or collaborator interested in my research, or a student looking for a thesis topic, please [reach out to me](mailto:contact.jubayerhossain@gmail.com)!

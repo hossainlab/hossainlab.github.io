@@ -1,0 +1,19 @@
+---
+pagetitle: "Publications | Jubayer Hossain"
+page-layout: full
+title-block-banner: false
+comments: false
+callout-icon: false
+toc: true 
+---
+
+
+{{< include peer-reviewed.qmd >}}
+
+{{< include under-review.qmd >}}
+
+{{< include working-papers.qmd >}}
+
+{{< include posters.qmd >}}
+
+{{< include orals.qmd >}}

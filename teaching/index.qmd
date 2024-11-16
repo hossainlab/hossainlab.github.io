@@ -1,47 +1,59 @@
 ---
 pagetitle: "Teaching | Jubayer Hossain"
 excerpt: "A list of selected courses of me"
+toc: true
 page-layout: full
 ---
-I am Lead Organizer and Instructor at [CHIRAL Bangladesh](https://chiralbd.org/), developed and delivered curriculum, organized workshops and hands-on sessions, mentored participants, evaluated performance. Below you can find a list of my courses and workshops. 
+# Courses Taught
+In my role as an educator, I have designed and delivered a comprehensive suite of courses that bridge the disciplines of biomedical data science, bioinformatics, machine learning, and public health. These courses are structured to provide students with both a strong theoretical foundation and practical, hands-on experience in utilizing computational tools and data science techniques to address complex health-related challenges.
+The courses I teach are tailored to undergraduate and graduate students, researchers, and professionals across a range of fields, including epidemiology, bioinformatics, public health, and machine learning. The curriculum is designed with a focus on advanced methodologies in data analysis, genomic research, and the application of artificial intelligence to public health and healthcare systems. Students are trained in statistical analysis, programming in R and Python, and the application of machine learning algorithms to real-world health data, with a particular emphasis on areas such as cancer bioinformatics, RNA-Seq analysis, and AI-driven healthcare interventions.
+By fostering a rigorous academic environment, my courses aim to equip students with the skills necessary to navigate and contribute to the rapidly evolving fields of biomedical research and health data science. I strive to promote a deep understanding of these areas while encouraging students to engage critically with the latest technological advancements, thereby preparing them for meaningful careers in research, clinical applications, and technology development.
+
+# Research Methodology and Communication
+
+| **Course Title** | **Syllabus** | **Learning Outcomes** | **Target Audience** |
+|--------------------------------------------|--------------|-----------------------|---------------------|
+| Ethics in Research                         | [Syllabus](https://docs.google.com/spreadsheets/d/1FFVJ6LHVrOKuf3_RwWsainCMb79a4RA0BrRk0BXAVl4/edit?usp=sharing) | Understand ethical principles, guidelines, and regulations in research | Graduate students, researchers |
+| Fundamentals of Health Research            | [Syllabus](https://docs.google.com/spreadsheets/d/1TSrwS7tk_OSfAVnpNp9y406IUSc1XRpoAWteAI7QJPQ/edit?usp=sharing) | Gain foundational knowledge in health research design, methods, and analysis | Public health students, early-career researchers |
+| Mastering Biomedical Data Management       | [Syllabus](https://docs.google.com/spreadsheets/d/1y435AFSICgb1CyILNOF8oJtdnNlDGutYMI2AdrB2DUs/edit?usp=sharing) | Learn data management strategies, from collection to archiving in biomedical research | Biomedical researchers, data managers |
+| Public Health Writing and Communication Skills | [Syllabus](https://docs.google.com/spreadsheets/d/1DW3a9MWiwWWQapry1Z9CwYJV8SxWgVN3Ik1CjMRVo9o/edit?usp=sharing) | Develop effective writing and communication skills for public health research | Public health students, health communication professionals |
 
 
-## Bioinformatics BootCamp
-- **June 15, 2023 - August 3, 2023**. 
-*Bioinformatics BootCamp 1.0*
-at [Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh](https://chiralbd.org/bigbio-lab/).
-[Contents](https://docs.google.com/spreadsheets/d/1cSFujIb7EDt99mwYSzvizozX_off8jcb/edit?usp=sharing&ouid=105827344756324006071&rtpof=true&sd=true){.btn .btn-outline-primary .btn role="button" .btn-page-header .btn-xs}
+# Advanced R & Data Analytics for Biomedical Research
+| **Course Title** | **Syllabus** | **Learning Outcomes** | **Target Audience** |
+|--------------------------------------------------------|--------------|-----------------------|---------------------|
+| R for Research                                        | [Syllabus](https://chiraltraining.github.io/RforResearch/) | Master R for statistical analysis and data visualization in biomedical research | Graduate students, bioinformaticians |
+| Clinical Reporting using R                            | [Syllabus](https://chiraltraining.github.io/ClinicalReportingwithR/) | Learn clinical data reporting techniques using R, including statistical analysis and reporting formats | Healthcare professionals, clinical researchers |
+| Building Dashboard with R                             | [Syllabus](https://chiraltraining.github.io/BuildingDashboardwithR/) | Gain expertise in developing interactive dashboards with R for biomedical data visualization | Data scientists, biomedical researchers |
+| Research Data Analysis with SPSS                      | [Syllabus](https://docs.google.com/spreadsheets/d/18ggqa2uzAqNifCtgs5_q-DWGfl4HiBQtHSi_xp-YCPU/edit?usp=sharing) | Master SPSS for analyzing biomedical research data, focusing on advanced statistical methods | Graduate students, public health researchers |
 
 
-- **August 8, 2023 - August 26, 2023**. 
-*Bioinformatics BootCamp 2.0*
-at [Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh](https://chiralbd.org/bigbio-lab/).
-[Contents](https://docs.google.com/spreadsheets/d/1JHtlILH98Q0jN8N5lJdSCLNKSnhwCVk4lw0mKDOd6Qw/edit?usp=sharing){.btn .btn-outline-primary .btn role="button" .btn-page-header .btn-xs}
 
-- **October 20, 2023 - November 9, 2023**. 
-*Bioinformatics BootCamp 3.0*
-at [Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh](https://chiralbd.org/bigbio-lab/).
-[Contents](https://docs.google.com/spreadsheets/d/1dnr7e41BTTHlPonTtKAaeL6MNWincJ-0HcAX-eH6Uvw/edit?usp=sharing){.btn .btn-outline-primary .btn role="button" .btn-page-header .btn-xs}
-
-- **January 25, 2024 - February 12, 2024**. 
-*Bioinformatics BootCamp 4.0*
-at [Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh](https://chiralbd.org/bigbio-lab/).
-[Contents](https://docs.google.com/spreadsheets/d/1M9ezaQlKAMBE1KhlkK-YjMYG_dohv3yTLy9S1kfe8JM/edit?usp=sharing){.btn .btn-outline-primary .btn role="button" .btn-page-header .btn-xs}
-
-- **January 25, 2024 - February 12, 2024**. 
-*Bioinformatics BootCamp 5.0*
-at [Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh](https://chiralbd.org/bigbio-lab/).
-[Contents](https://docs.google.com/spreadsheets/d/1SbjK60CsHeDyhMV6MeM82qvWWtXSOPAvgd8E9W3SRW8/edit?usp=sharing){.btn .btn-outline-primary .btn role="button" .btn-page-header .btn-xs}
+# Biomedical Data Science & AI Applications in Health
+| **Course Title** | **Syllabus** | **Learning Outcomes** | **Target Audience** |
+|--------------------------------------------------------|--------------|-----------------------|---------------------|
+| Ethics and Governance of Artificial Intelligence for Health | [Syllabus](https://docs.google.com/spreadsheets/d/14RrAx7CEdLzX4qiZGMrWq8Go4s8hC9K-doEQ94EnNUQ/edit?usp=sharing) | Understand the ethical and governance frameworks for AI in healthcare, including privacy, security, and accountability | Graduate students, AI researchers, healthcare professionals |
+| Foundations of Health Data Science                      | [Syllabus](https://docs.google.com/spreadsheets/d/1cTfj2-WQCysFZhlDZjAC6Fdlu230m3YamdlkUG2O5Pw/edit?usp=sharing) | Learn the fundamentals of health data science, including data collection, preprocessing, and basic analytics | Public health students, aspiring data scientists |
+| AI for Public Health                                   | [Syllabus](https://docs.google.com/spreadsheets/d/1djeHlP5mGIAX8ejtq-txRMRd4zw9XvTjvr-pXFoCJS8/edit?usp=sharing) | Apply AI techniques to public health challenges, including disease modeling, surveillance, and policy analysis | Public health researchers, AI practitioners |
+| AI for Climate Change                                  | [Syllabus](https://docs.google.com/spreadsheets/d/17ZLCUsOaZ-QmVX5o4nnM5_v66SCxHI6EQmd1SD3tJxQ/edit?usp=sharing) | Learn to use AI models to analyze and predict the impacts of climate change on public health | Environmental scientists, public health professionals |
+| AI for Disaster Management and Public Health Emergency | [Syllabus](https://docs.google.com/spreadsheets/d/1r0yfgMhtJiSPeBBPG3WVCCjSLhqlDF9WaVfyAG0L2hk/edit?usp=sharing) | Use AI to support disaster management, emergency response, and public health resilience during crises | Public health professionals, disaster management experts |
+| Applied Machine Learning for Healthcare                | [Syllabus](https://docs.google.com/spreadsheets/d/1TysxfuaLRKwiEb_oMnTwprPa-v2wH-dGPJGhT_-Fk2o/edit?usp=sharing) | Gain hands-on experience applying machine learning techniques to healthcare datasets for disease prediction, diagnosis, and treatment optimization | Healthcare data scientists, researchers, machine learning enthusiasts |
 
 
-## Cancer Bioinformatics 
+# Bioinformatics & Machine Learning in Healthcare
+| **Course Title** | **Syllabus** | **Learning Outcomes** | **Target Audience** |
+|------------------------------------------------------|--------------|-----------------------|---------------------|
+| Bioinformatics BootCamp                              | [Syllabus](https://docs.google.com/spreadsheets/d/1rPrnxYFS4LobvvhM7QDzhTjOLyg5fxtIZkg4LDKM4d4/edit?usp=sharing) | Learn basic bioinformatics tools, data processing techniques | Graduate students, researchers new to bioinformatics |
+| Cancer Bioinformatics                                | [Syllabus](https://docs.google.com/spreadsheets/d/1RgOXuXoEtrtvTnjsGs_A0pTLX4BbFAJXPT2V6sflGLw/edit?usp=sharing) | Understand cancer genomics, variant calling, and analysis workflows | Graduate students in cancer research |
+| R for Bioinformatics                                 | [Syllabus](https://chiraltraining.github.io/RforBioinformatics/) | Gain proficiency in using R for bioinformatics tasks, such as sequence analysis | Bioinformatics researchers, R beginners |
+| R for Cancer Bioinformatics                          | [Syllabus](https://bigbiolab.github.io/TCGADataAnalysiswithR/) | Apply R tools for cancer bioinformatics, focusing on mutation analysis and pathways | Cancer researchers, R users |
+| Machine Learning for Bioinformatics                  | [Syllabus](#) | Implement machine learning algorithms for omics data analysis | Data scientists, bioinformaticians |
+| Bulk RNA-Seq Analysis with R                         | [Syllabus](https://docs.google.com/spreadsheets/d/16gVaZGDeoGKixYR1Oa-Zqu03c2cIMAyru9Kx8ThqYLc/edit?usp=sharing) | Analyze bulk RNA-Seq data using R, including differential expression and visualization | Graduate students in genomics, bioinformaticians |
+| Single Cell RNA-Seq Analysis with Python             | [Syllabus](https://docs.google.com/spreadsheets/d/19MdBC6pwi5P6M4yAjtq02VKN2NgnqLD-5gzut5XVths/edit?usp=sharing) | Analyze single-cell RNA-Seq data using Python, focusing on clustering and trajectory analysis | Researchers working with single-cell data |
+| AI for Bioinformatics                                | [Syllabus](https://docs.google.com/spreadsheets/d/1C56Se3WX5UFKbgR9GN0tIt6BwpVC6p1RCicjDmshPzk/edit?usp=sharing) | Apply AI techniques (e.g., deep learning) to bioinformatics problems | Advanced researchers, AI practitioners in life sciences |
 
-- **May 10, 2024 - May 10, 2024**. 
-*Cancer Bioinformatics (Cohort 01)*
-at [Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh](https://chiralbd.org/bigbio-lab/).
-[Contents](https://docs.google.com/spreadsheets/d/1o5Hkx_YqfJF-CatZcRX7_WsXTjLdoQ3C-GFvfY4htDI/edit?usp=sharing){.btn .btn-outline-primary .btn role="button" .btn-page-header .btn-xs}
 
-# YouTube 
+# YouTube Contents 
 
 ## Machine Learning for Bioinformatics
 
@@ -104,7 +116,25 @@ at [Big Bioinformatics Lab (BigBio Lab), CHIRAL Bangladesh](https://chiralbd.org
 :::
 
 
+## RNA-Seq Analysis with R
 
+::: {layout-ncol=2}
+{{< video https://youtu.be/tRNGUINrpls?si=saV2_DuMnLuS14RS >}}
+
+{{< video https://youtu.be/hiDo9JCkdH8?si=4u9t-JF_jUi5K--T >}}
+
+{{< video https://youtu.be/WgH-6gDGoyc?si=pWA-3jRcQQFiJarr >}}
+
+{{< video https://youtu.be/Eps9BtmYRBs?si=b7VM9KGxrQvqlk3M >}}
+
+{{< video https://youtu.be/bdWws0gntMI?si=kEL_SDsSlq44PrjL >}}
+
+{{< video https://youtu.be/QuobIs-VI4E?si=oGmoCrntn7cTyuoE >}}
+
+{{< video https://youtu.be/8tQ0vnXnAIc?si=7Q_DJIOg33SoIWnB >}}
+
+
+:::
 
 
 

@@ -10,7 +10,7 @@ project:
     - "!myresources/"
     - "!renv/"
     - "!certificate*"
-    - "projects"
+    - "!projects_backup"
   resources:
     - "files/"
   preview:
@@ -37,24 +37,24 @@ website:
       left:
         - text: "Home"
           file: index.qmd
+        - text: "About"
+          file: about/index.qmd
         - text: "Projects"
-          href: research/index.qmd
+          href: projects/index.qmd
         - text: "Publications"
           file: publications/index.qmd
         - text: "Talks"
           href: talks/index.qmd
         - text: "Teaching"
           file: teaching/index.qmd
-        - text: "Press"
-          file: press/index.qmd
         - text: "What I Use"
           file: use/index.qmd
         - text: "More"
           menu:
-          - text: "About"
-            file: about/index.qmd
           - text: "Blog"
             file: blog/index.qmd
+          - text: "Press"
+            file: press/index.qmd
           - text: "Newsletter"
             file: https://hossainlab.substack.com
           - text: "Dashboards"

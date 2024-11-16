@@ -9,7 +9,8 @@
       "project_2",
       "pkg_1",
       "pkg_2",
-      "projects"
+      "projects",
+      "research"
     ],
     "talks\\index.qmd": [
       "talk_1",
@@ -121,6 +122,9 @@
     ],
     "publications\\publications.qmd": [
       "publications/*/**.qmd"
+    ],
+    "projects_backup\\index.qmd": [
+      "projects"
     ]
   }
 }

@@ -468,5 +468,44 @@
   },
   "about/index.qmd": {
     "index.html": "6c043a95"
+  },
+  "projects_backup/Early Breast Cancer Detection System/index.qmd": {
+    "index.html": "b379b701"
+  },
+  "projects_backup/data-professionals-survey-report/index.qmd": {
+    "index.html": "70d8ff84"
+  },
+  "projects_backup/dengue-situation-dashboard/index.qmd": {
+    "index.html": "3d514f51"
+  },
+  "projects_backup/health-impact-of-distance-learning-on-high-school-students/index.qmd": {
+    "index.html": "bd704a7a"
+  },
+  "projects_backup/index.qmd": {
+    "index.html": "6b76b861"
+  },
+  "projects_backup/monkeypox-outbreak-insights/index.qmd": {
+    "index.html": "88aafbae"
+  },
+  "projects_backup/nipah-virus/index.qmd": {
+    "index.html": "cffb6b64"
+  },
+  "publications/posters.qmd": {
+    "posters.html": "69b8f41d"
+  },
+  "publications/orals.qmd": {
+    "orals.html": "33146584"
+  },
+  "publications/peer-reviewed.qmd": {
+    "peer-reviewed.html": "7a999c3e"
+  },
+  "publications/under-review.qmd": {
+    "under-review.html": "80999df3"
+  },
+  "publications/working-papers.qmd": {
+    "working-papers.html": "6d1cf446"
+  },
+  "publications/submitted-papers.qmd": {
+    "submitted-papers.html": "5610180e"
   }
 }
