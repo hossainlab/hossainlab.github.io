@@ -39,10 +39,10 @@ website:
           file: index.qmd
         - text: "About"
           file: about/index.qmd
+        - text: "Research"
+          file: research/index.qmd
         - text: "Projects"
           href: projects/index.qmd
-        - text: "Publications"
-          file: publications/index.qmd
         - text: "Talks"
           href: talks/index.qmd
         - text: "Teaching"

@@ -507,5 +507,29 @@
   },
   "publications/submitted-papers.qmd": {
     "submitted-papers.html": "5610180e"
+  },
+  "publications/grants.qmd": {
+    "grants.html": "b699dd83"
+  },
+  "research/grants.qmd": {
+    "grants.html": "8002bae5"
+  },
+  "research/orals.qmd": {
+    "orals.html": "933554e4"
+  },
+  "research/peer-reviewed.qmd": {
+    "peer-reviewed.html": "ad7e7b75"
+  },
+  "research/posters.qmd": {
+    "posters.html": "2ee67c7d"
+  },
+  "research/submitted-papers.qmd": {
+    "submitted-papers.html": "743fb6a2"
+  },
+  "research/under-review.qmd": {
+    "under-review.html": "dbaa9db4"
+  },
+  "research/working-papers.qmd": {
+    "working-papers.html": "c4a59c60"
   }
 }

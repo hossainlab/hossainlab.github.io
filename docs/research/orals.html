@@ -8,7 +8,7 @@
 
 <meta name="description" content="Personal Website for Md. Jubayer Hossain (Learner, Educator and Data Analyst)">
 
-<title>Projects | Jubayer Hossain</title>
+<title>orals</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="..//files/profiles/icon.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -73,74 +71,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: [{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: [],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Projects | Jubayer Hossain">
-<meta property="og:description" content="This part is the same as the Quarto default blog template.">
-<meta name="twitter:title" content="Projects | Jubayer Hossain">
-<meta name="twitter:description" content="This part is the same as the Quarto default blog template.">
-<meta name="twitter:image" content="/files/img/banner.jpg">
-<meta name="twitter:creator" content="@hossainlab">
-<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed">
@@ -164,12 +97,12 @@ window.Quarto = {
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../research/index.html"> 
-<span class="menu-text">Research</span></a>
+    <a class="nav-link" href="../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../projects/index.html" aria-current="page"> 
-<span class="menu-text">Projects</span></a>
+    <a class="nav-link" href="../research/index.html"> 
+<span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../talks/index.html"> 
@@ -268,42 +201,22 @@ window.Quarto = {
 
 
 
-<section id="smartphones-and-wearables-for-cardiovascular-health" class="level1">
-<h1>Smartphones and Wearables for Cardiovascular Health</h1>
-<p><a href="https://github.com/hdslbd/MW-HMS" class="btn btn-outline-primary btn-page-header btn-xs" role="button">View on Github</a></p>
-<p>The Mobile and Wearable Health Monitoring System (MW-HMS) is a proposed initiative to leverage data from smartphones and wearable devices to improve the understanding and management of cardiovascular health in Bangladesh. This project aims to merge personal monitoring data with existing health datasets to provide a comprehensive overview of cardiovascular health trends and risk factors within the population.</p>
-<p>The MW-HMS project aims to revolutionize cardiovascular health management in Bangladesh by using cutting-edge technology and community engagement to provide timely and accurate health insights. This approach will not only enhance individual health outcomes but also improve public health strategies, significantly boosting the health system’s capacity to manage and prevent cardiovascular diseases.</p>
-</section>
-<section id="stroke-data-science-catalyst-stroke-prevention-and-management-data-initiative-spmdi" class="level1">
-<h1>Stroke Data Science Catalyst: Stroke Prevention and Management Data Initiative (SPMDI)</h1>
-<p><a href="https://github.com/hdslbd/SPMDI" class="btn btn-outline-primary btn-page-header btn-xs" role="button">Github</a></p>
-<p>The Stroke Prevention and Management Data Initiative (SPMDI) is a proposed five-year collaborative research project in Bangladesh aimed at enhancing stroke prevention and treatment through the strategic use of health data. The initiative plans to integrate real-world data from hospitals, general practitioners, and pharmacies to thoroughly analyze stroke risk factors unique to the Bangladeshi population and develop customized interventions.</p>
-<p>The SPMDI aims to diminish the incidence and effects of stroke in Bangladesh by providing actionable insights into prevention and management, ultimately enhancing the quality of life for individuals at risk and improving the overall healthcare landscape.</p>
-</section>
-<section id="dengue-early-warning-system-for-bangladesh-dews-bd" class="level1">
-<h1>Dengue Early Warning System for Bangladesh ( DEWS-BD)</h1>
-<p><a href="https://github.com/hdslbd/DEWS-BD" class="btn btn-outline-primary btn-page-header btn-xs" role="button">Github</a></p>
-<p><img src="dengue-ews.png" class="img-fluid"></p>
-<p>DEWS-BD is an advanced early warning system designed to predict and mitigate dengue outbreaks in Bangladesh. By leveraging data science and machine learning techniques, DEWS-BD aims to provide accurate and timely predictions, enabling public health officials and policymakers to take proactive measures in combating dengue.</p>
-<p>This project is ongoing and continuously updated to incorporate new data sources and improve prediction accuracy.</p>
-<p>We would like to acknowledge the following organizations for their invaluable support and contributions to the DEWS-BD project:</p>
-<ul>
-<li><strong>Bangladesh Meteorological Department (BMD):</strong> For providing the crucial meteorological data that underpins our predictive models and enables accurate forecasting of dengue outbreaks.</li>
-<li><strong>Directorate General of Health Services (DGHS):</strong> For supplying the dengue case data, which is essential for training and validating our machine learning models and ensuring the reliability of our predictions.</li>
-</ul>
-
+<section id="oral-presentations" class="level1">
+<h1>Oral Presentations</h1>
+<p>List of ora presentations at national and international conferences delivered by my team.<br>
+<sup>+</sup>Indicates a presenter, <sup>‡</sup>Indicates a co-author, and <sup>*</sup>Indicates a corresponding author.</p>
+<ol type="1">
+<li><p><sup>+</sup>Tuhin, M.A.A., Mim, N.A., Akter, N., Jamal, F., Sakib, M.N., Mehjabin, K., <sup>‡,<em></em></sup><em><strong>Hossain, M.J.</strong> (2024). Exploring the Factors Influencing Heat Stress Risks Using the Discomfort Index Method in Bangladesh. </em>International Conference on Environmental Science and Resource Management 2024 (ICESRM 2024)*, Department of Environmental Science and Resource Management, Mawlana Bhashani Science and Technology University, Bangladesh.</p></li>
+<li><p>Mim, N.A., Akter, <sup>+</sup>Tuhin, M.A.A., Hossain, S., Alam, K.E., Mouli, N.J., <sup>‡,<em></em></sup><em><strong>Hossain, M.J.</strong> (2024). Temporal Trends and Factors Influencing Diarrhea Prevalence Among Children in the Rangamati Hill Tract Region: A Time Series Analysis. </em>International Conference on Environmental Science and Resource Management 2024 (ICESRM 2024)*, Department of Environmental Science and Resource Management, Mawlana Bhashani Science and Technology University, Bangladesh.</p></li>
+<li><p>Nayeem, M.U., Mrittika, M.A., <sup>‡,<em></em></sup><em><strong>Hossain, M.J.</strong>, Azad, A.K., Ferdous, J., Ahmed, S., Sanyal, S.K., Towhid, S.T. (2023). Quantitative Microbial Risk Assessment from Vancomycin‑Resistant </em>Enterococcus faecalis* and <em>Enterococcus faecium</em> from a Specific Neighborhood in Dhaka City, Bangladesh. <em>36th Bangladesh Society of Microbiologists Annual Conference</em>, Shahjalal University of Science and Technology (SUST), Sylhet, Bangladesh, January 2023.</p></li>
+<li><p><sup>‡,<em></em></sup><em><strong>Hossain, M.J.</strong>, <sup>+</sup>Habiba, U., Rozario, C., Tuhin, M.L.A., Mabsurah, K., Uddin, N.F. (2023). Factors influencing heat stress risk in Bangladesh. </em>9th International Public Health Conference* by Public Health Foundation at Bangladesh Medical Research Council (BMRC), Bangladesh, November 2023.</p></li>
+<li><p><sup>‡,<em></em></sup><em><strong>Hossain, M.J.</strong>, <sup>+</sup>Nowshin, N., Momtaj, Yeana, I.Y., Nohor, N. (2023). Monitoring Water‑Borne Disease (</em>Vibrio cholerae<em>) using NASA Earth Observation Data. </em>9th International Public Health Conference* by Public Health Foundation at Bangladesh Medical Research Council (BMRC), Bangladesh, November 2023.</p></li>
+</ol>
 
 
 </section>
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
