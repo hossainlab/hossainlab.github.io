@@ -8,13 +8,19 @@ page-layout: full
 Explore the latest media highlights featuring me and my research group. Discover insightful coverage of their impactful research.
 
 
-- **08 February, 2024, 12:00 pm**. 
-Title: *Parental lack of antibiotic knowledge imperils child health in Bangladesh: Study.*
-Featured at [The Business Standard](https://www.tbsnews.net/).
-[Link](https://www.tbsnews.net/bangladesh/health/parental-lack-antibiotic-knowledge-imperils-child-health-bangladesh-study-789250){.btn .btn-outline-primary .btn role="button" .btn-page-header .btn-xs}
+### 1. **Parental Lack of Antibiotic Knowledge Imperils Child Health in Bangladesh: Study**  
+- **Description:** Provided commentary on our research findings about the risks posed by inadequate parental understanding of antibiotics on child health outcomes in Bangladesh.  
+- **Published by:** *The Business Standard*  
+- **Date:** 08 February 2024  
+- **Link:** [Read More](https://www.tbsnews.net/bangladesh/health/parental-lack-antibiotic-knowledge-imperils-child-health-bangladesh-study-789250)
 
+---
 
-- **27 May, 2024, 11:30 am**. 
-Title: *What the rise in self-medication tells us about the country’s healthcare system.*
-Featured at [The Business Standard](https://www.tbsnews.net/).
-[Link](https://www.tbsnews.net/features/panorama/what-rise-self-medication-tells-us-about-countrys-healthcare-system-861146){.btn .btn-outline-primary .btn role="button" .btn-page-header .btn-xs}
+### 2. **What the Rise in Self-Medication Tells Us About the Country’s Healthcare System**  
+- **Description:** Shared insights on the increase in self-medication practices in Bangladesh and what this trend reveals about gaps in the healthcare system.  
+- **Published by:** *The Business Standard*  
+- **Date:** 27 May 2024  
+- **Link:** [Read More](https://www.tbsnews.net/features/panorama/what-rise-self-medication-tells-us-about-countrys-healthcare-system-861146)  
+
+---
+
