@@ -324,23 +324,16 @@
   {
     "objectID": "research/index.html",
     "href": "research/index.html",
-    "title": "Research Interests",
+    "title": "",
     "section": "",
-    "text": "Deep learning has revolutionized clinical applications in radiology, offering advancements in classification, risk assessment, segmentation, diagnosis, prognosis, and therapy response prediction. Beyond diagnostic tasks, AI is transforming medical imaging by enhancing technical aspects such as artifact removal, image normalization, quality improvement, dose reduction, and accelerated imaging. Our lab focuses on leveraging these deep learning innovations, particularly in neuroimaging, to improve diagnostic accuracy, optimize imaging protocols, and develop predictive models for neurological disorders."
+    "text": "Deep learning has revolutionized clinical applications in radiology, offering advancements in classification, risk assessment, segmentation, diagnosis, prognosis, and therapy response prediction. Beyond diagnostic tasks, AI is transforming medical imaging by enhancing technical aspects such as artifact removal, image normalization, quality improvement, dose reduction, and accelerated imaging. Our lab focuses on leveraging these deep learning innovations, particularly in neuroimaging, to improve diagnostic accuracy, optimize imaging protocols, and develop predictive models for neurological disorders.\n\n\n\n\nZhu et al., 2019"
   },
   {
-    "objectID": "research/index.html#somatic-mutation-analysis",
-    "href": "research/index.html#somatic-mutation-analysis",
-    "title": "Research Interests",
+    "objectID": "research/index.html#deep-learning-to-neuro-imaging-techniques",
+    "href": "research/index.html#deep-learning-to-neuro-imaging-techniques",
+    "title": "",
     "section": "",
-    "text": "Somatic mutation analysis is critical for understanding cancer genomics, identifying driver mutations, and exploring mutational signatures associated with tumor progression and therapeutic resistance. Utilizing maftools, an R package designed for analyzing and visualizing somatic mutations, enables researchers to effectively interpret large-scale Mutation Annotation Format (MAF) data. The package provides robust functionalities for summarizing mutation patterns, identifying significantly mutated genes, and visualizing mutation landscapes, such as lollipop plots, oncoplots, and mutational signatures."
-  },
-  {
-    "objectID": "research/index.html#somatic-mutation-analysis-1",
-    "href": "research/index.html#somatic-mutation-analysis-1",
-    "title": "Research Interests",
-    "section": "Somatic Mutation Analysis",
-    "text": "Somatic Mutation Analysis\nSomatic mutation analysis is critical for understanding cancer genomics, identifying driver mutations, and exploring mutational signatures associated with tumor progression and therapeutic resistance. Utilizing maftools, an R package designed for analyzing and visualizing somatic mutations, enables researchers to effectively interpret large-scale Mutation Annotation Format (MAF) data. The package provides robust functionalities for summarizing mutation patterns, identifying significantly mutated genes, and visualizing mutation landscapes, such as lollipop plots, oncoplots, and mutational signatures."
+    "text": "Deep learning has revolutionized clinical applications in radiology, offering advancements in classification, risk assessment, segmentation, diagnosis, prognosis, and therapy response prediction. Beyond diagnostic tasks, AI is transforming medical imaging by enhancing technical aspects such as artifact removal, image normalization, quality improvement, dose reduction, and accelerated imaging. Our lab focuses on leveraging these deep learning innovations, particularly in neuroimaging, to improve diagnostic accuracy, optimize imaging protocols, and develop predictive models for neurological disorders.\n\n\n\n\nZhu et al., 2019"
   },
   {
     "objectID": "publications/working-papers.html",
@@ -718,14 +711,14 @@
     "href": "research/interests.html",
     "title": "",
     "section": "",
-    "text": "Deep learning has revolutionized clinical applications in radiology, offering advancements in classification, risk assessment, segmentation, diagnosis, prognosis, and therapy response prediction. Beyond diagnostic tasks, AI is transforming medical imaging by enhancing technical aspects such as artifact removal, image normalization, quality improvement, dose reduction, and accelerated imaging. Our lab focuses on leveraging these deep learning innovations, particularly in neuroimaging, to improve diagnostic accuracy, optimize imaging protocols, and develop predictive models for neurological disorders."
+    "text": "Deep learning has revolutionized clinical applications in radiology, offering advancements in classification, risk assessment, segmentation, diagnosis, prognosis, and therapy response prediction. Beyond diagnostic tasks, AI is transforming medical imaging by enhancing technical aspects such as artifact removal, image normalization, quality improvement, dose reduction, and accelerated imaging. Our lab focuses on leveraging these deep learning innovations, particularly in neuroimaging, to improve diagnostic accuracy, optimize imaging protocols, and develop predictive models for neurological disorders.\n\n\n\n\nZhu et al., 2019"
   },
   {
     "objectID": "research/interests.html#deep-learning-to-neuro-imaging-techniques",
     "href": "research/interests.html#deep-learning-to-neuro-imaging-techniques",
     "title": "",
     "section": "",
-    "text": "Deep learning has revolutionized clinical applications in radiology, offering advancements in classification, risk assessment, segmentation, diagnosis, prognosis, and therapy response prediction. Beyond diagnostic tasks, AI is transforming medical imaging by enhancing technical aspects such as artifact removal, image normalization, quality improvement, dose reduction, and accelerated imaging. Our lab focuses on leveraging these deep learning innovations, particularly in neuroimaging, to improve diagnostic accuracy, optimize imaging protocols, and develop predictive models for neurological disorders."
+    "text": "Deep learning has revolutionized clinical applications in radiology, offering advancements in classification, risk assessment, segmentation, diagnosis, prognosis, and therapy response prediction. Beyond diagnostic tasks, AI is transforming medical imaging by enhancing technical aspects such as artifact removal, image normalization, quality improvement, dose reduction, and accelerated imaging. Our lab focuses on leveraging these deep learning innovations, particularly in neuroimaging, to improve diagnostic accuracy, optimize imaging protocols, and develop predictive models for neurological disorders.\n\n\n\n\nZhu et al., 2019"
   },
   {
     "objectID": "talks/mastering-biomedical-data-management/index.html",
@@ -943,12 +936,5 @@
     "title": "TCGA Data Analysis with R",
     "section": "Course Format",
     "text": "Course Format\nThe course will be delivered through a combination of lectures, hands-on practical sessions, and interactive discussions. Participants will have access to real TCGA datasets and will be guided through step-by-step analysis using R. Additionally, participants will be provided with relevant learning resources, including code examples and data repositories, to support their learning outside the course hours.\nProgram Website\n\nApply to the Program"
-  },
-  {
-    "objectID": "research/index.html#deep-learning-to-neuro-imaging-techniques",
-    "href": "research/index.html#deep-learning-to-neuro-imaging-techniques",
-    "title": "Research Interests",
-    "section": "",
-    "text": "Deep learning has revolutionized clinical applications in radiology, offering advancements in classification, risk assessment, segmentation, diagnosis, prognosis, and therapy response prediction. Beyond diagnostic tasks, AI is transforming medical imaging by enhancing technical aspects such as artifact removal, image normalization, quality improvement, dose reduction, and accelerated imaging. Our lab focuses on leveraging these deep learning innovations, particularly in neuroimaging, to improve diagnostic accuracy, optimize imaging protocols, and develop predictive models for neurological disorders."
   }
 ]
