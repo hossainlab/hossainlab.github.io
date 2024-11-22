@@ -18,5 +18,3 @@ knitr::include_graphics("../files/neuro-images/dl-framework-neuroimaging.jpg")
 
 
 
-
-

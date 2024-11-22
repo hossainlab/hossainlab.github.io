@@ -5,7 +5,9 @@ title-block-banner: false
 comments: false
 callout-icon: false
 toc: true 
-toc-depth: 1
+toc-depth: 2
 ---
 
 {{< include interests.qmd >}}
+
+{{< include grants.qmd >}}

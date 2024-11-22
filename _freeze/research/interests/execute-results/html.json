@@ -1,8 +1,8 @@
 {
-  "hash": "e489733f82792fb78ea2cd8328e99d7a",
+  "hash": "64091ffa8f38378434d8c4276a3503e0",
   "result": {
     "engine": "knitr",
-    "markdown": "::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n\n\n\n\n## Deep Learning to Neuro-Imaging Techniques\nDeep learning has revolutionized clinical applications in radiology, offering advancements in classification, risk assessment, segmentation, diagnosis, prognosis, and therapy response prediction. Beyond diagnostic tasks, AI is transforming medical imaging by enhancing technical aspects such as artifact removal, image normalization, quality improvement, dose reduction, and accelerated imaging. Our lab focuses on leveraging these deep learning innovations, particularly in neuroimaging, to improve diagnostic accuracy, optimize imaging protocols, and develop predictive models for neurological disorders.\n\n\n\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![Zhu et al., 2019](../files/neuro-images/dl-framework-neuroimaging.jpg){fig-align='center' width=542}\n:::\n:::\n",
+    "markdown": "## Deep Learning to Neuro-Imaging Techniques\nDeep learning has revolutionized clinical applications in radiology, offering advancements in classification, risk assessment, segmentation, diagnosis, prognosis, and therapy response prediction. Beyond diagnostic tasks, AI is transforming medical imaging by enhancing technical aspects such as artifact removal, image normalization, quality improvement, dose reduction, and accelerated imaging. My focuses on leveraging these deep learning innovations, particularly in neuroimaging, to improve diagnostic accuracy, optimize imaging protocols, and develop predictive models for neurological disorders.\n\n\n\n\n\n::: {.cell .fig-cap-location-bottom layout-align=\"center\"}\n::: {.cell-output-display}\n![Zhu et al., 2019](../files/neuro-images/dl-framework-neuroimaging.jpg){fig-align='center' width=542}\n:::\n:::\n",
     "supporting": [
       "interests_files"
     ],
