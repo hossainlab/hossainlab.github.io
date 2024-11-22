@@ -1,0 +1,87 @@
+```{r}
+#| warning: false 
+#| message: false 
+#| echo: false 
+if(!require("BiocManager")) install.packages("BiocManager",update = F,ask = F)
+
+cran_packages=c("magrittr",
+                "dplyr",
+                "tibble",
+                "ggpubr",
+                "stringr",
+                "reshape2",
+                "psych",
+                "limma",
+                "circlize",
+                "grid",
+                "fmsb",
+                "survival",
+                "survminer",
+                "forestplot",
+                "pROC",
+                "tinyarray",
+                "ggplot2",
+                "patchwork",
+                "ggsci",
+                "RColorBrewer",
+                "pheatmap")
+
+Biocductor_packages=c("edgeR",
+                      "org.Hs.eg.db",
+                      "clusterProfiler",
+                      "enrichplot",
+                      "ComplexHeatmap",
+                      "GSVA")
+
+# install packages in CRAN
+for (pkg in cran_packages){
+  if (!require(pkg,character.only=T)){
+    install.packages(pkg,ask = F,update = F)
+    require(pkg,character.only=T) 
+  }
+}
+
+# install packages in Biocductor
+for (pkg in Biocductor_packages){
+  if (!require(pkg,character.only=T)) {
+    BiocManager::install(pkg,ask = F,update = F)
+    require(pkg,character.only=T) 
+  }
+}
+```
+
+```{r}
+#| warning: false 
+#| message: false 
+#| echo: false 
+# data manipulation packages 
+library(tidyverse)
+library(gtsummary)
+library(gt)
+
+# cancer bioinformatics packages 
+library(TCGAplot)
+library(maftools)
+```
+
+## Deep Learning to Neuro-Imaging Techniques
+Deep learning has revolutionized clinical applications in radiology, offering advancements in classification, risk assessment, segmentation, diagnosis, prognosis, and therapy response prediction. Beyond diagnostic tasks, AI is transforming medical imaging by enhancing technical aspects such as artifact removal, image normalization, quality improvement, dose reduction, and accelerated imaging. Our lab focuses on leveraging these deep learning innovations, particularly in neuroimaging, to improve diagnostic accuracy, optimize imaging protocols, and develop predictive models for neurological disorders.
+
+```{r, dl-neuro-image}
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-align: center
+#| fig-cap: "Zhu et al., 2019"
+knitr::include_graphics("../files/neuro-images/dl-framework-neuroimaging.jpg")
+```
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+{
+  "hash": "998ba6c695f5c566c17c47819540b81c",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\npagetitle: \"Research | Jubayer Hossain\"\npage-layout: full\ntitle-block-banner: false\ncomments: false\ncallout-icon: false\ntoc: true \ntoc-depth: 1\n---\n\n\n\n\n\n# Research Interests\n\n\n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n\n\n\n\n## Deep Learning to Neuro-Imaging Techniques\nDeep learning has revolutionized clinical applications in radiology, offering advancements in classification, risk assessment, segmentation, diagnosis, prognosis, and therapy response prediction. Beyond diagnostic tasks, AI is transforming medical imaging by enhancing technical aspects such as artifact removal, image normalization, quality improvement, dose reduction, and accelerated imaging. Our lab focuses on leveraging these deep learning innovations, particularly in neuroimaging, to improve diagnostic accuracy, optimize imaging protocols, and develop predictive models for neurological disorders.\n\n\n\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](../files/neuro-images/dl-framework-neuroimaging.jpg){fig-align='center' width=542}\n:::\n:::\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n# Research Funding \n\n### **Secondhand Smoke Exposure in Public Spaces: Compliance with Smoke-Free Policies in Bangladesh**\n- **Grant Mechanism:** Tobacco Control Policy Research Grant Program  \n- **Agency:** \n  - Bangladesh Center for Communication Programs (BCCP)  \n  - Bangladesh Tobacco Control Research Network (BTCRN)  \n  - Institute for Global Tobacco Control at the Johns Hopkins Bloomberg School of Public Health, Baltimore, USA  \n- **Total Requested:** $10,000  \n- **Role:** Principal Investigator  \n- **Year:** 2024  \n\n---\n\n### **Early Breast Cancer Detection System Using Deep Learning**\n- **Grant Mechanism:** Big Data in Public Health  \n- **Agency:** Research and Innovation Center (RIC)  \n- **Total Requested:** $2,730  \n- **Role:** Principal Investigator  \n- **Year:** 2024  \n\n---\n\n### **Impact of Air Quality on the Prevalence and Severity of Asthma in Urban Areas of Bangladesh**\n- **Grant Mechanism:** Capacity Strengthening of Multi-Actors to Limit Climate Change Impacts and Enhance Resilience (CAP-RES)  \n- **Agency:** International Center for Climate Change and Development (ICCCAD)  \n- **Total Requested:** $4,550 USD  \n- **Role:** Principal Investigator  \n- **Year:** 2024  \n\n### **Early Warning of Frequent Flood and Drought-Affected Water-Borne Outbreaks in the Northwestern Part of Bangladesh**\n- **Grant Mechanism:** Capacity Strengthening of Multi-Actors to Limit Climate Change Impacts and Enhance Resilience (CAP-RES)  \n- **Agency:** International Center for Climate Change and Development (ICCCAD)  \n- **Total Requested:** $4,550  \n- **Role:** Principal Investigator  \n- **Year:** 2024  \n\n---\n\n### **Impact of Ambient Air Pollution on Respiratory Diseases among Outdoor Workers in Bangladesh**\n- **Grant Mechanism:** Research Grants on Urban Climate Resilience  \n- **Agency:** Global Disaster Preparedness Center (GDPC)  \n- **Total Requested:** $4,550 USD  \n- **Role:** Principal Investigator  \n- **Year:** 2024  \n\n---\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

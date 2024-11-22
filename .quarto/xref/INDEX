@@ -531,5 +531,35 @@
   },
   "research/working-papers.qmd": {
     "working-papers.html": "c4a59c60"
+  },
+  "research/interests.qmd": {
+    "interests.html": "a5019029"
+  },
+  "backup/Early Breast Cancer Detection System/index.qmd": {
+    "index.html": "e7448a64"
+  },
+  "backup/data-professionals-survey-report/index.qmd": {
+    "index.html": "4aaf3a34"
+  },
+  "backup/dengue-situation-dashboard/index.qmd": {
+    "index.html": "86680559"
+  },
+  "backup/health-impact-of-distance-learning-on-high-school-students/index.qmd": {
+    "index.html": "2cad6ce7"
+  },
+  "backup/index.qmd": {
+    "index.html": "f9aaeac9"
+  },
+  "backup/interests.qmd": {
+    "interests.html": "08761971"
+  },
+  "backup/monkeypox-outbreak-insights/index.qmd": {
+    "index.html": "bc7eb4f7"
+  },
+  "backup/nipah-virus/index.qmd": {
+    "index.html": "ac1a5f0d"
+  },
+  "CV/index.qmd": {
+    "index.html": "b44b6b89"
   }
 }

@@ -1,5 +1,5 @@
 ---
-pagetitle: "Publications | Jubayer Hossain"
+pagetitle: "Research | Jubayer Hossain"
 page-layout: full
 title-block-banner: false
 comments: false
@@ -8,15 +8,4 @@ toc: true
 toc-depth: 1
 ---
 
-
-{{< include grants.qmd >}}
-
-{{< include peer-reviewed.qmd >}}
-
-{{< include submitted-papers.qmd >}}
-
-{{< include working-papers.qmd >}}
-
-{{< include posters.qmd >}}
-
-{{< include orals.qmd >}}
+{{< include interests.qmd >}}

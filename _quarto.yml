@@ -41,14 +41,14 @@ website:
           file: about/index.qmd
         - text: "Research"
           file: research/index.qmd
+        - text: "Publications"
+          file: publications/index.qmd
         - text: "Projects"
           href: projects/index.qmd
         - text: "Talks"
           href: talks/index.qmd
         - text: "Teaching"
           file: teaching/index.qmd
-        - text: "What I Use"
-          file: use/index.qmd
         - text: "More"
           menu:
           - text: "Blog"
@@ -61,6 +61,8 @@ website:
             href: dashboards.qmd
           - text: "Press"
             file: press/index.qmd
+          - text: "What I Use"
+            file: use/index.qmd
       right:
       - icon: envelope
         aria-label: email

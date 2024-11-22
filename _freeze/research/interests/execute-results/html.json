@@ -1,0 +1,17 @@
+{
+  "hash": "e68cc0bf94068b10e3652914a279a07c",
+  "result": {
+    "engine": "knitr",
+    "markdown": "::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n\n\n\n## Deep Learning to Neuro-Imaging Techniques\nDeep learning has revolutionized clinical applications in radiology, offering advancements in classification, risk assessment, segmentation, diagnosis, prognosis, and therapy response prediction. Beyond diagnostic tasks, AI is transforming medical imaging by enhancing technical aspects such as artifact removal, image normalization, quality improvement, dose reduction, and accelerated imaging. Our lab focuses on leveraging these deep learning innovations, particularly in neuroimaging, to improve diagnostic accuracy, optimize imaging protocols, and develop predictive models for neurological disorders.\n\n\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![](../files/neuro-images/dl-framework-neuroimaging.jpg){fig-align='center' width=542}\n:::\n:::\n",
+    "supporting": [
+      "interests_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

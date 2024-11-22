@@ -125,6 +125,9 @@
     ],
     "projects_backup\\index.qmd": [
       "projects"
+    ],
+    "backup\\index.qmd": [
+      "projects"
     ]
   }
 }

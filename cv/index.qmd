@@ -7,7 +7,7 @@ execute:
   freeze: true  # never re-render during project render
 engine: knitr 
 cv:
-  pdf: "CV_HossainMJ.pdf"
+  pdf: "/files/cv/CV_HossainMJ.pdf"
 ---
 
 ```{css echo=FALSE}
@@ -32,7 +32,7 @@ cv:
 ```{=html}
 <p class="text-center">
   <a class="btn btn-primary btn-lg cv-download" href="`r rmarkdown::metadata$cv$pdf`" target="_blank">
-    <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download current CV
+    <i class="fa-solid fa-file-arrow-down"></i>&ensp;Download Current CV
   </a>
 </p>
 <div class="embed-container">

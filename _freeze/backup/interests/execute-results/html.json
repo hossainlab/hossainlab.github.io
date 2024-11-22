@@ -1,0 +1,15 @@
+{
+  "hash": "74226c3e90ed602f42bbb166ac988c6b",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# Research Interests\n\n\n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n\n\n\n\n## Somatic Mutation Analysis\n\n![](/files/onco-images/maftools.png)\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

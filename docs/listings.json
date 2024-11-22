@@ -1,26 +1,14 @@
 [
   {
-    "listing": "/talks/index.html",
-    "items": []
-  },
-  {
     "listing": "/blog/index.html",
     "items": []
   },
   {
+    "listing": "/backup/index.html",
+    "items": []
+  },
+  {
     "listing": "/projects/index.html",
-    "items": []
-  },
-  {
-    "listing": "/research/index.html",
-    "items": []
-  },
-  {
-    "listing": "/teaching/index.html",
-    "items": []
-  },
-  {
-    "listing": "/projects_backup/index.html",
     "items": []
   }
 ]
