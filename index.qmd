@@ -28,3 +28,7 @@ I am a biomedical researcher with a focus on neuroepidemiology, cancer epidemiol
 As a lead instructor at [CHIRAL Training Unit](https://chiralbd.org/), I contribute to the advancement of biomedical data science knowledge and skills by designing and delivering engaging training programs. Through hands-on training and systematic learning, I empower students and professionals to harness the potential of AI in healthcare applications. Additionally, I am also working as a health data analysis instructor at [cBLAST, University of Dhaka](https://www.cblastdu.xyz/). 
 
 In [our lab](https://chiralbd.org/), we are working on a wide range of research topics related to big data in bioinformatics, population health, health data science, and geospatial health. If you are a scientist/student who wants to collaborate with me, a research assistant or collaborator interested in my research, or a student looking for a thesis topic, please [reach out to me](mailto:contact.jubayerhossain@gmail.com)!
+
+**Research Interests:** Big Data, Neuroepidemiology, Neurodegenerative Diseases, Neuroimaging, Medical Image Analysis, Cancer Epidemiology, Cancer Bioinformatics, Machine Learning (ML), Deep Learning (DL), Single Cell Analysis
+
+
