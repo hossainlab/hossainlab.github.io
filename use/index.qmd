@@ -5,8 +5,117 @@ toc: true
 toc-location: right
 page-layout: full
 title-block-banner: false
+code-link: true
 comments: false
 ---
+
+## Core R Packages
+In R, several core packages provide essential tools for data manipulation, visualization, and analysis. These packages form the foundation of the R ecosystem, enabling efficient workflows and reproducible research. 
+
+::: {.grid}
+::: {.g-col-3}
+![](images/dplyr.png)
+:::
+::: {.g-col-9}
+The `{dplyr}` package in R provides a concise grammar of data manipulation, offering consistent verbs for common tasks. Key functions include `select()` to extract columns, `filter()` to subset rows, `mutate()` to create or modify variables, `arrange()` to sort rows, and `summarize()` with `group_by()` for grouped aggregations. Additionally, `rename()` simplifies column renaming. These tools streamline data transformation, making workflows efficient and readable for modern data analysis in R.
+:::
+:::
+
+
+::: {.grid}
+::: {.g-col-3}
+![](images/ggplot2.png)
+:::
+::: {.g-col-9}
+The `{ggplot2}` package in R is a powerful tool for data visualization, based on the grammar of graphics. It allows users to build plots layer by layer, starting with data and aesthetic mappings defined in `ggplot()`. Key layers include `geom_` functions for adding geometric elements (e.g., `geom_point()` for scatterplots, `geom_bar()` for bar charts), `facet_` functions for creating subplots, and `theme()` for customizing appearances. Its flexibility in mapping data to visual elements, combined with a rich set of options for customization, makes `ggplot2` a cornerstone of exploratory and presentation-ready visualizations.
+:::
+:::
+
+
+
+::: {.grid}
+::: {.g-col-3}
+![](images/tidyr.png)
+:::
+::: {.g-col-9}
+The `{tidyr}` package in R is designed for tidying data, ensuring it is in a consistent, tidy format where each variable is a column and each observation is a row. Key functions include `pivot_longer()` to convert wide data into long format, `pivot_wider()` for the reverse transformation, `separate()` to split a single column into multiple, and `unite()` to combine multiple columns into one. These functions enable efficient reshaping and restructuring of data, facilitating better data analysis and preparation for modeling or visualization tasks.
+:::
+:::
+
+
+
+
+::: {.grid}
+::: {.g-col-3}
+![](images/readr.png)
+:::
+::: {.g-col-9}
+The `{readr}` package in R provides fast and efficient functions for reading and writing data. It simplifies importing data from various file formats, such as CSV, TSV, and fixed-width files, with functions like `read_csv()`, `read_tsv()`, and `read_fwf()`. These functions automatically handle common data issues such as type conversion and missing values. Additionally, `readr` provides `write_csv()` and `write_tsv()` for exporting data, ensuring compatibility with other tools while maintaining efficiency and consistency in data import/export tasks.
+:::
+:::
+
+
+::: {.grid}
+::: {.g-col-3}
+
+![](images/stringr.png)
+:::
+::: {.g-col-9}
+The `{stringr}` package in R provides a set of consistent and user-friendly functions for string manipulation. It simplifies common tasks such as detecting patterns with `str_detect()`, extracting substrings with `str_extract()`, and replacing text with `str_replace()`. Additionally, `stringr` offers functions like `str_sub()` for substring extraction, `str_length()` for string length, and `str_c()` for concatenating strings. These functions help streamline text processing, ensuring consistency and efficiency when working with string data.
+:::
+:::
+
+
+
+::: {.grid}
+::: {.g-col-3}
+
+![](images/forcats.png)
+:::
+::: {.g-col-9}
+The `{forcats}` package in R is designed for working with categorical data, specifically factors. It provides functions for reordering, recoding, and combining factor levels in a straightforward way. Key functions include `fct_reorder()` to reorder factor levels based on another variable, `fct_lump()` to combine infrequent levels, `fct_recode()` for renaming factor levels, and `fct_drop()` to remove unused levels. `forcats` helps manage and manipulate factors effectively, ensuring clean and meaningful categorical data for analysis and visualization.
+:::
+:::
+
+
+::: {.grid}
+::: {.g-col-3}
+![](images/easystats.png)
+:::
+::: {.g-col-9}
+The `{easystats}` package in R is a collection of tools designed to simplify the process of statistical analysis, reporting, and visualization. It provides a unified interface for working with various statistical models and outputs, making it easier to interpret and communicate results. Key functions include `parameters()` for extracting model parameters, `performance()` for assessing model fit, and `effectsize()` for calculating effect sizes. Additionally, `easystats` offers functions for model comparisons, diagnostics, and visualizations, streamlining the workflow for both beginners and advanced users in statistical analysis.
+:::
+:::
+
+
+::: {.grid}
+::: {.g-col-3}
+![](images/gtsummary.png)
+:::
+::: {.g-col-9}
+The `{gtsummary}` package in R is designed for creating publication-ready summary tables from statistical models and data. It allows users to easily summarize data, describe statistics, and present results in a clear, formatted table. Key functions include `tbl_summary()` for descriptive statistics of datasets, `tbl_regression()` for summarizing regression model results, and `tbl_uvregression()` for univariate regression analyses. The package supports customization of table styles, variable transformations, and statistical tests, making it a valuable tool for producing professional reports and visual summaries in clinical and social science research.
+:::
+:::
+
+::: {.grid}
+::: {.g-col-3}
+![](images/gt.jpg)
+:::
+::: {.g-col-9}
+The `{gt}` package in R is used for creating beautiful, customizable tables for data presentation. It allows users to easily create tables from data frames or tibbles with functions like `gt()` to initiate the table and `tab_spanner()` for grouping columns. Users can apply various formatting options, such as color, bold, and font styles, to enhance the table’s readability using functions like `tab_style()` and `tab_footnote()`. `gt` also supports features like adding summary statistics, row/column grouping, and rendering tables in HTML or LaTeX for use in reports and publications.
+:::
+:::
+
+
+::: {.grid}
+::: {.g-col-3}
+![](images/quarto.png)
+:::
+::: {.g-col-9}
+[Quarto](https://quarto.org/) is an open-source, next-generation publishing system that enables users to create dynamic documents, reports, presentations, and websites. It supports a wide range of formats, including HTML, PDF, Word, and slides, and integrates seamlessly with R, Python, Julia, and Observable. Quarto allows for literate programming, where code and narrative are combined in a single document. It supports advanced features like interactive visualizations, cross-referencing, and citation management, making it an ideal tool for academic and technical writing, data analysis, and reproducible research.
+:::
+:::
+
 
 ## Literature Review 
 - [typeset.io](https://typeset.io/) - Typeset.io is a platform designed to assist researchers, academics, and authors in the process of writing, formatting, and preparing documents for publication. 

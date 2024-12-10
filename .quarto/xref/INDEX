@@ -561,5 +561,8 @@
   },
   "CV/index.qmd": {
     "index.html": "b44b6b89"
+  },
+  "packages/index.qmd": {
+    "index.html": "73ea5427"
   }
 }

@@ -4,6 +4,11 @@ excerpt: "A list of selected courses of me"
 toc: true
 page-layout: full
 ---
+
+## Upcoming Workshops 
+
+
+
 # Courses Taught
 As a Lead Organizer and Instructor at CHIRAL, Dhaka, Bangladesh, I have had the privilege of designing and delivering specialized courses in several key areas, including health research, health data science, bioinformatics, and artificial intelligence (AI). 
 

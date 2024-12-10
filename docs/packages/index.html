@@ -8,7 +8,7 @@
 
 <meta name="description" content="Personal Website for Md. Jubayer Hossain (Learner, Educator and Data Analyst)">
 
-<title>What I Use | Jubayer Hossain</title>
+<title>R Packages | Jubayer Hossain</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,6 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="..//files/profiles/icon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -71,13 +73,71 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: [{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: [],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="What I Use | Jubayer Hossain">
-<meta property="og:description" content="">
-<meta name="twitter:title" content="What I Use | Jubayer Hossain">
-<meta name="twitter:description" content="">
+<meta property="og:title" content="R Packages | Jubayer Hossain">
+<meta property="og:description" content="This part is the same as the Quarto default blog template.">
+<meta name="twitter:title" content="R Packages | Jubayer Hossain">
+<meta name="twitter:description" content="This part is the same as the Quarto default blog template.">
 <meta name="twitter:image" content="/files/img/banner.jpg">
 <meta name="twitter:creator" content="@hossainlab">
 <meta name="twitter:card" content="summary_large_image">
@@ -205,62 +265,15 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#core-r-packages" id="toc-core-r-packages" class="nav-link active" data-scroll-target="#core-r-packages">Core R Packages</a></li>
-  <li><a href="#literature-review" id="toc-literature-review" class="nav-link" data-scroll-target="#literature-review">Literature Review</a></li>
-  <li><a href="#journal-finders" id="toc-journal-finders" class="nav-link" data-scroll-target="#journal-finders">Journal Finders</a></li>
-  <li><a href="#data-wrangling" id="toc-data-wrangling" class="nav-link" data-scroll-target="#data-wrangling">Data Wrangling</a></li>
-  <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization">Data Visualization</a></li>
-  <li><a href="#publication-ready-tables" id="toc-publication-ready-tables" class="nav-link" data-scroll-target="#publication-ready-tables">Publication-ready Tables</a></li>
-  <li><a href="#reproducible-research" id="toc-reproducible-research" class="nav-link" data-scroll-target="#reproducible-research">Reproducible Research</a></li>
-  <li><a href="#statistical-modeling" id="toc-statistical-modeling" class="nav-link" data-scroll-target="#statistical-modeling">Statistical Modeling</a></li>
-  <li><a href="#data-science" id="toc-data-science" class="nav-link" data-scroll-target="#data-science">Data Science</a></li>
-  <li><a href="#data-resources" id="toc-data-resources" class="nav-link" data-scroll-target="#data-resources">Data Resources</a></li>
-  <li><a href="#some-data-sources" id="toc-some-data-sources" class="nav-link" data-scroll-target="#some-data-sources">Some Data Sources</a></li>
-  <li><a href="#infectious-disease-specific" id="toc-infectious-disease-specific" class="nav-link" data-scroll-target="#infectious-disease-specific">Infectious Disease Specific</a>
-  <ul class="collapse">
-  <li><a href="#general" id="toc-general" class="nav-link" data-scroll-target="#general">General</a></li>
-  <li><a href="#influenza" id="toc-influenza" class="nav-link" data-scroll-target="#influenza">Influenza</a></li>
-  <li><a href="#tb" id="toc-tb" class="nav-link" data-scroll-target="#tb">TB</a></li>
-  </ul></li>
-  <li><a href="#cancer-bioinformatics" id="toc-cancer-bioinformatics" class="nav-link" data-scroll-target="#cancer-bioinformatics">Cancer Bioinformatics</a>
-  <ul class="collapse">
-  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources">Data Sources</a></li>
-  <li><a href="#analysis-tools" id="toc-analysis-tools" class="nav-link" data-scroll-target="#analysis-tools">Analysis Tools</a></li>
-  <li><a href="#r-packages" id="toc-r-packages" class="nav-link" data-scroll-target="#r-packages">R Packages</a></li>
-  <li><a href="#teaching-tools" id="toc-teaching-tools" class="nav-link" data-scroll-target="#teaching-tools">Teaching Tools</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">What I Use</h1>
-</div>
+<main class="content column-page" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta column-page-left">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="core-r-packages" class="level2">
-<h2 class="anchored" data-anchor-id="core-r-packages">Core R Packages</h2>
+<section id="core-packages" class="level2">
+<h2 class="anchored" data-anchor-id="core-packages">Core Packages</h2>
 <p>In R, several core packages provide essential tools for data manipulation, visualization, and analysis. These packages form the foundation of the R ecosystem, enabling efficient workflows and reproducible research.</p>
 <div class="grid">
 <div class="g-col-3">
@@ -342,199 +355,19 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="https://quarto.org/">Quarto</a> is an open-source, next-generation publishing system that enables users to create dynamic documents, reports, presentations, and websites. It supports a wide range of formats, including HTML, PDF, Word, and slides, and integrates seamlessly with R, Python, Julia, and Observable. Quarto allows for literate programming, where code and narrative are combined in a single document. It supports advanced features like interactive visualizations, cross-referencing, and citation management, making it an ideal tool for academic and technical writing, data analysis, and reproducible research.</p>
 </div>
 </div>
-</section>
-<section id="literature-review" class="level2">
-<h2 class="anchored" data-anchor-id="literature-review">Literature Review</h2>
-<ul>
-<li><a href="https://typeset.io/">typeset.io</a> - Typeset.io is a platform designed to assist researchers, academics, and authors in the process of writing, formatting, and preparing documents for publication.</li>
-<li><a href="https://www.scholarcy.com/">scholarcy</a> - The AI-powered article summarizer.</li>
-<li><a href="https://elicit.org/">elicit</a> - AI-based research assistant.</li>
-</ul>
-</section>
-<section id="journal-finders" class="level2">
-<h2 class="anchored" data-anchor-id="journal-finders">Journal Finders</h2>
-<ul>
-<li><p><a href="https://journalfinder.elsevier.com/">Journal Finder by Elsevier</a>: This tool allows you to enter your manuscript title and abstract to find journals that are a good match for your research. It also provides information on journal metrics and submission guidelines.</p></li>
-<li><p><a href="https://journalsuggester.springer.com/">Springer Journal Suggester</a>: Springer’s tool helps you find the right journal for your research by analyzing your abstract or keywords and suggesting journals that publish articles in your field.</p></li>
-<li><p><a href="https://www.ncbi.nlm.nih.gov/pmc/journals/">PubMed Journal Selector</a>: If your research is in the biomedical or life sciences, PubMed’s Journal Selector can assist you in finding journals that match your keywords and research area.</p></li>
-<li><p><a href="https://jane.biosemantics.org/">JANE (Journal/Author Name Estimator)</a>: JANE is a free online tool that helps you find journals and authors based on the text of your article’s title and abstract.</p></li>
-<li><p><a href="https://www.journalguide.com/">JournalGuide</a>: This tool provides a comprehensive database of journals in various fields and allows you to search for journals by keywords or browse by subject area.</p></li>
-<li><p><a href="https://www.scopus.com/sources.uri">Scopus Journal Finder</a>: Scopus, a bibliographic database, offers a journal finder feature that helps you find journals related to your research area based on keywords or article titles.</p></li>
-<li><p><a href="https://doaj.org/">DOAJ (Directory of Open Access Journals)</a>: If you’re interested in open-access journals, DOAJ is a directory of freely available scholarly journals that you can search by subject or keyword.</p></li>
-<li><p><a href="https://www.scimagojr.com/">Scimago Journal &amp; Country Rank</a>: On the Scimago platform, you can find information about journals, their rankings, citation data, and more, which can be useful for researchers looking to identify suitable journals for their research or assess the impact and prestige of journals in their field. It’s a valuable tool for academic research and evaluation.</p></li>
-</ul>
-</section>
-<section id="data-wrangling" class="level2">
-<h2 class="anchored" data-anchor-id="data-wrangling">Data Wrangling</h2>
-<ul>
-<li><a href="https://readxl.tidyverse.org/">readxl</a> for importing data into R</li>
-<li>dplyr, tidyr and others from the <a href="https://www.tidyverse.org/">tidyverse</a> for data preparation.</li>
-</ul>
-</section>
-<section id="data-visualization" class="level2">
-<h2 class="anchored" data-anchor-id="data-visualization">Data Visualization</h2>
-<ul>
-<li><a href="https://ggplot2.tidyverse.org/">ggplot2</a> for the vast majority of the graphics, together with the <a href="https://github.com/hrbrmstr/hrbrthemes">hrbrtheme</a> for styling.</li>
-<li><a href="https://github.com/thomasp85/patchwork">patchwork</a> to put graphics together.</li>
-<li><a href="https://github.com/thomasp85/ggraph">ggraph</a> and igraph for most of the network related graphics</li>
-<li><a href="https://r-graph-gallery.com/interactive-charts">plotly</a> and other html widgets for interactive graphics.</li>
-<li><a href="https://github.com/cran/RColorBrewer">RColorBrewer</a> and <a href="https://github.com/sjmgarnier/viridis">viridis</a> and colormap to control color in charts.</li>
-<li><a href="https://github.com/slowkow/ggrepel">Ggrepel</a> and other ggplot2 extension that make your life simpler.</li>
-<li><a href="https://github.com/talgalili/heatmaply">Heatmaply</a> for most of the heatmaps</li>
-</ul>
-</section>
-<section id="publication-ready-tables" class="level2">
-<h2 class="anchored" data-anchor-id="publication-ready-tables">Publication-ready Tables</h2>
-<ul>
-<li><a href="https://www.danieldsjoberg.com/gtsummary/">gtsummary</a> for creating publication-ready descriptives and analytical tables.</li>
-<li><a href="https://gt.rstudio.com/">gt</a> to customize tables and export as docs or tex.</li>
-</ul>
-</section>
-<section id="reproducible-research" class="level2">
-<h2 class="anchored" data-anchor-id="reproducible-research">Reproducible Research</h2>
-<ul>
-<li><a href="https://rmarkdown.rstudio.com/">R Markdown</a> to produce statistical reports.</li>
-<li><a href="https://quarto.org/">Quarto</a> to build 95% of the website for my courses and others.</li>
-</ul>
-</section>
-<section id="statistical-modeling" class="level2">
-<h2 class="anchored" data-anchor-id="statistical-modeling">Statistical Modeling</h2>
-<ul>
-<li><a href="https://easystats.github.io/easystats/">easystats</a> for easy statistical modeling, visualization, and reporting</li>
-</ul>
-</section>
-<section id="data-science" class="level2">
-<h2 class="anchored" data-anchor-id="data-science">Data Science</h2>
-<ul>
-<li><a href="https://numpy.org/doc/stable/index.html">NumPy</a> for scientific computing.</li>
-<li><a href="https://pandas.pydata.org/">Pandas</a> for data wrangling and analysis</li>
-<li><a href="https://matplotlib.org/">Matplotlib</a> for data visulization</li>
-<li><a href="https://seaborn.pydata.org/">Seaborn</a> for advance statistical visualizations</li>
-<li><a href="https://plotly.com/python/">Plotly</a> for interative data visualization</li>
-<li><a href="https://researchpy.readthedocs.io/en/latest/">researchpy</a> to summarize data and perform statistical tests.</li>
-<li><a href="https://www.dask.org/">Dask</a> for big data analysis</li>
-<li><a href="https://scikit-learn.org/stable/">scikit-learn</a> for machine learning</li>
-<li><a href="https://scikit-image.org/">scikit-image</a> for life science image manipulation</li>
-</ul>
-</section>
-<section id="data-resources" class="level2">
-<h2 class="anchored" data-anchor-id="data-resources">Data Resources</h2>
-<ul>
-<li><p>The <a href="https://labs.data.gov/dashboard/">Project Open Data Dashboard</a> gives overview statistics of available government data from various agencies.</p></li>
-<li><p><a href="http://blog.kaggle.com/2016/10/21/a-guide-to-open-data-publishing-analytics/">Guide to Open Data Publishing &amp; Analytics</a> - A good article describing best practices for publishing data openly. Is also a good read for those who want to analyze other’s data.</p></li>
-<li><p><a href="https://rviews.rstudio.com/2017/11/01/r-data-packages/">A short list of data related R packages</a> - packages that either access data or include data</p></li>
-<li><p><a href="https://toolbox.google.com/datasetsearch">Google’s Data Search Engine</a></p></li>
-</ul>
-</section>
-<section id="some-data-sources" class="level2">
-<h2 class="anchored" data-anchor-id="some-data-sources">Some Data Sources</h2>
-<ul>
-<li><p><a href="https://www.kaggle.com/datasets">Kaggle Data</a> - A growing number of datasets used in Kaggle data analysis contests and available for any other use.</p></li>
-<li><p><a href="https://data.nasdaq.com/">Nasdaq Data Link</a> - mainly finance related data</p></li>
-<li><p><a href="http://www.cdc.gov/nchs/nhanes.htm">NHANES</a> - longstanding and thorough survey done by CDC</p></li>
-<li><p><a href="http://seer.cancer.gov/">SEER</a> - Cancer data</p></li>
-<li><p><a href="http://wonder.cdc.gov/">CDC WONDER</a> - list of mainly CDC online databases</p></li>
-<li><p><a href="https://health.gov/healthypeople">Healthy People Website</a> - contains among other things links to various data sources</p></li>
-<li><p><a href="https://www.hcup-us.ahrq.gov/">HCUP</a> - collection of health related databases, focusing on US wide and state-specific samples of ER and hospital visits. Not free, but not too expensive.</p></li>
-<li><p><a href="https://www.clinicalstudydatarequest.com/">Clinical Study Data Request</a> - a way to get (tedious) access to clinical trial data</p></li>
-<li><p><a href="https://clinicaldata.ema.europa.eu/web/cdp/home">EMA Clinical Data Portal</a> - looks like a way to get access to some clinical trial data for EMA registered studies.</p></li>
-<li><p><a href="https://mimic.physionet.org/">MIMIC</a> - a free and open database of critical care patient visits to a Boston hospital.</p></li>
-<li><p><a href="http://www.data.gov/">Data.gov</a> - federak government data platform.</p></li>
-<li><p><a href="http://asdfree.com/">Analyze Survey Data for Free</a> - Step by Step Instructions to Explore Public Microdata from an Easy to Type Website</p></li>
-<li><p><a href="https://www.cdc.gov/vaccinesafety/ensuringsafety/monitoring/vsd/accessing-data.html">Vaccine Safety Datalink (VSD)</a></p></li>
-<li><p><a href="http://ghdx.healthdata.org/">Global Health Data Exchange / IHME</a></p></li>
-<li><p><a href="https://vaers.hhs.gov/">Vaccine Adverse Event Reporting System (VAERS)</a></p></li>
-<li><p><a href="https://nemsis.org/">National EMS Data (NEMSIS)</a></p></li>
-<li><p><a href="http://data.un.org/">Data from the UN</a></p></li>
-<li><p><a href="http://www.icpsr.umich.edu/">Inter-university Consortium for Political and Social Research (ICPSR)</a> - access to various social and behavioral sciences data.</p></li>
-<li><p><a href="http://acrdc.gsu.edu/index.html">Federal Reserve in Atlanta Data Center</a></p></li>
-<li><p><a href="https://www.healthdata.gov/">Database to search health related government data</a></p></li>
-<li><p><a href="http://mran.revolutionanalytics.com/documents/data/">A list hosted by Microsoft with links to various data sources</a></p></li>
-</ul>
-</section>
-<section id="infectious-disease-specific" class="level2">
-<h2 class="anchored" data-anchor-id="infectious-disease-specific">Infectious Disease Specific</h2>
-<section id="general" class="level3">
-<h3 class="anchored" data-anchor-id="general">General</h3>
-<ul>
-<li><a href="https://www.tycho.pitt.edu/">Project Tycho</a> - infectious disease data</li>
-<li><a href="http://www.viprbrc.org" class="uri">http://www.viprbrc.org</a></li>
-<li><a href="http://eupathdb.org" class="uri">http://eupathdb.org</a></li>
-<li><a href="https://clinepidb.org">ClinEpiDB</a> - a database of (a few) clinical epidemiology studies, focusing on infectious diseases.</li>
-<li><a href="https://immport.niaid.nih.gov">ImmPort</a></li>
-</ul>
-</section>
-<section id="influenza" class="level3">
-<h3 class="anchored" data-anchor-id="influenza">Influenza</h3>
-<ul>
-<li>http://www.fludb.org</li>
-<li><who flunet=""></who></li>
-<li>&lt;gisaid.org&gt;</li>
-<li><a href="http://www.cdc.gov/flu/index.htm" class="uri">http://www.cdc.gov/flu/index.htm</a></li>
-<li><a href="http://www.ncbi.nlm.nih.gov/genomes/FLU/FLU.html" class="uri">http://www.ncbi.nlm.nih.gov/genomes/FLU/FLU.html</a></li>
-<li><a href="http://www.SystemsInfluenza.org" class="uri">http://www.SystemsInfluenza.org</a></li>
-</ul>
-</section>
-<section id="tb" class="level3">
-<h3 class="anchored" data-anchor-id="tb">TB</h3>
-<ul>
-<li>OTIS on CDC WONDER: <a href="http://wonder.cdc.gov/tb.html" class="uri">http://wonder.cdc.gov/tb.html</a></li>
-</ul>
-</section>
-</section>
-<section id="cancer-bioinformatics" class="level1">
-<h1>Cancer Bioinformatics</h1>
-<section id="data-sources" class="level2">
-<h2 class="anchored" data-anchor-id="data-sources">Data Sources</h2>
-<ul>
-<li><p><a href="https://portal.gdc.cancer.gov/">The Cancer Genome Atlas (TCGA):</a> TCGA is a comprehensive collection of multi-dimensional cancer genomics data covering multiple cancer types.</p></li>
-<li><p><a href="https://icgc.org/">International Cancer Genome Consortium (ICGC):</a> Description: ICGC provides high-quality genomic and clinical data from various cancer projects worldwide.</p></li>
-<li><p><a href="https://www.ncbi.nlm.nih.gov/geo/">Gene Expression Omnibus (GEO):</a> GEO is a public repository hosted by the National Center for Biotechnology Information (NCBI) containing a vast collection of gene expression data, including cancer datasets.</p></li>
-<li><p><a href="https://ega-archive.org/">European Genome-phenome Archive (EGA):</a> Description: EGA is a repository for secure storage and sharing of human genetic and phenotypic data, including cancer datasets.</p></li>
-<li><p><a href="https://gdc.cancer.gov/">National Cancer Institute (NCI) Genomic Data Commons (GDC):</a> Description: GDC is an open-access data portal providing access to a wide range of cancer genomics datasets.</p></li>
-<li><p><a href="https://cellxgene.cziscience.com/">cellxgene.cziscience.com</a> - Download and visually explore reference-quality data to understand the functionality of human tissues at the cellular level with Chan Zuckerberg CELL by GENE Discover (CZ CELLxGENE Discover).</p></li>
-<li><p><a href="https://www.10xgenomics.com/">10XGenomics</a> - High-performance in situ from the single cell leader</p></li>
-</ul>
-</section>
-<section id="analysis-tools" class="level2">
-<h2 class="anchored" data-anchor-id="analysis-tools">Analysis Tools</h2>
-<ul>
-<li><p><a href="https://xena.ucsc.edu/">UCSC Xena</a>: An online exploration tool for public and private, multi-omic and clinical/phenotype data</p></li>
-<li><p><a href="https://www.ncbi.nlm.nih.gov/geo/info/geo2r.html">GEO2R</a>: GEO2R is an interactive web tool that allows users to compare two or more groups of Samples in a GEO Series in order to identify genes that are differentially expressed across experimental conditions. Results are presented as a table of genes ordered by P-value, and as a collection of graphic plots to help visualize differentially expressed genes and assess data set quality. GEO2R uses a variety of R packages from the Bioconductor project. Bioconductor is an open-source software project based on the R programming language that provides tools for the analysis of high-throughput genomic data.</p></li>
-<li><p><a href="http://gepia2.cancer-pku.cn/">GEPIA2</a>: GEPIA2 is a web-based tool for analyzing gene expression data in cancer. It stands for Gene Expression Profiling Interactive Analysis 2 and is an updated version of the original GEPIA tool. GEPIA2 allows users to explore gene expression patterns, perform survival analyses, and visualize gene expression data across various cancer types.</p></li>
-<li><p><a href="http://timer.cistrome.org/">TIMER2.0</a>: TIMER is a comprehensive resource for systematical analysis of immune infiltrates across diverse cancer types. This version of webserver provides immune infiltrates’ abundances estimated by multiple immune deconvolution methods, and allows users to generate high-quality figures dynamically to explore tumor immunological, clinical and genomic features comprehensively.</p></li>
-<li><p><a href="http://ualcan.path.uab.edu/">UALCAN</a>: UALCAN is a web-based platform that provides interactive and comprehensive analysis of cancer transcriptome data. It enables users to explore gene expression patterns, perform survival analyses, and compare gene expression between tumor and normal samples across different cancer types. UALCAN utilizes data from The Cancer Genome Atlas (TCGA) to facilitate cancer research and provide insights into tumor biology.</p></li>
-<li><p><a href="https://www.cbioportal.org/">cBioPortal for Cancer Genomics:</a>: cBioPortal hosts a large collection of cancer genomics datasets, allowing users to explore and visualize the data.</p></li>
-<li><p><a href="http://www.ilincs.org/apps/grein/">GREIN : GEO RNA-seq Experiments Interactive Navigator:</a> GREIN is an interactive web platform that provides user-friendly options to explore and analyze GEO RNA-seq data. GREIN is powered by the back-end computational pipeline for uniform processing of RNA-seq data and the large number (&gt;6,000) of already processed datasets. These datasets were retrieved from GEO and reprocessed consistently by the back-end GEO RNA-seq experiments processing pipeline (GREP2).</p></li>
-<li><p><a href="http://www.oncolnc.org/">OncoLnc</a>: Description: OncoLnc is a web resource that provides survival analysis and expression correlation for genes of interest across multiple cancer datasets.</p></li>
-<li><p><a href="https://genome-cancer.ucsc.edu/">UCSC Cancer Genomics Browser:</a> The UCSC Cancer Genomics Browser offers a comprehensive collection of cancer genomics data integrated with genomic annotations.</p></li>
-<li><p><a href="https://www.oncomine.org/resource/login.html">ONCOMINE</a>: ONCOMINE is a powerful web-based platform for the analysis and visualization of cancer transcriptomic data. It provides researchers with access to a vast collection of publicly available gene expression datasets derived from cancer studies. ONCOMINE allows users to explore gene expression patterns, identify potential biomarkers, and compare gene expression between different cancer types or subtypes.</p></li>
-</ul>
-</section>
-<section id="r-packages" class="level2">
-<h2 class="anchored" data-anchor-id="r-packages">R Packages</h2>
-<ul>
-<li><p><a href="https://bioconductor.org/packages/release/bioc/vignettes/TCGAbiolinks/inst/doc/index.html#Required_libraries">TCGAbiolinks</a>: An R/Bioconductor package for integrative analysis with GDC data. TCGAbiolinks is able to access The National Cancer Institute (NCI) Genomic Data Commons (GDC) thorough its GDC Application Programming Interface (API) to search, download and prepare relevant data for analysis in R.</p></li>
-<li><p><a href="https://bioconductor.org/packages/release/bioc/vignettes/maftools/inst/doc/maftools.html">maftools</a>: Summarize, Analyze and Visualize MAF Files. This package attempts to summarize, analyze, annotate and visualize MAF files in an efficient manner from either TCGA sources or any in-house studies as long as the data is in MAF format.</p></li>
-<li><p><a href="https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html">SummarizedExperiment</a>: The SummarizedExperiment container contains one or more assays, each represented by a matrix-like object of numeric or other mode. The rows typically represent genomic ranges of interest and the columns represent samples.</p></li>
-<li><p><a href="https://bioconductor.org/packages/release/bioc/vignettes/MutationalPatterns/inst/doc/Introduction_to_MutationalPatterns.html">MutationalPatterns</a>: Comprehensive genome-wide analysis of mutational processes. he package covers a wide range of patterns including: mutational signatures, transcriptional and replicative strand bias, lesion segregation, genomic distribution and association with genomic features, which are collectively meaningful for studying the activity of mutational processes.</p></li>
-<li><p><a href="https://www.bioconductor.org/packages/release/bioc/html/GenVisR.html">GenVisR</a>: Short for “Genomic Visualizations in R,” this tool provides visualization capabilities tailored to a variety of genomic data types, including data common in cancer research such as somatic mutations, copy number variations, and more.</p></li>
-</ul>
-</section>
-<section id="teaching-tools" class="level2">
-<h2 class="anchored" data-anchor-id="teaching-tools">Teaching Tools</h2>
-<ul>
-<li><a href="https://bioicons.com/">Bioicons</a> - a collection of free drawings and diagrams on biological topics, which can be used in teaching (or research) presentations.</li>
-<li><a href="https://rstudio.github.io/learnr/">learnr</a> - R package that allows development of interactive web-based R tutorials.</li>
-<li><a href="https://minecr.shinyapps.io/feedback-at-scale/">Feedback</a> at scale - tutorial for using learnr and gradethis as teaching tools.</li>
-<li><a href="https://mine-cetinkaya-rundel.github.io/teach-r-online/">Teaching Statistics and Data Science Online</a> - materials for several teacher workshops taught by <a href="https://mine-cr.com/">Mine Çetinkaya-Rundel</a>.</li>
-</ul>
+
 
 
 </section>
-</section>
 
-</main> <!-- /main -->
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

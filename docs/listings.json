@@ -10,5 +10,9 @@
   {
     "listing": "/projects/index.html",
     "items": []
+  },
+  {
+    "listing": "/packages/index.html",
+    "items": []
   }
 ]
