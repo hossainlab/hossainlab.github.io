@@ -31,7 +31,12 @@ website:
     image: "/files/img/banner.jpg"
   title: ""
   favicon: /files/profiles/icon.png
-
+  announcement:
+    icon: info-circle
+    dismissable: true
+    content: "**Alert** - This Site is Under Construction - Please check another site of Jubayer, https://hossainlab.owlstown.net/ for updates!"
+    type: primary
+    position: below-navbar
   navbar:
       pinned: true
       left:
