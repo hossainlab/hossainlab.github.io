@@ -1,50 +1,97 @@
 ---
 pagetitle: "About | Jubayer Hossain"
-title: "About me"
+title: "About Md. Jubayer Hossain"
+subtitle: "Biomedical Researcher & Health Data Scientist"
 page-layout: full
-title-block-banner: false
+title-block-banner: true
+toc: true
+toc-location: right
 comments: false
 callout-icon: false
 ---
 
 :::  panel-tabset
 
-# Bio 
-I am a biomedical researcher with a focus on neuroepidemiology, cancer epidemiology, and cancer bioinformatics. My aim is to maximize the quality of life for individuals by operating at the intersection of education, technology, and health research. Currently, working as a founder and executive director at [CHIRAL Bangladesh](https://chiralbd.org/), a non-profit biomedical research organization dedicated to solving public health problems in Bangladesh. Having studied microbiology, my core research is currently located somewhere between public health and machine learning, with applications in almost all the quantitative sciences.
+## Biography
 
-As a lead instructor at [CHIRAL Training Unit](https://chiralbd.org/), I contribute to the advancement of biomedical data science knowledge and skills by designing and delivering engaging training programs. Through hands-on training and systematic learning, I empower students and professionals to harness the potential of AI in healthcare applications. Additionally, I am also working as a health data analysis instructor at [cBLAST, University of Dhaka](https://www.cblastdu.xyz/). 
+### Professional Overview
 
-In [our lab](https://chiralbd.org/), we are working on a wide range of research topics related to big data in bioinformatics, population health, health data science, and geospatial health. If you are a scientist/student who wants to collaborate with me, a research assistant or collaborator interested in my research, or a student looking for a thesis topic, please [reach out to me](mailto:contact.jubayerhossain@gmail.com)!
+I am a biomedical researcher specializing in **neuroepidemiology**, **cancer epidemiology**, and **cancer bioinformatics**. My mission is to improve quality of life by operating at the intersection of education, technology, and health research. I currently serve as the **Founder & Executive Director** of [CHIRAL Bangladesh](https://chiralbd.org/), a non-profit biomedical research organization dedicated to addressing public health challenges in Bangladesh.
+
+With a background in microbiology, my research portfolio spans the intersection of public health and machine learning, with applications across multiple quantitative sciences. I am passionate about leveraging data science and artificial intelligence to solve complex health problems and advance biomedical knowledge.
+
+### Teaching & Training
+
+As a **Lead Instructor** at [CHIRAL Training Unit](https://chiralbd.org/), I design and deliver comprehensive biomedical data science training programs. Through hands-on learning and systematic approaches, I empower students and professionals to harness the potential of AI in healthcare applications. I also serve as a **Health Data Analysis Instructor** at [cBLAST, University of Dhaka](https://www.cblastdu.xyz/), contributing to the advancement of bioinformatics education.
+
+### Research Leadership
+
+At [CHIRAL Bangladesh](https://chiralbd.org/), our research team investigates diverse topics in:
+
+- **Big Data in Bioinformatics** - Genomic and omics data analysis
+- **Population Health** - Epidemiological studies and health outcomes
+- **Health Data Science** - Computational healthcare analytics
+- **Geospatial Health** - Spatial disease pattern analysis
+
+I welcome collaborations with scientists, students, and research professionals interested in joint projects, research positions, thesis supervision, or training opportunities. Please [contact me](mailto:contact.jubayerhossain@gmail.com) to discuss potential collaborations.
 
 
-# Research Interests
-- **Neuroepidemiology:** Investigating the distribution and determinants of neurological disorders to understand risk factors and outcomes in populations.
-- **Cancer Epidemiology:** Studying the patterns, causes, and control of cancer within populations to inform prevention and treatment strategies.
-- **Cancer Bioinformatics:** Analyzing omics data to identify genetic mutations, biomarkers, and develop data-driven approaches for cancer diagnosis and therapy.
-- **Machine Learning:** Applying machine learning algorithms to healthcare data for predictive modeling, risk assessment, and treatment optimization.
-- **Deep Learning:** Utilizing deep learning techniques to analyze complex datasets like medical imaging and genomic data for improved diagnostics and personalized medicine.
+## Research Interests
 
-# Education
+::: {.callout-important}
+## Core Research Areas
 
-## Academic Credentials 
+Our research focuses on advancing biomedical knowledge through computational approaches and epidemiological studies.
+:::
 
-**Master of Science in Microbiology** \| Jagannath University, Dhaka (2020 - 2021)
+### Primary Research Domains
 
-- Conducted an in‑depth project as part of my master’s program, centered on investigating and analyzing a Chikungunya outbreak, showcasing a dedicated commitment to advancing knowledge in the field of public health. 
+**Neuroepidemiology**
+: Investigating the distribution and determinants of neurological disorders to understand risk factors and outcomes in populations. Focus on neurodegenerative diseases and neuroimaging applications.
 
-**Bachelor of Science in Microbiology** \| Jagannath University, Dhaka (2016 - 2019)
+**Cancer Epidemiology**
+: Studying patterns, causes, and control of cancer within populations to inform prevention and treatment strategies. Emphasis on population-based cancer surveillance and risk factor analysis.
 
-- Participated in a cutting‑edge project focused on the application of bioinformatics techniques for profiling antibiotic resistance genes within complex metagenomic DNA sequences. 
+**Cancer Bioinformatics**
+: Analyzing multi-omics data to identify genetic mutations, biomarkers, and develop data-driven approaches for cancer diagnosis and therapy. Integration of genomic, transcriptomic, and proteomic data.
 
-## Training 
-**AI in Public Health** \| Child Health Research Foundation (CHRF), Dhaka, Bangladesh (September 2023)
+**Machine Learning in Healthcare**
+: Applying advanced machine learning algorithms to healthcare data for predictive modeling, risk assessment, and treatment optimization. Development of clinical decision support systems.
 
-- Participated in a comprehensive 4‑day workshop focused on utilizing AI techniques in public health research and decision‑making
-- Recipient of the scholarship, which provided financial support for my enrollment in the ’AI In Public Health’ workshop, as part of the Democra‑
-tizing Public Health Modeling Using AI‑based Tools grant by the Bill and Melinda Gates Foundation made to CHRF
+**Deep Learning Applications**
+: Utilizing deep learning techniques to analyze complex datasets including medical imaging and genomic data for improved diagnostics and personalized medicine approaches.
 
-###  Courses Taken By Me
-Here is a list of MOOC I have taken and currently taking so far
+## Education
+
+### Academic Credentials
+
+::: {.callout-note}
+## Formal Education
+
+**Master of Science in Microbiology** | Jagannath University, Dhaka
+*2020 - 2021*
+
+- **Research Focus:** Investigated and analyzed a Chikungunya outbreak, demonstrating commitment to advancing public health knowledge
+- **Specialization:** Infectious disease epidemiology and outbreak investigation
+
+**Bachelor of Science in Microbiology** | Jagannath University, Dhaka
+*2016 - 2019*
+
+- **Research Project:** Applied bioinformatics techniques for profiling antibiotic resistance genes in metagenomic DNA sequences
+- **Focus Areas:** Microbial genomics and computational biology
+:::
+
+### Professional Training
+
+**AI in Public Health Workshop** | Child Health Research Foundation (CHRF)
+*September 2023*
+
+- Completed intensive 4-day workshop on AI applications in public health research and decision-making
+- **Scholarship Recipient:** Awarded funding through the Bill & Melinda Gates Foundation's "Democratizing Public Health Modeling Using AI-based Tools" grant
+
+### Continuing Education
+
+Selected courses and certifications completed:
 
 | Year | Course Title                                              | Provider                | Platform  | Score  | Status      |
 |------|-----------------------------------------------------------|-------------------------|-----------|--------|-------------|

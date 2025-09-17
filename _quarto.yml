@@ -29,14 +29,7 @@ website:
   twitter-card:
     creator: "@hossainlab"
     image: "/files/img/banner.jpg"
-  title: ""
   favicon: /files/profiles/icon.png
-  announcement:
-    icon: info-circle
-    dismissable: true
-    content: "**Alert** - This Site is Under Construction - Please check another site of Jubayer, https://hossainlab.owlstown.net/ for updates!"
-    type: primary
-    position: below-navbar
   navbar:
       pinned: true
       left:
@@ -64,15 +57,13 @@ website:
             file: https://hossainlab.substack.com
           - text: "Dashboards"
             href: dashboards.qmd
-          - text: "Press"
-            file: press/index.qmd
           - text: "What I Use"
             file: use/index.qmd
       right:
       - icon: envelope
         aria-label: email
         href: "mailto:hossainmj@gmail.com"
-      - text: "{{< ai orcid>}}"
+      - text: "{{< ai orcid >}}"
         aria-label: orcid
         href: https://orcid.org/0000-0001-9323-4997
       - text: "{{< ai google-scholar >}}"
@@ -100,14 +91,16 @@ website:
 format:
   html:
     theme:
-       light: flatly
-       dark: darkly
+       light: [cosmo, styles.scss]
+       dark: [solar, styles.scss]
     css: styles.css
     page-layout: full
     toc: false
+    toc-location: right
     code-link: true
     anchor-sections: true
     fig-cap-location: margin
     reference-location: margin
     footnotes-hover: true
     highlight-style: github
+    smooth-scroll: true

@@ -1,7 +1,23 @@
 /*-- scss:defaults --*/
 
-  @import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
-
-$font-family: "Atkinson Hyperlegible", sans-serif;
+/* Removed conflicting font import - using Inter from styles.scss instead */
 
 /*-- scss:rules --*/
+
+/* Additional theme customizations */
+.quarto-title-banner {
+  background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+  color: white;
+  padding: 3rem 0;
+}
+
+.quarto-title-banner h1,
+.quarto-title-banner .subtitle {
+  color: white !important;
+}
+
+/* Enhanced code blocks */
+pre {
+  border-radius: 0.5rem;
+  border: 1px solid #dee2e6;
+}

@@ -1,13 +1,84 @@
-/* css styles */
-p {
-  text-align: justify;
-  word-spacing: normal; /* or try adjusting this value */
+/* Professional CSS Enhancements */
 
-}
-
+/* Button styling improvements */
 .btn-group-xs > .btn, .btn-xs {
   padding: .25rem .4rem;
   font-size: .875rem;
   line-height: .8;
   border-radius: .2rem;
 }
+
+/* Enhanced social media links in about section */
+.about-links .btn {
+  background-color: #3498db;
+  border-color: #3498db;
+  color: white;
+  margin: 0.25rem;
+  transition: all 0.3s ease;
+}
+
+.about-links .btn:hover {
+  background-color: #2980b9;
+  border-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Professional callout styling */
+.callout.callout-style-default.callout-important {
+  border-left: 5px solid #e74c3c;
+}
+
+.callout.callout-style-default.callout-note {
+  border-left: 5px solid #3498db;
+}
+
+/* Enhanced navbar logo/brand */
+.navbar-brand {
+  font-weight: 700 !important;
+  letter-spacing: -0.5px;
+}
+
+/* Professional table styling */
+.table-hover tbody tr:hover {
+  background-color: rgba(52, 152, 219, 0.1);
+}
+
+/* Loading animation for images */
+img {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Focus states for accessibility */
+a:focus, .btn:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}
+
+/* Consistent navbar icon sizes */
+.navbar-nav .nav-link {
+  font-size: 1.1rem !important;
+}
+
+.navbar-nav .nav-link i,
+.navbar-nav .nav-link .ai {
+  font-size: 1.1rem !important;
+  width: 1.1rem !important;
+  height: 1.1rem !important;
+}
+
+/* Center footer text */
+.nav-footer {
+  text-align: center !important;
+}
+
+.nav-footer-center {
+  text-align: center !important;
+  width: 100% !important;
+}
+
+.nav-footer-center p {
+  text-align: center !important;
+  margin: 0 auto !important;
+}
+

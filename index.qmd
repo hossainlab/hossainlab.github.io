@@ -1,21 +1,24 @@
 ---
 pagetitle: "Home | Jubayer Hossain"
-title: "Md. Jubayer Hossain"
-subtitle: "Health Data Science Enthusiast"
+title: "Jubayer Hossain"
+subtitle: "Researcher, Educator & Entrepreneur"
 page-layout: full
-image: files/profiles/jhossain.jpg
+toc: false
+image: files/profiles/jubayer.png
 about:
   id: hero-heading
   template: trestles
   image-shape: round
-  image-width: 8cm
+  image-width: 10cm
   links:
-    - icon: envelope 
-      href: mailto:contact.jubayerhossain@gmail.com 
+    - icon: envelope
+      href: mailto:contact.jubayerhossain@gmail.com
     - icon: linkedin
       href: https://www.linkedin.com/in/hossainmj/
-    - text: "{{< fa graduation-cap >}}"
+    - text: "{{< ai google-scholar >}}"
       href: https://scholar.google.com/citations?user=9_K4ekoAAAAJ&hl=en&authuser=5
+    - text: "{{< ai orcid >}}"
+      href: https://orcid.org/0000-0001-9323-4997
     - icon: github
       href: https://github.com/hossainlab
     - icon: twitter
@@ -23,12 +26,14 @@ about:
 
 ---
 
-I am a biomedical researcher with a focus on neuroepidemiology, cancer epidemiology, and cancer bioinformatics. My aim is to maximize the quality of life for individuals by operating at the intersection of education, technology, and health research. Currently, working as a founder and executive director at [CHIRAL Bangladesh](https://chiralbd.org/), a non-profit biomedical research organization dedicated to solving public health problems in Bangladesh. Having studied microbiology, my core research is currently located somewhere between public health and machine learning, with applications in almost all the quantitative sciences.
+## Bio
 
-As a lead instructor at [CHIRAL Training Unit](https://chiralbd.org/), I contribute to the advancement of biomedical data science knowledge and skills by designing and delivering engaging training programs. Through hands-on training and systematic learning, I empower students and professionals to harness the potential of AI in healthcare applications. Additionally, I am also working as a health data analysis instructor at [cBLAST, University of Dhaka](https://www.cblastdu.xyz/). 
+I am the Founder and Chief Executive Officer of DeepBio Limited, and the Founder and Executive Director of CHIRAL Bangladesh, its dedicated research wing. I also serve as Faculty at the Center for Bioinformatics Learning Advancement and Systematics Training (cBLAST), University of Dhaka, and as a Visiting Researcher in the Department of Public Health, Daffodil International University. At Daffodil International University, I also teach in the Micro-Credential Academy as an Instructor for the course AI for Public Health.
 
-In [our lab](https://chiralbd.org/), we are working on a wide range of research topics related to big data in bioinformatics, population health, health data science, and geospatial health. If you are a scientist/student who wants to collaborate with me, a research assistant or collaborator interested in my research, or a student looking for a thesis topic, please [reach out to me](mailto:contact.jubayerhossain@gmail.com)!
+As an educator, I hold the position of Lead Instructor and Organizer at the Training Unit of CHIRAL and DeepBio Limited. I also serve as Program Lead for the GSA Bioinformatics Internship, a collaborative initiative jointly organized by the Global Network of Bangladeshi Biotechnologists (GNOBB), ASI School of Life, and the Society for the Popularization of Science, Bangladesh (SPSB).
 
-**Research Interests:** Big Data, Neuroepidemiology, Neurodegenerative Diseases, Neuroimaging, Medical Image Analysis, Cancer Epidemiology, Cancer Bioinformatics, Machine Learning (ML), Deep Learning (DL), Single Cell Analysis
+I completed my Master of Science (2020) and Bachelor of Science (2019) in Microbiology from Jagannath University. My research focuses on applying artificial intelligence (AI) to health data—including multi-omics datasets (genomics, transcriptomics, proteomics) and neuroimaging—to identify clinically actionable biomarkers and build predictive models for the early diagnosis and treatment of neurological disorders and cancer. I am also passionate about visualizing complex data and models to improve biological interpretation and support clinical applications.
+
+Please [contact me](mailto:contact.jubayerhossain@gmail.com) to discuss potential opportunities.
 
 

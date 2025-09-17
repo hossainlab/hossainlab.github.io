@@ -564,5 +564,8 @@
   },
   "packages/index.qmd": {
     "index.html": "73ea5427"
+  },
+  "CLAUDE.md": {
+    "CLAUDE.html": "e98f7c22"
   }
 }
