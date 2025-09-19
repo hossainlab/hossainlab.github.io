@@ -1,10 +1,66 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Jubayer Hossain",
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "About Me",
     "section": "",
-    "text": "I am the Founder and Chief Executive Officer of DeepBio Limited, and the Founder and Executive Director of CHIRAL Bangladesh, its dedicated research wing. I also serve as Faculty at the Center for Bioinformatics Learning Advancement and Systematics Training (cBLAST), University of Dhaka, and as a Visiting Researcher in the Department of Public Health, Daffodil International University. At Daffodil International University, I also teach in the Micro-Credential Academy as an Instructor for the course AI for Public Health.\nAs an educator, I hold the position of Lead Instructor and Organizer at the Training Unit of CHIRAL and DeepBio Limited. I also serve as Program Lead for the GSA Bioinformatics Internship, a collaborative initiative jointly organized by the Global Network of Bangladeshi Biotechnologists (GNOBB), ASI School of Life, and the Society for the Popularization of Science, Bangladesh (SPSB).\nI completed my Master of Science (2020) and Bachelor of Science (2019) in Microbiology from Jagannath University. My research focuses on applying artificial intelligence (AI) to health data—including multi-omics datasets (genomics, transcriptomics, proteomics) and neuroimaging—to identify clinically actionable biomarkers and build predictive models for the early diagnosis and treatment of neurological disorders and cancer. I am also passionate about visualizing complex data and models to improve biological interpretation and support clinical applications.\nPlease contact me to discuss potential opportunities."
+    "text": "“My mission is to harness the transformative power of artificial intelligence to decode the complexities of biological systems, translating vast molecular datasets into actionable insights that can revolutionize healthcare and improve lives worldwide.”\n\n— Md. Jubayer Hossain\n\n\n\n\n\nProfessional Journey\n\n\n\n\n\n\nFounder & Chief Executive Officer DeepBio Limited 2022 - Present\nLeading biotechnology company focused on AI-driven drug discovery and personalized medicine solutions. Spearheading research initiatives in computational biology and developing cutting-edge bioinformatics tools for the pharmaceutical industry.\n\n\n\n\n\n\n\nFounder & Executive Director CHIRAL Bangladesh 2021 - Present\nNon-profit research organization dedicated to advancing biomedical research and training in Bangladesh. Establishing collaborative networks and educational programs to build local capacity in computational biology and bioinformatics.\n\n\n\n\n\n\n\nFaculty Center for Bioinformatics Learning Advancement and Systematics Training (cBLAST), University of Dhaka 2020 - Present\nContributing to bioinformatics education and research capacity building. Developing curriculum and teaching computational approaches to biological problems, mentoring students in genomics and data analysis.\n\n\n\n\n\n\n\nVisiting Researcher Department of Public Health, Daffodil International University 2025 - Present\nConducting interdisciplinary research at the intersection of public health and computational biology. Collaborating on projects involving health data analytics and epidemiological modeling.\n\n\n\n\n\n\n\nInstructor Daffodil International University (Micro-credential Academy, AI for Public Health) 2022 - Present\nDesigning and delivering specialized courses on artificial intelligence applications in public health. Teaching machine learning techniques for health data analysis and developing micro-credential programs.\n\n\n\n\n\n\n\nProgram Lead GSA Bioinformatics Internship 2021 - Present\nLeading comprehensive bioinformatics internship programs for students and early-career researchers. Developing hands-on training modules covering genomics, proteomics, and computational biology tools.\n\n\n\n\n\nEducation\n\n\n\n\n\n\nMaster of Science in Microbiology Jagannath University, Dhaka 2020\nResearch Focus: Chikungunya outbreak investigation and infectious disease epidemiology. Conducted comprehensive field studies and laboratory analysis to understand disease transmission patterns and develop prevention strategies.\n\n\n\n\n\n\n\nBachelor of Science in Microbiology Jagannath University, Dhaka 2019\nResearch Project: Antibiotic resistance gene profiling using bioinformatics approaches. Applied computational methods to analyze bacterial genomes and identify resistance mechanisms in pathogenic microorganisms.\n\n\n\n\n\nLet’s Connect\nI’m always excited to collaborate on innovative research projects, mentor aspiring scientists, and explore new opportunities in computational biology and AI.\nContact: contact.jubayerhossain@gmail.com"
+  },
+  {
+    "objectID": "DEV-SETUP.html",
+    "href": "DEV-SETUP.html",
+    "title": "Development Setup - Auto-Reload System",
+    "section": "",
+    "text": "This project now includes an automated development system that eliminates the need to manually restart servers.\n\n\n# First time setup\nnpm run setup\n\n# Start development (auto-reloads on changes)\nnpm run dev\nVisit: http://localhost:4321\n\n\n\n\n\nnpm run dev          # Start development server with auto-reload\nnpm run dev-watch    # Enhanced development with file watching\nnpm run build        # Build the website\nnpm run render-fast  # Fast HTML-only build\nnpm run serve        # Serve without auto-reload\nnpm run clean        # Clean build artifacts\nnpm run setup        # Complete setup\n\n\n\nmake dev            # Start development server (default)\nmake dev-watch      # Enhanced file watching\nmake build          # Build website\nmake build-fast     # Fast build\nmake serve          # Serve without auto-reload\nmake clean          # Clean artifacts\nmake setup          # Complete setup\nmake help           # Show all commands\n\n\n\nnode dev-server.js  # Custom development server with enhanced logging\n\n\n\n\n\n\n\nFile Watching: Monitors .qmd, .yml, .css, .scss, .js files\nSmart Ignoring: Excludes build artifacts and temporary files\nLive Reload: Browser automatically refreshes on changes\nEnhanced Logging: Clear feedback on what files changed\n\n\n\n\n\nTasks: Press Ctrl+Shift+P → “Tasks: Run Task”\nLaunch Configurations: Debug-ready setup\nIntegrated Terminal: Seamless development experience\n\n\n\n\nThe system watches: - **/*.qmd - Quarto markdown files - **/*.yml, **/*.yaml - Configuration files - **/*.css, **/*.scss - Stylesheets - **/*.js - JavaScript files - _quarto.yml, _variables.yml - Main config files\nIgnores: - docs/** - Build output - .quarto/** - Quarto cache - _freeze/** - Frozen content - node_modules/** - Dependencies - .git/** - Git files\n\n\n\n\n\n\n\nFile\nPurpose\n\n\n\n\npackage.json\nNPM scripts and dependencies\n\n\nnodemon.json\nFile watching configuration\n\n\ndev-server.js\nCustom development server\n\n\nMakefile\nMake commands for convenience\n\n\n.vscode/tasks.json\nVS Code task integration\n\n\n.vscode/launch.json\nVS Code debugging setup\n\n\n\n\n\n\n\nStart Once: Run npm run dev\nEdit Files: Make changes to any .qmd, .css, or config files\nAuto-Reload: Browser automatically refreshes\nNo Manual Restarts: System handles everything automatically\n\n\n\n\nPort 4321 in use?\n# Kill existing processes\nnpx kill-port 4321\nnpm run dev\nDependencies missing?\nnpm run setup\nClean slate?\nnpm run clean\nnpm run dev\n\n\n\n\nKeep the terminal open to see file change notifications\nUse Ctrl+C to stop the development server\nThe server starts automatically in your default browser\nChanges to _quarto.yml may require a manual refresh\n\n\nNever manually restart your development server again! 🎉"
+  },
+  {
+    "objectID": "DEV-SETUP.html#quick-start",
+    "href": "DEV-SETUP.html#quick-start",
+    "title": "Development Setup - Auto-Reload System",
+    "section": "",
+    "text": "# First time setup\nnpm run setup\n\n# Start development (auto-reloads on changes)\nnpm run dev\nVisit: http://localhost:4321"
+  },
+  {
+    "objectID": "DEV-SETUP.html#available-commands",
+    "href": "DEV-SETUP.html#available-commands",
+    "title": "Development Setup - Auto-Reload System",
+    "section": "",
+    "text": "npm run dev          # Start development server with auto-reload\nnpm run dev-watch    # Enhanced development with file watching\nnpm run build        # Build the website\nnpm run render-fast  # Fast HTML-only build\nnpm run serve        # Serve without auto-reload\nnpm run clean        # Clean build artifacts\nnpm run setup        # Complete setup\n\n\n\nmake dev            # Start development server (default)\nmake dev-watch      # Enhanced file watching\nmake build          # Build website\nmake build-fast     # Fast build\nmake serve          # Serve without auto-reload\nmake clean          # Clean artifacts\nmake setup          # Complete setup\nmake help           # Show all commands\n\n\n\nnode dev-server.js  # Custom development server with enhanced logging"
+  },
+  {
+    "objectID": "DEV-SETUP.html#whats-included",
+    "href": "DEV-SETUP.html#whats-included",
+    "title": "Development Setup - Auto-Reload System",
+    "section": "",
+    "text": "File Watching: Monitors .qmd, .yml, .css, .scss, .js files\nSmart Ignoring: Excludes build artifacts and temporary files\nLive Reload: Browser automatically refreshes on changes\nEnhanced Logging: Clear feedback on what files changed\n\n\n\n\n\nTasks: Press Ctrl+Shift+P → “Tasks: Run Task”\nLaunch Configurations: Debug-ready setup\nIntegrated Terminal: Seamless development experience\n\n\n\n\nThe system watches: - **/*.qmd - Quarto markdown files - **/*.yml, **/*.yaml - Configuration files - **/*.css, **/*.scss - Stylesheets - **/*.js - JavaScript files - _quarto.yml, _variables.yml - Main config files\nIgnores: - docs/** - Build output - .quarto/** - Quarto cache - _freeze/** - Frozen content - node_modules/** - Dependencies - .git/** - Git files"
+  },
+  {
+    "objectID": "DEV-SETUP.html#configuration-files",
+    "href": "DEV-SETUP.html#configuration-files",
+    "title": "Development Setup - Auto-Reload System",
+    "section": "",
+    "text": "File\nPurpose\n\n\n\n\npackage.json\nNPM scripts and dependencies\n\n\nnodemon.json\nFile watching configuration\n\n\ndev-server.js\nCustom development server\n\n\nMakefile\nMake commands for convenience\n\n\n.vscode/tasks.json\nVS Code task integration\n\n\n.vscode/launch.json\nVS Code debugging setup"
+  },
+  {
+    "objectID": "DEV-SETUP.html#workflow",
+    "href": "DEV-SETUP.html#workflow",
+    "title": "Development Setup - Auto-Reload System",
+    "section": "",
+    "text": "Start Once: Run npm run dev\nEdit Files: Make changes to any .qmd, .css, or config files\nAuto-Reload: Browser automatically refreshes\nNo Manual Restarts: System handles everything automatically"
+  },
+  {
+    "objectID": "DEV-SETUP.html#troubleshooting",
+    "href": "DEV-SETUP.html#troubleshooting",
+    "title": "Development Setup - Auto-Reload System",
+    "section": "",
+    "text": "Port 4321 in use?\n# Kill existing processes\nnpx kill-port 4321\nnpm run dev\nDependencies missing?\nnpm run setup\nClean slate?\nnpm run clean\nnpm run dev"
+  },
+  {
+    "objectID": "DEV-SETUP.html#tips",
+    "href": "DEV-SETUP.html#tips",
+    "title": "Development Setup - Auto-Reload System",
+    "section": "",
+    "text": "Keep the terminal open to see file change notifications\nUse Ctrl+C to stop the development server\nThe server starts automatically in your default browser\nChanges to _quarto.yml may require a manual refresh\n\n\nNever manually restart your development server again! 🎉"
   },
   {
     "objectID": "use/index.html",
@@ -224,6 +280,34 @@
     "text": "Welcome to the Statistical Analysis with R for Research Workshop! This 1-day intensive program is designed to equip researchers, students, and professionals with essential R programming skills for statistical analysis. Whether you are new to R or looking to enhance your skills, this workshop offers a hands-on experience to help you confidently analyze and interpret data for research purposes."
   },
   {
+    "objectID": "teaching/index.html#machine-learning-for-bioinformatics",
+    "href": "teaching/index.html#machine-learning-for-bioinformatics",
+    "title": "Courses Taught",
+    "section": "Machine Learning for Bioinformatics",
+    "text": "Machine Learning for Bioinformatics"
+  },
+  {
+    "objectID": "teaching/index.html#cancer-bioinformatics",
+    "href": "teaching/index.html#cancer-bioinformatics",
+    "title": "Courses Taught",
+    "section": "Cancer Bioinformatics",
+    "text": "Cancer Bioinformatics"
+  },
+  {
+    "objectID": "teaching/index.html#r-for-research",
+    "href": "teaching/index.html#r-for-research",
+    "title": "Courses Taught",
+    "section": "R for Research",
+    "text": "R for Research"
+  },
+  {
+    "objectID": "teaching/index.html#rna-seq-analysis-with-r",
+    "href": "teaching/index.html#rna-seq-analysis-with-r",
+    "title": "Courses Taught",
+    "section": "RNA-Seq Analysis with R",
+    "text": "RNA-Seq Analysis with R"
+  },
+  {
     "objectID": "teaching/foundations-of-health-data-science/index.html",
     "href": "teaching/foundations-of-health-data-science/index.html",
     "title": "Foundations of Health Data Science",
@@ -310,9 +394,9 @@
   {
     "objectID": "research/index.html",
     "href": "research/index.html",
-    "title": "Research Funding",
+    "title": "Research Portfolio",
     "section": "",
-    "text": "Deep learning has revolutionized clinical applications in radiology, offering advancements in classification, risk assessment, segmentation, diagnosis, prognosis, and therapy response prediction. Beyond diagnostic tasks, AI is transforming medical imaging by enhancing technical aspects such as artifact removal, image normalization, quality improvement, dose reduction, and accelerated imaging. My focuses on leveraging these deep learning innovations, particularly in neuroimaging, to improve diagnostic accuracy, optimize imaging protocols, and develop predictive models for neurological disorders.\n\n\n\n\nZhu et al., 2019"
+    "text": "Advancing biomedical research through AI-driven approaches to solve complex health challenges and improve patient outcomes."
   },
   {
     "objectID": "research/index.html#deep-learning-to-neuro-imaging-techniques",
@@ -462,116 +546,11 @@
     "text": "No matching items"
   },
   {
-    "objectID": "backup/monkeypox-outbreak-insights/index.html",
-    "href": "backup/monkeypox-outbreak-insights/index.html",
-    "title": "Monkeypox Outbreak Insights",
-    "section": "",
-    "text": "Live Dashboard"
-  },
-  {
     "objectID": "about_template.html",
     "href": "about_template.html",
     "title": "About this template",
     "section": "",
     "text": "About this template\n\n\n\nThis page contains some elaborated background information about your workshop, or the instructors.\n\n\nThis is to demonstrate how to make a drop-down page from the navigation bar."
-  },
-  {
-    "objectID": "about/index.html#academic-credentials",
-    "href": "about/index.html#academic-credentials",
-    "title": "About me",
-    "section": "Academic Credentials",
-    "text": "Academic Credentials\nMaster of Science in Microbiology | Jagannath University, Dhaka (2020 - 2021)\n\nConducted an in‑depth project as part of my master’s program, centered on investigating and analyzing a Chikungunya outbreak, showcasing a dedicated commitment to advancing knowledge in the field of public health.\n\nBachelor of Science in Microbiology | Jagannath University, Dhaka (2016 - 2019)\n\nParticipated in a cutting‑edge project focused on the application of bioinformatics techniques for profiling antibiotic resistance genes within complex metagenomic DNA sequences."
-  },
-  {
-    "objectID": "about/index.html#training",
-    "href": "about/index.html#training",
-    "title": "About me",
-    "section": "Training",
-    "text": "Training\nAI in Public Health | Child Health Research Foundation (CHRF), Dhaka, Bangladesh (September 2023)\n\nParticipated in a comprehensive 4‑day workshop focused on utilizing AI techniques in public health research and decision‑making\nRecipient of the scholarship, which provided financial support for my enrollment in the ’AI In Public Health’ workshop, as part of the Democra‑ tizing Public Health Modeling Using AI‑based Tools grant by the Bill and Melinda Gates Foundation made to CHRF\n\n\nCourses Taken By Me\nHere is a list of MOOC I have taken and currently taking so far\n\n\n\nYear\nCourse Title\nProvider\nPlatform\nScore\nStatus\n\n\n\n\n2023\nAI for Good Specialization: AI and Public Health\nDeepLearning.AI\nCoursera\n97.7%\nCertificate\n\n\n2024\nAI for Good Specialization: AI and Climate Change\nDeepLearning.AI\nCoursera\n-\nOngoing\n\n\n2024\nAI for Good Specialization: AI and Disaster Management\nDeepLearning.AI\nCoursera\n-\nOngoing\n\n\n2020\nProgramming for Everybody (Getting Started with Python)\nUniversity of Michigan\nCoursera\n95.7%\nCertificate\n\n\n2020\nThe Data Scientist’s Toolbox\nJohns Hopkins University\nCoursera\n96%\nCertificate\n\n\n2020\nEssential Epidemiologic Tools for Public Health Practice\nJohns Hopkins University\nCoursera\n96%\nCertificate"
-  },
-  {
-    "objectID": "about/index.html#research-experience",
-    "href": "about/index.html#research-experience",
-    "title": "About me",
-    "section": "Research Experience",
-    "text": "Research Experience\nFounder & Executive Director | Center for Health Innovation, Research Action, and Learning - Bangladesh (CHIRAL Bangladesh) | Dhaka, Bangladesh | (2020 - Present)\nAs the Founder & Executive Director of CHIRAL Bangladesh, I have a pivotal role in shaping the organization’s direction and ensuring its impact on society.\nResponsibilities:\n\nLead multidisciplinary research teams and the Research Internship Program and Training Unit\nDevelop and communicate the overarching vision, mission, and strategic direction of the organization\nEnsure alignment of these elements with the organization’s long‑term goals and societal impact\nSet and reinforce the organizational culture, emphasizing values such as innovation, integrity, and collaboration\n\n\nResearch Intern | Health Systems and Population Health Studies Division | International Centre for Diarrhoeal Disease Research, Bangladesh) | Dhaka, Bangladesh | (February 2022 - June 2022)\n\nConducted literature reviews and data analysis to support research projects\nParticipated in fieldwork, including data collection and data entry\n\nData Enumerator | School of Allied Health | Curtin University | Australia | (October 2022 ‑ November 2022)\n\nDelphi Study on Patient Outcomes Measurement for Interprofessional Tuberculosis Care Bangladesh\nSuccessfully collected and recorded quantitative and qualitative data from participants, ensuring a comprehensive dataset for the Delphi study"
-  },
-  {
-    "objectID": "about/index.html#teaching-experience",
-    "href": "about/index.html#teaching-experience",
-    "title": "About me",
-    "section": "Teaching Experience",
-    "text": "Teaching Experience\nInstructor | Center for Bioinformatics Learning Advancement and Systematic Training (cBLAST) | Dhaka, Bangladesh | (August 2023 - Present)\nAs an Instructor at cBLAST, I contribute to the advancement of bioinformatics knowledge and skills by designing and delivering engaging educational programs. Through hands-on training and systematic learning, I empower students and professionals to harness the potential of bioinformatics in various scientific and healthcare applications.\nTeaching Assistant | Public Health & Hygiene, Department of Microbiology | Jagannath University) | Dhaka, Bangladesh | (October 2022 - December 2022)\nAs a Teaching Assistant for the Public Health & Hygiene course, I provided vital support to the Department of Microbiology at Jagannath University. I assisted in delivering an impactful educational experience that emphasized public health principles and hygiene practices to aspiring microbiologists."
-  },
-  {
-    "objectID": "about/index.html#volunteering",
-    "href": "about/index.html#volunteering",
-    "title": "About me",
-    "section": "Volunteering",
-    "text": "Volunteering\nTeam Member | Bio-Bio-1:: Bioinformatics Research Discussion Group) | Dhaka, Bangladesh | (February 2017 - June 2019)\nAs a dedicated member of the Bio-Bio-1 Bioinformatics Research Discussion Group, I actively participated in collaborative discussions and initiatives aimed at advancing knowledge and insights in the field of bioinformatics. Through engaging with fellow researchers, I contributed to a vibrant intellectual community focused on bioinformatics research."
-  },
-  {
-    "objectID": "backup/Early Breast Cancer Detection System/index.html",
-    "href": "backup/Early Breast Cancer Detection System/index.html",
-    "title": "Early Breast Cancer Detection System Using Deep Learning",
-    "section": "",
-    "text": "Breast cancer, a major cause of death among Bangladeshi women, particularly premenopausal, is often diagnosed late due to limited awareness and healthcare access. The proposed solution involves developing a deep learning based early breast cancer detection system to improve patient outcomes, diagnostic accuracy, and efficiency.\nImplementing a deep learning system for early breast cancer detection could substantially improve early diagnosis and treatment, addressing the current challenge of late detection in Bangladeshi women."
-  },
-  {
-    "objectID": "backup/Early Breast Cancer Detection System/index.html#problem",
-    "href": "backup/Early Breast Cancer Detection System/index.html#problem",
-    "title": "Early Breast Cancer Detection System Using Deep Learning",
-    "section": "",
-    "text": "Breast cancer, a major cause of death among Bangladeshi women, particularly premenopausal, is often diagnosed late due to limited awareness and healthcare access. The proposed solution involves developing a deep learning based early breast cancer detection system to improve patient outcomes, diagnostic accuracy, and efficiency.\nImplementing a deep learning system for early breast cancer detection could substantially improve early diagnosis and treatment, addressing the current challenge of late detection in Bangladeshi women."
-  },
-  {
-    "objectID": "backup/Early Breast Cancer Detection System/index.html#evidence-supporting-the-problem",
-    "href": "backup/Early Breast Cancer Detection System/index.html#evidence-supporting-the-problem",
-    "title": "Early Breast Cancer Detection System Using Deep Learning",
-    "section": "Evidence supporting the problem",
-    "text": "Evidence supporting the problem\nStudies indicate that late-stage breast cancer diagnosis is common in Bangladesh, leading to poorer prognosis and increased treatment costs. Deep learning-based system have demonstrated promising results in detecting breast cancer from medical imaging data, offering a potential solution to improve early detection rates.\nDeep learning offers a promising avenue for mitigating late-stage breast cancer diagnoses in Bangladesh through improved early detection."
-  },
-  {
-    "objectID": "backup/Early Breast Cancer Detection System/index.html#economic-significance-of-the-problem",
-    "href": "backup/Early Breast Cancer Detection System/index.html#economic-significance-of-the-problem",
-    "title": "Early Breast Cancer Detection System Using Deep Learning",
-    "section": "Economic Significance of the Problem",
-    "text": "Economic Significance of the Problem\nLate-stage breast cancer diagnoses impose significant economic burdens on individuals and the healthcare system in Bangladesh due to higher treatment costs and mortality. Investing in deep learning-based early detection system can lead to cost savings by enabling timely interventions and reducing long-term healthcare expenditures."
-  },
-  {
-    "objectID": "backup/Early Breast Cancer Detection System/index.html#solution-design",
-    "href": "backup/Early Breast Cancer Detection System/index.html#solution-design",
-    "title": "Early Breast Cancer Detection System Using Deep Learning",
-    "section": "Solution Design",
-    "text": "Solution Design\nDevelop a deep learning-based system for the early detection of breast cancer using medical imaging data such as mammograms. Convolutional neural networks (CNNs) and other deep learning architectures will be utilized to analyze medical images and identify early signs of breast cancer with high accuracy and efficiency. Implementation of advanced techniques such as transfer learning and ensemble methods to enhance the performance on diverse datasets.\nThe solution design aligns with industry best practices for efficient and modern breast cancer detection system with the help of AI."
-  },
-  {
-    "objectID": "backup/Early Breast Cancer Detection System/index.html#innovationnovelty",
-    "href": "backup/Early Breast Cancer Detection System/index.html#innovationnovelty",
-    "title": "Early Breast Cancer Detection System Using Deep Learning",
-    "section": "Innovation/Novelty",
-    "text": "Innovation/Novelty\nThe incorporation of deep learning-based breast cancer system into healthcare is innovative and addresses a gap both in the software market and healthcare research in Bangladesh.\nThe solution demonstrates high accuracy and efficiency in improving traditional breast cancer detection processes."
-  },
-  {
-    "objectID": "backup/dengue-situation-dashboard/index.html",
-    "href": "backup/dengue-situation-dashboard/index.html",
-    "title": "Dengue Situation Dashboard",
-    "section": "",
-    "text": "Live Dashboard"
-  },
-  {
-    "objectID": "backup/index.html",
-    "href": "backup/index.html",
-    "title": "",
-    "section": "",
-    "text": "No matching items"
-  },
-  {
-    "objectID": "backup/nipah-virus/index.html",
-    "href": "backup/nipah-virus/index.html",
-    "title": "Nipah Virus Transmission in Bangladesh",
-    "section": "",
-    "text": "Live Dashboard"
   },
   {
     "objectID": "blog/multi-omics-data-integration/index.html",
@@ -931,39 +910,11 @@
     "text": "Course Format\nThe course will be delivered through a combination of lectures, hands-on practical sessions, and interactive discussions. Participants will have access to real TCGA datasets and will be guided through step-by-step analysis using R. Additionally, participants will be provided with relevant learning resources, including code examples and data repositories, to support their learning outside the course hours.\nProgram Website\n\nApply to the Program"
   },
   {
-    "objectID": "teaching/index.html#machine-learning-for-bioinformatics",
-    "href": "teaching/index.html#machine-learning-for-bioinformatics",
-    "title": "Courses Taught",
-    "section": "Machine Learning for Bioinformatics",
-    "text": "Machine Learning for Bioinformatics"
-  },
-  {
-    "objectID": "teaching/index.html#cancer-bioinformatics",
-    "href": "teaching/index.html#cancer-bioinformatics",
-    "title": "Courses Taught",
-    "section": "Cancer Bioinformatics",
-    "text": "Cancer Bioinformatics"
-  },
-  {
-    "objectID": "teaching/index.html#r-for-research",
-    "href": "teaching/index.html#r-for-research",
-    "title": "Courses Taught",
-    "section": "R for Research",
-    "text": "R for Research"
-  },
-  {
-    "objectID": "teaching/index.html#rna-seq-analysis-with-r",
-    "href": "teaching/index.html#rna-seq-analysis-with-r",
-    "title": "Courses Taught",
-    "section": "RNA-Seq Analysis with R",
-    "text": "RNA-Seq Analysis with R"
-  },
-  {
     "objectID": "CLAUDE.html",
     "href": "CLAUDE.html",
     "title": "CLAUDE.md",
     "section": "",
-    "text": "This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.\n\n\nThis is a Quarto-based academic website for Md. Jubayer Hossain, a biomedical researcher specializing in neuroepidemiology, cancer epidemiology, and bioinformatics. The site is built using Quarto and deployed to GitHub Pages.\n\n\n\n\n\n\nPreview the website locally: quarto preview (serves on port 4321)\nRender the entire website: quarto render\nRender specific files: quarto render filename.qmd\n\n\n\n\n\nMain configuration: _quarto.yml - Contains all website configuration including navigation, themes, and build settings\nVariables: _variables.yml - Contains site-wide variables like ORCID, GitHub URL, etc.\nOutput directory: docs/ - Generated site files for GitHub Pages deployment\n\n\n\n\n\n\n\n\nindex.qmd - Homepage with personal introduction and research interests\nabout/ - About section with detailed biography\nresearch/ - Research interests and grants information\npublications/ - Academic publications organized by type (peer-reviewed, working papers, etc.)\nprojects/ - Research projects and portfolios\nteaching/ - Course listings and educational content\ntalks/ - Conference presentations and talks\nblog/ - Blog posts with metadata configuration\ncv/ - Curriculum vitae\npress/ - Media appearances and press coverage\nuse/ - Tools and resources used\n\n\n\n\n\nEngine: Uses knitr engine for R code execution\nFreeze: Set to auto for selective re-rendering\nThemes: Light (flatly) and dark (darkly) themes configured\nFormats: Primarily HTML output with full page layout\nResources: Files directory included in build output\n\n\n\n\n\n.qmd files are the primary content format (Quarto Markdown)\n.yml files for configuration\n.R files in hexscripts/ for R-specific utilities\n.css/.scss files for custom styling\n\n\n\n\nThe site uses a navbar with main sections (Home, About, Research, Publications, Projects, Talks, Teaching) and a “More” dropdown for additional content like Blog, Press, and Dashboards.\n\n\n\n\n\nThe site uses Quarto’s freeze feature, so only changed content gets re-rendered\nAcademic icons are used via shortcodes like \nThe site includes social media integration and contact information\nBootstrap-based themes with custom CSS styling"
+    "text": "This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.\n\n\nThis is a Quarto-based academic website for Md. Jubayer Hossain, a biomedical researcher specializing in neuroepidemiology, cancer epidemiology, and bioinformatics. The site is built using Quarto and deployed to GitHub Pages.\n\n\n\n\n\n\nStart development server (recommended): npm run dev or make dev\nEnhanced development with file watching: npm run dev-watch\nManual preview: quarto preview (serves on port 4321)\nBuild the website: npm run build or quarto render\nFast build: npm run render:fast\nClean build artifacts: npm run clean or quarto clean\n\n\n\n\n\nFirst time setup: npm run setup or make setup\nStart developing: npm run dev (auto-reloads on file changes)\nAccess site: http://localhost:4321\n\n\n\n\n\nUsing Make: make dev, make build, make clean\nVS Code: Use Tasks (Ctrl+Shift+P → “Tasks: Run Task”)\nNode.js script: node dev-server.js\n\n\n\n\n\nMain configuration: _quarto.yml - Contains all website configuration including navigation, themes, and build settings\nVariables: _variables.yml - Contains site-wide variables like ORCID, GitHub URL, etc.\nOutput directory: docs/ - Generated site files for GitHub Pages deployment\n\n\n\n\n\n\n\n\nindex.qmd - Homepage with personal introduction and research interests\nabout/ - About section with detailed biography\nresearch/ - Research interests and grants information\npublications/ - Academic publications organized by type (peer-reviewed, working papers, etc.)\nprojects/ - Research projects and portfolios\nteaching/ - Course listings and educational content\ntalks/ - Conference presentations and talks\nblog/ - Blog posts with metadata configuration\ncv/ - Curriculum vitae\npress/ - Media appearances and press coverage\nuse/ - Tools and resources used\n\n\n\n\n\nEngine: Uses knitr engine for R code execution\nFreeze: Set to auto for selective re-rendering\nThemes: Light (flatly) and dark (darkly) themes configured\nFormats: Primarily HTML output with full page layout\nResources: Files directory included in build output\n\n\n\n\n\n.qmd files are the primary content format (Quarto Markdown)\n.yml files for configuration\n.R files in hexscripts/ for R-specific utilities\n.css/.scss files for custom styling\n\n\n\n\nThe site uses a navbar with main sections (Home, About, Research, Publications, Projects, Talks, Teaching) and a “More” dropdown for additional content like Blog, Press, and Dashboards.\n\n\n\n\n\nThe site uses Quarto’s freeze feature, so only changed content gets re-rendered\nAcademic icons are used via shortcodes like \nThe site includes social media integration and contact information\nBootstrap-based themes with custom CSS styling"
   },
   {
     "objectID": "CLAUDE.html#project-overview",
@@ -977,7 +928,7 @@
     "href": "CLAUDE.html#common-commands",
     "title": "CLAUDE.md",
     "section": "",
-    "text": "Preview the website locally: quarto preview (serves on port 4321)\nRender the entire website: quarto render\nRender specific files: quarto render filename.qmd\n\n\n\n\n\nMain configuration: _quarto.yml - Contains all website configuration including navigation, themes, and build settings\nVariables: _variables.yml - Contains site-wide variables like ORCID, GitHub URL, etc.\nOutput directory: docs/ - Generated site files for GitHub Pages deployment"
+    "text": "Start development server (recommended): npm run dev or make dev\nEnhanced development with file watching: npm run dev-watch\nManual preview: quarto preview (serves on port 4321)\nBuild the website: npm run build or quarto render\nFast build: npm run render:fast\nClean build artifacts: npm run clean or quarto clean\n\n\n\n\n\nFirst time setup: npm run setup or make setup\nStart developing: npm run dev (auto-reloads on file changes)\nAccess site: http://localhost:4321\n\n\n\n\n\nUsing Make: make dev, make build, make clean\nVS Code: Use Tasks (Ctrl+Shift+P → “Tasks: Run Task”)\nNode.js script: node dev-server.js\n\n\n\n\n\nMain configuration: _quarto.yml - Contains all website configuration including navigation, themes, and build settings\nVariables: _variables.yml - Contains site-wide variables like ORCID, GitHub URL, etc.\nOutput directory: docs/ - Generated site files for GitHub Pages deployment"
   },
   {
     "objectID": "CLAUDE.html#architecture",
@@ -994,52 +945,38 @@
     "text": "The site uses Quarto’s freeze feature, so only changed content gets re-rendered\nAcademic icons are used via shortcodes like \nThe site includes social media integration and contact information\nBootstrap-based themes with custom CSS styling"
   },
   {
-    "objectID": "index.html#about-me",
-    "href": "index.html#about-me",
-    "title": "Jubayer Hossain",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Md. Jubayer Hossain",
     "section": "",
     "text": "I am the Founder and Chief Executive Officer of DeepBio Limited, and the Founder and Executive Director of CHIRAL Bangladesh, its dedicated research wing. I also serve as Faculty at the Center for Bioinformatics Learning Advancement and Systematics Training (cBLAST), University of Dhaka, and as a Visiting Researcher in the Department of Public Health, Daffodil International University. At Daffodil International University, I also teach in the Micro-Credential Academy as an Instructor for the course AI for Public Health.\nAs an educator, I hold the position of Lead Instructor and Organizer at the Training Unit of CHIRAL and DeepBio Limited. I also serve as Program Lead for the GSA Bioinformatics Internship, a collaborative initiative jointly organized by the Global Network of Bangladeshi Biotechnologists (GNOBB), ASI School of Life, and the Society for the Popularization of Science, Bangladesh (SPSB).\nI completed my Master of Science (2020) and Bachelor of Science (2019) in Microbiology from Jagannath University. My research focuses on applying artificial intelligence (AI) to health data—including multi-omics datasets (genomics, transcriptomics, proteomics) and neuroimaging—to identify clinically actionable biomarkers and build predictive models for the early diagnosis and treatment of neurological disorders and cancer. I am also passionate about visualizing complex data and models to improve biological interpretation and support clinical applications.\nPlease contact me to discuss potential opportunities."
-  },
-  {
-    "objectID": "index.html#current-roles",
-    "href": "index.html#current-roles",
-    "title": "Md. Jubayer Hossain",
-    "section": "Current Roles",
-    "text": "Current Roles\n\n\n\n\n\n\nProfessional Positions\n\n\n\n\nFounder & Executive Director at CHIRAL Bangladesh\nLead Instructor at CHIRAL Training Unit\nHealth Data Analysis Instructor at cBLAST, University of Dhaka\n\n\n\nPlease contact me to discuss potential opportunities."
-  },
-  {
-    "objectID": "index.html#research-focus",
-    "href": "index.html#research-focus",
-    "title": "Md. Jubayer Hossain",
-    "section": "Research Focus",
-    "text": "Research Focus\nOur research group at CHIRAL Bangladesh investigates:\n\nBig Data in Bioinformatics - Large-scale genomic and omics data analysis\nPopulation Health - Epidemiological studies and health outcomes research\nHealth Data Science - Computational methods for healthcare analytics\nGeospatial Health - Spatial analysis of disease patterns and health determinants"
-  },
-  {
-    "objectID": "index.html#key-research-areas",
-    "href": "index.html#key-research-areas",
-    "title": "Md. Jubayer Hossain",
-    "section": "Key Research Areas",
-    "text": "Key Research Areas\n\nNeuroepidemiology • Cancer Epidemiology • Cancer Bioinformatics • Machine Learning • Deep Learning • Medical Image Analysis • Neuroimaging • Single Cell Analysis • Neurodegenerative Diseases"
-  },
-  {
-    "objectID": "index.html#collaboration-opportunities",
-    "href": "index.html#collaboration-opportunities",
-    "title": "Md. Jubayer Hossain",
-    "section": "Collaboration Opportunities",
-    "text": "Collaboration Opportunities\nI welcome collaborations with scientists, students, and research professionals. Whether you’re interested in:\n\nJoint research projects\nResearch assistant positions\nGraduate thesis supervision\nTraining and capacity building\n\nPlease contact me to discuss potential opportunities."
-  },
-  {
-    "objectID": "about/index.html",
-    "href": "about/index.html",
-    "title": "About Md. Jubayer Hossain",
-    "section": "",
-    "text": "BiographyResearch InterestsEducationResearch ExperienceTeaching ExperienceVolunteering\n\n\n\nProfessional Overview\nI am a biomedical researcher specializing in neuroepidemiology, cancer epidemiology, and cancer bioinformatics. My mission is to improve quality of life by operating at the intersection of education, technology, and health research. I currently serve as the Founder & Executive Director of CHIRAL Bangladesh, a non-profit biomedical research organization dedicated to addressing public health challenges in Bangladesh.\nWith a background in microbiology, my research portfolio spans the intersection of public health and machine learning, with applications across multiple quantitative sciences. I am passionate about leveraging data science and artificial intelligence to solve complex health problems and advance biomedical knowledge.\n\n\nTeaching & Training\nAs a Lead Instructor at CHIRAL Training Unit, I design and deliver comprehensive biomedical data science training programs. Through hands-on learning and systematic approaches, I empower students and professionals to harness the potential of AI in healthcare applications. I also serve as a Health Data Analysis Instructor at cBLAST, University of Dhaka, contributing to the advancement of bioinformatics education.\n\n\nResearch Leadership\nAt CHIRAL Bangladesh, our research team investigates diverse topics in:\n\nBig Data in Bioinformatics - Genomic and omics data analysis\nPopulation Health - Epidemiological studies and health outcomes\nHealth Data Science - Computational healthcare analytics\nGeospatial Health - Spatial disease pattern analysis\n\nI welcome collaborations with scientists, students, and research professionals interested in joint projects, research positions, thesis supervision, or training opportunities. Please contact me to discuss potential collaborations.\n\n\n\n\n\n\n\n\n\nCore Research Areas\n\n\n\nOur research focuses on advancing biomedical knowledge through computational approaches and epidemiological studies.\n\n\n\nPrimary Research Domains\n\nNeuroepidemiology\n\nInvestigating the distribution and determinants of neurological disorders to understand risk factors and outcomes in populations. Focus on neurodegenerative diseases and neuroimaging applications.\n\nCancer Epidemiology\n\nStudying patterns, causes, and control of cancer within populations to inform prevention and treatment strategies. Emphasis on population-based cancer surveillance and risk factor analysis.\n\nCancer Bioinformatics\n\nAnalyzing multi-omics data to identify genetic mutations, biomarkers, and develop data-driven approaches for cancer diagnosis and therapy. Integration of genomic, transcriptomic, and proteomic data.\n\nMachine Learning in Healthcare\n\nApplying advanced machine learning algorithms to healthcare data for predictive modeling, risk assessment, and treatment optimization. Development of clinical decision support systems.\n\nDeep Learning Applications\n\nUtilizing deep learning techniques to analyze complex datasets including medical imaging and genomic data for improved diagnostics and personalized medicine approaches.\n\n\n\n\n\n\nAcademic Credentials\n\n\n\n\n\n\nFormal Education\n\n\n\nMaster of Science in Microbiology | Jagannath University, Dhaka 2020 - 2021\n\nResearch Focus: Investigated and analyzed a Chikungunya outbreak, demonstrating commitment to advancing public health knowledge\nSpecialization: Infectious disease epidemiology and outbreak investigation\n\nBachelor of Science in Microbiology | Jagannath University, Dhaka 2016 - 2019\n\nResearch Project: Applied bioinformatics techniques for profiling antibiotic resistance genes in metagenomic DNA sequences\nFocus Areas: Microbial genomics and computational biology\n\n\n\n\n\nProfessional Training\nAI in Public Health Workshop | Child Health Research Foundation (CHRF) September 2023\n\nCompleted intensive 4-day workshop on AI applications in public health research and decision-making\nScholarship Recipient: Awarded funding through the Bill & Melinda Gates Foundation’s “Democratizing Public Health Modeling Using AI-based Tools” grant\n\n\n\nContinuing Education\nSelected courses and certifications completed:\n\n\n\nYear\nCourse Title\nProvider\nPlatform\nScore\nStatus\n\n\n\n\n2023\nAI for Good Specialization: AI and Public Health\nDeepLearning.AI\nCoursera\n97.7%\nCertificate\n\n\n2024\nAI for Good Specialization: AI and Climate Change\nDeepLearning.AI\nCoursera\n-\nOngoing\n\n\n2024\nAI for Good Specialization: AI and Disaster Management\nDeepLearning.AI\nCoursera\n-\nOngoing\n\n\n2020\nProgramming for Everybody (Getting Started with Python)\nUniversity of Michigan\nCoursera\n95.7%\nCertificate\n\n\n2020\nThe Data Scientist’s Toolbox\nJohns Hopkins University\nCoursera\n96%\nCertificate\n\n\n2020\nEssential Epidemiologic Tools for Public Health Practice\nJohns Hopkins University\nCoursera\n96%\nCertificate\n\n\n\n\n\nExperiences\n\n\n\nFounder & Executive Director | Center for Health Innovation, Research Action, and Learning - Bangladesh (CHIRAL Bangladesh) | Dhaka, Bangladesh | (2020 - Present)\nAs the Founder & Executive Director of CHIRAL Bangladesh, I have a pivotal role in shaping the organization’s direction and ensuring its impact on society.\nResponsibilities:\n\nLead multidisciplinary research teams and the Research Internship Program and Training Unit\nDevelop and communicate the overarching vision, mission, and strategic direction of the organization\nEnsure alignment of these elements with the organization’s long‑term goals and societal impact\nSet and reinforce the organizational culture, emphasizing values such as innovation, integrity, and collaboration\n\n\nResearch Intern | Health Systems and Population Health Studies Division | International Centre for Diarrhoeal Disease Research, Bangladesh) | Dhaka, Bangladesh | (February 2022 - June 2022)\n\nConducted literature reviews and data analysis to support research projects\nParticipated in fieldwork, including data collection and data entry\n\nData Enumerator | School of Allied Health | Curtin University | Australia | (October 2022 ‑ November 2022)\n\nDelphi Study on Patient Outcomes Measurement for Interprofessional Tuberculosis Care Bangladesh\nSuccessfully collected and recorded quantitative and qualitative data from participants, ensuring a comprehensive dataset for the Delphi study\n\n\n\nInstructor | Center for Bioinformatics Learning Advancement and Systematic Training (cBLAST) | Dhaka, Bangladesh | (August 2023 - Present)\nAs an Instructor at cBLAST, I contribute to the advancement of bioinformatics knowledge and skills by designing and delivering engaging educational programs. Through hands-on training and systematic learning, I empower students and professionals to harness the potential of bioinformatics in various scientific and healthcare applications.\nTeaching Assistant | Public Health & Hygiene, Department of Microbiology | Jagannath University) | Dhaka, Bangladesh | (October 2022 - December 2022)\nAs a Teaching Assistant for the Public Health & Hygiene course, I provided vital support to the Department of Microbiology at Jagannath University. I assisted in delivering an impactful educational experience that emphasized public health principles and hygiene practices to aspiring microbiologists.\n\n\nTeam Member | Bio-Bio-1:: Bioinformatics Research Discussion Group) | Dhaka, Bangladesh | (February 2017 - June 2019)\nAs a dedicated member of the Bio-Bio-1 Bioinformatics Research Discussion Group, I actively participated in collaborative discussions and initiatives aimed at advancing knowledge and insights in the field of bioinformatics. Through engaging with fellow researchers, I contributed to a vibrant intellectual community focused on bioinformatics research.\n\nSkills\nProgramming Languages: Python, R, SQL, Julia, JavaScript\nPython Packages: Data manipulation (pandas, numpy), visualization (matplotlib, seaborn, plotly), and statistical modeling (statsmodels, scipy). Experienced in machine learning (scikit-learn, xgboost, lightgbm) and deep learning (tensorflow, keras, pytorch). Skilled in bioinformatics analysis (biopython, scipy, skbio) and data preprocessing (pandas-profiling, pyjanitor). Adept in time series forecasting (prophet, statsmodels) and geospatial data handling (geopandas, folium). Proficient in web development and dashboarding tools (streamlit, dash, flask).\nR Packages: Data manipulation (dplyr, tidyr), visualization (ggplot2, plotly), and statistical modeling (lme4, MASS, gtsummary for elegant summaries). Experienced in machine learning (caret, xgboost, keras) and bioinformatics analysis (DESeq2 for differential expression, maftools for mutation analysis). Skilled in time series forecasting (forecast) and spatial data processing (sf, raster). Adept in unified workflows (easystats) and dynamic reporting and dashboards (shiny, rmarkdown, flexdashboard).\nData Science: scikit-learn, PyCaret, Dask, PySpark\nBioinformatics: BioPython, Bioconductor, BioPandas, Galaxy, NGS, RNASeq, ssRNASeq\nGIS & Remote Sensing: ArcGIS, Geopandas, Xarray, Giovani, Google Earth Engiine\nAnalytics Softwares: SPSS, PowerBI, Microsoft Excel\nSurvey Tools: RedCap, KoboToolBox, EpiCollect, Google Forms\nAcademic Writing Tools: Microsoft Word, LaTeX, Mendeley, Zotero\nMiscellaneous Skills: UNIX, Version Control(Git), Web Scraping, APIs"
   },
   {
     "objectID": "index.html#bio",
     "href": "index.html#bio",
-    "title": "Jubayer Hossain",
+    "title": "Md. Jubayer Hossain",
     "section": "",
     "text": "I am the Founder and Chief Executive Officer of DeepBio Limited, and the Founder and Executive Director of CHIRAL Bangladesh, its dedicated research wing. I also serve as Faculty at the Center for Bioinformatics Learning Advancement and Systematics Training (cBLAST), University of Dhaka, and as a Visiting Researcher in the Department of Public Health, Daffodil International University. At Daffodil International University, I also teach in the Micro-Credential Academy as an Instructor for the course AI for Public Health.\nAs an educator, I hold the position of Lead Instructor and Organizer at the Training Unit of CHIRAL and DeepBio Limited. I also serve as Program Lead for the GSA Bioinformatics Internship, a collaborative initiative jointly organized by the Global Network of Bangladeshi Biotechnologists (GNOBB), ASI School of Life, and the Society for the Popularization of Science, Bangladesh (SPSB).\nI completed my Master of Science (2020) and Bachelor of Science (2019) in Microbiology from Jagannath University. My research focuses on applying artificial intelligence (AI) to health data—including multi-omics datasets (genomics, transcriptomics, proteomics) and neuroimaging—to identify clinically actionable biomarkers and build predictive models for the early diagnosis and treatment of neurological disorders and cancer. I am also passionate about visualizing complex data and models to improve biological interpretation and support clinical applications.\nPlease contact me to discuss potential opportunities."
+  },
+  {
+    "objectID": "research/index.html#research-areas",
+    "href": "research/index.html#research-areas",
+    "title": "Research Portfolio",
+    "section": "Research Areas",
+    "text": "Research Areas\n\n\n\n🧠\n\n\nNeuroepidemiology & Brain Health\nInvestigating the epidemiology of neurological disorders using computational approaches. Focus on population-based studies, risk factor identification, and predictive modeling for neurodegenerative diseases.\n\n\n\n\n🎯\n\n\nCancer Epidemiology & Oncology\nApplying machine learning and statistical methods to understand cancer patterns, survival analysis, and treatment outcomes. Development of predictive models for early detection and prognosis.\n\n\n\n\n🧬\n\n\nBioinformatics & Genomics\nComputational analysis of genomic data, transcriptomics, and multi-omics integration. Development of algorithms for variant analysis, gene expression profiling, and precision medicine.\n\n\n\n\n🤖\n\n\nAI in Drug Discovery\nLeveraging artificial intelligence for pharmaceutical research, including molecular design, drug-target interaction prediction, and compound optimization using deep learning approaches.\n\n\n\n\n🏥\n\n\nPublic Health Informatics\nApplication of data science methods to public health challenges, including disease surveillance, health policy analysis, and environmental health impact assessment.\n\n\n\n\n🔬\n\n\nComputational Biology\nDevelopment of computational methods for biological data analysis, including phylogenetics, protein structure prediction, and systems biology approaches."
+  },
+  {
+    "objectID": "research/index.html#current-projects",
+    "href": "research/index.html#current-projects",
+    "title": "Research Portfolio",
+    "section": "Current Projects",
+    "text": "Current Projects\n\n\n\nActive\n\n\n\nSecondhand Smoke Exposure Assessment\n\n\nFunding: Tobacco Control Policy Research Grant Program ($10,000) Duration: 2024 - Present Role: Principal Investigator\n\n\nInvestigating compliance with smoke-free policies in public spaces across Bangladesh. This multi-site study combines observational data collection with policy analysis to assess the effectiveness of tobacco control measures.\n\n\n\nPublic Health\nPolicy Research\nEnvironmental Health\n\n\n\n\n\n\nActive\n\n\n\nDeep Learning for Breast Cancer Detection\n\n\nFunding: Research and Innovation Center ($2,730) Duration: 2024 - Present Role: Principal Investigator\n\n\nDevelopment of an AI-powered early detection system for breast cancer using deep learning algorithms. The project focuses on improving diagnostic accuracy and reducing false positive rates in mammography screening.\n\n\n\nDeep Learning\nMedical Imaging\nCancer Research\n\n\n\n\n\n\nActive\n\n\n\nAir Quality Impact on Asthma Prevalence\n\n\nFunding: International Center for Climate Change and Development ($4,550) Duration: 2024 - Present Role: Principal Investigator\n\n\nComprehensive study examining the relationship between air quality metrics and asthma prevalence in urban areas of Bangladesh. Integrating environmental monitoring data with health surveillance systems.\n\n\n\nEnvironmental Health\nClimate Change\nRespiratory Disease\n\n\n\n\n\n\nActive\n\n\n\nClimate-Related Health Surveillance System\n\n\nFunding: Global Disaster Preparedness Center ($4,550) Duration: 2024 - Present Role: Principal Investigator\n\n\nDevelopment of early warning systems for climate-related health threats including waterborne diseases and heat-related illnesses. Focus on vulnerable populations in flood and drought-prone regions.\n\n\n\nClimate Health\nDisease Surveillance\nEarly Warning Systems\n\n\n\n\n\n\nCompleted\n\n\n\nDeep Learning Framework for Neuroimaging\n\n\nDuration: 2023 - 2024 Role: Lead Researcher\n\n\nDeveloped innovative deep learning approaches for neuroimaging analysis, focusing on artifact removal, image quality enhancement, and diagnostic prediction for neurological disorders.\n\n\n\nNeuroimaging\nDeep Learning\nMedical AI\n\n\n\n\n\n\nCompleted\n\n\n\nGenomic Data Analysis Pipeline\n\n\nDuration: 2022 - 2023 Role: Principal Investigator\n\n\nCreated comprehensive bioinformatics pipeline for genomic variant analysis and interpretation, with applications in precision medicine and population genetics studies.\n\n\n\nGenomics\nBioinformatics\nPrecision Medicine"
+  },
+  {
+    "objectID": "research/index.html#research-impact",
+    "href": "research/index.html#research-impact",
+    "title": "Research Portfolio",
+    "section": "Research Impact",
+    "text": "Research Impact\n\n\n\n$25,400+\n\n\nTotal Research Funding\n\n\n\n\n15+\n\n\nResearch Projects\n\n\n\n\n8+\n\n\nCollaborating Institutions\n\n\n\n\n6\n\n\nResearch Areas"
   }
 ]

@@ -1,0 +1,29 @@
+{
+  "name": "hossainlab-website",
+  "version": "1.0.0",
+  "description": "Academic website for Md. Jubayer Hossain",
+  "scripts": {
+    "dev": "quarto preview --port 4321",
+    "dev:watch": "concurrently \"quarto preview --port 4321\" \"npm run watch:css\"",
+    "watch:css": "chokidar \"styles.css\" \"styles.scss\" \"**/*.qmd\" -c \"echo CSS/Content changed at $(date)\"",
+    "build": "quarto render",
+    "serve": "quarto preview --no-browser --no-watch-inputs",
+    "start": "npm run dev",
+    "render:fast": "quarto render --to html",
+    "clean": "quarto clean",
+    "setup": "npm install && echo 'Setup complete! Run npm run dev to start development server.'"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "quarto",
+    "academic-website",
+    "bioinformatics",
+    "research"
+  ],
+  "author": "Md. Jubayer Hossain",
+  "license": "MIT"
+}

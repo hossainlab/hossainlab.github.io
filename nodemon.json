@@ -1,0 +1,23 @@
+{
+  "watch": [
+    "**/*.qmd",
+    "**/*.yml",
+    "**/*.yaml",
+    "**/*.css",
+    "**/*.scss",
+    "**/*.js",
+    "_quarto.yml",
+    "_variables.yml"
+  ],
+  "ignore": [
+    "docs/**",
+    ".quarto/**",
+    "_freeze/**",
+    "node_modules/**",
+    ".git/**",
+    "*.log"
+  ],
+  "ext": "qmd,yml,yaml,css,scss,js",
+  "exec": "echo 'Files changed, Quarto will auto-reload...' && sleep 1",
+  "delay": "1000"
+}

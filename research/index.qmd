@@ -1,13 +1,226 @@
 ---
 pagetitle: "Research | Jubayer Hossain"
+title: ""
 page-layout: full
-title-block-banner: false
+toc: false
 comments: false
-callout-icon: false
-toc: true 
-toc-depth: 2
 ---
 
-{{< include interests.qmd >}}
+::: {.research-hero-container}
+::: {.research-hero-section}
+# Research <span class="hero-accent">Portfolio</span>
+:::
+::: {.research-subtitle}
+Advancing biomedical research through AI-driven approaches to solve complex health challenges and improve patient outcomes.
+:::
+:::
 
-{{< include grants.qmd >}}
+::: {.main-content}
+
+::: {.research-areas-section}
+## Research Areas
+
+::: {.research-areas-grid}
+::: {.research-area-card}
+::: {.research-icon}
+🧠
+:::
+::: {.research-content}
+### Neuroepidemiology & Brain Health
+Investigating the epidemiology of neurological disorders using computational approaches. Focus on population-based studies, risk factor identification, and predictive modeling for neurodegenerative diseases.
+:::
+:::
+
+::: {.research-area-card}
+::: {.research-icon}
+🎯
+:::
+::: {.research-content}
+### Cancer Epidemiology & Oncology
+Applying machine learning and statistical methods to understand cancer patterns, survival analysis, and treatment outcomes. Development of predictive models for early detection and prognosis.
+:::
+:::
+
+::: {.research-area-card}
+::: {.research-icon}
+🧬
+:::
+::: {.research-content}
+### Bioinformatics & Genomics
+Computational analysis of genomic data, transcriptomics, and multi-omics integration. Development of algorithms for variant analysis, gene expression profiling, and precision medicine.
+:::
+:::
+
+::: {.research-area-card}
+::: {.research-icon}
+🤖
+:::
+::: {.research-content}
+### AI in Drug Discovery
+Leveraging artificial intelligence for pharmaceutical research, including molecular design, drug-target interaction prediction, and compound optimization using deep learning approaches.
+:::
+:::
+
+::: {.research-area-card}
+::: {.research-icon}
+🏥
+:::
+::: {.research-content}
+### Public Health Informatics
+Application of data science methods to public health challenges, including disease surveillance, health policy analysis, and environmental health impact assessment.
+:::
+:::
+
+::: {.research-area-card}
+::: {.research-icon}
+🔬
+:::
+::: {.research-content}
+### Computational Biology
+Development of computational methods for biological data analysis, including phylogenetics, protein structure prediction, and systems biology approaches.
+:::
+:::
+:::
+:::
+
+## Current Projects
+
+<div class="projects-grid">
+<div class="project-card active">
+<div class="project-status">Active</div>
+<div class="project-content">
+<h3>Secondhand Smoke Exposure Assessment</h3>
+<p><strong>Funding:</strong> Tobacco Control Policy Research Grant Program ($10,000)<br>
+<strong>Duration:</strong> 2024 - Present<br>
+<strong>Role:</strong> Principal Investigator</p>
+<p>Investigating compliance with smoke-free policies in public spaces across Bangladesh. This multi-site study combines observational data collection with policy analysis to assess the effectiveness of tobacco control measures.</p>
+<div class="project-tags">
+- Public Health
+- Policy Research
+- Environmental Health
+</div>
+</div>
+</div>
+
+<div class="project-card active">
+<div class="project-status">Active</div>
+<div class="project-content">
+<h3>Deep Learning for Breast Cancer Detection</h3>
+<p><strong>Funding:</strong> Research and Innovation Center ($2,730)<br>
+<strong>Duration:</strong> 2024 - Present<br>
+<strong>Role:</strong> Principal Investigator</p>
+<p>Development of an AI-powered early detection system for breast cancer using deep learning algorithms. The project focuses on improving diagnostic accuracy and reducing false positive rates in mammography screening.</p>
+<div class="project-tags">
+- Deep Learning
+- Medical Imaging
+- Cancer Research
+</div>
+</div>
+</div>
+
+<div class="project-card active">
+<div class="project-status">Active</div>
+<div class="project-content">
+<h3>Air Quality Impact on Asthma Prevalence</h3>
+<p><strong>Funding:</strong> International Center for Climate Change and Development ($4,550)<br>
+<strong>Duration:</strong> 2024 - Present<br>
+<strong>Role:</strong> Principal Investigator</p>
+<p>Comprehensive study examining the relationship between air quality metrics and asthma prevalence in urban areas of Bangladesh. Integrating environmental monitoring data with health surveillance systems.</p>
+<div class="project-tags">
+- Environmental Health
+- Climate Change
+- Respiratory Disease
+</div>
+</div>
+</div>
+
+<div class="project-card active">
+<div class="project-status">Active</div>
+<div class="project-content">
+<h3>Climate-Related Health Surveillance System</h3>
+<p><strong>Funding:</strong> Global Disaster Preparedness Center ($4,550)<br>
+<strong>Duration:</strong> 2024 - Present<br>
+<strong>Role:</strong> Principal Investigator</p>
+<p>Development of early warning systems for climate-related health threats including waterborne diseases and heat-related illnesses. Focus on vulnerable populations in flood and drought-prone regions.</p>
+<div class="project-tags">
+- Climate Health
+- Disease Surveillance
+- Early Warning Systems
+</div>
+</div>
+</div>
+
+<div class="project-card">
+<div class="project-status">Completed</div>
+<div class="project-content">
+<h3>Deep Learning Framework for Neuroimaging</h3>
+<p><strong>Duration:</strong> 2023 - 2024<br>
+<strong>Role:</strong> Lead Researcher</p>
+<p>Developed innovative deep learning approaches for neuroimaging analysis, focusing on artifact removal, image quality enhancement, and diagnostic prediction for neurological disorders.</p>
+<div class="project-tags">
+- Neuroimaging
+- Deep Learning
+- Medical AI
+</div>
+</div>
+</div>
+
+<div class="project-card">
+<div class="project-status">Completed</div>
+<div class="project-content">
+<h3>Genomic Data Analysis Pipeline</h3>
+<p><strong>Duration:</strong> 2022 - 2023<br>
+<strong>Role:</strong> Principal Investigator</p>
+<p>Created comprehensive bioinformatics pipeline for genomic variant analysis and interpretation, with applications in precision medicine and population genetics studies.</p>
+<div class="project-tags">
+- Genomics
+- Bioinformatics
+- Precision Medicine
+</div>
+</div>
+</div>
+</div>
+
+::: {.research-metrics-section}
+## Research Impact
+
+::: {.metrics-grid}
+::: {.metric-card}
+::: {.metric-number}
+$25,400+
+:::
+::: {.metric-label}
+Total Research Funding
+:::
+:::
+
+::: {.metric-card}
+::: {.metric-number}
+15+
+:::
+::: {.metric-label}
+Research Projects
+:::
+:::
+
+::: {.metric-card}
+::: {.metric-number}
+8+
+:::
+::: {.metric-label}
+Collaborating Institutions
+:::
+:::
+
+::: {.metric-card}
+::: {.metric-number}
+6
+:::
+::: {.metric-label}
+Research Areas
+:::
+:::
+:::
+:::
+
+:::

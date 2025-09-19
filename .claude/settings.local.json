@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx @modelcontextprotocol/server-playwright screenshot:*)",
+      "WebFetch(domain:mdjubayerhossain.com)",
+      "Bash(node:*)",
+      "Bash(npx playwright:*)",
+      "Bash(npm run dev:*)",
+      "Bash(quarto clean:*)",
+      "Bash(npm run clean:*)",
+      "Bash(quarto render:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

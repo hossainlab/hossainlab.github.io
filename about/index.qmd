@@ -1,177 +1,143 @@
 ---
 pagetitle: "About | Jubayer Hossain"
-title: "About Md. Jubayer Hossain"
-subtitle: "Biomedical Researcher & Health Data Scientist"
+title: ""
 page-layout: full
-title-block-banner: true
-toc: true
-toc-location: right
+toc: false
 comments: false
-callout-icon: false
 ---
 
-:::  panel-tabset
+::: {.about-hero-container}
 
-## Biography
+::: {.about-hero-section}
+# About <span class="hero-accent">Me</span>
+:::
+::: {.mission-quote-card}
+::: {.quote-content}
+*"My mission is to harness the transformative power of artificial intelligence to decode the complexities of biological systems, translating vast molecular datasets into actionable insights that can revolutionize healthcare and improve lives worldwide."*
 
-### Professional Overview
-
-I am a biomedical researcher specializing in **neuroepidemiology**, **cancer epidemiology**, and **cancer bioinformatics**. My mission is to improve quality of life by operating at the intersection of education, technology, and health research. I currently serve as the **Founder & Executive Director** of [CHIRAL Bangladesh](https://chiralbd.org/), a non-profit biomedical research organization dedicated to addressing public health challenges in Bangladesh.
-
-With a background in microbiology, my research portfolio spans the intersection of public health and machine learning, with applications across multiple quantitative sciences. I am passionate about leveraging data science and artificial intelligence to solve complex health problems and advance biomedical knowledge.
-
-### Teaching & Training
-
-As a **Lead Instructor** at [CHIRAL Training Unit](https://chiralbd.org/), I design and deliver comprehensive biomedical data science training programs. Through hands-on learning and systematic approaches, I empower students and professionals to harness the potential of AI in healthcare applications. I also serve as a **Health Data Analysis Instructor** at [cBLAST, University of Dhaka](https://www.cblastdu.xyz/), contributing to the advancement of bioinformatics education.
-
-### Research Leadership
-
-At [CHIRAL Bangladesh](https://chiralbd.org/), our research team investigates diverse topics in:
-
-- **Big Data in Bioinformatics** - Genomic and omics data analysis
-- **Population Health** - Epidemiological studies and health outcomes
-- **Health Data Science** - Computational healthcare analytics
-- **Geospatial Health** - Spatial disease pattern analysis
-
-I welcome collaborations with scientists, students, and research professionals interested in joint projects, research positions, thesis supervision, or training opportunities. Please [contact me](mailto:contact.jubayerhossain@gmail.com) to discuss potential collaborations.
-
-
-## Research Interests
-
-::: {.callout-important}
-## Core Research Areas
-
-Our research focuses on advancing biomedical knowledge through computational approaches and epidemiological studies.
+<div class="quote-signature">— Md. Jubayer Hossain</div>
+:::
 :::
 
-### Primary Research Domains
+::: {.main-content}
+::: {.professional-journey-section}
+### Professional Journey
 
-**Neuroepidemiology**
-: Investigating the distribution and determinants of neurological disorders to understand risk factors and outcomes in populations. Focus on neurodegenerative diseases and neuroimaging applications.
+::: {.journey-timeline}
+::: {.timeline-item}
+::: {.timeline-marker}
+:::
+::: {.timeline-content}
+**Founder & Chief Executive Officer**
+*[DeepBio Limited](https://deepbioltd.com)*
+*2022 - Present*
 
-**Cancer Epidemiology**
-: Studying patterns, causes, and control of cancer within populations to inform prevention and treatment strategies. Emphasis on population-based cancer surveillance and risk factor analysis.
-
-**Cancer Bioinformatics**
-: Analyzing multi-omics data to identify genetic mutations, biomarkers, and develop data-driven approaches for cancer diagnosis and therapy. Integration of genomic, transcriptomic, and proteomic data.
-
-**Machine Learning in Healthcare**
-: Applying advanced machine learning algorithms to healthcare data for predictive modeling, risk assessment, and treatment optimization. Development of clinical decision support systems.
-
-**Deep Learning Applications**
-: Utilizing deep learning techniques to analyze complex datasets including medical imaging and genomic data for improved diagnostics and personalized medicine approaches.
-
-## Education
-
-### Academic Credentials
-
-::: {.callout-note}
-## Formal Education
-
-**Master of Science in Microbiology** | Jagannath University, Dhaka
-*2020 - 2021*
-
-- **Research Focus:** Investigated and analyzed a Chikungunya outbreak, demonstrating commitment to advancing public health knowledge
-- **Specialization:** Infectious disease epidemiology and outbreak investigation
-
-**Bachelor of Science in Microbiology** | Jagannath University, Dhaka
-*2016 - 2019*
-
-- **Research Project:** Applied bioinformatics techniques for profiling antibiotic resistance genes in metagenomic DNA sequences
-- **Focus Areas:** Microbial genomics and computational biology
+Leading biotechnology company focused on AI-driven drug discovery and personalized medicine solutions. Spearheading research initiatives in computational biology and developing cutting-edge bioinformatics tools for the pharmaceutical industry.
+:::
 :::
 
-### Professional Training
+::: {.timeline-item}
+::: {.timeline-marker}
+:::
+::: {.timeline-content}
+**Founder & Executive Director**
+*[CHIRAL Bangladesh](https://chiralbd.org/)*
+*2021 - Present*
 
-**AI in Public Health Workshop** | Child Health Research Foundation (CHRF)
-*September 2023*
+Non-profit research organization dedicated to advancing biomedical research and training in Bangladesh. Establishing collaborative networks and educational programs to build local capacity in computational biology and bioinformatics.
+:::
+:::
 
-- Completed intensive 4-day workshop on AI applications in public health research and decision-making
-- **Scholarship Recipient:** Awarded funding through the Bill & Melinda Gates Foundation's "Democratizing Public Health Modeling Using AI-based Tools" grant
+::: {.timeline-item}
+::: {.timeline-marker}
+:::
+::: {.timeline-content}
+**Faculty**
+*[Center for Bioinformatics Learning Advancement and Systematics Training (cBLAST), University of Dhaka](https://www.cblastdu.xyz/)*
+*2020 - Present*
 
-### Continuing Education
+Contributing to bioinformatics education and research capacity building. Developing curriculum and teaching computational approaches to biological problems, mentoring students in genomics and data analysis.
+:::
+:::
 
-Selected courses and certifications completed:
+::: {.timeline-item}
+::: {.timeline-marker}
+:::
+::: {.timeline-content}
+**Visiting Researcher**
+*Department of Public Health, Daffodil International University*
+*2025 - Present*
 
-| Year | Course Title                                              | Provider                | Platform  | Score  | Status      |
-|------|-----------------------------------------------------------|-------------------------|-----------|--------|-------------|
-| 2023 | AI for Good Specialization: AI and Public Health           | DeepLearning.AI         | Coursera  | 97.7%  | [Certificate](https://coursera.org/share/e33cd4a7b43a0907a3da61df164f9264) |
-| 2024 | AI for Good Specialization: AI and Climate Change          | DeepLearning.AI         | Coursera  | -      | Ongoing     |
-| 2024 | AI for Good Specialization: AI and Disaster Management     | DeepLearning.AI         | Coursera  | -      | Ongoing     |
-| 2020 | Programming for Everybody (Getting Started with Python)    | University of Michigan  | Coursera  | 95.7%  | [Certificate](https://coursera.org/share/05cd733a5ba240e40ebc9d699d8d2d96) |
-| 2020 | The Data Scientist’s Toolbox                                | Johns Hopkins University| Coursera  | 96%    | [Certificate](https://coursera.org/share/287b1e901a394087da55ae9f0424c164) |
-| 2020 | Essential Epidemiologic Tools for Public Health Practice   | Johns Hopkins University| Coursera  | 96%    | [Certificate](https://coursera.org/share/4c33ab5481b97fba2d8d3c0a1b6cf040) |
+Conducting interdisciplinary research at the intersection of public health and computational biology. Collaborating on projects involving health data analytics and epidemiological modeling.
+:::
+:::
 
+::: {.timeline-item}
+::: {.timeline-marker}
+:::
+::: {.timeline-content}
+**Instructor**
+*Daffodil International University (Micro-credential Academy, AI for Public Health)*
+*2022 - Present*
 
+Designing and delivering specialized courses on artificial intelligence applications in public health. Teaching machine learning techniques for health data analysis and developing micro-credential programs.
+:::
+:::
 
+::: {.timeline-item}
+::: {.timeline-marker}
+:::
+::: {.timeline-content}
+**Program Lead**
+*GSA Bioinformatics Internship*
+*2021 - Present*
 
-# Experiences
+Leading comprehensive bioinformatics internship programs for students and early-career researchers. Developing hands-on training modules covering genomics, proteomics, and computational biology tools.
+:::
+:::
 
-## Research Experience 
+:::
+:::
 
-**Founder & Executive Director** \|  [Center for Health Innovation, Research Action, and Learning -  Bangladesh (CHIRAL Bangladesh)](https://chiralbd.org/) | Dhaka, Bangladesh |  (2020 - Present)
+::: {.education-section}
+### Education
 
-As the Founder & Executive Director of CHIRAL Bangladesh, I have a pivotal role in shaping the organization's direction and ensuring its impact on society. 
+::: {.education-timeline}
+::: {.timeline-item}
+::: {.timeline-marker}
+:::
+::: {.timeline-content}
+**Master of Science in Microbiology**
+*Jagannath University, Dhaka*
+*2020*
 
-**Responsibilities:**
+Research Focus: Chikungunya outbreak investigation and infectious disease epidemiology. Conducted comprehensive field studies and laboratory analysis to understand disease transmission patterns and develop prevention strategies.
+:::
+:::
 
-- Lead multidisciplinary research teams and the Research Internship Program and Training Unit
-- Develop and communicate the overarching vision, mission, and strategic direction of the organization
-- Ensure alignment of these elements with the organization’s long‑term goals and societal impact
-- Set and reinforce the organizational culture, emphasizing values such as innovation, integrity, and collaboration
-- 
+::: {.timeline-item}
+::: {.timeline-marker}
+:::
+::: {.timeline-content}
+**Bachelor of Science in Microbiology**
+*Jagannath University, Dhaka*
+*2019*
 
-**Research Intern** \| Health Systems and Population Health Studies Division |  [International Centre for Diarrhoeal Disease Research, Bangladesh)](https://www.icddrb.org/) \|  Dhaka, Bangladesh \| (February 2022 - June 2022)
+Research Project: Antibiotic resistance gene profiling using bioinformatics approaches. Applied computational methods to analyze bacterial genomes and identify resistance mechanisms in pathogenic microorganisms.
+:::
+:::
+:::
+:::
 
-- Conducted literature reviews and data analysis to support research projects
-- Participated in fieldwork, including data collection and data entry
+::: {.connect-section}
+### Let's Connect
 
+I'm always excited to collaborate on innovative research projects, mentor aspiring scientists, and explore new opportunities in computational biology and AI.
 
-**Data Enumerator** \| School of Allied Health |  [Curtin University](#) \| Australia \| (October 2022 ‑ November 2022) 
+**Contact:** [contact.jubayerhossain@gmail.com](mailto:contact.jubayerhossain@gmail.com)
+:::
 
-- Delphi Study on Patient Outcomes Measurement for Interprofessional Tuberculosis Care Bangladesh
-- Successfully collected and recorded quantitative and qualitative data from participants, ensuring a comprehensive dataset for the Delphi study
-
-
-
-## Teaching Experience 
-**Instructor** \|  [Center for Bioinformatics Learning Advancement and Systematic Training (cBLAST)](https://www.cblastdu.xyz/) \|  Dhaka, Bangladesh \|  (August 2023 - Present) 
-
-As an Instructor at cBLAST, I contribute to the advancement of bioinformatics knowledge and skills by designing and delivering engaging educational programs. Through hands-on training and systematic learning, I empower students and professionals to harness the potential of bioinformatics in various scientific and healthcare applications.
-
-**Teaching Assistant** \|  Public Health & Hygiene, Department of Microbiology \| [Jagannath University)](https://jnu.ac.bd/dept/portal/web/microbiology) \| Dhaka, Bangladesh \|  (October 2022 - December 2022)
-
-As a Teaching Assistant for the Public Health & Hygiene course, I provided vital support to the Department of Microbiology at Jagannath University. I assisted in delivering an impactful educational experience that emphasized public health principles and hygiene practices to aspiring microbiologists.
-
-## Volunteering 
-**Team Member** \|  [Bio-Bio-1:: Bioinformatics Research Discussion Group)]() \|  Dhaka, Bangladesh \| (February 2017 - June 2019)
-
-As a dedicated member of the Bio-Bio-1 Bioinformatics Research Discussion Group, I actively participated in collaborative discussions and initiatives aimed at advancing knowledge and insights in the field of bioinformatics. Through engaging with fellow researchers, I contributed to a vibrant intellectual community focused on bioinformatics research.
-
-
-
-# Skills
-
-**Programming Languages:** Python, R, SQL, Julia, JavaScript
-
-**Python Packages:** Data manipulation (pandas, numpy), visualization (matplotlib, seaborn, plotly), and statistical modeling (statsmodels, scipy). Experienced in machine learning (scikit-learn, xgboost, lightgbm) and deep learning (tensorflow, keras, pytorch). Skilled in bioinformatics analysis (biopython, scipy, skbio) and data preprocessing (pandas-profiling, pyjanitor). Adept in time series forecasting (prophet, statsmodels) and geospatial data handling (geopandas, folium). Proficient in web development and dashboarding tools (streamlit, dash, flask).
-
-**R Packages:** Data manipulation (dplyr, tidyr), visualization (ggplot2, plotly), and statistical modeling (lme4, MASS, gtsummary for elegant summaries). Experienced in machine learning (caret, xgboost, keras) and bioinformatics analysis (DESeq2 for differential expression, maftools for mutation analysis). Skilled in time series forecasting (forecast) and spatial data processing (sf, raster). Adept in unified workflows (easystats) and dynamic reporting and dashboards (shiny, rmarkdown, flexdashboard).
- 
-**Data Science:** scikit-learn, PyCaret, Dask, PySpark
-
-**Bioinformatics:** BioPython, Bioconductor, BioPandas, Galaxy, NGS, RNASeq, ssRNASeq
-
-**GIS & Remote Sensing:** ArcGIS, Geopandas, Xarray, Giovani, Google Earth Engiine
-
-**Analytics Softwares:** SPSS, PowerBI, Microsoft Excel
-
-**Survey Tools:** RedCap, KoboToolBox, EpiCollect, Google Forms
-
-**Academic Writing Tools:** Microsoft Word, LaTeX, Mendeley, Zotero
-
-**Miscellaneous Skills:** UNIX, Version Control(Git), Web Scraping, APIs
-
+:::
 
 :::
 

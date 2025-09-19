@@ -8,10 +8,23 @@ This is a Quarto-based academic website for Md. Jubayer Hossain, a biomedical re
 
 ## Common Commands
 
-### Development and Building
-- **Preview the website locally**: `quarto preview` (serves on port 4321)
-- **Render the entire website**: `quarto render`
-- **Render specific files**: `quarto render filename.qmd`
+### Development and Building (Auto-Reload System)
+- **Start development server** (recommended): `npm run dev` or `make dev`
+- **Enhanced development with file watching**: `npm run dev-watch`
+- **Manual preview**: `quarto preview` (serves on port 4321)
+- **Build the website**: `npm run build` or `quarto render`
+- **Fast build**: `npm run render:fast`
+- **Clean build artifacts**: `npm run clean` or `quarto clean`
+
+### Quick Setup
+1. **First time setup**: `npm run setup` or `make setup`
+2. **Start developing**: `npm run dev` (auto-reloads on file changes)
+3. **Access site**: http://localhost:4321
+
+### Alternative Commands
+- **Using Make**: `make dev`, `make build`, `make clean`
+- **VS Code**: Use Tasks (Ctrl+Shift+P → "Tasks: Run Task")
+- **Node.js script**: `node dev-server.js`
 
 ### Site Structure
 - **Main configuration**: `_quarto.yml` - Contains all website configuration including navigation, themes, and build settings

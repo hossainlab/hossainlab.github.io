@@ -16,7 +16,8 @@ project:
   preview:
     port: 4321
     browser: true
-    watch-inputs: false
+    watch-inputs: true
+    navigate: true
 execute:
   # Re-render only when source changes
   freeze: auto
@@ -30,6 +31,7 @@ website:
     creator: "@hossainlab"
     image: "/files/img/banner.jpg"
   favicon: /files/profiles/icon.png
+  search: false
   navbar:
       pinned: true
       left:
@@ -90,9 +92,7 @@ website:
   page-footer: "&copy; Copyright 2024, Md. Jubayer Hossain"
 format:
   html:
-    theme:
-       light: [cosmo, styles.scss]
-       dark: [solar, styles.scss]
+    theme: cosmo
     css: styles.css
     page-layout: full
     toc: false

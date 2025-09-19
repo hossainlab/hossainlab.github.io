@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Start Quarto Dev Server",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/dev-server.js",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        }
+    ]
+}

@@ -1,6 +1,6 @@
 ---
 pagetitle: "Home | Jubayer Hossain"
-title: "Jubayer Hossain"
+title: "Md. Jubayer Hossain"
 subtitle: "Researcher, Educator & Entrepreneur"
 page-layout: full
 toc: false

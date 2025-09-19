@@ -8,7 +8,7 @@
 
 <meta name="description" content="Personal Website for Md. Jubayer Hossain (Learner, Educator and Data Analyst)">
 
-<title>TCGA Data Analysis with R</title>
+<title>dev-setup</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,24 +21,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<link href="../..//files/profiles/icon.png" rel="icon" type="image/png">
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-4a990d8dcb58f517c7c86712b8f2ac7c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-11e252bed0e3c2ed2f9c94df3fe00b16.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<link href=".//files/profiles/icon.png" rel="icon" type="image/png">
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-4a990d8dcb58f517c7c86712b8f2ac7c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-11e252bed0e3c2ed2f9c94df3fe00b16.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -57,15 +92,7 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 
 
-<link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="TCGA Data Analysis with R">
-<meta property="og:description" content="">
-<meta property="og:image" content="logo.png">
-<meta name="twitter:title" content="TCGA Data Analysis with R">
-<meta name="twitter:description" content="">
-<meta name="twitter:image" content="logo.png">
-<meta name="twitter:creator" content="@hossainlab">
-<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -80,31 +107,31 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../about/index.html"> 
+    <a class="nav-link" href="./about/index.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../research/index.html"> 
+    <a class="nav-link" href="./research/index.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../publications/index.html"> 
+    <a class="nav-link" href="./publications/index.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../projects/index.html"> 
+    <a class="nav-link" href="./projects/index.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../talks/index.html"> 
+    <a class="nav-link" href="./talks/index.html"> 
 <span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../teaching/index.html"> 
+    <a class="nav-link" href="./teaching/index.html"> 
 <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -113,11 +140,11 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-more">    
         <li>
-    <a class="dropdown-item" href="../../blog/index.html">
+    <a class="dropdown-item" href="./blog/index.html">
  <span class="dropdown-text">Blog</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../press/index.html">
+    <a class="dropdown-item" href="./press/index.html">
  <span class="dropdown-text">Press</span></a>
   </li>  
         <li>
@@ -125,11 +152,11 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Newsletter</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../dashboards.html">
+    <a class="dropdown-item" href="./dashboards.html">
  <span class="dropdown-text">Dashboards</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../use/index.html">
+    <a class="dropdown-item" href="./use/index.html">
  <span class="dropdown-text">What I Use</span></a>
   </li>  
     </ul>
@@ -186,62 +213,147 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">TCGA Data Analysis with R</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">Bioinformatics</div>
-    <div class="quarto-category">R Programming</div>
-    <div class="quarto-category">Transcriptomics</div>
-    <div class="quarto-category">TCGA</div>
-    <div class="quarto-category">Cancer</div>
-  </div>
-  </div>
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta column-page">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="course-description" class="level2">
-<h2 class="anchored" data-anchor-id="course-description">Course Description</h2>
-<p>The TCGA Data Analysis with R course is designed to equip participants with the knowledge and skills necessary to effectively analyze and interpret data from The Cancer Genome Atlas (TCGA) using the R programming language. TCGA is a valuable resource for cancer researchers, providing comprehensive genomic and clinical data on various cancer types. This course will cover essential concepts, tools, and techniques for data preprocessing, exploratory data analysis, differential gene expression analysis, survival analysis, and data visualization using R. Participants will gain hands-on experience by working with real TCGA datasets and will learn to derive meaningful insights from complex cancer genomics data.</p>
+<section id="development-setup---auto-reload-system" class="level1">
+<h1>Development Setup - Auto-Reload System</h1>
+<p>This project now includes an automated development system that eliminates the need to manually restart servers.</p>
+<section id="quick-start" class="level2">
+<h2 class="anchored" data-anchor-id="quick-start">🚀 Quick Start</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># First time setup</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run setup</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Start development (auto-reloads on changes)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run dev</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Visit: http://localhost:4321</p>
 </section>
-<section id="learning-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<section id="available-commands" class="level2">
+<h2 class="anchored" data-anchor-id="available-commands">📋 Available Commands</h2>
+<section id="npm-scripts" class="level3">
+<h3 class="anchored" data-anchor-id="npm-scripts">NPM Scripts</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run dev          <span class="co"># Start development server with auto-reload</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run dev-watch    <span class="co"># Enhanced development with file watching</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run build        <span class="co"># Build the website</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run render-fast  <span class="co"># Fast HTML-only build</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run serve        <span class="co"># Serve without auto-reload</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run clean        <span class="co"># Clean build artifacts</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run setup        <span class="co"># Complete setup</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="make-commands" class="level3">
+<h3 class="anchored" data-anchor-id="make-commands">Make Commands</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> dev            <span class="co"># Start development server (default)</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> dev-watch      <span class="co"># Enhanced file watching</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> build          <span class="co"># Build website</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> build-fast     <span class="co"># Fast build</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> serve          <span class="co"># Serve without auto-reload</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> clean          <span class="co"># Clean artifacts</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> setup          <span class="co"># Complete setup</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> help           <span class="co"># Show all commands</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="direct-node.js" class="level3">
+<h3 class="anchored" data-anchor-id="direct-node.js">Direct Node.js</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">node</span> dev-server.js  <span class="co"># Custom development server with enhanced logging</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="whats-included" class="level2">
+<h2 class="anchored" data-anchor-id="whats-included">🔧 What’s Included</h2>
+<section id="auto-reload-features" class="level3">
+<h3 class="anchored" data-anchor-id="auto-reload-features">Auto-Reload Features</h3>
 <ul>
-<li>Introduce you to the TCGA (The Cancer Genome Atlas) data available at the NCI’s Genomic Data Commons (GDC).</li>
-<li>Demonstrate how to access and import TCGA data using the R/Bioconductor package TCGAbiolinks (Colaprico et al.&nbsp;2015).</li>
-<li>Provide instruction to visualize copy number alteration and mutation data using the R/Bioconductor package maftools.</li>
+<li><strong>File Watching</strong>: Monitors <code>.qmd</code>, <code>.yml</code>, <code>.css</code>, <code>.scss</code>, <code>.js</code> files</li>
+<li><strong>Smart Ignoring</strong>: Excludes build artifacts and temporary files</li>
+<li><strong>Live Reload</strong>: Browser automatically refreshes on changes</li>
+<li><strong>Enhanced Logging</strong>: Clear feedback on what files changed</li>
 </ul>
 </section>
-<section id="pre-requisites" class="level2">
-<h2 class="anchored" data-anchor-id="pre-requisites">Pre-requisites</h2>
+<section id="vs-code-integration" class="level3">
+<h3 class="anchored" data-anchor-id="vs-code-integration">VS Code Integration</h3>
 <ul>
-<li>Basic knowledge of R syntax</li>
-<li>Understand the pipe operator (“%&gt;%”) (help material <a href="https://r4ds.had.co.nz/pipes.html" class="uri">https://r4ds.had.co.nz/pipes.html</a>)</li>
-<li>Understand the SummarizedExperiment data structure (help material <a href="http://bioconductor.org/packages/SummarizedExperiment/" class="uri">http://bioconductor.org/packages/SummarizedExperiment/</a>)</li>
+<li><strong>Tasks</strong>: Press <code>Ctrl+Shift+P</code> → “Tasks: Run Task”</li>
+<li><strong>Launch Configurations</strong>: Debug-ready setup</li>
+<li><strong>Integrated Terminal</strong>: Seamless development experience</li>
 </ul>
 </section>
-<section id="course-format" class="level2">
-<h2 class="anchored" data-anchor-id="course-format">Course Format</h2>
-<p>The course will be delivered through a combination of lectures, hands-on practical sessions, and interactive discussions. Participants will have access to real TCGA datasets and will be guided through step-by-step analysis using R. Additionally, participants will be provided with relevant learning resources, including code examples and data repositories, to support their learning outside the course hours.</p>
-<a href="https://omicscenter.github.io/TCGADataAnalysiswithR/" class="btn btn-primary rounded-pill me-2">Program Website</a>
+<section id="file-monitoring" class="level3">
+<h3 class="anchored" data-anchor-id="file-monitoring">File Monitoring</h3>
+<p>The system watches: - <code>**/*.qmd</code> - Quarto markdown files - <code>**/*.yml</code>, <code>**/*.yaml</code> - Configuration files - <code>**/*.css</code>, <code>**/*.scss</code> - Stylesheets - <code>**/*.js</code> - JavaScript files - <code>_quarto.yml</code>, <code>_variables.yml</code> - Main config files</p>
+<p>Ignores: - <code>docs/**</code> - Build output - <code>.quarto/**</code> - Quarto cache - <code>_freeze/**</code> - Frozen content - <code>node_modules/**</code> - Dependencies - <code>.git/**</code> - Git files</p>
+</section>
+</section>
+<section id="configuration-files" class="level2">
+<h2 class="anchored" data-anchor-id="configuration-files">🛠️ Configuration Files</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>File</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>package.json</code></td>
+<td>NPM scripts and dependencies</td>
+</tr>
+<tr class="even">
+<td><code>nodemon.json</code></td>
+<td>File watching configuration</td>
+</tr>
+<tr class="odd">
+<td><code>dev-server.js</code></td>
+<td>Custom development server</td>
+</tr>
+<tr class="even">
+<td><code>Makefile</code></td>
+<td>Make commands for convenience</td>
+</tr>
+<tr class="odd">
+<td><code>.vscode/tasks.json</code></td>
+<td>VS Code task integration</td>
+</tr>
+<tr class="even">
+<td><code>.vscode/launch.json</code></td>
+<td>VS Code debugging setup</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="workflow" class="level2">
+<h2 class="anchored" data-anchor-id="workflow">🔄 Workflow</h2>
+<ol type="1">
+<li><strong>Start Once</strong>: Run <code>npm run dev</code></li>
+<li><strong>Edit Files</strong>: Make changes to any <code>.qmd</code>, <code>.css</code>, or config files</li>
+<li><strong>Auto-Reload</strong>: Browser automatically refreshes</li>
+<li><strong>No Manual Restarts</strong>: System handles everything automatically</li>
+</ol>
+</section>
+<section id="troubleshooting" class="level2">
+<h2 class="anchored" data-anchor-id="troubleshooting">🐛 Troubleshooting</h2>
+<p><strong>Port 4321 in use?</strong></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Kill existing processes</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> kill-port 4321</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run dev</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Dependencies missing?</strong></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run setup</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Clean slate?</strong></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run clean</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run dev</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="tips" class="level2">
+<h2 class="anchored" data-anchor-id="tips">💡 Tips</h2>
+<ul>
+<li>Keep the terminal open to see file change notifications</li>
+<li>Use <code>Ctrl+C</code> to stop the development server</li>
+<li>The server starts automatically in your default browser</li>
+<li>Changes to <code>_quarto.yml</code> may require a manual refresh</li>
+</ul>
+<hr>
+<p><em>Never manually restart your development server again! 🎉</em></p>
 
-<a href="" class="btn btn-primary rounded-pill">Apply to the Program</a>
 
-
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -662,5 +774,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
