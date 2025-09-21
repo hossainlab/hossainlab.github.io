@@ -14,7 +14,8 @@
       "Bash(python:*)",
       "Bash(git checkout:*)",
       "Bash(quarto preview:*)",
-      "Bash(npm run render:fast:*)"
+      "Bash(npm run render:fast:*)",
+      "Bash(Rscript:*)"
     ],
     "deny": [],
     "ask": []

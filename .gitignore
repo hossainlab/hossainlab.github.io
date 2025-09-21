@@ -1,8 +1,48 @@
+# R
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
 
+# Quarto
 /.quarto/
-
+/_site/
 /.luarc.json
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Netlify
+.netlify/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Logs
+logs/
+*.log
+
+# Dependencies
+renv/
