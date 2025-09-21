@@ -558,5 +558,89 @@
     "title": "Media Coverage",
     "section": "Recent Media Coverage",
     "text": "Recent Media Coverage\n\n\n\n\n📖Feature Article\n\n\n27 May 2024\n\n\n\n\nWhat the Rise in Self-Medication Tells Us About the Country’s Healthcare System\n\n\nThe Business Standard • Healthcare Policy\n\n\nAnalysis of self-medication trends and their implications for healthcare accessibility and quality in Bangladesh.\n\n\nSelf-MedicationHealthcare AccessHealth PolicyPublic Health\n\n\nRead Article\n\n\n\n\n\n\n💬Expert Commentary\n\n\n22 April 2024\n\n\n\n\nData Science Applications in Epidemiological Research\n\n\nScience Today Bangladesh • Research Methods\n\n\nExploration of data science methodologies in epidemiological studies and their implications for public health policy.\n\n\nData ScienceEpidemiologyPublic HealthResearch Methods\n\n\nRead Article\n\n\n\n\n\n\n🎤Interview\n\n\n15 March 2024\n\n\n\n\nAI in Healthcare: Transforming Medical Diagnosis and Treatment\n\n\nHealth Innovation Weekly • Technology in Health\n\n\nExpert insights on AI applications in medical diagnosis and their potential impact on healthcare accessibility.\n\n\nArtificial IntelligenceHealthcare TechnologyMedical DiagnosisInnovation\n\n\nRead Article\n\n\n\n\n\n\n📰News Article\n\n\n08 February 2024\n\n\n\n\nParental Lack of Antibiotic Knowledge Imperils Child Health in Bangladesh: Study\n\n\nThe Business Standard • Health Research\n\n\nExpert commentary on antibiotic misuse research highlighting the critical need for better health education in Bangladesh.\n\n\nAntibiotic ResistanceChild HealthPublic HealthBangladesh Healthcare\n\n\nRead Article\n\n\n\n\n\n\n👥Panel Discussion\n\n\n10 January 2024\n\n\n\n\nBuilding Research Capacity in Bangladesh: Challenges and Opportunities\n\n\nAcademic Quarterly • Academic Development\n\n\nComprehensive analysis of research ecosystem challenges and potential solutions for academic advancement in Bangladesh.\n\n\nResearch CapacityAcademic DevelopmentHigher EducationBangladesh\n\n\nRead Article"
+  },
+  {
+    "objectID": "DEPLOYMENT.html",
+    "href": "DEPLOYMENT.html",
+    "title": "Deployment Guide",
+    "section": "",
+    "text": "This document explains how to deploy the Jubayer Hossain academic website to Netlify.\n\n\n\nQuarto installed\nNode.js (version 18 or higher)\nR with required packages\nGit repository connected to GitHub/GitLab\n\n\n\n\n\n\n\nConnect Repository to Netlify:\n\nGo to Netlify\nClick “New site from Git”\nConnect your GitHub/GitLab repository\nSelect the repository: hossainlab.github.io\n\nConfigure Build Settings:\n\nBuild command: ./build.sh\nPublish directory: docs\nBase directory: (leave empty)\n\nSet Environment Variables (in Netlify dashboard):\nQUARTO_DENO=true\nQUARTO_DENO_V8_OPTIONS=--max-heap-size=3000\nNODE_ENV=production\nDeploy:\n\nClick “Deploy site”\nNetlify will automatically build and deploy on every push to main branch\n\n\n\n\n\n\nInstall Dependencies:\nnpm install\nBuild the Site:\nnpm run build\nDeploy to Netlify:\nnpm run deploy\n\n\n\n\n\n\n\n\nContains build configuration, redirects, and headers\nLocated in project root\nHandles caching, security headers, and URL redirects\n\n\n\n\n\nDefines Node.js dependencies and build scripts\nContains deployment commands for Netlify\n\n\n\n\n\nLocated in docs/ directory\nHandles URL redirects for clean URLs\n\n\n\n\n\nThe site build process follows these steps:\n\nClean previous build (optional)\nRender Quarto documents to HTML\nProcess R code chunks and generate outputs\nCopy static assets to docs directory\nApply CSS and JavaScript optimizations\nGenerate site structure in docs folder\n\n\n\n\nMake sure these R packages are installed:\ninstall.packages(c(\n  \"yaml\",\n  \"knitr\",\n  \"rmarkdown\"\n))\n\n\n\nCopy .env.example to .env and configure:\ncp .env.example .env\n# Edit .env with your specific values\n\n\n\n\n\n\nR package missing:\nError: package 'yaml' not found\nSolution: Install missing R packages\nQuarto not found:\nCommand 'quarto' not found\nSolution: Install Quarto CLI\nMemory issues:\nJavaScript heap out of memory\nSolution: Increase memory limit in netlify.toml\n\n\n\n\n\nDevelopment: npm run dev\nBuild: npm run build\nClean: npm run clean\nDeploy: npm run deploy\n\n\n\n\n\nThe site includes several optimizations:\n\nCSS and JavaScript minification\nImage optimization\nCaching headers for static assets\nClean URLs with redirects\nSecurity headers\n\n\n\n\nTo use a custom domain:\n\nAdd domain in Netlify dashboard\nConfigure DNS records\nUpdate SITE_URL in environment variables\nUpdate social media links if needed\n\n\n\n\nAfter deployment, monitor:\n\nBuild logs in Netlify dashboard\nSite performance with Lighthouse\nBroken links and 404 errors\nAnalytics (if configured)\n\n\n\n\nFor deployment issues: - Check Netlify build logs - Review Quarto documentation - Check R package installations - Verify environment variables"
+  },
+  {
+    "objectID": "DEPLOYMENT.html#prerequisites",
+    "href": "DEPLOYMENT.html#prerequisites",
+    "title": "Deployment Guide",
+    "section": "",
+    "text": "Quarto installed\nNode.js (version 18 or higher)\nR with required packages\nGit repository connected to GitHub/GitLab"
+  },
+  {
+    "objectID": "DEPLOYMENT.html#quick-deployment-to-netlify",
+    "href": "DEPLOYMENT.html#quick-deployment-to-netlify",
+    "title": "Deployment Guide",
+    "section": "",
+    "text": "Connect Repository to Netlify:\n\nGo to Netlify\nClick “New site from Git”\nConnect your GitHub/GitLab repository\nSelect the repository: hossainlab.github.io\n\nConfigure Build Settings:\n\nBuild command: ./build.sh\nPublish directory: docs\nBase directory: (leave empty)\n\nSet Environment Variables (in Netlify dashboard):\nQUARTO_DENO=true\nQUARTO_DENO_V8_OPTIONS=--max-heap-size=3000\nNODE_ENV=production\nDeploy:\n\nClick “Deploy site”\nNetlify will automatically build and deploy on every push to main branch\n\n\n\n\n\n\nInstall Dependencies:\nnpm install\nBuild the Site:\nnpm run build\nDeploy to Netlify:\nnpm run deploy"
+  },
+  {
+    "objectID": "DEPLOYMENT.html#configuration-files",
+    "href": "DEPLOYMENT.html#configuration-files",
+    "title": "Deployment Guide",
+    "section": "",
+    "text": "Contains build configuration, redirects, and headers\nLocated in project root\nHandles caching, security headers, and URL redirects\n\n\n\n\n\nDefines Node.js dependencies and build scripts\nContains deployment commands for Netlify\n\n\n\n\n\nLocated in docs/ directory\nHandles URL redirects for clean URLs"
+  },
+  {
+    "objectID": "DEPLOYMENT.html#build-process",
+    "href": "DEPLOYMENT.html#build-process",
+    "title": "Deployment Guide",
+    "section": "",
+    "text": "The site build process follows these steps:\n\nClean previous build (optional)\nRender Quarto documents to HTML\nProcess R code chunks and generate outputs\nCopy static assets to docs directory\nApply CSS and JavaScript optimizations\nGenerate site structure in docs folder"
+  },
+  {
+    "objectID": "DEPLOYMENT.html#required-r-packages",
+    "href": "DEPLOYMENT.html#required-r-packages",
+    "title": "Deployment Guide",
+    "section": "",
+    "text": "Make sure these R packages are installed:\ninstall.packages(c(\n  \"yaml\",\n  \"knitr\",\n  \"rmarkdown\"\n))"
+  },
+  {
+    "objectID": "DEPLOYMENT.html#environment-variables",
+    "href": "DEPLOYMENT.html#environment-variables",
+    "title": "Deployment Guide",
+    "section": "",
+    "text": "Copy .env.example to .env and configure:\ncp .env.example .env\n# Edit .env with your specific values"
+  },
+  {
+    "objectID": "DEPLOYMENT.html#troubleshooting",
+    "href": "DEPLOYMENT.html#troubleshooting",
+    "title": "Deployment Guide",
+    "section": "",
+    "text": "R package missing:\nError: package 'yaml' not found\nSolution: Install missing R packages\nQuarto not found:\nCommand 'quarto' not found\nSolution: Install Quarto CLI\nMemory issues:\nJavaScript heap out of memory\nSolution: Increase memory limit in netlify.toml\n\n\n\n\n\nDevelopment: npm run dev\nBuild: npm run build\nClean: npm run clean\nDeploy: npm run deploy"
+  },
+  {
+    "objectID": "DEPLOYMENT.html#performance-optimization",
+    "href": "DEPLOYMENT.html#performance-optimization",
+    "title": "Deployment Guide",
+    "section": "",
+    "text": "The site includes several optimizations:\n\nCSS and JavaScript minification\nImage optimization\nCaching headers for static assets\nClean URLs with redirects\nSecurity headers"
+  },
+  {
+    "objectID": "DEPLOYMENT.html#domain-configuration",
+    "href": "DEPLOYMENT.html#domain-configuration",
+    "title": "Deployment Guide",
+    "section": "",
+    "text": "To use a custom domain:\n\nAdd domain in Netlify dashboard\nConfigure DNS records\nUpdate SITE_URL in environment variables\nUpdate social media links if needed"
+  },
+  {
+    "objectID": "DEPLOYMENT.html#monitoring",
+    "href": "DEPLOYMENT.html#monitoring",
+    "title": "Deployment Guide",
+    "section": "",
+    "text": "After deployment, monitor:\n\nBuild logs in Netlify dashboard\nSite performance with Lighthouse\nBroken links and 404 errors\nAnalytics (if configured)"
+  },
+  {
+    "objectID": "DEPLOYMENT.html#support",
+    "href": "DEPLOYMENT.html#support",
+    "title": "Deployment Guide",
+    "section": "",
+    "text": "For deployment issues: - Check Netlify build logs - Review Quarto documentation - Check R package installations - Verify environment variables"
   }
 ]

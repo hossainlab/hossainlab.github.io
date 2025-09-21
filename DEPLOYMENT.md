@@ -92,34 +92,71 @@ install.packages(c(
 
 ## Environment Variables
 
-Copy `.env.example` to `.env` and configure:
+Environment variables are configured directly in Netlify dashboard:
 
-```bash
-cp .env.example .env
-# Edit .env with your specific values
+```
+QUARTO_DENO=true
+QUARTO_DENO_V8_OPTIONS=--max-heap-size=3000
+QUARTO_R=true
 ```
 
 ## Troubleshooting
 
 ### Common Build Issues
 
-1. **R package missing:**
+1. **Build script exit code 2:**
+   ```
+   Build script returned non-zero exit code: 2
+   ```
+   Solutions:
+   - Check build logs for specific error
+   - Try using the simple build script: change build command to `./build-simple.sh`
+   - Verify all files are committed to repository
+
+2. **Quarto installation fails:**
+   ```
+   Failed to download Quarto
+   ```
+   Solutions:
+   - Check internet connectivity in build environment
+   - Try alternative build command: `curl -s https://quarto.org/download/latest/quarto-linux-amd64.tar.gz | tar -xzf - && export PATH="$(find . -name 'quarto' -type f | head -1 | xargs dirname):$PATH" && quarto render`
+
+3. **R package missing:**
    ```
    Error: package 'yaml' not found
    ```
-   Solution: Install missing R packages
+   Solution: The build script will automatically install required R packages
 
-2. **Quarto not found:**
-   ```
-   Command 'quarto' not found
-   ```
-   Solution: Install Quarto CLI
-
-3. **Memory issues:**
+4. **Memory issues:**
    ```
    JavaScript heap out of memory
    ```
-   Solution: Increase memory limit in netlify.toml
+   Solution: Memory limit is configured in netlify.toml
+
+5. **File permissions:**
+   ```
+   Permission denied: ./build.sh
+   ```
+   Solution: Build command includes `chmod +x build.sh`
+
+### Alternative Build Commands
+
+If the main build fails, try these alternatives in Netlify dashboard:
+
+**Option 1: Simple build (recommended fallback)**
+```bash
+chmod +x build-simple.sh && ./build-simple.sh
+```
+
+**Option 2: Direct Quarto installation**
+```bash
+curl -s https://quarto.org/download/latest/quarto-linux-amd64.tar.gz | tar -xzf - && export PATH="$(find . -name 'quarto' -type f | head -1 | xargs dirname):$PATH" && quarto render
+```
+
+**Option 3: Manual steps**
+```bash
+wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.7.31/quarto-1.7.31-linux-amd64.tar.gz && tar -xzf quarto-1.7.31-linux-amd64.tar.gz && export PATH="$PWD/quarto-1.7.31/bin:$PATH" && quarto render
+```
 
 ### Build Commands
 

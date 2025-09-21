@@ -9,8 +9,7 @@
   [build.environment]
     QUARTO_DENO = "true"
     QUARTO_DENO_V8_OPTIONS = "--max-heap-size=3000"
-    QUARTO_R = "true"
-    R_LIBS_USER = "/opt/R/library"
+    DEBIAN_FRONTEND = "noninteractive"
 
 [build.processing]
   # Skip processing of some file types
