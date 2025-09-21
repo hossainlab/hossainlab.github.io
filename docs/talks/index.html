@@ -49,7 +49,14 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script><style>html{ scroll-behavior: smooth; }</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#3b82f6">
+<meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../performance.css">
 <meta property="og:title" content="Talks | Jubayer Hossain">
 <meta property="og:description" content="">
 <meta name="twitter:title" content="Talks | Jubayer Hossain">
@@ -91,6 +98,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="../talks/index.html" aria-current="page"> 
 <span class="menu-text">Talks</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../press/index.html"> 
+<span class="menu-text">Press</span></a>
+  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-more" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">More</span>
@@ -99,10 +110,6 @@ ul.task-list li input[type="checkbox"] {
 <li>
     <a class="dropdown-item" href="../blog/index.html">
  <span class="dropdown-text">Blog</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../press/index.html">
- <span class="dropdown-text">Press</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="https://hossainlab.substack.com">
@@ -167,7 +174,13 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header><section id="talks" class="level1 hero-section"><h1>Talks</h1>
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header><script>
+  // Critical performance script - inline for best performance
+  document.documentElement.style.setProperty('--viewport-height', window.innerHeight + 'px');
+  window.addEventListener('resize', () => {
+    document.documentElement.style.setProperty('--viewport-height', window.innerHeight + 'px');
+  });
+</script><section id="talks" class="level1 hero-section"><h1>Talks</h1>
 <p>A collection of invited talks, academic presentations, and conference contributions on bioinformatics, public health, and data science.</p>
 </section><section id="talks-1" class="level2 main-content"><h2 class="anchored" data-anchor-id="talks-1">Talks</h2>
 <div class="talks-container">
@@ -670,6 +683,11 @@ a.talk-btn:active,
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -995,7 +1013,27 @@ a.talk-btn:active,
       &nbsp;
     </div>
   </div>
-</footer>
+</footer><script src="performance.js" defer=""></script><script src="performance-monitor.js" defer=""></script><script>
+  // Service Worker registration for caching
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js').catch(() => {});
+    });
+  }
+
+  // Performance optimization hints
+  document.addEventListener('DOMContentLoaded', () => {
+    // Add loading class for smooth transitions
+    document.body.classList.add('loading-complete');
+
+    // Optimize critical images
+    const criticalImages = document.querySelectorAll('img[src*="icon.png"], img[src*="banner.jpg"]');
+    criticalImages.forEach(img => {
+      img.loading = 'eager';
+      img.decoding = 'sync';
+    });
+  });
+</script>
 
 
 <script src="../site_libs/quarto-html/zenscroll-min.js"></script>

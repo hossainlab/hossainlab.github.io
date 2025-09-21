@@ -54,9 +54,16 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#3b82f6">
+<meta name="color-scheme" content="light dark">
 
 
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="performance.css">
 <meta property="og:title" content="Home">
 <meta property="og:description" content="Researcher, Educator &amp; Entrepreneur">
 <meta property="og:image" content="files/profiles/jubayer.png">
@@ -219,6 +226,13 @@ ul.task-list li input[type="checkbox"] {
 </div>
   </div>
   <div class="about-contents"><main class="content column-page" id="quarto-document-content">
+<script>
+  // Critical performance script - inline for best performance
+  document.documentElement.style.setProperty('--viewport-height', window.innerHeight + 'px');
+  window.addEventListener('resize', () => {
+    document.documentElement.style.setProperty('--viewport-height', window.innerHeight + 'px');
+  });
+</script>
 <section id="bio" class="level2">
 <h2 data-anchor-id="bio">Bio</h2>
 <p>I am the Founder and Chief Executive Officer of <a href="https://deepbioltd.com/">DeepBio Limited</a>, and the Founder and Executive Director of <a href="https://chiralbd.org/">CHIRAL Bangladesh</a>, its dedicated research wing. I also serve as Faculty at the <a href="https://cblast.du.ac.bd/">Center for Bioinformatics Learning Advancement and Systematics Training (cBLAST), University of Dhaka</a>, and as a Visiting Researcher in the <a href="https://daffodilvarsity.edu.bd/department/ph">Department of Public Health, Daffodil International University</a>. At Daffodil International University, I also teach in the <a href="https://microcredentials.daffodilvarsity.edu.bd/">Micro-Credential Academy</a> as an Instructor for the course AI for Public Health.</p>
@@ -310,6 +324,11 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -637,6 +656,29 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
 </footer>
+<script src="performance.js" defer=""></script>
+<script src="performance-monitor.js" defer=""></script>
+<script>
+  // Service Worker registration for caching
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js').catch(() => {});
+    });
+  }
+
+  // Performance optimization hints
+  document.addEventListener('DOMContentLoaded', () => {
+    // Add loading class for smooth transitions
+    document.body.classList.add('loading-complete');
+
+    // Optimize critical images
+    const criticalImages = document.querySelectorAll('img[src*="icon.png"], img[src*="banner.jpg"]');
+    criticalImages.forEach(img => {
+      img.loading = 'eager';
+      img.decoding = 'sync';
+    });
+  });
+</script>
 
 
 

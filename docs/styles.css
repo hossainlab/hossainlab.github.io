@@ -1,4 +1,42 @@
 /* ========================================
+   PERFORMANCE CRITICAL CSS (Above the fold)
+   ======================================== */
+
+/* Critical performance optimizations */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Optimize layout shifts */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* GPU acceleration for smooth scrolling */
+.navbar, .hero-section {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* ========================================
    ENHANCED TEACHING PAGE STYLES
    ======================================== */
 

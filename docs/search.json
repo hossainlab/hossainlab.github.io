@@ -238,11 +238,130 @@
     "text": "Explore the latest media highlights featuring me and my research group. Discover insightful coverage of their impactful research."
   },
   {
-    "objectID": "cv/index.html",
-    "href": "cv/index.html",
+    "objectID": "press/index.html#recent-media-coverage",
+    "href": "press/index.html#recent-media-coverage",
+    "title": "Media Coverage",
+    "section": "Recent Media Coverage",
+    "text": "Recent Media Coverage\n\n\n\n\n📖Feature Article\n\n\n27 May 2024\n\n\n\n\nWhat the Rise in Self-Medication Tells Us About the Country’s Healthcare System\n\n\nThe Business Standard • Healthcare Policy\n\n\nAnalysis of self-medication trends and their implications for healthcare accessibility and quality in Bangladesh.\n\n\nSelf-MedicationHealthcare AccessHealth PolicyPublic Health\n\n\nRead Article\n\n\n\n\n\n\n💬Expert Commentary\n\n\n22 April 2024\n\n\n\n\nData Science Applications in Epidemiological Research\n\n\nScience Today Bangladesh • Research Methods\n\n\nExploration of data science methodologies in epidemiological studies and their implications for public health policy.\n\n\nData ScienceEpidemiologyPublic HealthResearch Methods\n\n\nRead Article\n\n\n\n\n\n\n🎤Interview\n\n\n15 March 2024\n\n\n\n\nAI in Healthcare: Transforming Medical Diagnosis and Treatment\n\n\nHealth Innovation Weekly • Technology in Health\n\n\nExpert insights on AI applications in medical diagnosis and their potential impact on healthcare accessibility.\n\n\nArtificial IntelligenceHealthcare TechnologyMedical DiagnosisInnovation\n\n\nRead Article\n\n\n\n\n\n\n📰News Article\n\n\n08 February 2024\n\n\n\n\nParental Lack of Antibiotic Knowledge Imperils Child Health in Bangladesh: Study\n\n\nThe Business Standard • Health Research\n\n\nExpert commentary on antibiotic misuse research highlighting the critical need for better health education in Bangladesh.\n\n\nAntibiotic ResistanceChild HealthPublic HealthBangladesh Healthcare\n\n\nRead Article\n\n\n\n\n\n\n👥Panel Discussion\n\n\n10 January 2024\n\n\n\n\nBuilding Research Capacity in Bangladesh: Challenges and Opportunities\n\n\nAcademic Quarterly • Academic Development\n\n\nComprehensive analysis of research ecosystem challenges and potential solutions for academic advancement in Bangladesh.\n\n\nResearch CapacityAcademic DevelopmentHigher EducationBangladesh\n\n\nRead Article"
+  },
+  {
+    "objectID": "dashboards.html",
+    "href": "dashboards.html",
+    "title": "Dashboards",
+    "section": "",
+    "text": "The dashboard typically includes various features and components to help stakeholders, such as public health authorities, researchers, and the general public, understand and analyze the dengue situation."
+  },
+  {
+    "objectID": "dashboards.html#dengue-situation-monitoring-dashboard",
+    "href": "dashboards.html#dengue-situation-monitoring-dashboard",
+    "title": "Dashboards",
+    "section": "",
+    "text": "The dashboard typically includes various features and components to help stakeholders, such as public health authorities, researchers, and the general public, understand and analyze the dengue situation."
+  },
+  {
+    "objectID": "dashboards.html#nipah-virus-transmission-in-bangladesh",
+    "href": "dashboards.html#nipah-virus-transmission-in-bangladesh",
+    "title": "Dashboards",
+    "section": "Nipah Virus Transmission in Bangladesh",
+    "text": "Nipah Virus Transmission in Bangladesh\nNipah virus transmission in Bangladesh primarily occurs through direct contact with infected bats, their excretions, or consumption of contaminated fruits or raw date palm sap. This zoonotic virus can also be transmitted from person to person through close contact, making it a potential threat in healthcare settings. Public health measures, such as avoiding contact with sick individuals and practicing good hygiene, are essential to prevent its spread in Bangladesh and other affected regions."
+  },
+  {
+    "objectID": "dashboards.html#monkeypox-outbreak-insights",
+    "href": "dashboards.html#monkeypox-outbreak-insights",
+    "title": "Dashboards",
+    "section": "Monkeypox Outbreak Insights",
+    "text": "Monkeypox Outbreak Insights\nVisualizing the data produced by the World Health Organization on the 2022 monkeypox outbreak."
+  },
+  {
+    "objectID": "blog/welcome/index.html",
+    "href": "blog/welcome/index.html",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "",
+    "text": "Welcome! Ahoy, fellow data adventurers! 🌊🔍 Our voyage through the vast ocean of data has been nothing short of exhilarating. We’ve navigated the twists and turns of data-driven decision-making, explored the tools that power our data collection, and unraveled the mysteries behind data analysis and visualization. We’ve braved the challenges that come with utilizing data and discovered how it can empower businesses, content creators, and even influence SEO strategies.\nHey there, data enthusiasts and curious minds! 📊🔍 Are you ready to embark on a thrilling expedition into the world of data? In today’s digital age, data isn’t just a buzzword; it’s the compass guiding successful businesses, creative endeavors, and innovative solutions. So, grab your virtual backpacks as we dive into the exciting realm of data-driven decision-making and exploration. Join me on this exhilarating journey, and together, we’ll uncover the boundless power that data holds!"
+  },
+  {
+    "objectID": "blog/welcome/index.html#why-data-matters",
+    "href": "blog/welcome/index.html#why-data-matters",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "Why Data Matters?",
+    "text": "Why Data Matters?\nPicture this: a business owner armed with accurate insights that steer their company toward unprecedented growth. Data is the magic wand that makes it happen. Companies big and small are tapping into the goldmine of data to fine-tune their strategies, enhance customer experiences, and predict market trends. Remember the time you received a tailored recommendation on an online platform? Thank data for that! Let’s dive into how data transforms the ordinary into the extraordinary."
+  },
+  {
+    "objectID": "blog/welcome/index.html#the-data-journey-begins",
+    "href": "blog/welcome/index.html#the-data-journey-begins",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "The Data Journey Begins",
+    "text": "The Data Journey Begins\nData comes in various shapes and sizes—structured and unstructured. Think of structured data as well-organized puzzle pieces, while unstructured data is like the pieces of a jigsaw puzzle scattered across the table. From customer preferences to social media interactions, data is collected through various channels. But wait, collecting raw data is just the first step of our journey."
+  },
+  {
+    "objectID": "blog/welcome/index.html#tools-for-data-collection",
+    "href": "blog/welcome/index.html#tools-for-data-collection",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "Tools for Data Collection",
+    "text": "Tools for Data Collection\nImagine gathering pieces of a puzzle without missing a single one. That’s the level of accuracy data collection tools provide. Meet the heroes behind the scenes: Google Analytics, surveys, social media insights, and more. But remember, accuracy is the name of the game. Garbage in, garbage out, they say. Inaccurate data can lead you down the wrong path. So, gear up with reliable tools to collect gems, not gravel."
+  },
+  {
+    "objectID": "blog/welcome/index.html#making-sense-of-the-data",
+    "href": "blog/welcome/index.html#making-sense-of-the-data",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "Making Sense of the Data",
+    "text": "Making Sense of the Data\nGathering data is like mining, and now it’s time to extract the precious gems hidden within. Data analysis is our refining process. Whether it’s identifying trends, detecting anomalies, or uncovering correlations, data analysis tools are the chisels and magnifying glasses of our journey. From basic spreadsheets to complex algorithms, these tools unveil the stories buried beneath the numbers."
+  },
+  {
+    "objectID": "blog/welcome/index.html#visualizing-data-for-impact",
+    "href": "blog/welcome/index.html#visualizing-data-for-impact",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "Visualizing Data for Impact",
+    "text": "Visualizing Data for Impact\nData, in its raw form, can resemble a dense fog. That’s where data visualization swoops in. Imagine turning complex data sets into captivating visuals—charts, graphs, and infographics that tell a story at a glance. It’s like transforming fog into a clear roadmap, guiding your decisions with precision. After all, a picture is worth a thousand rows of data!"
+  },
+  {
+    "objectID": "blog/welcome/index.html#challenges-in-data-utilization",
+    "href": "blog/welcome/index.html#challenges-in-data-utilization",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "Challenges in Data Utilization",
+    "text": "Challenges in Data Utilization\nAhoy! Rough waters ahead. Navigating the sea of data isn’t without challenges. Data privacy concerns, incomplete or inconsistent data, and the noise of irrelevant information can make our voyage tricky. But fear not! With the right strategies, you can steer clear of these obstacles and set sail towards data-driven success."
+  },
+  {
+    "objectID": "blog/welcome/index.html#empowering-your-business-with-data",
+    "href": "blog/welcome/index.html#empowering-your-business-with-data",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "Empowering Your Business with Data",
+    "text": "Empowering Your Business with Data\nAvast, business owners! Data isn’t just a treasure for the brave; it’s a compass for the wise. Imagine adjusting your business strategies based on real-time insights. From product development to customer service, data-driven decisions can launch your business to new heights. Ready to hoist the sails of success?"
+  },
+  {
+    "objectID": "blog/welcome/index.html#the-human-element-in-data",
+    "href": "blog/welcome/index.html#the-human-element-in-data",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "The Human Element in Data",
+    "text": "The Human Element in Data\nData is our guide, but human judgment is our compass. While data analysis offers invaluable insights, remember that it’s humans who make the final call. Just like a ship’s captain relies on the stars while steering the ship, human intuition guides the course of action, ensuring a harmonious blend of data and wisdom."
+  },
+  {
+    "objectID": "blog/welcome/index.html#join-me-on-my-blogging-journey",
+    "href": "blog/welcome/index.html#join-me-on-my-blogging-journey",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "Join Me on My Blogging Journey",
+    "text": "Join Me on My Blogging Journey\nBut wait, our adventure doesn’t end here! There’s a treasure trove of insights waiting for you on my blog. Dive deeper into the world of data-driven strategies, technology trends, and real-life success stories. Unearth the secrets that can propel your journey to the next level. Stay tuned"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
     "title": "",
     "section": "",
-    "text": "Download current CV"
+    "text": "No matching items"
+  },
+  {
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "About",
+    "section": "",
+    "text": "About\nA biomedical researcher specializing in neuroepidemiology, cancer epidemiology, and bioinformatics, dedicated to translating complex molecular data into actionable healthcare insights.\n\n\n\nProfessional Journey\n\n\n\n\n\n\nFounder & Chief Executive Officer DeepBio Limited 2022 - Present\nLeading biotechnology company focused on AI-driven drug discovery and personalized medicine solutions. Spearheading research initiatives in computational biology and developing cutting-edge bioinformatics tools for the pharmaceutical industry.\n\n\n\n\n\n\n\nFounder & Executive Director CHIRAL Bangladesh 2021 - Present\nNon-profit research organization dedicated to advancing biomedical research and training in Bangladesh. Establishing collaborative networks and educational programs to build local capacity in computational biology and bioinformatics.\n\n\n\n\n\n\n\nFaculty Center for Bioinformatics Learning Advancement and Systematics Training (cBLAST), University of Dhaka 2020 - Present\nContributing to bioinformatics education and research capacity building. Developing curriculum and teaching computational approaches to biological problems, mentoring students in genomics and data analysis.\n\n\n\n\n\n\n\nVisiting Researcher Department of Public Health, Daffodil International University 2025 - Present\nConducting interdisciplinary research at the intersection of public health and computational biology. Collaborating on projects involving health data analytics and epidemiological modeling.\n\n\n\n\n\n\n\nInstructor Daffodil International University (Micro-credential Academy, AI for Public Health) 2022 - Present\nDesigning and delivering specialized courses on artificial intelligence applications in public health. Teaching machine learning techniques for health data analysis and developing micro-credential programs.\n\n\n\n\n\n\n\nProgram Lead GSA Bioinformatics Internship 2021 - Present\nLeading comprehensive bioinformatics internship programs for students and early-career researchers. Developing hands-on training modules covering genomics, proteomics, and computational biology tools.\n\n\n\n\n\nEducation\n\n\n\n\n\n\nMaster of Science in Microbiology Jagannath University, Dhaka 2020\nResearch Focus: Chikungunya outbreak investigation and infectious disease epidemiology. Conducted comprehensive field studies and laboratory analysis to understand disease transmission patterns and develop prevention strategies.\n\n\n\n\n\n\n\nBachelor of Science in Microbiology Jagannath University, Dhaka 2019\nResearch Project: Antibiotic resistance gene profiling using bioinformatics approaches. Applied computational methods to analyze bacterial genomes and identify resistance mechanisms in pathogenic microorganisms."
+  },
+  {
+    "objectID": "about_template.html",
+    "href": "about_template.html",
+    "title": "About this template",
+    "section": "",
+    "text": "About this template\n\n\n\nThis page contains some elaborated background information about your workshop, or the instructors.\n\n\nThis is to demonstrate how to make a drop-down page from the navigation bar."
   },
   {
     "objectID": "blog/multi-omics-data-integration/index.html",
@@ -322,123 +441,11 @@
     "text": "References\n\nNCBI - Integrative Multi-Omics Approaches in Cancer Research\nScienceDirect - Machine learning for multi-omics data integration in cancer\nNature - Multi-omics data integration and modeling unravels new mechanisms\nResearchGate - Machine learning for multi-omics data integration in cancer\nFrontiers in Genetics - Integration of Online Omics-Data Resources for Cancer\nFrontiers in Oncology - Integrated Multi-Omics Analyses in Oncology"
   },
   {
-    "objectID": "about_template.html",
-    "href": "about_template.html",
-    "title": "About this template",
-    "section": "",
-    "text": "About this template\n\n\n\nThis page contains some elaborated background information about your workshop, or the instructors.\n\n\nThis is to demonstrate how to make a drop-down page from the navigation bar."
-  },
-  {
-    "objectID": "about/index.html",
-    "href": "about/index.html",
-    "title": "About",
-    "section": "",
-    "text": "About\nA biomedical researcher specializing in neuroepidemiology, cancer epidemiology, and bioinformatics, dedicated to translating complex molecular data into actionable healthcare insights.\n\n\n\nProfessional Journey\n\n\n\n\n\n\nFounder & Chief Executive Officer DeepBio Limited 2022 - Present\nLeading biotechnology company focused on AI-driven drug discovery and personalized medicine solutions. Spearheading research initiatives in computational biology and developing cutting-edge bioinformatics tools for the pharmaceutical industry.\n\n\n\n\n\n\n\nFounder & Executive Director CHIRAL Bangladesh 2021 - Present\nNon-profit research organization dedicated to advancing biomedical research and training in Bangladesh. Establishing collaborative networks and educational programs to build local capacity in computational biology and bioinformatics.\n\n\n\n\n\n\n\nFaculty Center for Bioinformatics Learning Advancement and Systematics Training (cBLAST), University of Dhaka 2020 - Present\nContributing to bioinformatics education and research capacity building. Developing curriculum and teaching computational approaches to biological problems, mentoring students in genomics and data analysis.\n\n\n\n\n\n\n\nVisiting Researcher Department of Public Health, Daffodil International University 2025 - Present\nConducting interdisciplinary research at the intersection of public health and computational biology. Collaborating on projects involving health data analytics and epidemiological modeling.\n\n\n\n\n\n\n\nInstructor Daffodil International University (Micro-credential Academy, AI for Public Health) 2022 - Present\nDesigning and delivering specialized courses on artificial intelligence applications in public health. Teaching machine learning techniques for health data analysis and developing micro-credential programs.\n\n\n\n\n\n\n\nProgram Lead GSA Bioinformatics Internship 2021 - Present\nLeading comprehensive bioinformatics internship programs for students and early-career researchers. Developing hands-on training modules covering genomics, proteomics, and computational biology tools.\n\n\n\n\n\nEducation\n\n\n\n\n\n\nMaster of Science in Microbiology Jagannath University, Dhaka 2020\nResearch Focus: Chikungunya outbreak investigation and infectious disease epidemiology. Conducted comprehensive field studies and laboratory analysis to understand disease transmission patterns and develop prevention strategies.\n\n\n\n\n\n\n\nBachelor of Science in Microbiology Jagannath University, Dhaka 2019\nResearch Project: Antibiotic resistance gene profiling using bioinformatics approaches. Applied computational methods to analyze bacterial genomes and identify resistance mechanisms in pathogenic microorganisms."
-  },
-  {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
+    "objectID": "cv/index.html",
+    "href": "cv/index.html",
     "title": "",
     "section": "",
-    "text": "No matching items"
-  },
-  {
-    "objectID": "blog/welcome/index.html",
-    "href": "blog/welcome/index.html",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "",
-    "text": "Welcome! Ahoy, fellow data adventurers! 🌊🔍 Our voyage through the vast ocean of data has been nothing short of exhilarating. We’ve navigated the twists and turns of data-driven decision-making, explored the tools that power our data collection, and unraveled the mysteries behind data analysis and visualization. We’ve braved the challenges that come with utilizing data and discovered how it can empower businesses, content creators, and even influence SEO strategies.\nHey there, data enthusiasts and curious minds! 📊🔍 Are you ready to embark on a thrilling expedition into the world of data? In today’s digital age, data isn’t just a buzzword; it’s the compass guiding successful businesses, creative endeavors, and innovative solutions. So, grab your virtual backpacks as we dive into the exciting realm of data-driven decision-making and exploration. Join me on this exhilarating journey, and together, we’ll uncover the boundless power that data holds!"
-  },
-  {
-    "objectID": "blog/welcome/index.html#why-data-matters",
-    "href": "blog/welcome/index.html#why-data-matters",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "Why Data Matters?",
-    "text": "Why Data Matters?\nPicture this: a business owner armed with accurate insights that steer their company toward unprecedented growth. Data is the magic wand that makes it happen. Companies big and small are tapping into the goldmine of data to fine-tune their strategies, enhance customer experiences, and predict market trends. Remember the time you received a tailored recommendation on an online platform? Thank data for that! Let’s dive into how data transforms the ordinary into the extraordinary."
-  },
-  {
-    "objectID": "blog/welcome/index.html#the-data-journey-begins",
-    "href": "blog/welcome/index.html#the-data-journey-begins",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "The Data Journey Begins",
-    "text": "The Data Journey Begins\nData comes in various shapes and sizes—structured and unstructured. Think of structured data as well-organized puzzle pieces, while unstructured data is like the pieces of a jigsaw puzzle scattered across the table. From customer preferences to social media interactions, data is collected through various channels. But wait, collecting raw data is just the first step of our journey."
-  },
-  {
-    "objectID": "blog/welcome/index.html#tools-for-data-collection",
-    "href": "blog/welcome/index.html#tools-for-data-collection",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "Tools for Data Collection",
-    "text": "Tools for Data Collection\nImagine gathering pieces of a puzzle without missing a single one. That’s the level of accuracy data collection tools provide. Meet the heroes behind the scenes: Google Analytics, surveys, social media insights, and more. But remember, accuracy is the name of the game. Garbage in, garbage out, they say. Inaccurate data can lead you down the wrong path. So, gear up with reliable tools to collect gems, not gravel."
-  },
-  {
-    "objectID": "blog/welcome/index.html#making-sense-of-the-data",
-    "href": "blog/welcome/index.html#making-sense-of-the-data",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "Making Sense of the Data",
-    "text": "Making Sense of the Data\nGathering data is like mining, and now it’s time to extract the precious gems hidden within. Data analysis is our refining process. Whether it’s identifying trends, detecting anomalies, or uncovering correlations, data analysis tools are the chisels and magnifying glasses of our journey. From basic spreadsheets to complex algorithms, these tools unveil the stories buried beneath the numbers."
-  },
-  {
-    "objectID": "blog/welcome/index.html#visualizing-data-for-impact",
-    "href": "blog/welcome/index.html#visualizing-data-for-impact",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "Visualizing Data for Impact",
-    "text": "Visualizing Data for Impact\nData, in its raw form, can resemble a dense fog. That’s where data visualization swoops in. Imagine turning complex data sets into captivating visuals—charts, graphs, and infographics that tell a story at a glance. It’s like transforming fog into a clear roadmap, guiding your decisions with precision. After all, a picture is worth a thousand rows of data!"
-  },
-  {
-    "objectID": "blog/welcome/index.html#challenges-in-data-utilization",
-    "href": "blog/welcome/index.html#challenges-in-data-utilization",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "Challenges in Data Utilization",
-    "text": "Challenges in Data Utilization\nAhoy! Rough waters ahead. Navigating the sea of data isn’t without challenges. Data privacy concerns, incomplete or inconsistent data, and the noise of irrelevant information can make our voyage tricky. But fear not! With the right strategies, you can steer clear of these obstacles and set sail towards data-driven success."
-  },
-  {
-    "objectID": "blog/welcome/index.html#empowering-your-business-with-data",
-    "href": "blog/welcome/index.html#empowering-your-business-with-data",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "Empowering Your Business with Data",
-    "text": "Empowering Your Business with Data\nAvast, business owners! Data isn’t just a treasure for the brave; it’s a compass for the wise. Imagine adjusting your business strategies based on real-time insights. From product development to customer service, data-driven decisions can launch your business to new heights. Ready to hoist the sails of success?"
-  },
-  {
-    "objectID": "blog/welcome/index.html#the-human-element-in-data",
-    "href": "blog/welcome/index.html#the-human-element-in-data",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "The Human Element in Data",
-    "text": "The Human Element in Data\nData is our guide, but human judgment is our compass. While data analysis offers invaluable insights, remember that it’s humans who make the final call. Just like a ship’s captain relies on the stars while steering the ship, human intuition guides the course of action, ensuring a harmonious blend of data and wisdom."
-  },
-  {
-    "objectID": "blog/welcome/index.html#join-me-on-my-blogging-journey",
-    "href": "blog/welcome/index.html#join-me-on-my-blogging-journey",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "Join Me on My Blogging Journey",
-    "text": "Join Me on My Blogging Journey\nBut wait, our adventure doesn’t end here! There’s a treasure trove of insights waiting for you on my blog. Dive deeper into the world of data-driven strategies, technology trends, and real-life success stories. Unearth the secrets that can propel your journey to the next level. Stay tuned"
-  },
-  {
-    "objectID": "dashboards.html",
-    "href": "dashboards.html",
-    "title": "Dashboards",
-    "section": "",
-    "text": "The dashboard typically includes various features and components to help stakeholders, such as public health authorities, researchers, and the general public, understand and analyze the dengue situation."
-  },
-  {
-    "objectID": "dashboards.html#dengue-situation-monitoring-dashboard",
-    "href": "dashboards.html#dengue-situation-monitoring-dashboard",
-    "title": "Dashboards",
-    "section": "",
-    "text": "The dashboard typically includes various features and components to help stakeholders, such as public health authorities, researchers, and the general public, understand and analyze the dengue situation."
-  },
-  {
-    "objectID": "dashboards.html#nipah-virus-transmission-in-bangladesh",
-    "href": "dashboards.html#nipah-virus-transmission-in-bangladesh",
-    "title": "Dashboards",
-    "section": "Nipah Virus Transmission in Bangladesh",
-    "text": "Nipah Virus Transmission in Bangladesh\nNipah virus transmission in Bangladesh primarily occurs through direct contact with infected bats, their excretions, or consumption of contaminated fruits or raw date palm sap. This zoonotic virus can also be transmitted from person to person through close contact, making it a potential threat in healthcare settings. Public health measures, such as avoiding contact with sick individuals and practicing good hygiene, are essential to prevent its spread in Bangladesh and other affected regions."
-  },
-  {
-    "objectID": "dashboards.html#monkeypox-outbreak-insights",
-    "href": "dashboards.html#monkeypox-outbreak-insights",
-    "title": "Dashboards",
-    "section": "Monkeypox Outbreak Insights",
-    "text": "Monkeypox Outbreak Insights\nVisualizing the data produced by the World Health Organization on the 2022 monkeypox outbreak."
+    "text": "Download current CV"
   },
   {
     "objectID": "index.html",
@@ -455,6 +462,13 @@
     "text": "I am the Founder and Chief Executive Officer of DeepBio Limited, and the Founder and Executive Director of CHIRAL Bangladesh, its dedicated research wing. I also serve as Faculty at the Center for Bioinformatics Learning Advancement and Systematics Training (cBLAST), University of Dhaka, and as a Visiting Researcher in the Department of Public Health, Daffodil International University. At Daffodil International University, I also teach in the Micro-Credential Academy as an Instructor for the course AI for Public Health.\nAs an educator, I am Lead Organizer and Instructor at the Professional Training in Bioinformatics and Computational Biology. I also serve as Program Lead for the GSA Bioinformatics Internship, a collaborative initiative jointly organized by the Global Network of Bangladeshi Biotechnologists (GNOBB), ASI School of Life, and the Society for the Popularization of Science, Bangladesh (SPSB).\nI completed my Master of Science (2020) and Bachelor of Science (2019) in Microbiology from Jagannath University. My research focuses on applying artificial intelligence (AI) to health data—including multi-omics datasets (genomics, transcriptomics, proteomics) and neuroimaging—to identify clinically actionable biomarkers and build predictive models for the early diagnosis and treatment of neurological disorders and cancer. I am also passionate about visualizing complex data and models to improve biological interpretation and support clinical applications.\nPlease contact me to discuss potential opportunities."
   },
   {
+    "objectID": "publications/index.html",
+    "href": "publications/index.html",
+    "title": "",
+    "section": "",
+    "text": "// Publication filter functionality\n{\n  const filterButtons = document.querySelectorAll('.filter-btn');\n  const publicationItems = document.querySelectorAll('.publication-item');\n\n  // Filter function\n  function filterPublications(filterValue) {\n    publicationItems.forEach(item =&gt; {\n      if (filterValue === 'all' || item.classList.contains(filterValue)) {\n        item.classList.remove('hidden');\n        item.classList.add('filtering-in');\n        item.classList.remove('filtering-out');\n      } else {\n        item.classList.add('filtering-out');\n        item.classList.remove('filtering-in');\n        setTimeout(() =&gt; {\n          item.classList.add('hidden');\n        }, 300);\n      }\n    });\n\n    // Update active button\n    filterButtons.forEach(btn =&gt; {\n      btn.classList.remove('active');\n    });\n    document.querySelector(`[data-filter=\"${filterValue}\"]`).classList.add('active');\n\n    // Show result count\n    updateResultCount(filterValue);\n  }\n\n  // Result counter\n  function updateResultCount(filterValue) {\n    const visibleItems = document.querySelectorAll(`.publication-item${filterValue === 'all' ? '' : '.' + filterValue}`);\n    const resultContainer = document.querySelector('.filter-results');\n\n    if (!resultContainer) {\n      const container = document.createElement('div');\n      container.className = 'filter-results';\n      document.querySelector('.publications-container').parentNode.insertBefore(container, document.querySelector('.publications-container'));\n    }\n\n    const count = visibleItems.length;\n    const resultText = count === 1 ? '1 publication found' : `${count} publications found`;\n    document.querySelector('.filter-results').textContent = filterValue === 'all' ? '' : resultText;\n  }\n\n  // Add event listeners\n  filterButtons.forEach(button =&gt; {\n    button.addEventListener('click', () =&gt; {\n      const filterValue = button.getAttribute('data-filter');\n      filterPublications(filterValue);\n    });\n  });\n\n  return \"Publication filters initialized\";\n}"
+  },
+  {
     "objectID": "publications/index.html#publications",
     "href": "publications/index.html#publications",
     "title": "",
@@ -467,6 +481,13 @@
     "title": "Talks",
     "section": "",
     "text": "A collection of invited talks, academic presentations, and conference contributions on bioinformatics, public health, and data science."
+  },
+  {
+    "objectID": "talks/index.html#talks-1",
+    "href": "talks/index.html#talks-1",
+    "title": "Talks",
+    "section": "Talks",
+    "text": "Talks\n\n\n\n\nInvited Talk\n\n\nMarch 15, 2024\n\n\n\n\nMastering Biomedical Data Management\n\n\nIFMSA Bangladesh Annual ConferenceDhaka, Bangladesh\n\n\nComprehensive overview of modern approaches to biomedical data management, including best practices for data collection, storage, and analysis in healthcare research.\n\n\nView Slides\n\n\n\n\n\n\nConference Presentation\n\n\nNovember 8, 2023\n\n\n\n\nMachine Learning Applications in Epidemiological Research\n\n\nInternational Conference on Public HealthDhaka, Bangladesh\n\n\nExploring the integration of machine learning techniques in epidemiological studies, with focus on disease prediction models and population health analytics.\n\n\n\n\n\n\nWorkshop\n\n\nAugust 25, 2023\n\n\n\n\nOpen Science and Reproducible Research in Bioinformatics\n\n\nBangladesh Bioinformatics SocietyDhaka, Bangladesh\n\n\nHands-on workshop on implementing open science practices and ensuring reproducibility in bioinformatics research workflows.\n\n\n\n\n\n\nAcademic Talk\n\n\nSeptember 20, 2022\n\n\n\n\nState of the Art in Microbial Genome Analysis\n\n\nDepartment of Microbiology, Jagannath UniversityDhaka, Bangladesh\n\n\nLatest advances in computational methods for microbial genome analysis, including assembly algorithms, annotation tools, and comparative genomics approaches.\n\n\nView Slides\n\n\n\n\n\n\nInvited Talk\n\n\nJuly 10, 2022\n\n\n\n\nUndergraduate Research: Importance, Benefits, and Challenges\n\n\nCHIRAL Bangladesh WorkshopDhaka, Bangladesh\n\n\nExploring the critical role of undergraduate research in academic development, discussing benefits for students and institutions, and addressing common challenges in implementation.\n\n\nView Slides"
   },
   {
     "objectID": "talks/state-the-art-of-microbial-genome-analysi/index.html",
@@ -523,124 +544,5 @@
     "title": "CLAUDE.md",
     "section": "",
     "text": "The site uses Quarto’s freeze feature, so only changed content gets re-rendered\nAcademic icons are used via shortcodes like \nThe site includes social media integration and contact information\nBootstrap-based themes with custom CSS styling"
-  },
-  {
-    "objectID": "publications/index.html",
-    "href": "publications/index.html",
-    "title": "",
-    "section": "",
-    "text": "// Publication filter functionality\n{\n  const filterButtons = document.querySelectorAll('.filter-btn');\n  const publicationItems = document.querySelectorAll('.publication-item');\n\n  // Filter function\n  function filterPublications(filterValue) {\n    publicationItems.forEach(item =&gt; {\n      if (filterValue === 'all' || item.classList.contains(filterValue)) {\n        item.classList.remove('hidden');\n        item.classList.add('filtering-in');\n        item.classList.remove('filtering-out');\n      } else {\n        item.classList.add('filtering-out');\n        item.classList.remove('filtering-in');\n        setTimeout(() =&gt; {\n          item.classList.add('hidden');\n        }, 300);\n      }\n    });\n\n    // Update active button\n    filterButtons.forEach(btn =&gt; {\n      btn.classList.remove('active');\n    });\n    document.querySelector(`[data-filter=\"${filterValue}\"]`).classList.add('active');\n\n    // Show result count\n    updateResultCount(filterValue);\n  }\n\n  // Result counter\n  function updateResultCount(filterValue) {\n    const visibleItems = document.querySelectorAll(`.publication-item${filterValue === 'all' ? '' : '.' + filterValue}`);\n    const resultContainer = document.querySelector('.filter-results');\n\n    if (!resultContainer) {\n      const container = document.createElement('div');\n      container.className = 'filter-results';\n      document.querySelector('.publications-container').parentNode.insertBefore(container, document.querySelector('.publications-container'));\n    }\n\n    const count = visibleItems.length;\n    const resultText = count === 1 ? '1 publication found' : `${count} publications found`;\n    document.querySelector('.filter-results').textContent = filterValue === 'all' ? '' : resultText;\n  }\n\n  // Add event listeners\n  filterButtons.forEach(button =&gt; {\n    button.addEventListener('click', () =&gt; {\n      const filterValue = button.getAttribute('data-filter');\n      filterPublications(filterValue);\n    });\n  });\n\n  return \"Publication filters initialized\";\n}"
-  },
-  {
-    "objectID": "talks/index.html#filter-by-category",
-    "href": "talks/index.html#filter-by-category",
-    "title": "Talks",
-    "section": "Filter by Category",
-    "text": "Filter by Category\n\n\nAll Talks\n\n\n📊Data Science\n\n\n🧬Bioinformatics\n\n\n🎓Education\n\n\n🤖Machine Learning\n\n\n🔬Research Methods"
-  },
-  {
-    "objectID": "talks/index.html#recent-talks",
-    "href": "talks/index.html#recent-talks",
-    "title": "Talks",
-    "section": "Recent Talks",
-    "text": "Recent Talks\n\n\n\nFeatured\n\n\n\n📊Data Science\n\n\nInvited Talk\n\n\n\n\nMastering Biomedical Data Management\n\n\n\nIFMSA Bangladesh Annual ConferenceDhaka, Bangladesh\n\n\nMarch 15, 2024\n\n\n\nComprehensive overview of modern approaches to biomedical data management, including best practices for data collection, storage, and analysis in healthcare research.\n\n\nData Management StrategiesHealthcare Data StandardsPrivacy and SecurityReproducible Research\n\n\nView Slides\n\n\n\n\n\n\n🤖Machine Learning\n\n\nConference Presentation\n\n\n\n\nMachine Learning Applications in Epidemiological Research\n\n\n\nInternational Conference on Public HealthDhaka, Bangladesh\n\n\nNovember 8, 2023\n\n\n\nExploring the integration of machine learning techniques in epidemiological studies, with focus on disease prediction models and population health analytics.\n\n\nPredictive ModelingPopulation HealthDisease SurveillanceAI in Healthcare\n\n\n\n\n\n\n\n\n\n🔬Research Methods\n\n\nWorkshop\n\n\n\n\nOpen Science and Reproducible Research in Bioinformatics\n\n\n\nBangladesh Bioinformatics SocietyDhaka, Bangladesh\n\n\nAugust 25, 2023\n\n\n\nHands-on workshop on implementing open science practices and ensuring reproducibility in bioinformatics research workflows.\n\n\nOpen Science PrinciplesReproducible WorkflowsVersion ControlData Sharing\n\n\n\n\n\n\n\n\nFeatured\n\n\n\n🧬Bioinformatics\n\n\nAcademic Talk\n\n\n\n\nState of the Art in Microbial Genome Analysis\n\n\n\nDepartment of Microbiology, Jagannath UniversityDhaka, Bangladesh\n\n\nSeptember 20, 2022\n\n\n\nLatest advances in computational methods for microbial genome analysis, including assembly algorithms, annotation tools, and comparative genomics approaches.\n\n\nGenome AssemblyFunctional AnnotationComparative GenomicsPhylogenetic Analysis\n\n\nView Slides\n\n\n\n\n\n\n🎓Education\n\n\nInvited Talk\n\n\n\n\nUndergraduate Research: Importance, Benefits, and Challenges\n\n\n\nCHIRAL Bangladesh WorkshopDhaka, Bangladesh\n\n\nJuly 10, 2022\n\n\n\nExploring the critical role of undergraduate research in academic development, discussing benefits for students and institutions, and addressing common challenges in implementation.\n\n\nResearch MethodologyStudent MentorshipAcademic DevelopmentCareer Preparation\n\n\nView Slides"
-  },
-  {
-    "objectID": "talks/index.html#talks-1",
-    "href": "talks/index.html#talks-1",
-    "title": "Talks",
-    "section": "Talks",
-    "text": "Talks\n\n\n\n\nInvited Talk\n\n\nMarch 15, 2024\n\n\n\n\nMastering Biomedical Data Management\n\n\nIFMSA Bangladesh Annual ConferenceDhaka, Bangladesh\n\n\nComprehensive overview of modern approaches to biomedical data management, including best practices for data collection, storage, and analysis in healthcare research.\n\n\nView Slides\n\n\n\n\n\n\nConference Presentation\n\n\nNovember 8, 2023\n\n\n\n\nMachine Learning Applications in Epidemiological Research\n\n\nInternational Conference on Public HealthDhaka, Bangladesh\n\n\nExploring the integration of machine learning techniques in epidemiological studies, with focus on disease prediction models and population health analytics.\n\n\n\n\n\n\nWorkshop\n\n\nAugust 25, 2023\n\n\n\n\nOpen Science and Reproducible Research in Bioinformatics\n\n\nBangladesh Bioinformatics SocietyDhaka, Bangladesh\n\n\nHands-on workshop on implementing open science practices and ensuring reproducibility in bioinformatics research workflows.\n\n\n\n\n\n\nAcademic Talk\n\n\nSeptember 20, 2022\n\n\n\n\nState of the Art in Microbial Genome Analysis\n\n\nDepartment of Microbiology, Jagannath UniversityDhaka, Bangladesh\n\n\nLatest advances in computational methods for microbial genome analysis, including assembly algorithms, annotation tools, and comparative genomics approaches.\n\n\nView Slides\n\n\n\n\n\n\nInvited Talk\n\n\nJuly 10, 2022\n\n\n\n\nUndergraduate Research: Importance, Benefits, and Challenges\n\n\nCHIRAL Bangladesh WorkshopDhaka, Bangladesh\n\n\nExploring the critical role of undergraduate research in academic development, discussing benefits for students and institutions, and addressing common challenges in implementation.\n\n\nView Slides"
-  },
-  {
-    "objectID": "press/index.html#recent-media-coverage",
-    "href": "press/index.html#recent-media-coverage",
-    "title": "Media Coverage",
-    "section": "Recent Media Coverage",
-    "text": "Recent Media Coverage\n\n\n\n\n📖Feature Article\n\n\n27 May 2024\n\n\n\n\nWhat the Rise in Self-Medication Tells Us About the Country’s Healthcare System\n\n\nThe Business Standard • Healthcare Policy\n\n\nAnalysis of self-medication trends and their implications for healthcare accessibility and quality in Bangladesh.\n\n\nSelf-MedicationHealthcare AccessHealth PolicyPublic Health\n\n\nRead Article\n\n\n\n\n\n\n💬Expert Commentary\n\n\n22 April 2024\n\n\n\n\nData Science Applications in Epidemiological Research\n\n\nScience Today Bangladesh • Research Methods\n\n\nExploration of data science methodologies in epidemiological studies and their implications for public health policy.\n\n\nData ScienceEpidemiologyPublic HealthResearch Methods\n\n\nRead Article\n\n\n\n\n\n\n🎤Interview\n\n\n15 March 2024\n\n\n\n\nAI in Healthcare: Transforming Medical Diagnosis and Treatment\n\n\nHealth Innovation Weekly • Technology in Health\n\n\nExpert insights on AI applications in medical diagnosis and their potential impact on healthcare accessibility.\n\n\nArtificial IntelligenceHealthcare TechnologyMedical DiagnosisInnovation\n\n\nRead Article\n\n\n\n\n\n\n📰News Article\n\n\n08 February 2024\n\n\n\n\nParental Lack of Antibiotic Knowledge Imperils Child Health in Bangladesh: Study\n\n\nThe Business Standard • Health Research\n\n\nExpert commentary on antibiotic misuse research highlighting the critical need for better health education in Bangladesh.\n\n\nAntibiotic ResistanceChild HealthPublic HealthBangladesh Healthcare\n\n\nRead Article\n\n\n\n\n\n\n👥Panel Discussion\n\n\n10 January 2024\n\n\n\n\nBuilding Research Capacity in Bangladesh: Challenges and Opportunities\n\n\nAcademic Quarterly • Academic Development\n\n\nComprehensive analysis of research ecosystem challenges and potential solutions for academic advancement in Bangladesh.\n\n\nResearch CapacityAcademic DevelopmentHigher EducationBangladesh\n\n\nRead Article"
-  },
-  {
-    "objectID": "DEPLOYMENT.html",
-    "href": "DEPLOYMENT.html",
-    "title": "Deployment Guide",
-    "section": "",
-    "text": "This document explains how to deploy the Jubayer Hossain academic website to Netlify.\n\n\n\nQuarto installed\nNode.js (version 18 or higher)\nR with required packages\nGit repository connected to GitHub/GitLab\n\n\n\n\n\n\n\nConnect Repository to Netlify:\n\nGo to Netlify\nClick “New site from Git”\nConnect your GitHub/GitLab repository\nSelect the repository: hossainlab.github.io\n\nConfigure Build Settings:\n\nBuild command: ./build.sh\nPublish directory: docs\nBase directory: (leave empty)\n\nSet Environment Variables (in Netlify dashboard):\nQUARTO_DENO=true\nQUARTO_DENO_V8_OPTIONS=--max-heap-size=3000\nNODE_ENV=production\nDeploy:\n\nClick “Deploy site”\nNetlify will automatically build and deploy on every push to main branch\n\n\n\n\n\n\nInstall Dependencies:\nnpm install\nBuild the Site:\nnpm run build\nDeploy to Netlify:\nnpm run deploy\n\n\n\n\n\n\n\n\nContains build configuration, redirects, and headers\nLocated in project root\nHandles caching, security headers, and URL redirects\n\n\n\n\n\nDefines Node.js dependencies and build scripts\nContains deployment commands for Netlify\n\n\n\n\n\nLocated in docs/ directory\nHandles URL redirects for clean URLs\n\n\n\n\n\nThe site build process follows these steps:\n\nClean previous build (optional)\nRender Quarto documents to HTML\nProcess R code chunks and generate outputs\nCopy static assets to docs directory\nApply CSS and JavaScript optimizations\nGenerate site structure in docs folder\n\n\n\n\nMake sure these R packages are installed:\ninstall.packages(c(\n  \"yaml\",\n  \"knitr\",\n  \"rmarkdown\"\n))\n\n\n\nCopy .env.example to .env and configure:\ncp .env.example .env\n# Edit .env with your specific values\n\n\n\n\n\n\nR package missing:\nError: package 'yaml' not found\nSolution: Install missing R packages\nQuarto not found:\nCommand 'quarto' not found\nSolution: Install Quarto CLI\nMemory issues:\nJavaScript heap out of memory\nSolution: Increase memory limit in netlify.toml\n\n\n\n\n\nDevelopment: npm run dev\nBuild: npm run build\nClean: npm run clean\nDeploy: npm run deploy\n\n\n\n\n\nThe site includes several optimizations:\n\nCSS and JavaScript minification\nImage optimization\nCaching headers for static assets\nClean URLs with redirects\nSecurity headers\n\n\n\n\nTo use a custom domain:\n\nAdd domain in Netlify dashboard\nConfigure DNS records\nUpdate SITE_URL in environment variables\nUpdate social media links if needed\n\n\n\n\nAfter deployment, monitor:\n\nBuild logs in Netlify dashboard\nSite performance with Lighthouse\nBroken links and 404 errors\nAnalytics (if configured)\n\n\n\n\nFor deployment issues: - Check Netlify build logs - Review Quarto documentation - Check R package installations - Verify environment variables"
-  },
-  {
-    "objectID": "DEPLOYMENT.html#prerequisites",
-    "href": "DEPLOYMENT.html#prerequisites",
-    "title": "Deployment Guide",
-    "section": "",
-    "text": "Quarto installed\nNode.js (version 18 or higher)\nR with required packages\nGit repository connected to GitHub/GitLab"
-  },
-  {
-    "objectID": "DEPLOYMENT.html#quick-deployment-to-netlify",
-    "href": "DEPLOYMENT.html#quick-deployment-to-netlify",
-    "title": "Deployment Guide",
-    "section": "",
-    "text": "Connect Repository to Netlify:\n\nGo to Netlify\nClick “New site from Git”\nConnect your GitHub/GitLab repository\nSelect the repository: hossainlab.github.io\n\nConfigure Build Settings:\n\nBuild command: ./build.sh\nPublish directory: docs\nBase directory: (leave empty)\n\nSet Environment Variables (in Netlify dashboard):\nQUARTO_DENO=true\nQUARTO_DENO_V8_OPTIONS=--max-heap-size=3000\nNODE_ENV=production\nDeploy:\n\nClick “Deploy site”\nNetlify will automatically build and deploy on every push to main branch\n\n\n\n\n\n\nInstall Dependencies:\nnpm install\nBuild the Site:\nnpm run build\nDeploy to Netlify:\nnpm run deploy"
-  },
-  {
-    "objectID": "DEPLOYMENT.html#configuration-files",
-    "href": "DEPLOYMENT.html#configuration-files",
-    "title": "Deployment Guide",
-    "section": "",
-    "text": "Contains build configuration, redirects, and headers\nLocated in project root\nHandles caching, security headers, and URL redirects\n\n\n\n\n\nDefines Node.js dependencies and build scripts\nContains deployment commands for Netlify\n\n\n\n\n\nLocated in docs/ directory\nHandles URL redirects for clean URLs"
-  },
-  {
-    "objectID": "DEPLOYMENT.html#build-process",
-    "href": "DEPLOYMENT.html#build-process",
-    "title": "Deployment Guide",
-    "section": "",
-    "text": "The site build process follows these steps:\n\nClean previous build (optional)\nRender Quarto documents to HTML\nProcess R code chunks and generate outputs\nCopy static assets to docs directory\nApply CSS and JavaScript optimizations\nGenerate site structure in docs folder"
-  },
-  {
-    "objectID": "DEPLOYMENT.html#required-r-packages",
-    "href": "DEPLOYMENT.html#required-r-packages",
-    "title": "Deployment Guide",
-    "section": "",
-    "text": "Make sure these R packages are installed:\ninstall.packages(c(\n  \"yaml\",\n  \"knitr\",\n  \"rmarkdown\"\n))"
-  },
-  {
-    "objectID": "DEPLOYMENT.html#environment-variables",
-    "href": "DEPLOYMENT.html#environment-variables",
-    "title": "Deployment Guide",
-    "section": "",
-    "text": "Copy .env.example to .env and configure:\ncp .env.example .env\n# Edit .env with your specific values"
-  },
-  {
-    "objectID": "DEPLOYMENT.html#troubleshooting",
-    "href": "DEPLOYMENT.html#troubleshooting",
-    "title": "Deployment Guide",
-    "section": "",
-    "text": "R package missing:\nError: package 'yaml' not found\nSolution: Install missing R packages\nQuarto not found:\nCommand 'quarto' not found\nSolution: Install Quarto CLI\nMemory issues:\nJavaScript heap out of memory\nSolution: Increase memory limit in netlify.toml\n\n\n\n\n\nDevelopment: npm run dev\nBuild: npm run build\nClean: npm run clean\nDeploy: npm run deploy"
-  },
-  {
-    "objectID": "DEPLOYMENT.html#performance-optimization",
-    "href": "DEPLOYMENT.html#performance-optimization",
-    "title": "Deployment Guide",
-    "section": "",
-    "text": "The site includes several optimizations:\n\nCSS and JavaScript minification\nImage optimization\nCaching headers for static assets\nClean URLs with redirects\nSecurity headers"
-  },
-  {
-    "objectID": "DEPLOYMENT.html#domain-configuration",
-    "href": "DEPLOYMENT.html#domain-configuration",
-    "title": "Deployment Guide",
-    "section": "",
-    "text": "To use a custom domain:\n\nAdd domain in Netlify dashboard\nConfigure DNS records\nUpdate SITE_URL in environment variables\nUpdate social media links if needed"
-  },
-  {
-    "objectID": "DEPLOYMENT.html#monitoring",
-    "href": "DEPLOYMENT.html#monitoring",
-    "title": "Deployment Guide",
-    "section": "",
-    "text": "After deployment, monitor:\n\nBuild logs in Netlify dashboard\nSite performance with Lighthouse\nBroken links and 404 errors\nAnalytics (if configured)"
-  },
-  {
-    "objectID": "DEPLOYMENT.html#support",
-    "href": "DEPLOYMENT.html#support",
-    "title": "Deployment Guide",
-    "section": "",
-    "text": "For deployment issues: - Check Netlify build logs - Review Quarto documentation - Check R package installations - Verify environment variables"
   }
 ]

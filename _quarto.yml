@@ -13,6 +13,9 @@ project:
     - "!projects_backup"
   resources:
     - "files/"
+    - "performance.js"
+    - "performance-monitor.js"
+    - "sw.js"
   preview:
     port: 4321
     browser: true
@@ -91,7 +94,51 @@ website:
 format:
   html:
     theme: cosmo
-    css: styles.css
+    css:
+      - styles.css
+      - performance.css
+    include-in-header:
+      - text: |
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link rel="dns-prefetch" href="//fonts.googleapis.com">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+          <meta name="theme-color" content="#3b82f6">
+          <meta name="color-scheme" content="light dark">
+    include-before-body:
+      - text: |
+          <script>
+            // Critical performance script - inline for best performance
+            document.documentElement.style.setProperty('--viewport-height', window.innerHeight + 'px');
+            window.addEventListener('resize', () => {
+              document.documentElement.style.setProperty('--viewport-height', window.innerHeight + 'px');
+            });
+          </script>
+    include-after-body:
+      - text: |
+          <script src="performance.js" defer></script>
+          <script src="performance-monitor.js" defer></script>
+          <script>
+            // Service Worker registration for caching
+            if ('serviceWorker' in navigator) {
+              window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').catch(() => {});
+              });
+            }
+
+            // Performance optimization hints
+            document.addEventListener('DOMContentLoaded', () => {
+              // Add loading class for smooth transitions
+              document.body.classList.add('loading-complete');
+
+              // Optimize critical images
+              const criticalImages = document.querySelectorAll('img[src*="icon.png"], img[src*="banner.jpg"]');
+              criticalImages.forEach(img => {
+                img.loading = 'eager';
+                img.decoding = 'sync';
+              });
+            });
+          </script>
     page-layout: full
     toc: false
     toc-location: right
@@ -102,3 +149,5 @@ format:
     footnotes-hover: true
     highlight-style: github
     smooth-scroll: true
+    link-external-newwindow: true
+    link-external-icon: false

@@ -1,0 +1,349 @@
+/* ========================================
+   PERFORMANCE OPTIMIZATION STYLES
+   ======================================== */
+
+/* ===== CRITICAL LOADING OPTIMIZATIONS ===== */
+
+/* Prevent layout shifts during font loading */
+@font-face {
+  font-family: 'system-ui-fallback';
+  src: local('system-ui'), local('-apple-system'), local('BlinkMacSystemFont');
+  font-display: swap;
+}
+
+/* Optimize font loading with fallbacks */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-display: swap;
+}
+
+/* Critical CSS - Above the fold content */
+.hero-section {
+  contain: layout style paint;
+  transform: translateZ(0); /* Force hardware acceleration */
+}
+
+/* ===== SMOOTH SCROLLING & ANIMATIONS ===== */
+
+/* Enhanced smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===== LOADING STATES & SKELETON ===== */
+
+/* Page loading skeleton */
+.page-loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-primary, #ffffff);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+}
+
+.page-loading.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Content skeleton placeholders */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.skeleton-text {
+  height: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 4px;
+}
+
+.skeleton-title {
+  height: 2rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+  width: 70%;
+}
+
+.skeleton-card {
+  height: 200px;
+  margin: 1rem 0;
+  border-radius: 8px;
+}
+
+/* ===== PERFORMANCE OPTIMIZED ANIMATIONS ===== */
+
+/* Use transform and opacity for better performance */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered animations for card grids */
+.stagger-animation > * {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.stagger-animation > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-animation > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-animation > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-animation > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-animation > *:nth-child(5) { animation-delay: 0.5s; }
+.stagger-animation > *:nth-child(6) { animation-delay: 0.6s; }
+
+/* ===== OPTIMIZED HOVER EFFECTS ===== */
+
+/* GPU accelerated hover effects */
+.optimized-hover {
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  will-change: transform, box-shadow;
+}
+
+.optimized-hover:hover {
+  transform: translateY(-4px) translateZ(0);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== LAZY LOADING OPTIMIZATION ===== */
+
+/* Lazy loaded images */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
+/* Intersection observer fade-in */
+.lazy-element {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.lazy-element.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== OPTIMIZED GRID LAYOUTS ===== */
+
+/* Use CSS Grid with contain for better performance */
+.performance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  contain: layout;
+}
+
+/* ===== SMOOTH PAGE TRANSITIONS ===== */
+
+/* Page transition overlay */
+.page-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-primary, #ffffff);
+  z-index: 9998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.page-transition.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ===== PERFORMANCE CRITICAL CSS ===== */
+
+/* Optimize layout with contain */
+.card-container {
+  contain: layout style paint;
+}
+
+/* Optimize repaints */
+.scroll-optimized {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* ===== RESPONSIVE PERFORMANCE ===== */
+
+/* Optimize images for different screens */
+@media (max-width: 768px) {
+  .performance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Reduce complex effects on mobile */
+  .optimized-hover:hover {
+    transform: translateY(-2px) translateZ(0);
+  }
+}
+
+/* ===== FOCUS MANAGEMENT ===== */
+
+/* Smooth focus indicators */
+.focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 4px;
+  transition: outline 0.2s ease-in-out;
+}
+
+/* ===== PRELOADING HINTS ===== */
+
+/* Critical resource hints */
+.preload-critical {
+  font-display: swap;
+}
+
+/* ===== ACCESSIBILITY OPTIMIZATIONS ===== */
+
+/* High contrast support */
+@media (prefers-contrast: high) {
+  .optimized-hover:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Dark mode optimizations */
+@media (prefers-color-scheme: dark) {
+  .skeleton {
+    background: linear-gradient(90deg, #2a2a2a 25%, #1a1a1a 50%, #2a2a2a 75%);
+  }
+
+  .page-loading {
+    background: #1a1a1a;
+  }
+}
+
+/* ===== LOADING COMPLETE OPTIMIZATIONS ===== */
+
+body.loading-complete {
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
+
+body.loading-complete .content-area {
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+/* Enhanced animation performance */
+.loading-complete .talk-card,
+.loading-complete .media-card,
+.loading-complete .course-card {
+  animation: slideUpFade 0.6s ease-out forwards;
+  animation-delay: calc(var(--index, 0) * 0.1s);
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Performance-optimized transforms */
+.optimized-hover {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* ===== CRITICAL PERFORMANCE HINTS ===== */
+
+/* Optimize critical images */
+img[src*="icon.png"],
+img[src*="banner.jpg"] {
+  loading: eager;
+  decoding: sync;
+}
+
+/* Optimize non-critical images */
+img:not([src*="icon.png"]):not([src*="banner.jpg"]) {
+  loading: lazy;
+  decoding: async;
+}
+
+/* WebP support optimization */
+.webp img[data-webp] {
+  content-visibility: auto;
+}
+
+/* ===== FINAL PERFORMANCE TWEAKS ===== */
+
+/* Optimize scrolling performance */
+.scroll-container {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Optimize text rendering */
+.text-content {
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
