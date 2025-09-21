@@ -1,0 +1,32 @@
+```{=html}
+<div class="publication-card{{#if featured}} featured{{/if}}{{#if status}} {{status}}{{/if}}">
+  {{#if featured}}
+  <div class="publication-badge">Recent Publication</div>
+  {{/if}}
+  {{#if status}}
+  <div class="publication-badge {{status}}">{{status}}</div>
+  {{/if}}
+  <div class="publication-content">
+    <h3>{{title}}</h3>
+    <p><strong>{{authors}}</strong></p>
+    {{#if journal}}
+    <p><em>{{journal}}</em>{{#if volume}} <strong>{{volume}}</strong>{{/if}}{{#if issue}}({{issue}}){{/if}}{{#if pages}}, {{pages}}{{/if}} ({{year}})</p>
+    {{/if}}
+    {{#if url}}
+    <p><a href="{{url}}" target="_blank">DOI: {{doi}}</a></p>
+    {{/if}}
+    {{#if preprint_url}}
+    <p><a href="{{preprint_url}}" target="_blank">Preprint DOI: {{preprint_doi}}</a></p>
+    {{/if}}
+    {{#if tags}}
+    <div class="publication-tags">
+      <ul>
+        {{#each tags}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+    {{/if}}
+  </div>
+</div>
+```

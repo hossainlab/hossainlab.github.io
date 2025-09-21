@@ -1,226 +1,218 @@
 ---
-pagetitle: "Research | Jubayer Hossain"
+pagetitle: "Research"
 title: ""
 page-layout: full
 toc: false
 comments: false
 ---
 
-::: {.research-hero-container}
-::: {.research-hero-section}
-# Research <span class="hero-accent">Portfolio</span>
-:::
-::: {.research-subtitle}
+::: {.hero-section}
+# Research
 Advancing biomedical research through AI-driven approaches to solve complex health challenges and improve patient outcomes.
-:::
 :::
 
 ::: {.main-content}
 
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+# Load required libraries
+library(yaml)
+
+# Read research data
+research_data <- yaml::read_yaml("../_data/research.yml")
+
+# Function to render research area card
+render_research_area <- function(area) {
+  paste0(
+    '<div class="research-area-card">',
+    '<div class="research-icon">', area$icon, '</div>',
+    '<div class="research-content">',
+    '<h3>', area$title, '</h3>',
+    '<p>', area$description, '</p>',
+    '</div>',
+    '</div>'
+  )
+}
+
+# Function to render project card
+render_project <- function(project, type = "current") {
+  # Create status badge
+  status_class <- tolower(gsub(" ", "-", project$status))
+
+  # Create tags
+  tags_html <- ""
+  if (!is.null(project$tags) && length(project$tags) > 0) {
+    tags_list <- paste0("- ", project$tags, collapse = "\n")
+    tags_html <- paste0('<div class="project-tags">\n', tags_list, '\n</div>')
+  }
+
+  # Create funding info
+  funding_html <- ""
+  if (!is.null(project$funding_source)) {
+    funding_html <- paste0(
+      '<p><strong>Funding:</strong> ', project$funding_source,
+      if (!is.null(project$funding_amount)) paste0(' (', project$funding_amount, ')') else '',
+      '<br>',
+      '<strong>Duration:</strong> ', project$duration, '<br>',
+      '<strong>Role:</strong> ', project$role, '</p>'
+    )
+  }
+
+  # Create publications section for completed projects
+  publications_html <- ""
+  if (!is.null(project$publications) && length(project$publications) > 0) {
+    pubs_list <- paste0("- ", project$publications, collapse = "\n")
+    publications_html <- paste0('<div class="project-publications"><strong>Related Publications:</strong>\n', pubs_list, '\n</div>')
+  }
+
+  # Create submission date for proposed projects
+  submission_html <- ""
+  if (!is.null(project$submission_date)) {
+    submission_html <- paste0('<p><strong>Submission Date:</strong> ', project$submission_date, '</p>')
+  }
+
+  # Determine card class
+  card_class <- "project-card"
+  if (!is.null(project$featured) && project$featured) {
+    card_class <- paste(card_class, "featured")
+  }
+  card_class <- paste(card_class, status_class)
+
+  return(paste0(
+    '<div class="', card_class, '">',
+    '<div class="project-status">', project$status, '</div>',
+    '<div class="project-content">',
+    '<h3>', project$title, '</h3>',
+    funding_html,
+    submission_html,
+    '<p>', project$description, '</p>',
+    tags_html,
+    publications_html,
+    '</div>',
+    '</div>'
+  ))
+}
+
+# Function to render collaboration
+render_collaboration <- function(collab) {
+  type_class <- tolower(gsub(" ", "-", collab$type))
+
+  # Create a compact single-line format
+  paste0(
+    '<div class="collaboration-item ', type_class, '">',
+    '<div class="collab-institution">',
+    '<strong>', collab$institution, '</strong>',
+    '<span class="collab-type-badge">', collab$type, '</span>',
+    '</div>',
+    '<div class="collab-details">',
+    '<span class="collab-project">', collab$project, '</span>',
+    ' • <span class="collab-role">', collab$role, '</span>',
+    ' • <span class="collab-duration">', collab$duration, '</span>',
+    '</div>',
+    '</div>'
+  )
+}
+```
+
 ::: {.research-areas-section}
 ## Research Areas
 
-::: {.research-areas-grid}
-::: {.research-area-card}
-::: {.research-icon}
-🧠
-:::
-::: {.research-content}
-### Neuroepidemiology & Brain Health
-Investigating the epidemiology of neurological disorders using computational approaches. Focus on population-based studies, risk factor identification, and predictive modeling for neurodegenerative diseases.
-:::
-:::
+```{r}
+#| echo: false
+#| results: asis
 
-::: {.research-area-card}
-::: {.research-icon}
-🎯
-:::
-::: {.research-content}
-### Cancer Epidemiology & Oncology
-Applying machine learning and statistical methods to understand cancer patterns, survival analysis, and treatment outcomes. Development of predictive models for early detection and prognosis.
-:::
-:::
-
-::: {.research-area-card}
-::: {.research-icon}
-🧬
-:::
-::: {.research-content}
-### Bioinformatics & Genomics
-Computational analysis of genomic data, transcriptomics, and multi-omics integration. Development of algorithms for variant analysis, gene expression profiling, and precision medicine.
-:::
-:::
-
-::: {.research-area-card}
-::: {.research-icon}
-🤖
-:::
-::: {.research-content}
-### AI in Drug Discovery
-Leveraging artificial intelligence for pharmaceutical research, including molecular design, drug-target interaction prediction, and compound optimization using deep learning approaches.
-:::
-:::
-
-::: {.research-area-card}
-::: {.research-icon}
-🏥
-:::
-::: {.research-content}
-### Public Health Informatics
-Application of data science methods to public health challenges, including disease surveillance, health policy analysis, and environmental health impact assessment.
-:::
-:::
-
-::: {.research-area-card}
-::: {.research-icon}
-🔬
-:::
-::: {.research-content}
-### Computational Biology
-Development of computational methods for biological data analysis, including phylogenetics, protein structure prediction, and systems biology approaches.
-:::
-:::
-:::
+cat('<div class="research-areas-grid">')
+for (area in research_data$research_areas) {
+  cat(render_research_area(area))
+}
+cat('</div>')
+```
 :::
 
 ## Current Projects
 
-<div class="projects-grid">
-<div class="project-card active">
-<div class="project-status">Active</div>
-<div class="project-content">
-<h3>Secondhand Smoke Exposure Assessment</h3>
-<p><strong>Funding:</strong> Tobacco Control Policy Research Grant Program ($10,000)<br>
-<strong>Duration:</strong> 2024 - Present<br>
-<strong>Role:</strong> Principal Investigator</p>
-<p>Investigating compliance with smoke-free policies in public spaces across Bangladesh. This multi-site study combines observational data collection with policy analysis to assess the effectiveness of tobacco control measures.</p>
-<div class="project-tags">
-- Public Health
-- Policy Research
-- Environmental Health
-</div>
-</div>
-</div>
+```{r}
+#| echo: false
+#| results: asis
 
-<div class="project-card active">
-<div class="project-status">Active</div>
-<div class="project-content">
-<h3>Deep Learning for Breast Cancer Detection</h3>
-<p><strong>Funding:</strong> Research and Innovation Center ($2,730)<br>
-<strong>Duration:</strong> 2024 - Present<br>
-<strong>Role:</strong> Principal Investigator</p>
-<p>Development of an AI-powered early detection system for breast cancer using deep learning algorithms. The project focuses on improving diagnostic accuracy and reducing false positive rates in mammography screening.</p>
-<div class="project-tags">
-- Deep Learning
-- Medical Imaging
-- Cancer Research
-</div>
-</div>
-</div>
+cat('<div class="projects-grid">')
+for (project in research_data$current_projects) {
+  cat(render_project(project, "current"))
+}
+cat('</div>')
+```
 
-<div class="project-card active">
-<div class="project-status">Active</div>
-<div class="project-content">
-<h3>Air Quality Impact on Asthma Prevalence</h3>
-<p><strong>Funding:</strong> International Center for Climate Change and Development ($4,550)<br>
-<strong>Duration:</strong> 2024 - Present<br>
-<strong>Role:</strong> Principal Investigator</p>
-<p>Comprehensive study examining the relationship between air quality metrics and asthma prevalence in urban areas of Bangladesh. Integrating environmental monitoring data with health surveillance systems.</p>
-<div class="project-tags">
-- Environmental Health
-- Climate Change
-- Respiratory Disease
-</div>
-</div>
-</div>
+## Completed Projects
 
-<div class="project-card active">
-<div class="project-status">Active</div>
-<div class="project-content">
-<h3>Climate-Related Health Surveillance System</h3>
-<p><strong>Funding:</strong> Global Disaster Preparedness Center ($4,550)<br>
-<strong>Duration:</strong> 2024 - Present<br>
-<strong>Role:</strong> Principal Investigator</p>
-<p>Development of early warning systems for climate-related health threats including waterborne diseases and heat-related illnesses. Focus on vulnerable populations in flood and drought-prone regions.</p>
-<div class="project-tags">
-- Climate Health
-- Disease Surveillance
-- Early Warning Systems
-</div>
-</div>
-</div>
+```{r}
+#| echo: false
+#| results: asis
 
-<div class="project-card">
-<div class="project-status">Completed</div>
-<div class="project-content">
-<h3>Deep Learning Framework for Neuroimaging</h3>
-<p><strong>Duration:</strong> 2023 - 2024<br>
-<strong>Role:</strong> Lead Researcher</p>
-<p>Developed innovative deep learning approaches for neuroimaging analysis, focusing on artifact removal, image quality enhancement, and diagnostic prediction for neurological disorders.</p>
-<div class="project-tags">
-- Neuroimaging
-- Deep Learning
-- Medical AI
-</div>
-</div>
-</div>
+cat('<div class="projects-grid">')
+for (project in research_data$completed_projects) {
+  cat(render_project(project, "completed"))
+}
+cat('</div>')
+```
 
-<div class="project-card">
-<div class="project-status">Completed</div>
-<div class="project-content">
-<h3>Genomic Data Analysis Pipeline</h3>
-<p><strong>Duration:</strong> 2022 - 2023<br>
-<strong>Role:</strong> Principal Investigator</p>
-<p>Created comprehensive bioinformatics pipeline for genomic variant analysis and interpretation, with applications in precision medicine and population genetics studies.</p>
-<div class="project-tags">
-- Genomics
-- Bioinformatics
-- Precision Medicine
-</div>
-</div>
-</div>
-</div>
+## Proposed Projects
 
-::: {.research-metrics-section}
-## Research Impact
+```{r}
+#| echo: false
+#| results: asis
 
-::: {.metrics-grid}
-::: {.metric-card}
-::: {.metric-number}
-$25,400+
-:::
-::: {.metric-label}
-Total Research Funding
-:::
-:::
+cat('<div class="projects-grid">')
+for (project in research_data$proposed_projects) {
+  cat(render_project(project, "proposed"))
+}
+cat('</div>')
+```
 
-::: {.metric-card}
-::: {.metric-number}
-15+
-:::
-::: {.metric-label}
-Research Projects
-:::
-:::
+## Research Collaborations
 
-::: {.metric-card}
-::: {.metric-number}
-8+
-:::
-::: {.metric-label}
-Collaborating Institutions
-:::
-:::
+```{r}
+#| echo: false
+#| results: asis
 
-::: {.metric-card}
-::: {.metric-number}
-6
-:::
-::: {.metric-label}
-Research Areas
-:::
-:::
-:::
-:::
+cat('<div class="collaborations-list">')
+for (collab in research_data$collaborations) {
+  cat(render_collaboration(collab))
+}
+cat('</div>')
+```
 
-:::
+<style>
+.hero-section {
+  text-align: center;
+  padding: 3rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+}
+</style>

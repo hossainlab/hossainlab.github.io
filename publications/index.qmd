@@ -4,16 +4,511 @@ page-layout: full
 title-block-banner: false
 comments: false
 callout-icon: false
-toc: true 
+toc: true
 toc-depth: 1
 ---
 
-{{< include peer-reviewed.qmd >}}
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
 
-{{< include submitted-papers.qmd >}}
+library(yaml)
+library(dplyr)
 
-{{< include working-papers.qmd >}}
+# Read publications data
+publications_data <- yaml::read_yaml("../_data/publications.yml")
 
-{{< include posters.qmd >}}
+# Function to consolidate all publications into a single list with metadata
+consolidate_publications <- function(data) {
+  all_pubs <- list()
 
-{{< include orals.qmd >}}
+  # Helper function to process each section
+  process_section <- function(section_data, category) {
+    if (!is.null(section_data)) {
+      for (pub in section_data) {
+        # Set default status based on citation content (if citation exists)
+        status <- "Published"
+        citation_text <- if (!is.null(pub$citation)) pub$citation else ""
+
+        if (grepl("\\[Under Review\\]", citation_text)) {
+          status <- "Under Review"
+        } else if (grepl("\\[In Preparation\\]", citation_text)) {
+          status <- "In Preparation"
+        } else if (grepl("Presented at", citation_text)) {
+          status <- "Presented"
+        }
+
+        pub$status_normalized <- status
+        pub$category <- category
+        all_pubs <<- append(all_pubs, list(pub))
+      }
+    }
+  }
+
+  # Process all sections
+  process_section(data$gbd_collaborator, "GBD Collaborator")
+  process_section(data$peer_reviewed, "Peer-Reviewed")
+  process_section(data$under_review, "Under Review")
+  process_section(data$working_papers, "Working Papers")
+  process_section(data$conference, "Conference")
+
+  # Sort by featured status first, then by year (newest first), then by citation
+  if (length(all_pubs) > 0) {
+    featured_vec <- sapply(all_pubs, function(x) if (!is.null(x$featured) && x$featured) 1 else 0)
+    years_vec <- sapply(all_pubs, function(x) as.numeric(x$year))
+    citation_vec <- sapply(all_pubs, function(x) if (!is.null(x$citation)) x$citation else if (!is.null(x$title)) x$title else "")
+    all_pubs <- all_pubs[order(-featured_vec, -years_vec, citation_vec)]
+  }
+
+  return(all_pubs)
+}
+
+# Function to render publication card with modern styling
+render_publication <- function(pub, type = "peer_reviewed") {
+  # Determine card classes
+  card_classes <- "publication-card"
+  if (!is.null(pub$featured) && pub$featured) {
+    card_classes <- paste(card_classes, "featured")
+  }
+
+  # Create badges
+  badges <- ""
+  if (!is.null(pub$featured) && pub$featured) {
+    badges <- '<div class="publication-badge featured">Featured</div>'
+  }
+  if (!is.null(pub$status_normalized)) {
+    badges <- paste0(badges, '<div class="publication-badge ', tolower(gsub(" ", "-", pub$status_normalized)), '">', pub$status_normalized, '</div>')
+  }
+
+  # Format citation - make Hossain, M.J. bold
+  citation_text <- if (!is.null(pub$citation)) pub$citation else if (!is.null(pub$title)) pub$title else ""
+  citation_formatted <- gsub("Hossain, M.J.", "<strong>Hossain, M.J.</strong>", citation_text, fixed = TRUE)
+
+  # Create tags
+  tags_html <- ""
+  if (!is.null(pub$tags) && length(pub$tags) > 0) {
+    tags_list <- paste0('<li>', pub$tags, '</li>', collapse = '')
+    tags_html <- paste0('<ul class="publication-tags">', tags_list, '</ul>')
+  }
+
+  # Create year badge
+  year_badge <- if (!is.null(pub$year)) paste0('<div class="publication-year">', pub$year, '</div>') else ""
+
+  # Render the card with enhanced classes
+  cat('<div class="', card_classes, '">')
+  cat('<div class="publication-header">')
+  cat(badges)
+  cat(year_badge)
+  cat('</div>')
+  cat('<div class="publication-content">')
+  cat('<div class="publication-citation">', citation_formatted, '</div>')
+  cat(tags_html)
+  cat('</div>')
+  cat('</div>')
+}
+
+# Get all publications
+all_publications <- consolidate_publications(publications_data)
+```
+
+```{css}
+#| echo: false
+
+/* Enhanced Publication Cards with Modern Design */
+.publication-card {
+  background: var(--bg-primary, var(--bs-body-bg));
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid var(--border-light, var(--bs-border-color));
+  box-shadow: 0 4px 20px var(--shadow-light, rgba(0,0,0,0.1));
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.publication-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 40px var(--shadow-medium, rgba(0,0,0,0.15));
+  border-color: var(--primary-color, var(--bs-primary));
+}
+
+.publication-card.featured {
+  border-color: var(--primary-color, var(--bs-primary));
+  box-shadow: 0 4px 20px var(--shadow-primary, rgba(37, 99, 235, 0.15));
+}
+
+.publication-card.featured::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color, var(--bs-primary)), var(--primary-light, var(--bs-primary-bg)));
+}
+
+.publication-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.publication-badge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-right: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.publication-badge.featured {
+  background: linear-gradient(135deg, #ffc107, #ff8c00);
+  color: #000;
+}
+
+.publication-badge.published {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  color: white;
+}
+
+.publication-badge.under-review {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  color: white;
+}
+
+.publication-badge.in-preparation {
+  background: linear-gradient(135deg, #9333ea, #7c3aed);
+  color: white;
+}
+
+.publication-badge.presented {
+  background: linear-gradient(135deg, #059669, #047857);
+  color: white;
+}
+
+.publication-year {
+  background: linear-gradient(135deg, var(--primary-color, var(--bs-primary)), var(--primary-dark, var(--bs-primary)));
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.publication-citation {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  color: var(--text-primary, var(--bs-body-color));
+}
+
+.publication-tags {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.publication-tags li {
+  background: var(--primary-subtle, var(--bs-primary-bg));
+  color: var(--primary-color, var(--bs-primary));
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  transition: all 0.2s ease;
+}
+
+.publication-tags li:hover {
+  background: var(--primary-color, var(--bs-primary));
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Publications Section Layout */
+.publications-section {
+  margin-bottom: 4rem;
+}
+
+.publications-section h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary, var(--bs-body-color));
+  margin-bottom: 2rem;
+}
+
+/* Publication Filters */
+.publication-filters {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: var(--bs-secondary-bg);
+  border-radius: 16px;
+  border: 1px solid var(--bs-border-color);
+}
+
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.filter-group:last-child {
+  margin-bottom: 0;
+}
+
+.filter-btn {
+  background: white;
+  border: 2px solid var(--bs-border-color);
+  color: var(--bs-body-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.filter-btn:hover {
+  background: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, var(--bs-primary), var(--bs-primary-dark, #1e40af));
+  border-color: var(--bs-primary);
+  color: white;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+}
+
+.publications-container {
+  position: relative;
+}
+
+.publication-item {
+  transition: all 0.5s ease;
+  opacity: 1;
+  transform: scale(1);
+  margin-bottom: 2rem;
+}
+
+.publication-item.hidden {
+  opacity: 0;
+  transform: scale(0.8);
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Animation for filter transitions */
+.publication-item.filtering-out {
+  animation: fadeOut 0.3s ease forwards;
+}
+
+.publication-item.filtering-in {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+    height: 0;
+    margin: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Filter result counter */
+.filter-results {
+  text-align: center;
+  padding: 1rem;
+  color: var(--bs-secondary);
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .publication-card {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .publication-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .publication-badge,
+  .publication-year {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .publication-filters {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .filter-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+  }
+
+  .filter-group {
+    gap: 0.5rem;
+  }
+}
+```
+
+```{ojs}
+//| echo: false
+
+// Publication filter functionality
+{
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const publicationItems = document.querySelectorAll('.publication-item');
+
+  // Filter function
+  function filterPublications(filterValue) {
+    publicationItems.forEach(item => {
+      if (filterValue === 'all' || item.classList.contains(filterValue)) {
+        item.classList.remove('hidden');
+        item.classList.add('filtering-in');
+        item.classList.remove('filtering-out');
+      } else {
+        item.classList.add('filtering-out');
+        item.classList.remove('filtering-in');
+        setTimeout(() => {
+          item.classList.add('hidden');
+        }, 300);
+      }
+    });
+
+    // Update active button
+    filterButtons.forEach(btn => {
+      btn.classList.remove('active');
+    });
+    document.querySelector(`[data-filter="${filterValue}"]`).classList.add('active');
+
+    // Show result count
+    updateResultCount(filterValue);
+  }
+
+  // Result counter
+  function updateResultCount(filterValue) {
+    const visibleItems = document.querySelectorAll(`.publication-item${filterValue === 'all' ? '' : '.' + filterValue}`);
+    const resultContainer = document.querySelector('.filter-results');
+
+    if (!resultContainer) {
+      const container = document.createElement('div');
+      container.className = 'filter-results';
+      document.querySelector('.publications-container').parentNode.insertBefore(container, document.querySelector('.publications-container'));
+    }
+
+    const count = visibleItems.length;
+    const resultText = count === 1 ? '1 publication found' : `${count} publications found`;
+    document.querySelector('.filter-results').textContent = filterValue === 'all' ? '' : resultText;
+  }
+
+  // Add event listeners
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const filterValue = button.getAttribute('data-filter');
+      filterPublications(filterValue);
+    });
+  });
+
+  return "Publication filters initialized";
+}
+```
+
+## Publications
+
+```{r}
+#| echo: false
+#| results: asis
+
+# Display hero section
+if (!is.null(publications_data$hero)) {
+  cat("### ", publications_data$hero$title, "\n\n")
+  if (!is.null(publications_data$hero$subtitle)) {
+    cat(publications_data$hero$subtitle, "\n\n")
+  }
+}
+
+# Create filter buttons
+filter_categories <- unique(sapply(all_publications, function(x) x$category))
+filter_statuses <- unique(sapply(all_publications, function(x) x$status_normalized))
+
+cat('<div class="publication-filters">')
+cat('<div class="filter-group">')
+cat('<button class="filter-btn active" data-filter="all">All Publications</button>')
+for (cat_name in filter_categories) {
+  if (!is.null(cat_name) && cat_name != "") {
+    btn_id <- tolower(gsub("[^a-zA-Z0-9]", "-", cat_name))
+    cat('<button class="filter-btn" data-filter="', btn_id, '">', cat_name, '</button>')
+  }
+}
+cat('</div>')
+cat('<div class="filter-group">')
+for (status in filter_statuses) {
+  if (!is.null(status) && status != "") {
+    btn_id <- tolower(gsub("[^a-zA-Z0-9]", "-", status))
+    cat('<button class="filter-btn" data-filter="', btn_id, '">', status, '</button>')
+  }
+}
+cat('</div>')
+cat('</div>')
+
+# Render all publications with filter attributes
+cat('<div class="publications-container">')
+if (length(all_publications) > 0) {
+  for (pub in all_publications) {
+    # Create filter classes
+    filter_classes <- c("publication-item")
+    if (!is.null(pub$category)) {
+      filter_classes <- c(filter_classes, tolower(gsub("[^a-zA-Z0-9]", "-", pub$category)))
+    }
+    if (!is.null(pub$status_normalized)) {
+      filter_classes <- c(filter_classes, tolower(gsub("[^a-zA-Z0-9]", "-", pub$status_normalized)))
+    }
+
+    cat('<div class="', paste(filter_classes, collapse = " "), '">')
+    render_publication(pub)
+    cat('</div>')
+  }
+} else {
+  cat("No publications found.")
+}
+cat('</div>')
+```

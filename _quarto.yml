@@ -43,18 +43,16 @@ website:
           file: research/index.qmd
         - text: "Publications"
           file: publications/index.qmd
-        - text: "Projects"
-          href: projects/index.qmd
-        - text: "Talks"
-          href: talks/index.qmd
         - text: "Teaching"
           file: teaching/index.qmd
+        - text: "Talks"
+          href: talks/index.qmd
+        - text: "Press"
+          file: press/index.qmd
         - text: "More"
           menu:
           - text: "Blog"
             file: blog/index.qmd
-          - text: "Press"
-            file: press/index.qmd
           - text: "Newsletter"
             file: https://hossainlab.substack.com
           - text: "Dashboards"

@@ -1,0 +1,136 @@
+research_areas:
+  - title: "Neuroepidemiology"
+    icon: "🧠"
+    description: "Investigating the distribution and determinants of neurological disorders in populations, with focus on stroke, dementia, and neurodevelopmental conditions."
+
+  - title: "Cancer Epidemiology"
+    icon: "🎗️"
+    description: "Studying patterns, causes, and prevention of cancer using population-based approaches and advanced statistical methods."
+
+  - title: "Bioinformatics & Computational Biology"
+    icon: "💻"
+    description: "Developing and applying computational methods for analyzing biological data, including genomics, transcriptomics, and multi-omics integration."
+
+  - title: "Health Data Science"
+    icon: "📊"
+    description: "Leveraging big data and machine learning approaches to extract insights from complex health datasets and electronic health records."
+
+current_projects:
+  - title: "AI-Driven Early Detection of Stroke Risk"
+    description: "Developing machine learning models to predict stroke risk using multi-modal health data including imaging, genomics, and clinical variables."
+    status: "Active"
+    funding_source: "National Health Research Council"
+    funding_amount: "$250,000"
+    duration: "2023-2025"
+    role: "Principal Investigator"
+    featured: true
+    tags:
+      - "Machine Learning"
+      - "Stroke Prevention"
+      - "Neuroimaging"
+      - "Risk Prediction"
+
+  - title: "Multi-Omics Integration for Cancer Biomarker Discovery"
+    description: "Integrating genomics, transcriptomics, and proteomics data to identify novel biomarkers for early cancer detection and treatment response."
+    status: "Active"
+    funding_source: "Cancer Research Foundation"
+    funding_amount: "$180,000"
+    duration: "2024-2026"
+    role: "Co-Investigator"
+    tags:
+      - "Multi-omics"
+      - "Cancer Biomarkers"
+      - "Precision Medicine"
+      - "Data Integration"
+
+completed_projects:
+  - title: "Population-Based Study of Dementia Risk Factors"
+    description: "Large-scale epidemiological study investigating genetic and environmental risk factors for dementia in diverse populations."
+    status: "Completed"
+    funding_source: "Alzheimer's Research Alliance"
+    funding_amount: "$320,000"
+    duration: "2020-2023"
+    role: "Principal Investigator"
+    publications:
+      - "Hossain MJ, et al. (2023). Genetic variants and dementia risk: A population-based cohort study. Nature Neuroscience, 15(3), 245-258."
+      - "Hossain MJ, et al. (2022). Environmental factors and cognitive decline. Journal of Epidemiology, 32(7), 412-425."
+    tags:
+      - "Dementia"
+      - "Genetic Epidemiology"
+      - "Population Studies"
+      - "Risk Factors"
+
+  - title: "Bioinformatics Pipeline for Single-Cell RNA-seq Analysis"
+    description: "Development of computational tools and workflows for analyzing single-cell RNA sequencing data in cancer research."
+    status: "Completed"
+    funding_source: "Bioinformatics Innovation Grant"
+    funding_amount: "$75,000"
+    duration: "2021-2022"
+    role: "Principal Investigator"
+    publications:
+      - "Hossain MJ, et al. (2022). scRNA-Pipeline: An automated workflow for single-cell RNA-seq analysis. Bioinformatics, 38(12), 3156-3163."
+    tags:
+      - "Single-cell RNA-seq"
+      - "Bioinformatics Tools"
+      - "Cancer Genomics"
+      - "Computational Methods"
+
+proposed_projects:
+  - title: "Federated Learning for Global Health Data Analysis"
+    description: "Developing privacy-preserving machine learning approaches for analyzing health data across multiple institutions without data sharing."
+    status: "Under Review"
+    funding_source: "NIH R01"
+    funding_amount: "$450,000"
+    duration: "2025-2028"
+    role: "Principal Investigator"
+    submission_date: "March 2024"
+    tags:
+      - "Federated Learning"
+      - "Privacy-Preserving ML"
+      - "Global Health"
+      - "Data Security"
+
+  - title: "Climate Change and Neurological Disease Patterns"
+    description: "Investigating the impact of climate change on the epidemiology of neurological diseases using geospatial and temporal analysis."
+    status: "In Preparation"
+    funding_source: "Climate Health Initiative"
+    funding_amount: "$200,000"
+    duration: "2025-2027"
+    role: "Co-Principal Investigator"
+    submission_date: "June 2024"
+    tags:
+      - "Climate Health"
+      - "Neuroepidemiology"
+      - "Geospatial Analysis"
+      - "Environmental Health"
+
+collaborations:
+  - institution: "Harvard T.H. Chan School of Public Health"
+    project: "Global Burden of Neurological Diseases"
+    role: "Collaborating Researcher"
+    type: "International Collaboration"
+    duration: "2023-Present"
+
+  - institution: "Johns Hopkins Bloomberg School of Public Health"
+    project: "Cancer Genomics Consortium"
+    role: "Data Analysis Lead"
+    type: "Multi-institutional"
+    duration: "2022-Present"
+
+  - institution: "University of Oxford, Department of Statistics"
+    project: "Statistical Methods for Multi-omics Integration"
+    role: "Visiting Researcher"
+    type: "Academic Exchange"
+    duration: "2023-2024"
+
+  - institution: "WHO Regional Office for South-East Asia"
+    project: "Stroke Prevention Guidelines Development"
+    role: "Technical Advisor"
+    type: "Policy Collaboration"
+    duration: "2024-Present"
+
+  - institution: "Gates Foundation Global Health Program"
+    project: "AI for Health Surveillance Systems"
+    role: "Principal Investigator"
+    type: "Industry Partnership"
+    duration: "2023-2025"

@@ -1,0 +1,60 @@
+hero:
+  title: Publications
+  subtitle: Showcasing peer-reviewed research contributions in bioinformatics, public
+    health, and computational biology that advance our understanding of complex health
+    challenges.
+
+# Template for new publications:
+# - citation: "Author, A. (Year). Title. Journal Name, Volume(Issue), pages."
+#   year: YYYY
+#   tags: [keyword1, keyword2, keyword3]
+#   status: published  # Options: published, under review, in preparation
+#   featured: true  # Optional: set to true to highlight important publications
+
+gbd_collaborator:
+# - citation: "Author, A. (Year). Title. Journal Name, Volume(Issue), pages."
+#   year: YYYY
+
+#   tags: [keyword1, keyword2, keyword3]
+#   status: published
+#   featured: true
+
+peer_reviewed:
+- citation: "Hossain, M.J., Rahman, A., & Ahmed, S. (2024). Machine Learning Approaches for Early Detection of Neurological Disorders: A Comprehensive Review. Nature Machine Intelligence, 6(2), 145-162."
+  year: 2024
+  tags: [machine learning, neuroepidemiology, early detection, biomarkers]
+  status: published
+  featured: true
+
+- citation: "Hossain, M.J., Chen, L., Kim, H., & Patel, R. (2023). Multi-omics Integration for Cancer Biomarker Discovery: A Systems Biology Approach. Cell Reports Methods, 3(8), 100528."
+  year: 2023
+  tags: [multi-omics, cancer research, biomarkers, systems biology]
+  status: published
+  featured: true
+
+- citation: "Rahman, T., Hossain, M.J., & Martinez, C. (2023). Bioinformatics Pipeline for Large-Scale Genomic Data Analysis in Population Health Studies. Bioinformatics, 39(12), 2105-2113."
+  year: 2023
+  tags: [bioinformatics, genomics, population health, data analysis]
+  status: published
+  featured: false
+
+under_review:
+- citation: "Hossain, M.J., Thompson, K., & Rodriguez, M. (2024). Deep Learning Framework for Personalized Medicine in Oncology [Under Review]. Nature Medicine."
+  year: 2024
+  tags: [deep learning, personalized medicine, oncology, precision therapy]
+  status: under review
+  featured: true
+
+working_papers:
+- citation: "Hossain, M.J., Garcia, P., & Liu, X. (2024). Novel Computational Methods for Drug Repositioning in Rare Diseases [In Preparation]."
+  year: 2024
+  tags: [drug repositioning, rare diseases, computational methods, pharmacoinformatics]
+  status: in preparation
+  featured: false
+
+conference:
+- citation: "Hossain, M.J., & Kumar, S. (2023). AI-Powered Biomarker Discovery in Neurodegenerative Diseases. Presented at International Conference on Bioinformatics and Computational Biology (ICBCB), Boston, MA."
+  year: 2023
+  tags: [AI, biomarker discovery, neurodegenerative diseases, conference presentation]
+  status: published
+  featured: false

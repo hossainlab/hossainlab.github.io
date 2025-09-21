@@ -7,5 +7,128 @@
   },
   "research/index.qmd": {
     "index.html": "ec251dd6"
+  },
+  "about_template.qmd": {
+    "about_template.html": "631844bd"
+  },
+  "blog/index.qmd": {
+    "index.html": "2eaadcd7"
+  },
+  "blog/multi-omics-data-integration/index.qmd": {
+    "index.html": "1fbb24b6"
+  },
+  "blog/welcome/index.qmd": {
+    "index.html": "129f51ce"
+  },
+  "cv/index.qmd": {
+    "index.html": "2cd8498b"
+  },
+  "dashboards.qmd": {
+    "dashboards.html": "0c769434"
+  },
+  "gallery.qmd": {
+    "gallery.html": "53167520"
+  },
+  "press/index.qmd": {
+    "index.html": "3745824c"
+  },
+  "projects/index.qmd": {
+    "index.html": "fd2786ba"
+  },
+  "publications/index.qmd": {
+    "index.html": "7b9f5e2d"
+  },
+  "publications/orals.qmd": {
+    "orals.html": "f90684fc"
+  },
+  "publications/peer-reviewed.qmd": {
+    "peer-reviewed.html": "b2769537"
+  },
+  "publications/posters.qmd": {
+    "posters.html": "1b302c9f"
+  },
+  "publications/submitted-papers.qmd": {
+    "submitted-papers.html": "d1a22a8e"
+  },
+  "publications/under-review.qmd": {
+    "under-review.html": "069addd8"
+  },
+  "publications/working-papers.qmd": {
+    "working-papers.html": "bb954e87"
+  },
+  "research/grants.qmd": {
+    "grants.html": "e3cea589"
+  },
+  "research/interests.qmd": {
+    "interests.html": "35264a9b"
+  },
+  "talks/index.qmd": {
+    "index.html": "30219018"
+  },
+  "talks/mastering-biomedical-data-management/index.qmd": {
+    "index.html": "b1bffb30"
+  },
+  "talks/state-the-art-of-microbial-genome-analysi/index.qmd": {
+    "index.html": "5f0d5a68"
+  },
+  "talks/undergraduate-research-importance-benefits-and-challenges/index.qmd": {
+    "index.html": "0ba501e0"
+  },
+  "teaching/applied-machine-learning-for-healthcare/index.qmd": {
+    "index.html": "55a357f5"
+  },
+  "teaching/bioinformatics-bootcamp/index.qmd": {
+    "index.html": "fe4c6e70"
+  },
+  "teaching/building-dashboard-with-r/index.qmd": {
+    "index.html": "41fa26f1"
+  },
+  "teaching/data-analysis-with-r/index.qmd": {
+    "index.html": "29075bc5"
+  },
+  "teaching/foundations-of-health-data-science/index.qmd": {
+    "index.html": "4ea29416"
+  },
+  "teaching/gtsummary-for-public-health/index.qmd": {
+    "index.html": "c2b9a495"
+  },
+  "teaching/index.qmd": {
+    "index.html": "902d3bf5"
+  },
+  "teaching/ml-for-bioinformatics/index.qmd": {
+    "index.html": "ee618e27"
+  },
+  "teaching/python-for-geospatial-health-data-science/index.qmd": {
+    "index.html": "229993f9"
+  },
+  "teaching/python-for-health-data-analysis/index.qmd": {
+    "index.html": "6b879c52"
+  },
+  "teaching/r-for-bioinformatics/index.qmd": {
+    "index.html": "eda68eaf"
+  },
+  "teaching/r-for-research/index.qmd": {
+    "index.html": "bf8acc1a"
+  },
+  "teaching/rna-seq-data-analysis-with-r/index.qmd": {
+    "index.html": "4cd51914"
+  },
+  "teaching/single-cell-seq-analysis-with-r/index.qmd": {
+    "index.html": "924876c9"
+  },
+  "teaching/spss/index.qmd": {
+    "index.html": "ea478e81"
+  },
+  "teaching/tcga-data-analysis-with-r/index.qmd": {
+    "index.html": "ee3695c8"
+  },
+  "use/index.qmd": {
+    "index.html": "2570e68a"
+  },
+  "CLAUDE.md": {
+    "CLAUDE.html": "ae5477b6"
+  },
+  "DEV-SETUP.md": {
+    "DEV-SETUP.html": "f5ce08e7"
   }
 }

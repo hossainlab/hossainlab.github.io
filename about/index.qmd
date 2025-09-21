@@ -6,17 +6,9 @@ toc: false
 comments: false
 ---
 
-::: {.about-hero-container}
-
-::: {.about-hero-section}
-# About <span class="hero-accent">Me</span>
-:::
-::: {.mission-quote-card}
-::: {.quote-content}
-*"My mission is to harness the transformative power of artificial intelligence to decode the complexities of biological systems, translating vast molecular datasets into actionable insights that can revolutionize healthcare and improve lives worldwide."*
-
-<div class="quote-signature">— Md. Jubayer Hossain</div>
-:::
+::: {.hero-section}
+# About
+A biomedical researcher specializing in neuroepidemiology, cancer epidemiology, and bioinformatics, dedicated to translating complex molecular data into actionable healthcare insights.
 :::
 
 ::: {.main-content}
@@ -129,15 +121,36 @@ Research Project: Antibiotic resistance gene profiling using bioinformatics appr
 :::
 :::
 
-::: {.connect-section}
-### Let's Connect
+<style>
+.hero-section {
+  text-align: center;
+  padding: 3rem 1rem;
+  margin-bottom: 2rem;
+}
 
-I'm always excited to collaborate on innovative research projects, mentor aspiring scientists, and explore new opportunities in computational biology and AI.
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
 
-**Contact:** [contact.jubayerhossain@gmail.com](mailto:contact.jubayerhossain@gmail.com)
-:::
+.hero-section p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
 
-:::
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
 
-:::
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+}
+</style>
 

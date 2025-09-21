@@ -1,0 +1,13 @@
+```{=html}
+<div class="conference-card{{#if award}} award{{/if}}">
+  {{#if award}}
+  <div class="conference-badge award">🏆 {{award}}</div>
+  {{/if}}
+  <div class="conference-content">
+    <h3>{{title}}</h3>
+    <p><strong>{{authors}}</strong></p>
+    <p><em>{{conference}}</em><br>
+    {{organization}}, {{date}}</p>
+  </div>
+</div>
+```

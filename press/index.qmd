@@ -1,26 +1,395 @@
 ---
 pagetitle: "Media Coverage | Jubayer Hossain"
-title: "Media Coverage"
-excerpt: "A list of selected talks of me"
-toc-location: right
+title: ""
 page-layout: full
+toc: false
+comments: false
 ---
+
+::: {.hero-section}
+# Media Coverage
 Explore the latest media highlights featuring me and my research group. Discover insightful coverage of their impactful research.
+:::
+
+::: {.main-content}
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+# Load required libraries
+library(yaml)
+
+# Read press data
+press_data <- yaml::read_yaml("../_data/press.yml")
+
+# Function to render media card
+render_media_card <- function(media) {
+  # Get category info
+  category_info <- press_data$categories[sapply(press_data$categories, function(x) x$name == media$category)][[1]]
+  category_color <- if(!is.null(category_info$color)) category_info$color else "#6366f1"
+  category_icon <- if(!is.null(category_info$icon)) category_info$icon else "📰"
+
+  # Get media type info
+  type_info <- press_data$media_types[sapply(press_data$media_types, function(x) x$name == media$type)][[1]]
+  type_icon <- if(!is.null(type_info$icon)) type_info$icon else "📰"
 
 
-### 1. **Parental Lack of Antibiotic Knowledge Imperils Child Health in Bangladesh: Study**  
-- **Description:** Provided commentary on our research findings about the risks posed by inadequate parental understanding of antibiotics on child health outcomes in Bangladesh.  
-- **Published by:** *The Business Standard*  
-- **Date:** 08 February 2024  
-- **Link:** [Read More](https://www.tbsnews.net/bangladesh/health/parental-lack-antibiotic-knowledge-imperils-child-health-bangladesh-study-789250)
+  # Create tags
+  tags_html <- ""
+  if (!is.null(media$tags) && length(media$tags) > 0) {
+    tags_list <- paste0('<span class="media-tag">', media$tags, '</span>', collapse = '')
+    tags_html <- paste0('<div class="tags-container">', tags_list, '</div>')
+  }
 
----
+  # Determine card class
+  card_class <- "media-card"
 
-### 2. **What the Rise in Self-Medication Tells Us About the Country’s Healthcare System**  
-- **Description:** Shared insights on the increase in self-medication practices in Bangladesh and what this trend reveals about gaps in the healthcare system.  
-- **Published by:** *The Business Standard*  
-- **Date:** 27 May 2024  
-- **Link:** [Read More](https://www.tbsnews.net/features/panorama/what-rise-self-medication-tells-us-about-countrys-healthcare-system-861146)  
+  return(paste0(
+    '<div class="', card_class, '">',
+    '<div class="media-header">',
+    '<div class="media-type" style="background-color: ', category_color, '15; color: ', category_color, ';">',
+    '<span class="type-icon">', type_icon, '</span>',
+    '<span class="type-name">', media$type, '</span>',
+    '</div>',
+    '<div class="media-date">', media$date, '</div>',
+    '</div>',
+    '<div class="media-content">',
+    '<h3 class="media-title">', media$title, '</h3>',
+    '<div class="media-publication">',
+    '<strong>', media$publication, '</strong>',
+    '<span class="media-category"> • ', media$category, '</span>',
+    '</div>',
+    '<p class="media-summary">', media$summary, '</p>',
+    tags_html,
+    '<div class="media-actions">',
+    '<a href="', media$link, '" class="media-btn" target="_blank">Read Article</a>',
+    '</div>',
+    '</div>',
+    '</div>'
+  ))
+}
+```
 
----
+## Recent Media Coverage
+
+```{r}
+#| echo: false
+#| results: asis
+
+# Sort media coverage by date (most recent first)
+sorted_media <- press_data$media_coverage[order(as.Date(sapply(press_data$media_coverage, function(x) x$date), format = "%d %B %Y"), decreasing = TRUE)]
+
+cat('<div class="media-container">')
+for (media in sorted_media) {
+  cat(render_media_card(media))
+}
+cat('</div>')
+```
+
+:::
+
+<style>
+/* ===== HERO SECTION (PRESERVED) ===== */
+.hero-section {
+  text-align: center;
+  padding: 3rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ===== MEDIA CONTAINER ===== */
+.media-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* ===== PROFESSIONAL MEDIA CARDS ===== */
+.media-card {
+  background: var(--bg-primary);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  position: relative;
+}
+
+.media-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+}
+
+.media-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-color: #d1d5db;
+}
+
+
+/* ===== MEDIA HEADER ===== */
+.media-header {
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.media-type {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1px solid currentColor;
+}
+
+.type-icon {
+  font-size: 1rem;
+}
+
+.media-date {
+  background: #374151;
+  color: white;
+  padding: 0.375rem 0.875rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(55, 65, 81, 0.2);
+}
+
+/* ===== MEDIA CONTENT ===== */
+.media-content {
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
+}
+
+.media-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 1rem 0;
+  line-height: 1.4;
+  letter-spacing: -0.025em;
+}
+
+.media-publication {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border-left: 4px solid #3b82f6;
+}
+
+.media-publication strong {
+  color: #1f2937;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.media-category {
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.media-summary {
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+/* ===== MEDIA TAGS ===== */
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.media-tag {
+  background: #f3f4f6;
+  color: #374151;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+}
+
+.media-tag:hover {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+/* ===== MEDIA ACTIONS ===== */
+.media-actions {
+  padding-top: 1rem;
+  border-top: 1px solid #f3f4f6;
+}
+
+.media-btn,
+a.media-btn,
+.media-btn * {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: #ffffff !important;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none !important;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+  text-shadow: none;
+}
+
+.media-btn:hover,
+a.media-btn:hover,
+.media-btn:hover * {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff !important;
+  text-decoration: none !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+}
+
+.media-btn:visited,
+a.media-btn:visited,
+.media-btn:visited * {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.media-btn:focus,
+a.media-btn:focus,
+.media-btn:focus * {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  outline: 2px solid #93c5fd;
+  outline-offset: 2px;
+}
+
+.media-btn::before {
+  content: "📰";
+  font-size: 0.875rem;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .media-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .media-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .media-title {
+    font-size: 1.125rem;
+  }
+
+  .media-actions {
+    text-align: center;
+  }
+
+  .media-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 0 0.75rem;
+  }
+
+  .media-card {
+    border-radius: 8px;
+  }
+
+  .media-header {
+    padding: 1rem 1rem 0 1rem;
+  }
+
+  .media-content {
+    padding: 0.75rem 1rem 1rem 1rem;
+  }
+
+  .media-publication {
+    padding: 0.5rem;
+  }
+
+  .media-title {
+    font-size: 1rem;
+  }
+}
+
+/* ===== LOADING ANIMATION ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.media-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.media-card:nth-child(1) { animation-delay: 0.1s; }
+.media-card:nth-child(2) { animation-delay: 0.2s; }
+.media-card:nth-child(3) { animation-delay: 0.3s; }
+.media-card:nth-child(4) { animation-delay: 0.4s; }
+.media-card:nth-child(5) { animation-delay: 0.5s; }
+</style>
 

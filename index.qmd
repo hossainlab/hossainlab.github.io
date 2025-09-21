@@ -1,5 +1,5 @@
 ---
-pagetitle: "Home | Jubayer Hossain"
+pagetitle: "Home"
 title: "Md. Jubayer Hossain"
 subtitle: "Researcher, Educator & Entrepreneur"
 page-layout: full
@@ -28,11 +28,11 @@ about:
 
 ## Bio
 
-I am the Founder and Chief Executive Officer of DeepBio Limited, and the Founder and Executive Director of CHIRAL Bangladesh, its dedicated research wing. I also serve as Faculty at the Center for Bioinformatics Learning Advancement and Systematics Training (cBLAST), University of Dhaka, and as a Visiting Researcher in the Department of Public Health, Daffodil International University. At Daffodil International University, I also teach in the Micro-Credential Academy as an Instructor for the course AI for Public Health.
+I am the Founder and Chief Executive Officer of [DeepBio Limited](https://deepbioltd.com/), and the Founder and Executive Director of [CHIRAL Bangladesh](https://chiralbd.org/), its dedicated research wing. I also serve as Faculty at the [Center for Bioinformatics Learning Advancement and Systematics Training (cBLAST), University of Dhaka](https://cblast.du.ac.bd/), and as a Visiting Researcher in the [Department of Public Health, Daffodil International University](https://daffodilvarsity.edu.bd/department/ph). At Daffodil International University, I also teach in the [Micro-Credential Academy](https://microcredentials.daffodilvarsity.edu.bd/) as an Instructor for the course AI for Public Health.
 
-As an educator, I hold the position of Lead Instructor and Organizer at the Training Unit of CHIRAL and DeepBio Limited. I also serve as Program Lead for the GSA Bioinformatics Internship, a collaborative initiative jointly organized by the Global Network of Bangladeshi Biotechnologists (GNOBB), ASI School of Life, and the Society for the Popularization of Science, Bangladesh (SPSB).
+As an educator, I am Lead Organizer and Instructor at the [Professional Training in Bioinformatics and Computational Biology](https://academy.deepbioltd.com/). I also serve as Program Lead for the [GSA Bioinformatics Internship](https://gsabioinfointernship.owlstown.net/), a collaborative initiative jointly organized by the Global Network of Bangladeshi Biotechnologists (GNOBB), ASI School of Life, and the Society for the Popularization of Science, Bangladesh (SPSB).
 
-I completed my Master of Science (2020) and Bachelor of Science (2019) in Microbiology from Jagannath University. My research focuses on applying artificial intelligence (AI) to health data—including multi-omics datasets (genomics, transcriptomics, proteomics) and neuroimaging—to identify clinically actionable biomarkers and build predictive models for the early diagnosis and treatment of neurological disorders and cancer. I am also passionate about visualizing complex data and models to improve biological interpretation and support clinical applications.
+I completed my Master of Science (2020) and Bachelor of Science (2019) in Microbiology from [Jagannath University](https://jnu.ac.bd/department/portal/microbiology). My research focuses on applying artificial intelligence (AI) to health data—including multi-omics datasets (genomics, transcriptomics, proteomics) and neuroimaging—to identify clinically actionable biomarkers and build predictive models for the early diagnosis and treatment of neurological disorders and cancer. I am also passionate about visualizing complex data and models to improve biological interpretation and support clinical applications.
 
 Please [contact me](mailto:contact.jubayerhossain@gmail.com) to discuss potential opportunities.
 

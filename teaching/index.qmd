@@ -1,153 +1,223 @@
 ---
 pagetitle: "Teaching | Jubayer Hossain"
-excerpt: "A list of selected courses of me"
 page-layout: full
-title-block-banner: false
-code-link: true
 comments: false
 ---
 
-## Upcoming Workshops 
-
-::: {.grid}
-::: {.g-col-3}
-![](img/logo.png)
-:::
-::: {.g-col-9}
-Welcome to the [Statistical Analysis with R for Research](https://chiraltraining.github.io/SAR/index.html) Workshop! This 1-day intensive program is designed to equip researchers, students, and professionals with essential R programming skills for statistical analysis. Whether you are new to R or looking to enhance your skills, this workshop offers a hands-on experience to help you confidently analyze and interpret data for research purposes.
-:::
+::: {.hero-section}
+# Teaching
+A collection of courses, workshops, and educational resources.
 :::
 
+::: {.main-content}
 
-# Courses Taught
-As a Lead Organizer and Instructor at CHIRAL, Dhaka, Bangladesh, I have had the privilege of designing and delivering specialized courses in several key areas, including health research, health data science, bioinformatics, and artificial intelligence (AI). 
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
 
-# Research Methodology and Communication
+# Load required libraries
+library(yaml)
 
-| **Course Title** | **Syllabus** | **Learning Outcomes** | **Target Audience** |
-|--------------------------------------------|--------------|-----------------------|---------------------|
-| Ethics in Research                         | [Syllabus](https://docs.google.com/spreadsheets/d/1FFVJ6LHVrOKuf3_RwWsainCMb79a4RA0BrRk0BXAVl4/edit?usp=sharing) | Understand ethical principles, guidelines, and regulations in research | Graduate students, researchers |
-| Fundamentals of Health Research            | [Syllabus](https://docs.google.com/spreadsheets/d/1TSrwS7tk_OSfAVnpNp9y406IUSc1XRpoAWteAI7QJPQ/edit?usp=sharing) | Gain foundational knowledge in health research design, methods, and analysis | Public health students, early-career researchers |
-| Mastering Biomedical Data Management       | [Syllabus](https://docs.google.com/spreadsheets/d/1y435AFSICgb1CyILNOF8oJtdnNlDGutYMI2AdrB2DUs/edit?usp=sharing) | Learn data management strategies, from collection to archiving in biomedical research | Biomedical researchers, data managers |
-| Public Health Writing and Communication Skills | [Syllabus](https://docs.google.com/spreadsheets/d/1DW3a9MWiwWWQapry1Z9CwYJV8SxWgVN3Ik1CjMRVo9o/edit?usp=sharing) | Develop effective writing and communication skills for public health research | Public health students, health communication professionals |
+# Read teaching data
+teaching_data <- yaml::read_yaml("../_data/teaching.yml")
 
+# Function to render course card
+render_course_card <- function(course) {
+  # Get course type
+  course_type <- if(!is.null(course$type)) course$type else "Course"
 
-# Advanced R & Data Analytics for Biomedical Research
-| **Course Title** | **Syllabus** | **Learning Outcomes** | **Target Audience** |
-|--------------------------------------------------------|--------------|-----------------------|---------------------|
-| R for Research                                        | [Syllabus](https://chiraltraining.github.io/RforResearch/) | Master R for statistical analysis and data visualization in biomedical research | Graduate students, bioinformaticians |
-| Clinical Reporting using R                            | [Syllabus](https://chiraltraining.github.io/ClinicalReportingwithR/) | Learn clinical data reporting techniques using R, including statistical analysis and reporting formats | Healthcare professionals, clinical researchers |
-| Building Dashboard with R                             | [Syllabus](https://chiraltraining.github.io/BuildingDashboardwithR/) | Gain expertise in developing interactive dashboards with R for biomedical data visualization | Data scientists, biomedical researchers |
-| Research Data Analysis with SPSS                      | [Syllabus](https://docs.google.com/spreadsheets/d/18ggqa2uzAqNifCtgs5_q-DWGfl4HiBQtHSi_xp-YCPU/edit?usp=sharing) | Master SPSS for analyzing biomedical research data, focusing on advanced statistical methods | Graduate students, public health researchers |
+  # Create CSS class for course type
+  type_class <- tolower(course_type)
 
+  # Create links section
+  links <- ""
+  if (!is.null(course$syllabus)) {
+    links <- paste0(links, '<a href="', course$syllabus, '" target="_blank" class="course-link">Syllabus</a>')
+  }
+  if (!is.null(course$slides)) {
+    links <- paste0(links, '<a href="', course$slides, '" target="_blank" class="course-link">Slides</a>')
+  }
+  if (!is.null(course$code_repo)) {
+    links <- paste0(links, '<a href="', course$code_repo, '" target="_blank" class="course-link">Code</a>')
+  }
 
+  paste0(
+    '<div class="course-card">',
+    '<div class="course-header">',
+    '<span class="course-code">', course$course_id, '</span>',
+    '<span class="course-type ', type_class, '">', course_type, '</span>',
+    '</div>',
+    '<h3 class="course-title">', course$title, '</h3>',
+    '<p class="course-description">', course$learning_outcomes, '</p>',
+    '<div class="course-links">',
+    links,
+    '</div>',
+    '</div>'
+  )
+}
+```
 
-# Biomedical Data Science & AI Applications in Health
-| **Course Title** | **Syllabus** | **Learning Outcomes** | **Target Audience** |
-|--------------------------------------------------------|--------------|-----------------------|---------------------|
-| Ethics and Governance of Artificial Intelligence for Health | [Syllabus](https://docs.google.com/spreadsheets/d/14RrAx7CEdLzX4qiZGMrWq8Go4s8hC9K-doEQ94EnNUQ/edit?usp=sharing) | Understand the ethical and governance frameworks for AI in healthcare, including privacy, security, and accountability | Graduate students, AI researchers, healthcare professionals |
-| Foundations of Health Data Science                      | [Syllabus](https://docs.google.com/spreadsheets/d/1cTfj2-WQCysFZhlDZjAC6Fdlu230m3YamdlkUG2O5Pw/edit?usp=sharing) | Learn the fundamentals of health data science, including data collection, preprocessing, and basic analytics | Public health students, aspiring data scientists |
-| AI for Public Health                                   | [Syllabus](https://docs.google.com/spreadsheets/d/1djeHlP5mGIAX8ejtq-txRMRd4zw9XvTjvr-pXFoCJS8/edit?usp=sharing) | Apply AI techniques to public health challenges, including disease modeling, surveillance, and policy analysis | Public health researchers, AI practitioners |
-| AI for Climate Change                                  | [Syllabus](https://docs.google.com/spreadsheets/d/17ZLCUsOaZ-QmVX5o4nnM5_v66SCxHI6EQmd1SD3tJxQ/edit?usp=sharing) | Learn to use AI models to analyze and predict the impacts of climate change on public health | Environmental scientists, public health professionals |
-| AI for Disaster Management and Public Health Emergency | [Syllabus](https://docs.google.com/spreadsheets/d/1r0yfgMhtJiSPeBBPG3WVCCjSLhqlDF9WaVfyAG0L2hk/edit?usp=sharing) | Use AI to support disaster management, emergency response, and public health resilience during crises | Public health professionals, disaster management experts |
-| Applied Machine Learning for Healthcare                | [Syllabus](https://docs.google.com/spreadsheets/d/1TysxfuaLRKwiEb_oMnTwprPa-v2wH-dGPJGhT_-Fk2o/edit?usp=sharing) | Gain hands-on experience applying machine learning techniques to healthcare datasets for disease prediction, diagnosis, and treatment optimization | Healthcare data scientists, researchers, machine learning enthusiasts |
+## Courses
 
+```{r}
+#| echo: false
+#| results: asis
 
-# Bioinformatics & Machine Learning in Healthcare
-| **Course Title** | **Syllabus** | **Learning Outcomes** | **Target Audience** |
-|------------------------------------------------------|--------------|-----------------------|---------------------|
-| Bioinformatics BootCamp                              | [Syllabus](https://docs.google.com/spreadsheets/d/1rPrnxYFS4LobvvhM7QDzhTjOLyg5fxtIZkg4LDKM4d4/edit?usp=sharing) | Learn basic bioinformatics tools, data processing techniques | Graduate students, researchers new to bioinformatics |
-| Cancer Bioinformatics                                | [Syllabus](https://docs.google.com/spreadsheets/d/1RgOXuXoEtrtvTnjsGs_A0pTLX4BbFAJXPT2V6sflGLw/edit?usp=sharing) | Understand cancer genomics, variant calling, and analysis workflows | Graduate students in cancer research |
-| R for Bioinformatics                                 | [Syllabus](https://chiraltraining.github.io/RforBioinformatics/) | Gain proficiency in using R for bioinformatics tasks, such as sequence analysis | Bioinformatics researchers, R beginners |
-| R for Cancer Bioinformatics                          | [Syllabus](https://bigbiolab.github.io/TCGADataAnalysiswithR/) | Apply R tools for cancer bioinformatics, focusing on mutation analysis and pathways | Cancer researchers, R users |
-| Machine Learning for Bioinformatics                  | [Syllabus](#) | Implement machine learning algorithms for omics data analysis | Data scientists, bioinformaticians |
-| Bulk RNA-Seq Analysis with R                         | [Syllabus](https://docs.google.com/spreadsheets/d/16gVaZGDeoGKixYR1Oa-Zqu03c2cIMAyru9Kx8ThqYLc/edit?usp=sharing) | Analyze bulk RNA-Seq data using R, including differential expression and visualization | Graduate students in genomics, bioinformaticians |
-| Single Cell RNA-Seq Analysis with Python             | [Syllabus](https://docs.google.com/spreadsheets/d/19MdBC6pwi5P6M4yAjtq02VKN2NgnqLD-5gzut5XVths/edit?usp=sharing) | Analyze single-cell RNA-Seq data using Python, focusing on clustering and trajectory analysis | Researchers working with single-cell data |
-| AI for Bioinformatics                                | [Syllabus](https://docs.google.com/spreadsheets/d/1C56Se3WX5UFKbgR9GN0tIt6BwpVC6p1RCicjDmshPzk/edit?usp=sharing) | Apply AI techniques (e.g., deep learning) to bioinformatics problems | Advanced researchers, AI practitioners in life sciences |
+cat('<div class="courses-container">')
 
+# Render all courses
+for (course in teaching_data$courses) {
+  cat(render_course_card(course))
+}
 
-# YouTube Contents 
-
-## Machine Learning for Bioinformatics
-
-::: {layout-ncol=2}
-{{< video https://youtu.be/GHhojes3r1I?feature=shared >}}
-
-{{< video https://youtu.be/SB3iAEuea1g?feature=shared >}}
-
-{{< video https://youtu.be/HIXa9n1eWIM?feature=shared >}}
-
-{{< video https://youtu.be/0x6peaQWCME?feature=shared >}}
-
-{{< video https://youtu.be/hKoYa2lr5hI?feature=shared >}}
-
-{{< video https://youtu.be/RtCbHy6E5Ww?feature=shared >}}
-
-{{< video https://youtu.be/6wdDKmWgLBg?feature=shared >}}
-
-{{< video https://youtu.be/Cx2I8IDdVNI?feature=shared >}}
-
-{{< video https://youtu.be/uF16MEcOygU?feature=shared >}}
-
-{{< video https://youtu.be/Vjk4YE3d1WM?feature=shared >}}
+cat('</div>')
+```
 
 :::
 
+<style>
+.hero-section {
+  text-align: center;
+  padding: 3rem 1rem;
+  margin-bottom: 2rem;
+}
 
-## Cancer Bioinformatics 
-::: {layout-ncol=2}
-{{< video https://youtu.be/D6jEeuxZDGU?si=1gL22eVp2oRgAlsL >}}
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
 
-{{< video https://youtu.be/tdrE9vBv5_M?si=RQttOuETqT-Nk5UY >}}
+.hero-section p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
 
-{{< video https://youtu.be/Kwf_zJ_N_Mo?si=bjLbPCKlAgSOS730 >}}
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
 
-{{< video https://youtu.be/xaql1cXTn0A?si=auyf0Wal1ysf_OYL >}}
+.courses-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
 
-:::
+.course-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
 
+.course-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow-light);
+  border-color: var(--primary-color);
+}
 
-## R for Research 
+.course-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
 
-::: {layout-ncol=2}
-{{< video https://youtu.be/WiboyIkAFqo?si=MXq8fSH2Ykf93Ome >}}
+.course-code {
+  background: #3b82f6;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
 
-{{< video https://youtu.be/Zb_bgEcW9gk?si=CET9jGx2SdgTfAK8 >}}
+.course-type {
+  background: var(--bg-muted);
+  color: var(--text-secondary);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  border: 1px solid var(--border-light);
+}
 
-{{< video https://youtu.be/lLNEfn3eLY8?si=_H_Vwu-uJ6FOFtfw >}}
+.course-type.workshop {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  border: none;
+}
 
-{{< video https://youtu.be/g9BhM5LuXcE?si=JqzA0HBsekbnMxpt >}}
+.course-type.seminar {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+  border: none;
+}
 
-{{< video https://youtu.be/PDPmsgo82hE?si=osYZpX1woOMhA5eJ >}}
+.course-type.webinar {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  color: white;
+  border: none;
+}
 
-{{< video https://youtu.be/DBESvQjhslw?si=6Ve9LW-jX-s1otvn >}}
+.course-title {
+  font-size: 1.25rem;
+  margin: 0 0 1rem 0;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
 
-{{< video https://youtu.be/Lu7utop2QJA?si=vqTbArNVbD0WRMsb >}}
+.course-description {
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0 0 1.5rem 0;
+}
 
-{{< video https://youtu.be/JcaGBHQGAWs?si=v-pqFI_bxi3RUAjF >}}
+.course-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
 
-:::
+.course-link {
+  background: #6366f1;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  margin-right: 0.5rem;
+}
 
+.course-link:hover {
+  background: #4f46e5;
+  color: white;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
 
-## RNA-Seq Analysis with R
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
 
-::: {layout-ncol=2}
-{{< video https://youtu.be/tRNGUINrpls?si=saV2_DuMnLuS14RS >}}
+  .courses-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 
-{{< video https://youtu.be/hiDo9JCkdH8?si=4u9t-JF_jUi5K--T >}}
-
-{{< video https://youtu.be/WgH-6gDGoyc?si=pWA-3jRcQQFiJarr >}}
-
-{{< video https://youtu.be/Eps9BtmYRBs?si=b7VM9KGxrQvqlk3M >}}
-
-{{< video https://youtu.be/bdWws0gntMI?si=kEL_SDsSlq44PrjL >}}
-
-{{< video https://youtu.be/QuobIs-VI4E?si=oGmoCrntn7cTyuoE >}}
-
-{{< video https://youtu.be/8tQ0vnXnAIc?si=7Q_DJIOg33SoIWnB >}}
-
-
-:::
-
-
-
+  .course-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+}
+</style>

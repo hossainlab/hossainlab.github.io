@@ -8,7 +8,13 @@
       "Bash(npm run dev:*)",
       "Bash(quarto clean:*)",
       "Bash(npm run clean:*)",
-      "Bash(quarto render:*)"
+      "Bash(quarto render:*)",
+      "Bash(npm run build:*)",
+      "Bash(pip install:*)",
+      "Bash(python:*)",
+      "Bash(git checkout:*)",
+      "Bash(quarto preview:*)",
+      "Bash(npm run render:fast:*)"
     ],
     "deny": [],
     "ask": []

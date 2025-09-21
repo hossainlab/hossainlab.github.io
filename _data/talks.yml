@@ -1,0 +1,102 @@
+talks:
+  - title: "Mastering Biomedical Data Management"
+    type: "Invited Talk"
+    year: 2024
+    date: "March 15, 2024"
+    venue: "IFMSA Bangladesh Annual Conference"
+    location: "Dhaka, Bangladesh"
+    description: "Comprehensive overview of modern approaches to biomedical data management, including best practices for data collection, storage, and analysis in healthcare research."
+    topics:
+      - "Data Management Strategies"
+      - "Healthcare Data Standards"
+      - "Privacy and Security"
+      - "Reproducible Research"
+    slides: "talks/mastering-biomedical-data-management/"
+    video: null
+    featured: true
+    category: "Data Science"
+
+  - title: "State of the Art in Microbial Genome Analysis"
+    type: "Academic Talk"
+    year: 2022
+    date: "September 20, 2022"
+    venue: "Department of Microbiology, Jagannath University"
+    location: "Dhaka, Bangladesh"
+    description: "Latest advances in computational methods for microbial genome analysis, including assembly algorithms, annotation tools, and comparative genomics approaches."
+    topics:
+      - "Genome Assembly"
+      - "Functional Annotation"
+      - "Comparative Genomics"
+      - "Phylogenetic Analysis"
+    slides: "talks/state-the-art-of-microbial-genome-analysi/"
+    video: null
+    featured: true
+    category: "Bioinformatics"
+
+  - title: "Undergraduate Research: Importance, Benefits, and Challenges"
+    type: "Invited Talk"
+    year: 2022
+    date: "July 10, 2022"
+    venue: "CHIRAL Bangladesh Workshop"
+    location: "Dhaka, Bangladesh"
+    description: "Exploring the critical role of undergraduate research in academic development, discussing benefits for students and institutions, and addressing common challenges in implementation."
+    topics:
+      - "Research Methodology"
+      - "Student Mentorship"
+      - "Academic Development"
+      - "Career Preparation"
+    slides: "talks/undergraduate-research-importance-benefits-and-challenges/"
+    video: null
+    featured: false
+    category: "Education"
+
+  - title: "Machine Learning Applications in Epidemiological Research"
+    type: "Conference Presentation"
+    year: 2023
+    date: "November 8, 2023"
+    venue: "International Conference on Public Health"
+    location: "Dhaka, Bangladesh"
+    description: "Exploring the integration of machine learning techniques in epidemiological studies, with focus on disease prediction models and population health analytics."
+    topics:
+      - "Predictive Modeling"
+      - "Population Health"
+      - "Disease Surveillance"
+      - "AI in Healthcare"
+    slides: null
+    video: null
+    featured: false
+    category: "Machine Learning"
+
+  - title: "Open Science and Reproducible Research in Bioinformatics"
+    type: "Workshop"
+    year: 2023
+    date: "August 25, 2023"
+    venue: "Bangladesh Bioinformatics Society"
+    location: "Dhaka, Bangladesh"
+    description: "Hands-on workshop on implementing open science practices and ensuring reproducibility in bioinformatics research workflows."
+    topics:
+      - "Open Science Principles"
+      - "Reproducible Workflows"
+      - "Version Control"
+      - "Data Sharing"
+    slides: null
+    video: null
+    featured: false
+    category: "Research Methods"
+
+categories:
+  - name: "Data Science"
+    color: "#3b82f6"
+    icon: "📊"
+  - name: "Bioinformatics"
+    color: "#10b981"
+    icon: "🧬"
+  - name: "Education"
+    color: "#f59e0b"
+    icon: "🎓"
+  - name: "Machine Learning"
+    color: "#8b5cf6"
+    icon: "🤖"
+  - name: "Research Methods"
+    color: "#ef4444"
+    icon: "🔬"

@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "about/index.html",
-    "href": "about/index.html",
-    "title": "About Me",
-    "section": "",
-    "text": "“My mission is to harness the transformative power of artificial intelligence to decode the complexities of biological systems, translating vast molecular datasets into actionable insights that can revolutionize healthcare and improve lives worldwide.”\n\n— Md. Jubayer Hossain\n\n\n\n\n\nProfessional Journey\n\n\n\n\n\n\nFounder & Chief Executive Officer DeepBio Limited 2022 - Present\nLeading biotechnology company focused on AI-driven drug discovery and personalized medicine solutions. Spearheading research initiatives in computational biology and developing cutting-edge bioinformatics tools for the pharmaceutical industry.\n\n\n\n\n\n\n\nFounder & Executive Director CHIRAL Bangladesh 2021 - Present\nNon-profit research organization dedicated to advancing biomedical research and training in Bangladesh. Establishing collaborative networks and educational programs to build local capacity in computational biology and bioinformatics.\n\n\n\n\n\n\n\nFaculty Center for Bioinformatics Learning Advancement and Systematics Training (cBLAST), University of Dhaka 2020 - Present\nContributing to bioinformatics education and research capacity building. Developing curriculum and teaching computational approaches to biological problems, mentoring students in genomics and data analysis.\n\n\n\n\n\n\n\nVisiting Researcher Department of Public Health, Daffodil International University 2025 - Present\nConducting interdisciplinary research at the intersection of public health and computational biology. Collaborating on projects involving health data analytics and epidemiological modeling.\n\n\n\n\n\n\n\nInstructor Daffodil International University (Micro-credential Academy, AI for Public Health) 2022 - Present\nDesigning and delivering specialized courses on artificial intelligence applications in public health. Teaching machine learning techniques for health data analysis and developing micro-credential programs.\n\n\n\n\n\n\n\nProgram Lead GSA Bioinformatics Internship 2021 - Present\nLeading comprehensive bioinformatics internship programs for students and early-career researchers. Developing hands-on training modules covering genomics, proteomics, and computational biology tools.\n\n\n\n\n\nEducation\n\n\n\n\n\n\nMaster of Science in Microbiology Jagannath University, Dhaka 2020\nResearch Focus: Chikungunya outbreak investigation and infectious disease epidemiology. Conducted comprehensive field studies and laboratory analysis to understand disease transmission patterns and develop prevention strategies.\n\n\n\n\n\n\n\nBachelor of Science in Microbiology Jagannath University, Dhaka 2019\nResearch Project: Antibiotic resistance gene profiling using bioinformatics approaches. Applied computational methods to analyze bacterial genomes and identify resistance mechanisms in pathogenic microorganisms.\n\n\n\n\n\nLet’s Connect\nI’m always excited to collaborate on innovative research projects, mentor aspiring scientists, and explore new opportunities in computational biology and AI.\nContact: contact.jubayerhossain@gmail.com"
-  },
-  {
     "objectID": "DEV-SETUP.html",
     "href": "DEV-SETUP.html",
     "title": "Development Setup - Auto-Reload System",
@@ -182,375 +175,74 @@
     "text": "Teaching Tools\n\nBioicons - a collection of free drawings and diagrams on biological topics, which can be used in teaching (or research) presentations.\nlearnr - R package that allows development of interactive web-based R tutorials.\nFeedback at scale - tutorial for using learnr and gradethis as teaching tools.\nTeaching Statistics and Data Science Online - materials for several teacher workshops taught by Mine Çetinkaya-Rundel."
   },
   {
-    "objectID": "teaching/spss/index.html",
-    "href": "teaching/spss/index.html",
-    "title": "Research Data Analysis with SPSS",
+    "objectID": "talks/undergraduate-research-importance-benefits-and-challenges/index.html",
+    "href": "talks/undergraduate-research-importance-benefits-and-challenges/index.html",
+    "title": "Undergraduate Research - Importance, Benefits, and Challenges",
     "section": "",
-    "text": "The Research Data Analysis with SPSS course is tailored for researchers, analysts, and students who want to acquire a strong foundation in using SPSS (Statistical Package for the Social Sciences) for conducting data analysis in research projects. The course covers a range of statistical techniques, data manipulation, and visualization tools within the SPSS environment. Participants will learn how to effectively prepare, analyze, and interpret research data, enabling evidence-based decision-making."
+    "text": "The Undergraduate Research Training Program(URTP) provides intermediate-level biomedical research training for undergraduates in a supportive environment with supplement educational activities. Furthermore, this course is designed to enhance the undergraduate research experience by focusing on critical communication skills for success in research and broadly transferable professional skills. Students will become part of a community of scholars in health sciences. The course is suitable for students beginning the first semester of undergraduate studies and completing their second or"
   },
   {
-    "objectID": "teaching/spss/index.html#course-description",
-    "href": "teaching/spss/index.html#course-description",
-    "title": "Research Data Analysis with SPSS",
+    "objectID": "talks/mastering-biomedical-data-management/index.html",
+    "href": "talks/mastering-biomedical-data-management/index.html",
+    "title": "Mastering Biomedical Data Management",
     "section": "",
-    "text": "The Research Data Analysis with SPSS course is tailored for researchers, analysts, and students who want to acquire a strong foundation in using SPSS (Statistical Package for the Social Sciences) for conducting data analysis in research projects. The course covers a range of statistical techniques, data manipulation, and visualization tools within the SPSS environment. Participants will learn how to effectively prepare, analyze, and interpret research data, enabling evidence-based decision-making."
-  },
-  {
-    "objectID": "teaching/spss/index.html#learning-objectives",
-    "href": "teaching/spss/index.html#learning-objectives",
-    "title": "Research Data Analysis with SPSS",
-    "section": "Learning Objectives",
-    "text": "Learning Objectives\nBy the end of the Research Data Analysis with SPSS course, participants will be able to:\n\nFamiliarize with the SPSS interface, tools, and data management features.\nUnderstand the role of SPSS in research data analysis across various fields.\nImport data from different sources (e.g., Excel, CSV) into SPSS.\nHandle missing data, outliers, and data inconsistencies.\nClean and prepare data for analysis.\nCalculate and interpret descriptive statistics, including measures of central tendency and dispersion.\nExploratory Data Analysis\nParametric Tests\nNon-Parametric Tests\nCorrelation and Regression Analysis\nCategorical Data Analysis\nMultivariate Analysis Techniques\nData Visualization in SPSS\nInterpreting and Presenting Results\nBest Practices and Ethical Considerations\n\nProgram Website\n\nApply to the Program"
-  },
-  {
-    "objectID": "teaching/rna-seq-data-analysis-with-r/index.html",
-    "href": "teaching/rna-seq-data-analysis-with-r/index.html",
-    "title": "RNA-seq Data Aanalysis with R",
-    "section": "",
-    "text": "The RNA-seq Data Analysis with R course is designed to provide participants with the knowledge and skills needed to effectively analyze and interpret RNA sequencing (RNA-seq) data using the R programming language. Participants will learn the entire workflow, from raw data preprocessing to differential gene expression analysis and visualization. This hands-on course is suitable for researchers, biologists, and bioinformaticians interested in unlocking insights from gene expression data."
-  },
-  {
-    "objectID": "teaching/rna-seq-data-analysis-with-r/index.html#course-description",
-    "href": "teaching/rna-seq-data-analysis-with-r/index.html#course-description",
-    "title": "RNA-seq Data Aanalysis with R",
-    "section": "",
-    "text": "The RNA-seq Data Analysis with R course is designed to provide participants with the knowledge and skills needed to effectively analyze and interpret RNA sequencing (RNA-seq) data using the R programming language. Participants will learn the entire workflow, from raw data preprocessing to differential gene expression analysis and visualization. This hands-on course is suitable for researchers, biologists, and bioinformaticians interested in unlocking insights from gene expression data."
-  },
-  {
-    "objectID": "teaching/rna-seq-data-analysis-with-r/index.html#learning-objectives",
-    "href": "teaching/rna-seq-data-analysis-with-r/index.html#learning-objectives",
-    "title": "RNA-seq Data Aanalysis with R",
-    "section": "Learning Objectives",
-    "text": "Learning Objectives\n\nUnderstand the principles of RNA-seq technology and its applications in gene expression analysis.\nRecognize the steps involved in the RNA-seq workflow, from sample preparation to data analysis.\nPerform quality control assessments on raw RNA-seq data.\nTrim, filter, and preprocess raw reads to ensure data quality.\nAssess the impact of sequencing quality on downstream analyses.\nPerform differential expression analysis to identify genes with significant expression changes between conditions.\nApply statistical tests (e.g., DESeq2, edgeR) to assess differential expression.\nInterpret the results in terms of fold changes and adjusted p-values.\n\nProgram Website\n\nApply to the Program"
-  },
-  {
-    "objectID": "teaching/r-for-bioinformatics/index.html",
-    "href": "teaching/r-for-bioinformatics/index.html",
-    "title": "R for Bioinformatics",
-    "section": "",
-    "text": "Welcome to the exciting world of bioinformatics! In this course, we will explore the application of the R programming language in the field of bioinformatics. Whether you are a biologist, a computer scientist, or simply someone interested in the intersection of biology and programming, this book is designed to help you get started with using R for bioinformatics.\nBioinformatics combines biology, computer science, statistics, and math to understand complex biological processes. R is a powerful programming language widely used in bioinformatics for data analysis, visualization, and modeling. It has a rich set of packages and libraries for processing biological data.\nThis course assumes no prior knowledge of R programming, but assumes basic understanding of statistics and bioinformatics. We’ll cover data manipulation, visualization, statistics, and common bioinformatics techniques.\nRemember, learning a new language and field takes time and practice. Stay persistent, ask questions, and engage actively with the material. Let’s embark on this exciting journey into bioinformatics with R. By the end, you’ll have the skills to explore and contribute to bioinformatics research.\nEnjoy your learning experience, and good luck!"
-  },
-  {
-    "objectID": "teaching/r-for-bioinformatics/index.html#overview",
-    "href": "teaching/r-for-bioinformatics/index.html#overview",
-    "title": "R for Bioinformatics",
-    "section": "",
-    "text": "Welcome to the exciting world of bioinformatics! In this course, we will explore the application of the R programming language in the field of bioinformatics. Whether you are a biologist, a computer scientist, or simply someone interested in the intersection of biology and programming, this book is designed to help you get started with using R for bioinformatics.\nBioinformatics combines biology, computer science, statistics, and math to understand complex biological processes. R is a powerful programming language widely used in bioinformatics for data analysis, visualization, and modeling. It has a rich set of packages and libraries for processing biological data.\nThis course assumes no prior knowledge of R programming, but assumes basic understanding of statistics and bioinformatics. We’ll cover data manipulation, visualization, statistics, and common bioinformatics techniques.\nRemember, learning a new language and field takes time and practice. Stay persistent, ask questions, and engage actively with the material. Let’s embark on this exciting journey into bioinformatics with R. By the end, you’ll have the skills to explore and contribute to bioinformatics research.\nEnjoy your learning experience, and good luck!"
-  },
-  {
-    "objectID": "teaching/r-for-bioinformatics/index.html#learning-objectives",
-    "href": "teaching/r-for-bioinformatics/index.html#learning-objectives",
-    "title": "R for Bioinformatics",
-    "section": "Learning Objectives",
-    "text": "Learning Objectives\n\nUnderstand the fundamentals of bioinformatics and its application in biological research.\nGain a solid foundation in R programming, including data structures, control flow, and functions.\nLearn data manipulation techniques specific to bioinformatics, such as working with DNA sequences and protein structures.\nGain hands-on experience by working with real-world bioinformatics datasets and applying R to extract valuable information.\nUnderstand the importance of reproducibility and best practices in bioinformatics research using R.\nFeel confident in applying R for basic bioinformatics tasks and be ready to explore more advanced topics in the field.\n\nProgram Website\n\nApply to the Program"
-  },
-  {
-    "objectID": "teaching/python-for-geospatial-health-data-science/index.html",
-    "href": "teaching/python-for-geospatial-health-data-science/index.html",
-    "title": "Python for Geospatial Health Data Science (PY4GHDS)",
-    "section": "",
-    "text": "The Python for Geospatial Health Data Science (PY4GHDS) course is designed to provide an introduction to using Python for analyzing and visualizing geospatial health data. The course covers the basics of Python programming, geospatial data processing, and statistical analysis of health data.\nThroughout the course, students will have the opportunity to work with real-world health and geospatial data to build their skills in Python programming and data analysis. By the end of the course, students will be able to use Python to perform geospatial analysis and statistical analysis of health data, and to communicate their findings through data visualization."
-  },
-  {
-    "objectID": "teaching/python-for-geospatial-health-data-science/index.html#overview",
-    "href": "teaching/python-for-geospatial-health-data-science/index.html#overview",
-    "title": "Python for Geospatial Health Data Science (PY4GHDS)",
-    "section": "",
-    "text": "The Python for Geospatial Health Data Science (PY4GHDS) course is designed to provide an introduction to using Python for analyzing and visualizing geospatial health data. The course covers the basics of Python programming, geospatial data processing, and statistical analysis of health data.\nThroughout the course, students will have the opportunity to work with real-world health and geospatial data to build their skills in Python programming and data analysis. By the end of the course, students will be able to use Python to perform geospatial analysis and statistical analysis of health data, and to communicate their findings through data visualization."
-  },
-  {
-    "objectID": "teaching/python-for-geospatial-health-data-science/index.html#why-geospatial-health-data-science",
-    "href": "teaching/python-for-geospatial-health-data-science/index.html#why-geospatial-health-data-science",
-    "title": "Python for Geospatial Health Data Science (PY4GHDS)",
-    "section": "Why Geospatial Health Data Science?",
-    "text": "Why Geospatial Health Data Science?\nGeospatial health data science is an important field because it allows us to better understand the spatial distribution of health outcomes and the factors that contribute to them. By analyzing health data in combination with geospatial data, we can identify patterns and trends that would be difficult to detect using traditional statistical methods.\nGeospatial health data science has numerous applications, such as identifying areas of high disease incidence or prevalence, tracking the spread of infectious diseases, and evaluating the impact of environmental exposures on health outcomes. This information can be used to inform public health policies and interventions, as well as to guide resource allocation and target interventions to those who need them most.\nPython is a powerful and widely used programming language that is well-suited for data analysis and visualization. By learning to use Python for geospatial health data science, students will be able to apply these skills to a wide range of health and environmental datasets, allowing them to contribute to this important field and make meaningful contributions to public health.\n Material\n\nApply to the Program"
-  },
-  {
-    "objectID": "teaching/index.html",
-    "href": "teaching/index.html",
-    "title": "Courses Taught",
-    "section": "",
-    "text": "Welcome to the Statistical Analysis with R for Research Workshop! This 1-day intensive program is designed to equip researchers, students, and professionals with essential R programming skills for statistical analysis. Whether you are new to R or looking to enhance your skills, this workshop offers a hands-on experience to help you confidently analyze and interpret data for research purposes."
-  },
-  {
-    "objectID": "teaching/index.html#upcoming-workshops",
-    "href": "teaching/index.html#upcoming-workshops",
-    "title": "Courses Taught",
-    "section": "",
-    "text": "Welcome to the Statistical Analysis with R for Research Workshop! This 1-day intensive program is designed to equip researchers, students, and professionals with essential R programming skills for statistical analysis. Whether you are new to R or looking to enhance your skills, this workshop offers a hands-on experience to help you confidently analyze and interpret data for research purposes."
-  },
-  {
-    "objectID": "teaching/index.html#machine-learning-for-bioinformatics",
-    "href": "teaching/index.html#machine-learning-for-bioinformatics",
-    "title": "Courses Taught",
-    "section": "Machine Learning for Bioinformatics",
-    "text": "Machine Learning for Bioinformatics"
-  },
-  {
-    "objectID": "teaching/index.html#cancer-bioinformatics",
-    "href": "teaching/index.html#cancer-bioinformatics",
-    "title": "Courses Taught",
-    "section": "Cancer Bioinformatics",
-    "text": "Cancer Bioinformatics"
-  },
-  {
-    "objectID": "teaching/index.html#r-for-research",
-    "href": "teaching/index.html#r-for-research",
-    "title": "Courses Taught",
-    "section": "R for Research",
-    "text": "R for Research"
-  },
-  {
-    "objectID": "teaching/index.html#rna-seq-analysis-with-r",
-    "href": "teaching/index.html#rna-seq-analysis-with-r",
-    "title": "Courses Taught",
-    "section": "RNA-Seq Analysis with R",
-    "text": "RNA-Seq Analysis with R"
-  },
-  {
-    "objectID": "teaching/foundations-of-health-data-science/index.html",
-    "href": "teaching/foundations-of-health-data-science/index.html",
-    "title": "Foundations of Health Data Science",
-    "section": "",
-    "text": "Foundations of Health Data Science (FHDS) is an interdisciplinary course designed to introduce students to the fundamental concepts, methodologies, and applications of data science in the context of healthcare and public health. This course provides a comprehensive understanding of how data science techniques can be leveraged to extract valuable insights, improve patient outcomes, and inform decision making in healthcare settings."
-  },
-  {
-    "objectID": "teaching/foundations-of-health-data-science/index.html#course-overview",
-    "href": "teaching/foundations-of-health-data-science/index.html#course-overview",
-    "title": "Foundations of Health Data Science",
-    "section": "",
-    "text": "Foundations of Health Data Science (FHDS) is an interdisciplinary course designed to introduce students to the fundamental concepts, methodologies, and applications of data science in the context of healthcare and public health. This course provides a comprehensive understanding of how data science techniques can be leveraged to extract valuable insights, improve patient outcomes, and inform decision making in healthcare settings."
-  },
-  {
-    "objectID": "teaching/foundations-of-health-data-science/index.html#target-audience",
-    "href": "teaching/foundations-of-health-data-science/index.html#target-audience",
-    "title": "Foundations of Health Data Science",
-    "section": "Target Audience",
-    "text": "Target Audience\nThis course is suitable for individuals with varying backgrounds and interests, including:\n\nHealthcare professionals seek to enhance their data-analysis skills.\nData analysts specialize in the healthcare domain.\nStudents are interested in pursuing careers in health informatics and data science.\nResearchers have explored data-driven approaches in healthcare.\nPublic health professionals are interested in utilizing these data for policy development and epidemiological studies."
-  },
-  {
-    "objectID": "teaching/foundations-of-health-data-science/index.html#course-objectives",
-    "href": "teaching/foundations-of-health-data-science/index.html#course-objectives",
-    "title": "Foundations of Health Data Science",
-    "section": "Course Objectives",
-    "text": "Course Objectives\nBy the end of this course, participants will: - Gain a foundational understanding of key concepts in health data science.\n\nDevelop proficiency in data collection, preprocessing, and cleaning techniques specific to healthcare datasets.\nLearn various statistical methods and machine learning algorithms that are commonly used in health data analyses.\nUnderstand ethical considerations and privacy concerns related to health data usage.\nExplore real-world applications of health data science in clinical settings, public health surveillance, and biomedical research.\nAcquire practical skills through hands-on exercises and projects using relevant software tools and programming languages."
-  },
-  {
-    "objectID": "teaching/building-dashboard-with-r/index.html",
-    "href": "teaching/building-dashboard-with-r/index.html",
-    "title": "Building Dashboard with R",
-    "section": "",
-    "text": "In this comprehensive course, you will learn how to create interactive and informative dashboards using the R programming language. Dashboards are essential tools for data visualization and communication, and R provides powerful libraries and tools to build them. Whether you are a data scientist, analyst, or anyone interested in presenting data effectively, this course will equip you with the skills to design and develop insightful dashboards."
-  },
-  {
-    "objectID": "teaching/building-dashboard-with-r/index.html#course-description",
-    "href": "teaching/building-dashboard-with-r/index.html#course-description",
-    "title": "Building Dashboard with R",
-    "section": "",
-    "text": "In this comprehensive course, you will learn how to create interactive and informative dashboards using the R programming language. Dashboards are essential tools for data visualization and communication, and R provides powerful libraries and tools to build them. Whether you are a data scientist, analyst, or anyone interested in presenting data effectively, this course will equip you with the skills to design and develop insightful dashboards."
-  },
-  {
-    "objectID": "teaching/building-dashboard-with-r/index.html#what-youll-learn-in-this-course",
-    "href": "teaching/building-dashboard-with-r/index.html#what-youll-learn-in-this-course",
-    "title": "Building Dashboard with R",
-    "section": "What you’ll learn in this course?",
-    "text": "What you’ll learn in this course?\n\nR Markdown\nCreate your own dashboard\nDashboard components and layout\nCombining flexdashboard with Shiny\n\nProgram Website\n\nApply to the Program"
-  },
-  {
-    "objectID": "teaching/applied-machine-learning-for-healthcare/index.html",
-    "href": "teaching/applied-machine-learning-for-healthcare/index.html",
-    "title": "Applied Machine Learning for Healthcare (AML4H)",
-    "section": "",
-    "text": "Applied Machine Learning for Healthcare (AML4H) is an advanced-level course that focuses on the intersection of machine learning and healthcare. This course is designed to provide students with the knowledge and skills needed to effectively apply machine learning techniques to healthcare data, leading to improved medical diagnostics, treatment plans, and patient outcomes. Through a combination of lectures, hands-on projects, and case studies, students will gain a deep understanding of the challenges and opportunities in this rapidly evolving field."
-  },
-  {
-    "objectID": "teaching/applied-machine-learning-for-healthcare/index.html#overview",
-    "href": "teaching/applied-machine-learning-for-healthcare/index.html#overview",
-    "title": "Applied Machine Learning for Healthcare (AML4H)",
-    "section": "",
-    "text": "Applied Machine Learning for Healthcare (AML4H) is an advanced-level course that focuses on the intersection of machine learning and healthcare. This course is designed to provide students with the knowledge and skills needed to effectively apply machine learning techniques to healthcare data, leading to improved medical diagnostics, treatment plans, and patient outcomes. Through a combination of lectures, hands-on projects, and case studies, students will gain a deep understanding of the challenges and opportunities in this rapidly evolving field."
-  },
-  {
-    "objectID": "teaching/applied-machine-learning-for-healthcare/index.html#learning-objectives",
-    "href": "teaching/applied-machine-learning-for-healthcare/index.html#learning-objectives",
-    "title": "Applied Machine Learning for Healthcare (AML4H)",
-    "section": "Learning Objectives",
-    "text": "Learning Objectives\nUpon completion of the course, students will be able to:\n\nUnderstand the unique characteristics and challenges of healthcare data.\nIdentify and preprocess various types of healthcare data, including electronic health records (EHR), medical images, and genomics data.\nApply a wide range of machine learning algorithms to healthcare problems, such as classification, regression, clustering, and sequence analysis.\nEvaluate the performance of machine learning models using appropriate metrics for healthcare tasks.\nInterpret and communicate the results of machine learning models to healthcare professionals and stakeholders.\nExplore ethical considerations and potential biases when applying machine learning in healthcare.\nImplement techniques to handle imbalanced datasets and small sample sizes common in medical applications.\nDevelop predictive models for disease diagnosis, prognosis, and patient risk stratification.\nUtilize deep learning techniques for medical image analysis, such as image segmentation and object detection.\n\nProgram Website\n\nApply to the Program"
-  },
-  {
-    "objectID": "talks/state-the-art-of-microbial-genome-analysi/index.html",
-    "href": "talks/state-the-art-of-microbial-genome-analysi/index.html",
-    "title": "State the Art of Microbial Genome Analysis",
-    "section": "",
-    "text": "Genomics is the study of whole genomes of organisms, and incorporates elements from ge- netics. Genomics uses a combination of recombinant DNA, DNA sequencing methods, and bioinformatics to sequence, assemble, and analyse the structure and function of genomes. Genomics have become an inter-disciplinary(Computer Science, Statistics, Biology) sci- ence. The genomic data analysis steps typically include data collection, quality check and cleaning, processing, modeling, visualization and reporting."
-  },
-  {
-    "objectID": "talks/index.html",
-    "href": "talks/index.html",
-    "title": "Talks",
-    "section": "",
-    "text": "Below you can find a list of selected talks of me and my group,along with slides, paper references, and recordings when available. Presenters are highlighted in bold.\n\nHossain, M.J. (2024). Invited talk: Mastering Biomedical Data Management. Presented at IFMSA Bangladesh. Slides\nHossain, M.J. (2022). Invited talk: Undergraduate Research - Importance, Benefits, and Challenges. Presented at CHIRAL Bangladesh. Slides\nHossain, M.J. (2022). Academic talk: State the Art of Microbial Genome Analysis. Presented at Jagannath University. Slides"
+    "text": "In the era of big data and advanced technologies, the management of biomedical data presents both immense opportunities and significant challenges. In this talk, we will explore the strategies and techniques essential for mastering biomedical data management. From acquisition and storage to processing and analysis, effective management of biomedical data is crucial for advancing research, improving healthcare outcomes, and driving innovation. We will delve into key topics such as data standardization, integration, security, and interoperability, highlighting best practices and emerging trends in the field. Additionally, we will discuss the role of artificial intelligence and machine learning in enhancing biomedical data management processes. By mastering biomedical data management, researchers and healthcare professionals can unlock the full potential of data-driven approaches to address complex biomedical challenges and ultimately improve patient care."
   },
   {
     "objectID": "research/index.html",
     "href": "research/index.html",
-    "title": "Research Portfolio",
+    "title": "Research",
     "section": "",
     "text": "Advancing biomedical research through AI-driven approaches to solve complex health challenges and improve patient outcomes."
   },
   {
-    "objectID": "research/index.html#deep-learning-to-neuro-imaging-techniques",
-    "href": "research/index.html#deep-learning-to-neuro-imaging-techniques",
-    "title": "Research Funding",
-    "section": "",
-    "text": "Deep learning has revolutionized clinical applications in radiology, offering advancements in classification, risk assessment, segmentation, diagnosis, prognosis, and therapy response prediction. Beyond diagnostic tasks, AI is transforming medical imaging by enhancing technical aspects such as artifact removal, image normalization, quality improvement, dose reduction, and accelerated imaging. My focuses on leveraging these deep learning innovations, particularly in neuroimaging, to improve diagnostic accuracy, optimize imaging protocols, and develop predictive models for neurological disorders.\n\n\n\n\nZhu et al., 2019"
+    "objectID": "research/index.html#research-areas",
+    "href": "research/index.html#research-areas",
+    "title": "Research",
+    "section": "Research Areas",
+    "text": "Research Areas\n\n\n\n🧠\n\n\n\nNeuroepidemiology\n\n\nInvestigating the distribution and determinants of neurological disorders in populations, with focus on stroke, dementia, and neurodevelopmental conditions.\n\n\n\n\n\n🎗️\n\n\n\nCancer Epidemiology\n\n\nStudying patterns, causes, and prevention of cancer using population-based approaches and advanced statistical methods.\n\n\n\n\n\n💻\n\n\n\nBioinformatics & Computational Biology\n\n\nDeveloping and applying computational methods for analyzing biological data, including genomics, transcriptomics, and multi-omics integration.\n\n\n\n\n\n📊\n\n\n\nHealth Data Science\n\n\nLeveraging big data and machine learning approaches to extract insights from complex health datasets and electronic health records."
   },
   {
-    "objectID": "publications/working-papers.html",
-    "href": "publications/working-papers.html",
-    "title": "Manuscript In Preparation",
-    "section": "",
-    "text": "Manuscript In Preparation\n\nHossain, M.J., Islam, S. (2024). One‑Health Assessment of Emerging Antimicrobial Resistance Genes (ARGs) in Bangladeshi Livestock, Soil, Environment, and Human: Tackling the Crisis Together\nHossain, M.J., Habiba, U., Tuhin, MAA., Mim, NA., Mabsurah, K. (2024). Heat Stress Analysis using Discomfort Index Method: A Comprehensive Study in Bangladesh\nHossain, M.J., Das, M., Maruf, M.F., Akter, M.M., Towhid, S.T. (2023). Premarital Screening for Thalassemia Prevention: A KAP Study in Bangladesh\nHossain, M.J., Hasan, M. T., Iffat, N., Maruf, M.F., Das, M., Akter, M.M., Shahjahan, M., Islam, W. (2023). Depression, Anxiety, and Stress with Associated Factors among Bangladeshi University Students\nHossain, M.J., Rahmuna, T., Tamim, T.M., Akter, N., Das, M. (2023). Factors influencing the knowledge, attitudes, and practices of biomedical waste management among healthcare professionals in Bangladesh\nHossain, M.J., Das, M., Akter, M.M. (2023). Knowledge and awareness about breast cancer among school and college‑going girls in Bangladesh"
+    "objectID": "research/index.html#current-projects",
+    "href": "research/index.html#current-projects",
+    "title": "Research",
+    "section": "Current Projects",
+    "text": "Current Projects\n\n\n\nActive\n\n\n\nAI-Driven Early Detection of Stroke Risk\n\n\nFunding: National Health Research Council ($250,000)Duration: 2023-2025Role: Principal Investigator\n\n\nDeveloping machine learning models to predict stroke risk using multi-modal health data including imaging, genomics, and clinical variables.\n\n\n\nMachine Learning\nStroke Prevention\nNeuroimaging\nRisk Prediction\n\n\n\n\n\n\nActive\n\n\n\nMulti-Omics Integration for Cancer Biomarker Discovery\n\n\nFunding: Cancer Research Foundation ($180,000)Duration: 2024-2026Role: Co-Investigator\n\n\nIntegrating genomics, transcriptomics, and proteomics data to identify novel biomarkers for early cancer detection and treatment response.\n\n\n\nMulti-omics\nCancer Biomarkers\nPrecision Medicine\nData Integration"
   },
   {
-    "objectID": "publications/submitted-papers.html",
-    "href": "publications/submitted-papers.html",
-    "title": "Submitted Manuscripts",
-    "section": "",
-    "text": "Submitted Manuscripts\n\nHossain, M.J., Shahariar, M., Barsha, LHJ. Shahjahan, M., Towhid, ST., Sheikh, MK., Hasan, MM., Rahman, MH., Sazid, MS. (2024).\nLack of knowledge and training about antibiotic resistance among community pharmacists in Bangladesh: a cross-sectional study.\n(Submitted to Health Science Reports)\nHossain, M.J., Akter, MM. (2023).\nFood consumption patterns and sedentary behaviours among the university students: a cross-sectional study.\nDOI: 10.21203/rs.3.rs-3207448/v1\n(Submitted to Health Science Reports)\nHossain, M.J., Das, M., Shahjahan, M., Islam, M.W., Towhid, S.T. (2022).\nClinical and hematological manifestation of dengue patients in 2022 outbreak: A tertiary care hospital-based study.\n(Submitted to Health Science Reports)\nHossain, M.J., Das, M.\nImproving access to care and treatment for Hirayama patients in Bangladesh: a call for action.\n(Submitted to Orphanet Journal of Rare Diseases)\nHossain, M.J., Ahmed, M.Z., Billah, M.M., Ferdous, J., Antar, S.I., Mamun, A.A. (2024).\nThe role of CCT5 in human tumors: a pan-cancer analysis.\n(Submitted to Scientific Reports)\nHossain, M.J., Islam, M.W., Fariha, F.T.J., Ahmed, M.Z., Ferdous, J., Lota, H.B., Hossain, M.S., Kundu, P., Shahjahan, M. (2024).\nDifferential Expression and Prognostic Significance of CDK1 and CDK6 in Breast Cancer: A Multi-Omics Approach.\n(Submitted to Heliyon)\nHossain, M.J., Shahjahan, M., Hassan, M.M., Nohor, N., & Sony, S.A. (2024).\nTwo out of five babies are born through c-section in Bangladesh: An urgent call for healthcare policy reforms.\n(Submitted to BMC Public Health)"
+    "objectID": "research/index.html#completed-projects",
+    "href": "research/index.html#completed-projects",
+    "title": "Research",
+    "section": "Completed Projects",
+    "text": "Completed Projects\n\n\n\nCompleted\n\n\n\nPopulation-Based Study of Dementia Risk Factors\n\n\nFunding: Alzheimer’s Research Alliance ($320,000)Duration: 2020-2023Role: Principal Investigator\n\n\nLarge-scale epidemiological study investigating genetic and environmental risk factors for dementia in diverse populations.\n\n\n\nDementia\nGenetic Epidemiology\nPopulation Studies\nRisk Factors\n\n\n\nRelated Publications: - Hossain MJ, et al. (2023). Genetic variants and dementia risk: A population-based cohort study. Nature Neuroscience, 15(3), 245-258. - Hossain MJ, et al. (2022). Environmental factors and cognitive decline. Journal of Epidemiology, 32(7), 412-425.\n\n\n\n\n\nCompleted\n\n\n\nBioinformatics Pipeline for Single-Cell RNA-seq Analysis\n\n\nFunding: Bioinformatics Innovation Grant ($75,000)Duration: 2021-2022Role: Principal Investigator\n\n\nDevelopment of computational tools and workflows for analyzing single-cell RNA sequencing data in cancer research.\n\n\n\nSingle-cell RNA-seq\nBioinformatics Tools\nCancer Genomics\nComputational Methods\n\n\n\nRelated Publications: - Hossain MJ, et al. (2022). scRNA-Pipeline: An automated workflow for single-cell RNA-seq analysis. Bioinformatics, 38(12), 3156-3163."
   },
   {
-    "objectID": "publications/peer-reviewed.html",
-    "href": "publications/peer-reviewed.html",
-    "title": "Peer-reviewed Papers",
-    "section": "",
-    "text": "Peer-reviewed Papers\n\nHossain, M.J., Das, M. & Munni, U.R.\nUrgent call for compulsory premarital screening: a crucial step towards thalassemia prevention in Bangladesh.\nOrphanet J Rare Dis 19, 326 (2024). DOI: 10.1186/s13023-024-03344-1\nShanta, A.S.; Islam, N.; Al Asad, M.; Akter, K.; Habib, M.B.; Hossain, M.J.; Nahar, S.; Godman, B.; Islam, S.\nResistance and Co-Resistance of Metallo-Beta-Lactamase Genes in Diarrheal and Urinary-Tract Pathogens in Bangladesh.\nMicroorganisms 2024, 12, 1589. DOI: 10.3390/microorganisms12081589\nIslam, M.W., Shahjahan, M., Azad, A.K., Hossain, M.J.\nFactors contributing to antibiotic misuse among parents of school-going children in Dhaka City, Bangladesh.\nSci Rep 14, 2318 (2024). DOI: 10.1038/s41598-024-52313-y\nHossain, M.J., Islam, M.W., Munni, U.R., Gulshan, R., Mukta, S.A., Miah, M.S., Sultana, S., Karmakar, M., Ferdous, J., & Islam, M.A.\nHealth-related quality of life among thalassemia patients in Bangladesh using the SF‑36 questionnaire.\nScientific Reports, 13(1). DOI: 10.1038/s41598-023-34205-9\nTowhid, S.T., Hossain, M.J., Sammo, M.A.S., & Akter, S.\nPerception of Students on Antibiotic Resistance and Prevention: An Online, Community-Based Case Study from Dhaka, Bangladesh.\nEuropean Journal of Biology and Biotechnology, 3(3), 14–19. DOI: 10.24018/ejbio.2022.3.3.341\nHossain, M.J., Towhid, S.T., Sultana, S., Mukta, S.A., Gulshan, R., Miah, M.S.\nKnowledge and Attitudes towards Thalassemia among Public University Students in Bangladesh.\nMicrobial Bioactives, 5(2). DOI: 10.25163/microbbioacts.526325\nHossain, M.J., Towhid, S.T., Akter, S., Shahjahan, M., Roy, T., Akter, B., & Nodee, T.A.\nKnowledge and Self-Management Practice Among Diabetic Patients from the Urban Areas in Bangladesh.\nJournal of Angiotherapy, 7(1), 1-10. DOI: 10.25163/angiotherapy.717340\nHossain, M.J., Das, M., Islam, M.W., Shahjahan, M., Ferdous, J.\nCommunity engagement and social participation in dengue prevention: A cross-sectional study in Dhaka City.\nHealth Sci Rep. 2024; 7:e2022. DOI: 10.1002/hsr2.2022\nHossain, M.J., Azad, A.K., Shahid, M.S.B., Shahjahan, M., Ferdous, J.\nPrevalence, antibiotic resistance pattern for bacteriuria from patients with urinary tract infections.\nHealth Sci Rep. 2024; 7:e2039. DOI: 10.1002/hsr2.2039"
+    "objectID": "research/index.html#proposed-projects",
+    "href": "research/index.html#proposed-projects",
+    "title": "Research",
+    "section": "Proposed Projects",
+    "text": "Proposed Projects\n\n\n\nUnder Review\n\n\n\nFederated Learning for Global Health Data Analysis\n\n\nFunding: NIH R01 ($450,000)Duration: 2025-2028Role: Principal Investigator\n\n\nSubmission Date: March 2024\n\n\nDeveloping privacy-preserving machine learning approaches for analyzing health data across multiple institutions without data sharing.\n\n\n\nFederated Learning\nPrivacy-Preserving ML\nGlobal Health\nData Security\n\n\n\n\n\n\nIn Preparation\n\n\n\nClimate Change and Neurological Disease Patterns\n\n\nFunding: Climate Health Initiative ($200,000)Duration: 2025-2027Role: Co-Principal Investigator\n\n\nSubmission Date: June 2024\n\n\nInvestigating the impact of climate change on the epidemiology of neurological diseases using geospatial and temporal analysis.\n\n\n\nClimate Health\nNeuroepidemiology\nGeospatial Analysis\nEnvironmental Health"
   },
   {
-    "objectID": "publications/index.html",
-    "href": "publications/index.html",
-    "title": "Peer-reviewed Papers",
-    "section": "",
-    "text": "Peer-reviewed Papers\n\nHossain, M.J., Das, M. & Munni, U.R.\nUrgent call for compulsory premarital screening: a crucial step towards thalassemia prevention in Bangladesh.\nOrphanet J Rare Dis 19, 326 (2024). DOI: 10.1186/s13023-024-03344-1\nShanta, A.S.; Islam, N.; Al Asad, M.; Akter, K.; Habib, M.B.; Hossain, M.J.; Nahar, S.; Godman, B.; Islam, S.\nResistance and Co-Resistance of Metallo-Beta-Lactamase Genes in Diarrheal and Urinary-Tract Pathogens in Bangladesh.\nMicroorganisms 2024, 12, 1589. DOI: 10.3390/microorganisms12081589\nIslam, M.W., Shahjahan, M., Azad, A.K., Hossain, M.J.\nFactors contributing to antibiotic misuse among parents of school-going children in Dhaka City, Bangladesh.\nSci Rep 14, 2318 (2024). DOI: 10.1038/s41598-024-52313-y\nHossain, M.J., Islam, M.W., Munni, U.R., Gulshan, R., Mukta, S.A., Miah, M.S., Sultana, S., Karmakar, M., Ferdous, J., & Islam, M.A.\nHealth-related quality of life among thalassemia patients in Bangladesh using the SF‑36 questionnaire.\nScientific Reports, 13(1). DOI: 10.1038/s41598-023-34205-9\nTowhid, S.T., Hossain, M.J., Sammo, M.A.S., & Akter, S.\nPerception of Students on Antibiotic Resistance and Prevention: An Online, Community-Based Case Study from Dhaka, Bangladesh.\nEuropean Journal of Biology and Biotechnology, 3(3), 14–19. DOI: 10.24018/ejbio.2022.3.3.341\nHossain, M.J., Towhid, S.T., Sultana, S., Mukta, S.A., Gulshan, R., Miah, M.S.\nKnowledge and Attitudes towards Thalassemia among Public University Students in Bangladesh.\nMicrobial Bioactives, 5(2). DOI: 10.25163/microbbioacts.526325\nHossain, M.J., Towhid, S.T., Akter, S., Shahjahan, M., Roy, T., Akter, B., & Nodee, T.A.\nKnowledge and Self-Management Practice Among Diabetic Patients from the Urban Areas in Bangladesh.\nJournal of Angiotherapy, 7(1), 1-10. DOI: 10.25163/angiotherapy.717340\nHossain, M.J., Das, M., Islam, M.W., Shahjahan, M., Ferdous, J.\nCommunity engagement and social participation in dengue prevention: A cross-sectional study in Dhaka City.\nHealth Sci Rep. 2024; 7:e2022. DOI: 10.1002/hsr2.2022\nHossain, M.J., Azad, A.K., Shahid, M.S.B., Shahjahan, M., Ferdous, J.\nPrevalence, antibiotic resistance pattern for bacteriuria from patients with urinary tract infections.\nHealth Sci Rep. 2024; 7:e2039. DOI: 10.1002/hsr2.2039\n\n\n\nSubmitted Manuscripts\n\nHossain, M.J., Shahariar, M., Barsha, LHJ. Shahjahan, M., Towhid, ST., Sheikh, MK., Hasan, MM., Rahman, MH., Sazid, MS. (2024).\nLack of knowledge and training about antibiotic resistance among community pharmacists in Bangladesh: a cross-sectional study.\n(Submitted to Health Science Reports)\nHossain, M.J., Akter, MM. (2023).\nFood consumption patterns and sedentary behaviours among the university students: a cross-sectional study.\nDOI: 10.21203/rs.3.rs-3207448/v1\n(Submitted to Health Science Reports)\nHossain, M.J., Das, M., Shahjahan, M., Islam, M.W., Towhid, S.T. (2022).\nClinical and hematological manifestation of dengue patients in 2022 outbreak: A tertiary care hospital-based study.\n(Submitted to Health Science Reports)\nHossain, M.J., Das, M.\nImproving access to care and treatment for Hirayama patients in Bangladesh: a call for action.\n(Submitted to Orphanet Journal of Rare Diseases)\nHossain, M.J., Ahmed, M.Z., Billah, M.M., Ferdous, J., Antar, S.I., Mamun, A.A. (2024).\nThe role of CCT5 in human tumors: a pan-cancer analysis.\n(Submitted to Scientific Reports)\nHossain, M.J., Islam, M.W., Fariha, F.T.J., Ahmed, M.Z., Ferdous, J., Lota, H.B., Hossain, M.S., Kundu, P., Shahjahan, M. (2024).\nDifferential Expression and Prognostic Significance of CDK1 and CDK6 in Breast Cancer: A Multi-Omics Approach.\n(Submitted to Heliyon)\nHossain, M.J., Shahjahan, M., Hassan, M.M., Nohor, N., & Sony, S.A. (2024).\nTwo out of five babies are born through c-section in Bangladesh: An urgent call for healthcare policy reforms.\n(Submitted to BMC Public Health)\n\n\n\nManuscript In Preparation\n\nHossain, M.J., Islam, S. (2024). One‑Health Assessment of Emerging Antimicrobial Resistance Genes (ARGs) in Bangladeshi Livestock, Soil, Environment, and Human: Tackling the Crisis Together\nHossain, M.J., Habiba, U., Tuhin, MAA., Mim, NA., Mabsurah, K. (2024). Heat Stress Analysis using Discomfort Index Method: A Comprehensive Study in Bangladesh\nHossain, M.J., Das, M., Maruf, M.F., Akter, M.M., Towhid, S.T. (2023). Premarital Screening for Thalassemia Prevention: A KAP Study in Bangladesh\nHossain, M.J., Hasan, M. T., Iffat, N., Maruf, M.F., Das, M., Akter, M.M., Shahjahan, M., Islam, W. (2023). Depression, Anxiety, and Stress with Associated Factors among Bangladeshi University Students\nHossain, M.J., Rahmuna, T., Tamim, T.M., Akter, N., Das, M. (2023). Factors influencing the knowledge, attitudes, and practices of biomedical waste management among healthcare professionals in Bangladesh\nHossain, M.J., Das, M., Akter, M.M. (2023). Knowledge and awareness about breast cancer among school and college‑going girls in Bangladesh\n\n\n\nPoster Presentations\n\nHossain, M. J., Hosne, J.C.T, Mohima,J.F., Mahedi, T. Exploring TEMPO Applications for Improving Air Quality and Health through Surface Ozone Analysis. 9th International Public Health Conference by Public Health Foundation at Bangladesh Medical Research Council, Bangladesh, November 2023(Best Poster Presenter Award)\nHossain, M.J., Das, M., Maruf, M.F., Akter, MM., Towhid, S.T. Premarital Screening for Thalassemia Prevention: A KAP Study in Bangladesh.9th International Public Health Conference by Public Health Foundation at Bangladesh Medical Research Council, Bangladesh, November 2023(Best Poster Presenter Award)\nMaruf, M.F., Hossain, M. J.. Food consumption patterns and sedentary behaviours among university students: a cross-sectional study. 9th International Public Health Conference by Public Health Foundation at Bangladesh Medical Research Council, Bangladesh, November 2023(Best Poster Presenter Award)\nHossain, M. J.,Rahman,U.S.,Islam,M.K., Khatun, H., Md. Mahadi Hassan; Mosammad Sumaiya. Investigating the Impact of Trace Gasses (Sulfur Dioxide) on Air Quality and Human Health in Dhaka City, Bangladesh. 9th International Public Health Conference by Public Health Foundation at Bangladesh Medical Research Council, Bangladesh, November 2023\nHossain, M. J., Zahara, S., Evan,M.R., Haider,S., Paul, A., Investigating the Impact of Trace Gasses (NOx) on Air Quality and Human Health in Dhaka City, Bangladesh. 9th International Public Health Conference by Public Health Foundation at Bangladesh Medical Research Council, Bangladesh, November 2023\nHossain, M.J., Das, M.,Shahjahan,M., Islam, M.W.,Ferdous,J., Towhid, S.T., Community Engagement and Social Participation in Dengue Prevention: A Cross-Sectional Study in Dhaka City. 9th International Public Health Conference by Public Health Foundation at Bangladesh Medical Research Council, Bangladesh, November 2023\nHossain, M.J., Das, M.,Shahjahan,M., Islam, M.W.,Ferdous,J., Towhid, S.T., Clinical and hematological manifestation of dengue patients in 2022 outbreak: A tertiary care hospital-based study. 9th International Public Health Conference by Public Health Foundation at Bangladesh Medical Research Council, Bangladesh, November 2023\nHossain, M. J., Mim, N.A., Howlader, G., Mazumder, E.,Bhattacharjee, A. Using NASA Earth Observing Data for Monitoring and Response to Dengue. 9th International Public Health Conference by Public Health Foundation at Bangladesh Medical Research Council, Bangladesh, November 2023\nHossain, M. J., Mim, N.A., Howlader, G., Mazumder, E.,Bhattacharjee, A. Investigating the Factors Behind the Surge in Dengue Outbreaks in Bangladesh: A Comprehensive Analysis. 9th International Public Health Conference by Public Health Foundation at Bangladesh Medical Research Council, Bangladesh, November 2023\nShahid,M.S.B., Azad,A.K.,Ferdous,J.,Towhid,S.T., Hossain, M.J. Prevalence, Antibiotic Resistance Pattern for Bacteriuria from Patients with Urinary Track Infections. 36th Bangladesh Society of Microbiologists Annual Conference, SUST, Sylhet, Bangladesh, January 2023\nDas,M., Azad,A.K.,Barman,A.K.,Holy,N.A.,Akter,N., Hossain, M.J. Experiences and Side Effects Following COVID-19 Vaccination in Bangladesh: a cross-sectional community-based e-survey. 36th Bangladesh Society of Microbiologists Annual Conference, SUST, Sylhet, Bangladesh, January 2023\nAkter, S.,Hossain, M. J., Towhid, S. T., Sammo, M. A. S.(2022). Perception of Students on Antibiotic Resistance and Prevention: An Online, Community-Based Case Study from Dhaka, Bangladesh. 36th Bangladesh Society of Microbiologists Annual Conference, SUST, Sylhet, Bangladesh, January 2023\n\n\n\nOral Presentations\nList of ora presentations at national and international conferences delivered by my team.\n+Indicates a presenter, ‡Indicates a co-author, and *Indicates a corresponding author.\n\n+Tuhin, M.A.A., Mim, N.A., Akter, N., Jamal, F., Sakib, M.N., Mehjabin, K., ‡,Hossain, M.J. (2024). Exploring the Factors Influencing Heat Stress Risks Using the Discomfort Index Method in Bangladesh. International Conference on Environmental Science and Resource Management 2024 (ICESRM 2024)*, Department of Environmental Science and Resource Management, Mawlana Bhashani Science and Technology University, Bangladesh.\nMim, N.A., Akter, +Tuhin, M.A.A., Hossain, S., Alam, K.E., Mouli, N.J., ‡,Hossain, M.J. (2024). Temporal Trends and Factors Influencing Diarrhea Prevalence Among Children in the Rangamati Hill Tract Region: A Time Series Analysis. International Conference on Environmental Science and Resource Management 2024 (ICESRM 2024)*, Department of Environmental Science and Resource Management, Mawlana Bhashani Science and Technology University, Bangladesh.\nNayeem, M.U., Mrittika, M.A., ‡,Hossain, M.J., Azad, A.K., Ferdous, J., Ahmed, S., Sanyal, S.K., Towhid, S.T. (2023). Quantitative Microbial Risk Assessment from Vancomycin‑Resistant Enterococcus faecalis* and Enterococcus faecium from a Specific Neighborhood in Dhaka City, Bangladesh. 36th Bangladesh Society of Microbiologists Annual Conference, Shahjalal University of Science and Technology (SUST), Sylhet, Bangladesh, January 2023.\n‡,Hossain, M.J., +Habiba, U., Rozario, C., Tuhin, M.L.A., Mabsurah, K., Uddin, N.F. (2023). Factors influencing heat stress risk in Bangladesh. 9th International Public Health Conference* by Public Health Foundation at Bangladesh Medical Research Council (BMRC), Bangladesh, November 2023.\n‡,Hossain, M.J., +Nowshin, N., Momtaj, Yeana, I.Y., Nohor, N. (2023). Monitoring Water‑Borne Disease (Vibrio cholerae) using NASA Earth Observation Data. 9th International Public Health Conference* by Public Health Foundation at Bangladesh Medical Research Council (BMRC), Bangladesh, November 2023."
+    "objectID": "research/index.html#research-collaborations",
+    "href": "research/index.html#research-collaborations",
+    "title": "Research",
+    "section": "Research Collaborations",
+    "text": "Research Collaborations\n\n\n\nHarvard T.H. Chan School of Public HealthInternational Collaboration\n\n\nGlobal Burden of Neurological Diseases • Collaborating Researcher • 2023-Present\n\n\n\n\nJohns Hopkins Bloomberg School of Public HealthMulti-institutional\n\n\nCancer Genomics Consortium • Data Analysis Lead • 2022-Present\n\n\n\n\nUniversity of Oxford, Department of StatisticsAcademic Exchange\n\n\nStatistical Methods for Multi-omics Integration • Visiting Researcher • 2023-2024\n\n\n\n\nWHO Regional Office for South-East AsiaPolicy Collaboration\n\n\nStroke Prevention Guidelines Development • Technical Advisor • 2024-Present\n\n\n\n\nGates Foundation Global Health ProgramIndustry Partnership\n\n\nAI for Health Surveillance Systems • Principal Investigator • 2023-2025"
   },
   {
     "objectID": "press/index.html",
     "href": "press/index.html",
     "title": "Media Coverage",
     "section": "",
-    "text": "Explore the latest media highlights featuring me and my research group. Discover insightful coverage of their impactful research.\n\n1. Parental Lack of Antibiotic Knowledge Imperils Child Health in Bangladesh: Study\n\nDescription: Provided commentary on our research findings about the risks posed by inadequate parental understanding of antibiotics on child health outcomes in Bangladesh.\n\nPublished by: The Business Standard\n\nDate: 08 February 2024\n\nLink: Read More\n\n\n\n\n2. What the Rise in Self-Medication Tells Us About the Country’s Healthcare System\n\nDescription: Shared insights on the increase in self-medication practices in Bangladesh and what this trend reveals about gaps in the healthcare system.\n\nPublished by: The Business Standard\n\nDate: 27 May 2024\n\nLink: Read More"
+    "text": "Explore the latest media highlights featuring me and my research group. Discover insightful coverage of their impactful research."
   },
   {
-    "objectID": "dashboards.html",
-    "href": "dashboards.html",
-    "title": "Dashboards",
-    "section": "",
-    "text": "The dashboard typically includes various features and components to help stakeholders, such as public health authorities, researchers, and the general public, understand and analyze the dengue situation."
-  },
-  {
-    "objectID": "dashboards.html#dengue-situation-monitoring-dashboard",
-    "href": "dashboards.html#dengue-situation-monitoring-dashboard",
-    "title": "Dashboards",
-    "section": "",
-    "text": "The dashboard typically includes various features and components to help stakeholders, such as public health authorities, researchers, and the general public, understand and analyze the dengue situation."
-  },
-  {
-    "objectID": "dashboards.html#nipah-virus-transmission-in-bangladesh",
-    "href": "dashboards.html#nipah-virus-transmission-in-bangladesh",
-    "title": "Dashboards",
-    "section": "Nipah Virus Transmission in Bangladesh",
-    "text": "Nipah Virus Transmission in Bangladesh\nNipah virus transmission in Bangladesh primarily occurs through direct contact with infected bats, their excretions, or consumption of contaminated fruits or raw date palm sap. This zoonotic virus can also be transmitted from person to person through close contact, making it a potential threat in healthcare settings. Public health measures, such as avoiding contact with sick individuals and practicing good hygiene, are essential to prevent its spread in Bangladesh and other affected regions."
-  },
-  {
-    "objectID": "dashboards.html#monkeypox-outbreak-insights",
-    "href": "dashboards.html#monkeypox-outbreak-insights",
-    "title": "Dashboards",
-    "section": "Monkeypox Outbreak Insights",
-    "text": "Monkeypox Outbreak Insights\nVisualizing the data produced by the World Health Organization on the 2022 monkeypox outbreak."
-  },
-  {
-    "objectID": "blog/welcome/index.html",
-    "href": "blog/welcome/index.html",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "",
-    "text": "Welcome! Ahoy, fellow data adventurers! 🌊🔍 Our voyage through the vast ocean of data has been nothing short of exhilarating. We’ve navigated the twists and turns of data-driven decision-making, explored the tools that power our data collection, and unraveled the mysteries behind data analysis and visualization. We’ve braved the challenges that come with utilizing data and discovered how it can empower businesses, content creators, and even influence SEO strategies.\nHey there, data enthusiasts and curious minds! 📊🔍 Are you ready to embark on a thrilling expedition into the world of data? In today’s digital age, data isn’t just a buzzword; it’s the compass guiding successful businesses, creative endeavors, and innovative solutions. So, grab your virtual backpacks as we dive into the exciting realm of data-driven decision-making and exploration. Join me on this exhilarating journey, and together, we’ll uncover the boundless power that data holds!"
-  },
-  {
-    "objectID": "blog/welcome/index.html#why-data-matters",
-    "href": "blog/welcome/index.html#why-data-matters",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "Why Data Matters?",
-    "text": "Why Data Matters?\nPicture this: a business owner armed with accurate insights that steer their company toward unprecedented growth. Data is the magic wand that makes it happen. Companies big and small are tapping into the goldmine of data to fine-tune their strategies, enhance customer experiences, and predict market trends. Remember the time you received a tailored recommendation on an online platform? Thank data for that! Let’s dive into how data transforms the ordinary into the extraordinary."
-  },
-  {
-    "objectID": "blog/welcome/index.html#the-data-journey-begins",
-    "href": "blog/welcome/index.html#the-data-journey-begins",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "The Data Journey Begins",
-    "text": "The Data Journey Begins\nData comes in various shapes and sizes—structured and unstructured. Think of structured data as well-organized puzzle pieces, while unstructured data is like the pieces of a jigsaw puzzle scattered across the table. From customer preferences to social media interactions, data is collected through various channels. But wait, collecting raw data is just the first step of our journey."
-  },
-  {
-    "objectID": "blog/welcome/index.html#tools-for-data-collection",
-    "href": "blog/welcome/index.html#tools-for-data-collection",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "Tools for Data Collection",
-    "text": "Tools for Data Collection\nImagine gathering pieces of a puzzle without missing a single one. That’s the level of accuracy data collection tools provide. Meet the heroes behind the scenes: Google Analytics, surveys, social media insights, and more. But remember, accuracy is the name of the game. Garbage in, garbage out, they say. Inaccurate data can lead you down the wrong path. So, gear up with reliable tools to collect gems, not gravel."
-  },
-  {
-    "objectID": "blog/welcome/index.html#making-sense-of-the-data",
-    "href": "blog/welcome/index.html#making-sense-of-the-data",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "Making Sense of the Data",
-    "text": "Making Sense of the Data\nGathering data is like mining, and now it’s time to extract the precious gems hidden within. Data analysis is our refining process. Whether it’s identifying trends, detecting anomalies, or uncovering correlations, data analysis tools are the chisels and magnifying glasses of our journey. From basic spreadsheets to complex algorithms, these tools unveil the stories buried beneath the numbers."
-  },
-  {
-    "objectID": "blog/welcome/index.html#visualizing-data-for-impact",
-    "href": "blog/welcome/index.html#visualizing-data-for-impact",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "Visualizing Data for Impact",
-    "text": "Visualizing Data for Impact\nData, in its raw form, can resemble a dense fog. That’s where data visualization swoops in. Imagine turning complex data sets into captivating visuals—charts, graphs, and infographics that tell a story at a glance. It’s like transforming fog into a clear roadmap, guiding your decisions with precision. After all, a picture is worth a thousand rows of data!"
-  },
-  {
-    "objectID": "blog/welcome/index.html#challenges-in-data-utilization",
-    "href": "blog/welcome/index.html#challenges-in-data-utilization",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "Challenges in Data Utilization",
-    "text": "Challenges in Data Utilization\nAhoy! Rough waters ahead. Navigating the sea of data isn’t without challenges. Data privacy concerns, incomplete or inconsistent data, and the noise of irrelevant information can make our voyage tricky. But fear not! With the right strategies, you can steer clear of these obstacles and set sail towards data-driven success."
-  },
-  {
-    "objectID": "blog/welcome/index.html#empowering-your-business-with-data",
-    "href": "blog/welcome/index.html#empowering-your-business-with-data",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "Empowering Your Business with Data",
-    "text": "Empowering Your Business with Data\nAvast, business owners! Data isn’t just a treasure for the brave; it’s a compass for the wise. Imagine adjusting your business strategies based on real-time insights. From product development to customer service, data-driven decisions can launch your business to new heights. Ready to hoist the sails of success?"
-  },
-  {
-    "objectID": "blog/welcome/index.html#the-human-element-in-data",
-    "href": "blog/welcome/index.html#the-human-element-in-data",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "The Human Element in Data",
-    "text": "The Human Element in Data\nData is our guide, but human judgment is our compass. While data analysis offers invaluable insights, remember that it’s humans who make the final call. Just like a ship’s captain relies on the stars while steering the ship, human intuition guides the course of action, ensuring a harmonious blend of data and wisdom."
-  },
-  {
-    "objectID": "blog/welcome/index.html#join-me-on-my-blogging-journey",
-    "href": "blog/welcome/index.html#join-me-on-my-blogging-journey",
-    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
-    "section": "Join Me on My Blogging Journey",
-    "text": "Join Me on My Blogging Journey\nBut wait, our adventure doesn’t end here! There’s a treasure trove of insights waiting for you on my blog. Dive deeper into the world of data-driven strategies, technology trends, and real-life success stories. Unearth the secrets that can propel your journey to the next level. Stay tuned"
-  },
-  {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
+    "objectID": "cv/index.html",
+    "href": "cv/index.html",
     "title": "",
     "section": "",
-    "text": "No matching items"
-  },
-  {
-    "objectID": "about_template.html",
-    "href": "about_template.html",
-    "title": "About this template",
-    "section": "",
-    "text": "About this template\n\n\n\nThis page contains some elaborated background information about your workshop, or the instructors.\n\n\nThis is to demonstrate how to make a drop-down page from the navigation bar."
+    "text": "Download current CV"
   },
   {
     "objectID": "blog/multi-omics-data-integration/index.html",
@@ -630,284 +322,172 @@
     "text": "References\n\nNCBI - Integrative Multi-Omics Approaches in Cancer Research\nScienceDirect - Machine learning for multi-omics data integration in cancer\nNature - Multi-omics data integration and modeling unravels new mechanisms\nResearchGate - Machine learning for multi-omics data integration in cancer\nFrontiers in Genetics - Integration of Online Omics-Data Resources for Cancer\nFrontiers in Oncology - Integrated Multi-Omics Analyses in Oncology"
   },
   {
-    "objectID": "cv/index.html",
-    "href": "cv/index.html",
+    "objectID": "about_template.html",
+    "href": "about_template.html",
+    "title": "About this template",
+    "section": "",
+    "text": "About this template\n\n\n\nThis page contains some elaborated background information about your workshop, or the instructors.\n\n\nThis is to demonstrate how to make a drop-down page from the navigation bar."
+  },
+  {
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "About",
+    "section": "",
+    "text": "About\nA biomedical researcher specializing in neuroepidemiology, cancer epidemiology, and bioinformatics, dedicated to translating complex molecular data into actionable healthcare insights.\n\n\n\nProfessional Journey\n\n\n\n\n\n\nFounder & Chief Executive Officer DeepBio Limited 2022 - Present\nLeading biotechnology company focused on AI-driven drug discovery and personalized medicine solutions. Spearheading research initiatives in computational biology and developing cutting-edge bioinformatics tools for the pharmaceutical industry.\n\n\n\n\n\n\n\nFounder & Executive Director CHIRAL Bangladesh 2021 - Present\nNon-profit research organization dedicated to advancing biomedical research and training in Bangladesh. Establishing collaborative networks and educational programs to build local capacity in computational biology and bioinformatics.\n\n\n\n\n\n\n\nFaculty Center for Bioinformatics Learning Advancement and Systematics Training (cBLAST), University of Dhaka 2020 - Present\nContributing to bioinformatics education and research capacity building. Developing curriculum and teaching computational approaches to biological problems, mentoring students in genomics and data analysis.\n\n\n\n\n\n\n\nVisiting Researcher Department of Public Health, Daffodil International University 2025 - Present\nConducting interdisciplinary research at the intersection of public health and computational biology. Collaborating on projects involving health data analytics and epidemiological modeling.\n\n\n\n\n\n\n\nInstructor Daffodil International University (Micro-credential Academy, AI for Public Health) 2022 - Present\nDesigning and delivering specialized courses on artificial intelligence applications in public health. Teaching machine learning techniques for health data analysis and developing micro-credential programs.\n\n\n\n\n\n\n\nProgram Lead GSA Bioinformatics Internship 2021 - Present\nLeading comprehensive bioinformatics internship programs for students and early-career researchers. Developing hands-on training modules covering genomics, proteomics, and computational biology tools.\n\n\n\n\n\nEducation\n\n\n\n\n\n\nMaster of Science in Microbiology Jagannath University, Dhaka 2020\nResearch Focus: Chikungunya outbreak investigation and infectious disease epidemiology. Conducted comprehensive field studies and laboratory analysis to understand disease transmission patterns and develop prevention strategies.\n\n\n\n\n\n\n\nBachelor of Science in Microbiology Jagannath University, Dhaka 2019\nResearch Project: Antibiotic resistance gene profiling using bioinformatics approaches. Applied computational methods to analyze bacterial genomes and identify resistance mechanisms in pathogenic microorganisms."
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
     "title": "",
     "section": "",
-    "text": "Download current CV"
+    "text": "No matching items"
   },
   {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Smartphones and Wearables for Cardiovascular Health",
+    "objectID": "blog/welcome/index.html",
+    "href": "blog/welcome/index.html",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
     "section": "",
-    "text": "Smartphones and Wearables for Cardiovascular Health\nView on Github\nThe Mobile and Wearable Health Monitoring System (MW-HMS) is a proposed initiative to leverage data from smartphones and wearable devices to improve the understanding and management of cardiovascular health in Bangladesh. This project aims to merge personal monitoring data with existing health datasets to provide a comprehensive overview of cardiovascular health trends and risk factors within the population.\nThe MW-HMS project aims to revolutionize cardiovascular health management in Bangladesh by using cutting-edge technology and community engagement to provide timely and accurate health insights. This approach will not only enhance individual health outcomes but also improve public health strategies, significantly boosting the health system’s capacity to manage and prevent cardiovascular diseases.\n\n\nStroke Data Science Catalyst: Stroke Prevention and Management Data Initiative (SPMDI)\nGithub\nThe Stroke Prevention and Management Data Initiative (SPMDI) is a proposed five-year collaborative research project in Bangladesh aimed at enhancing stroke prevention and treatment through the strategic use of health data. The initiative plans to integrate real-world data from hospitals, general practitioners, and pharmacies to thoroughly analyze stroke risk factors unique to the Bangladeshi population and develop customized interventions.\nThe SPMDI aims to diminish the incidence and effects of stroke in Bangladesh by providing actionable insights into prevention and management, ultimately enhancing the quality of life for individuals at risk and improving the overall healthcare landscape.\n\n\nDengue Early Warning System for Bangladesh ( DEWS-BD)\nGithub\n\nDEWS-BD is an advanced early warning system designed to predict and mitigate dengue outbreaks in Bangladesh. By leveraging data science and machine learning techniques, DEWS-BD aims to provide accurate and timely predictions, enabling public health officials and policymakers to take proactive measures in combating dengue.\nThis project is ongoing and continuously updated to incorporate new data sources and improve prediction accuracy.\nWe would like to acknowledge the following organizations for their invaluable support and contributions to the DEWS-BD project:\n\nBangladesh Meteorological Department (BMD): For providing the crucial meteorological data that underpins our predictive models and enables accurate forecasting of dengue outbreaks.\nDirectorate General of Health Services (DGHS): For supplying the dengue case data, which is essential for training and validating our machine learning models and ensuring the reliability of our predictions.\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome! Ahoy, fellow data adventurers! 🌊🔍 Our voyage through the vast ocean of data has been nothing short of exhilarating. We’ve navigated the twists and turns of data-driven decision-making, explored the tools that power our data collection, and unraveled the mysteries behind data analysis and visualization. We’ve braved the challenges that come with utilizing data and discovered how it can empower businesses, content creators, and even influence SEO strategies.\nHey there, data enthusiasts and curious minds! 📊🔍 Are you ready to embark on a thrilling expedition into the world of data? In today’s digital age, data isn’t just a buzzword; it’s the compass guiding successful businesses, creative endeavors, and innovative solutions. So, grab your virtual backpacks as we dive into the exciting realm of data-driven decision-making and exploration. Join me on this exhilarating journey, and together, we’ll uncover the boundless power that data holds!"
   },
   {
-    "objectID": "publications/orals.html",
-    "href": "publications/orals.html",
-    "title": "Oral Presentations",
+    "objectID": "blog/welcome/index.html#why-data-matters",
+    "href": "blog/welcome/index.html#why-data-matters",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "Why Data Matters?",
+    "text": "Why Data Matters?\nPicture this: a business owner armed with accurate insights that steer their company toward unprecedented growth. Data is the magic wand that makes it happen. Companies big and small are tapping into the goldmine of data to fine-tune their strategies, enhance customer experiences, and predict market trends. Remember the time you received a tailored recommendation on an online platform? Thank data for that! Let’s dive into how data transforms the ordinary into the extraordinary."
+  },
+  {
+    "objectID": "blog/welcome/index.html#the-data-journey-begins",
+    "href": "blog/welcome/index.html#the-data-journey-begins",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "The Data Journey Begins",
+    "text": "The Data Journey Begins\nData comes in various shapes and sizes—structured and unstructured. Think of structured data as well-organized puzzle pieces, while unstructured data is like the pieces of a jigsaw puzzle scattered across the table. From customer preferences to social media interactions, data is collected through various channels. But wait, collecting raw data is just the first step of our journey."
+  },
+  {
+    "objectID": "blog/welcome/index.html#tools-for-data-collection",
+    "href": "blog/welcome/index.html#tools-for-data-collection",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "Tools for Data Collection",
+    "text": "Tools for Data Collection\nImagine gathering pieces of a puzzle without missing a single one. That’s the level of accuracy data collection tools provide. Meet the heroes behind the scenes: Google Analytics, surveys, social media insights, and more. But remember, accuracy is the name of the game. Garbage in, garbage out, they say. Inaccurate data can lead you down the wrong path. So, gear up with reliable tools to collect gems, not gravel."
+  },
+  {
+    "objectID": "blog/welcome/index.html#making-sense-of-the-data",
+    "href": "blog/welcome/index.html#making-sense-of-the-data",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "Making Sense of the Data",
+    "text": "Making Sense of the Data\nGathering data is like mining, and now it’s time to extract the precious gems hidden within. Data analysis is our refining process. Whether it’s identifying trends, detecting anomalies, or uncovering correlations, data analysis tools are the chisels and magnifying glasses of our journey. From basic spreadsheets to complex algorithms, these tools unveil the stories buried beneath the numbers."
+  },
+  {
+    "objectID": "blog/welcome/index.html#visualizing-data-for-impact",
+    "href": "blog/welcome/index.html#visualizing-data-for-impact",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "Visualizing Data for Impact",
+    "text": "Visualizing Data for Impact\nData, in its raw form, can resemble a dense fog. That’s where data visualization swoops in. Imagine turning complex data sets into captivating visuals—charts, graphs, and infographics that tell a story at a glance. It’s like transforming fog into a clear roadmap, guiding your decisions with precision. After all, a picture is worth a thousand rows of data!"
+  },
+  {
+    "objectID": "blog/welcome/index.html#challenges-in-data-utilization",
+    "href": "blog/welcome/index.html#challenges-in-data-utilization",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "Challenges in Data Utilization",
+    "text": "Challenges in Data Utilization\nAhoy! Rough waters ahead. Navigating the sea of data isn’t without challenges. Data privacy concerns, incomplete or inconsistent data, and the noise of irrelevant information can make our voyage tricky. But fear not! With the right strategies, you can steer clear of these obstacles and set sail towards data-driven success."
+  },
+  {
+    "objectID": "blog/welcome/index.html#empowering-your-business-with-data",
+    "href": "blog/welcome/index.html#empowering-your-business-with-data",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "Empowering Your Business with Data",
+    "text": "Empowering Your Business with Data\nAvast, business owners! Data isn’t just a treasure for the brave; it’s a compass for the wise. Imagine adjusting your business strategies based on real-time insights. From product development to customer service, data-driven decisions can launch your business to new heights. Ready to hoist the sails of success?"
+  },
+  {
+    "objectID": "blog/welcome/index.html#the-human-element-in-data",
+    "href": "blog/welcome/index.html#the-human-element-in-data",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "The Human Element in Data",
+    "text": "The Human Element in Data\nData is our guide, but human judgment is our compass. While data analysis offers invaluable insights, remember that it’s humans who make the final call. Just like a ship’s captain relies on the stars while steering the ship, human intuition guides the course of action, ensuring a harmonious blend of data and wisdom."
+  },
+  {
+    "objectID": "blog/welcome/index.html#join-me-on-my-blogging-journey",
+    "href": "blog/welcome/index.html#join-me-on-my-blogging-journey",
+    "title": "Unlocking the Power of Data: Join the Journey on My Blog!",
+    "section": "Join Me on My Blogging Journey",
+    "text": "Join Me on My Blogging Journey\nBut wait, our adventure doesn’t end here! There’s a treasure trove of insights waiting for you on my blog. Dive deeper into the world of data-driven strategies, technology trends, and real-life success stories. Unearth the secrets that can propel your journey to the next level. Stay tuned"
+  },
+  {
+    "objectID": "dashboards.html",
+    "href": "dashboards.html",
+    "title": "Dashboards",
     "section": "",
-    "text": "Oral Presentations\nList of ora presentations at national and international conferences delivered by my team.\n+Indicates a presenter, ‡Indicates a co-author, and *Indicates a corresponding author.\n\n+Tuhin, M.A.A., Mim, N.A., Akter, N., Jamal, F., Sakib, M.N., Mehjabin, K., ‡,Hossain, M.J. (2024). Exploring the Factors Influencing Heat Stress Risks Using the Discomfort Index Method in Bangladesh. International Conference on Environmental Science and Resource Management 2024 (ICESRM 2024)*, Department of Environmental Science and Resource Management, Mawlana Bhashani Science and Technology University, Bangladesh.\nMim, N.A., Akter, +Tuhin, M.A.A., Hossain, S., Alam, K.E., Mouli, N.J., ‡,Hossain, M.J. (2024). Temporal Trends and Factors Influencing Diarrhea Prevalence Among Children in the Rangamati Hill Tract Region: A Time Series Analysis. International Conference on Environmental Science and Resource Management 2024 (ICESRM 2024)*, Department of Environmental Science and Resource Management, Mawlana Bhashani Science and Technology University, Bangladesh.\nNayeem, M.U., Mrittika, M.A., ‡,Hossain, M.J., Azad, A.K., Ferdous, J., Ahmed, S., Sanyal, S.K., Towhid, S.T. (2023). Quantitative Microbial Risk Assessment from Vancomycin‑Resistant Enterococcus faecalis* and Enterococcus faecium from a Specific Neighborhood in Dhaka City, Bangladesh. 36th Bangladesh Society of Microbiologists Annual Conference, Shahjalal University of Science and Technology (SUST), Sylhet, Bangladesh, January 2023.\n‡,Hossain, M.J., +Habiba, U., Rozario, C., Tuhin, M.L.A., Mabsurah, K., Uddin, N.F. (2023). Factors influencing heat stress risk in Bangladesh. 9th International Public Health Conference* by Public Health Foundation at Bangladesh Medical Research Council (BMRC), Bangladesh, November 2023.\n‡,Hossain, M.J., +Nowshin, N., Momtaj, Yeana, I.Y., Nohor, N. (2023). Monitoring Water‑Borne Disease (Vibrio cholerae) using NASA Earth Observation Data. 9th International Public Health Conference* by Public Health Foundation at Bangladesh Medical Research Council (BMRC), Bangladesh, November 2023."
+    "text": "The dashboard typically includes various features and components to help stakeholders, such as public health authorities, researchers, and the general public, understand and analyze the dengue situation."
   },
   {
-    "objectID": "publications/posters.html",
-    "href": "publications/posters.html",
-    "title": "Poster Presentations",
+    "objectID": "dashboards.html#dengue-situation-monitoring-dashboard",
+    "href": "dashboards.html#dengue-situation-monitoring-dashboard",
+    "title": "Dashboards",
     "section": "",
-    "text": "Poster Presentations\n\nHossain, M. J., Hosne, J.C.T, Mohima,J.F., Mahedi, T. Exploring TEMPO Applications for Improving Air Quality and Health through Surface Ozone Analysis. 9th International Public Health Conference by Public Health Foundation at Bangladesh Medical Research Council, Bangladesh, November 2023(Best Poster Presenter Award)\nHossain, M.J., Das, M., Maruf, M.F., Akter, MM., Towhid, S.T. Premarital Screening for Thalassemia Prevention: A KAP Study in Bangladesh.9th International Public Health Conference by Public Health Foundation at Bangladesh Medical Research Council, Bangladesh, November 2023(Best Poster Presenter Award)\nMaruf, M.F., Hossain, M. J.. Food consumption patterns and sedentary behaviours among university students: a cross-sectional study. 9th International Public Health Conference by Public Health Foundation at Bangladesh Medical Research Council, Bangladesh, November 2023(Best Poster Presenter Award)\nHossain, M. J.,Rahman,U.S.,Islam,M.K., Khatun, H., Md. Mahadi Hassan; Mosammad Sumaiya. Investigating the Impact of Trace Gasses (Sulfur Dioxide) on Air Quality and Human Health in Dhaka City, Bangladesh. 9th International Public Health Conference by Public Health Foundation at Bangladesh Medical Research Council, Bangladesh, November 2023\nHossain, M. J., Zahara, S., Evan,M.R., Haider,S., Paul, A., Investigating the Impact of Trace Gasses (NOx) on Air Quality and Human Health in Dhaka City, Bangladesh. 9th International Public Health Conference by Public Health Foundation at Bangladesh Medical Research Council, Bangladesh, November 2023\nHossain, M.J., Das, M.,Shahjahan,M., Islam, M.W.,Ferdous,J., Towhid, S.T., Community Engagement and Social Participation in Dengue Prevention: A Cross-Sectional Study in Dhaka City. 9th International Public Health Conference by Public Health Foundation at Bangladesh Medical Research Council, Bangladesh, November 2023\nHossain, M.J., Das, M.,Shahjahan,M., Islam, M.W.,Ferdous,J., Towhid, S.T., Clinical and hematological manifestation of dengue patients in 2022 outbreak: A tertiary care hospital-based study. 9th International Public Health Conference by Public Health Foundation at Bangladesh Medical Research Council, Bangladesh, November 2023\nHossain, M. J., Mim, N.A., Howlader, G., Mazumder, E.,Bhattacharjee, A. Using NASA Earth Observing Data for Monitoring and Response to Dengue. 9th International Public Health Conference by Public Health Foundation at Bangladesh Medical Research Council, Bangladesh, November 2023\nHossain, M. J., Mim, N.A., Howlader, G., Mazumder, E.,Bhattacharjee, A. Investigating the Factors Behind the Surge in Dengue Outbreaks in Bangladesh: A Comprehensive Analysis. 9th International Public Health Conference by Public Health Foundation at Bangladesh Medical Research Council, Bangladesh, November 2023\nShahid,M.S.B., Azad,A.K.,Ferdous,J.,Towhid,S.T., Hossain, M.J. Prevalence, Antibiotic Resistance Pattern for Bacteriuria from Patients with Urinary Track Infections. 36th Bangladesh Society of Microbiologists Annual Conference, SUST, Sylhet, Bangladesh, January 2023\nDas,M., Azad,A.K.,Barman,A.K.,Holy,N.A.,Akter,N., Hossain, M.J. Experiences and Side Effects Following COVID-19 Vaccination in Bangladesh: a cross-sectional community-based e-survey. 36th Bangladesh Society of Microbiologists Annual Conference, SUST, Sylhet, Bangladesh, January 2023\nAkter, S.,Hossain, M. J., Towhid, S. T., Sammo, M. A. S.(2022). Perception of Students on Antibiotic Resistance and Prevention: An Online, Community-Based Case Study from Dhaka, Bangladesh. 36th Bangladesh Society of Microbiologists Annual Conference, SUST, Sylhet, Bangladesh, January 2023"
+    "text": "The dashboard typically includes various features and components to help stakeholders, such as public health authorities, researchers, and the general public, understand and analyze the dengue situation."
   },
   {
-    "objectID": "publications/under-review.html",
-    "href": "publications/under-review.html",
-    "title": "Under Review",
+    "objectID": "dashboards.html#nipah-virus-transmission-in-bangladesh",
+    "href": "dashboards.html#nipah-virus-transmission-in-bangladesh",
+    "title": "Dashboards",
+    "section": "Nipah Virus Transmission in Bangladesh",
+    "text": "Nipah Virus Transmission in Bangladesh\nNipah virus transmission in Bangladesh primarily occurs through direct contact with infected bats, their excretions, or consumption of contaminated fruits or raw date palm sap. This zoonotic virus can also be transmitted from person to person through close contact, making it a potential threat in healthcare settings. Public health measures, such as avoiding contact with sick individuals and practicing good hygiene, are essential to prevent its spread in Bangladesh and other affected regions."
+  },
+  {
+    "objectID": "dashboards.html#monkeypox-outbreak-insights",
+    "href": "dashboards.html#monkeypox-outbreak-insights",
+    "title": "Dashboards",
+    "section": "Monkeypox Outbreak Insights",
+    "text": "Monkeypox Outbreak Insights\nVisualizing the data produced by the World Health Organization on the 2022 monkeypox outbreak."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Md. Jubayer Hossain",
     "section": "",
-    "text": "Under Review\n\nHossain, M.J., Shahariar, M., Barsha, LHJ. Shahjahan, M., Towhid, ST., Sheikh, MK., Hasan, MM., Rahman, MH., Sazid, MS.(2024). Lack of knowledge and training about antibiotic resistance among community pharmacists in Bangladesh: a cross-sectional study. (Submitted to Health Science Reports)\nAkter, MM., Hossain, M.J.(2023).Food consumption patterns and sedentary behaviours among the university students: a cross-sectional study. http://dx.doi.org/10.21203/rs.3.rs-3207448/v1 (Submitted to Health Science Reports)\nHossain, M.J., Das, M.,Shahjahan, M.,Islam, M.W., Towhid, S.T.(2022).Clinical and hematological manifestation of dengue patients in 2022 outbreak: A tertiary care hospital-based study.(Submitted to Health Science Reports)\nHossain, M.J., Das, M. Improving access to care and treatment for Hirayama patients in Bangladesh: a call for action (Submitted to Orphanet Journal of Rare Diseases)\nAhmed, M.Z., Billah, M.M., Ferdous, J., Antar, S.I., Mamun, A.A., Hossain, M.J. (2024). The role of CCT5 in human tumors: a pan-cancer analysis. (Submitted to Scientific Reports)\nIslam, M.W., Fariha, F.T.J., Ahmed, M.Z., Ferdous, J., Lota, H.B., Hossain, M.S., Kundu, P., Shahjahan, M., Hossain, M.J. (2024). Differential Expression and Prognostic Significance of CDK1 and CDK6 in Breast Cancer: A Multi-Omics Approach. (Submitted to Heliyon)\nAkter, M.M., Sakib, M.N., Bhuiyan, Z.R., Hossen, I., Paul, A., Limon, M.H., Munny, F.A., Tisha, A.T., Imita, R.T., Mehjabin, K., Bethi, K.B., Yusuf, S., Banik, P.C., Hossain, M.J. (2024). Eating disorders and associated mental health problems among the students at selected schools and colleges in Dhaka city, Bangladesh. (Submitted to The Lancent Child and Adolescent Health)"
+    "text": "I am the Founder and Chief Executive Officer of DeepBio Limited, and the Founder and Executive Director of CHIRAL Bangladesh, its dedicated research wing. I also serve as Faculty at the Center for Bioinformatics Learning Advancement and Systematics Training (cBLAST), University of Dhaka, and as a Visiting Researcher in the Department of Public Health, Daffodil International University. At Daffodil International University, I also teach in the Micro-Credential Academy as an Instructor for the course AI for Public Health.\nAs an educator, I am Lead Organizer and Instructor at the Professional Training in Bioinformatics and Computational Biology. I also serve as Program Lead for the GSA Bioinformatics Internship, a collaborative initiative jointly organized by the Global Network of Bangladeshi Biotechnologists (GNOBB), ASI School of Life, and the Society for the Popularization of Science, Bangladesh (SPSB).\nI completed my Master of Science (2020) and Bachelor of Science (2019) in Microbiology from Jagannath University. My research focuses on applying artificial intelligence (AI) to health data—including multi-omics datasets (genomics, transcriptomics, proteomics) and neuroimaging—to identify clinically actionable biomarkers and build predictive models for the early diagnosis and treatment of neurological disorders and cancer. I am also passionate about visualizing complex data and models to improve biological interpretation and support clinical applications.\nPlease contact me to discuss potential opportunities."
   },
   {
-    "objectID": "research/grants.html",
-    "href": "research/grants.html",
+    "objectID": "index.html#bio",
+    "href": "index.html#bio",
+    "title": "Md. Jubayer Hossain",
+    "section": "",
+    "text": "I am the Founder and Chief Executive Officer of DeepBio Limited, and the Founder and Executive Director of CHIRAL Bangladesh, its dedicated research wing. I also serve as Faculty at the Center for Bioinformatics Learning Advancement and Systematics Training (cBLAST), University of Dhaka, and as a Visiting Researcher in the Department of Public Health, Daffodil International University. At Daffodil International University, I also teach in the Micro-Credential Academy as an Instructor for the course AI for Public Health.\nAs an educator, I am Lead Organizer and Instructor at the Professional Training in Bioinformatics and Computational Biology. I also serve as Program Lead for the GSA Bioinformatics Internship, a collaborative initiative jointly organized by the Global Network of Bangladeshi Biotechnologists (GNOBB), ASI School of Life, and the Society for the Popularization of Science, Bangladesh (SPSB).\nI completed my Master of Science (2020) and Bachelor of Science (2019) in Microbiology from Jagannath University. My research focuses on applying artificial intelligence (AI) to health data—including multi-omics datasets (genomics, transcriptomics, proteomics) and neuroimaging—to identify clinically actionable biomarkers and build predictive models for the early diagnosis and treatment of neurological disorders and cancer. I am also passionate about visualizing complex data and models to improve biological interpretation and support clinical applications.\nPlease contact me to discuss potential opportunities."
+  },
+  {
+    "objectID": "publications/index.html#publications",
+    "href": "publications/index.html#publications",
     "title": "",
+    "section": "Publications",
+    "text": "Publications\nPublications\nShowcasing peer-reviewed research contributions in bioinformatics, public health, and computational biology that advance our understanding of complex health challenges.\n\n\n\nAll Publications\n\n\nPeer-Reviewed\n\n\nUnder Review\n\n\nWorking Papers\n\n\nConference\n\n\n\n\nPublished\n\n\nUnder Review\n\n\nIn Preparation\n\n\nPresented\n\n\n\n\n\n\n\n\nFeatured\n\n\nPublished\n\n\n2024\n\n\n\n\nHossain, M.J., Rahman, A., & Ahmed, S. (2024). Machine Learning Approaches for Early Detection of Neurological Disorders: A Comprehensive Review. Nature Machine Intelligence, 6(2), 145-162.\n\n\n\nmachine learning\n\n\nneuroepidemiology\n\n\nearly detection\n\n\nbiomarkers\n\n\n\n\n\n\n\n\n\nFeatured\n\n\nUnder Review\n\n\n2024\n\n\n\n\nHossain, M.J., Thompson, K., & Rodriguez, M. (2024). Deep Learning Framework for Personalized Medicine in Oncology [Under Review]. Nature Medicine.\n\n\n\ndeep learning\n\n\npersonalized medicine\n\n\noncology\n\n\nprecision therapy\n\n\n\n\n\n\n\n\n\nFeatured\n\n\nPublished\n\n\n2023\n\n\n\n\nHossain, M.J., Chen, L., Kim, H., & Patel, R. (2023). Multi-omics Integration for Cancer Biomarker Discovery: A Systems Biology Approach. Cell Reports Methods, 3(8), 100528.\n\n\n\nmulti-omics\n\n\ncancer research\n\n\nbiomarkers\n\n\nsystems biology\n\n\n\n\n\n\n\n\n\nIn Preparation\n\n\n2024\n\n\n\n\nHossain, M.J., Garcia, P., & Liu, X. (2024). Novel Computational Methods for Drug Repositioning in Rare Diseases [In Preparation].\n\n\n\ndrug repositioning\n\n\nrare diseases\n\n\ncomputational methods\n\n\npharmacoinformatics\n\n\n\n\n\n\n\n\n\nPresented\n\n\n2023\n\n\n\n\nHossain, M.J., & Kumar, S. (2023). AI-Powered Biomarker Discovery in Neurodegenerative Diseases. Presented at International Conference on Bioinformatics and Computational Biology (ICBCB), Boston, MA.\n\n\n\nAI\n\n\nbiomarker discovery\n\n\nneurodegenerative diseases\n\n\nconference presentation\n\n\n\n\n\n\n\n\n\nPublished\n\n\n2023\n\n\n\n\nRahman, T., Hossain, M.J., & Martinez, C. (2023). Bioinformatics Pipeline for Large-Scale Genomic Data Analysis in Population Health Studies. Bioinformatics, 39(12), 2105-2113.\n\n\n\nbioinformatics\n\n\ngenomics\n\n\npopulation health\n\n\ndata analysis"
+  },
+  {
+    "objectID": "talks/index.html",
+    "href": "talks/index.html",
+    "title": "Talks",
     "section": "",
-    "text": "Grant Mechanism: Tobacco Control Policy Research Grant Program\n\nAgency:\n\nBangladesh Center for Communication Programs (BCCP)\n\nBangladesh Tobacco Control Research Network (BTCRN)\n\nInstitute for Global Tobacco Control at the Johns Hopkins Bloomberg School of Public Health, Baltimore, USA\n\n\nTotal Requested: $10,000\n\nRole: Principal Investigator\n\nYear: 2024\n\n\n\n\n\n\nGrant Mechanism: Big Data in Public Health\n\nAgency: Research and Innovation Center (RIC)\n\nTotal Requested: $2,730\n\nRole: Principal Investigator\n\nYear: 2024\n\n\n\n\n\n\nGrant Mechanism: Capacity Strengthening of Multi-Actors to Limit Climate Change Impacts and Enhance Resilience (CAP-RES)\n\nAgency: International Center for Climate Change and Development (ICCCAD)\n\nTotal Requested: $4,550 USD\n\nRole: Principal Investigator\n\nYear: 2024\n\n\n\n\n\nGrant Mechanism: Capacity Strengthening of Multi-Actors to Limit Climate Change Impacts and Enhance Resilience (CAP-RES)\n\nAgency: International Center for Climate Change and Development (ICCCAD)\n\nTotal Requested: $4,550\n\nRole: Principal Investigator\n\nYear: 2024\n\n\n\n\n\n\nGrant Mechanism: Research Grants on Urban Climate Resilience\n\nAgency: Global Disaster Preparedness Center (GDPC)\n\nTotal Requested: $4,550 USD\n\nRole: Principal Investigator\n\nYear: 2024"
+    "text": "A collection of invited talks, academic presentations, and conference contributions on bioinformatics, public health, and data science."
   },
   {
-    "objectID": "research/grants.html#research-funding",
-    "href": "research/grants.html#research-funding",
-    "title": "",
+    "objectID": "talks/state-the-art-of-microbial-genome-analysi/index.html",
+    "href": "talks/state-the-art-of-microbial-genome-analysi/index.html",
+    "title": "State the Art of Microbial Genome Analysis",
     "section": "",
-    "text": "Grant Mechanism: Tobacco Control Policy Research Grant Program\n\nAgency:\n\nBangladesh Center for Communication Programs (BCCP)\n\nBangladesh Tobacco Control Research Network (BTCRN)\n\nInstitute for Global Tobacco Control at the Johns Hopkins Bloomberg School of Public Health, Baltimore, USA\n\n\nTotal Requested: $10,000\n\nRole: Principal Investigator\n\nYear: 2024\n\n\n\n\n\n\nGrant Mechanism: Big Data in Public Health\n\nAgency: Research and Innovation Center (RIC)\n\nTotal Requested: $2,730\n\nRole: Principal Investigator\n\nYear: 2024\n\n\n\n\n\n\nGrant Mechanism: Capacity Strengthening of Multi-Actors to Limit Climate Change Impacts and Enhance Resilience (CAP-RES)\n\nAgency: International Center for Climate Change and Development (ICCCAD)\n\nTotal Requested: $4,550 USD\n\nRole: Principal Investigator\n\nYear: 2024\n\n\n\n\n\nGrant Mechanism: Capacity Strengthening of Multi-Actors to Limit Climate Change Impacts and Enhance Resilience (CAP-RES)\n\nAgency: International Center for Climate Change and Development (ICCCAD)\n\nTotal Requested: $4,550\n\nRole: Principal Investigator\n\nYear: 2024\n\n\n\n\n\n\nGrant Mechanism: Research Grants on Urban Climate Resilience\n\nAgency: Global Disaster Preparedness Center (GDPC)\n\nTotal Requested: $4,550 USD\n\nRole: Principal Investigator\n\nYear: 2024"
+    "text": "Genomics is the study of whole genomes of organisms, and incorporates elements from ge- netics. Genomics uses a combination of recombinant DNA, DNA sequencing methods, and bioinformatics to sequence, assemble, and analyse the structure and function of genomes. Genomics have become an inter-disciplinary(Computer Science, Statistics, Biology) sci- ence. The genomic data analysis steps typically include data collection, quality check and cleaning, processing, modeling, visualization and reporting."
   },
   {
-    "objectID": "research/interests.html",
-    "href": "research/interests.html",
-    "title": "",
+    "objectID": "teaching/index.html",
+    "href": "teaching/index.html",
+    "title": "Teaching",
     "section": "",
-    "text": "Deep learning has revolutionized clinical applications in radiology, offering advancements in classification, risk assessment, segmentation, diagnosis, prognosis, and therapy response prediction. Beyond diagnostic tasks, AI is transforming medical imaging by enhancing technical aspects such as artifact removal, image normalization, quality improvement, dose reduction, and accelerated imaging. My focuses on leveraging these deep learning innovations, particularly in neuroimaging, to improve diagnostic accuracy, optimize imaging protocols, and develop predictive models for neurological disorders.\n\n\n\n\nZhu et al., 2019"
+    "text": "A collection of courses, workshops, and educational resources."
   },
   {
-    "objectID": "research/interests.html#deep-learning-to-neuro-imaging-techniques",
-    "href": "research/interests.html#deep-learning-to-neuro-imaging-techniques",
-    "title": "",
-    "section": "",
-    "text": "Deep learning has revolutionized clinical applications in radiology, offering advancements in classification, risk assessment, segmentation, diagnosis, prognosis, and therapy response prediction. Beyond diagnostic tasks, AI is transforming medical imaging by enhancing technical aspects such as artifact removal, image normalization, quality improvement, dose reduction, and accelerated imaging. My focuses on leveraging these deep learning innovations, particularly in neuroimaging, to improve diagnostic accuracy, optimize imaging protocols, and develop predictive models for neurological disorders.\n\n\n\n\nZhu et al., 2019"
-  },
-  {
-    "objectID": "talks/mastering-biomedical-data-management/index.html",
-    "href": "talks/mastering-biomedical-data-management/index.html",
-    "title": "Mastering Biomedical Data Management",
-    "section": "",
-    "text": "In the era of big data and advanced technologies, the management of biomedical data presents both immense opportunities and significant challenges. In this talk, we will explore the strategies and techniques essential for mastering biomedical data management. From acquisition and storage to processing and analysis, effective management of biomedical data is crucial for advancing research, improving healthcare outcomes, and driving innovation. We will delve into key topics such as data standardization, integration, security, and interoperability, highlighting best practices and emerging trends in the field. Additionally, we will discuss the role of artificial intelligence and machine learning in enhancing biomedical data management processes. By mastering biomedical data management, researchers and healthcare professionals can unlock the full potential of data-driven approaches to address complex biomedical challenges and ultimately improve patient care."
-  },
-  {
-    "objectID": "talks/undergraduate-research-importance-benefits-and-challenges/index.html",
-    "href": "talks/undergraduate-research-importance-benefits-and-challenges/index.html",
-    "title": "Undergraduate Research - Importance, Benefits, and Challenges",
-    "section": "",
-    "text": "The Undergraduate Research Training Program(URTP) provides intermediate-level biomedical research training for undergraduates in a supportive environment with supplement educational activities. Furthermore, this course is designed to enhance the undergraduate research experience by focusing on critical communication skills for success in research and broadly transferable professional skills. Students will become part of a community of scholars in health sciences. The course is suitable for students beginning the first semester of undergraduate studies and completing their second or"
-  },
-  {
-    "objectID": "teaching/bioinformatics-bootcamp/index.html",
-    "href": "teaching/bioinformatics-bootcamp/index.html",
-    "title": "Bioinformatics BootCamp",
-    "section": "",
-    "text": "Bioinformatics BootCamp is an intensive and comprehensive training program designed to equip participants with the essential skills and knowledge in bioinformatics. This bootcamp offers a hands-on learning experience, covering a wide range of topics such as sequence analysis, genomics, proteomics, and data analysis using popular bioinformatics tools and software. Led by experienced instructors, participants will gain practical expertise, enabling them to effectively analyze biological data and make meaningful discoveries in the field of bioinformatics."
-  },
-  {
-    "objectID": "teaching/bioinformatics-bootcamp/index.html#bootcamp-description",
-    "href": "teaching/bioinformatics-bootcamp/index.html#bootcamp-description",
-    "title": "Bioinformatics BootCamp",
-    "section": "",
-    "text": "Bioinformatics BootCamp is an intensive and comprehensive training program designed to equip participants with the essential skills and knowledge in bioinformatics. This bootcamp offers a hands-on learning experience, covering a wide range of topics such as sequence analysis, genomics, proteomics, and data analysis using popular bioinformatics tools and software. Led by experienced instructors, participants will gain practical expertise, enabling them to effectively analyze biological data and make meaningful discoveries in the field of bioinformatics."
-  },
-  {
-    "objectID": "teaching/bioinformatics-bootcamp/index.html#learning-objectives",
-    "href": "teaching/bioinformatics-bootcamp/index.html#learning-objectives",
-    "title": "Bioinformatics BootCamp",
-    "section": "Learning Objectives",
-    "text": "Learning Objectives\nBy the end of the Bioinformatics BootCamp, participants will be able to:\n\nUnderstand Bioinformatics Fundamentals\nPerform Sequence Analysis\nExplore Structural Bioinformatics\nUtilize Bioinformatics Databases and Resources\nApply Data Visualization Techniques\nConduct Statistical Analysis in Bioinformatics\nSolve Bioinformatics Challenges\n\nProgram Website\n\nApply to the Program"
-  },
-  {
-    "objectID": "teaching/data-analysis-with-r/index.html",
-    "href": "teaching/data-analysis-with-r/index.html",
-    "title": "Data Analysis with R",
-    "section": "",
-    "text": "The purpose of this course is to provide a practical introduction to the programming language R for researchers in any field. We are convinced that R is a powerful tool that can ultimately make your life easier by enabling efficient solutions to your data analytical problems. Also, R is completely free. Who doesn’t like that?\nThis course aims to facilitate the participant’s first steps in R and equip them with the tools and understanding to expand their technical know-how according to the needs of their specific research. It is neither a computer science nor a methodological course, but aimed at the practical needs of empirically working researchers.\nYou might think of R as an overly complicated status symbol for ambitious quantitative researchers. This is not quite true anymore as R has become much more user-friendly over the last years. Think of R is your friend and helper if you are interested in doing: insightful graphs, regression analysis, QCA, quantitative text analysis, web-scraping, data visualization, systematic hand-coding of documents, formal modelling, etc.\nWhile this course is most likely to attract people with solid statistical training who usually use Stata or SPSS, it can easily be attended by a broader audience. All you really need to know is [I] the structure of a typical dataset in the social sciences (rows are observations, columns are variables) and [II] the logic of dependent and independent variables.\nYou will learn how to use R to handle your data, describe it, analyse it (regressions), and transform it into beautiful graphs. At the end, you will have an idea of what R can do, and the resources to teach yourself more where needed."
-  },
-  {
-    "objectID": "teaching/data-analysis-with-r/index.html#overview",
-    "href": "teaching/data-analysis-with-r/index.html#overview",
-    "title": "Data Analysis with R",
-    "section": "",
-    "text": "The purpose of this course is to provide a practical introduction to the programming language R for researchers in any field. We are convinced that R is a powerful tool that can ultimately make your life easier by enabling efficient solutions to your data analytical problems. Also, R is completely free. Who doesn’t like that?\nThis course aims to facilitate the participant’s first steps in R and equip them with the tools and understanding to expand their technical know-how according to the needs of their specific research. It is neither a computer science nor a methodological course, but aimed at the practical needs of empirically working researchers.\nYou might think of R as an overly complicated status symbol for ambitious quantitative researchers. This is not quite true anymore as R has become much more user-friendly over the last years. Think of R is your friend and helper if you are interested in doing: insightful graphs, regression analysis, QCA, quantitative text analysis, web-scraping, data visualization, systematic hand-coding of documents, formal modelling, etc.\nWhile this course is most likely to attract people with solid statistical training who usually use Stata or SPSS, it can easily be attended by a broader audience. All you really need to know is [I] the structure of a typical dataset in the social sciences (rows are observations, columns are variables) and [II] the logic of dependent and independent variables.\nYou will learn how to use R to handle your data, describe it, analyse it (regressions), and transform it into beautiful graphs. At the end, you will have an idea of what R can do, and the resources to teach yourself more where needed."
-  },
-  {
-    "objectID": "teaching/data-analysis-with-r/index.html#learning-outcomes",
-    "href": "teaching/data-analysis-with-r/index.html#learning-outcomes",
-    "title": "Data Analysis with R",
-    "section": "Learning outcomes",
-    "text": "Learning outcomes\nBy the end of the course students you shall be confident and equipped with all the knowledge required to perform analytical activities in R. Specifically,\n\nUnderstand the fundamental syntax of R through readings, practice exercises, demonstrations, and writing R code.\nApply critical programming language concepts such as data types, iteration, control structures, functions, and boolean operators by writing R programs and through examples\nImport a variety of data formats into R using RStudio\nPrepare or tidy datas for in preparation for analysis\nQuery data using SQL and R\nAnalyze a data set in R and present findings using the appropriate R packages\nVisualize data attributes using ggplot2 and other R packages.\n\nWebsite\n\nApply to the Program"
-  },
-  {
-    "objectID": "teaching/gtsummary-for-public-health/index.html",
-    "href": "teaching/gtsummary-for-public-health/index.html",
-    "title": "Public Health Insights: Clinical Reporting Using {gtsummary}",
-    "section": "",
-    "text": "Join us for an engaging and informative workshop on “Public Health Insights: Clinical Reporting Using {gtsummary}.” This workshop is designed to equip public health professionals, researchers, and analysts with the skills and knowledge to effectively utilize the {gtsummary} package for creating comprehensive clinical reports. {gtsummary} is a powerful tool that streamlines the process of summarizing data, making it an invaluable asset for deriving meaningful insights and driving evidence-based decisions in public health contexts.\nThrough hands-on demonstrations and interactive sessions, participants will learn how to leverage {gtsummary} to generate visually appealing and interpretable clinical reports. The workshop will cover essential concepts, best practices, and practical examples that demonstrate the application of {gtsummary} in real-world public health scenarios. Whether you’re a seasoned data analyst or new to the world of data reporting, this workshop will provide you with the tools and techniques needed to elevate your clinical reporting capabilities.\n\n\nThe gtsummary package provides an elegant and flexible way to create publication-ready summary tables in R.\nA critical part of the work of statisticians, data scientists, and analysts is summarizing data sets and regression models in R and publishing or sharing polished summary tables.\nThe gtsummary package was created to streamline these everyday analysis tasks by allowing users to easily create reproducible summaries of data sets, regression models, survey data, and survival data with a simple interface and very little code.\nThe package follows a tidy framework, making it easy to integrate with standard data workflows, and offers many table customization features through function arguments, helper functions, and custom themes.\n\n\n\nBuild, customize, and report tables often found in medical journals and other research-related publications.\n\n\n\nIf your answer to any of the following questions is “yes”, then this is the right workshop for you.\n\nDo you make summary tables in R (data, survey data, regression models, time-to-event data, adverse event reports)?\nDo you want your workflow to be reproducible?\nAre you often frustrated with the immense amount of code required to create great-looking tables in R?\n\nThe workshop is designed for those with some experience in R. It will be expected that you can perform basic data manipulation. Experience with the {tidyverse} and the %&gt;% operator is a plus, but not required.\n\n\n\nBefore attending the workshop please have the following installed and configured on your machine.\n\nRecent version of R\nRecent version of RStudio\nMost recent release of the gtsummary and other packages used in workshop.\ninstll_pkgs &lt;- \n  c(\"gtsummary\", \"tidyverse\", \"labelled\", \"usethis\", \n    \"causaldata\", \"fs\", \"skimr\", \"car\", \"emmeans\")\ninstall.packages(instll_pkgs)\nEnsure you can knit R markdown documents\n\nOpen RStudio and create a new Rmarkdown document\nSave the document and check you are able to knit it.\n\n\nWorkshop Website\n\nRegister"
-  },
-  {
-    "objectID": "teaching/gtsummary-for-public-health/index.html#what-is-gtsummary",
-    "href": "teaching/gtsummary-for-public-health/index.html#what-is-gtsummary",
-    "title": "Public Health Insights: Clinical Reporting Using {gtsummary}",
-    "section": "",
-    "text": "The gtsummary package provides an elegant and flexible way to create publication-ready summary tables in R.\nA critical part of the work of statisticians, data scientists, and analysts is summarizing data sets and regression models in R and publishing or sharing polished summary tables.\nThe gtsummary package was created to streamline these everyday analysis tasks by allowing users to easily create reproducible summaries of data sets, regression models, survey data, and survival data with a simple interface and very little code.\nThe package follows a tidy framework, making it easy to integrate with standard data workflows, and offers many table customization features through function arguments, helper functions, and custom themes."
-  },
-  {
-    "objectID": "teaching/gtsummary-for-public-health/index.html#learning-objectives",
-    "href": "teaching/gtsummary-for-public-health/index.html#learning-objectives",
-    "title": "Public Health Insights: Clinical Reporting Using {gtsummary}",
-    "section": "",
-    "text": "Build, customize, and report tables often found in medical journals and other research-related publications."
-  },
-  {
-    "objectID": "teaching/gtsummary-for-public-health/index.html#is-this-course-for-me",
-    "href": "teaching/gtsummary-for-public-health/index.html#is-this-course-for-me",
-    "title": "Public Health Insights: Clinical Reporting Using {gtsummary}",
-    "section": "",
-    "text": "If your answer to any of the following questions is “yes”, then this is the right workshop for you.\n\nDo you make summary tables in R (data, survey data, regression models, time-to-event data, adverse event reports)?\nDo you want your workflow to be reproducible?\nAre you often frustrated with the immense amount of code required to create great-looking tables in R?\n\nThe workshop is designed for those with some experience in R. It will be expected that you can perform basic data manipulation. Experience with the {tidyverse} and the %&gt;% operator is a plus, but not required."
-  },
-  {
-    "objectID": "teaching/gtsummary-for-public-health/index.html#prework",
-    "href": "teaching/gtsummary-for-public-health/index.html#prework",
-    "title": "Public Health Insights: Clinical Reporting Using {gtsummary}",
-    "section": "",
-    "text": "Before attending the workshop please have the following installed and configured on your machine.\n\nRecent version of R\nRecent version of RStudio\nMost recent release of the gtsummary and other packages used in workshop.\ninstll_pkgs &lt;- \n  c(\"gtsummary\", \"tidyverse\", \"labelled\", \"usethis\", \n    \"causaldata\", \"fs\", \"skimr\", \"car\", \"emmeans\")\ninstall.packages(instll_pkgs)\nEnsure you can knit R markdown documents\n\nOpen RStudio and create a new Rmarkdown document\nSave the document and check you are able to knit it.\n\n\nWorkshop Website\n\nRegister"
-  },
-  {
-    "objectID": "teaching/ml-for-bioinformatics/index.html",
-    "href": "teaching/ml-for-bioinformatics/index.html",
-    "title": "Machine Learning for Bioinformatics with Python",
-    "section": "",
-    "text": "The “Machine Learning for Bioinformatics with Python” course is designed to provide participants with a solid foundation in applying machine learning techniques to solve complex problems in bioinformatics. Through hands-on exercises and practical examples, participants will learn how to leverage Python’s powerful libraries for machine learning to analyze biological data, make predictions, and extract meaningful insights. This course bridges the gap between bioinformatics and machine learning, enabling participants to develop skills at the intersection of these fields."
-  },
-  {
-    "objectID": "teaching/ml-for-bioinformatics/index.html#overview",
-    "href": "teaching/ml-for-bioinformatics/index.html#overview",
-    "title": "Machine Learning for Bioinformatics with Python",
-    "section": "",
-    "text": "The “Machine Learning for Bioinformatics with Python” course is designed to provide participants with a solid foundation in applying machine learning techniques to solve complex problems in bioinformatics. Through hands-on exercises and practical examples, participants will learn how to leverage Python’s powerful libraries for machine learning to analyze biological data, make predictions, and extract meaningful insights. This course bridges the gap between bioinformatics and machine learning, enabling participants to develop skills at the intersection of these fields."
-  },
-  {
-    "objectID": "teaching/ml-for-bioinformatics/index.html#learning-objectives",
-    "href": "teaching/ml-for-bioinformatics/index.html#learning-objectives",
-    "title": "Machine Learning for Bioinformatics with Python",
-    "section": "Learning Objectives",
-    "text": "Learning Objectives\nAt the end of the tutorial, participants will be able to:\n\nUnderstand the Basics of Machine Learning in Bioinformatics\nPreprocess Biological Data for Machine Learning\nExplore Feature Selection and Dimensionality Reduction\nImplement Classification Algorithms\nPerform Regression Analysis on Biological Data\nUse Clustering Techniques for Pattern Discovery\n\nProgram Website\n\nApply to the Program"
-  },
-  {
-    "objectID": "teaching/python-for-health-data-analysis/index.html",
-    "href": "teaching/python-for-health-data-analysis/index.html",
-    "title": "Python for Health Data Analysis",
-    "section": "",
-    "text": "This comprehensive 12-week course was designed to equip participants with essential skills to analyze health data using Python. Health data analysis is a critical aspect of modern healthcare, enabling evidence- based decision making and insights for improving patient outcomes and public health initiatives.\nThroughout the course, students will learn how to work with real-world health datasets, implement data analysis techniques, and visualize results using powerful Python data science libraries. The course is designed for both beginners in Python and individuals with prior programming experience in other languages."
-  },
-  {
-    "objectID": "teaching/python-for-health-data-analysis/index.html#overview",
-    "href": "teaching/python-for-health-data-analysis/index.html#overview",
-    "title": "Python for Health Data Analysis",
-    "section": "",
-    "text": "This comprehensive 12-week course was designed to equip participants with essential skills to analyze health data using Python. Health data analysis is a critical aspect of modern healthcare, enabling evidence- based decision making and insights for improving patient outcomes and public health initiatives.\nThroughout the course, students will learn how to work with real-world health datasets, implement data analysis techniques, and visualize results using powerful Python data science libraries. The course is designed for both beginners in Python and individuals with prior programming experience in other languages."
-  },
-  {
-    "objectID": "teaching/python-for-health-data-analysis/index.html#learning-objectives",
-    "href": "teaching/python-for-health-data-analysis/index.html#learning-objectives",
-    "title": "Python for Health Data Analysis",
-    "section": "Learning Objectives",
-    "text": "Learning Objectives\nBy the end of this course, participants will be able to:\n\nUnderstanding the importance of health data analysis and its role in healthcare decision making\nPython libraries (Pandas, NumPy, and Matplotlib) were used to import, manipulate, and visualize health-related datasets.\nExploratory data analysis techniques were applied to gain insights and identify patterns in health data.\nPreprocess health data, handle missing values, and ensure data quality for machine learning applications.\nImplementation of basic machine-learning algorithms for predictive modeling.\nEvaluate machine learning model performance using evaluation metrics\nPerform model optimization and hyperparameter tuning to improve the machine learning model performance.\nExplore ethical considerations and challenges related to machine learning in the healthcare domain."
-  },
-  {
-    "objectID": "teaching/python-for-health-data-analysis/index.html#prerequisites",
-    "href": "teaching/python-for-health-data-analysis/index.html#prerequisites",
-    "title": "Python for Health Data Analysis",
-    "section": "Prerequisites",
-    "text": "Prerequisites\nThere are no specific prerequisites for this course. However, basic familiarity with programming concepts and Python syntax is beneficial. Participants with no prior Python experience were encouraged to review the fundamentals of Python programming prior to starting the course."
-  },
-  {
-    "objectID": "teaching/python-for-health-data-analysis/index.html#organizer",
-    "href": "teaching/python-for-health-data-analysis/index.html#organizer",
-    "title": "Python for Health Data Analysis",
-    "section": "Organizer",
-    "text": "Organizer\nThe Center for Bioinformatics Learning Advancement and Systematics Training(cBLAST) under the authority of the University of Dhaka was established in October, 2014. The Center was established in view of the importance of ‘Bioinformatics’ for solving biological problems encountered during pursuit of most of the Life Sciences subjects. The applicability of Bioinformatics for managing biological data was appreciated and the Center was created as a platform for understanding and learning it. Dr. Zeba I. Seraj was appointed as the Director of the Center to serve a term of 3 years from January 1, 2015 and further re-appointed as the Director of the Center from January 1, 2018 for last 3 years. The center is managed by an Administrative Council of 13 members, chaired by the Honorable Vice Chancellor of the University of Dhaka. Positional members are the Dean of Biological Sciences and the Chair of the BMB Department. In addition, there are 5 more members from BMBDU, one from GEBDU, one from ISRT, DU, one from IIT, DU and one from industry.\nProgram Website\n\nApply to the Program"
-  },
-  {
-    "objectID": "teaching/r-for-research/index.html",
-    "href": "teaching/r-for-research/index.html",
-    "title": "R for Research",
-    "section": "",
-    "text": "The purpose of this course is to provide a practical introduction to the programming language R for researchers in any field. We are convinced that R is a powerful tool that can ultimately make your life easier by enabling efficient solutions to your data analytical problems. Also, R is completely free. Who doesn’t like that?\nThis course aims to facilitate the participant’s first steps in R and equip them with the tools and understanding to expand their technical know-how according to the needs of their specific research. It is neither a computer science nor a methodological course, but aimed at the practical needs of empirically working researchers.\n\n\nBy the end of the course students you shall be confident and equipped with all the knowledge required to perform analytical activities in R. Specifically,\n\nUnderstand the fundamental syntax of R through readings, practice exercises, demonstrations, and writing R code.\nApply critical programming language concepts such as data types, iteration, control structures, functions, and boolean operators by writing R programs and through examples\nImport a variety of data formats into R using RStudio\nPrepare or tidy data for in preparation for analysis\nQuery data using SQL and R\nAnalyze a data set in R and present findings using the appropriate R packages\nVisualize data attributes using ggplot2 and other R packages.\n\nProgram Website\n\nApply to the Program"
-  },
-  {
-    "objectID": "teaching/r-for-research/index.html#learning-outcomes",
-    "href": "teaching/r-for-research/index.html#learning-outcomes",
-    "title": "R for Research",
-    "section": "",
-    "text": "By the end of the course students you shall be confident and equipped with all the knowledge required to perform analytical activities in R. Specifically,\n\nUnderstand the fundamental syntax of R through readings, practice exercises, demonstrations, and writing R code.\nApply critical programming language concepts such as data types, iteration, control structures, functions, and boolean operators by writing R programs and through examples\nImport a variety of data formats into R using RStudio\nPrepare or tidy data for in preparation for analysis\nQuery data using SQL and R\nAnalyze a data set in R and present findings using the appropriate R packages\nVisualize data attributes using ggplot2 and other R packages.\n\nProgram Website\n\nApply to the Program"
-  },
-  {
-    "objectID": "teaching/single-cell-seq-analysis-with-r/index.html",
-    "href": "teaching/single-cell-seq-analysis-with-r/index.html",
-    "title": "Single-Cell RNA-Seq Analysis with R",
-    "section": "",
-    "text": "The Single-Cell RNA-Seq Analysis with R course is designed for researchers and bioinformaticians interested in unlocking insights from single-cell transcriptomics data using the R programming language. Single-cell RNA sequencing (scRNA-seq) has revolutionized our understanding of cellular heterogeneity and gene expression dynamics. This course provides a comprehensive overview of scRNA-seq data analysis, covering preprocessing, quality control, dimensionality reduction, cell clustering, differential expression analysis, and visualization techniques."
-  },
-  {
-    "objectID": "teaching/single-cell-seq-analysis-with-r/index.html#course-description",
-    "href": "teaching/single-cell-seq-analysis-with-r/index.html#course-description",
-    "title": "Single-Cell RNA-Seq Analysis with R",
-    "section": "",
-    "text": "The Single-Cell RNA-Seq Analysis with R course is designed for researchers and bioinformaticians interested in unlocking insights from single-cell transcriptomics data using the R programming language. Single-cell RNA sequencing (scRNA-seq) has revolutionized our understanding of cellular heterogeneity and gene expression dynamics. This course provides a comprehensive overview of scRNA-seq data analysis, covering preprocessing, quality control, dimensionality reduction, cell clustering, differential expression analysis, and visualization techniques."
-  },
-  {
-    "objectID": "teaching/single-cell-seq-analysis-with-r/index.html#learning-objectives",
-    "href": "teaching/single-cell-seq-analysis-with-r/index.html#learning-objectives",
-    "title": "Single-Cell RNA-Seq Analysis with R",
-    "section": "Learning Objectives",
-    "text": "Learning Objectives\nBy the end of the Single-Cell RNA-Seq Analysis with R course, participants will be able to:\n\nIntroduction to Single-Cell RNA-Seq\nPreprocessing and Quality Control\nDimensionality Reduction Techniques\nCell Clustering and Annotation\nDifferential Expression Analysis\nTrajectory Analysis and Pseudotime\nFunctional Enrichment Analysis\nData Visualization\nIntegration with Other Omics Data\nInterpreting Results and Reporting\n\nProgram Website\n\nApply to the Program"
-  },
-  {
-    "objectID": "teaching/tcga-data-analysis-with-r/index.html",
-    "href": "teaching/tcga-data-analysis-with-r/index.html",
-    "title": "TCGA Data Analysis with R",
-    "section": "",
-    "text": "The TCGA Data Analysis with R course is designed to equip participants with the knowledge and skills necessary to effectively analyze and interpret data from The Cancer Genome Atlas (TCGA) using the R programming language. TCGA is a valuable resource for cancer researchers, providing comprehensive genomic and clinical data on various cancer types. This course will cover essential concepts, tools, and techniques for data preprocessing, exploratory data analysis, differential gene expression analysis, survival analysis, and data visualization using R. Participants will gain hands-on experience by working with real TCGA datasets and will learn to derive meaningful insights from complex cancer genomics data."
-  },
-  {
-    "objectID": "teaching/tcga-data-analysis-with-r/index.html#course-description",
-    "href": "teaching/tcga-data-analysis-with-r/index.html#course-description",
-    "title": "TCGA Data Analysis with R",
-    "section": "",
-    "text": "The TCGA Data Analysis with R course is designed to equip participants with the knowledge and skills necessary to effectively analyze and interpret data from The Cancer Genome Atlas (TCGA) using the R programming language. TCGA is a valuable resource for cancer researchers, providing comprehensive genomic and clinical data on various cancer types. This course will cover essential concepts, tools, and techniques for data preprocessing, exploratory data analysis, differential gene expression analysis, survival analysis, and data visualization using R. Participants will gain hands-on experience by working with real TCGA datasets and will learn to derive meaningful insights from complex cancer genomics data."
-  },
-  {
-    "objectID": "teaching/tcga-data-analysis-with-r/index.html#learning-objectives",
-    "href": "teaching/tcga-data-analysis-with-r/index.html#learning-objectives",
-    "title": "TCGA Data Analysis with R",
-    "section": "Learning Objectives",
-    "text": "Learning Objectives\n\nIntroduce you to the TCGA (The Cancer Genome Atlas) data available at the NCI’s Genomic Data Commons (GDC).\nDemonstrate how to access and import TCGA data using the R/Bioconductor package TCGAbiolinks (Colaprico et al. 2015).\nProvide instruction to visualize copy number alteration and mutation data using the R/Bioconductor package maftools."
-  },
-  {
-    "objectID": "teaching/tcga-data-analysis-with-r/index.html#pre-requisites",
-    "href": "teaching/tcga-data-analysis-with-r/index.html#pre-requisites",
-    "title": "TCGA Data Analysis with R",
-    "section": "Pre-requisites",
-    "text": "Pre-requisites\n\nBasic knowledge of R syntax\nUnderstand the pipe operator (“%&gt;%”) (help material https://r4ds.had.co.nz/pipes.html)\nUnderstand the SummarizedExperiment data structure (help material http://bioconductor.org/packages/SummarizedExperiment/)"
-  },
-  {
-    "objectID": "teaching/tcga-data-analysis-with-r/index.html#course-format",
-    "href": "teaching/tcga-data-analysis-with-r/index.html#course-format",
-    "title": "TCGA Data Analysis with R",
-    "section": "Course Format",
-    "text": "Course Format\nThe course will be delivered through a combination of lectures, hands-on practical sessions, and interactive discussions. Participants will have access to real TCGA datasets and will be guided through step-by-step analysis using R. Additionally, participants will be provided with relevant learning resources, including code examples and data repositories, to support their learning outside the course hours.\nProgram Website\n\nApply to the Program"
+    "objectID": "teaching/index.html#courses",
+    "href": "teaching/index.html#courses",
+    "title": "Teaching",
+    "section": "Courses",
+    "text": "Courses\n\n\n\nBIOS 7060Course\n\n\nApplied Machine Learning for Healthcare\n\n\nLearn to apply machine learning techniques to healthcare data, including supervised and unsupervised learning, deep learning, and model validation in clinical settings.\n\n\nSyllabusSlidesCode\n\n\n\n\nBIOS 6050Course\n\n\nFoundations of Health Data Science\n\n\nMaster fundamental concepts in health data science including data management, statistical analysis, visualization, and reproducible research practices.\n\n\nSyllabusSlidesCode\n\n\n\n\nBINF 7020Workshop\n\n\nBioinformatics Bootcamp\n\n\nIntensive hands-on training in bioinformatics tools and techniques, covering sequence analysis, genomics, and computational biology workflows.\n\n\nSyllabusSlidesCode\n\n\n\n\nSTAT 5530Course\n\n\nData Analysis with R\n\n\nComprehensive introduction to data analysis using R, covering data manipulation, statistical modeling, and visualization for research applications.\n\n\nSyllabusSlidesCode\n\n\n\n\nBINF 6010Course\n\n\nR for Bioinformatics\n\n\nLearn to use R for bioinformatics applications including sequence analysis, phylogenetics, and biological data visualization.\n\n\nSyllabusSlidesCode\n\n\n\n\nBINF 7030Course\n\n\nMachine Learning for Bioinformatics\n\n\nApply machine learning methods to biological problems including protein structure prediction, gene expression analysis, and drug discovery.\n\n\nSyllabusSlidesCode\n\n\n\n\nBIOS 5040Course\n\n\nPython for Health Data Analysis\n\n\nMaster Python programming for health data analysis including pandas, numpy, scikit-learn, and healthcare-specific libraries.\n\n\nSyllabusSlidesCode\n\n\n\n\nGIS 6020Workshop\n\n\nPython for Geospatial Health Data Science\n\n\nLearn to analyze geospatial health data using Python, including mapping disease patterns, spatial statistics, and environmental health applications.\n\n\nSyllabusSlidesCode\n\n\n\n\nBINF 8010Workshop\n\n\nRNA-seq Data Analysis with R\n\n\nComprehensive workflow for RNA-seq analysis including quality control, differential expression, pathway analysis, and visualization.\n\n\nSyllabusSlidesCode\n\n\n\n\nBINF 8020Workshop\n\n\nSingle-cell RNA-seq Analysis with R\n\n\nAdvanced techniques for single-cell RNA-seq analysis including clustering, trajectory analysis, and cell type identification.\n\n\nSyllabusSlidesCode\n\n\n\n\nBIOS 6070Workshop\n\n\nBuilding Dashboards with R\n\n\nCreate interactive dashboards and web applications using R Shiny, plotly, and other visualization tools for health data.\n\n\nSyllabusSlidesCode\n\n\n\n\nBINF 8030Workshop\n\n\nTCGA Data Analysis with R\n\n\nAccess and analyze cancer genomics data from The Cancer Genome Atlas using R and Bioconductor packages.\n\n\nSyllabusSlidesCode\n\n\n\n\nSTAT 5010Seminar\n\n\ngtsummary for Public Health\n\n\nMaster the gtsummary R package for creating publication-ready summary tables and statistical reports in public health research.\n\n\nSyllabusSlidesCode\n\n\n\n\nSTAT 4020Course\n\n\nR for Research\n\n\nComprehensive R programming course focused on research applications, reproducible research, and advanced statistical analysis.\n\n\nSyllabusSlidesCode\n\n\n\n\nSTAT 3010Course\n\n\nSPSS for Health Sciences\n\n\nLearn statistical analysis using SPSS with focus on health sciences applications including descriptive statistics, hypothesis testing, and regression analysis.\n\n\nSyllabusSlidesCode"
   },
   {
     "objectID": "CLAUDE.html",
@@ -945,38 +525,38 @@
     "text": "The site uses Quarto’s freeze feature, so only changed content gets re-rendered\nAcademic icons are used via shortcodes like \nThe site includes social media integration and contact information\nBootstrap-based themes with custom CSS styling"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Md. Jubayer Hossain",
+    "objectID": "publications/index.html",
+    "href": "publications/index.html",
+    "title": "",
     "section": "",
-    "text": "I am the Founder and Chief Executive Officer of DeepBio Limited, and the Founder and Executive Director of CHIRAL Bangladesh, its dedicated research wing. I also serve as Faculty at the Center for Bioinformatics Learning Advancement and Systematics Training (cBLAST), University of Dhaka, and as a Visiting Researcher in the Department of Public Health, Daffodil International University. At Daffodil International University, I also teach in the Micro-Credential Academy as an Instructor for the course AI for Public Health.\nAs an educator, I hold the position of Lead Instructor and Organizer at the Training Unit of CHIRAL and DeepBio Limited. I also serve as Program Lead for the GSA Bioinformatics Internship, a collaborative initiative jointly organized by the Global Network of Bangladeshi Biotechnologists (GNOBB), ASI School of Life, and the Society for the Popularization of Science, Bangladesh (SPSB).\nI completed my Master of Science (2020) and Bachelor of Science (2019) in Microbiology from Jagannath University. My research focuses on applying artificial intelligence (AI) to health data—including multi-omics datasets (genomics, transcriptomics, proteomics) and neuroimaging—to identify clinically actionable biomarkers and build predictive models for the early diagnosis and treatment of neurological disorders and cancer. I am also passionate about visualizing complex data and models to improve biological interpretation and support clinical applications.\nPlease contact me to discuss potential opportunities."
+    "text": "// Publication filter functionality\n{\n  const filterButtons = document.querySelectorAll('.filter-btn');\n  const publicationItems = document.querySelectorAll('.publication-item');\n\n  // Filter function\n  function filterPublications(filterValue) {\n    publicationItems.forEach(item =&gt; {\n      if (filterValue === 'all' || item.classList.contains(filterValue)) {\n        item.classList.remove('hidden');\n        item.classList.add('filtering-in');\n        item.classList.remove('filtering-out');\n      } else {\n        item.classList.add('filtering-out');\n        item.classList.remove('filtering-in');\n        setTimeout(() =&gt; {\n          item.classList.add('hidden');\n        }, 300);\n      }\n    });\n\n    // Update active button\n    filterButtons.forEach(btn =&gt; {\n      btn.classList.remove('active');\n    });\n    document.querySelector(`[data-filter=\"${filterValue}\"]`).classList.add('active');\n\n    // Show result count\n    updateResultCount(filterValue);\n  }\n\n  // Result counter\n  function updateResultCount(filterValue) {\n    const visibleItems = document.querySelectorAll(`.publication-item${filterValue === 'all' ? '' : '.' + filterValue}`);\n    const resultContainer = document.querySelector('.filter-results');\n\n    if (!resultContainer) {\n      const container = document.createElement('div');\n      container.className = 'filter-results';\n      document.querySelector('.publications-container').parentNode.insertBefore(container, document.querySelector('.publications-container'));\n    }\n\n    const count = visibleItems.length;\n    const resultText = count === 1 ? '1 publication found' : `${count} publications found`;\n    document.querySelector('.filter-results').textContent = filterValue === 'all' ? '' : resultText;\n  }\n\n  // Add event listeners\n  filterButtons.forEach(button =&gt; {\n    button.addEventListener('click', () =&gt; {\n      const filterValue = button.getAttribute('data-filter');\n      filterPublications(filterValue);\n    });\n  });\n\n  return \"Publication filters initialized\";\n}"
   },
   {
-    "objectID": "index.html#bio",
-    "href": "index.html#bio",
-    "title": "Md. Jubayer Hossain",
-    "section": "",
-    "text": "I am the Founder and Chief Executive Officer of DeepBio Limited, and the Founder and Executive Director of CHIRAL Bangladesh, its dedicated research wing. I also serve as Faculty at the Center for Bioinformatics Learning Advancement and Systematics Training (cBLAST), University of Dhaka, and as a Visiting Researcher in the Department of Public Health, Daffodil International University. At Daffodil International University, I also teach in the Micro-Credential Academy as an Instructor for the course AI for Public Health.\nAs an educator, I hold the position of Lead Instructor and Organizer at the Training Unit of CHIRAL and DeepBio Limited. I also serve as Program Lead for the GSA Bioinformatics Internship, a collaborative initiative jointly organized by the Global Network of Bangladeshi Biotechnologists (GNOBB), ASI School of Life, and the Society for the Popularization of Science, Bangladesh (SPSB).\nI completed my Master of Science (2020) and Bachelor of Science (2019) in Microbiology from Jagannath University. My research focuses on applying artificial intelligence (AI) to health data—including multi-omics datasets (genomics, transcriptomics, proteomics) and neuroimaging—to identify clinically actionable biomarkers and build predictive models for the early diagnosis and treatment of neurological disorders and cancer. I am also passionate about visualizing complex data and models to improve biological interpretation and support clinical applications.\nPlease contact me to discuss potential opportunities."
+    "objectID": "talks/index.html#filter-by-category",
+    "href": "talks/index.html#filter-by-category",
+    "title": "Talks",
+    "section": "Filter by Category",
+    "text": "Filter by Category\n\n\nAll Talks\n\n\n📊Data Science\n\n\n🧬Bioinformatics\n\n\n🎓Education\n\n\n🤖Machine Learning\n\n\n🔬Research Methods"
   },
   {
-    "objectID": "research/index.html#research-areas",
-    "href": "research/index.html#research-areas",
-    "title": "Research Portfolio",
-    "section": "Research Areas",
-    "text": "Research Areas\n\n\n\n🧠\n\n\nNeuroepidemiology & Brain Health\nInvestigating the epidemiology of neurological disorders using computational approaches. Focus on population-based studies, risk factor identification, and predictive modeling for neurodegenerative diseases.\n\n\n\n\n🎯\n\n\nCancer Epidemiology & Oncology\nApplying machine learning and statistical methods to understand cancer patterns, survival analysis, and treatment outcomes. Development of predictive models for early detection and prognosis.\n\n\n\n\n🧬\n\n\nBioinformatics & Genomics\nComputational analysis of genomic data, transcriptomics, and multi-omics integration. Development of algorithms for variant analysis, gene expression profiling, and precision medicine.\n\n\n\n\n🤖\n\n\nAI in Drug Discovery\nLeveraging artificial intelligence for pharmaceutical research, including molecular design, drug-target interaction prediction, and compound optimization using deep learning approaches.\n\n\n\n\n🏥\n\n\nPublic Health Informatics\nApplication of data science methods to public health challenges, including disease surveillance, health policy analysis, and environmental health impact assessment.\n\n\n\n\n🔬\n\n\nComputational Biology\nDevelopment of computational methods for biological data analysis, including phylogenetics, protein structure prediction, and systems biology approaches."
+    "objectID": "talks/index.html#recent-talks",
+    "href": "talks/index.html#recent-talks",
+    "title": "Talks",
+    "section": "Recent Talks",
+    "text": "Recent Talks\n\n\n\nFeatured\n\n\n\n📊Data Science\n\n\nInvited Talk\n\n\n\n\nMastering Biomedical Data Management\n\n\n\nIFMSA Bangladesh Annual ConferenceDhaka, Bangladesh\n\n\nMarch 15, 2024\n\n\n\nComprehensive overview of modern approaches to biomedical data management, including best practices for data collection, storage, and analysis in healthcare research.\n\n\nData Management StrategiesHealthcare Data StandardsPrivacy and SecurityReproducible Research\n\n\nView Slides\n\n\n\n\n\n\n🤖Machine Learning\n\n\nConference Presentation\n\n\n\n\nMachine Learning Applications in Epidemiological Research\n\n\n\nInternational Conference on Public HealthDhaka, Bangladesh\n\n\nNovember 8, 2023\n\n\n\nExploring the integration of machine learning techniques in epidemiological studies, with focus on disease prediction models and population health analytics.\n\n\nPredictive ModelingPopulation HealthDisease SurveillanceAI in Healthcare\n\n\n\n\n\n\n\n\n\n🔬Research Methods\n\n\nWorkshop\n\n\n\n\nOpen Science and Reproducible Research in Bioinformatics\n\n\n\nBangladesh Bioinformatics SocietyDhaka, Bangladesh\n\n\nAugust 25, 2023\n\n\n\nHands-on workshop on implementing open science practices and ensuring reproducibility in bioinformatics research workflows.\n\n\nOpen Science PrinciplesReproducible WorkflowsVersion ControlData Sharing\n\n\n\n\n\n\n\n\nFeatured\n\n\n\n🧬Bioinformatics\n\n\nAcademic Talk\n\n\n\n\nState of the Art in Microbial Genome Analysis\n\n\n\nDepartment of Microbiology, Jagannath UniversityDhaka, Bangladesh\n\n\nSeptember 20, 2022\n\n\n\nLatest advances in computational methods for microbial genome analysis, including assembly algorithms, annotation tools, and comparative genomics approaches.\n\n\nGenome AssemblyFunctional AnnotationComparative GenomicsPhylogenetic Analysis\n\n\nView Slides\n\n\n\n\n\n\n🎓Education\n\n\nInvited Talk\n\n\n\n\nUndergraduate Research: Importance, Benefits, and Challenges\n\n\n\nCHIRAL Bangladesh WorkshopDhaka, Bangladesh\n\n\nJuly 10, 2022\n\n\n\nExploring the critical role of undergraduate research in academic development, discussing benefits for students and institutions, and addressing common challenges in implementation.\n\n\nResearch MethodologyStudent MentorshipAcademic DevelopmentCareer Preparation\n\n\nView Slides"
   },
   {
-    "objectID": "research/index.html#current-projects",
-    "href": "research/index.html#current-projects",
-    "title": "Research Portfolio",
-    "section": "Current Projects",
-    "text": "Current Projects\n\n\n\nActive\n\n\n\nSecondhand Smoke Exposure Assessment\n\n\nFunding: Tobacco Control Policy Research Grant Program ($10,000) Duration: 2024 - Present Role: Principal Investigator\n\n\nInvestigating compliance with smoke-free policies in public spaces across Bangladesh. This multi-site study combines observational data collection with policy analysis to assess the effectiveness of tobacco control measures.\n\n\n\nPublic Health\nPolicy Research\nEnvironmental Health\n\n\n\n\n\n\nActive\n\n\n\nDeep Learning for Breast Cancer Detection\n\n\nFunding: Research and Innovation Center ($2,730) Duration: 2024 - Present Role: Principal Investigator\n\n\nDevelopment of an AI-powered early detection system for breast cancer using deep learning algorithms. The project focuses on improving diagnostic accuracy and reducing false positive rates in mammography screening.\n\n\n\nDeep Learning\nMedical Imaging\nCancer Research\n\n\n\n\n\n\nActive\n\n\n\nAir Quality Impact on Asthma Prevalence\n\n\nFunding: International Center for Climate Change and Development ($4,550) Duration: 2024 - Present Role: Principal Investigator\n\n\nComprehensive study examining the relationship between air quality metrics and asthma prevalence in urban areas of Bangladesh. Integrating environmental monitoring data with health surveillance systems.\n\n\n\nEnvironmental Health\nClimate Change\nRespiratory Disease\n\n\n\n\n\n\nActive\n\n\n\nClimate-Related Health Surveillance System\n\n\nFunding: Global Disaster Preparedness Center ($4,550) Duration: 2024 - Present Role: Principal Investigator\n\n\nDevelopment of early warning systems for climate-related health threats including waterborne diseases and heat-related illnesses. Focus on vulnerable populations in flood and drought-prone regions.\n\n\n\nClimate Health\nDisease Surveillance\nEarly Warning Systems\n\n\n\n\n\n\nCompleted\n\n\n\nDeep Learning Framework for Neuroimaging\n\n\nDuration: 2023 - 2024 Role: Lead Researcher\n\n\nDeveloped innovative deep learning approaches for neuroimaging analysis, focusing on artifact removal, image quality enhancement, and diagnostic prediction for neurological disorders.\n\n\n\nNeuroimaging\nDeep Learning\nMedical AI\n\n\n\n\n\n\nCompleted\n\n\n\nGenomic Data Analysis Pipeline\n\n\nDuration: 2022 - 2023 Role: Principal Investigator\n\n\nCreated comprehensive bioinformatics pipeline for genomic variant analysis and interpretation, with applications in precision medicine and population genetics studies.\n\n\n\nGenomics\nBioinformatics\nPrecision Medicine"
+    "objectID": "talks/index.html#talks-1",
+    "href": "talks/index.html#talks-1",
+    "title": "Talks",
+    "section": "Talks",
+    "text": "Talks\n\n\n\n\nInvited Talk\n\n\nMarch 15, 2024\n\n\n\n\nMastering Biomedical Data Management\n\n\nIFMSA Bangladesh Annual ConferenceDhaka, Bangladesh\n\n\nComprehensive overview of modern approaches to biomedical data management, including best practices for data collection, storage, and analysis in healthcare research.\n\n\nView Slides\n\n\n\n\n\n\nConference Presentation\n\n\nNovember 8, 2023\n\n\n\n\nMachine Learning Applications in Epidemiological Research\n\n\nInternational Conference on Public HealthDhaka, Bangladesh\n\n\nExploring the integration of machine learning techniques in epidemiological studies, with focus on disease prediction models and population health analytics.\n\n\n\n\n\n\nWorkshop\n\n\nAugust 25, 2023\n\n\n\n\nOpen Science and Reproducible Research in Bioinformatics\n\n\nBangladesh Bioinformatics SocietyDhaka, Bangladesh\n\n\nHands-on workshop on implementing open science practices and ensuring reproducibility in bioinformatics research workflows.\n\n\n\n\n\n\nAcademic Talk\n\n\nSeptember 20, 2022\n\n\n\n\nState of the Art in Microbial Genome Analysis\n\n\nDepartment of Microbiology, Jagannath UniversityDhaka, Bangladesh\n\n\nLatest advances in computational methods for microbial genome analysis, including assembly algorithms, annotation tools, and comparative genomics approaches.\n\n\nView Slides\n\n\n\n\n\n\nInvited Talk\n\n\nJuly 10, 2022\n\n\n\n\nUndergraduate Research: Importance, Benefits, and Challenges\n\n\nCHIRAL Bangladesh WorkshopDhaka, Bangladesh\n\n\nExploring the critical role of undergraduate research in academic development, discussing benefits for students and institutions, and addressing common challenges in implementation.\n\n\nView Slides"
   },
   {
-    "objectID": "research/index.html#research-impact",
-    "href": "research/index.html#research-impact",
-    "title": "Research Portfolio",
-    "section": "Research Impact",
-    "text": "Research Impact\n\n\n\n$25,400+\n\n\nTotal Research Funding\n\n\n\n\n15+\n\n\nResearch Projects\n\n\n\n\n8+\n\n\nCollaborating Institutions\n\n\n\n\n6\n\n\nResearch Areas"
+    "objectID": "press/index.html#recent-media-coverage",
+    "href": "press/index.html#recent-media-coverage",
+    "title": "Media Coverage",
+    "section": "Recent Media Coverage",
+    "text": "Recent Media Coverage\n\n\n\n\n📖Feature Article\n\n\n27 May 2024\n\n\n\n\nWhat the Rise in Self-Medication Tells Us About the Country’s Healthcare System\n\n\nThe Business Standard • Healthcare Policy\n\n\nAnalysis of self-medication trends and their implications for healthcare accessibility and quality in Bangladesh.\n\n\nSelf-MedicationHealthcare AccessHealth PolicyPublic Health\n\n\nRead Article\n\n\n\n\n\n\n💬Expert Commentary\n\n\n22 April 2024\n\n\n\n\nData Science Applications in Epidemiological Research\n\n\nScience Today Bangladesh • Research Methods\n\n\nExploration of data science methodologies in epidemiological studies and their implications for public health policy.\n\n\nData ScienceEpidemiologyPublic HealthResearch Methods\n\n\nRead Article\n\n\n\n\n\n\n🎤Interview\n\n\n15 March 2024\n\n\n\n\nAI in Healthcare: Transforming Medical Diagnosis and Treatment\n\n\nHealth Innovation Weekly • Technology in Health\n\n\nExpert insights on AI applications in medical diagnosis and their potential impact on healthcare accessibility.\n\n\nArtificial IntelligenceHealthcare TechnologyMedical DiagnosisInnovation\n\n\nRead Article\n\n\n\n\n\n\n📰News Article\n\n\n08 February 2024\n\n\n\n\nParental Lack of Antibiotic Knowledge Imperils Child Health in Bangladesh: Study\n\n\nThe Business Standard • Health Research\n\n\nExpert commentary on antibiotic misuse research highlighting the critical need for better health education in Bangladesh.\n\n\nAntibiotic ResistanceChild HealthPublic HealthBangladesh Healthcare\n\n\nRead Article\n\n\n\n\n\n\n👥Panel Discussion\n\n\n10 January 2024\n\n\n\n\nBuilding Research Capacity in Bangladesh: Challenges and Opportunities\n\n\nAcademic Quarterly • Academic Development\n\n\nComprehensive analysis of research ecosystem challenges and potential solutions for academic advancement in Bangladesh.\n\n\nResearch CapacityAcademic DevelopmentHigher EducationBangladesh\n\n\nRead Article"
   }
 ]
