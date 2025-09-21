@@ -1,6 +1,6 @@
 [build]
-  # Build command
-  command = "quarto render"
+  # Build command - use our custom build script
+  command = "chmod +x build.sh && ./build.sh"
 
   # Output directory (where the rendered site is)
   publish = "docs"
@@ -9,6 +9,8 @@
   [build.environment]
     QUARTO_DENO = "true"
     QUARTO_DENO_V8_OPTIONS = "--max-heap-size=3000"
+    QUARTO_R = "true"
+    R_LIBS_USER = "/opt/R/library"
 
 [build.processing]
   # Skip processing of some file types

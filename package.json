@@ -14,7 +14,7 @@
     "setup": "npm install && echo 'Setup complete! Run npm run dev to start development server.'",
     "deploy": "quarto render && netlify deploy --prod --dir=docs",
     "deploy:preview": "quarto render && netlify deploy --dir=docs",
-    "netlify:build": "quarto render",
+    "netlify:build": "./build.sh",
     "prerender": "npm run clean"
   },
   "devDependencies": {

@@ -20,7 +20,7 @@ This document explains how to deploy the Jubayer Hossain academic website to Net
    - Select the repository: `hossainlab.github.io`
 
 2. **Configure Build Settings:**
-   - **Build command:** `quarto render`
+   - **Build command:** `./build.sh`
    - **Publish directory:** `docs`
    - **Base directory:** (leave empty)
 
