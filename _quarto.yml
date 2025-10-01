@@ -1,0 +1,66 @@
+project:
+  type: website
+  output-dir: docs
+
+# Meta
+description-meta: "Academic Website for Jubayer Hossain"
+author-meta: "Jubayer Hossain"
+
+website:
+  page-navigation: true
+  title: "Jubayer Hossain"
+  image: "files/images/jubayer.png"
+  favicon: "/files/profiles/icon.png"
+  description: "Academic Website for Jubayer Hossain"
+
+  page-footer:
+    center: "&copy; Copyright 2025, Jubayer Hossain"
+    
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      # - href: projects/index.qmd
+      #   text: Projects
+
+    right:
+      - icon: envelope
+        aria-label: email
+        href: "mailto:hossainmj@gmail.com"
+      - text: "{{< ai orcid >}}"
+        aria-label: orcid
+        href: https://orcid.org/0000-0001-9323-4997
+        target: _blank
+      - text: "{{< ai google-scholar >}}"
+        aria-label: google-scholar
+        href: https://scholar.google.com/citations?user=9_K4ekoAAAAJ&hl=en&authuser=5
+        target: _blank
+      - text: "{{< ai researchgate >}}"
+        aria-label: researchgate
+        href: https://scholar.google.com/citations?user=9_K4ekoAAAAJ&hl=en&authuser=5
+        target: _blank
+      - icon: linkedin
+        aria-label: linkedin
+        href: https://www.linkedin.com/in/hossainmj
+        target: _blank
+      - icon: twitter
+        aria-label: twitter
+        href: https://twitter.com/hossain_lab
+        target: _blank
+      - icon: github
+        aria-label: github
+        href: https://github.com/hossainlab
+        target: _blank
+      - icon: youtube
+        aria-label: youtube
+        href: https://www.youtube.com/@hossainlab
+        target: _blank
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+

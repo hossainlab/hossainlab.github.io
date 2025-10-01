@@ -1,0 +1,45 @@
+---
+title: "Jubaer Hossain"
+subtitle: "Researcher, Educator & Entrepreneur"
+description-meta: "Quarto Academic Website for Jubayer"
+image: files/profiles/jubayer.png
+page-layout: full
+about:
+  id: hero-heading
+  template: trestles
+  image-shape: rectangle
+  links:
+    - icon: envelope
+      href: mailto:email@gmail.com    
+    - icon: linkedin
+      href: https://linkedin.com
+      target: _blank
+    - text: "{{< ai orcid >}}"
+      href: https://orcid.org
+      target: _blank
+    - text: "{{< ai google-scholar >}}"
+      href: https://scholar.google.com
+      target: _blank
+---
+
+::: {#hero-heading}
+
+I'm a Bioinformatics researcher specializing in bulk and single-cell RNA-seq, multi-omics integration, and machine learning applications in bioinformatics. My work spans development of scalable analysis pipelines, and mentoring of emerging computational biologists and bioinformaticians. I aim to advance computational methods that bridge biological discovery and clinical translation.
+
+### Professional Experience
+
+- Founder & Chief Executive Officer, DeepBio Limited
+- Founder & Executive Director, CHIRAL Bangladesh
+- Faculty, cBLAST, University of Dhaka
+- Visiting Researcher, Department of Public Health, Daffodil International University
+- Instructor, Micro-credential Academy, Daffodil International University
+- Program Lead, GSA Bioinformatics Internship
+
+
+### Education
+
+- Master of Science, Microbiology, Jagannath University
+- Bachelor of Science, Microbiology, Jagannath University
+
+:::
+
