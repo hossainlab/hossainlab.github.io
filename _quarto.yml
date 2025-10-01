@@ -56,6 +56,18 @@ website:
         href: https://www.youtube.com/@hossainlab
         target: _blank
 
+open-graph: true
+  twitter-card: true
+  # card-style: summary
+
+  site-url: "https://hossainlab.github.io/"
+
+# google analytics 
+google-analytics:
+    tracking-id: ""  # Please delete or replace with your own tracking ID
+    anonymize-ip: true
+    
+    
 format:
   html:
     theme: cosmo
