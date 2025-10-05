@@ -45,4 +45,5 @@ subtitle: "List of publications"
 ## 2022
 1. Towhid, S.T., **Hossain, M.J.**, Sammo, M.A.S., & Akter, S.*Perception of Students on Antibiotic Resistance and Prevention: An Online, Community-Based Case Study from Dhaka, Bangladesh.* European Journal of Biology and Biotechnology, <https://doi.org/10.24018/ejbio.2022.3.3.341>
 
-2. **Hossain, M.J.**, Towhid, S.T., Sultana, S., Mukta, S.A., Gulshan, R., Miah, M.S. *Knowledge and Attitudes towards Thalassemia among Public University Students in Bangladesh.* Microbial Bioactives, 5(2). <https://doi.org/10.25163/microbbioacts.526325>
+2. **Hossain, M.J.**, Towhid, S.T., Sultana, S., Mukta, S.A., Gulshan, R., Miah, M.S. *Knowledge and Attitudes towards Thalassemia among Public University Students in Bangladesh.* Microbial Bioactives, 5(2). <https://doi.org/10.25163/microbbioacts.526325> 
+
