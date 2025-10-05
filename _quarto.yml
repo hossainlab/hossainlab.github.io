@@ -20,6 +20,7 @@ website:
     center: "&copy; Copyright 2025, Jubayer Hossain"
     
   navbar:
+    pinned: true
     left:
       - href: index.qmd
         text: Home
