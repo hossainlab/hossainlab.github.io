@@ -42,12 +42,14 @@ subtitle: "List of publications"
 2. **Hossain, M. J.**\*, Towhid, S.T., Akter, S., Shahjahan, M., Roy, T., Akter, B., & Nodee, T.A.  *Knowledge and Self-Management Practice Among Diabetic Patients from the Urban Areas in Bangladesh.* Journal of Angiotherapy, 7(1), 1-10. <https://doi.org/10.25163/angiotherapy.717340>
 
 
-## 2022
+### 2022
 1. Towhid, S.T., **Hossain, M.J.**, Sammo, M.A.S., & Akter, S.*Perception of Students on Antibiotic Resistance and Prevention: An Online, Community-Based Case Study from Dhaka, Bangladesh.* European Journal of Biology and Biotechnology, <https://doi.org/10.24018/ejbio.2022.3.3.341>
 
 2. **Hossain, M.J.**, Towhid, S.T., Sultana, S., Mukta, S.A., Gulshan, R., Miah, M.S. *Knowledge and Attitudes towards Thalassemia among Public University Students in Bangladesh.* Microbial Bioactives, 5(2). <https://doi.org/10.25163/microbbioacts.526325> 
 
-## Conferences
-1. **^+^Hossain, M. J.**, Das, M. (2024). Diagnostic and Electrophysiological Features of Hirayama Disease in Young Adult Male: A Case Report. International Conference of Public Health, Institute of Epidemiology, Disease Control and Research (IEDCR), Dhaka, Bangladesh
+## Under Review
+{{< include /cv/professional-cv/assets/qmd/under-review-papers.qmd >}}
 
-2. Nayeem, M. U., Mrittika, M. A., ^‡^**Hossain, M. J.**, Azad, A. K., Ferdous, J., Ahmed, S., Sanyal, S. K., Towhid, S. T. (2023). Quantitative Microbial Risk Assessment from Vancomycin‑Resistant Enterococcus faecalis and Enterococcus faecium from a Specific Neighborhood in Dhaka City, Bangladesh. 36th Bangladesh Society of Microbiologists Annual Conference, Shahjalal University of Science and Technology (SUST), Sylhet, Bangladesh, January 2023.
+
+## Conferences
+{{< include /cv/professional-cv/assets/qmd/conferences.qmd >}}
