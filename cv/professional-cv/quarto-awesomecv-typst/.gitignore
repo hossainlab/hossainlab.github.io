@@ -1,0 +1,9 @@
+*.pdf
+template.typ
+tmp.*
+_site/
+/.quarto/
+.Rproj.user
+.Renviron
+.DS_Store
+air.toml
