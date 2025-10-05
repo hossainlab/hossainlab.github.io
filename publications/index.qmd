@@ -47,3 +47,7 @@ subtitle: "List of publications"
 
 2. **Hossain, M.J.**, Towhid, S.T., Sultana, S., Mukta, S.A., Gulshan, R., Miah, M.S. *Knowledge and Attitudes towards Thalassemia among Public University Students in Bangladesh.* Microbial Bioactives, 5(2). <https://doi.org/10.25163/microbbioacts.526325> 
 
+## Conferences
+1. **^+^Hossain, M. J.**, Das, M. (2024). Diagnostic and Electrophysiological Features of Hirayama Disease in Young Adult Male: A Case Report. International Conference of Public Health, Institute of Epidemiology, Disease Control and Research (IEDCR), Dhaka, Bangladesh
+
+2. Nayeem, M. U., Mrittika, M. A., ^‡^**Hossain, M. J.**, Azad, A. K., Ferdous, J., Ahmed, S., Sanyal, S. K., Towhid, S. T. (2023). Quantitative Microbial Risk Assessment from Vancomycin‑Resistant Enterococcus faecalis and Enterococcus faecium from a Specific Neighborhood in Dhaka City, Bangladesh. 36th Bangladesh Society of Microbiologists Annual Conference, Shahjalal University of Science and Technology (SUST), Sylhet, Bangladesh, January 2023.
