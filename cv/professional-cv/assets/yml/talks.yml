@@ -1,0 +1,31 @@
+computational_biology_2025:
+  title: Speaker
+  location: Jagannath University Higher Study and Research Society
+  date: 2025
+  description: Computational Biology and Bioinformatics Research in Resource-Limited Settings: Strategies, Tools and Opportunities
+  details:
+    - In this talk, I delivered the strategies and techniques essential for mastering computational biology and bioinformatics research.
+
+biomedical_data_2024:
+  title: Speaker
+  location: IFMSA Bangladesh, Dhaka, Bangladesh
+  date: 2024
+  description: Mastering Biomedical Data Management
+  details:
+    - In the era of big data and advanced technologies, the management of biomedical data presents both immense opportunities and significant challenges. In this talk, I explored the strategies and techniques essential for mastering biomedical data management.
+
+undergraduate_research_2022:
+  title: Speaker
+  location: CHIRAL Bangladesh, Dhaka, Bangladesh
+  date: 2022
+  description: Undergraduate Research - Importance, Benefits, and Challenges
+  details:
+    - This talk was designed to enhance the undergraduate research experience by focusing on critical communication skills for success in research and broad transferable professional skills.
+
+genome_analysis_2022:
+  title: Speaker
+  location: Jagannath University, Dhaka, Bangladesh
+  date: 2022
+  description: State the Art of Microbial Genome Analysis
+  details:
+    - This talk was about the art of genomic data analysis. I explored genomic data analysis steps typically include data collection, quality check and cleaning, processing, modeling, visualization and reporting.

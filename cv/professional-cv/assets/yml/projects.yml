@@ -1,0 +1,17 @@
+deeptrust_ai:
+  title: DeepTrust AI (Prototype)
+  location: Dhaka, Bangladesh
+  date: DeepBio Limited
+  description: https://deeptrustai.deepbioltd.com/
+  details:
+    - Led the development of DeepTrust AI, an AI-powered tool designed to detect and counter health misinformation, addressing a critical public health challenge in Bangladesh.
+    - Built and showcased a functional prototype with natural language processing and credibility scoring features.
+
+genmed_ai:
+  title: GenMed AI (Prototype)
+  location: Dhaka, Bangladesh
+  date: DeepBio Limited
+  description: https://genmedai.deepbioltd.com/
+  details:
+    - Directed the design of GenMed AI, an AI-driven platform to accelerate drug discovery by analyzing disease data, identifying protein targets, and generating therapeutic compound designs within minutes instead of years.
+    - Developed prototype models integrating bioinformatics pipelines and generative AI frameworks.

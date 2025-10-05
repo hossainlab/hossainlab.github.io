@@ -1,0 +1,25 @@
+*Note: ^+^Indicates a presenter, ^‡^indicates a co-author, and ^\*^ indicates a corresponding author*
+
+### Poster Presentations
+
+1. ^+^Hossain, M. J., Das, M. (2024). Diagnostic and Electrophysiological Features of Hirayama Disease in Young Adult Male: A Case Report. International Conference of Public Health, Institute of Epidemiology, Disease Control and Research (IEDCR), Dhaka, Bangladesh
+
+2. ^+^Das, M., Kajol, M. M., Mim, N. A., Maruf, M. F. I., Hirko, K., ^\*^**Hossain, M. J.** (2024). Level of knowledge regarding breast cancer and breast self‑examination among school and college‑going girls in Bangladesh: A cross‑sectional study. International Conference of Public Health, Institute of Epidemiology, Disease Control and Research (IEDCR), Dhaka, Bangladesh
+
+3. Shahariar, M., Joarder Barsha, L. H., ^+^Shahjahan, M., Towhid, S. T., Sheikh, M. K., Hasan, M. M., Rahaman, M. H., Sazid, M. S., ^\*^**Hossain, M. J.** (2024). Lack of knowledge and training about antibiotic resistance among community pharmacists in Bangladesh: A cross-sectional study. International Conference of Public Health, Institute of Epidemiology, Disease Control and Research (IEDCR), Dhaka, Bangladesh
+
+4. ^+^Afrin, N., Howlader, G., Bhattacharjee, A., Akter, N., Mesu, M. H., Mazumder, E., ^\*^**Hossain, M. J.** (2024). Influence of Meteorological Factors on Dengue Incidence: A 23-Year Retrospective Analysis in Bangladesh. International Conference of Public Health, Institute of Epidemiology, Disease Control and Research (IEDCR), Dhaka, Bangladesh
+
+5. ^+^Akter, N., Mim, N. A., ^\*^**Hossain, M. J.** (2024). Particulate Matter PM2.5 Pollution and Air Quality Index (AQI) Trends Evaluation with Meteorological Factors in Dhaka City. International Conference of Public Health, Institute of Epidemiology, Disease Control and Research (IEDCR), Dhaka, Bangladesh
+
+### Oral Presentations
+
+1. ^+^Tuhin, M. A. A., Mim, N. A., Akter, N., Jamal, F., Sakib, M. N., Mehjabin, K., ^\*^**Hossain, M. J.** (2024). Exploring the Factors Influencing Heat Stress Risks Using the Discomfort Index Method in Bangladesh. International Conference on Environmental Science and Resource Management 2024 (ICESRM 2024), Department of Environmental Science and Resource Management, Mawlana Bhashani Science and Technology University, Bangladesh.
+
+2. Mim, N. A., Akter, Tuhin, M. A. A., ^+^Hossain, S., Alam, K. E., Mouli, N. J., ^\*^**Hossain, M. J.** (2024). Temporal Trends and Factors Influencing Diarrhea Prevalence Among Children in the Rangamati Hill Tract Region: A Time Series Analysis. International Conference on Environmental Science and Resource Management 2024 (ICESRM 2024), Department of Environmental Science and Resource Management, Mawlana Bhashani Science and Technology University, Bangladesh.
+
+3. Nayeem, M. U., Mrittika, M. A., ^‡^**Hossain, M. J.**, Azad, A. K., Ferdous, J., Ahmed, S., Sanyal, S. K., Towhid, S. T. (2023). Quantitative Microbial Risk Assessment from Vancomycin‑Resistant Enterococcus faecalis and Enterococcus faecium from a Specific Neighborhood in Dhaka City, Bangladesh. 36th Bangladesh Society of Microbiologists Annual Conference, Shahjalal University of Science and Technology (SUST), Sylhet, Bangladesh, January 2023.
+
+4. ^‡^**Hossain, M. J.**, ^+^Habiba, U., Rozario, C., Tuhin, M. L. A., Mabsurah, K., Uddin, N. F. (2023). Factors influencing heat stress risk in Bangladesh. 9th International Public Health Conference by Public Health Foundation at Bangladesh Medical Research Council (BMRC), Bangladesh, November 2023.
+
+5. ^‡^**Hossain, M. J.**, ^+^Nowshin, N., Momtaj, Yeana, I. Y., Nohor, N. (2023). Monitoring Water‑Borne Disease (Vibrio cholerae) using NASA Earth observation data. 9th International Public Health Conference by Public Health Foundation at Bangladesh Medical Research Council (BMRC), Bangladesh, November 2023.

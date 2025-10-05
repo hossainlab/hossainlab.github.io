@@ -1,0 +1,57 @@
+---
+title: "Research"
+subtitle: "Here is an overview of the research I have interested in."
+---
+
+## Single Cell Genomics 
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-2}
+![](../files/research/single-cell-genomics.jpg)
+
+:::
+
+::: {.g-col-12 .g-col-md-10}
+
+My research centers on dissecting disease circuitry at single-cell resolution to identify the specific cell types and regulatory programs through which genetic variants exert their effects. By leveraging single-cell transcriptomic and epigenomic profiling across diverse tissues and individuals, I aim to uncover hidden cellular populations that drive disease processes. This work provides the foundation for understanding cell type–specific mechanisms and developing targeted therapeutic strategies.
+
+:::
+
+:::
+
+
+## Cancer Genomics 
+
+::: {.grid} 
+
+::: {.g-col-12 .g-col-md-2}
+![](../files/research/cancer-genomics.jpg)
+
+:::
+
+::: {.g-col-12 .g-col-md-10}
+
+I study the genomic, epigenomic, and transcriptomic underpinnings of cancer progression to understand how somatic mutations and epigenetic alterations reshape cell identity, immune interactions, and tumor evolution. Using public multi-omics data and computational models, my research integrates comparative genomics, regulatory biology, and evolutionary principles to decode the molecular circuitry of cancer. The ultimate goal is to identify biomarkers and precision therapeutic targets that address cancer heterogeneity.
+
+:::
+
+:::
+
+
+
+## Brain Genomics 
+
+::: {.grid} 
+
+::: {.g-col-12 .g-col-md-2}
+![](../files/research/brain-genomics.jpg)
+
+:::
+
+::: {.g-col-12 .g-col-md-10}
+
+Building on single-cell approaches, I explore the molecular and cellular basis of brain disorders using publicly available single-cell and multi-omics datasets. My work focuses on conditions such as Alzheimer’s Disease, Schizophrenia, ALS, FTD, Huntington’s Disease, and PTSD, aiming to map how genetic and regulatory variants influence distinct brain cell types. Through integrative analyses, I investigate microglial and neuronal circuitry, cross-disease mechanisms, and potential therapeutic targets in neurodegeneration and psychiatric disorders.
+:::
+
+:::

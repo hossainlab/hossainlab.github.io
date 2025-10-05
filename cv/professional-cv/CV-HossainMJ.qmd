@@ -1,0 +1,89 @@
+---
+title: "Md. Jubayer Hossain's CV"
+author:
+  # firstname: Md. Jubayer
+  lastname: Md. Jubayer Hossain
+  address: "132/3, Azimpur, Dhaka, Bangladesh"
+  position: "Researcher・Educator・Entrepreneur"
+  contacts:
+    - icon: fa envelope
+      text: hossainmj.me@gmail.com
+      url: "mailto:hossainmj.me@gmail.com"
+    - icon: assets/icon/bi-house-fill.svg
+      text: mdjubayerhossain.com
+      url: https://mdjubayerhossain.com
+    - icon: fa brands orcid
+      text: 0000-0001-9323-4997
+      url: https://orcid.org/0000-0001-9323-4997
+    - icon: fa brands github
+      text: GitHub
+      url: https://github.com/hossainlab
+    - icon: fa brands linkedin
+      text: LinkedIn
+      url: https://linkedin.com/in/hossainmj
+
+format:
+  awesomecv-typst:
+    text-align: justify
+brand:
+  typography:
+    fonts:
+      - family: Roboto
+        source: google
+        weight: [100, 400, 700]
+      - family: Source Sans 3
+        source: google
+        weight: [100, 400, 700]
+        style: [normal, italic]
+    base: Source Sans 3
+  color:
+    primary: "#000000"
+    link: "#771822"
+  defaults:
+    awesomecv-typst:
+      font-header: Roboto
+---
+
+
+## Education and Training 
+
+{{< yaml assets/yml/education.yml >}}
+
+
+## Research Experience
+
+{{< yaml assets/yml/research.yml >}}
+
+## Leadership Experience
+
+{{< yaml assets/yml/leadership.yml >}}
+
+## Teaching and Mentoring
+
+{{< yaml assets/yml/teaching.yml >}}
+
+## Publications
+
+{{< include assets/qmd/publications.qmd >}}
+
+### Under Review
+{{< include assets/qmd/under-review-papers.qmd >}}
+
+## Conferences
+{{< include assets/qmd/conferences.qmd >}}
+
+## Talks
+
+{{< include assets/qmd/talks.qmd >}}
+
+## Projects
+
+{{< yaml assets/yml/projects.yml >}}
+
+## Skills
+
+{{< yaml assets/yml/skill.yml >}}
+
+## References
+
+{{< include assets/qmd/references.qmd >}}

@@ -1,0 +1,10 @@
+1. Ahmed, M. Z., Billah, M. M., Ferdous, J., & **Hossain, M. J.**\* (2025). Pan-cancer analysis reveals immunological and prognostic significance of CCT5 in human tumors. *Scientific Reports, 15*, 14405. <https://doi.org/10.1038/s41598-025-88339-z>
+
+2. Fariha, F. T. J., Fuad, M., Saha, C. S., Hossen, S., & **Hossain, M. J.**\* (2025). Comprehensive bioinformatics analysis reveals prognostic significance and immunological roles of WNT gene family in breast cancer. Sci Rep 15, 34490 (2025). <https://doi.org/10.1038/s41598-025-13315-6>
+
+3. Shanta, A. S., Islam, N., Al Asad, M., Akter, K., Habib, M. B., **Hossain, M. J.**, Nahar, S., Godman, B., & Islam, S. (2024). Resistance and co-resistance of metallo-beta-lactamase genes in diarrheal and urinary-tract pathogens in Bangladesh. *Microorganisms, 12*(8), 1589. <https://doi.org/10.3390/microorganisms12081589>
+
+4. Bari, S. M., Fuad, M., & **Hossain, M. J.**\* (2025). Transcriptomic insights into heat and hypoxia stress in rainbow trout: A meta-analysis of public RNA-Seq data [Preprint]. *Research Square*. (Accepted by *BMC Genomics*) <https://doi.org/10.21203/rs.3.rs-6710656/v1>
+
+
+5. GBD 2023 Vaccine Coverage Collaborators. (2025). Global, regional, and national trends in routine childhood vaccination coverage from 1980 to 2023 with forecasts to 2030: A systematic analysis for the Global Burden of Disease Study 2023. *The Lancet*. <https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)01037-2/>

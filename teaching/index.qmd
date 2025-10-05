@@ -1,0 +1,22 @@
+---
+title: "Teaching"
+subtitle: "I teach."
+title-block-banner: false
+---
+
+## Transcriptomics Data Analysis (TDA)
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-2}
+![](../files/courses/tda.png)
+
+:::
+
+::: {.g-col-12 .g-col-md-10}
+
+[Cohort 01](https://github.com/hossainlab/transcriptomics), &nbsp; [Cohort 02](https://github.com/hossainlab/transcriptomics)
+
+Transcriptomics Data Analysis (TDA) is a live, instructor-led training program designed to introduce participants to best practices in the analysis of high-throughput RNA sequencing (RNA-seq) data.
+
+:::

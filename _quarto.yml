@@ -1,6 +1,9 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - "*.qmd"
+    - "!academic-cv/"
 
 # Meta
 description-meta: "Academic Website for Jubayer Hossain"
@@ -20,8 +23,16 @@ website:
     left:
       - href: index.qmd
         text: Home
-      # - href: projects/index.qmd
-      #   text: Projects
+      - href: research/index.qmd
+        text: Research
+      - href: teaching/index.qmd
+        text: Teaching
+      - href: publications/index.qmd
+        text: Publications
+      - text: CV
+        href: cv/professional-cv/CV-HossainMJ.pdf
+        target: _blank
+
 
     right:
       - icon: envelope
@@ -56,12 +67,13 @@ website:
         href: https://www.youtube.com/@hossainlab
         target: _blank
 
-open-graph: true
-  twitter-card: true
-  # card-style: summary
 
-  site-url: "https://hossainlab.github.io/"
-
+# some important configs 
+site-url: "https://hossainlab.github.io/"
+search: false
+reader-mode: true
+draft-mode: unlinked
+  
 # google analytics 
 google-analytics:
     tracking-id: ""  # Please delete or replace with your own tracking ID

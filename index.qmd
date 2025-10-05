@@ -1,5 +1,5 @@
 ---
-title: "Jubaer Hossain"
+title: "Jubayer Hossain"
 subtitle: "Researcher, Educator & Entrepreneur"
 description-meta: "Quarto Academic Website for Jubayer"
 image: files/profiles/jubayer.png
