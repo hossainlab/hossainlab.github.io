@@ -79,3 +79,26 @@ This one-day, hands-on workshop introduces participants to AI-powered toxicology
 :::
 
 :::
+
+
+
+
+
+## Data Science and Machine Learning for Biologists
+
+::: {.grid} 
+
+::: {.g-col-12 .g-col-md-4}
+![](../files/courses/ml-ds-for-biologists.png)
+
+:::
+
+::: {.g-col-12 .g-col-md-8}
+
+[Course Repo](https://github.com/hossainlab/dsb)
+
+Taught by Md. Jubayer Hossain at CBLAST, University of Dhaka, this course introduces biologists to the core principles of data science and machine learning through hands-on examples and biological case studies. Participants learn how to process, visualize, and analyze biological data using Python and R, and explore practical applications of supervised and unsupervised learning in genomics, transcriptomics, and health data. Designed for students and researchers in the life sciences, this course bridges biology and computation, empowering learners to apply AI-driven methods in modern biological research.
+
+:::
+
+:::

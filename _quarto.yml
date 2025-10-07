@@ -86,6 +86,7 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
+    toc-expand: 1
 
 
 
