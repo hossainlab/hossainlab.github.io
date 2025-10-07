@@ -7,12 +7,12 @@ subtitle: "Here is an overview of the research I have interested in."
 
 ::: {.grid}
 
-::: {.g-col-12 .g-col-md-2}
-![](../files/research/single-cell-genomics.jpg)
+::: {.g-col-12 .g-col-md-4}
+![](../files/research/single-cell-genomics.png){width=100%}
 
 :::
 
-::: {.g-col-12 .g-col-md-10}
+::: {.g-col-12 .g-col-md-8}
 
 My research centers on dissecting disease circuitry at single-cell resolution to identify the specific cell types and regulatory programs through which genetic variants exert their effects. By leveraging single-cell transcriptomic and epigenomic profiling across diverse tissues and individuals, I aim to uncover hidden cellular populations that drive disease processes. This work provides the foundation for understanding cell type–specific mechanisms and developing targeted therapeutic strategies.
 
@@ -25,12 +25,12 @@ My research centers on dissecting disease circuitry at single-cell resolution to
 
 ::: {.grid} 
 
-::: {.g-col-12 .g-col-md-2}
-![](../files/research/cancer-genomics.jpg)
+::: {.g-col-12 .g-col-md-4}
+![](../files/research/cancer-genomicsl.png)
 
 :::
 
-::: {.g-col-12 .g-col-md-10}
+::: {.g-col-12 .g-col-md-8}
 
 I study the genomic, epigenomic, and transcriptomic underpinnings of cancer progression to understand how somatic mutations and epigenetic alterations reshape cell identity, immune interactions, and tumor evolution. Using public multi-omics data and computational models, my research integrates comparative genomics, regulatory biology, and evolutionary principles to decode the molecular circuitry of cancer. The ultimate goal is to identify biomarkers and precision therapeutic targets that address cancer heterogeneity.
 
@@ -44,14 +44,32 @@ I study the genomic, epigenomic, and transcriptomic underpinnings of cancer prog
 
 ::: {.grid} 
 
-::: {.g-col-12 .g-col-md-2}
-![](../files/research/brain-genomics.jpg)
+::: {.g-col-12 .g-col-md-4}
+![](../files/research/brain-genomics.png)
 
 :::
 
-::: {.g-col-12 .g-col-md-10}
+::: {.g-col-12 .g-col-md-8}
 
 Building on single-cell approaches, I explore the molecular and cellular basis of brain disorders using publicly available single-cell and multi-omics datasets. My work focuses on conditions such as Alzheimer’s Disease, Schizophrenia, ALS, FTD, Huntington’s Disease, and PTSD, aiming to map how genetic and regulatory variants influence distinct brain cell types. Through integrative analyses, I investigate microglial and neuronal circuitry, cross-disease mechanisms, and potential therapeutic targets in neurodegeneration and psychiatric disorders.
+:::
+
+:::
+
+
+## Biomarker Identification using Machine Learning 
+
+::: {.grid} 
+
+::: {.g-col-12 .g-col-md-4}
+![](../files/research/biomarkers.png)
+
+:::
+
+::: {.g-col-12 .g-col-md-8}
+
+My research interest centers on biomarker identification using machine learning, with a focus on discovering molecular signatures that can enhance disease diagnosis, prognosis, and treatment response prediction. By integrating high-dimensional omics data—such as transcriptomics, genomics, and proteomics—with advanced machine learning algorithms, I aim to uncover robust and biologically meaningful biomarkers that reveal disease mechanisms and therapeutic targets. This interdisciplinary approach bridges computational biology and precision medicine, enabling data-driven insights for improved clinical decision-making and personalized healthcare.
+
 :::
 
 :::

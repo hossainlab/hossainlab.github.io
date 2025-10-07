@@ -1,22 +1,81 @@
 ---
 title: "Teaching"
 subtitle: "I teach."
-title-block-banner: false
 ---
 
-## Transcriptomics Data Analysis (TDA)
+<!-- [Cohort 01](https://github.com/hossainlab/transcriptomics), &nbsp; [Cohort 02](https://github.com/hossainlab/transcriptomics)
+ -->
 
+## Transcriptomics Data Analysis (bulk + Single Cell Analysis)
+ 
 ::: {.grid}
 
-::: {.g-col-12 .g-col-md-2}
-![](../files/courses/tda.png)
+::: {.g-col-12 .g-col-md-4}
+![](../files/courses/tda.png){width=100%}
 
 :::
 
-::: {.g-col-12 .g-col-md-10}
-
+::: {.g-col-12 .g-col-md-8}
 [Cohort 01](https://github.com/hossainlab/transcriptomics), &nbsp; [Cohort 02](https://github.com/hossainlab/transcriptomics)
 
-Transcriptomics Data Analysis (TDA) is a live, instructor-led training program designed to introduce participants to best practices in the analysis of high-throughput RNA sequencing (RNA-seq) data.
+
+Transcriptomics Data Analysis (TDA) is a live, instructor-led training program designed to introduce participants to best practices in the analysis of high-throughput RNA sequencing (RNA-seq) data. This course empowers learners to independently analyze gene expression datasets using lightweight, open-source tools — with a strong emphasis on the R programming language and the Bioconductor ecosystem.
+
+:::
+
+:::
+
+
+## Biomarker Identification using Machine Learning
+
+::: {.grid} 
+
+::: {.g-col-12 .g-col-md-4}
+![](../files/courses/biomarkers.png)
+
+:::
+
+::: {.g-col-12 .g-col-md-8}
+[Cohort 01](https://github.com/hossainlab/biomarker_identification)
+
+This project applies advanced machine learning and bioinformatics techniques to identify novel biomarkers from high-dimensional biological data, focusing on cancer genomics. By leveraging TCGA (The Cancer Genome Atlas) data and modern computational approaches, we aim to discover clinically relevant biomarkers that can improve disease diagnosis, prognosis, and treatment selection.
+
+:::
+
+:::
+
+
+
+## Pan-Cancer Bioinformatics with R: Ideation to Publication 
+
+::: {.grid} 
+
+::: {.g-col-12 .g-col-md-4}
+![](../files/courses/pan-cancer.png)
+
+:::
+
+::: {.g-col-12 .g-col-md-8}
+
+Pan-Cancer Bioinformatics with R is an intensive, hands-on training program designed to guide participants through the complete journey of pan-cancer analysis—from research idea to publication. Across four interactive sessions, participants will learn how to access and process TCGA datasets, perform expression, survival, mutation, and immune analyses, and integrate multi-omics data for biomarker discovery. The course emphasizes practical R workflows, publication-ready visualization, and manuscript preparation strategies. Ideal for graduate students, early-career researchers, and clinicians aiming to publish high-impact pan-cancer studies.
+
+:::
+
+:::
+
+
+## AI in Drug Discovery: In Silico Toxicology Modeling
+
+::: {.grid} 
+
+::: {.g-col-12 .g-col-md-4}
+![](../files/courses/ai-toxicology.jpg)
+
+:::
+
+::: {.g-col-12 .g-col-md-8}
+
+This one-day, hands-on workshop introduces participants to AI-powered toxicology modeling for modern drug discovery. Participants will learn how to use machine learning and cheminformatics techniques to predict compound toxicity, classify molecules as toxic or non-toxic, and analyze structure–activity relationships using real-world datasets. Designed for students, researchers, and professionals in bioinformatics, computational chemistry, and pharmacology, this workshop provides practical experience in building predictive toxicology models that accelerate safer drug development.
+:::
 
 :::
