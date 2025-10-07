@@ -12,13 +12,13 @@ about:
     - icon: envelope
       href: mailto:email@gmail.com    
     - icon: linkedin
-      href: https://linkedin.com
+      href: https://linkedin.com/hossainmj
       target: _blank
     - text: "{{< ai orcid >}}"
-      href: https://orcid.org
+      href: https://orcid.org/0000-0001-9323-4997
       target: _blank
     - text: "{{< ai google-scholar >}}"
-      href: https://scholar.google.com
+      href: https://scholar.google.com/citations?user=9_K4ekoAAAAJ&hl=en&authuser=5
       target: _blank
 ---
 
