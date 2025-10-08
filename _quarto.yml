@@ -28,7 +28,7 @@ website:
         text: Research
       - href: teaching/index.qmd
         text: Teaching
-      - href: people/index.qmd
+      - href: mentoring/index.qmd
         text: Mentoring
       - href: publications/index.qmd
         text: Publications
