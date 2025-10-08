@@ -1,0 +1,33 @@
+---
+title: "Mentoring"
+subtitle: "Training the next generation of scientists in bioinformatics, computational biology, and AI."
+#image: files/group.jpeg
+page-layout: full
+
+listing:  #an example of listing external links
+#  template: item-default-external.ejs
+- id: mentoring 
+  sort: "lastname asc"
+  type: grid
+  fields: [image, title, subtitle]
+  grid-item-align: center
+  grid-columns: 3
+  image-height: 200px
+  categories: true
+#  sort-ui: true
+#  filter-ui: true
+  contents: 
+    - mentoring.yml
+
+page-navigation: false
+title-block-banner: false
+toc: false
+
+format:
+  html:
+    link-external-newwindow: true
+---
+
+## GSA Bioinformatics Internship
+:::{#mentoring}
+:::

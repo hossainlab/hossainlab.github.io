@@ -1,0 +1,45 @@
+- path: 
+  image: "../files/interns/ShakilAhamed.jpeg"
+  title: "Md. Shakil Ahamed"
+  lastname: "Ahamed"
+  subtitle: "Bioinformatics Intern"
+  categories: [Interns] 
+  started: "July 2025"
+  ended: "Present"
+
+- path: 
+  image: "../files/interns/RahnumaTabassum.jpg"
+  title: "Rahnuma Tabassum "
+  lastname: "Tabassum"
+  subtitle: "Bioinformatics Intern"
+  categories: [Interns] 
+  started: "July 2025"
+  ended: "Present"
+
+
+- path: 
+  image: "../files/interns/FayezAhmad.jpg"
+  title: "Fayez Ahmad"
+  lastname: "Ahmad"
+  subtitle: "Bioinformatics Intern"
+  categories: [Interns] 
+  started: "July 2025"
+  ended: "Present"
+
+- path: 
+  image: "../files/interns/SabbirKhan.png"
+  title: "Sabbir Khan"
+  lastname: "Khan"
+  subtitle: "Bioinformatics Intern"
+  categories: [Interns] 
+  started: "July 2025"
+  ended: "Present"
+
+- path: 
+  image: "../files/interns/LamisaManha.JPG"
+  title: "Lamisa Manha Aditee"
+  lastname: "Aditee"
+  subtitle: "Bioinformatics Intern"
+  categories: [Interns] 
+  started: "July 2025"
+  ended: "Present"
