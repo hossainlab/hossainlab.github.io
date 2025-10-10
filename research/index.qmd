@@ -40,7 +40,7 @@ I study the genomic, epigenomic, and transcriptomic underpinnings of cancer prog
 
 
 
-## Brain Genomics 
+## Neurogenomics
 
 ::: {.grid} 
 
