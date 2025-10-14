@@ -16,9 +16,13 @@ subtitle: "Here is an overview of the research I have interested in."
 
 My research centers on dissecting disease circuitry at single-cell resolution to identify the specific cell types and regulatory programs through which genetic variants exert their effects. By leveraging single-cell transcriptomic and epigenomic profiling across diverse tissues and individuals, I aim to uncover hidden cellular populations that drive disease processes. This work provides the foundation for understanding cell type–specific mechanisms and developing targeted therapeutic strategies.
 
+
 :::
 
 :::
+
+
+
 
 
 ## Cancer Genomics 

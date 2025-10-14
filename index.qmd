@@ -7,7 +7,7 @@ page-layout: full
 about:
   id: hero-heading
   template: trestles
-  image-shape: rectangle
+  image-shape: round
   links:
     - icon: envelope
       href: mailto:email@gmail.com    
