@@ -1,43 +1,15 @@
 deeptrust_ai:
   title: DeepTrust AI (Prototype)
-  description: https://deeptrustai.deepbioltd.com/
+  description: An AI-powered tool to detect and counter health misinformation in Bangladesh.
   details:
     - Led the development of DeepTrust AI, an AI-powered tool designed to detect and counter health misinformation, addressing a critical public health challenge in Bangladesh.
     - Built and showcased a functional prototype with natural language processing and credibility scoring features.
+    - The prototype is publicly available at https://deeptrustai.deepbioltd.com
 
 genmed_ai:
   title: GenMed AI (Prototype)
-  description: https://genmedai.deepbioltd.com/
+  description: An AI-driven platform accelerating drug discovery through intelligent disease data analysis and compound generation.
   details:
     - Directed the design of GenMed AI, an AI-driven platform to accelerate drug discovery by analyzing disease data, identifying protein targets, and generating therapeutic compound designs within minutes instead of years.
     - Developed prototype models integrating bioinformatics pipelines and generative AI frameworks.
-
-geo_ml:
-  title: Workflow for Meta-Analysis of Public Bulk RNA-Seq Data
-  description: https://github.com/bigbiolab/Omyk_Transcriptomic_Meta
-  details:
-    - Download GEO expression datasets programmatically
-    - Perform differential expression analysis with DESeq2
-    - Export machine learning-ready dataset for classification or feature selection
-
-biomarker_ai:
-  title: Biomarker Identification using Machine Learning
-  description: https://github.com/hossainlab/biomarker_identification
-  details:
-    - Analyze high-dimensional TCGA genomic data from cancer samples
-    - Apply machine learning algorithms for feature selection and biomarker discovery
-
-geo_ml:
-  title: Differential Expression Analysis and ML Dataset Preparation
-  description: https://github.com/bigbiolab/geo_ml
-  details:
-    - Download GEO expression datasets programmatically
-    - Perform differential expression analysis with DESeq2
-    - Export machine learning-ready dataset for classification or feature selection
-
-salmon-workflow:
-  title: End-to-end Bulk RNA-Seq Quantification Pipeline using Salmon
-  description: https://github.com/hossainlab/salmon-rnaseq
-  details:
-    - Automatically download and quantify GEO expression datasets
-    - Perform differential expression analysis using tximport and DESeq2
+    - The prototype is publicly available at https://genmedai.deepbioltd.com

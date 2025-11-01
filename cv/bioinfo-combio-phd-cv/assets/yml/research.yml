@@ -1,8 +1,8 @@
 diu:
   title: Visiting Researcher
   location: Dhaka, Bangladesh
-  date: 2025– Present (Part-time)
-  description: Department of Public Health, Daffodil International University
+  date: Sep 2025 – Present
+  description: Department of Public Health, Daffodil International University (Part-time)
   details:
     - Collaborated with DIU faculty and students on ongoing research projects, grant proposals, and publications in public health and health informatics, resulting in 2 manuscripts under preparation.
     - Delivering workshops, online courses, and research mentorship to strengthen capacity building in public health research.
@@ -10,8 +10,8 @@ diu:
 ihme:
   title: GBD Collaborator
   location: Washington, USA
-  date: 2025– Present (Part-time, Voluntary)
-  description: Institute for Health Metrics and Evaluation
+  date: Jan 2024 – Present
+  description: Institute for Health Metrics and Evaluation (Part-time, Voluntary)
   details:
     - Contributed critical analytical feedback and statistical modeling to 4 Global Burden of Disease (GBD) studies, including one on routine childhood vaccination coverage published in The Lancet.
     - Supported manuscript development and provided methodological input for 3 ongoing high-impact GBD papers (breast cancer, headache disorders, and mental disorders), all currently under peer review.
@@ -21,7 +21,7 @@ icddrb:
   title: Research Intern
   location: Dhaka, Bangladesh
   date: Feb 2022—Jun 2022
-  description: International Center for Diarrhoeal Disease Research, Bangladesh
+  description: International Center for Diarrhoeal Disease Research, Bangladesh (Part-time, Voluntary)
   details:
     - Designed and implemented a comprehensive search strategy across PubMed, Embase, and PsycINFO, screening 8,000+ articles to support a systematic review on intimate partner violence in South Asia.
     - Streamlined the abstract screening process in Covidence, identifying 400+ potentially relevant studies.
@@ -32,7 +32,7 @@ curtlin:
   title: Data Enumerator
   location: Australia
   date: Oct 2022—Nov 2022
-  description: School of Allied Health, Curtin University
+  description: School of Allied Health, Curtin University (Part-time)
   details:
     - Collected both quantitative and qualitative data from 40 Bangladeshi doctors for a Delphi study on Patient Outcomes Measurement in Interprofessional Tuberculosis Care.
     - Validated and cleaned all survey responses, achieving 100% accuracy in the final dataset.
@@ -41,8 +41,8 @@ curtlin:
 biobio:
   title: Team Member
   location: Australia
-  date: 2017—2019
-  description: Bio-Bio-1: Bioinformatics Research Discussion Group
+  date: Jan 2017—Dec 2019
+  description: Bio-Bio-1: Bioinformatics Research Discussion Group (Part-time, Voluntary)
   details:
     - Engaged in collaborative research discussions and pursued continuous learning opportunities in bioinformatics.
     - Contributed to the design of training modules and preparation of learning content to support group activities.

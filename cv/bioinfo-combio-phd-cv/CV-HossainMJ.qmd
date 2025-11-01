@@ -4,7 +4,7 @@ author:
   # firstname: Md. Jubayer
   lastname: Md. Jubayer Hossain
   address: "132/3, Azimpur, Dhaka, Bangladesh"
-  position: "Bioinformatics Researcher・Transcriptomics (Bulk & Single-Cell RNA-Seq) and AI in Biology"
+  position: "Bioinformatics Scientist・Transcriptomics (Bulk & Single-Cell RNA-Seq) and AI in Biology"
   contacts:
     - icon: fa envelope
       text: hossainmj.me@gmail.com
@@ -54,6 +54,18 @@ brand:
 
 {{< yaml assets/yml/research.yml >}}
 
+## Publications
+(*Note: \* indicates corresponding author)
+
+### Peer-reviewed 
+{{< include assets/qmd/publications.qmd >}}
+
+### Under Review
+{{< include assets/qmd/under-review-papers.qmd >}}
+
+### Conferences
+{{< include assets/qmd/conferences.qmd >}}
+
 ## Leadership Experience
 
 {{< yaml assets/yml/leadership.yml >}}
@@ -62,19 +74,6 @@ brand:
 
 {{< yaml assets/yml/teaching.yml >}}
 
-## Selected Publications
-(*Note: \* indicates corresponding author; full list of publications availablet at <https://mdjubayerhossain.com/>)
-
-
-### Peer-reviewed 
-{{< include assets/qmd/publications.qmd >}}
-
-### Under Review
-{{< include assets/qmd/under-review-papers.qmd >}}
-
-
-### Conferences
-{{< include assets/qmd/conferences.qmd >}}
 
 ## Talks
 

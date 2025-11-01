@@ -1,0 +1,95 @@
+rnaseq-meta:
+  title: Workflow for Meta-Analysis of Public Bulk RNA-Seq Data
+  description: Scalable Nextflow pipeline for integrative meta-analysis of publicly available bulk RNA-Seq datasets with automated quality control and differential expression analysis.
+  github: https://github.com/hossainlab/nf-core-rnaseqmeta
+  tech_stack:
+    - Nextflow
+    - nf-core
+    - Python
+    - R/Bioconductor
+    - Docker/Singularity
+  highlights:
+    - Automated data retrieval from public repositories
+    - Batch effect correction and normalization
+    - Integrated differential expression analysis
+    - Reproducible and containerized workflow
+
+sc-meta:
+  title: Single-Cell Meta-Analysis Pipeline
+  description: Comprehensive pipeline for meta-analysis of single-cell RNA-Seq data with advanced integration and cell type annotation capabilities.
+  github: https://github.com/hossainlab/sc-meta-analysis-pipeline
+  tech_stack:
+    - Python
+    - Scanpy
+    - R/Seurat
+    - Harmony
+    - scVI-tools
+  highlights:
+    - Multi-sample integration
+    - Automated cell type annotation
+    - Batch correction algorithms
+    - Visualization and reporting
+
+salmon-workflow:
+  title: End-to-end Bulk RNA-Seq Quantification Pipeline using Salmon
+  description: Production-ready RNA-Seq analysis pipeline featuring ultra-fast transcript quantification and comprehensive quality assessment.
+  github: https://github.com/hossainlab/salmon-rnaseq
+  tech_stack:
+    - Salmon
+    - FastQC
+    - MultiQC
+    - R/Bioconductor
+    - Bash
+  highlights:
+    - Pseudo-alignment for rapid quantification
+    - Automated quality control
+    - Gene and transcript-level abundance estimation
+    - Comprehensive QC reports
+
+biomarker-ai:
+  title: Biomarker Identification using Machine Learning
+  description: Machine learning framework for discovering and validating biomarkers from omics data with feature selection and model interpretability.
+  github: https://github.com/hossainlab/biomarker_identification
+  tech_stack:
+    - Python
+    - Scikit-learn
+    - XGBoost
+    - SHAP
+    - Pandas/NumPy
+  highlights:
+    - Multiple ML algorithms (Random Forest, SVM, XGBoost)
+    - Feature importance analysis
+    - Cross-validation and model evaluation
+    - Biomarker visualization
+
+geo-ml:
+  title: Differential Expression Analysis and ML Dataset Preparation
+  description: Automated pipeline for fetching GEO datasets, performing differential expression analysis, and preparing machine learning-ready datasets.
+  github: https://github.com/bigbiolab/geo_ml
+  tech_stack:
+    - R/Bioconductor
+    - Python
+    - GEOquery
+    - limma/edgeR
+    - DESeq2
+  highlights:
+    - Automated GEO data retrieval
+    - Differential expression analysis
+    - ML-ready dataset generation
+    - Metadata processing
+
+microbiome-16s:
+  title: 16S rRNA Amplicon Pipeline (QIIME 2 CLI + R/DADA2)
+  description: Comprehensive microbiome analysis pipeline combining QIIME 2 and DADA2 for taxonomic profiling and diversity analysis.
+  github: https://github.com/hossainlab/16S-pipeline
+  tech_stack:
+    - QIIME 2
+    - R/DADA2
+    - Phyloseq
+    - VSEARCH
+    - Bash
+  highlights:
+    - Quality filtering and denoising
+    - Taxonomic classification
+    - Alpha/Beta diversity analysis
+    - Statistical testing and visualization

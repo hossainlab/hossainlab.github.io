@@ -3,17 +3,179 @@ title: "Projects"
 subtitle: "Here is an overview of the project I have been working on."
 ---
 
-## Project I
 
-A description of Project 
+## PROJECT 1: Integrative Spatial-scRNA-seq Atlas of Immunotherapy Resistance Mechanisms Across Cancer Types
+
+### Research Question
+How do spatial organization and cellular interactions within the tumor microenvironment drive immunotherapy resistance across different cancer types, and can we identify universal versus cancer-specific resistance mechanisms?
+
+### Hypothesis
+Immunotherapy resistance is mediated by spatially-organized cellular niches that exhibit both pan-cancer commonalities and cancer-specific features. These resistance niches can be identified by integrating single-cell transcriptomics with spatial localization data, revealing targetable vulnerabilities.
+
+### Literature Review & Research Gap
+
+#### Current State
+Recent studies have shown that scRNA-seq technologies analyze tumor heterogeneity and the tumor microenvironment, with growing interest in applying findings to clinical settings for improving cancer diagnostics and predicting immunotherapy responses. Multiple studies have examined immune checkpoint blockade responses using scRNA-seq, but most are limited in sample size and require advanced coding skills for exploration.
+
+Spatial multi-omics technologies have revealed that relative positions and interactions of cell types in the tumor microenvironment strongly influence tumor development, though current commercialized platforms do not provide true single-cell level resolution. Research on prostate cancer has shown that SPP1-expressing macrophages mediate immunotherapeutic resistance through adenosine pathway activation.
+
+#### Research Gap
+1. **Lack of pan-cancer spatial analysis**: Most studies focus on single cancer types
+2. **Missing integration**: Spatial transcriptomics and scRNA-seq are rarely integrated comprehensively
+3. **Resistance evolution**: Temporal dynamics of resistance mechanisms are poorly understood
+4. **3D spatial architecture**: Most spatial transcriptomics remains limited to 2D tissue sections
+
+### Your Novel Contribution
+
+**NOVELTY #1:** First pan-cancer integrated spatial-scRNA-seq atlas of immunotherapy resistance
+- Integrates data from 10+ cancer types
+- Combines >50 scRNA-seq datasets with spatial transcriptomics data
+- Identifies universal vs. cancer-specific resistance mechanisms
+
+**NOVELTY #2:** Development of novel computational framework "SpatioResist"
+- Machine learning algorithm to predict resistance from spatial patterns
+- Integrates cell-cell communication networks with spatial localization
+- Provides resistance risk scores based on TME architecture
+
+**NOVELTY #3:** Identification of actionable spatial biomarkers
+- Spatially-restricted therapeutic vulnerabilities
+- Combinatorial therapy strategies based on spatial niches
+- Validated across multiple independent cohorts
+
+### Specific Datasets (GEO/Public Resources)
+
+**scRNA-seq Immunotherapy Datasets:**
+1. **GSE115978** - Melanoma with anti-PD-1 treatment (48 patients, pre/post therapy)
+2. **GSE123813** - Basal cell carcinoma with anti-PD-1 (10 patients)
+3. **GSE212966** - Pancreatic cancer with TME characterization
+4. **GSE149614** - Hepatocellular carcinoma with ICIs
+5. **GSE197177** - Pancreatic ductal adenocarcinoma
+6. **GSE206785** - Gastric cancer with metastasis
+7. **GSE183904** - Gastric cancer with T cell characterization
+8. **GSE130000** - Ovarian cancer (primary, metastasis, relapse)
+9. **GSE202642** - Hepatocellular carcinoma with adjacent tissue
+
+**Spatial Transcriptomics:**
+- **GSE203612** - Gastric cancer spatial transcriptomics (10x Visium)
+- Multiple NSCLC spatial datasets with CosMx
+- Breast cancer spatial datasets with 10x Visium
+
+### Methodology Overview
+
+**Step 1: Data Integration & Quality Control**
+- Harmonize 50+ scRNA-seq datasets using Seurat v5
+- Batch correction with Harmony/scVI
+- Cell type annotation using automated and manual curation
+
+**Step 2: Spatial-scRNA-seq Integration**
+- Cell2location for deconvolution
+- stLearn for spatial ligand-receptor analysis
+- Development of SpatioResist algorithm
+
+**Step 3: Resistance Mechanism Discovery**
+- Compare responders vs. non-responders across cancer types
+- Identify spatially-restricted cell states
+- Cell-cell communication analysis (CellChat, NicheNet)
+
+**Step 4: Validation & Translation**
+- External validation cohorts
+- Prognostic model development
+- Drug combination predictions
+
+### Expected Impact & Significance
+
+1. **Scientific Impact**: First comprehensive spatial atlas of immunotherapy resistance
+2. **Clinical Translation**: Predictive biomarkers for patient stratification
+3. **Therapeutic Strategy**: Rational combination therapy design based on spatial niches
+4. **Methodological Advance**: Novel computational framework for spatial-scRNA-seq integration
 
 
-## Project II
 
-A description of Project 
 
-# Publication
+## PROJECT 2: Metabolic Reprogramming Dynamics During Cancer Progression and Therapy Resistance
 
-Paper I
+### Research Question
+How does metabolic reprogramming evolve during cancer progression, metastasis, and therapy resistance, and can we identify metabolic vulnerabilities that are targetable across different disease stages?
 
-Paper II
+### Hypothesis
+Cancer cells undergo stage-specific metabolic reprogramming, with distinct metabolic profiles characterizing primary tumors, metastases, and resistant disease. These metabolic shifts create therapeutic vulnerabilities that differ from primary tumors.
+
+### Literature Review & Research Gap
+
+#### Current State
+Recent scRNA-seq studies have revealed metabolic heterogeneity in cancer, showing that metabolic reprogramming extends beyond tumor cells to diverse cell types within the tumor microenvironment. In colorectal cancer liver metastasis, oxidative phosphorylation (OXPHOS) is upregulated and associated with TGFβ signaling pathway activation.
+
+Studies in small cell lung cancer have shown that metabolic reprogramming serves as an upstream regulator of immune evasion, though research on metabolic reprogramming in aggressive cancers remains limited. Previous studies have primarily focused on specific cell types or cancer types with low-throughput methods.
+
+#### Research Gap
+1. **Temporal dynamics**: How metabolism changes during disease progression is poorly understood
+2. **Cell-state specific**: Metabolic heterogeneity within tumor cell populations
+3. **Cross-cancer comparison**: Limited pan-cancer metabolic analysis
+4. **Therapy-induced changes**: Metabolic adaptation to treatment pressure
+
+### Your Novel Contribution
+
+**NOVELTY #1:** Longitudinal metabolic trajectory analysis
+- Track metabolic evolution from primary → metastasis → resistance
+- Identify stage-specific metabolic dependencies
+- Predict metabolic trajectories using machine learning
+
+**NOVELTY #2:** Development of "MetaboTrack" computational pipeline
+- Single-cell metabolic flux inference
+- Integration of scRNA-seq with metabolomics where available
+- Cell-state specific metabolic scoring
+
+**NOVELTY #3:** Therapeutic target identification
+- Stage-specific metabolic vulnerabilities
+- Combination therapy strategies (metabolic inhibitors + standard therapy)
+- Predictive biomarkers for metabolic therapies
+
+### Specific Datasets
+
+**Primary Datasets:**
+1. **GSE212966** - Pancreatic cancer with comprehensive TME
+2. **GSE202642** - Hepatocellular carcinoma (tumor + adjacent)
+3. **GSE206785** - Gastric cancer (primary + metastasis)
+4. **GSE130000** - Ovarian cancer (primary + peritoneal metastasis + relapse)
+5. Multiple TCGA datasets for bulk RNA-seq validation
+
+**Therapy Resistance:**
+- **DRMref database** - 42 scRNA-seq datasets with drug resistance
+- Pre/post treatment pairs from multiple cancers
+- Chemotherapy, targeted therapy, immunotherapy resistance
+
+**Metabolomics Integration:**
+- Published metabolomics from CRC, NSCLC, HCC
+- TCGA metabolomics data
+- Patient-derived organoid data
+
+### Methodology Overview
+
+**Step 1: Metabolic Activity Inference**
+- scFEA/METAFlux for flux balance analysis
+- AUCell/GSVA for pathway enrichment
+- Novel metabolic scoring system
+
+**Step 2: Trajectory Analysis**
+- Monocle3/CytoTRACE2 for pseudotime
+- Metabolic state transitions during progression
+- Identify metabolic branch points
+
+**Step 3: Integration Analysis**
+- Correlate metabolic states with clinical outcomes
+- Drug response prediction models
+- Spatial distribution of metabolic phenotypes
+
+**Step 4: Experimental Validation Plan**
+- Predict metabolic vulnerabilities
+- In silico drug screening using GDSC/CTRP
+- Generate testable hypotheses for validation
+
+### Expected Impact
+
+1. **Stage-specific therapy**: Metabolic inhibitors targeted to disease stage
+2. **Resistance prediction**: Metabolic biomarkers predict therapy failure
+3. **Combination strategies**: Rational metabolic + standard therapy combinations
+4. **Pan-cancer insights**: Universal metabolic dependencies across cancers
+
+

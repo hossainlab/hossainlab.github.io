@@ -1,0 +1,29 @@
+1. **Biomedical Machine Learning with Python**.
+Applied machine learning frameworks for biomedical data analysis and predictive modeling. *Institution:* cBLAST, University of Dhaka 
+
+2. **Data Science and Machine Learning for Biologists**.
+Comprehensive training in data science workflows and ML applications for biological research. *Institution:* cBLAST, University of Dhaka 
+
+3. **AI for Public Health**.
+Modules on AI applications in disease modeling, digital health, and biomedical informatics. *Institution:* Micro-Credentials Academy, Daffodil International University
+
+4. **Transcriptomics Data Analysis (Bulk + Single-Cell Analysis)**.
+Comprehensive training in bulk and single-cell RNA-seq data analysis workflows and interpretation. *Institution:* DeepBio Limited 
+
+5. **Biomarker Identification using Machine Learning**.
+Machine learning approaches for discovering and validating biomarkers from omics datasets. *Institution:* DeepBio Limited 
+
+6. **Pan-Cancer Bioinformatics with R: Ideation to Publication**.
+End-to-end research workflow from hypothesis generation to publication using R and bioinformatics tools. *Institution:* DeepBio Limited 
+
+7. **AI in Drug Discovery: In Silico Toxicology Modeling**.
+Computational approaches for drug discovery and predictive toxicology modeling using AI. *Institution:* DeepBio Limited
+
+8. **Single-Cell Cancer Genomics**.
+Advanced methods for analyzing single-cell genomic data in cancer research contexts. *Institution:* DeepBio Limited
+
+9. **Bioinformatics Research with AI**.
+Integration of AI and machine learning techniques in bioinformatics research applications. *Institution:* DeepBio Limited 
+
+10. **BRAIN – Bioinformatics Research with AI in Neurosciences**.
+Specialized course on applying AI and bioinformatics methods to neuroscience research. *Institution:* DeepBio Limited 

@@ -390,7 +390,7 @@
       above: 1.5em,
       below: 1em,
     )
-    
+
     #set text(
         size: 16pt,
         weight: "regular",

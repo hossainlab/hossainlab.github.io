@@ -3,7 +3,7 @@ title: "Md. Jubayer Hossain's CV"
 author:
   # firstname: Md. Jubayer
   lastname: Md. Jubayer Hossain
-  address: "132/3, Azimpur, Dhaka, Bangladesh"
+  address: "132/3, Liberty Shetu, Sheikh Shaheb Bazar, Azimpur, Dhaka 1205, Bangladesh"
   position: "Bioinformatics Scientist・Transcriptomics (Bulk & Single-Cell RNA-Seq) and AI in Biology"
   contacts:
     - icon: fa envelope
@@ -43,9 +43,9 @@ brand:
     awesomecv-typst:
       font-header: Roboto
 ---
-
 ## Research Statement 
-My research focuses on developing reproducible bioinformatics pipelines for large-scale bulk and single-cell RNA-seq data to uncover molecular biomarkers, immunological signatures, and therapeutic targets in cancer and neurodegenerative diseases. By integrating multi-omics data analysis, machine learning, and biology, I aim to advance precision medicine through interpretable and scalable computational frameworks that bridge the gap between biological discovery and clinical translation.
+My research focuses on developing reproducible bioinformatics pipelines for large-scale bulk and single-cell RNA-seq data to uncover molecular biomarkers, immunological signatures, and therapeutic targets in cancer and neurodegenerative diseases. By integrating multi-omics data analysis, machine learning, and biology, I aim to advance computational methods that bridge biological discovery and clinical translation.
+
 
 ## Education and Training 
 
@@ -55,11 +55,6 @@ My research focuses on developing reproducible bioinformatics pipelines for larg
 
 {{< yaml assets/yml/research.yml >}}
 
-## Leadership Experience
-
-{{< yaml assets/yml/leadership.yml >}}
-
-
 ## Publications
 
 {{< include assets/qmd/publications.qmd >}}
@@ -67,30 +62,56 @@ My research focuses on developing reproducible bioinformatics pipelines for larg
 ### Under Review
 {{< include assets/qmd/under-review-papers.qmd >}}
 
-## Conferences
-{{< include assets/qmd/conferences.qmd >}}
+### Working Papers 
+{{< include assets/qmd/working-papers.qmd >}}
 
-## Teaching
-
-{{< yaml assets/yml/teaching.yml >}}
 
 {{< pagebreak >}}
 
+## Conferences
+{{< include assets/qmd/conferences.qmd >}}
 
-## Mentoring 
+
+{{< pagebreak >}}
+
+## Technical Skills
+
+{{< include assets/qmd/skills.qmd >}}
+
+
+## Teaching Experience
+
+{{< yaml assets/yml/teaching.yml >}}
+
+## Courses Taught
+{{< include assets/qmd/courses.qmd >}}
+
+## Research Mentoring
 {{< include assets/qmd/mentoring.qmd >}}
 
-## Talks
+## Leadership Experience
+
+{{< yaml assets/yml/leadership-deepbio.yml >}}
+
+{{< pagebreak >}}
+
+{{< yaml assets/yml/leadership-chiral.yml >}}
+
+## Bioinformatics Workflows
+
+{{< include assets/qmd/bioinfo-workflows.qmd >}}
+
+
+## GenAI Projects
+
+{{< include assets/qmd/gen-ai.qmd >}}
+
+## Invited Talks
 
 {{< include assets/qmd/talks.qmd >}}
 
-## Projects
-
-{{< yaml assets/yml/projects.yml >}}
-
-## Skills
-
-{{< yaml assets/yml/skill.yml >}}
+## Media Coverage
+{{< include assets/qmd/media.qmd >}}
 
 ## References
 

@@ -1,0 +1,9 @@
+1. **DeepTrust AI (Prototype)**.
+AI-powered tool to detect and counter health misinformation with NLP and credibility scoring features.
+*Tech:* Python, NLP, Transformers, FastAPI, Streamlit
+*Demo:* <https://deeptrustai.deepbioltd.com>
+
+2. **GenMed AI (Prototype)**.
+AI-driven platform accelerating drug discovery through disease data analysis, protein target identification, and therapeutic compound generation.
+*Tech:* Python, BioPython, RDKit, DeepChem, Transformers, PyTorch
+*Demo:* <https://genmedai.deepbioltd.com>

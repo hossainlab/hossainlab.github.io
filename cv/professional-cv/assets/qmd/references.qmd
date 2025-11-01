@@ -10,12 +10,11 @@
     Email: towhidst\@mib.jnu.ac.bd
   ],
   [
-    *Dr. A B M Alauddin Chowdhury* \
-    Professor & Head \
-    Department of Public Health \
-    Daffodil International University \
-    Email: headph\@daffodilvarsity.edu.bd \
-    dralauddin\@daffodilvarsity.edu.bd
+    *Dr. Md. Salequl Islam* \
+    Professor \
+    Department of Microbiology  \
+    Jahangirnagar University \
+    Email: salequl\@juniv.edu 
   ],
   [
     *Dr. Zeba Islam Seraj* \

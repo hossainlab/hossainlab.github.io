@@ -1,0 +1,9 @@
+- **Programming Languages**: Python, R, Julia, SQL, Bash, JavaScript
+- **Data Science**: PyTorch, TensorFlow, scikit-learn, XGBoost, PyCaret
+- **Bulk RNA-Seq Analysis**: FastQC, MultiQC, Cutadapt, STAR, HISAT2, Salmon, Kallisto, DESeq2, clusterProfiler
+- **Single-Cell RNA-Seq Analysis**: Seurat, scverse ecosystem (Scanpy, scVI-tools, scVelo, squidpy), CellRanger, Harmony, SingleR, celldex, velocyto
+- **Computational Biology & Cheminformatics**: BioPython, BioPandas, Scikit-bio, RDKit, DeepChem, PyMOL 
+- **Microbiome Analysis**: QIIME2, DADA2, Phyloseq, PICRUSt2
+- **Workflow Management & Reproducibility**: Nextflow, Snakemake, Docker, Git, GitHub
+- **Data Visualization & Reporting**: ggplot2, Seaborn, Matplotlib, Plotly, Quarto, Jupyter 
+- **Computing Environments**: UNIX/Linux, HPC clusters, Cloud computing (AWS, Google Cloud)

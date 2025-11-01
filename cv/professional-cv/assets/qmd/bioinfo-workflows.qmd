@@ -1,0 +1,29 @@
+1. **Bulk RNA-Seq Meta-Analysis Pipeline**.
+Nextflow-based pipeline for meta-analysis of public RNA-Seq data with automated QC and differential expression.
+*Tech:* Nextflow, nf-core, Python, R/Bioconductor, Docker
+*GitHub:* <https://github.com/hossainlab/nf-core-rnaseqmeta>
+
+2. **Single-Cell Meta-Analysis Pipeline**.
+Pipeline for single-cell RNA-Seq integration, cell type annotation, and batch correction.
+*Tech:* Python, Scanpy, R/Seurat, Harmony, scVI-tools
+*GitHub:* <https://github.com/hossainlab/sc-meta-analysis-pipeline>
+
+3. **Salmon RNA-Seq Quantification Pipeline**.
+End-to-end pipeline for ultra-fast transcript quantification and quality assessment.
+*Tech:* Salmon, FastQC, MultiQC, R/Bioconductor
+*GitHub:* <https://github.com/hossainlab/salmon-rnaseq>
+
+4. **Biomarker Identification using Machine Learning**.
+ML framework for biomarker discovery with feature selection and model interpretability.
+*Tech:* Python, Scikit-learn, XGBoost, SHAP
+*GitHub:* <https://github.com/hossainlab/biomarker_identification>
+
+5. **GEO Differential Expression & ML Dataset Prep**.
+Automated GEO data retrieval, differential expression analysis, and ML dataset generation.
+*Tech:* R/Bioconductor, Python, GEOquery, limma, DESeq2
+*GitHub:* <https://github.com/bigbiolab/geo_ml>
+
+6. **16S rRNA Microbiome Analysis Pipeline**.
+Comprehensive microbiome pipeline combining QIIME 2 and DADA2 for taxonomic profiling.
+*Tech:* QIIME 2, R/DADA2, Phyloseq, VSEARCH
+*GitHub:* <https://github.com/hossainlab/16S-pipeline>
