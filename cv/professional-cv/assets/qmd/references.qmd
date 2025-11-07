@@ -22,7 +22,7 @@
     Department of Molecular Biology and Biochemistry \
     University of Dhaka \
     Director, cBLAST \
-    Email: ziseraj\@gmail.com
+    Email: zebai\@du.ac.bd 
   ]
 )
 ```

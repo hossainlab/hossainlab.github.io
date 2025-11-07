@@ -22,8 +22,8 @@ Computational approaches for drug discovery and predictive toxicology modeling u
 8. **Single-Cell Cancer Genomics**.
 Advanced methods for analyzing single-cell genomic data in cancer research contexts. *Institution:* DeepBio Limited
 
-9. **Bioinformatics Research with AI**.
-Integration of AI and machine learning techniques in bioinformatics research applications. *Institution:* DeepBio Limited 
+9. **Bioinformatics and Integrative Genomics (BIG)**.
+Integration of cancer genomics, neurogenomics, computer-aided drug design and AI for life sciences in bioinformatics research applications. *Institution:* DeepBio Limited 
 
 10. **BRAIN – Bioinformatics Research with AI in Neurosciences**.
 Specialized course on applying AI and bioinformatics methods to neuroscience research. *Institution:* DeepBio Limited 

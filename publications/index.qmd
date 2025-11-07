@@ -12,7 +12,8 @@ subtitle: "List of publications"
 
 2. Fariha, F. T. J., Fuad, M., Saha, C. S., Hossen, S., & **Hossain, M. J.**\* (2025). Comprehensive bioinformatics analysis reveals prognostic significance and immunological roles of WNT gene family in breast cancer. *Scientific Reports, 15*, 34490. <https://doi.org/10.1038/s41598-025-13315-6>
 
-3. Bari, S. M., Fuad, M., & **Hossain, M. J.**\* (2025). Transcriptomic insights into heat and hypoxia stress in rainbow trout: A meta-analysis of public RNA-Seq data [Preprint]. *Research Square*. (Accepted by *BMC Genomics*) <https://doi.org/10.21203/rs.3.rs-6710656/v1>
+3. Bari, S. M., Fuad, M., & **Hossain, M. J.**\* (2025). A meta-analysis of public RNA-Seq data identifies conserved stress responses in rainbow trout. BMC Genomics 26, 999 (2025). <https://doi.org/10.1186/s12864-025-12127-2>
+
 
 4. GBD 2023 Vaccine Coverage Collaborators. (2025). Global, regional, and national trends in routine childhood vaccination coverage from 1980 to 2023 with forecasts to 2030: A systematic analysis for the Global Burden of Disease Study 2023. *The Lancet*. <https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)01037-2/>
 

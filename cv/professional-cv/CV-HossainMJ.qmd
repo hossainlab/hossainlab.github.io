@@ -4,7 +4,7 @@ author:
   # firstname: Md. Jubayer
   lastname: Md. Jubayer Hossain
   address: "132/3, Liberty Shetu, Sheikh Shaheb Bazar, Azimpur, Dhaka 1205, Bangladesh"
-  position: "Bioinformatics Scientist・Transcriptomics (Bulk & Single-Cell RNA-Seq) and AI in Biology"
+  position: "Single-Cell Genomics, Cancer Genomics, Neurogenomics and AI in Biology"
   contacts:
     - icon: fa envelope
       text: hossainmj.me@gmail.com
