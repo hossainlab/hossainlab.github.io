@@ -26,11 +26,13 @@ about:
 ::: {#hero-heading}
 
 ### Affiliations
-- Visiting Researcher, Department of Public Health, Daffodil International University
-- Faculty, cBLAST, University of Dhaka
-- Founder & Chief Executive Officer, DeepBio Limited
-- Founder & Executive Director, CHIRAL Bangladesh
-- Program Lead, GSA Bioinformatics Internship
+- Visiting Researcher, [Department of Public Health, Daffodil International University](https://daffodilvarsity.edu.bd/department/ph)
+- Faculty, [cBLAST, University of Dhaka](https://cblast.du.ac.bd/)
+- Founder & Chief Executive Officer, [DeepBio Limited](https://deepbioltd.com/)
+- Founder & Executive Director, [CHIRAL Bangladesh](https://deepbioltd.com/)
+- Program Lead, [GSA Bioinformatics Internship](https://gsabioinfointernship.owlstown.net/)
+
+
 
 ## Research 
 Overview of my major research interests across single-cell, spatial omics, machine learning and deep learning.
