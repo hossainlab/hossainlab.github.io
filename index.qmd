@@ -4,6 +4,7 @@ subtitle: "Researcher, Educator & Entrepreneur"
 description-meta: "Quarto Academic Website for Jubayer"
 image: files/profiles/jubayer.png
 page-layout: full
+toc: false
 about:
   id: hero-heading
   template: trestles
@@ -24,22 +25,18 @@ about:
 
 ::: {#hero-heading}
 
-I'm a Bioinformatics researcher specializing in bulk and single-cell RNA-seq, multi-omics integration, and machine learning applications in bioinformatics. My work spans development of scalable analysis pipelines, and mentoring of emerging computational biologists and bioinformaticians. I aim to advance computational methods that bridge biological discovery and clinical translation.
-
-### Professional Experience
-
+### Affiliations
+- Visiting Researcher, Department of Public Health, Daffodil International University
+- Faculty, cBLAST, University of Dhaka
 - Founder & Chief Executive Officer, DeepBio Limited
 - Founder & Executive Director, CHIRAL Bangladesh
-- Faculty, cBLAST, University of Dhaka
-- Visiting Researcher, Department of Public Health, Daffodil International University
-- Instructor, Micro-credential Academy, Daffodil International University
 - Program Lead, GSA Bioinformatics Internship
 
+## Research 
+Overview of my major research interests across single-cell, spatial omics, machine learning and deep learning.
 
-### Education
-
-- Master of Science, Microbiology, Jagannath University
-- Bachelor of Science, Microbiology, Jagannath University
+<img src="files/research/interests.png" alt="Research interests overview"
+       style="width:50%; height:auto;">
 
 :::
 
