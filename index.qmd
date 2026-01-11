@@ -11,7 +11,7 @@ about:
   image-shape: round
   links:
     - icon: envelope
-      href: mailto:email@gmail.com    
+      href: mailto:contact.jubayerhossain@gmail.com
     - icon: linkedin
       href: https://linkedin.com/hossainmj
       target: _blank
