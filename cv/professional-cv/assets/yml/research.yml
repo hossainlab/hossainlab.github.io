@@ -7,6 +7,16 @@ diu:
     - Collaborated with DIU faculty and students on ongoing research projects, grant proposals, and publications in public health and health informatics, resulting in 2 manuscripts under preparation.
     - Delivering workshops, online courses, and research mentorship to strengthen capacity building in public health research.
 
+nextflow:
+  title: Nextflow Ambassador
+  location: Global
+  date: 2024 – Present
+  description: Nextflow Community (Voluntary)
+  details:
+    - Promoted adoption of Nextflow workflows within the computational biology and health data science communities through technical advocacy, tutorials, and peer support.
+    - Organized and contributed to community-driven events, workshops, and knowledge-sharing sessions focused on reproducible, scalable, and portable scientific workflows.
+    - Provided hands-on guidance to researchers and early-career scientists on workflow design, best practices, and troubleshooting in Nextflow-based pipelines.
+    - Strengthened the global Nextflow ecosystem by fostering collaboration between users, developers, and research groups, supporting the advancement of reproducible data analysis in life sciences.
 ihme:
   title: GBD Collaborator
   location: Washington, USA
