@@ -1,6 +1,6 @@
 *Note: ^+^Indicates a presenter, ^‡^indicates a co-author, and ^\*^ indicates a corresponding author*
 
-## **Poster Presentations**
+### Poster Presentations
 
 1. ^+^Hossain, M. J., Das, M. (2024). Diagnostic and Electrophysiological Features of Hirayama Disease in Young Adult Male: A Case Report. International Conference of Public Health, Institute of Epidemiology, Disease Control and Research (IEDCR), Dhaka, Bangladesh
 
@@ -12,7 +12,7 @@
 
 5. ^+^Akter, N., Mim, N. A., ^\*^**Hossain, M. J.** (2024). Particulate Matter PM2.5 Pollution and Air Quality Index (AQI) Trends Evaluation with Meteorological Factors in Dhaka City. International Conference of Public Health, Institute of Epidemiology, Disease Control and Research (IEDCR), Dhaka, Bangladesh
 
-## **Oral Presentations**
+### Oral Presentations
 
 1. ^+^Tuhin, M. A. A., Mim, N. A., Akter, N., Jamal, F., Sakib, M. N., Mehjabin, K., ^\*^**Hossain, M. J.** (2024). Exploring the Factors Influencing Heat Stress Risks Using the Discomfort Index Method in Bangladesh. International Conference on Environmental Science and Resource Management 2024 (ICESRM 2024), Department of Environmental Science and Resource Management, Mawlana Bhashani Science and Technology University, Bangladesh.
 

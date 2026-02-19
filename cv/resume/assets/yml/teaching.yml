@@ -1,0 +1,26 @@
+cblast:
+  title: Faculty
+  location: Dhaka, Bangladesh
+  date: Aug 2023 - Present
+  description: cBLAST, University of Dhaka (Part-time)
+  details:
+    - Designed and delivered specialized courses in Biomedical Machine Learning, Data Science for Biologists, and Bioinformatics, training over 130 participants across structured academic programs.
+    - Supervised student-led biomedical ML research projects, mentoring trainees toward publication-ready analyses and conference-level presentations.
+
+gsa_internship:
+  title: Program Lead
+  location: Dhaka, Bangladesh
+  date: June 2025 - Present
+  description: GSA Bioinformatics Internship (Part-time)
+  details:
+    - Designed and delivered an intensive, hands-on bioinformatics curriculum spanning Bash, R, bulk RNA-seq, and single-cell RNA-seq.
+    - Mentored research interns on a comparative pan-cancer transcriptomics meta-analysis, guiding data analysis, interpretation, and scientific writing toward conference abstracts and manuscripts.
+
+jnu_ta:
+  title: Teaching Assistant
+  location: Dhaka, Bangladesh
+  date: Oct 2022 - Dec 2022
+  description: Department of Microbiology, Jagannath University (Part-time)
+  details:
+    - Assisted in lecture delivery, assessment design, and instructional support for undergraduate coursework in Public Health & Hygiene.
+    - Mentored students on public health research projects, providing guidance on study design, data analysis, and academic presentation.

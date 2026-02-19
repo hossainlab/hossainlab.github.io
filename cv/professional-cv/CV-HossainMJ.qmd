@@ -3,32 +3,26 @@ title: "Md. Jubayer Hossain's CV"
 author:
   # firstname: Md. Jubayer
   lastname: Md. Jubayer Hossain
-  address: "132/3, Liberty Shetu, Sheikh Shaheb Bazar, Azimpur, Dhaka 1205, Bangladesh"
-  position: "Single-Cell Genomics, Cancer Genomics, Neurogenomics and AI in Biology"
+  position: "Department of Public Health, Daffodil International University"
+  address: "Daffodil Smart City, Birulia 1216"
+
   contacts:
+    - icon: fa phone 
+      text: "+8801622345906"
+      url: "tel:+8801622345906"
     - icon: fa envelope
       text: hossainmj.me@gmail.com
       url: "mailto:hossainmj.me@gmail.com"
-    - icon: assets/icon/bi-house-fill.svg
+    - icon: fa globe
       text: mdjubayerhossain.com
       url: https://mdjubayerhossain.com
-    - icon: fa brands orcid
-      text: 0000-0001-9323-4997
-      url: https://orcid.org/0000-0001-9323-4997
-    - icon: fa brands github
-      text: GitHub
-      url: https://github.com/hossainlab
-    - icon: fa brands linkedin
-      text: LinkedIn
-      url: https://linkedin.com/in/hossainmj
-
 format:
   awesomecv-typst:
     text-align: justify
 brand:
   typography:
     fonts:
-      - family: Roboto
+      - family: Poppins 
         source: google
         weight: [100, 400, 700]
       - family: Source Sans 3
@@ -38,81 +32,63 @@ brand:
     base: Source Sans 3
   color:
     primary: "#000000"
-    link: "#771822"
+    link: "#0563C1"
   defaults:
     awesomecv-typst:
-      font-header: Roboto
+      font-header: Poppins
 ---
-## Research Statement 
+
+# Research Statement 
 My research focuses on developing reproducible bioinformatics pipelines for large-scale bulk and single-cell RNA-seq data to uncover molecular biomarkers, immunological signatures, and therapeutic targets in cancer and neurological diseases. By integrating multi-omics data analysis, machine learning, and biology, I aim to advance computational methods that bridge biological discovery and clinical translation.
 
 
-## Education and Training 
-
+# Education and Training 
 {{< yaml assets/yml/education.yml >}}
 
-## Research Experience
-
+# Research Experience
 {{< yaml assets/yml/research.yml >}}
 
-## Publications
-
+# Publications 
 {{< include assets/qmd/publications.qmd >}}
 
-### Under Review
+# Papers Under Review 
 {{< include assets/qmd/under-review-papers.qmd >}}
 
-### Working Papers 
+# Working Papers 
 {{< include assets/qmd/working-papers.qmd >}}
 
-
-{{< pagebreak >}}
-
-## Conferences
+# Conferences  
 {{< include assets/qmd/conferences.qmd >}}
 
-
-{{< pagebreak >}}
-
-## Technical Skills
-
-{{< include assets/qmd/skills.qmd >}}
-
-
-## Teaching Experience
-
+# Teaching Experience 
 {{< yaml assets/yml/teaching.yml >}}
 
-## Courses Taught
+# Leadership Experience 
+{{< yaml assets/yml/leadership.yml >}}
+
+# Community Engagement 
+{{< yaml assets/yml/community.yml >}}
+
+# Courses Taught
 {{< include assets/qmd/courses.qmd >}}
 
-## Research Mentoring
+# Research Mentoring
 {{< include assets/qmd/mentoring.qmd >}}
 
-## Leadership Experience
-
-{{< yaml assets/yml/leadership-deepbio.yml >}}
-
-{{< pagebreak >}}
-
-{{< yaml assets/yml/leadership-chiral.yml >}}
-
-## Bioinformatics Workflows
+# Bioinformatics Workflows
 
 {{< include assets/qmd/bioinfo-workflows.qmd >}}
 
-
-## GenAI Projects
+# GenAI Projects
 
 {{< include assets/qmd/gen-ai.qmd >}}
 
-## Invited Talks
+# Invited Talks
 
 {{< include assets/qmd/talks.qmd >}}
 
-## Media Coverage
+# Media Coverage
 {{< include assets/qmd/media.qmd >}}
 
-## References
-
+# References
 {{< include assets/qmd/references.qmd >}}

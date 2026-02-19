@@ -1,47 +1,47 @@
-cblast:
-  title: Faculty
-  location: Dhaka, Bangladesh
-  date: Aug 2023 - Present
-  description:  cBLAST, University of Dhaka  (Part-time)
-  details:
-    - Designed and delivered specialized courses in Biomedical Machine Learning with Python (20 trainees), Data Science and Machine Learning for Biologists (100+ enrolled), and School of Bioinformatics (15 trainees).
-    - Supervised student research projects applying ML frameworks to biomedical datasets, guiding participants toward publication-ready outputs and conference presentations.
-    - Website-https://cblast.du.ac.bd/
-diu_instructor:
-  title: Instructor
-  location: Dhaka, Bangladesh
-  date: July 2025 - Present
-  description: Micro-Credentials Academy, Daffodil International University (Part-time)
-  details:
-    - Designed and delivered modules on AI for disease modeling, digital health, and biomedical informatics
-    - Coordinated training programs that reached diverse student groups, bridging computing and health sciences
-    - Website-https://mdjubayerhossain.com/ai4ph/
-bioinformatics_training:
+deepbio_academy:
   title: Lead Organizer & Instructor
   location: Dhaka, Bangladesh
-  date: Jan 2025 - Present
-  description: Professional Training in Bioinformatics and Computational Biology (Part-time)
+  date: June 2020 – Present
+  description: DeepBio Academy, Bioinformatics and Computational Biology
   details:
-    - Developed a year-long, university-style program covering genomics, transcriptomics, single-cell RNA-seq, and AI in health, with 40 students enrolled from Bangladesh, Pakistan, India, and African countries.
-    - Led a team of 4 instructors and 8 teaching assistants and created real-world case study curricula, preparing students for professional research careers in bioinformatics and computational biology.
-    - Website-https://academy.deepbioltd.com/
-gsa_internship:
+    - Designed comprehensive bioinformatics curriculum specializing in Single-Cell RNA-seq (scRNA-seq) workflows and multi-omic data integration.
+    - Benchmarked computational tools for transcriptomics and genomics to ensure pipeline reproducibility and analytical rigor.
+    - Supervised a technical research team in processing high-throughput omics datasets to identify transcriptional drivers of disease.
+    - Mentored undergraduate studente in the development of computational research portfolios, emphasizing open-science standards and version control.
+    - Refined deep learning modules for biological applications, focusing on the interpretability of high-dimensional data reduction techniques.
+
+cblast:
+  title: Faculty (Bioinformatics)
+  location: Dhaka, Bangladesh
+  date: Aug 2023 – Present
+  description: University of Dhaka (cBLAST)
+  details:
+    - Instructed specialized modules in Biomedical Machine Learning, focusing on the application of Python-based neural networks to sequence analysis.
+    - Directed student research projects applying deep learning frameworks to identify regulatory elements in complex biological datasets.
+    - Facilitated technical practicums for 100+ trainees on scalable data science methodologies for high-throughput genomic data.
+    - Evaluated computational frameworks for performance, establishing rigorous criteria for the optimization of biological models.
+    - Bridge theoretical computational principles with experimental biology to foster collaborative research outputs.
+
+gsa:
   title: Program Lead
   location: Dhaka, Bangladesh
-  date: June 2025 - Present
-  description: GSA Bioinformatics Internship (Part-time)
+  date: July 2025 – Dec 2025
+  description: GSA Bioinformatics Internship
   details:
-    - Designed and taught a hands-on bioinformatics curriculum (Bash, R, RNA-seq, scRNA-seq) for interns annually.
-    - Mentored 5 research interns on an original project: Comparative pan-cancer transcriptomics meta-analysis, which uncovered shared and distinct transcriptional networks with pathway crosstalk in liver, kidney, pancreas, and gastrointestinal cancers for biomarker and therapeutic target discovery.
-    - Guided interns in RNA-seq meta-analysis, coding, and scientific communication, leading to conference abstracts and manuscript preparation.
-    - Website-https://gsabioinfointernship.owlstown.net/
+    - Conducted a pan-cancer transcriptomics meta-analysis across four organ systems to identify conserved regulatory networks in tumorigenesis.
+    - Optimized high-throughput pipelines for Bulk and Single-Cell RNA-seq, implementing advanced batch-effect correction and normalization protocols.
+    - Mentored research interns in the utilization of High-Performance Computing (HPC) environments and R/Bioconductor analytical frameworks.
+    - Analyzed complex transcriptional networks using Gene Set Enrichment Analysis (GSEA) to uncover novel oncogenic drivers.
+    - Managed collaborative research workflows across three institutions, resulting in the generation of peer-reviewed conference abstracts.
+
 jnu_ta:
   title: Teaching Assistant
   location: Dhaka, Bangladesh
-  date: Oct 2022 - Dec 2022
-  description: Department of Microbiology, Jagannath University (Part-time)
+  date: Oct 2022 – Dec 2022
+  description: Department of Microbiology, Jagannath University
   details:
-    - Assisted in preparing and delivering lectures, course materials, and assessments for 40 undergraduate students in Public Health & Hygiene.
-    - Mentored students on a public health project, providing guidance on research design, data analysis, and presentation skills.
-    - Supported faculty in student evaluation and academic advising, fostering stronger student engagement with departmental activities.
-    - Website-https://jnu.ac.bd/department/portal/microbiology
+    - Assisted in the delivery of research methodology training, focusing on experimental design and statistical power in public health microbiology.
+    - Processed public health surveillance data to support departmental research on emerging epidemiological trends.
+    - Critiqued and refined student research proposals to ensure compliance with modern computational and microbiological standards.
+    - Communicated complex biological theories through technical presentations to diverse academic audiences.
+    - Implemented digital data-tracking systems to monitor research milestones and student performance metrics.

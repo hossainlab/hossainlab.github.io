@@ -1,0 +1,20 @@
+*Note: \* indicates corresponding author*
+
+1. Fariha, F. T. J., Fuad, M., Saha, C. S., Hossen, S., & **Hossain, M. J.**\* (2025). Comprehensive bioinformatics analysis reveals prognostic significance and immunological roles of WNT gene family in breast cancer. Sci Rep 15, 34490 (2025). <https://doi.org/10.1038/s41598-025-13315-6>
+
+2. Ahmed, M. Z., Billah, M. M., Ferdous, J., & **Hossain, M. J.**\* (2025). Pan-cancer analysis reveals immunological and prognostic significance of CCT5 in human tumors. *Scientific Reports, 15*, 14405. <https://doi.org/10.1038/s41598-025-88339-z>
+
+3. Bari, S.M., Fuad, M., **Hossain, M.J.** et al. A meta-analysis of public RNA-Seq data identifies conserved stress responses in rainbow trout. BMC Genomics 26, 999 (2025). <https://doi.org/10.1186/s12864-025-12127-2>
+
+4. GBD 2023 Headache Collaborators (**Hossain, M. J.**, 2025). Global, regional, and national burden of headache disorders, 1990–2023: a systematic analysis for the Global Burden of Disease Study 2023. *Lancet Neurology*. <https://www.thelancet.com/journals/laneur/article/PIIS1474-4422(25)00402-8/fulltext>
+
+5. GBD 2023 Vaccine Coverage Collaborators (**Hossain, M. J.**, 2025). Global, regional, and national trends in routine childhood vaccination coverage from 1980 to 2023 with forecasts to 2030: A systematic analysis for the Global Burden of Disease Study 2023. *The Lancet*. <https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)01037-2/>
+
+
+6. Islam, M. W., Shahjahan, M., Azad, A. K., & **Hossain, M. J.**\* (2024). Factors contributing to antibiotic misuse among parents of school-going children in Dhaka City, Bangladesh. *Scientific Reports, 14*, 2318. <https://doi.org/10.1038/s41598-024-52313-y>
+
+
+7. **Hossain, M. J.**\*, Islam, M. W., Munni, U. R., Gulshan, R., Mukta, S. A., Miah, M. S., Sultana, S., Karmakar, M., Ferdous, J., & Islam, M. A. (2023). Health-related quality of life among thalassemia patients in Bangladesh using the SF-36 questionnaire. *Scientific Reports, 13*(1). <https://doi.org/10.1038/s41598-023-34205-9>
+
+
+

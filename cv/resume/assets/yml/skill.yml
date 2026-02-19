@@ -1,0 +1,24 @@
+technical_skills:
+  programming_and_data:
+    title: Programming & Data Science
+    description: Python, R, SQL, Bash, Julia; NumPy, Pandas, scikit-learn, XGBoost, PyTorch, TensorFlow, SHAP
+
+  transcriptomics:
+    title: Transcriptomics (Bulk & Single-Cell)
+    description: FastQC, STAR, HISAT2, Salmon, DESeq2, edgeR; Seurat, Scanpy, CellRanger, scVI-tools, scVelo, SingleR
+
+  spatial_and_microbiome:
+    title: Spatial Transcriptomics & Microbiome
+    description: Squidpy, SpatialData, Giotto; QIIME 2, DADA2, Phyloseq, Kraken2, MetaPhlAn, HUMAnN
+
+  computational_biology:
+    title: Computational Biology & Cheminformatics
+    description: BioPython, Scikit-bio, RDKit, DeepChem, PyMOL, Open Babel
+
+  workflows_and_computing:
+    title: Reproducible Workflows & Computing
+    description: Nextflow, nf-core, Snakemake, Docker, Singularity, Git; UNIX/Linux, HPC (SLURM), AWS, Google Cloud
+
+  visualization_and_resources:
+    title: Visualization & Biological Databases
+    description: ggplot2, Matplotlib, Plotly, ComplexHeatmap, MultiQC; GEO, SRA, TCGA, GTEx, Ensembl, UniProt
