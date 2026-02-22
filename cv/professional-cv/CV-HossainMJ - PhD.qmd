@@ -1,0 +1,78 @@
+---
+title: "Md. Jubayer Hossain's CV"
+author:
+  # firstname: Md. Jubayer
+  lastname: Md. Jubayer Hossain
+  position: "Department of Public Health, Daffodil International University"
+  address: "Daffodil Smart City, Birulia 1216"
+  contacts:
+    - icon: fa phone 
+      text: "+8801622345906"
+      url: "tel:+8801622345906"
+    - icon: fa envelope
+      text: hossainmj.me@gmail.com
+      url: "mailto:hossainmj.me@gmail.com"
+    - icon: fa globe
+      text: mdjubayerhossain.com
+      url: https://mdjubayerhossain.com
+format:
+  awesomecv-typst:
+    text-align: justify
+brand:
+  typography:
+    fonts:
+      - family: Poppins 
+        source: google
+        weight: [100, 400, 700]
+      - family: Source Sans 3
+        source: google
+        weight: [100, 400, 700]
+        style: [normal, italic]
+    base: Source Sans 3
+  color:
+    primary: "#000000"
+    link: "#0563C1"
+  defaults:
+    awesomecv-typst:
+      font-header: Poppins
+---
+
+# Research Statement 
+My research focuses on developing reproducible bioinformatics pipelines for large-scale bulk and single-cell RNA-seq data to uncover molecular biomarkers, immunological signatures, and therapeutic targets in cancer and neurological diseases. By integrating multi-omics data analysis, machine learning, and biology, I aim to advance computational methods that bridge biological discovery and clinical translation.
+
+# Education and Training 
+{{< yaml assets/yml/education.yml >}}
+
+# Technical Skills 
+{{< include assets/qmd/skills.qmd >}}
+
+
+# Research Experience
+{{< yaml assets/yml/research.yml >}}
+
+# Selected Publications 
+{{< include short_assets/qmd/publications.qmd >}}
+
+# Papers Under Review 
+{{< include short_assets/qmd/under-review-papers.qmd >}}
+
+# Working Papers 
+{{< include short_assets/qmd/working-papers.qmd >}}
+
+# Selected Conference Presentations  
+{{< include short_assets/qmd/conferences.qmd >}}
+
+# Invited Talks  
+{{< include assets/qmd/talks.qmd >}}
+
+# Teaching Experience 
+{{< yaml assets/yml/teaching.yml >}}
+
+# Leadership Experience 
+{{< yaml assets/yml/leadership.yml >}}
+
+# Community Engagement 
+{{< yaml assets/yml/community.yml >}}
+
+# References
+{{< include assets/qmd/references.qmd >}}

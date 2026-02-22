@@ -1,0 +1,7 @@
+1. Ahmad, F., Fuad, M., Shahjahan, M., & **Hossain, M. J.** (2025). Identification of Subtype-Specific Prognostic Biomarkers in Esophageal Carcinoma through Integrated Bioinformatics Analysis. 9th BSM Annual Conference, University of Dhaka, Bangladesh. *GitHub*. <https://github.com/gsabioinfointernship/ESCA_Meta>
+
+2. Aditee, L. M., Fuad, M., Shahjahan, M., & **Hossain, M. J.**(2025). Network-Driven Bioinformatics Approach Uncovers Prognostic Signatures and Therapeutic Targets in Pancreatic Ductal Adenocarcinoma. 9th BSM Annual Conference, University of Dhaka, Bangladesh. *GitHub*. <https://github.com/gsabioinfointernship/PAAD_Meta>
+
+3. Ahamed, M. S., Fuad, M., Shahjahan, M., & **Hossain, M. J.** (2025). Bioinformatic Analysis of Transcriptomic Data Reveals Molecular Signatures Driving Colorectal Cancer. 9th BSM Annual Conference, University of Dhaka, Bangladesh. *GitHub*. <https://github.com/gsabioinfointernship/COADREAD_Meta>
+
+4. Tabassum, R., Fuad, M., Shahjahan, M., & **Hossain, M. J.** (2025). Comparative Transcriptomic Meta-Analysis Reveals Shared and Distinct Transcriptional Networks and Pathway Crosstalk in Hepatocellular Carcinoma for Biomarker and Therapeutic Target Identification. 9th BSM Annual Conference, University of Dhaka, Bangladesh. *GitHub*. <https://github.com/gsabioinfointernship/LIHC_Meta>

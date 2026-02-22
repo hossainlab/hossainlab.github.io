@@ -13,11 +13,19 @@ bs:
   description: Jagannath University
   details:
     - Relevant Coursework: Biostatistics, Public Health and Hygiene, Bioinformatics I, Bioinformatics II
-
-training:
-  title: Specialized Training: AI in Public Health
+brac:
+  title: Interdisciplinary Computational Biology
   location: Dhaka, Bangladesh
-  date: 2023
+  date: January 2026
+  description: BRAC University
+  details:
+    - Mastered high-resolution protein structure prediction and molecular visualization using AlphaFold2/3 and ChimeraX to investigate complex protein-ligand interactions
+    - Applied AI/ML frameworks and docking protocols to structural data from PDB and UniProt, culminating in an interdisciplinary project on predictive molecular modeling.
+chrf_training:
+  title: AI in Public Health
+  location: Dhaka, Bangladesh
+  date: Sep 2023
   description: Child Health Research Foundation (CHRF)
   details:
-    - Acquired Skills: Epidemiological Modeling, Disease Surveillance using AI, Time Series Analysis (LSTM, ARIMA), Medical Image Analysis (X-ray, MRI)
+    - Developed predictive models and data pipelines for disease surveillance, focusing on the calculation of typhoid incidence and vaccine impact in Bangladesh.
+    - Built LLM-based code generation and computer vision frameworks for medical image analysis while analyzing the ethical implications of algorithmic bias.

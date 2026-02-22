@@ -1,0 +1,23 @@
+nextflow:
+  title: Nextflow Ambassador
+  location: Barcelona, Spain
+  date: 2025 – Present
+  description: Seqera
+  details:
+    - Advocated for the adoption of Nextflow-based DSL2 pipelines to ensure reproducibility and scalability in high-throughput single-cell and bulk RNA-seq workflows.
+    - Engineered technical tutorials and documentation for the deployment of portable scientific containers (Docker/Singularity) in cloud and HPC environments.
+    - Optimized community-driven bioinformatic workflows, focusing on the integration of standardized pipelines for large-scale transcriptomic data processing.
+    - Facilitated technical workshops on workflow orchestration, training researchers to manage complex multi-omic datasets with high analytical rigor.
+    - Collaborated with global health data scientists to implement best practices for version-controlled, open-source computational research.
+
+ihme:
+  title: GBD Senior Collaborator
+  location: Washington, USA
+  date: 2025 – Present
+  description: Institute for Health Metrics and Evaluation
+  details:
+    - Contributed advanced statistical modeling and analytical validation to Global Burden of Disease (GBD) studies published in high-impact journals like The Lancet.
+    - Synthesized and audited complex epidemiological datasets from 190+ countries to strengthen the robustness of global health genomic evidence.
+    - Formulated predictive models for disease burden, utilizing large-scale data integration techniques to identify health trends across diverse populations.
+    - Evaluated the quality and consistency of multi-national health data, ensuring high-fidelity inputs for global health policy frameworks.
+    - Collaborated with international research cohorts to refine statistical methodologies for assessing neurological and metabolic disease prevalence.

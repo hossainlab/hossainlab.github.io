@@ -1,0 +1,28 @@
+```{=typst}
+#grid(
+  columns: (1fr, 1fr, 1fr),
+  gutter: 1em,
+  [
+    *Dr. Syeda Tasneem Towhid* \
+    Associate Professor \
+    Department of Microbiology \
+    Jagannath University \
+    Email: towhidst\@mib.jnu.ac.bd
+  ],
+  [
+    *Dr. Md. Salequl Islam* \
+    Professor \
+    Department of Microbiology  \
+    Jahangirnagar University \
+    Email: salequl\@juniv.edu 
+  ],
+  [
+    *Dr. Zeba Islam Seraj* \
+    UGC Professor \
+    Department of Molecular Biology and Biochemistry \
+    University of Dhaka \
+    Director, cBLAST \
+    Email: zebai\@du.ac.bd 
+  ]
+)
+```

@@ -1,0 +1,23 @@
+brac:
+  title: Interdisciplinary Computational Biology
+  location: Dhaka, Bangladesh
+  date: January 2026
+  description: BRAC University
+  details:
+    - Mastered advanced protein structure prediction methodologies using AlphaFold2 and AlphaFold3 within Google Colab environments.
+    - Conducted high-resolution molecular visualization and analysis of biological macromolecules using ChimeraX.
+    - Executed computational docking protocols and structural biology workflows to investigate protein-ligand interactions.
+    - Applied Machine Learning and AI frameworks to solve complex biological problems, focusing on structural data from the Protein Data Bank (PDB) and UniProt.
+    - Developed and presented an interdisciplinary computational project integrating structural bioinformatics and predictive modeling.
+
+chrf_training:
+  title: AI in Public Health
+  location: Dhaka, Bangladesh
+  date: Sep 2023
+  description: Child Health Research Foundation (CHRF)
+  details:
+    - Mastered the application of Large Language Models (LLMs) and advanced prompting techniques to automate genomic and epidemiological code generation.
+    - Formulated computational models for disease incidence calculation, including a vaccine impact assessment for Typhoid Conjugate Vaccines (TCV) in Bangladesh.
+    - Orchestrated end-to-end data pipelines involving quality assessment, preprocessing, and predictive modeling for real-time outbreak detection.
+    - Investigated AI-driven medical image analysis, focusing on the deployment of algorithms for diagnostic X-ray interpretation.
+    - Evaluated ethical frameworks and algorithmic bias in AI integration to ensure fairness in high-dimensional public health modeling.

@@ -1,5 +1,0 @@
-1. Islam, M. W., Rahman, M. M., Naznin, H., Hossain, M. S., Akter, T., Shatabde, Z. A., & **Hossain, M. J.**\* (2025). Integrative bioinformatics analysis reveals COL13A1 and COL23A1 as potential diagnostic and prognostic biomarkers in thyroid cancer. [Under Review in Health Science Reports].
-
-2. Islam, M. W., Fariha, F. T. J., Ahmed, M. Z., Ferdous, J., Lota, H. B., Hossain, M. S., Kundu, P., Shahjahan, M., & **Hossain, M. J.**\* (2025). Bioinformatics-driven multi-omics profiling of CDK1 and CDK6 identifies prognostic and therapeutic roles in breast cancer.[Under Review in Health Science Reports].
-
-3. Mabsurah, K., Yeana, I. J., Sumaiya, M., Islam, T., Ahammad, K., Bhattacharjee, A., Ferdous, J., Billah, M. M., & **Hossain, M. J.**\* (2025). Pan-cancer analysis identifies potential prognostic and immunological role of RAS-degrading WDR76 in human tumors. [Under Review in Discover Oncology].

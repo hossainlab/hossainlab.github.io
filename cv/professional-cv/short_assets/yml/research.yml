@@ -1,0 +1,44 @@
+diu:
+  title: Visiting Scholar
+  location: Dhaka, Bangladesh
+  date: Sep 2025 – Present
+  description: Department of Public Health, Daffodil International University
+  details:
+    - Investigated computational frameworks within public health genomics to facilitate large-scale biomarker discovery and clinical validation.
+    - Formulated two research manuscripts (in preparation) analyzing genomic surveillance data and identifying novel molecular signatures in disease.
+    - Developed a specialized curriculum for AI-driven disease modeling, integrating neural network architectures into biomedical informatics.
+    - Synthesized heterogeneous digital health records with genomic datasets to evaluate predictive models for clinical outcomes.
+    - Led a multidisciplinary research initiative to translate raw sequencing data into evidence-based public health insights.
+
+biobio:
+  title: Research Associate (Bioinformatics)
+  location: Dhaka, Bangladesh
+  date: 2017 – 2019
+  description: Bio-Bio-1:Bioinformatics Research Discussion Group
+  details:
+    - Investigated emerging bioinformatics methodologies, focusing on the application of computational tools to genomic and transcriptomic datasets.
+    - Designed collaborative training modules in R and Python for data analysis, fostering foundational skills in computational biology for early-career researchers.
+    - Facilitated technical discussions on sequence alignment algorithms and structural biology, contributing to the group's research output.
+    - Developed learning content for high-throughput data processing, bridging the gap between theoretical biology and practical data science.
+    - Evaluated peer-reviewed literature for method validation, maintaining a rigorous standard for the group’s computational research initiatives.
+
+icddrb:
+  title: Research Intern
+  location: Dhaka, Bangladesh
+  date: Feb 2022—Jun 2022
+  description: International Center for Diarrhoeal Disease Research, Bangladesh (Part-time, Voluntary)
+  details:
+    - Designed and implemented a comprehensive search strategy across PubMed, Embase, and PsycINFO, screening 8,000+ articles to support a systematic review on intimate partner violence in South Asia.
+    - Streamlined the abstract screening process in Covidence, identifying 400+ potentially relevant studies.
+    - Conducted full-text screening of 120+ articles and extracted key variables for meta-analysis.
+    - Drafted a systematic review protocol based on PRISMA guidelines, ensuring methodological transparency and reproducibility.
+
+curtlin:
+  title: Data Enumerator
+  location: Australia
+  date: Oct 2022—Nov 2022
+  description: School of Allied Health, Curtin University (Part-time)
+  details:
+    - Collected both quantitative and qualitative data from 40 Bangladeshi doctors for a Delphi study on Patient Outcomes Measurement in Interprofessional Tuberculosis Care.
+    - Validated and cleaned all survey responses, achieving 100% accuracy in the final dataset.
+    - Enhanced the reliability of study outcomes by ensuring high-quality and complete data capture.

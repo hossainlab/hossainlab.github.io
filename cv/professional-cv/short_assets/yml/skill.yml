@@ -1,0 +1,43 @@
+programming:
+  title: Programming Languages
+  description: Python, R, Julia, SQL, Bash, JavaScript
+
+data_science:
+  title: Data Science & Machine Learning
+  description: NumPy, Pandas, Matplotlib, Seaborn, PyTorch, TensorFlow, scikit-learn, XGBoost, PyCaret, SHAP
+
+genomics_bulk:
+  title: Bulk RNA-Seq Analysis
+  description: FastQC, STAR, HISAT2, Salmon, Kallisto, DESeq2, limma, edgeR, GEOquery, SRAdb
+
+genomics_single:
+  title: Single-Cell RNA-Seq Analysis
+  description: Seurat, Scanpy, CellRanger, Harmony, scVI-tools, velocyto, scVelo, SingleR, celldex
+
+spatial:
+  title: Spatial Transcriptomics
+  description: Squidpy, SpatialData, Seurat (spatial), Giotto, STUtility
+
+computational_bio:
+  title: Computational Biology & Cheminformatics
+  description: BioPython, BioPandas, Scikit-bio, RDKit, DeepChem, PyMOL, Open Babel
+
+microbiome:
+  title: Microbiome Analysis
+  description: QIIME 2, DADA2, Phyloseq, VSEARCH, Kraken2, MetaPhlAn, HUMAnN
+
+databases:
+  title: Biological Databases & Resources
+  description: GEO, SRA, TCGA, GTEx, Ensembl, NCBI, UniProt, String-DB, ChemBL, PDB
+
+workflow:
+  title: Workflow Management & Reproducibility
+  description: Nextflow, nf-core, Snakemake, Docker, Singularity, Git, GitHub, GitHub Actions
+
+visualization:
+  title: Data Visualization & Reporting
+  description: ggplot2, Seaborn, Matplotlib, Plotly, ComplexHeatmap, pheatmap, MultiQC, R Markdown, Quarto
+
+computing:
+  title: Computing Environments
+  description: UNIX/Linux, HPC clusters, SLURM, Cloud computing (AWS, Google Cloud), Conda, Mamba

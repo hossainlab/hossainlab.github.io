@@ -1,0 +1,5 @@
+1. **Hossain, M. J.**, Shahjahan, M., & Fuad, M. (2025). Fezf2-mediated cortical development: Multi-omics analysis. *Working Paper/GitHub*. <https://github.com/hossainlab/fezf2-multiomics>
+
+2. **Hossain, M. J.**, Shahjahan, M., & Fuad, M. (2025). Single-cell meta-analysis of microglial activation in Alzheimer’s disease. *Working Paper/GitHub*. <https://github.com/hossainlab/alzheimers-microglia-meta-analysis>
+
+3. **Hossain, M. J.**, Shahjahan, M., & Fuad, M. (2025). Integrative spatial-scRNA-seq atlas of immunotherapy resistance mechanisms across cancer types. *Working Paper/GitHub*. <https://github.com/hossainlab/spatial-scRNA-immune-resistance>
