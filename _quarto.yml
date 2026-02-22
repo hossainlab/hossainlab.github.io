@@ -25,22 +25,17 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: research/index.qmd
-        text: Research
       - href: projects/index.qmd
         text: Projects
-      - href: blog/index.qmd
-        text: Blog
       - href: teaching/index.qmd
         text: Teaching
-      - href: mentoring/index.qmd
-        text: Mentoring
+      - href: blog/index.qmd
+        text: Blog
       - href: publications/index.qmd
         text: Publications
       - text: CV
         href: cv/professional-cv/CV-HossainMJ.pdf
         target: _blank
-
 
     right:
       - icon: envelope
