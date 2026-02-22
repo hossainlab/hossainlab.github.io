@@ -1,14 +1,23 @@
 [
   {
-    "listing": "/people/index.html",
-    "items": []
-  },
-  {
     "listing": "/mentoring/index.html",
     "items": []
   },
   {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/posts/intro-scrna-seq/index.html",
+      "/blog/posts/microglial-states-alzheimers/index.html",
+      "/blog/posts/spatial-transcriptomics-cancer/index.html",
+      "/blog/posts/scrna-tumor-microenvironment/index.html"
+    ]
+  },
+  {
     "listing": "/projects/index.html",
+    "items": []
+  },
+  {
+    "listing": "/teaching/index.html",
     "items": []
   }
 ]

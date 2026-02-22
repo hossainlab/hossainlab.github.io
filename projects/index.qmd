@@ -1,20 +1,14 @@
 ---
-title: "Projects"
-subtitle: "Here is an overview of the project I have been working on."
+title: "Research Projects"
+subtitle: "Ongoing and completed computational biology research projects"
+page-layout: full
+toc: false
+title-block-banner: true
+listing:
+  - id: projects
+    contents: projects.yml
+    template: ../_templates/project-card.ejs
 ---
 
-
-![](../files/projects/Fezf2-Mediated.png)
-This project presents a comprehensive multi-omics analysis of Fezf2-mediated cortical development, leveraging the GSE153164 dataset (Di Bella et al. 2021) to investigate temporal and cell-type-specific mechanisms by which Fezf2 mutations disrupt cortical development.
-
-Github: <https://github.com/hossainlab/fezf2-multiomics>
-
-
-
-![](../files/projects/Spatial-scRNA-seq.png)
-
-Recent studies have shown that scRNA-seq technologies analyze tumor heterogeneity and the tumor microenvironment, with growing interest in applying findings to clinical settings for improving cancer diagnostics and predicting immunotherapy responses. Multiple studies have examined immune checkpoint blockade responses using scRNA-seq, but most are limited in sample size and require advanced coding skills for exploration.
-
-Spatial multi-omics technologies have revealed that relative positions and interactions of cell types in the tumor microenvironment strongly influence tumor development, though current commercialized platforms do not provide true single-cell level resolution. Research on prostate cancer has shown that SPP1-expressing macrophages mediate immunotherapeutic resistance through adenosine pathway activation.
-
-Github: <https://github.com/hossainlab/spatial-scRNA-immune-resistance>
+:::{#projects}
+:::

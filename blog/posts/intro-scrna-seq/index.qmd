@@ -1,0 +1,31 @@
+---
+title: "Introduction to Single-Cell RNA Sequencing"
+author:
+  - name: Jubayer Hossain
+    orcid: 0000-0001-9323-4997
+date: "2026-02-20"
+categories: [Single-Cell, scRNA-seq, Methods]
+description: "A primer on single-cell RNA sequencing — from library preparation to computational analysis — and why it has transformed our understanding of cellular heterogeneity."
+image: thumbnail.svg
+draft: false
+---
+
+## Why Single-Cell?
+
+Bulk RNA sequencing measures gene expression averaged across thousands of cells, masking the diversity within complex tissues. Single-cell RNA sequencing (scRNA-seq) overcomes this limitation by profiling transcriptomes at individual-cell resolution, enabling the discovery of rare cell types, transitional states, and cell-type-specific responses to perturbation.
+
+## Key Steps in a Typical scRNA-seq Workflow
+
+1. **Tissue dissociation & cell capture** — Droplet-based platforms (10x Genomics Chromium) or plate-based methods (Smart-seq2/3).
+2. **Library preparation & sequencing** — cDNA synthesis, amplification, and Illumina sequencing.
+3. **Raw data processing** — Demultiplexing, alignment (STARsolo, Cell Ranger), and count matrix generation.
+4. **Quality control** — Filtering low-quality cells based on mitochondrial content, gene counts, and doublet detection.
+5. **Downstream analysis** — Normalization, dimensionality reduction (PCA, UMAP), clustering, differential expression, and trajectory inference.
+
+## Tools of the Trade
+
+The **scverse** ecosystem — including **Scanpy**, **AnnData**, **scvi-tools**, and **Muon** — provides a comprehensive Python framework for single-cell analysis. R users often rely on **Seurat** and **Bioconductor** packages.
+
+## Looking Ahead
+
+Stay tuned for deeper dives into specific applications: microglial profiling in neurodegeneration, spatial transcriptomics in the tumor microenvironment, and multi-modal single-cell approaches.

@@ -1,0 +1,41 @@
+---
+title: "Single-Cell Dissection of the Tumor Microenvironment"
+author:
+  - name: Jubayer Hossain
+    orcid: 0000-0001-9323-4997
+date: "2026-02-05"
+categories: [Cancer Genomics, Single-Cell, Tumor Microenvironment]
+description: "How single-cell genomics is uncovering the cellular complexity of the tumor microenvironment, from exhausted T cells to tumor-associated macrophages."
+image: thumbnail.svg
+draft: false
+---
+
+## The Tumor Microenvironment (TME)
+
+Tumors are not just masses of malignant cells — they are complex ecosystems comprising cancer cells, immune cells, fibroblasts, endothelial cells, and extracellular matrix. The composition and state of this **tumor microenvironment (TME)** profoundly influences disease progression and treatment response.
+
+## What scRNA-seq Reveals
+
+Single-cell profiling of the TME has uncovered:
+
+### Immune Compartment
+- **CD8+ T cell exhaustion gradients** — Progressive loss of effector function marked by *TOX*, *LAG3*, and *PDCD1* expression
+- **Regulatory T cells (Tregs)** — Immunosuppressive populations enriched in the tumor core
+- **Tumor-associated macrophages (TAMs)** — Polarization along a spectrum from M1-like (anti-tumor) to M2-like (pro-tumor)
+
+### Stromal Compartment
+- **Cancer-associated fibroblasts (CAFs)** — Multiple subtypes with distinct roles in immune exclusion, matrix remodeling, and angiogenesis
+- **Endothelial heterogeneity** — Tumor vasculature with abnormal transcriptional programs
+
+## Clinical Implications
+
+Understanding TME composition at single-cell resolution enables:
+
+- **Biomarker discovery** for immunotherapy response prediction
+- **Rational combination therapy** design targeting multiple TME components
+- **Patient stratification** based on immune cell states rather than bulk signatures
+
+## Key Resources
+
+- Comprehensive human tumor atlases (e.g., HTAN, Tabula Sapiens)
+- Pan-cancer single-cell studies providing cross-tumor-type insights

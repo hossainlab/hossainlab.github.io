@@ -1,0 +1,40 @@
+---
+title: "Microglial Activation States in Alzheimer's Disease"
+author:
+  - name: Jubayer Hossain
+    orcid: 0000-0001-9323-4997
+date: "2026-02-15"
+categories: [Neurogenomics, Microglia, Alzheimer's Disease, Single-Cell]
+description: "How single-cell transcriptomics has revealed the diverse activation states of microglia in Alzheimer's disease, from homeostatic to disease-associated phenotypes."
+image: thumbnail.svg
+draft: false
+---
+
+## Microglia: The Brain's Immune Sentinels
+
+Microglia are the resident macrophages of the central nervous system, constantly surveying the brain parenchyma for damage and pathogens. In Alzheimer's disease (AD), microglia adopt a range of activation states that can be both neuroprotective and neurotoxic.
+
+## Disease-Associated Microglia (DAM)
+
+Single-cell RNA-seq studies in AD mouse models and human post-mortem tissue have identified a conserved transcriptional program termed **disease-associated microglia (DAM)**. Key features include:
+
+- Downregulation of homeostatic genes (*P2ry12*, *Cx3cr1*, *Tmem119*)
+- Upregulation of lipid metabolism and phagocytosis genes (*Apoe*, *Lpl*, *Trem2*)
+- A TREM2-dependent transition from stage 1 to stage 2 DAM
+
+## Beyond the DAM Binary
+
+Recent high-resolution atlases have expanded the picture beyond a simple homeostatic-vs-DAM dichotomy, revealing:
+
+- **Interferon-responsive microglia** enriched near amyloid plaques
+- **Proliferating microglia** associated with disease progression
+- **Lipid-droplet-accumulating microglia (LDAM)** linked to aging
+
+## Implications for Therapeutics
+
+Understanding microglial heterogeneity is critical for designing targeted therapies. TREM2 agonists, for example, aim to enhance protective DAM responses while minimizing pro-inflammatory signaling.
+
+## Further Reading
+
+- Keren-Shaul et al. (2017). *Cell*. DOI: 10.1016/j.cell.2017.05.018
+- Mathys et al. (2019). *Nature*. DOI: 10.1038/s41586-019-1195-2

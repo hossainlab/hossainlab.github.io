@@ -1,0 +1,39 @@
+---
+title: "Spatial Transcriptomics in Cancer Research"
+author:
+  - name: Jubayer Hossain
+    orcid: 0000-0001-9323-4997
+date: "2026-02-10"
+categories: [Spatial Transcriptomics, Cancer Genomics, Methods]
+description: "An overview of spatial transcriptomics technologies and how they are reshaping our understanding of tumor architecture and the spatial organization of the tumor microenvironment."
+image: thumbnail.svg
+draft: false
+---
+
+## Why Space Matters
+
+Standard scRNA-seq dissociates tissues, losing spatial context. Spatial transcriptomics technologies preserve the physical location of gene expression, revealing how cells communicate within their native tissue architecture.
+
+## Technology Landscape
+
+| Platform | Resolution | Approach |
+|----------|-----------|----------|
+| 10x Visium | ~55 µm spots | Capture-based |
+| MERFISH | Subcellular | Imaging-based |
+| Slide-seq | ~10 µm beads | Capture-based |
+| CODEX | Single-cell (protein) | Imaging-based |
+
+## Applications in Cancer
+
+- **Tumor-immune interface mapping** — Identifying spatial patterns of immune infiltration and exclusion
+- **Tertiary lymphoid structures** — Characterizing organized immune aggregates associated with immunotherapy response
+- **Invasion fronts** — Transcriptional programs at the leading edge of tumor expansion
+- **Cell-cell communication** — Ligand-receptor analysis with spatial constraints
+
+## Computational Challenges
+
+Spatial data require specialized tools: **Squidpy** for spatial statistics, **cell2location** and **DestVI** for deconvolution, and **NICHE-NET** for spatially-aware cell communication inference.
+
+## Outlook
+
+As spatial technologies achieve higher resolution and multiplexing, they will become essential for understanding treatment resistance and designing combination therapies.

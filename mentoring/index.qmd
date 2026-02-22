@@ -20,7 +20,7 @@ listing:  #an example of listing external links
     - mentoring.yml
 
 page-navigation: false
-title-block-banner: false
+title-block-banner: true
 toc: false
 
 format:

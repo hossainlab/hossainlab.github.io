@@ -1,6 +1,7 @@
 ---
 title: "Publications"
 subtitle: "List of publications"
+title-block-banner: true
 ---
 
 *Note: \* indicates corresponding author*

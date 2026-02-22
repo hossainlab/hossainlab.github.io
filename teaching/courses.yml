@@ -1,0 +1,66 @@
+- path:
+  title: "Transcriptomics Data Analysis (Bulk + Single Cell)"
+  image: "../files/courses/tda.png"
+  image-alt: "Transcriptomics Data Analysis"
+  description: "A live, instructor-led training program covering best practices in high-throughput RNA-seq data analysis. Participants learn to independently analyze gene expression datasets using R, Bioconductor, and the scverse ecosystem — from raw counts to biological interpretation."
+  tags:
+    - R
+    - Bioconductor
+    - DESeq2
+    - Seurat
+    - Scanpy
+  links:
+    - label: "Cohort 01"
+      url: "https://github.com/hossainlab/transcriptomics"
+    - label: "Cohort 02"
+      url: "https://github.com/hossainlab/transcriptomics"
+
+- path:
+  title: "Biomarker Identification using Machine Learning"
+  image: "../files/courses/biomarkers.png"
+  image-alt: "Biomarker Identification using Machine Learning"
+  description: "Hands-on course applying advanced machine learning and bioinformatics techniques to identify novel biomarkers from high-dimensional biological data. Focuses on cancer genomics using TCGA data to discover clinically relevant biomarkers for diagnosis, prognosis, and treatment selection."
+  tags:
+    - Python
+    - scikit-learn
+    - TCGA
+    - Cancer Genomics
+  links:
+    - label: "Cohort 01"
+      url: "https://github.com/hossainlab/biomarker_identification"
+
+- path:
+  title: "Pan-Cancer Bioinformatics with R: Ideation to Publication"
+  image: "../files/courses/pan-cancer.png"
+  image-alt: "Pan-Cancer Bioinformatics with R"
+  description: "An intensive training program guiding participants through the complete journey of pan-cancer analysis — from research idea to publication. Covers TCGA data access, expression, survival, mutation, and immune analyses, multi-omics integration, publication-ready visualization, and manuscript preparation."
+  tags:
+    - R
+    - TCGA
+    - Survival Analysis
+    - Multi-Omics
+
+- path:
+  title: "AI in Drug Discovery: In Silico Toxicology Modeling"
+  image: "../files/courses/ai-toxicology.jpg"
+  image-alt: "AI in Drug Discovery: In Silico Toxicology Modeling"
+  description: "A one-day hands-on workshop introducing AI-powered toxicology modeling for drug discovery. Participants build machine learning models to predict compound toxicity, classify molecules, and analyze structure–activity relationships using real-world cheminformatics datasets."
+  tags:
+    - Python
+    - Machine Learning
+    - Cheminformatics
+    - RDKit
+
+- path:
+  title: "Data Science and Machine Learning for Biologists"
+  image: "../files/courses/ml-ds-for-biologists.png"
+  image-alt: "Data Science and Machine Learning for Biologists"
+  description: "Taught at CBLAST, University of Dhaka, this course introduces biologists to data science and machine learning through hands-on biological case studies. Covers data processing, visualization, and analysis using Python and R, with applications of supervised and unsupervised learning in genomics, transcriptomics, and health data."
+  tags:
+    - Python
+    - R
+    - scikit-learn
+    - Genomics
+  links:
+    - label: "Course Repo"
+      url: "https://github.com/hossainlab/dsb"

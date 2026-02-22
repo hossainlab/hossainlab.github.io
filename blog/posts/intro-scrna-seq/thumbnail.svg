@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#ebf4ff"/>
+  <circle cx="200" cy="160" r="30" fill="#3182ce" opacity="0.7"/>
+  <circle cx="280" cy="130" r="22" fill="#63b3ed" opacity="0.7"/>
+  <circle cx="350" cy="180" r="28" fill="#2b6cb0" opacity="0.7"/>
+  <circle cx="250" cy="220" r="18" fill="#90cdf4" opacity="0.7"/>
+  <circle cx="400" cy="140" r="15" fill="#4299e1" opacity="0.7"/>
+  <circle cx="320" cy="240" r="25" fill="#2c5282" opacity="0.7"/>
+  <circle cx="160" cy="230" r="12" fill="#bee3f8" opacity="0.8"/>
+  <circle cx="420" cy="210" r="20" fill="#3182ce" opacity="0.5"/>
+  <text x="300" y="340" text-anchor="middle" font-family="system-ui,sans-serif" font-size="20" font-weight="600" fill="#2b6cb0">Single-Cell RNA-seq</text>
+</svg>

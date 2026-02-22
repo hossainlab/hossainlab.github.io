@@ -3,6 +3,7 @@ project:
   output-dir: docs
   render:
     - "*.qmd"
+    - "blog/**/*.qmd"
     - "!academic-cv/"
 
 # Meta
@@ -28,6 +29,8 @@ website:
         text: Research
       - href: projects/index.qmd
         text: Projects
+      - href: blog/index.qmd
+        text: Blog
       - href: teaching/index.qmd
         text: Teaching
       - href: mentoring/index.qmd

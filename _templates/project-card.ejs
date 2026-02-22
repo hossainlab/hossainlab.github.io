@@ -1,0 +1,29 @@
+<div class="project-grid">
+<% for (const item of items) { %>
+<div class="project-card">
+<% if (item.image) { %>
+<div class="project-image">
+<img src="<%= item.image %>" alt="<%= item['image-alt'] || item.title %>">
+</div>
+<% } %>
+<div class="project-content">
+<h3 class="project-title"><%= item.title %></h3>
+<p><%= item.description %></p>
+<% if (item.tags && item.tags.length > 0) { %>
+<div class="project-tags">
+<% for (const tag of item.tags) { %>
+<span class="tag"><%= tag %></span>
+<% } %>
+</div>
+<% } %>
+<% if (item.links && item.links.length > 0) { %>
+<div class="project-links">
+<% for (const link of item.links) { %>
+<a href="<%= link.url %>" class="project-btn" target="_blank"><i class="fa-brands fa-github"></i> <%= link.label %></a>
+<% } %>
+</div>
+<% } %>
+</div>
+</div>
+<% } %>
+</div>

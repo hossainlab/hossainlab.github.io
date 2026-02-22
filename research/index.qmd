@@ -1,6 +1,7 @@
 ---
 title: "Research"
 subtitle: "Here is an overview of the research I have interested in."
+title-block-banner: true
 ---
 
 ## Single Cell Genomics 

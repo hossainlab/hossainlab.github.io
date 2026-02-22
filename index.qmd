@@ -29,8 +29,7 @@ about:
 
 Overview of my major research interests across single-cell, spatial omics, machine learning and deep learning.
 
-<img src="files/research/interests.png" alt="Research interests overview"
-       style="width:100%; height:auto; max-width:300px; display:block; margin:20px 0;">
+![Research interests overview](files/research/interests.png){width=100% style="max-width:300px; display:block; margin:20px auto;"}
 
 :::
 

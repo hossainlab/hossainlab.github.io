@@ -32,6 +32,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="..//files/profiles/icon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -72,7 +74,65 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-courses .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-image','listing-image-alt','listing-description','listing-tags','listing-links',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-image","listing-image-alt","listing-description","listing-tags","listing-links"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-courses'] = new List('listing-courses', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -80,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
 <body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -105,6 +165,10 @@ ul.task-list li input[type="checkbox"] {
   <li class="nav-item">
     <a class="nav-link" href="../projects/index.html"> 
 <span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="../teaching/index.html" aria-current="page"> 
@@ -169,107 +233,148 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page">
+      <h1 class="title">Teaching</h1>
+            <p class="subtitle lead">Courses and workshops in bioinformatics, computational biology, and data science</p>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#transcriptomics-data-analysis-bulk-single-cell-analysis" id="toc-transcriptomics-data-analysis-bulk-single-cell-analysis" class="nav-link active" data-scroll-target="#transcriptomics-data-analysis-bulk-single-cell-analysis">Transcriptomics Data Analysis (bulk + Single Cell Analysis)</a></li>
-  <li><a href="#biomarker-identification-using-machine-learning" id="toc-biomarker-identification-using-machine-learning" class="nav-link" data-scroll-target="#biomarker-identification-using-machine-learning">Biomarker Identification using Machine Learning</a></li>
-  <li><a href="#pan-cancer-bioinformatics-with-r-ideation-to-publication" id="toc-pan-cancer-bioinformatics-with-r-ideation-to-publication" class="nav-link" data-scroll-target="#pan-cancer-bioinformatics-with-r-ideation-to-publication">Pan-Cancer Bioinformatics with R: Ideation to Publication</a></li>
-  <li><a href="#ai-in-drug-discovery-in-silico-toxicology-modeling" id="toc-ai-in-drug-discovery-in-silico-toxicology-modeling" class="nav-link" data-scroll-target="#ai-in-drug-discovery-in-silico-toxicology-modeling">AI in Drug Discovery: In Silico Toxicology Modeling</a></li>
-  <li><a href="#data-science-and-machine-learning-for-biologists" id="toc-data-science-and-machine-learning-for-biologists" class="nav-link" data-scroll-target="#data-science-and-machine-learning-for-biologists">Data Science and Machine Learning for Biologists</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Teaching</h1>
-<p class="subtitle lead">I teach.</p>
-</div>
+<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
 
 
-</header>
+<div id="listing-courses" class="quarto-listing quarto-listing-container-custom">
+<div class="project-grid">
+<div class="project-card">
+<div class="project-image">
+<p><img src="../files/courses/tda.png" alt="Transcriptomics Data Analysis"></p>
+</div>
+<div class="project-content">
+<h3 class="project-title anchored">
+Transcriptomics Data Analysis (Bulk + Single Cell)
+</h3>
+<p>
+A live, instructor-led training program covering best practices in high-throughput RNA-seq data analysis. Participants learn to independently analyze gene expression datasets using R, Bioconductor, and the scverse ecosystem — from raw counts to biological interpretation.
+</p>
+<div class="project-tags">
+<p><span class="tag">R</span></p>
+<p><span class="tag">Bioconductor</span></p>
+<p><span class="tag">DESeq2</span></p>
+<p><span class="tag">Seurat</span></p>
+<p><span class="tag">Scanpy</span></p>
+</div>
+<div class="project-links">
+<p><a href="https://github.com/hossainlab/transcriptomics" class="project-btn" target="_blank"><i class="fa-brands fa-github"></i> Cohort 01</a></p>
+<p><a href="https://github.com/hossainlab/transcriptomics" class="project-btn" target="_blank"><i class="fa-brands fa-github"></i> Cohort 02</a></p>
+</div>
+</div>
+</div>
+<div class="project-card">
+<div class="project-image">
+<p><img src="../files/courses/biomarkers.png" alt="Biomarker Identification using Machine Learning"></p>
+</div>
+<div class="project-content">
+<h3 class="project-title anchored">
+Biomarker Identification using Machine Learning
+</h3>
+<p>
+Hands-on course applying advanced machine learning and bioinformatics techniques to identify novel biomarkers from high-dimensional biological data. Focuses on cancer genomics using TCGA data to discover clinically relevant biomarkers for diagnosis, prognosis, and treatment selection.
+</p>
+<div class="project-tags">
+<p><span class="tag">Python</span></p>
+<p><span class="tag">scikit-learn</span></p>
+<p><span class="tag">TCGA</span></p>
+<p><span class="tag">Cancer Genomics</span></p>
+</div>
+<div class="project-links">
+<p><a href="https://github.com/hossainlab/biomarker_identification" class="project-btn" target="_blank"><i class="fa-brands fa-github"></i> Cohort 01</a></p>
+</div>
+</div>
+</div>
+<div class="project-card">
+<div class="project-image">
+<p><img src="../files/courses/pan-cancer.png" alt="Pan-Cancer Bioinformatics with R"></p>
+</div>
+<div class="project-content">
+<h3 class="project-title anchored">
+Pan-Cancer Bioinformatics with R: Ideation to Publication
+</h3>
+<p>
+An intensive training program guiding participants through the complete journey of pan-cancer analysis — from research idea to publication. Covers TCGA data access, expression, survival, mutation, and immune analyses, multi-omics integration, publication-ready visualization, and manuscript preparation.
+</p>
+<div class="project-tags">
+<p><span class="tag">R</span></p>
+<p><span class="tag">TCGA</span></p>
+<p><span class="tag">Survival Analysis</span></p>
+<p><span class="tag">Multi-Omics</span></p>
+</div>
+</div>
+</div>
+<div class="project-card">
+<div class="project-image">
+<p><img src="../files/courses/ai-toxicology.jpg" alt="AI in Drug Discovery: In Silico Toxicology Modeling"></p>
+</div>
+<div class="project-content">
+<h3 class="project-title anchored">
+AI in Drug Discovery: In Silico Toxicology Modeling
+</h3>
+<p>
+A one-day hands-on workshop introducing AI-powered toxicology modeling for drug discovery. Participants build machine learning models to predict compound toxicity, classify molecules, and analyze structure–activity relationships using real-world cheminformatics datasets.
+</p>
+<div class="project-tags">
+<p><span class="tag">Python</span></p>
+<p><span class="tag">Machine Learning</span></p>
+<p><span class="tag">Cheminformatics</span></p>
+<p><span class="tag">RDKit</span></p>
+</div>
+</div>
+</div>
+<div class="project-card">
+<div class="project-image">
+<p><img src="../files/courses/ml-ds-for-biologists.png" alt="Data Science and Machine Learning for Biologists"></p>
+</div>
+<div class="project-content">
+<h3 class="project-title anchored">
+Data Science and Machine Learning for Biologists
+</h3>
+<p>
+Taught at CBLAST, University of Dhaka, this course introduces biologists to data science and machine learning through hands-on biological case studies. Covers data processing, visualization, and analysis using Python and R, with applications of supervised and unsupervised learning in genomics, transcriptomics, and health data.
+</p>
+<div class="project-tags">
+<p><span class="tag">Python</span></p>
+<p><span class="tag">R</span></p>
+<p><span class="tag">scikit-learn</span></p>
+<p><span class="tag">Genomics</span></p>
+</div>
+<div class="project-links">
+<p><a href="https://github.com/hossainlab/dsb" class="project-btn" target="_blank"><i class="fa-brands fa-github"></i> Course Repo</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
 
 
-<!-- [Cohort 01](https://github.com/hossainlab/transcriptomics), &nbsp; [Cohort 02](https://github.com/hossainlab/transcriptomics)
- -->
-<section id="transcriptomics-data-analysis-bulk-single-cell-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="transcriptomics-data-analysis-bulk-single-cell-analysis">Transcriptomics Data Analysis (bulk + Single Cell Analysis)</h2>
-<div class="grid">
-<div class="g-col-12 g-col-md-4">
-<p><img src="../files/courses/tda.png" class="img-fluid" style="width:100.0%"></p>
-</div>
-<div class="g-col-12 g-col-md-8">
-<p><a href="https://github.com/hossainlab/transcriptomics">Cohort 01</a>, &nbsp; <a href="https://github.com/hossainlab/transcriptomics">Cohort 02</a></p>
-<p>Transcriptomics Data Analysis (TDA) is a live, instructor-led training program designed to introduce participants to best practices in the analysis of high-throughput RNA sequencing (RNA-seq) data. This course empowers learners to independently analyze gene expression datasets using lightweight, open-source tools — with a strong emphasis on the R programming language and the Bioconductor ecosystem.</p>
-</div>
-</div>
-</section>
-<section id="biomarker-identification-using-machine-learning" class="level2">
-<h2 class="anchored" data-anchor-id="biomarker-identification-using-machine-learning">Biomarker Identification using Machine Learning</h2>
-<div class="grid">
-<div class="g-col-12 g-col-md-4">
-<p><img src="../files/courses/biomarkers.png" class="img-fluid"></p>
-</div>
-<div class="g-col-12 g-col-md-8">
-<p><a href="https://github.com/hossainlab/biomarker_identification">Cohort 01</a></p>
-<p>This project applies advanced machine learning and bioinformatics techniques to identify novel biomarkers from high-dimensional biological data, focusing on cancer genomics. By leveraging TCGA (The Cancer Genome Atlas) data and modern computational approaches, we aim to discover clinically relevant biomarkers that can improve disease diagnosis, prognosis, and treatment selection.</p>
-</div>
-</div>
-</section>
-<section id="pan-cancer-bioinformatics-with-r-ideation-to-publication" class="level2">
-<h2 class="anchored" data-anchor-id="pan-cancer-bioinformatics-with-r-ideation-to-publication">Pan-Cancer Bioinformatics with R: Ideation to Publication</h2>
-<div class="grid">
-<div class="g-col-12 g-col-md-4">
-<p><img src="../files/courses/pan-cancer.png" class="img-fluid"></p>
-</div>
-<div class="g-col-12 g-col-md-8">
-<p>Pan-Cancer Bioinformatics with R is an intensive, hands-on training program designed to guide participants through the complete journey of pan-cancer analysis—from research idea to publication. Across four interactive sessions, participants will learn how to access and process TCGA datasets, perform expression, survival, mutation, and immune analyses, and integrate multi-omics data for biomarker discovery. The course emphasizes practical R workflows, publication-ready visualization, and manuscript preparation strategies. Ideal for graduate students, early-career researchers, and clinicians aiming to publish high-impact pan-cancer studies.</p>
-</div>
-</div>
-</section>
-<section id="ai-in-drug-discovery-in-silico-toxicology-modeling" class="level2">
-<h2 class="anchored" data-anchor-id="ai-in-drug-discovery-in-silico-toxicology-modeling">AI in Drug Discovery: In Silico Toxicology Modeling</h2>
-<div class="grid">
-<div class="g-col-12 g-col-md-4">
-<p><img src="../files/courses/ai-toxicology.jpg" class="img-fluid"></p>
-</div>
-<div class="g-col-12 g-col-md-8">
-<p>This one-day, hands-on workshop introduces participants to AI-powered toxicology modeling for modern drug discovery. Participants will learn how to use machine learning and cheminformatics techniques to predict compound toxicity, classify molecules as toxic or non-toxic, and analyze structure–activity relationships using real-world datasets. Designed for students, researchers, and professionals in bioinformatics, computational chemistry, and pharmacology, this workshop provides practical experience in building predictive toxicology models that accelerate safer drug development.</p>
-</div>
-</div>
-</section>
-<section id="data-science-and-machine-learning-for-biologists" class="level2">
-<h2 class="anchored" data-anchor-id="data-science-and-machine-learning-for-biologists">Data Science and Machine Learning for Biologists</h2>
-<div class="grid">
-<div class="g-col-12 g-col-md-4">
-<p><img src="../files/courses/ml-ds-for-biologists.png" class="img-fluid"></p>
-</div>
-<div class="g-col-12 g-col-md-8">
-<p><a href="https://github.com/hossainlab/dsb">Course Repo</a></p>
-<p>Taught by Md. Jubayer Hossain at CBLAST, University of Dhaka, this course introduces biologists to the core principles of data science and machine learning through hands-on examples and biological case studies. Participants learn how to process, visualize, and analyze biological data using Python and R, and explore practical applications of supervised and unsupervised learning in genomics, transcriptomics, and health data. Designed for students and researchers in the life sciences, this course bridges biology and computation, empowering learners to apply AI-driven methods in modern biological research.</p>
-</div>
-</div>
 
-
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
