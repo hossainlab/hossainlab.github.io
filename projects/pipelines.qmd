@@ -1,0 +1,14 @@
+---
+title: "Bioinformatics Pipelines"
+subtitle: "Reusable analysis workflows with Google Colab and GitHub"
+page-layout: full
+toc: false
+title-block-banner: true
+listing:
+  - id: pipelines
+    contents: pipelines.yml
+    template: ../_templates/pipeline-card.ejs
+---
+
+:::{#pipelines}
+:::

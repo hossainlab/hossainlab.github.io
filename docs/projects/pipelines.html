@@ -9,7 +9,7 @@
 <meta name="author" content="Jubayer Hossain">
 <meta name="description" content="Academic Website for Jubayer Hossain">
 
-<title>Research Blog – Jubayer Hossain</title>
+<title>Bioinformatics Pipelines – Jubayer Hossain</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -77,20 +77,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-blog-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-pipelines .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-image','listing-title','listing-author','listing-date','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-description','listing-category','listing-tools','listing-input','listing-output','listing-links',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-description","listing-category","listing-tools","listing-input","listing-output","listing-links"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-blog-listing'] = new List('listing-blog-listing', options);
+    window['quarto-listings']['listing-pipelines'] = new List('listing-pipelines', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -158,10 +158,21 @@ window.Quarto = {
     <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../projects/index.html"> 
-<span class="menu-text">Projects</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Projects</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
+        <li>
+    <a class="dropdown-item" href="../projects/index.html">
+ <span class="dropdown-text">Research Projects</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../projects/pipelines.html">
+ <span class="dropdown-text">Pipelines</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-teaching" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Teaching</span>
@@ -178,7 +189,7 @@ window.Quarto = {
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="../blog/index.html" aria-current="page"> 
+    <a class="nav-link" href="../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
@@ -238,14 +249,14 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Research Blog</h1>
-            <p class="subtitle lead">Insights from Single-Cell Genomics, Neurogenomics &amp; Cancer Biology</p>
+    <div class="quarto-title column-page">
+      <h1 class="title">Bioinformatics Pipelines</h1>
+            <p class="subtitle lead">Reusable analysis workflows with Google Colab and GitHub</p>
                       </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta column-page">
 
       
     
@@ -256,163 +267,264 @@ window.Quarto = {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="QWx6aGVpbWVyJ3MlMjBEaXNlYXNl">Alzheimer's Disease <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q2FuY2VyJTIwR2Vub21pY3M=">Cancer Genomics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TWV0aG9kcw==">Methods <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TWljcm9nbGlh">Microglia <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TmV1cm9nZW5vbWljcw==">Neurogenomics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c2NSTkEtc2Vx">scRNA-seq <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U2luZ2xlLUNlbGw=">Single-Cell <span class="quarto-category-count">(3)</span></div><div class="category" data-category="U3BhdGlhbCUyMFRyYW5zY3JpcHRvbWljcw==">Spatial Transcriptomics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VHVtb3IlMjBNaWNyb2Vudmlyb25tZW50">Tumor Microenvironment <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
 
 
 
 
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-blog-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="U2luZ2xlLUNlbGwlMkNzY1JOQS1zZXElMkNNZXRob2Rz" data-listing-date-sort="1771524000000" data-listing-file-modified-sort="1771777697659" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="173">
-<div class="thumbnail"><a href="../blog/posts/intro-scrna-seq/index.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/intro-scrna-seq/thumbnail.svg" class="thumbnail-image" style="height: 150px;">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/intro-scrna-seq/index.html" class="no-external">Introduction to Single-Cell RNA Sequencing</a>
+<div id="listing-pipelines" class="quarto-listing quarto-listing-container-custom">
+<div class="category-filters">
+<button class="category-btn active" data-category="all">
+All
+</button>
+<button class="category-btn" data-category="Drug Discovery">Drug Discovery</button> <button class="category-btn" data-category="Protein Structure Prediction">Protein Structure Prediction</button> <button class="category-btn" data-category="RNA-Seq">RNA-Seq</button> <button class="category-btn" data-category="Single-Cell">Single-Cell</button>
+</div>
+<div class="project-grid">
+<div class="project-card" data-categories="RNA-Seq">
+<div class="project-content">
+<div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;margin-bottom:0.25rem;">
+<h3 class="project-title anchored" style="margin:0;">
+End-to-end bulk RNA-seq Quantification Pipeline using Salmon
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U2luZ2xlLUNlbGw='); return false;">Single-Cell</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c2NSTkEtc2Vx'); return false;">scRNA-seq</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWV0aG9kcw=='); return false;">Methods</div>
-
+<span class="pipeline-category">RNA-Seq</span>
 </div>
-<div class="delink listing-description"><a href="../blog/posts/intro-scrna-seq/index.html" class="no-external">
-<p>A primer on single-cell RNA sequencing — from library preparation to computational analysis — and why it has transformed our understanding of cellular heterogeneity.</p>
-</a></div>
+<p>
+A complete pipeline for pseudo-alignment and quantification of bulk RNA-seq data using Salmon — from raw sequencing reads to transcript-level abundance estimates ready for downstream differential expression analysis.
+</p>
+<div class="pipeline-io">
+<div class="pipeline-io-item">
+<strong>Input:</strong> Raw FASTQ files, reference transcriptome
 </div>
-<div class="metadata">
-<a href="../blog/posts/intro-scrna-seq/index.html" class="no-external">
-<div class="listing-date">
-Feb 20, 2026
-</div>
-<div class="listing-author">
-Jubayer Hossain
-</div>
-</a>
+<div class="pipeline-io-item">
+<strong>Output:</strong> Transcript/gene-level count matrix, quantification summary
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="TmV1cm9nZW5vbWljcyUyQ01pY3JvZ2xpYSUyQ0FsemhlaW1lcidzJTIwRGlzZWFzZSUyQ1NpbmdsZS1DZWxs" data-listing-date-sort="1771092000000" data-listing-file-modified-sort="1771777698950" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="165">
-<div class="thumbnail"><a href="../blog/posts/microglial-states-alzheimers/index.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/microglial-states-alzheimers/thumbnail.svg" class="thumbnail-image" style="height: 150px;">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/microglial-states-alzheimers/index.html" class="no-external">Microglial Activation States in Alzheimer’s Disease</a>
+<div class="project-tags">
+<span class="tag">Python</span> <span class="tag">Salmon</span> <span class="tag">tximeta</span> <span class="tag">DESeq2</span>
+</div>
+<div class="project-links">
+<a href="https://github.com/hossainlab/salmon-rnaseq" class="project-btn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" style="vertical-align:-2px;margin-right:4px;" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg> GitHub</a>
+</div>
+</div>
+</div>
+<div class="project-card" data-categories="RNA-Seq">
+<div class="project-content">
+<div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;margin-bottom:0.25rem;">
+<h3 class="project-title anchored" style="margin:0;">
+nf-core/rnaseqmeta: A Nextflow Pipeline for Meta-Analysis of RNA-seq Datasets
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TmV1cm9nZW5vbWljcw=='); return false;">Neurogenomics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWljcm9nbGlh'); return false;">Microglia</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QWx6aGVpbWVyJ3MlMjBEaXNlYXNl'); return false;">Alzheimer's Disease</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U2luZ2xlLUNlbGw='); return false;">Single-Cell</div>
-
+<span class="pipeline-category">RNA-Seq</span>
 </div>
-<div class="delink listing-description"><a href="../blog/posts/microglial-states-alzheimers/index.html" class="no-external">
-<p>How single-cell transcriptomics has revealed the diverse activation states of microglia in Alzheimer’s disease, from homeostatic to disease-associated phenotypes.</p>
-</a></div>
+<p>
+A Nextflow-based pipeline for reproducible meta-analysis of multiple RNA-seq datasets — automating sample retrieval, quality control, quantification, batch correction, and integrated differential expression analysis across studies.
+</p>
+<div class="pipeline-io">
+<div class="pipeline-io-item">
+<strong>Input:</strong> Multiple RNA-seq datasets (FASTQ or SRA accessions), sample sheets
 </div>
-<div class="metadata">
-<a href="../blog/posts/microglial-states-alzheimers/index.html" class="no-external">
-<div class="listing-date">
-Feb 15, 2026
-</div>
-<div class="listing-author">
-Jubayer Hossain
-</div>
-</a>
+<div class="pipeline-io-item">
+<strong>Output:</strong> Integrated count matrix, cross-study DE results, batch-corrected expression profiles
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="U3BhdGlhbCUyMFRyYW5zY3JpcHRvbWljcyUyQ0NhbmNlciUyMEdlbm9taWNzJTJDTWV0aG9kcw==" data-listing-date-sort="1770660000000" data-listing-file-modified-sort="1771777700432" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="153">
-<div class="thumbnail"><a href="../blog/posts/spatial-transcriptomics-cancer/index.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/spatial-transcriptomics-cancer/thumbnail.svg" class="thumbnail-image" style="height: 150px;">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/spatial-transcriptomics-cancer/index.html" class="no-external">Spatial Transcriptomics in Cancer Research</a>
+<div class="project-tags">
+<span class="tag">Nextflow</span> <span class="tag">nf-core</span> <span class="tag">Salmon</span> <span class="tag">DESeq2</span>
+</div>
+<div class="project-links">
+<a href="https://github.com/hossainlab/nf-core-rnaseqmeta" class="project-btn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" style="vertical-align:-2px;margin-right:4px;" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg> GitHub</a>
+</div>
+</div>
+</div>
+<div class="project-card" data-categories="Single-Cell">
+<div class="project-content">
+<div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;margin-bottom:0.25rem;">
+<h3 class="project-title anchored" style="margin:0;">
+Fast and efficient preprocessing of scRNA-seq with kallisto | bustools | kb-python
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U3BhdGlhbCUyMFRyYW5zY3JpcHRvbWljcw=='); return false;">Spatial Transcriptomics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2FuY2VyJTIwR2Vub21pY3M='); return false;">Cancer Genomics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWV0aG9kcw=='); return false;">Methods</div>
-
+<span class="pipeline-category">Single-Cell</span>
 </div>
-<div class="delink listing-description"><a href="../blog/posts/spatial-transcriptomics-cancer/index.html" class="no-external">
-<p>An overview of spatial transcriptomics technologies and how they are reshaping our understanding of tumor architecture and the spatial organization of the tumor microenvironment.</p>
-</a></div>
+<p>
+End-to-end pipeline for scRNA-seq preprocessing using kallisto, bustools, and kb-python — from raw FASTQ files to filtered count matrices ready for downstream analysis with scanpy.
+</p>
+<div class="pipeline-io">
+<div class="pipeline-io-item">
+<strong>Input:</strong> Raw FASTQ files (10x Chromium or similar)
 </div>
-<div class="metadata">
-<a href="../blog/posts/spatial-transcriptomics-cancer/index.html" class="no-external">
-<div class="listing-date">
-Feb 10, 2026
-</div>
-<div class="listing-author">
-Jubayer Hossain
-</div>
-</a>
+<div class="pipeline-io-item">
+<strong>Output:</strong> Filtered cell × gene count matrix, QC metrics
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="Q2FuY2VyJTIwR2Vub21pY3MlMkNTaW5nbGUtQ2VsbCUyQ1R1bW9yJTIwTWljcm9lbnZpcm9ubWVudA==" data-listing-date-sort="1770228000000" data-listing-file-modified-sort="1771777701908" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="171">
-<div class="thumbnail"><a href="../blog/posts/scrna-tumor-microenvironment/index.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/scrna-tumor-microenvironment/thumbnail.svg" class="thumbnail-image" style="height: 150px;">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/scrna-tumor-microenvironment/index.html" class="no-external">Single-Cell Dissection of the Tumor Microenvironment</a>
+<div class="project-tags">
+<span class="tag">Python</span> <span class="tag">kallisto</span> <span class="tag">bustools</span> <span class="tag">kb-python</span> <span class="tag">scanpy</span>
+</div>
+<div class="project-links">
+<a href="https://colab.research.google.com/drive/1i9WxmUjSq3mNoPostbJLSu6eeNi8vqgE?usp=sharing" class="project-btn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 24 24" style="vertical-align:-2px;margin-right:4px;"><path d="M16.9414 4.9757a7.033 7.033 0 0 0-4.9308 2.0646 7.033 7.033 0 0 0-.0714 9.864 7.033 7.033 0 0 0 9.8926.1454c2.5617-2.4988 2.6137-6.6007.1177-9.1597a6.4522 6.4522 0 0 0-5.0081-2.915zM7.0586 4.9757a6.4522 6.4522 0 0 0-5.0081 2.915C-.4435 10.4497-.3915 14.5515 2.17 17.0504a7.033 7.033 0 0 0 9.8926-.1454 7.033 7.033 0 0 0-.0714-9.864 7.033 7.033 0 0 0-4.9326-2.0653z" fill="#F9AB00"></path><path d="M7.0586 4.9757a7.033 7.033 0 0 0-4.9308 2.0646C-.367 9.5765-.42 13.6783 2.075 16.2374a7.033 7.033 0 0 0 5.9282 2.077 7.033 7.033 0 0 0 4.9326-2.0653 7.033 7.033 0 0 0 .0714-9.864 7.033 7.033 0 0 0-5.9486-2.2094z" fill="#E8710A"></path></svg> Google Colab</a>
+</div>
+</div>
+</div>
+<div class="project-card" data-categories="Single-Cell">
+<div class="project-content">
+<div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;margin-bottom:0.25rem;">
+<h3 class="project-title anchored" style="margin:0;">
+A Practical Guide for Single-Cell Data Analysis with scverse Ecosystem
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2FuY2VyJTIwR2Vub21pY3M='); return false;">Cancer Genomics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U2luZ2xlLUNlbGw='); return false;">Single-Cell</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('VHVtb3IlMjBNaWNyb2Vudmlyb25tZW50'); return false;">Tumor Microenvironment</div>
-
+<span class="pipeline-category">Single-Cell</span>
 </div>
-<div class="delink listing-description"><a href="../blog/posts/scrna-tumor-microenvironment/index.html" class="no-external">
-<p>How single-cell genomics is uncovering the cellular complexity of the tumor microenvironment, from exhausted T cells to tumor-associated macrophages.</p>
-</a></div>
+<p>
+Comprehensive walkthrough of the scverse single-cell analysis workflow — covering quality control, normalization, dimensionality reduction, clustering, marker gene identification, and cell type annotation using scanpy and related tools.
+</p>
+<div class="pipeline-io">
+<div class="pipeline-io-item">
+<strong>Input:</strong> Count matrix (AnnData .h5ad or 10x format)
 </div>
-<div class="metadata">
-<a href="../blog/posts/scrna-tumor-microenvironment/index.html" class="no-external">
-<div class="listing-date">
-Feb 5, 2026
+<div class="pipeline-io-item">
+<strong>Output:</strong> Annotated cell clusters, UMAP embeddings, marker genes, cell type labels
 </div>
-<div class="listing-author">
-Jubayer Hossain
 </div>
-</a>
+<div class="project-tags">
+<span class="tag">Python</span> <span class="tag">scanpy</span> <span class="tag">scvi-tools</span> <span class="tag">AnnData</span>
+</div>
+<div class="project-links">
+<a href="https://colab.research.google.com/drive/1MyBbAQvTKGLFOpPAP-w3hedyXs-l0Vff?usp=sharing" class="project-btn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 24 24" style="vertical-align:-2px;margin-right:4px;"><path d="M16.9414 4.9757a7.033 7.033 0 0 0-4.9308 2.0646 7.033 7.033 0 0 0-.0714 9.864 7.033 7.033 0 0 0 9.8926.1454c2.5617-2.4988 2.6137-6.6007.1177-9.1597a6.4522 6.4522 0 0 0-5.0081-2.915zM7.0586 4.9757a6.4522 6.4522 0 0 0-5.0081 2.915C-.4435 10.4497-.3915 14.5515 2.17 17.0504a7.033 7.033 0 0 0 9.8926-.1454 7.033 7.033 0 0 0-.0714-9.864 7.033 7.033 0 0 0-4.9326-2.0653z" fill="#F9AB00"></path><path d="M7.0586 4.9757a7.033 7.033 0 0 0-4.9308 2.0646C-.367 9.5765-.42 13.6783 2.075 16.2374a7.033 7.033 0 0 0 5.9282 2.077 7.033 7.033 0 0 0 4.9326-2.0653 7.033 7.033 0 0 0 .0714-9.864 7.033 7.033 0 0 0-5.9486-2.2094z" fill="#E8710A"></path></svg> Google Colab</a>
 </div>
 </div>
 </div>
+<div class="project-card" data-categories="Protein Structure Prediction">
+<div class="project-content">
+<div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;margin-bottom:0.25rem;">
+<h3 class="project-title anchored" style="margin:0;">
+Predicting Protein Structures with ColabFold and AlphaFold2 in Google Colab
+</h3>
+<span class="pipeline-category">Protein Structure Prediction</span>
+</div>
+<p>
+Predict 3D protein structures from amino acid sequences using ColabFold’s accelerated AlphaFold2 pipeline — with MSA generation via MMseqs2 and interactive structure visualization directly in the browser.
+</p>
+<div class="pipeline-io">
+<div class="pipeline-io-item">
+<strong>Input:</strong> Amino acid sequence (FASTA format)
+</div>
+<div class="pipeline-io-item">
+<strong>Output:</strong> Predicted 3D structures (PDB), confidence scores (pLDDT), PAE plots
+</div>
+</div>
+<div class="project-tags">
+<span class="tag">Python</span> <span class="tag">ColabFold</span> <span class="tag">AlphaFold2</span> <span class="tag">MMseqs2</span> <span class="tag">py3Dmol</span>
+</div>
+<div class="project-links">
+<a href="https://colab.research.google.com/drive/1PQS5EWpGP5aWJ4KtrGlKetCidA44RySx?usp=sharing" class="project-btn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 24 24" style="vertical-align:-2px;margin-right:4px;"><path d="M16.9414 4.9757a7.033 7.033 0 0 0-4.9308 2.0646 7.033 7.033 0 0 0-.0714 9.864 7.033 7.033 0 0 0 9.8926.1454c2.5617-2.4988 2.6137-6.6007.1177-9.1597a6.4522 6.4522 0 0 0-5.0081-2.915zM7.0586 4.9757a6.4522 6.4522 0 0 0-5.0081 2.915C-.4435 10.4497-.3915 14.5515 2.17 17.0504a7.033 7.033 0 0 0 9.8926-.1454 7.033 7.033 0 0 0-.0714-9.864 7.033 7.033 0 0 0-4.9326-2.0653z" fill="#F9AB00"></path><path d="M7.0586 4.9757a7.033 7.033 0 0 0-4.9308 2.0646C-.367 9.5765-.42 13.6783 2.075 16.2374a7.033 7.033 0 0 0 5.9282 2.077 7.033 7.033 0 0 0 4.9326-2.0653 7.033 7.033 0 0 0 .0714-9.864 7.033 7.033 0 0 0-5.9486-2.2094z" fill="#E8710A"></path></svg> Google Colab</a>
+</div>
+</div>
+</div>
+<div class="project-card" data-categories="Protein Structure Prediction">
+<div class="project-content">
+<div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;margin-bottom:0.25rem;">
+<h3 class="project-title anchored" style="margin:0;">
+Boltz2-Notebook: Diffusion-Based Protein–Ligand Structure Prediction &amp; Affinity Analysis
+</h3>
+<span class="pipeline-category">Protein Structure Prediction</span>
+</div>
+<p>
+Predict protein–ligand complex structures and binding affinities using the Boltz2 diffusion model — enabling rapid in silico docking and interaction analysis without traditional molecular dynamics simulations.
+</p>
+<div class="pipeline-io">
+<div class="pipeline-io-item">
+<strong>Input:</strong> Protein sequence and ligand SMILES/SDF
+</div>
+<div class="pipeline-io-item">
+<strong>Output:</strong> Predicted complex structures (PDB), binding affinity scores, interaction maps
+</div>
+</div>
+<div class="project-tags">
+<span class="tag">Python</span> <span class="tag">Boltz2</span> <span class="tag">RDKit</span> <span class="tag">py3Dmol</span>
+</div>
+<div class="project-links">
+<a href="https://colab.research.google.com/drive/1MzmcvZTvpvGEyTQdJIt5DCVn9mJOZS1J?usp=sharing" class="project-btn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 24 24" style="vertical-align:-2px;margin-right:4px;"><path d="M16.9414 4.9757a7.033 7.033 0 0 0-4.9308 2.0646 7.033 7.033 0 0 0-.0714 9.864 7.033 7.033 0 0 0 9.8926.1454c2.5617-2.4988 2.6137-6.6007.1177-9.1597a6.4522 6.4522 0 0 0-5.0081-2.915zM7.0586 4.9757a6.4522 6.4522 0 0 0-5.0081 2.915C-.4435 10.4497-.3915 14.5515 2.17 17.0504a7.033 7.033 0 0 0 9.8926-.1454 7.033 7.033 0 0 0-.0714-9.864 7.033 7.033 0 0 0-4.9326-2.0653z" fill="#F9AB00"></path><path d="M7.0586 4.9757a7.033 7.033 0 0 0-4.9308 2.0646C-.367 9.5765-.42 13.6783 2.075 16.2374a7.033 7.033 0 0 0 5.9282 2.077 7.033 7.033 0 0 0 4.9326-2.0653 7.033 7.033 0 0 0 .0714-9.864 7.033 7.033 0 0 0-5.9486-2.2094z" fill="#E8710A"></path></svg> Google Colab</a>
+</div>
+</div>
+</div>
+<div class="project-card" data-categories="Drug Discovery">
+<div class="project-content">
+<div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;margin-bottom:0.25rem;">
+<h3 class="project-title anchored" style="margin:0;">
+AI in Drug Discovery: Molecular Property Prediction and Virtual Screening
+</h3>
+<span class="pipeline-category">Drug Discovery</span>
+</div>
+<p>
+End-to-end pipeline for AI-driven drug discovery — covering molecular featurization, toxicity prediction, ADMET property modeling, and virtual screening of compound libraries using machine learning and cheminformatics tools.
+</p>
+<div class="pipeline-io">
+<div class="pipeline-io-item">
+<strong>Input:</strong> Compound libraries (SMILES), molecular descriptors
+</div>
+<div class="pipeline-io-item">
+<strong>Output:</strong> Toxicity predictions, ADMET profiles, ranked hit compounds
+</div>
+</div>
+<div class="project-tags">
+<span class="tag">Python</span> <span class="tag">RDKit</span> <span class="tag">DeepChem</span> <span class="tag">scikit-learn</span>
+</div>
+<div class="project-links">
+<a href="https://colab.research.google.com/drive/124b2zhlFujYBk2cGoT64DWPTwr0SB-Ph?usp=sharing" class="project-btn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 24 24" style="vertical-align:-2px;margin-right:4px;"><path d="M16.9414 4.9757a7.033 7.033 0 0 0-4.9308 2.0646 7.033 7.033 0 0 0-.0714 9.864 7.033 7.033 0 0 0 9.8926.1454c2.5617-2.4988 2.6137-6.6007.1177-9.1597a6.4522 6.4522 0 0 0-5.0081-2.915zM7.0586 4.9757a6.4522 6.4522 0 0 0-5.0081 2.915C-.4435 10.4497-.3915 14.5515 2.17 17.0504a7.033 7.033 0 0 0 9.8926-.1454 7.033 7.033 0 0 0-.0714-9.864 7.033 7.033 0 0 0-4.9326-2.0653z" fill="#F9AB00"></path><path d="M7.0586 4.9757a7.033 7.033 0 0 0-4.9308 2.0646C-.367 9.5765-.42 13.6783 2.075 16.2374a7.033 7.033 0 0 0 5.9282 2.077 7.033 7.033 0 0 0 4.9326-2.0653 7.033 7.033 0 0 0 .0714-9.864 7.033 7.033 0 0 0-5.9486-2.2094z" fill="#E8710A"></path></svg> Google Colab</a>
+</div>
+</div>
+</div>
+<div class="project-card" data-categories="Drug Discovery">
+<div class="project-content">
+<div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;margin-bottom:0.25rem;">
+<h3 class="project-title anchored" style="margin:0;">
+AI in Drug Discovery: In Silico Toxicology Modeling
+</h3>
+<span class="pipeline-category">Drug Discovery</span>
+</div>
+<p>
+Build machine learning models to predict compound toxicity from molecular structure — covering molecular fingerprint generation, toxicity endpoint classification, structure–activity relationship analysis, and model interpretation for safety assessment in early-stage drug discovery.
+</p>
+<div class="pipeline-io">
+<div class="pipeline-io-item">
+<strong>Input:</strong> Chemical compounds (SMILES), toxicity endpoint labels
+</div>
+<div class="pipeline-io-item">
+<strong>Output:</strong> Toxicity classification models, SAR insights, safety predictions
+</div>
+</div>
+<div class="project-tags">
+<span class="tag">Python</span> <span class="tag">RDKit</span> <span class="tag">scikit-learn</span> <span class="tag">Mordred</span>
+</div>
+<div class="project-links">
+<a href="https://colab.research.google.com/drive/1ths5Mb1sHos6y5qcnodcWOnw-XR-Mw8w?usp=sharing" class="project-btn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 24 24" style="vertical-align:-2px;margin-right:4px;"><path d="M16.9414 4.9757a7.033 7.033 0 0 0-4.9308 2.0646 7.033 7.033 0 0 0-.0714 9.864 7.033 7.033 0 0 0 9.8926.1454c2.5617-2.4988 2.6137-6.6007.1177-9.1597a6.4522 6.4522 0 0 0-5.0081-2.915zM7.0586 4.9757a6.4522 6.4522 0 0 0-5.0081 2.915C-.4435 10.4497-.3915 14.5515 2.17 17.0504a7.033 7.033 0 0 0 9.8926-.1454 7.033 7.033 0 0 0-.0714-9.864 7.033 7.033 0 0 0-4.9326-2.0653z" fill="#F9AB00"></path><path d="M7.0586 4.9757a7.033 7.033 0 0 0-4.9308 2.0646C-.367 9.5765-.42 13.6783 2.075 16.2374a7.033 7.033 0 0 0 5.9282 2.077 7.033 7.033 0 0 0 4.9326-2.0653 7.033 7.033 0 0 0 .0714-9.864 7.033 7.033 0 0 0-5.9486-2.2094z" fill="#E8710A"></path></svg> Google Colab</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".category-filters").forEach(function (filterBar) {
+    var grid = filterBar.nextElementSibling;
+    filterBar.addEventListener("click", function (e) {
+      var btn = e.target.closest(".category-btn");
+      if (!btn) return;
+      filterBar.querySelectorAll(".category-btn").forEach(function (b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+      var cat = btn.getAttribute("data-category");
+      grid.querySelectorAll(".project-card").forEach(function (card) {
+        var cats = card.getAttribute("data-categories");
+        card.style.display = (cat === "all" || cats === cat) ? "" : "none";
+      });
+    });
+  });
+});
+</script>
 <div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</div>
+
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
