@@ -13,7 +13,7 @@ author-meta: "Jubayer Hossain"
 website:
   page-navigation: true
   title: "Jubayer Hossain"
-  image: "files/images/jubayer.png"
+  image: "files/profiles/jubayer.jpg"
   favicon: "/files/profiles/icon.png"
   description: "Academic Website for Jubayer Hossain"
 
@@ -27,8 +27,12 @@ website:
         text: Home
       - href: projects/index.qmd
         text: Projects
-      - href: teaching/index.qmd
-        text: Teaching
+      - text: Teaching
+        menu:
+          - href: teaching/index.qmd
+            text: Courses
+          - href: teaching/videos.qmd
+            text: Videos
       - href: blog/index.qmd
         text: Blog
       - href: publications/index.qmd

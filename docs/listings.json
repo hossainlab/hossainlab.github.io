@@ -1,5 +1,9 @@
 [
   {
+    "listing": "/teaching/index.html",
+    "items": []
+  },
+  {
     "listing": "/mentoring/index.html",
     "items": []
   },
@@ -17,7 +21,7 @@
     "items": []
   },
   {
-    "listing": "/teaching/index.html",
+    "listing": "/teaching/videos.html",
     "items": []
   }
 ]

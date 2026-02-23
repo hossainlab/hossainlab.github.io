@@ -1,0 +1,51 @@
+<%
+  const allCategories = [...new Set(items.flatMap(item => item.categories || []))].sort();
+%>
+<% if (allCategories.length > 0) { %>
+<div class="category-filters">
+<button class="category-btn active" data-category="all">All</button>
+<% for (const cat of allCategories) { %>
+<button class="category-btn" data-category="<%= cat %>"><%= cat %></button>
+<% } %>
+</div>
+<% } %>
+
+<div class="playlist-grid">
+<% for (const item of items) { %>
+<div class="playlist-card" data-categories="<%= (item.categories || []).join(',') %>">
+<div class="playlist-body">
+<h3 class="playlist-title"><%= item.course %></h3>
+<p class="playlist-desc"><%= item.description %></p>
+<% if (item.categories && item.categories.length > 0) { %>
+<div class="project-tags">
+<% for (const cat of item.categories) { %>
+<span class="tag"><%= cat %></span>
+<% } %>
+</div>
+<% } %>
+<% if (item.playlist) { %>
+<a href="<%= item.playlist %>" class="project-btn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 461.001 461.001" style="vertical-align:-2px;margin-right:4px;"><path d="M365.257 67.393H95.744C42.866 67.393 0 110.259 0 163.137v134.728c0 52.878 42.866 95.744 95.744 95.744h269.513c52.878 0 95.744-42.866 95.744-95.744V163.137c0-52.878-42.866-95.744-95.744-95.744zm-134.952 224.69V169.919l127.468 61.082-127.468 61.082z" fill="#FF0000"/></svg> Watch Playlist</a>
+<% } %>
+</div>
+</div>
+<% } %>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".category-filters").forEach(function (filterBar) {
+    var grid = filterBar.nextElementSibling;
+    filterBar.addEventListener("click", function (e) {
+      var btn = e.target.closest(".category-btn");
+      if (!btn) return;
+      filterBar.querySelectorAll(".category-btn").forEach(function (b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+      var cat = btn.getAttribute("data-category");
+      grid.querySelectorAll(".playlist-card").forEach(function (card) {
+        var cats = card.getAttribute("data-categories");
+        card.style.display = (cat === "all" || cats.split(",").indexOf(cat) !== -1) ? "" : "none";
+      });
+    });
+  });
+});
+</script>

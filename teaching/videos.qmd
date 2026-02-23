@@ -1,0 +1,14 @@
+---
+title: "Teaching Videos"
+subtitle: "YouTube playlists for my courses and tutorials"
+page-layout: full
+toc: false
+title-block-banner: true
+listing:
+  - id: videos
+    contents: videos.yml
+    template: ../_templates/video-card.ejs
+---
+
+:::{#videos}
+:::

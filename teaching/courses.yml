@@ -1,6 +1,24 @@
 - path:
+  title: "Statistical Analysis with R for Research"
+  image: "../files/courses/r-for-research.svg"
+  image-alt: "Statistical Analysis with R for Research"
+  description: "A comprehensive course teaching statistical analysis using R for researchers. Covers data manipulation, visualization, hypothesis testing, regression analysis, and reproducible research workflows — equipping researchers with the practical R skills needed to analyze and interpret their data."
+  categories:
+    - Statistics
+    - Data Science
+  tags:
+    - R
+    - Statistics
+    - Data Analysis
+    - ggplot2
+  links:
+    - label: "Course Website"
+      url: "https://rforresearch.netlify.app/"
+      icon: "fa-solid fa-arrow-up-right-from-square"
+
+- path:
   title: "Transcriptomics Data Analysis (Bulk + Single Cell)"
-  image: "../files/courses/tda.png"
+  image: "../files/courses/tda.jpg"
   image-alt: "Transcriptomics Data Analysis"
   description: "A live, instructor-led training program covering best practices in high-throughput RNA-seq data analysis. Participants learn to independently analyze gene expression datasets using R, Bioconductor, and the scverse ecosystem — from raw counts to biological interpretation."
   categories:
@@ -20,7 +38,7 @@
 
 - path:
   title: "Biomarker Identification using Machine Learning"
-  image: "../files/courses/biomarkers.png"
+  image: "../files/courses/biomarkers.jpg"
   image-alt: "Biomarker Identification using Machine Learning"
   description: "Hands-on course applying advanced machine learning and bioinformatics techniques to identify novel biomarkers from high-dimensional biological data. Focuses on cancer genomics using TCGA data to discover clinically relevant biomarkers for diagnosis, prognosis, and treatment selection."
   categories:
@@ -37,7 +55,7 @@
 
 - path:
   title: "Pan-Cancer Bioinformatics with R: Ideation to Publication"
-  image: "../files/courses/pan-cancer.png"
+  image: "../files/courses/pan-cancer.jpg"
   image-alt: "Pan-Cancer Bioinformatics with R"
   description: "An intensive training program guiding participants through the complete journey of pan-cancer analysis — from research idea to publication. Covers TCGA data access, expression, survival, mutation, and immune analyses, multi-omics integration, publication-ready visualization, and manuscript preparation."
   categories:
@@ -65,7 +83,7 @@
 
 - path:
   title: "Data Science and Machine Learning for Biologists"
-  image: "../files/courses/ml-ds-for-biologists.png"
+  image: "../files/courses/ml-ds-for-biologists.jpg"
   image-alt: "Data Science and Machine Learning for Biologists"
   description: "Taught at CBLAST, University of Dhaka, this course introduces biologists to data science and machine learning through hands-on biological case studies. Covers data processing, visualization, and analysis using Python and R, with applications of supervised and unsupervised learning in genomics, transcriptomics, and health data."
   categories:

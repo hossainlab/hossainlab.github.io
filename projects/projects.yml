@@ -37,7 +37,7 @@
 
 - path:
   title: "Fezf2-Mediated Cortical Development: Multi-Omics Analysis"
-  image: "../files/projects/Fezf2-Mediated.png"
+  image: "../files/projects/Fezf2-Mediated.jpg"
   image-alt: "Fezf2 Multi-Omics Analysis"
   description: "Integrative analysis of bulk and single-cell RNA-Seq data to elucidate Fezf2's role in cortical neurogenesis. Leveraging the GSE153164 dataset (Di Bella et al. 2021) to investigate temporal and cell-type-specific mechanisms by which Fezf2 mutations disrupt cortical development."
   categories:
@@ -54,7 +54,7 @@
 
 - path:
   title: "Single-Cell Meta-Analysis of Microglial Activation in Alzheimer's Disease"
-  image: "../files/projects/alzheimers-microglia.png"
+  image: "../files/projects/alzheimers-microglia.jpg"
   image-alt: "Alzheimer's Microglia Meta-Analysis"
   description: "Meta-analysis of single-cell RNA-Seq datasets to identify microglial states and activation patterns in Alzheimer's disease. Integrating multiple cohorts to characterize disease-associated microglia subtypes and their transcriptomic signatures across disease stages."
   categories:
@@ -72,7 +72,7 @@
 
 - path:
   title: "Integrative Spatial-scRNA-seq Atlas of Immunotherapy Resistance Across Cancer Types"
-  image: "../files/projects/Spatial-scRNA-seq.png"
+  image: "../files/projects/Spatial-scRNA-seq.jpg"
   image-alt: "Spatial scRNA-seq Immunotherapy Atlas"
   description: "Comprehensive spatial transcriptomics and single-cell analysis to map tumor microenvironment and resistance mechanisms in immunotherapy. Investigating how cell-type interactions influence tumor development and immunotherapeutic response, including SPP1-expressing macrophage-mediated resistance through adenosine pathway activation."
   categories:

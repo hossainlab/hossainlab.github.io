@@ -162,10 +162,21 @@ window.Quarto = {
     <a class="nav-link" href="../projects/index.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="../teaching/index.html" aria-current="page"> 
-<span class="menu-text">Teaching</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-teaching" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Teaching</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-teaching">    
+        <li>
+    <a class="dropdown-item" href="../teaching/index.html">
+ <span class="dropdown-text">Courses</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../teaching/videos.html">
+ <span class="dropdown-text">Videos</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
@@ -175,7 +186,7 @@ window.Quarto = {
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../cv/professional-cv/CV-HossainMJ-web.html"> 
+    <a class="nav-link" href="../cv/professional-cv/CV-HossainMJ.pdf"> 
 <span class="menu-text">CV</span></a>
   </li>  
 </ul>
@@ -262,11 +273,34 @@ window.Quarto = {
 <p><button class="category-btn" data-category="Genomics">Genomics</button></p>
 <p><button class="category-btn" data-category="Machine Learning">Machine Learning</button></p>
 <p><button class="category-btn" data-category="Single-Cell">Single-Cell</button></p>
+<p><button class="category-btn" data-category="Statistics">Statistics</button></p>
 </div>
 <div class="project-grid">
+<div class="project-card" data-categories="Statistics,Data Science">
+<div class="project-image">
+<p><img src="../files/courses/r-for-research.svg" alt="Statistical Analysis with R for Research" loading="lazy" decoding="async"></p>
+</div>
+<div class="project-content">
+<h3 class="project-title anchored">
+Statistical Analysis with R for Research
+</h3>
+<p>
+A comprehensive course teaching statistical analysis using R for researchers. Covers data manipulation, visualization, hypothesis testing, regression analysis, and reproducible research workflows — equipping researchers with the practical R skills needed to analyze and interpret their data.
+</p>
+<div class="project-tags">
+<p><span class="tag">R</span></p>
+<p><span class="tag">Statistics</span></p>
+<p><span class="tag">Data Analysis</span></p>
+<p><span class="tag">ggplot2</span></p>
+</div>
+<div class="project-links">
+<p><a href="https://rforresearch.netlify.app/" class="project-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Course Website</a></p>
+</div>
+</div>
+</div>
 <div class="project-card" data-categories="Genomics,Single-Cell">
 <div class="project-image">
-<p><img src="../files/courses/tda.png" alt="Transcriptomics Data Analysis"></p>
+<p><img src="../files/courses/tda.jpg" alt="Transcriptomics Data Analysis" loading="lazy" decoding="async"></p>
 </div>
 <div class="project-content">
 <h3 class="project-title anchored">
@@ -290,7 +324,7 @@ A live, instructor-led training program covering best practices in high-throughp
 </div>
 <div class="project-card" data-categories="Machine Learning,Cancer Genomics">
 <div class="project-image">
-<p><img src="../files/courses/biomarkers.png" alt="Biomarker Identification using Machine Learning"></p>
+<p><img src="../files/courses/biomarkers.jpg" alt="Biomarker Identification using Machine Learning" loading="lazy" decoding="async"></p>
 </div>
 <div class="project-content">
 <h3 class="project-title anchored">
@@ -312,7 +346,7 @@ Hands-on course applying advanced machine learning and bioinformatics techniques
 </div>
 <div class="project-card" data-categories="Cancer Genomics,Genomics">
 <div class="project-image">
-<p><img src="../files/courses/pan-cancer.png" alt="Pan-Cancer Bioinformatics with R"></p>
+<p><img src="../files/courses/pan-cancer.jpg" alt="Pan-Cancer Bioinformatics with R" loading="lazy" decoding="async"></p>
 </div>
 <div class="project-content">
 <h3 class="project-title anchored">
@@ -331,7 +365,7 @@ An intensive training program guiding participants through the complete journey 
 </div>
 <div class="project-card" data-categories="Machine Learning,Drug Discovery">
 <div class="project-image">
-<p><img src="../files/courses/ai-toxicology.jpg" alt="AI in Drug Discovery: In Silico Toxicology Modeling"></p>
+<p><img src="../files/courses/ai-toxicology.jpg" alt="AI in Drug Discovery: In Silico Toxicology Modeling" loading="lazy" decoding="async"></p>
 </div>
 <div class="project-content">
 <h3 class="project-title anchored">
@@ -350,7 +384,7 @@ A one-day hands-on workshop introducing AI-powered toxicology modeling for drug 
 </div>
 <div class="project-card" data-categories="Machine Learning,Data Science">
 <div class="project-image">
-<p><img src="../files/courses/ml-ds-for-biologists.png" alt="Data Science and Machine Learning for Biologists"></p>
+<p><img src="../files/courses/ml-ds-for-biologists.jpg" alt="Data Science and Machine Learning for Biologists" loading="lazy" decoding="async"></p>
 </div>
 <div class="project-content">
 <h3 class="project-title anchored">

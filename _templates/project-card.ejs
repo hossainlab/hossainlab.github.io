@@ -16,7 +16,7 @@
 <div class="project-card" data-categories="<%= (item.categories || []).join(',') %>">
 <% if (item.image) { %>
 <div class="project-image">
-<img src="<%= item.image %>" alt="<%= item['image-alt'] || item.title %>">
+<img src="<%= item.image %>" alt="<%= item['image-alt'] || item.title %>" loading="lazy" decoding="async">
 </div>
 <% } %>
 <div class="project-content">
