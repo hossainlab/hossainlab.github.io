@@ -84,9 +84,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-image','listing-image-alt','listing-description','listing-tags','listing-links',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-title','listing-image','listing-image-alt','listing-description','listing-categories','listing-tags','listing-links',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-title","listing-image","listing-image-alt","listing-description","listing-tags","listing-links"],
+      searchColumns: ["listing-title","listing-image","listing-image-alt","listing-description","listing-categories","listing-tags","listing-links"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -159,31 +159,23 @@ window.Quarto = {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../research/index.html"> 
-<span class="menu-text">Research</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link active" href="../projects/index.html" aria-current="page"> 
 <span class="menu-text">Projects</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../blog/index.html"> 
-<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../teaching/index.html"> 
 <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../mentoring/index.html"> 
-<span class="menu-text">Mentoring</span></a>
+    <a class="nav-link" href="../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../publications/index.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../cv/professional-cv/CV-HossainMJ.pdf" target="_blank"> 
+    <a class="nav-link" href="../cv/professional-cv/CV-HossainMJ-web.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
 </ul>
@@ -262,8 +254,62 @@ window.Quarto = {
 
 
 <div id="listing-projects" class="quarto-listing quarto-listing-container-custom">
+<div class="category-filters">
+<p><button class="category-btn active" data-category="all">All</button></p>
+<p><button class="category-btn" data-category="Cancer Genomics">Cancer Genomics</button></p>
+<p><button class="category-btn" data-category="Deep Learning">Deep Learning</button></p>
+<p><button class="category-btn" data-category="Genomics">Genomics</button></p>
+<p><button class="category-btn" data-category="Neurogenomics">Neurogenomics</button></p>
+<p><button class="category-btn" data-category="Single-Cell">Single-Cell</button></p>
+<p><button class="category-btn" data-category="Spatial Omics">Spatial Omics</button></p>
+</div>
 <div class="project-grid">
-<div class="project-card">
+<div class="project-card" data-categories="Single-Cell">
+<div class="project-image">
+<p><img src="../files/projects/covid19-lung-atlas.jpg" alt="COVID-19 Lung Atlas"></p>
+</div>
+<div class="project-content">
+<h3 class="project-title anchored">
+Single-Cell Atlas of COVID-19 Lung Pathology
+</h3>
+<p>
+Reanalysis of single-nucleus RNA-seq data from Melms et al.&nbsp;(2021) examining lung tissue from 26 COVID-19 patients and healthy controls. Identifies myeloid expansion, epithelial depletion, and pro-fibrotic remodeling across 94,027 cells using scVI batch correction and Leiden clustering, with an interactive 8-tab Shiny app for exploring gene expression and cell-cell interactions.
+</p>
+<div class="project-tags">
+<p><span class="tag">Python</span></p>
+<p><span class="tag">Scanpy</span></p>
+<p><span class="tag">scVI-tools</span></p>
+<p><span class="tag">R/Shiny</span></p>
+</div>
+<div class="project-links">
+<p><a href="https://github.com/hossainlab/COVID-19-Lung-Atlas" class="project-btn" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></p>
+<p><a href="https://hossainlab.shinyapps.io/covid19-lung-atlas/" class="project-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Shiny App</a></p>
+</div>
+</div>
+</div>
+<div class="project-card" data-categories="Deep Learning,Genomics">
+<div class="project-image">
+<p><img src="../files/projects/deep-amr.jpeg" alt="DeepAMR Platform"></p>
+</div>
+<div class="project-content">
+<h3 class="project-title anchored">
+DeepAMR: AI-Powered Antimicrobial Resistance Prediction
+</h3>
+<p>
+A deep learning platform that analyzes genomic sequences to predict antimicrobial resistance patterns, built for the Bangladesh healthcare system. Delivers AMR predictions in under 15 minutes with 95%+ accuracy, identifying resistance genes and mutations across 12+ organisms and 50+ antibiotics — reducing traditional culture-based testing from days to hours.
+</p>
+<div class="project-tags">
+<p><span class="tag">Python</span></p>
+<p><span class="tag">Deep Learning</span></p>
+<p><span class="tag">Genomics</span></p>
+<p><span class="tag">FASTA/FASTQ</span></p>
+</div>
+<div class="project-links">
+<p><a href="https://deep-amr.vercel.app/" class="project-btn" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a></p>
+</div>
+</div>
+</div>
+<div class="project-card" data-categories="Single-Cell,Neurogenomics">
 <div class="project-image">
 <p><img src="../files/projects/Fezf2-Mediated.png" alt="Fezf2 Multi-Omics Analysis"></p>
 </div>
@@ -285,7 +331,7 @@ Integrative analysis of bulk and single-cell RNA-Seq data to elucidate Fezf2’s
 </div>
 </div>
 </div>
-<div class="project-card">
+<div class="project-card" data-categories="Single-Cell,Neurogenomics">
 <div class="project-image">
 <p><img src="../files/projects/alzheimers-microglia.png" alt="Alzheimer's Microglia Meta-Analysis"></p>
 </div>
@@ -308,7 +354,7 @@ Meta-analysis of single-cell RNA-Seq datasets to identify microglial states and 
 </div>
 </div>
 </div>
-<div class="project-card">
+<div class="project-card" data-categories="Spatial Omics,Cancer Genomics">
 <div class="project-image">
 <p><img src="../files/projects/Spatial-scRNA-seq.png" alt="Spatial scRNA-seq Immunotherapy Atlas"></p>
 </div>
@@ -333,6 +379,24 @@ Comprehensive spatial transcriptomics and single-cell analysis to map tumor micr
 </div>
 </div>
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".category-filters").forEach(function (filterBar) {
+    var grid = filterBar.nextElementSibling;
+    filterBar.addEventListener("click", function (e) {
+      var btn = e.target.closest(".category-btn");
+      if (!btn) return;
+      filterBar.querySelectorAll(".category-btn").forEach(function (b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+      var cat = btn.getAttribute("data-category");
+      grid.querySelectorAll(".project-card").forEach(function (card) {
+        var cats = card.getAttribute("data-categories");
+        card.style.display = (cat === "all" || cats.split(",").indexOf(cat) !== -1) ? "" : "none";
+      });
+    });
+  });
+});
+</script>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
 

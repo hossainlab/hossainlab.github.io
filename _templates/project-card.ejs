@@ -1,6 +1,19 @@
+<%
+  // Collect all unique categories
+  const allCategories = [...new Set(items.flatMap(item => item.categories || []))].sort();
+%>
+<% if (allCategories.length > 0) { %>
+<div class="category-filters">
+  <button class="category-btn active" data-category="all">All</button>
+  <% for (const cat of allCategories) { %>
+  <button class="category-btn" data-category="<%= cat %>"><%= cat %></button>
+  <% } %>
+</div>
+<% } %>
+
 <div class="project-grid">
 <% for (const item of items) { %>
-<div class="project-card">
+<div class="project-card" data-categories="<%= (item.categories || []).join(',') %>">
 <% if (item.image) { %>
 <div class="project-image">
 <img src="<%= item.image %>" alt="<%= item['image-alt'] || item.title %>">
@@ -19,7 +32,7 @@
 <% if (item.links && item.links.length > 0) { %>
 <div class="project-links">
 <% for (const link of item.links) { %>
-<a href="<%= link.url %>" class="project-btn" target="_blank"><i class="fa-brands fa-github"></i> <%= link.label %></a>
+<a href="<%= link.url %>" class="project-btn" target="_blank"><% if (link.icon) { %><i class="<%= link.icon %>"></i><% } else { %><i class="fa-brands fa-github"></i><% } %> <%= link.label %></a>
 <% } %>
 </div>
 <% } %>
@@ -27,3 +40,22 @@
 </div>
 <% } %>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".category-filters").forEach(function (filterBar) {
+    var grid = filterBar.nextElementSibling;
+    filterBar.addEventListener("click", function (e) {
+      var btn = e.target.closest(".category-btn");
+      if (!btn) return;
+      filterBar.querySelectorAll(".category-btn").forEach(function (b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+      var cat = btn.getAttribute("data-category");
+      grid.querySelectorAll(".project-card").forEach(function (card) {
+        var cats = card.getAttribute("data-categories");
+        card.style.display = (cat === "all" || cats.split(",").indexOf(cat) !== -1) ? "" : "none";
+      });
+    });
+  });
+});
+</script>

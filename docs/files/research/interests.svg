@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 520" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <!-- Gradient for Single-Cell & Spatial Omics -->
+    <radialGradient id="g1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.25"/>
+    </radialGradient>
+    <!-- Gradient for Disease Genomics -->
+    <radialGradient id="g2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fb923c" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0.25"/>
+    </radialGradient>
+    <!-- Gradient for Computational Methods -->
+    <radialGradient id="g3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.25"/>
+    </radialGradient>
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Three circles -->
+  <circle cx="230" cy="195" r="165" fill="url(#g1)" stroke="#6366f1" stroke-width="1.5" stroke-opacity="0.4" filter="url(#shadow)"/>
+  <circle cx="370" cy="195" r="165" fill="url(#g2)" stroke="#f97316" stroke-width="1.5" stroke-opacity="0.4" filter="url(#shadow)"/>
+  <circle cx="300" cy="340" r="165" fill="url(#g3)" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.4" filter="url(#shadow)"/>
+
+  <!-- Top-left: Single-Cell & Spatial Omics -->
+  <text x="155" y="130" text-anchor="middle" font-size="15" font-weight="700" fill="#4338ca">Single-Cell &amp;</text>
+  <text x="155" y="150" text-anchor="middle" font-size="15" font-weight="700" fill="#4338ca">Spatial Omics</text>
+  <text x="155" y="172" text-anchor="middle" font-size="10.5" fill="#6366f1" opacity="0.85">scRNA-seq · Visium</text>
+  <text x="155" y="186" text-anchor="middle" font-size="10.5" fill="#6366f1" opacity="0.85">MERFISH · Multi-modal</text>
+
+  <!-- Top-right: Disease Genomics -->
+  <text x="445" y="130" text-anchor="middle" font-size="15" font-weight="700" fill="#c2410c">Disease</text>
+  <text x="445" y="150" text-anchor="middle" font-size="15" font-weight="700" fill="#c2410c">Genomics</text>
+  <text x="445" y="172" text-anchor="middle" font-size="10.5" fill="#ea580c" opacity="0.85">Cancer · Neurodegeneration</text>
+  <text x="445" y="186" text-anchor="middle" font-size="10.5" fill="#ea580c" opacity="0.85">Tumor Microenvironment</text>
+
+  <!-- Bottom: Computational Methods -->
+  <text x="300" y="410" text-anchor="middle" font-size="15" font-weight="700" fill="#047857">Computational</text>
+  <text x="300" y="430" text-anchor="middle" font-size="15" font-weight="700" fill="#047857">Methods</text>
+  <text x="300" y="452" text-anchor="middle" font-size="10.5" fill="#059669" opacity="0.85">Deep Learning · scVI · VAEs</text>
+  <text x="300" y="466" text-anchor="middle" font-size="10.5" fill="#059669" opacity="0.85">Multi-omics Integration</text>
+
+  <!-- Intersection labels -->
+  <!-- Left overlap: SC + Computational -->
+  <text x="228" y="290" text-anchor="middle" font-size="9.5" font-weight="600" fill="#374151">Cell Atlas</text>
+  <text x="228" y="303" text-anchor="middle" font-size="9.5" font-weight="600" fill="#374151">Construction</text>
+
+  <!-- Right overlap: Disease + Computational -->
+  <text x="372" y="290" text-anchor="middle" font-size="9.5" font-weight="600" fill="#374151">Biomarker</text>
+  <text x="372" y="303" text-anchor="middle" font-size="9.5" font-weight="600" fill="#374151">Discovery</text>
+
+  <!-- Top overlap: SC + Disease -->
+  <text x="300" y="178" text-anchor="middle" font-size="9.5" font-weight="600" fill="#374151">Microglial States</text>
+  <text x="300" y="191" text-anchor="middle" font-size="9.5" font-weight="600" fill="#374151">in Disease</text>
+
+  <!-- Center: all three overlap -->
+  <text x="300" y="255" text-anchor="middle" font-size="11" font-weight="800" fill="#1e1b4b">Spatial-Single Cell</text>
+  <text x="300" y="271" text-anchor="middle" font-size="11" font-weight="800" fill="#1e1b4b">Disease Mapping</text>
+
+</svg>

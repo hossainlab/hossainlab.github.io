@@ -84,9 +84,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-image','listing-image-alt','listing-description','listing-tags','listing-links',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-title','listing-image','listing-image-alt','listing-description','listing-categories','listing-tags','listing-links',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-title","listing-image","listing-image-alt","listing-description","listing-tags","listing-links"],
+      searchColumns: ["listing-title","listing-image","listing-image-alt","listing-description","listing-categories","listing-tags","listing-links"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -159,31 +159,23 @@ window.Quarto = {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../research/index.html"> 
-<span class="menu-text">Research</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../projects/index.html"> 
 <span class="menu-text">Projects</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../blog/index.html"> 
-<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="../teaching/index.html" aria-current="page"> 
 <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../mentoring/index.html"> 
-<span class="menu-text">Mentoring</span></a>
+    <a class="nav-link" href="../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../publications/index.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../cv/professional-cv/CV-HossainMJ.pdf" target="_blank"> 
+    <a class="nav-link" href="../cv/professional-cv/CV-HossainMJ-web.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
 </ul>
@@ -262,8 +254,17 @@ window.Quarto = {
 
 
 <div id="listing-courses" class="quarto-listing quarto-listing-container-custom">
+<div class="category-filters">
+<p><button class="category-btn active" data-category="all">All</button></p>
+<p><button class="category-btn" data-category="Cancer Genomics">Cancer Genomics</button></p>
+<p><button class="category-btn" data-category="Data Science">Data Science</button></p>
+<p><button class="category-btn" data-category="Drug Discovery">Drug Discovery</button></p>
+<p><button class="category-btn" data-category="Genomics">Genomics</button></p>
+<p><button class="category-btn" data-category="Machine Learning">Machine Learning</button></p>
+<p><button class="category-btn" data-category="Single-Cell">Single-Cell</button></p>
+</div>
 <div class="project-grid">
-<div class="project-card">
+<div class="project-card" data-categories="Genomics,Single-Cell">
 <div class="project-image">
 <p><img src="../files/courses/tda.png" alt="Transcriptomics Data Analysis"></p>
 </div>
@@ -287,7 +288,7 @@ A live, instructor-led training program covering best practices in high-throughp
 </div>
 </div>
 </div>
-<div class="project-card">
+<div class="project-card" data-categories="Machine Learning,Cancer Genomics">
 <div class="project-image">
 <p><img src="../files/courses/biomarkers.png" alt="Biomarker Identification using Machine Learning"></p>
 </div>
@@ -309,7 +310,7 @@ Hands-on course applying advanced machine learning and bioinformatics techniques
 </div>
 </div>
 </div>
-<div class="project-card">
+<div class="project-card" data-categories="Cancer Genomics,Genomics">
 <div class="project-image">
 <p><img src="../files/courses/pan-cancer.png" alt="Pan-Cancer Bioinformatics with R"></p>
 </div>
@@ -328,7 +329,7 @@ An intensive training program guiding participants through the complete journey 
 </div>
 </div>
 </div>
-<div class="project-card">
+<div class="project-card" data-categories="Machine Learning,Drug Discovery">
 <div class="project-image">
 <p><img src="../files/courses/ai-toxicology.jpg" alt="AI in Drug Discovery: In Silico Toxicology Modeling"></p>
 </div>
@@ -347,7 +348,7 @@ A one-day hands-on workshop introducing AI-powered toxicology modeling for drug 
 </div>
 </div>
 </div>
-<div class="project-card">
+<div class="project-card" data-categories="Machine Learning,Data Science">
 <div class="project-image">
 <p><img src="../files/courses/ml-ds-for-biologists.png" alt="Data Science and Machine Learning for Biologists"></p>
 </div>
@@ -370,6 +371,24 @@ Taught at CBLAST, University of Dhaka, this course introduces biologists to data
 </div>
 </div>
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".category-filters").forEach(function (filterBar) {
+    var grid = filterBar.nextElementSibling;
+    filterBar.addEventListener("click", function (e) {
+      var btn = e.target.closest(".category-btn");
+      if (!btn) return;
+      filterBar.querySelectorAll(".category-btn").forEach(function (b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+      var cat = btn.getAttribute("data-category");
+      grid.querySelectorAll(".project-card").forEach(function (card) {
+        var cats = card.getAttribute("data-categories");
+        card.style.display = (cat === "all" || cats.split(",").indexOf(cat) !== -1) ? "" : "none";
+      });
+    });
+  });
+});
+</script>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
 

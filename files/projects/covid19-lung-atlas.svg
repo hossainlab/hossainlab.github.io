@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="340" rx="12" fill="url(#bg)"/>
+
+  <!-- Subtle cell cluster dots -->
+  <g opacity="0.1">
+    <circle cx="460" cy="80" r="4" fill="#f87171"/><circle cx="475" cy="70" r="3" fill="#f87171"/>
+    <circle cx="490" cy="85" r="5" fill="#f87171"/><circle cx="470" cy="95" r="3.5" fill="#f87171"/>
+    <circle cx="500" cy="75" r="3" fill="#60a5fa"/><circle cx="510" cy="90" r="4" fill="#60a5fa"/>
+    <circle cx="520" cy="70" r="3" fill="#60a5fa"/><circle cx="505" cy="60" r="3.5" fill="#60a5fa"/>
+    <circle cx="540" cy="85" r="4" fill="#34d399"/><circle cx="550" cy="70" r="3" fill="#34d399"/>
+    <circle cx="535" cy="95" r="3.5" fill="#34d399"/><circle cx="555" cy="90" r="3" fill="#34d399"/>
+  </g>
+
+  <!-- Title -->
+  <text x="40" y="65" font-size="28" font-weight="800" fill="#ffffff">COVID-19 Lung Atlas</text>
+  <text x="40" y="92" font-size="13" fill="#94a3b8" font-weight="500">Single-Nucleus RNA-seq · Melms et al. 2021</text>
+
+  <!-- Stat boxes -->
+  <rect x="40" y="118" width="120" height="65" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="100" y="148" text-anchor="middle" font-size="22" font-weight="700" fill="#f87171">94,027</text>
+  <text x="100" y="168" text-anchor="middle" font-size="10.5" fill="#94a3b8">Cells</text>
+
+  <rect x="175" y="118" width="120" height="65" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="235" y="148" text-anchor="middle" font-size="22" font-weight="700" fill="#60a5fa">26</text>
+  <text x="235" y="168" text-anchor="middle" font-size="10.5" fill="#94a3b8">Patients</text>
+
+  <rect x="310" y="118" width="120" height="65" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="370" y="148" text-anchor="middle" font-size="22" font-weight="700" fill="#34d399">8</text>
+  <text x="370" y="168" text-anchor="middle" font-size="10.5" fill="#94a3b8">Interactive Tabs</text>
+
+  <!-- Key findings -->
+  <circle cx="55" cy="222" r="5" fill="#f87171"/>
+  <text x="70" y="226" font-size="12.5" fill="#e2e8f0">Myeloid cell expansion &amp; macrophage dysfunction</text>
+
+  <circle cx="55" cy="250" r="5" fill="#60a5fa"/>
+  <text x="70" y="254" font-size="12.5" fill="#e2e8f0">Epithelial depletion &amp; damage-associated progenitors</text>
+
+  <circle cx="55" cy="278" r="5" fill="#34d399"/>
+  <text x="70" y="282" font-size="12.5" fill="#e2e8f0">Pro-fibrotic fibroblast remodeling</text>
+
+  <!-- Tech pills -->
+  <rect x="40" y="304" width="62" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="71" y="319" text-anchor="middle" font-size="10" fill="#94a3b8">Scanpy</text>
+  <rect x="112" y="304" width="72" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="148" y="319" text-anchor="middle" font-size="10" fill="#94a3b8">scVI-tools</text>
+  <rect x="194" y="304" width="55" height="22" rx="11" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="221.5" y="319" text-anchor="middle" font-size="10" fill="#94a3b8">Shiny</text>
+</svg>

@@ -1,0 +1,155 @@
+/* CV Stylesheet — HTML + WeasyPrint PDF */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+:root {
+  --primary: #000000;
+  --link: #0563C1;
+  --gray: #5d5d5d;
+  --light-gray: #999999;
+}
+
+body {
+  font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.45;
+  color: var(--primary);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Headings */
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28pt;
+  font-weight: 700;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14pt;
+  font-weight: 700;
+  border-bottom: 1.5px solid var(--primary);
+  padding-bottom: 0.15em;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-size: 11pt;
+  font-weight: 600;
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+}
+
+/* CV entry blocks */
+.cv-entry {
+  margin-bottom: 0.6em;
+}
+
+.cv-entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.cv-entry-header strong {
+  font-size: 11pt;
+}
+
+.cvdate {
+  float: right;
+  font-style: italic;
+  color: var(--gray);
+  font-size: 10pt;
+}
+
+.cv-entry-sub {
+  color: var(--gray);
+  font-size: 10pt;
+  margin-top: 0;
+}
+
+.cv-entry ul {
+  margin-top: 0.2em;
+  margin-bottom: 0.3em;
+  padding-left: 1.5em;
+}
+
+.cv-entry li {
+  font-size: 10pt;
+  color: #333;
+  margin-bottom: 0.1em;
+}
+
+/* Contact header for PDF */
+.contact-header {
+  text-align: center;
+  margin-bottom: 0.5em;
+  font-size: 10pt;
+  color: var(--gray);
+}
+
+.contact-header a { color: var(--link); }
+
+/* References grid */
+.ref-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+  font-size: 10pt;
+}
+
+/* Skills */
+.skills-list dt {
+  font-weight: 700;
+  font-size: 10.5pt;
+}
+
+.skills-list dd {
+  margin-left: 0;
+  margin-bottom: 0.4em;
+  color: #333;
+  font-size: 10pt;
+}
+
+/* Print-only / no-print */
+.print-only { display: none; }
+
+@media print {
+  .print-only { display: block; }
+  .no-print { display: none !important; }
+}
+
+/* WeasyPrint @page rules */
+@page {
+  size: A4;
+  margin: 15mm 15mm 18mm 15mm;
+  @bottom-center {
+    content: "Md. Jubayer Hossain · CV — Page " counter(page) " of " counter(pages);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 8pt;
+    color: #999;
+  }
+}
+
+/* Print tweaks */
+@media print {
+  body {
+    max-width: none;
+    padding: 0;
+    font-size: 9.5pt;
+  }
+
+  h1 { font-size: 22pt; }
+  h2 { font-size: 12pt; margin-top: 0.8em; }
+
+  .cv-entry { break-inside: avoid; }
+  .ref-grid { break-inside: avoid; }
+}

@@ -1,8 +1,48 @@
 - path:
+  title: "Single-Cell Atlas of COVID-19 Lung Pathology"
+  image: "../files/projects/covid19-lung-atlas.jpg"
+  image-alt: "COVID-19 Lung Atlas"
+  description: "Reanalysis of single-nucleus RNA-seq data from Melms et al. (2021) examining lung tissue from 26 COVID-19 patients and healthy controls. Identifies myeloid expansion, epithelial depletion, and pro-fibrotic remodeling across 94,027 cells using scVI batch correction and Leiden clustering, with an interactive 8-tab Shiny app for exploring gene expression and cell-cell interactions."
+  categories:
+    - Single-Cell
+  tags:
+    - Python
+    - Scanpy
+    - scVI-tools
+    - R/Shiny
+  links:
+    - label: "GitHub"
+      url: "https://github.com/hossainlab/COVID-19-Lung-Atlas"
+    - label: "Shiny App"
+      url: "https://hossainlab.shinyapps.io/covid19-lung-atlas/"
+      icon: "fa-solid fa-arrow-up-right-from-square"
+
+- path:
+  title: "DeepAMR: AI-Powered Antimicrobial Resistance Prediction"
+  image: "../files/projects/deep-amr.jpeg"
+  image-alt: "DeepAMR Platform"
+  description: "A deep learning platform that analyzes genomic sequences to predict antimicrobial resistance patterns, built for the Bangladesh healthcare system. Delivers AMR predictions in under 15 minutes with 95%+ accuracy, identifying resistance genes and mutations across 12+ organisms and 50+ antibiotics — reducing traditional culture-based testing from days to hours."
+  categories:
+    - Deep Learning
+    - Genomics
+  tags:
+    - Python
+    - Deep Learning
+    - Genomics
+    - FASTA/FASTQ
+  links:
+    - label: "Live Demo"
+      url: "https://deep-amr.vercel.app/"
+      icon: "fa-solid fa-arrow-up-right-from-square"
+
+- path:
   title: "Fezf2-Mediated Cortical Development: Multi-Omics Analysis"
   image: "../files/projects/Fezf2-Mediated.png"
   image-alt: "Fezf2 Multi-Omics Analysis"
   description: "Integrative analysis of bulk and single-cell RNA-Seq data to elucidate Fezf2's role in cortical neurogenesis. Leveraging the GSE153164 dataset (Di Bella et al. 2021) to investigate temporal and cell-type-specific mechanisms by which Fezf2 mutations disrupt cortical development."
+  categories:
+    - Single-Cell
+    - Neurogenomics
   tags:
     - Python
     - Seurat
@@ -17,6 +57,9 @@
   image: "../files/projects/alzheimers-microglia.png"
   image-alt: "Alzheimer's Microglia Meta-Analysis"
   description: "Meta-analysis of single-cell RNA-Seq datasets to identify microglial states and activation patterns in Alzheimer's disease. Integrating multiple cohorts to characterize disease-associated microglia subtypes and their transcriptomic signatures across disease stages."
+  categories:
+    - Single-Cell
+    - Neurogenomics
   tags:
     - Python
     - Scanpy
@@ -32,6 +75,9 @@
   image: "../files/projects/Spatial-scRNA-seq.png"
   image-alt: "Spatial scRNA-seq Immunotherapy Atlas"
   description: "Comprehensive spatial transcriptomics and single-cell analysis to map tumor microenvironment and resistance mechanisms in immunotherapy. Investigating how cell-type interactions influence tumor development and immunotherapeutic response, including SPP1-expressing macrophage-mediated resistance through adenosine pathway activation."
+  categories:
+    - Spatial Omics
+    - Cancer Genomics
   tags:
     - Python
     - Scanpy
