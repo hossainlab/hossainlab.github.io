@@ -1,0 +1,167 @@
+---
+title: "Curriculum Vitae"
+author: 
+  name: "Rik JG Nuijten PhD"
+  email: "riknuijten@live.nl"
+  phone: "+31 655773010"
+  url: "https://www.linkedin.com/in/rik-nuijten/"
+format:
+  html:
+    toc: true
+  pdf:
+    pdf-engine: weasyprint
+css: cv.css
+bibliography: bib.bib
+nocite: |
+  @*
+format-links: [pdf]
+project:
+  type: website
+  output-dir: docs
+---
+
+::: {.print-only .contact-block}
+<table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+  <tr>
+    <td style="width: 175px; text-align: center; vertical-align: middle; padding-right: 20px; margin: 0; padding: 0;">
+      <img src="photo.png" alt="me" style="width: 175px; height: auto;"/>
+    </td>
+    <td style="border-bottom: 1px solid #36a7e9; vertical-align: middle; text-align: justify; margin: 0; padding: 0;">
+      <span style="font-size: 2em; font-weight: 900; color: black; text-align: center; text-transform: capitalize; display: block;">Rik JG Nuijten PhD</span>
+      <br><img src="svg/email.svg" alt="Email" style="height:10px;"/>[riknuijten@live.nl](mailto:riknuijten@live.nl)
+      <span style="margin: 0 2px;">|</span>
+      <img src="svg/phone.svg" alt="Phone" style="height:10px;"/>[+31-655773010](tel:+31655773010)
+      <span style="margin: 0 2px;">|</span>
+      <img src="svg/linkedin.svg" alt="LinkedIn" style="height:10px;"/>[rik-nuijten](https://www.linkedin.com/in/rik-nuijten/)
+      <span style="margin: 0 2px;">|</span>
+      <img src="svg/orcid.svg" alt="ORCID" style="height:10px;"/>[0000-0003-3474-2224](https://orcid.org/0000-0003-3474-2224)
+      <br><br><span style="color:#555555; display: block; margin: 0; padding: 0;">Over 5 years experience in drone-based remote sensing, machine learning and data fusion for the assessment and management of forest ecosystems. Produced related best practices guides and science that continues to be operationalized. Has instructed and created materials for students in post-secondary education related to geospatial data analysis and data science.</span>
+    </td>
+  </tr>
+</table>
+
+:::
+
+
+::: {.no-print}
+
+### **About Me**
+
+<span style="color:#555555;">Over 5 years experience in drone-based remote sensing, machine learning and data fusion for the assessment and management of forest ecosystems. Produced related best practices guides and science that continues to be operationalized. Has instructed and created materials for students in post-secondary education related to geospatial data analysis and data science.</span>
+
+:::
+
+
+### **Applied Skills**
+
+<table>
+  <colgroup>
+    <col style="width: 180px; margin: 0; padding: 0;">
+    <col style="width: auto; margin: 0; padding: 0;">
+  </colgroup>
+  <tr>
+    <td style="color: black;"><strong>Remote Sensing</strong>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td>Photogrammetric processing, point cloud modelling, multispectral image analysis, drone data acquisition, field sampling techniques</td>
+  </tr>
+  <tr>
+    <td style="color: black;"><strong>Data Science</strong>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td>Data visualization, predictive modelling, unsupervised learning, object detection, spatial pattern analysis, scripting in Python, R & SQL</td>
+  </tr>
+</table>
+
+### **Soft Skills**
+
+<table>
+  <colgroup>
+    <col style="width: 180px; margin: 0; padding: 0;">
+    <col style="width: auto; margin: 0; padding: 0;">
+  </colgroup>
+  <tr>
+    <td style="color: black;"><strong>Communication</strong>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td>Effective graphic design, reporting, and presentation</td>
+  </tr>
+  <tr>
+    <td style="color: black;"><strong>Languages</strong>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td>English, Dutch</td>
+  </tr>
+  <tr>
+    <td style="color: black;"><strong>Methodological</strong>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td>Analytical, creative problem-solving, organized</td>
+  </tr>
+  <tr>
+    <td style="color: black;"><strong>Personal</strong>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td>Accountable, adaptable, enthusiastic, reliable, respectful</td>
+  </tr>
+  <tr>
+    <td style="color: black;"><strong>Social</strong>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td>Conflict resolution, inclusive, positive, team-building</td>
+  </tr>
+</table>
+
+### **Experience**
+**PhD -- Remote Sensing in Forestry** [*May 2019 --- May 2024*]{.cvdate} <br> UBC (Faculty of Forest Resources Management) [*Vancouver (CA)*]{.cvloc}
+
+-   Explored the capabilities, limitations, and opportunities of drone-based remote sensing in assessing ecosystem recovery, with a specific focus on digital aerial photogrammetry and vegetation.
+-   Worked in a top-tier, highly productive lab environment where I collaborated with other students and scientists, participated in various field sampling campaigns, and attended seminars.
+
+**Teaching Assistant** [*June 2019 --- November 2022*]{.cvdate} <br> UBC (Faculty of Forest Resources Management) [*Vancouver (CA)*]{.cvloc}
+
+-  Developed course materials, supported students with exercises, and facilitated research projects involving geospatial information in the following courses: Data Science in Forest Resources (FRST 505), Geospatial Data Analysis with Python (GEM 530), Observing the Earth from Space (CONS 127), and Project Proposal Development and Proof of Concept (FCOR 599).
+
+**Research Intern** [*September 2018 --- March 2019*]{.cvdate} <br> UBC (Faculty of Forest Resources Management) [*Vancouver (CA)*]{.cvloc}
+
+- Investigated the effects of seasonal timing of drone image collection on individual tree detection and mensuration, which was published in a peer-reviewed journal.
+
+**Data Analyst** [*December 2017 --- July 2018*]{.cvdate} <br> CBRE (Team Research) [*Amsterdam (NL)*]{.cvloc}
+
+-   Prepared data and analysis for real estate market outlook reports.
+
+**GIS Intern** [*November 2015 --- June 2016*]{.cvdate} <br> SWECO (Team Geoweb) [*De Bilt (NL)*]{.cvloc}
+
+-   Developed Geoweb (Geocortex Essentials) demo applications
+
+**Grocery Clerk** [*December 2010 --- October 2015*]{.cvdate} <br> Albert Heijn [*Bergen op Zoom (NL)*]{.cvloc}
+
+### **Education**
+
+**MSc -- Geographical Information Management and Application (Cum Laude)** [*September 2016 --- December 2018*]{.cvdate} <br> Utrecht University (Faculty of Geosciences) [*Utrecht (NL)*]{.cvloc}
+
+-   Investigated the use of drone imagery and object-based image analysis for measuring leafy vegetable crop productivity, which was published in a peer-reviewed journal.</span>
+-   Took extracurricular courses in Data Management, Python Programming, and Big Data at Wageningen University.
+
+**BSc -- Human Geography and Spatial Planning** [*Utrecht (NL)*]{.cvloc}<br> Utrecht University (Faculty of Geosciences) [*September 2013 --- July 2016*]{.cvdate}
+
+-   Pursued a minor in Geo Information at the Vrije Universiteit Amsterdam.
+
+### **Extra Activities**
+
+:::: {.columns}
+::: {.column width="40%"}
+-   Bootcamp Instructor at U.S.R. Triton (*2016 --- 2017*)
+-   Indoor Cycling Instructor at Newstyle Healthcenters (*2017 --- 2018*)
+:::
+
+::: {.column width="10%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="40%"}
+-   Co-organizer GIS Career Event for GIMA master program (*2016 --- 2017*)
+:::
+::::
+
+
+### **Conferences and Seminar Experience**
+
+-   Seminar Talk: [Surveying keystone plant communities and structures following ecological restoration using drone imagery]() (9 March 2023, Scion, Rotorua, New Zealand)
+-   Conference Talk: [Mapping vegetation structure, following early regeneration in open boreal forests, using remotely piloted aerial systems (RPAS) based imaging](https://lcluc.umd.edu/sites/default/files/9th%20ForestSAT%202022%20Conference%20Berlin%2C%20Germany%20-%20ConfTool%20Pro%20Printout.pdf) (2 September 2022, ForestSAT, Berlin, Germany)
+-   Webinar Talk: [Monitoring environmental impacts through remote sensing: Innovations and advancements](https://www.cclmportal.ca/resource/cclm-webinar-monitoring-environmental-impacts-through-remote-sensing-innovations-and) (17 February 2022, Canadian Conservation and Land Management Knowledge Network, online)
+
+### **Guides and Peer‑Reviewed Publications**
+
+::: {#refs}
+:::
+
+### **References**
+
+<span style="color:#555555; font-size: 11px; text-align: left;">References available upon request.</span> 

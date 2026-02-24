@@ -1,0 +1,137 @@
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* Global settings */
+html, body {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 12px; /* Adjust this value as needed to make text smaller or larger */
+  text-align: left;
+}
+
+/* Right alignment of job location and date text */
+.cvloc, .cvdate {
+  float: right;
+  font-style: italic;
+}
+
+/* Settings for print-only test (not visible in HTML) */
+.print-only {
+  display: none;
+}
+
+/* Contact block settings */
+.print-only.contact-block img,
+.print-only.contact-block a,
+.print-only.contact-block span {
+  margin: 0 5px; /* Adjusts spacings */
+}
+'
+
+/* Table related settings */
+.left-column {
+  padding-right: 25px; /* Adjust as needed */
+}
+
+table {
+  width: 100%;
+  margin: auto; /* Sets adaptable sizing */
+  color: #555555; /* Table text color */
+}
+
+/* Aligns text to the right in the first table column */
+table td:first-child, table th:first-child {
+  text-align: right;
+}
+
+/* Add line under headers */
+h2, h3 {
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.5em;
+  font-weight: 900;
+}
+
+/* Header styles */
+header {
+  margin-block-end: 5em;
+}
+
+header h1.title {
+  display: none;
+}
+
+/* Text elements */
+p {
+  font-size: 1em; /* Sets base font size */
+  text-align: justify;
+  margin-bottom: 0; /* Minimizes space after paragraphs */
+}
+
+div.references, div.references p, div.references ul li {
+  font-size: 11px; /* Sets base font size */
+  text-align: left;
+  margin-bottom: 0; /* Minimizes space after paragraphs */
+  color: #555555; /* Sets bibliography text color */
+}
+
+a {
+  text-decoration: none;
+  color: #36a7e9;
+}
+
+/* Styling for bullet points */
+ul {
+  list-style: none; 
+  padding-left: 0; 
+  margin-top: 0; /* Minimizes distance to text above */
+}
+
+ul li {
+  position: relative; /* Positioning the custom bullet */
+  margin-left: 20px; /* Increases distance between bullet points and text */
+  padding-left: 15px; /* Space before the text starts */
+  margin-top: 0; /* Minimizes space between list items */
+  color: #555555; /* Sets text color */
+  font-size: 11px;
+}
+
+
+ul li::before {
+  content: '•'; /* Custom bullet point */
+  position: absolute;
+  left: 0; /* Align with the start of the li element */
+  font-size: 15px; /* Bullet point size */
+  line-height: 0.9em; /* Vertically aligns bullet */
+  color: black; /* Bullet point color, adjust as needed */
+}
+
+/* This CSS rule hides the content for print media */
+@media print {
+  .content-visible {
+    display: none;
+  }
+}
+
+@media print {
+  @page {
+    size: a4 portrait;
+	margin-top: 1cm;
+	margin-bottom: 1cm;
+	margin-left: 1.47cm;
+	margin-right: 1.47cm;
+  }
+  .no-print {
+    display: none;
+  }
+  .print-only {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  header .author {
+    display: none; /* This line removes the author name header in print version */
+  }
+}
