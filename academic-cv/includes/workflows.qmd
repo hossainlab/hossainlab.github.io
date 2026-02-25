@@ -9,3 +9,7 @@
 5. **GEO Differential Expression & ML Dataset Prep**. Automated GEO data retrieval, differential expression analysis, and ML dataset generation. *Tech:* R/Bioconductor, Python, GEOquery, limma, DESeq2. [GitHub](https://github.com/bigbiolab/geo_ml)
 
 6. **16S rRNA Microbiome Analysis Pipeline**. Comprehensive microbiome pipeline combining QIIME 2 and DADA2 for taxonomic profiling. *Tech:* QIIME 2, R/DADA2, Phyloseq, VSEARCH. [GitHub](https://github.com/hossainlab/16S-pipeline)
+
+7. **16S-OHJU Pipeline**. Bioinformatics pipeline for processing and analyzing 16S rRNA gene sequencing data from microbial community studies. *Tech:* QIIME 2, Python, R, FastQC, MultiQC, Cutadapt. [GitHub](https://github.com/onehealthlab-ju/16S-Pipeline)
+
+8. **Shotgun Metagenomics Pipeline**. Comprehensive automated pipeline for shotgun metagenomic analysis from raw reads through metagenome-assembled genomes (MAGs). *Tech:* Kraken2, MetaPhlAn4, HUMAnN3, MEGAHIT, metaSPAdes, MetaBAT2, CheckM. [GitHub](https://github.com/onehealthlab-ju/Shothun-Pipeline)

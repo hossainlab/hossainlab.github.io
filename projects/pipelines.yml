@@ -142,3 +142,40 @@
     - label: "Google Colab"
       url: "https://colab.research.google.com/drive/1ths5Mb1sHos6y5qcnodcWOnw-XR-Mw8w?usp=sharing"
       icon: colab
+
+- path:
+  title: "16S rRNA Gene Sequencing Analysis Pipeline"
+  description: "Bioinformatics pipeline for processing and analyzing 16S rRNA gene sequencing data from microbial community studies — covering quality control, denoising, taxonomic classification, and diversity analysis."
+  category: Microbiome
+  tools:
+    - QIIME 2
+    - Python
+    - R
+    - FastQC
+    - MultiQC
+    - Cutadapt
+  input: "Raw 16S rRNA amplicon FASTQ files"
+  output: "ASV tables, taxonomic profiles, alpha/beta diversity metrics"
+  links:
+    - label: "GitHub"
+      url: "https://github.com/onehealthlab-ju/16S-Pipeline"
+      icon: github
+
+- path:
+  title: "Shotgun Metagenomics Pipeline"
+  description: "Comprehensive automated pipeline for shotgun metagenomic analysis — from raw reads through quality control, taxonomic profiling, functional annotation, assembly, and metagenome-assembled genome (MAG) recovery."
+  category: Microbiome
+  tools:
+    - Kraken2
+    - MetaPhlAn4
+    - HUMAnN3
+    - MEGAHIT
+    - metaSPAdes
+    - MetaBAT2
+    - CheckM
+  input: "Raw shotgun metagenomic FASTQ files"
+  output: "Taxonomic profiles, functional pathway abundances, metagenome-assembled genomes (MAGs)"
+  links:
+    - label: "GitHub"
+      url: "https://github.com/onehealthlab-ju/Shothun-Pipeline"
+      icon: github

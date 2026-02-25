@@ -280,7 +280,7 @@ window.Quarto = {
 <button class="category-btn active" data-category="all">
 All
 </button>
-<button class="category-btn" data-category="Drug Discovery">Drug Discovery</button> <button class="category-btn" data-category="Protein Structure Prediction">Protein Structure Prediction</button> <button class="category-btn" data-category="RNA-Seq">RNA-Seq</button> <button class="category-btn" data-category="Single-Cell">Single-Cell</button>
+<button class="category-btn" data-category="Drug Discovery">Drug Discovery</button> <button class="category-btn" data-category="Microbiome">Microbiome</button> <button class="category-btn" data-category="Protein Structure Prediction">Protein Structure Prediction</button> <button class="category-btn" data-category="RNA-Seq">RNA-Seq</button> <button class="category-btn" data-category="Single-Cell">Single-Cell</button>
 </div>
 <div class="project-grid">
 <div class="project-card" data-categories="RNA-Seq">
@@ -496,6 +496,60 @@ Build machine learning models to predict compound toxicity from molecular struct
 </div>
 <div class="project-links">
 <a href="https://colab.research.google.com/drive/1ths5Mb1sHos6y5qcnodcWOnw-XR-Mw8w?usp=sharing" class="project-btn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 24 24" style="vertical-align:-2px;margin-right:4px;"><path d="M16.9414 4.9757a7.033 7.033 0 0 0-4.9308 2.0646 7.033 7.033 0 0 0-.0714 9.864 7.033 7.033 0 0 0 9.8926.1454c2.5617-2.4988 2.6137-6.6007.1177-9.1597a6.4522 6.4522 0 0 0-5.0081-2.915zM7.0586 4.9757a6.4522 6.4522 0 0 0-5.0081 2.915C-.4435 10.4497-.3915 14.5515 2.17 17.0504a7.033 7.033 0 0 0 9.8926-.1454 7.033 7.033 0 0 0-.0714-9.864 7.033 7.033 0 0 0-4.9326-2.0653z" fill="#F9AB00"></path><path d="M7.0586 4.9757a7.033 7.033 0 0 0-4.9308 2.0646C-.367 9.5765-.42 13.6783 2.075 16.2374a7.033 7.033 0 0 0 5.9282 2.077 7.033 7.033 0 0 0 4.9326-2.0653 7.033 7.033 0 0 0 .0714-9.864 7.033 7.033 0 0 0-5.9486-2.2094z" fill="#E8710A"></path></svg> Google Colab</a>
+</div>
+</div>
+</div>
+<div class="project-card" data-categories="Microbiome">
+<div class="project-content">
+<div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;margin-bottom:0.25rem;">
+<h3 class="project-title anchored" style="margin:0;">
+16S-OHJU: 16S rRNA Gene Sequencing Analysis Pipeline
+</h3>
+<span class="pipeline-category">Microbiome</span>
+</div>
+<p>
+Bioinformatics pipeline for processing and analyzing 16S rRNA gene sequencing data from microbial community studies — covering quality control, denoising, taxonomic classification, and diversity analysis.
+</p>
+<div class="pipeline-io">
+<div class="pipeline-io-item">
+<strong>Input:</strong> Raw 16S rRNA amplicon FASTQ files
+</div>
+<div class="pipeline-io-item">
+<strong>Output:</strong> ASV tables, taxonomic profiles, alpha/beta diversity metrics
+</div>
+</div>
+<div class="project-tags">
+<span class="tag">QIIME 2</span> <span class="tag">Python</span> <span class="tag">R</span> <span class="tag">FastQC</span> <span class="tag">MultiQC</span> <span class="tag">Cutadapt</span>
+</div>
+<div class="project-links">
+<a href="https://github.com/onehealthlab-ju/16S-Pipeline" class="project-btn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" style="vertical-align:-2px;margin-right:4px;" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg> GitHub</a>
+</div>
+</div>
+</div>
+<div class="project-card" data-categories="Microbiome">
+<div class="project-content">
+<div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;margin-bottom:0.25rem;">
+<h3 class="project-title anchored" style="margin:0;">
+Shotgun Metagenomics Pipeline
+</h3>
+<span class="pipeline-category">Microbiome</span>
+</div>
+<p>
+Comprehensive automated pipeline for shotgun metagenomic analysis — from raw reads through quality control, taxonomic profiling, functional annotation, assembly, and metagenome-assembled genome (MAG) recovery.
+</p>
+<div class="pipeline-io">
+<div class="pipeline-io-item">
+<strong>Input:</strong> Raw shotgun metagenomic FASTQ files
+</div>
+<div class="pipeline-io-item">
+<strong>Output:</strong> Taxonomic profiles, functional pathway abundances, metagenome-assembled genomes (MAGs)
+</div>
+</div>
+<div class="project-tags">
+<span class="tag">Kraken2</span> <span class="tag">MetaPhlAn4</span> <span class="tag">HUMAnN3</span> <span class="tag">MEGAHIT</span> <span class="tag">metaSPAdes</span> <span class="tag">MetaBAT2</span> <span class="tag">CheckM</span>
+</div>
+<div class="project-links">
+<a href="https://github.com/onehealthlab-ju/Shothun-Pipeline" class="project-btn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" style="vertical-align:-2px;margin-right:4px;" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg> GitHub</a>
 </div>
 </div>
 </div>
