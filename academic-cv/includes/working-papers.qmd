@@ -1,5 +1,5 @@
-1. **Fezf2-Mediated Cortical Development: Multi-Omics Analysis**. Integrative analysis of bulk and single-cell RNA-Seq data to elucidate Fezf2's role in cortical neurogenesis. *Tech:* Python, Seurat, Scanpy, DESeq2. [GitHub](https://github.com/hossainlab/fezf2-multiomics)
+1. **Hossain, M. J.**, Shahjahan, M., & Fuad, M. (2025). Fezf2-mediated cortical development: Multi-omics analysis. *Working Paper/GitHub*. <https://github.com/hossainlab/fezf2-multiomics>
 
-2. **Single-Cell Meta-Analysis of Microglial Activation in Alzheimer's Disease**. Meta-analysis of single-cell RNA-Seq datasets to identify microglial states and activation patterns. *Tech:* Python, Scanpy, R/Seurat, Harmony, scVI-tools. [GitHub](https://github.com/hossainlab/alzheimers-microglia-meta-analysis)
+2. **Hossain, M. J.**, Shahjahan, M., & Fuad, M. (2025). Single-cell meta-analysis of microglial activation in Alzheimer’s disease. *Working Paper/GitHub*. <https://github.com/hossainlab/alzheimers-microglia-meta-analysis>
 
-3. **Integrative Spatial-scRNA-seq Atlas of Immunotherapy Resistance Mechanisms Across Cancer Types**. Comprehensive spatial transcriptomics and single-cell analysis to map tumor microenvironment and resistance mechanisms. *Tech:* Python, Scanpy, Seurat, Squidpy, SpatialData, scVI-tools. [GitHub](https://github.com/hossainlab/spatial-scRNA-immune-resistance)
+3. **Hossain, M. J.**, Shahjahan, M., & Fuad, M. (2025). Integrative spatial-scRNA-seq atlas of immunotherapy resistance mechanisms across cancer types. *Working Paper/GitHub*. <https://github.com/hossainlab/spatial-scRNA-immune-resistance>
