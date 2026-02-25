@@ -1,167 +1,113 @@
 ---
 title: "Curriculum Vitae"
-author: 
-  name: "Rik JG Nuijten PhD"
-  email: "riknuijten@live.nl"
-  phone: "+31 655773010"
-  url: "https://www.linkedin.com/in/rik-nuijten/"
 format:
   html:
     toc: true
+    css: cv.css
   pdf:
     pdf-engine: weasyprint
-css: cv.css
-bibliography: bib.bib
-nocite: |
-  @*
+    pdf-engine-opt: "--quiet"
+    css: cv.css
+    margin-top: 1cm
+    margin-bottom: 1cm
+    margin-left: 1.5cm
+    margin-right: 1.5cm
 format-links: [pdf]
-project:
-  type: website
-  output-dir: docs
 ---
 
 ::: {.print-only .contact-block}
-<table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
-  <tr>
-    <td style="width: 175px; text-align: center; vertical-align: middle; padding-right: 20px; margin: 0; padding: 0;">
-      <img src="photo.png" alt="me" style="width: 175px; height: auto;"/>
-    </td>
-    <td style="border-bottom: 1px solid #36a7e9; vertical-align: middle; text-align: justify; margin: 0; padding: 0;">
-      <span style="font-size: 2em; font-weight: 900; color: black; text-align: center; text-transform: capitalize; display: block;">Rik JG Nuijten PhD</span>
-      <br><img src="svg/email.svg" alt="Email" style="height:10px;"/>[riknuijten@live.nl](mailto:riknuijten@live.nl)
-      <span style="margin: 0 2px;">|</span>
-      <img src="svg/phone.svg" alt="Phone" style="height:10px;"/>[+31-655773010](tel:+31655773010)
-      <span style="margin: 0 2px;">|</span>
-      <img src="svg/linkedin.svg" alt="LinkedIn" style="height:10px;"/>[rik-nuijten](https://www.linkedin.com/in/rik-nuijten/)
-      <span style="margin: 0 2px;">|</span>
-      <img src="svg/orcid.svg" alt="ORCID" style="height:10px;"/>[0000-0003-3474-2224](https://orcid.org/0000-0003-3474-2224)
-      <br><br><span style="color:#555555; display: block; margin: 0; padding: 0;">Over 5 years experience in drone-based remote sensing, machine learning and data fusion for the assessment and management of forest ecosystems. Produced related best practices guides and science that continues to be operationalized. Has instructed and created materials for students in post-secondary education related to geospatial data analysis and data science.</span>
-    </td>
-  </tr>
-</table>
+
+<div class="cv-header">
+<div class="cv-header-name">Md. Jubayer Hossain</div>
+<div class="cv-header-position">Department of Public Health, Daffodil International University</div>
+<div class="cv-header-address">Daffodil Smart City, Birulia 1216</div>
+<div class="cv-header-rule"></div>
+<div class="cv-header-contacts">
+<span class="cv-contact-item"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> <a href="tel:+8801622345906">+8801622345906</a></span>
+<span class="cv-contact-sep">|</span>
+<span class="cv-contact-item"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> <a href="mailto:hossainmj.me@gmail.com">hossainmj.me@gmail.com</a></span>
+<span class="cv-contact-sep">|</span>
+<span class="cv-contact-item"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg> <a href="https://mdjubayerhossain.com">mdjubayerhossain.com</a></span>
+</div>
+</div>
 
 :::
 
 
 ::: {.no-print}
 
-### **About Me**
+## **About Me**
 
-<span style="color:#555555;">Over 5 years experience in drone-based remote sensing, machine learning and data fusion for the assessment and management of forest ecosystems. Produced related best practices guides and science that continues to be operationalized. Has instructed and created materials for students in post-secondary education related to geospatial data analysis and data science.</span>
+<span style="color:#555555;">My research focuses on developing reproducible bioinformatics pipelines for large-scale bulk and single-cell RNA-seq data to uncover molecular biomarkers, immunological signatures, and therapeutic targets in cancer and neurological diseases. By integrating multi-omics data analysis, machine learning, and biology, I aim to advance computational methods that bridge biological discovery and clinical translation.</span>
 
 :::
 
 
-### **Applied Skills**
+## **Technical Skills**
 
-<table>
-  <colgroup>
-    <col style="width: 180px; margin: 0; padding: 0;">
-    <col style="width: auto; margin: 0; padding: 0;">
-  </colgroup>
-  <tr>
-    <td style="color: black;"><strong>Remote Sensing</strong>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td>Photogrammetric processing, point cloud modelling, multispectral image analysis, drone data acquisition, field sampling techniques</td>
-  </tr>
-  <tr>
-    <td style="color: black;"><strong>Data Science</strong>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td>Data visualization, predictive modelling, unsupervised learning, object detection, spatial pattern analysis, scripting in Python, R & SQL</td>
-  </tr>
-</table>
+{{< cv-yaml data/skills.yml type=skills >}}
 
-### **Soft Skills**
+## **Research Experience**
 
-<table>
-  <colgroup>
-    <col style="width: 180px; margin: 0; padding: 0;">
-    <col style="width: auto; margin: 0; padding: 0;">
-  </colgroup>
-  <tr>
-    <td style="color: black;"><strong>Communication</strong>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td>Effective graphic design, reporting, and presentation</td>
-  </tr>
-  <tr>
-    <td style="color: black;"><strong>Languages</strong>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td>English, Dutch</td>
-  </tr>
-  <tr>
-    <td style="color: black;"><strong>Methodological</strong>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td>Analytical, creative problem-solving, organized</td>
-  </tr>
-  <tr>
-    <td style="color: black;"><strong>Personal</strong>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td>Accountable, adaptable, enthusiastic, reliable, respectful</td>
-  </tr>
-  <tr>
-    <td style="color: black;"><strong>Social</strong>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td>Conflict resolution, inclusive, positive, team-building</td>
-  </tr>
-</table>
+{{< cv-yaml data/research.yml >}}
 
-### **Experience**
-**PhD -- Remote Sensing in Forestry** [*May 2019 --- May 2024*]{.cvdate} <br> UBC (Faculty of Forest Resources Management) [*Vancouver (CA)*]{.cvloc}
+## **Education**
 
--   Explored the capabilities, limitations, and opportunities of drone-based remote sensing in assessing ecosystem recovery, with a specific focus on digital aerial photogrammetry and vegetation.
--   Worked in a top-tier, highly productive lab environment where I collaborated with other students and scientists, participated in various field sampling campaigns, and attended seminars.
+{{< cv-yaml data/education.yml >}}
 
-**Teaching Assistant** [*June 2019 --- November 2022*]{.cvdate} <br> UBC (Faculty of Forest Resources Management) [*Vancouver (CA)*]{.cvloc}
+## **Training & Certifications**
 
--  Developed course materials, supported students with exercises, and facilitated research projects involving geospatial information in the following courses: Data Science in Forest Resources (FRST 505), Geospatial Data Analysis with Python (GEM 530), Observing the Earth from Space (CONS 127), and Project Proposal Development and Proof of Concept (FCOR 599).
+{{< cv-yaml data/training.yml >}}
 
-**Research Intern** [*September 2018 --- March 2019*]{.cvdate} <br> UBC (Faculty of Forest Resources Management) [*Vancouver (CA)*]{.cvloc}
+## **Leadership Experience**
 
-- Investigated the effects of seasonal timing of drone image collection on individual tree detection and mensuration, which was published in a peer-reviewed journal.
+{{< cv-yaml data/leadership.yml >}}
 
-**Data Analyst** [*December 2017 --- July 2018*]{.cvdate} <br> CBRE (Team Research) [*Amsterdam (NL)*]{.cvloc}
+## **Teaching Experience**
 
--   Prepared data and analysis for real estate market outlook reports.
+{{< cv-yaml data/teaching.yml >}}
 
-**GIS Intern** [*November 2015 --- June 2016*]{.cvdate} <br> SWECO (Team Geoweb) [*De Bilt (NL)*]{.cvloc}
+## **Community Engagement**
 
--   Developed Geoweb (Geocortex Essentials) demo applications
+{{< cv-yaml data/community.yml >}}
 
-**Grocery Clerk** [*December 2010 --- October 2015*]{.cvdate} <br> Albert Heijn [*Bergen op Zoom (NL)*]{.cvloc}
+## **Publications**
 
-### **Education**
+{{< include includes/publications.qmd >}}
 
-**MSc -- Geographical Information Management and Application (Cum Laude)** [*September 2016 --- December 2018*]{.cvdate} <br> Utrecht University (Faculty of Geosciences) [*Utrecht (NL)*]{.cvloc}
+## **Papers Under Review**
 
--   Investigated the use of drone imagery and object-based image analysis for measuring leafy vegetable crop productivity, which was published in a peer-reviewed journal.</span>
--   Took extracurricular courses in Data Management, Python Programming, and Big Data at Wageningen University.
+{{< include includes/under-review.qmd >}}
 
-**BSc -- Human Geography and Spatial Planning** [*Utrecht (NL)*]{.cvloc}<br> Utrecht University (Faculty of Geosciences) [*September 2013 --- July 2016*]{.cvdate}
+## **Working Papers**
 
--   Pursued a minor in Geo Information at the Vrije Universiteit Amsterdam.
+{{< include includes/working-papers.qmd >}}
 
-### **Extra Activities**
+## **Conference Presentations**
 
-:::: {.columns}
-::: {.column width="40%"}
--   Bootcamp Instructor at U.S.R. Triton (*2016 --- 2017*)
--   Indoor Cycling Instructor at Newstyle Healthcenters (*2017 --- 2018*)
-:::
-
-::: {.column width="10%"}
-<!-- empty column to create gap -->
-:::
-
-::: {.column width="40%"}
--   Co-organizer GIS Career Event for GIMA master program (*2016 --- 2017*)
-:::
-::::
+{{< include includes/conferences.qmd >}}
 
 
-### **Conferences and Seminar Experience**
+## **Invited Talks**
 
--   Seminar Talk: [Surveying keystone plant communities and structures following ecological restoration using drone imagery]() (9 March 2023, Scion, Rotorua, New Zealand)
--   Conference Talk: [Mapping vegetation structure, following early regeneration in open boreal forests, using remotely piloted aerial systems (RPAS) based imaging](https://lcluc.umd.edu/sites/default/files/9th%20ForestSAT%202022%20Conference%20Berlin%2C%20Germany%20-%20ConfTool%20Pro%20Printout.pdf) (2 September 2022, ForestSAT, Berlin, Germany)
--   Webinar Talk: [Monitoring environmental impacts through remote sensing: Innovations and advancements](https://www.cclmportal.ca/resource/cclm-webinar-monitoring-environmental-impacts-through-remote-sensing-innovations-and) (17 February 2022, Canadian Conservation and Land Management Knowledge Network, online)
+{{< cv-yaml data/talks.yml type=talks >}}
 
-### **Guides and Peer‑Reviewed Publications**
+## **Research Mentoring**
 
-::: {#refs}
-:::
+{{< cv-yaml data/mentoring.yml type=mentoring >}}
 
-### **References**
+## **Bioinformatics Workflows**
 
-<span style="color:#555555; font-size: 11px; text-align: left;">References available upon request.</span> 
+{{< include includes/workflows.qmd >}}
+
+## **GenAI Projects**
+
+{{< include includes/genai.qmd >}}
+
+## **Media Coverage**
+
+{{< cv-yaml data/media.yml type=media >}}
+
+## **References**
+
+{{< include includes/references.qmd >}}

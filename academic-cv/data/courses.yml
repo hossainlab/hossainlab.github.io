@@ -1,0 +1,39 @@
+course-1:
+  title: "Biomedical Machine Learning with Python"
+  description: "cBLAST, University of Dhaka"
+
+course-2:
+  title: "Data Science and Machine Learning for Biologists"
+  description: "cBLAST, University of Dhaka"
+
+course-3:
+  title: "AI for Public Health"
+  description: "Micro-Credentials Academy, Daffodil International University"
+
+course-4:
+  title: "Transcriptomics Data Analysis (Bulk + Single-Cell Analysis)"
+  description: "DeepBio Limited"
+
+course-5:
+  title: "Biomarker Identification using Machine Learning"
+  description: "DeepBio Limited"
+
+course-6:
+  title: "Pan-Cancer Bioinformatics with R: Ideation to Publication"
+  description: "DeepBio Limited"
+
+course-7:
+  title: "AI in Drug Discovery: In Silico Toxicology Modeling"
+  description: "DeepBio Limited"
+
+course-8:
+  title: "Single-Cell Cancer Genomics"
+  description: "DeepBio Limited"
+
+course-9:
+  title: "Bioinformatics and Integrative Genomics (BIG)"
+  description: "DeepBio Limited"
+
+course-10:
+  title: "BRAIN -- Bioinformatics Research with AI in Neurosciences"
+  description: "DeepBio Limited"

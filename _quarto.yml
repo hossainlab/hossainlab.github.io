@@ -4,7 +4,7 @@ project:
   render:
     - "*.qmd"
     - "blog/**/*.qmd"
-    - "!academic-cv/"
+    - "academic-cv/index.qmd"
 
 # Meta
 description-meta: "Academic Website for Jubayer Hossain"
@@ -42,7 +42,7 @@ website:
       - href: publications/index.qmd
         text: Publications
       - text: CV
-        href: cv/professional-cv/CV-HossainMJ.pdf
+        href: academic-cv/index.qmd
 
     right:
       - icon: envelope

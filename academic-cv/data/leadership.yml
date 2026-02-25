@@ -1,0 +1,22 @@
+deepbio:
+  title: "Founder, Bioinformatics Scientist & CEO"
+  date: "Jan 2025 -- Present"
+  description: "DeepBio Limited"
+  location: "Dhaka, Bangladesh"
+  details:
+    - Lead a team of 13 researchers executing scRNA-seq and bulk RNA-seq analysis pipelines for cancer genomics and transcriptomics projects.
+    - Develop and benchmark scalable bioinformatics workflows for biomarker discovery in cancer and neurodegenerative diseases.
+    - Build and maintain AI-integrated computational infrastructure for multi-omics data processing and interpretation.
+    - Develop and deliver a national training program in computational biology, upskilling undergraduate researchers across Bangladesh.
+
+chiral:
+  title: "Founder & Capacity Building Director"
+  date: "June 2020 -- Present"
+  description: "CHIRAL Bangladesh (Non-profit Research Institute)"
+  location: "Dhaka, Bangladesh"
+  details:
+    - Founded and lead a research institute with dedicated divisions in Bioinformatics, Public Health, Geospatial Health, and AI-Healthcare.
+    - Published 20+ peer-reviewed articles in Q1/Q2 journals and 40+ conference papers in health informatics and computational biology.
+    - Supervised 15+ manuscripts through analytical development and peer-review preparation in global health and bioinformatics.
+    - Collaborated with Michigan State University on biomedical research capacity-building initiatives in South Asia.
+    - Trained 3,000+ early-career researchers in data science, research methodology, and computational biology workflows.

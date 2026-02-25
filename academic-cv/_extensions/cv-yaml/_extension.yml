@@ -1,0 +1,6 @@
+title: cv-yaml
+author: Md. Jubayer Hossain
+version: 1.0.0
+contributes:
+  shortcodes:
+    - cv-yaml.lua

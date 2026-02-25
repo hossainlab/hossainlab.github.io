@@ -1,0 +1,15 @@
+msc:
+  title: "Master of Science in Microbiology"
+  date: "2019 -- 2020"
+  description: "Jagannath University"
+  location: "Dhaka, Bangladesh"
+  details:
+    - "Relevant Coursework: Genomics, Proteomics, Bioinformatics, Research Methodology and Scientific Writing"
+
+bsc:
+  title: "Bachelor of Science in Microbiology"
+  date: "2016 -- 2019"
+  description: "Jagannath University"
+  location: "Dhaka, Bangladesh"
+  details:
+    - "Relevant Coursework: Biostatistics, Public Health and Hygiene, Bioinformatics I, Bioinformatics II"

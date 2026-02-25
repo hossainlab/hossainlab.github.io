@@ -1,0 +1,17 @@
+comp-bio:
+  title: "Interdisciplinary Computational Biology"
+  date: "January 2026"
+  description: "BRAC University"
+  location: "Dhaka, Bangladesh"
+  details:
+    - Mastered high-resolution protein structure prediction and molecular visualization using AlphaFold2/3 and ChimeraX to investigate complex protein-ligand interactions.
+    - Applied AI/ML frameworks and docking protocols to structural data from PDB and UniProt, culminating in an interdisciplinary project on predictive molecular modeling.
+
+ai-public-health:
+  title: "AI in Public Health"
+  date: "Sep 2023"
+  description: "Child Health Research Foundation (CHRF)"
+  location: "Dhaka, Bangladesh"
+  details:
+    - Developed predictive models and data pipelines for disease surveillance, focusing on the calculation of typhoid incidence and vaccine impact in Bangladesh.
+    - Built LLM-based code generation and computer vision frameworks for medical image analysis while analyzing the ethical implications of algorithmic bias.

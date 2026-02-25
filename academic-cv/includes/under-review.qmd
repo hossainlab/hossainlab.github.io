@@ -1,0 +1,9 @@
+1. Islam, M. W., Rahman, M. M., Naznin, H., Hossain, M. S., Akter, T., Shatabde, Z. A., & **Hossain, M. J.**\* (2025). Integrative bioinformatics analysis reveals COL13A1 and COL23A1 as potential diagnostic and prognostic biomarkers in thyroid cancer. [Submitted to *Health Science Reports*].
+
+2. Islam, M. W., Fariha, F. T. J., Ahmed, M. Z., Ferdous, J., et al. & **Hossain, M. J.**\* (2025). Bioinformatics-driven multi-omics profiling of CDK1 and CDK6 identifies prognostic and therapeutic roles in breast cancer. [Under Review in *Health Science Reports*].
+
+3. Billah, M. M., Mabsurah, K., Ahammad, K., et al. & **Hossain, M. J.**\* (2025). Multi-omics pan-cancer analysis reveals an immunological role and prognostic potential of WDR76. [Under Review in *Discover Oncology*].
+
+4. Sony, S. A., Kundu, L. R., Limon, M. H., et al. & **Hossain, M. J.**\* (2025). Predicting early antenatal care initiation at the first trimester among reproductive women in Bangladesh using machine learning. [Under Review in *BMC Pregnancy and Childbirth*].
+
+5. **Hossain, M. J.**\*, Shahariar, M., Barsha, L.H.J., et al. (2024). Lack of knowledge and training about antibiotic resistance among community pharmacists in Bangladesh. [Under Review in *Health Science Reports*].

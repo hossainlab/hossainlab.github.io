@@ -1,0 +1,35 @@
+programming:
+  title: "Programming"
+  description: "Python, R, Julia, SQL, Bash, JavaScript"
+
+ds-ml:
+  title: "Data Science & ML"
+  description: "NumPy, Pandas, PyTorch, TensorFlow, scikit-learn, XGBoost, SHAP"
+
+bulk-rnaseq:
+  title: "Bulk RNA-Seq"
+  description: "FastQC, STAR, HISAT2, Salmon, Kallisto, DESeq2, limma, edgeR"
+
+scrna-seq:
+  title: "Single-Cell RNA-Seq"
+  description: "Seurat, Scanpy, CellRanger, Harmony, scVI-tools, scVelo, SingleR"
+
+spatial:
+  title: "Spatial Transcriptomics"
+  description: "Squidpy, SpatialData, Seurat (spatial), Giotto, STUtility"
+
+microbiome:
+  title: "Microbiome"
+  description: "QIIME 2, DADA2, Phyloseq, VSEARCH, Kraken2, MetaPhlAn"
+
+workflow:
+  title: "Workflow & Reproducibility"
+  description: "Nextflow, nf-core, Snakemake, Docker, Singularity, Git, GitHub Actions"
+
+visualization:
+  title: "Visualization"
+  description: "ggplot2, Seaborn, Matplotlib, Plotly, ComplexHeatmap, MultiQC, Quarto"
+
+computing:
+  title: "Computing"
+  description: "UNIX/Linux, HPC clusters, SLURM, AWS, Google Cloud, Conda, Mamba"

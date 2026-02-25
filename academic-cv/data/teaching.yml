@@ -1,0 +1,38 @@
+deepbio-academy:
+  title: "Lead Organizer & Instructor"
+  date: "June 2020 -- Present"
+  description: "DeepBio Academy, Bioinformatics and Computational Biology"
+  location: "Dhaka, Bangladesh"
+  details:
+    - Designed comprehensive bioinformatics curriculum specializing in Single-Cell RNA-seq (scRNA-seq) workflows and multi-omic data integration.
+    - Benchmarked computational tools for transcriptomics and genomics to ensure pipeline reproducibility and analytical rigor.
+    - Supervised a technical research team in processing high-throughput omics datasets to identify transcriptional drivers of disease.
+
+cblast:
+  title: "Faculty (Bioinformatics)"
+  date: "Aug 2023 -- Present"
+  description: "University of Dhaka (cBLAST)"
+  location: "Dhaka, Bangladesh"
+  details:
+    - Instructed specialized modules in Biomedical Machine Learning, focusing on the application of Python-based neural networks to sequence analysis.
+    - Directed student research projects applying deep learning frameworks to identify regulatory elements in complex biological datasets.
+    - Facilitated technical practicums for 100+ trainees on scalable data science methodologies for high-throughput genomic data.
+
+gsa-internship:
+  title: "Program Lead"
+  date: "July 2025 -- Dec 2025"
+  description: "GSA Bioinformatics Internship"
+  location: "Dhaka, Bangladesh"
+  details:
+    - Conducted a pan-cancer transcriptomics meta-analysis across four organ systems to identify conserved regulatory networks in tumorigenesis.
+    - Optimized high-throughput pipelines for Bulk and Single-Cell RNA-seq, implementing advanced batch-effect correction and normalization protocols.
+    - Mentored research interns in the utilization of High-Performance Computing (HPC) environments and R/Bioconductor analytical frameworks.
+
+ta-jnu:
+  title: "Teaching Assistant"
+  date: "Oct 2022 -- Dec 2022"
+  description: "Department of Microbiology, Jagannath University"
+  location: "Dhaka, Bangladesh"
+  details:
+    - Assisted in the delivery of research methodology training, focusing on experimental design and statistical power in public health microbiology.
+    - Processed public health surveillance data to support departmental research on emerging epidemiological trends.
