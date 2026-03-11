@@ -1,0 +1,67 @@
+<%
+var peerCount  = items.filter(function(i){ return i.type==='peer-reviewed'; }).length;
+var underCount = items.filter(function(i){ return i.type==='under-review'; }).length;
+var confCount  = items.filter(function(i){ return i.type==='conference'; }).length;
+var allCats=[];
+items.forEach(function(item){(item.categories||[]).forEach(function(c){if(allCats.indexOf(c)===-1)allCats.push(c);});});
+allCats.sort();
+var yearMap={};
+items.forEach(function(item){var yr=String(item.year||'TBD');if(!yearMap[yr])yearMap[yr]=[];yearMap[yr].push(item);});
+var typeOrder={'peer-reviewed':0,'under-review':1,'conference':2};
+Object.keys(yearMap).forEach(function(yr){yearMap[yr].sort(function(a,b){return(typeOrder[a.type]||0)-(typeOrder[b.type]||0);});});
+var years=Object.keys(yearMap).sort(function(a,b){if(a==='TBD')return 1;if(b==='TBD')return -1;return Number(b)-Number(a);});
+%>
+<div class="pub-page-wrap">
+<div class="pub-main-col">
+<div class="pub-stats"><div class="pub-stat"><span class="pub-stat-n"><%=items.length%></span><span class="pub-stat-l">Total</span></div><div class="pub-stat-divider"></div><div class="pub-stat"><span class="pub-stat-n pub-stat-peer"><%=peerCount%></span><span class="pub-stat-l">Peer-Reviewed</span></div><div class="pub-stat-divider"></div><div class="pub-stat"><span class="pub-stat-n pub-stat-under"><%=underCount%></span><span class="pub-stat-l">Under Review</span></div><div class="pub-stat-divider"></div><div class="pub-stat"><span class="pub-stat-n pub-stat-conf"><%=confCount%></span><span class="pub-stat-l">Conferences</span></div></div>
+<div class="pub-list" id="pub-list">
+<% for(var yi=0;yi<years.length;yi++){ var yr=years[yi]; var group=yearMap[yr]; %>
+<div class="pub-year-section" id="pub-yr-<%=yr%>"><div class="pub-year-header"><span class="pub-yr-title"><%=yr%></span><span class="pub-yr-count"><%=group.length%> publication<%=group.length!==1?'s':''%></span></div>
+<% for(var ii=0;ii<group.length;ii++){ var item=group[ii]; var t=item.type||'peer-reviewed'; var cats=(item.categories||[]).join(','); var bc=t==='peer-reviewed'?'pub-peer':t==='under-review'?'pub-under':'pub-conf'; var aparts=(item.authors||'').split(/(\*\*[^*]+\*\*)/); var tparts=(item.title||'').split(/(\*\*[^*]+\*\*)/); %>
+<div class="pub-item <%=bc%>" data-type="<%=t%>" data-cats="<%=cats%>"><div class="pub-badges"><% if(t==='peer-reviewed'){%><span class="pbadge pbadge-peer">Peer-Reviewed</span><%}if(t==='under-review'){%><span class="pbadge pbadge-under">Under Review</span><%}if(t==='conference'){%><span class="pbadge pbadge-conf"><%=item.subtype==='poster'?'Poster':item.subtype==='oral'?'Oral Presentation':'Conference'%></span><%}if(item.corresponding){%><span class="pbadge pbadge-corr">Corresponding Author</span><%}var ca=item.categories||[];for(var ci2=0;ci2<ca.length;ci2++){%><span class="pbadge pbadge-cat"><%=ca[ci2]%></span><%}%></div><div class="pub-title"><% if(item.doi){%><a href="<%=item.doi%>" target="_blank" rel="noopener"><% for(var tp=0;tp<tparts.length;tp++){if(tparts[tp].charAt(0)==='*'){%><strong><%=tparts[tp].slice(2,-2)%></strong><%}else{%><%=tparts[tp]%><%}}%></a><%}else{%><% for(var tp2=0;tp2<tparts.length;tp2++){if(tparts[tp2].charAt(0)==='*'){%><strong><%=tparts[tp2].slice(2,-2)%></strong><%}else{%><%=tparts[tp2]%><%}}%><%}%></div><div class="pub-authors"><% for(var ap=0;ap<aparts.length;ap++){if(aparts[ap].charAt(0)==='*'){%><strong><%=aparts[ap].slice(2,-2)%></strong><%}else{%><%=aparts[ap]%><%}}%></div><div class="pub-source"><% if(t==='conference'){%><em><%=item.venue||''%></em><% if(item.location){%> &middot; <%=item.location%><%}%> &middot; <%=item.year%><%}else if(t==='under-review'){%>Submitted to <em><%=item.target_journal||'journal'%></em> &nbsp;<span class="pub-status-badge pub-status-<%=(item.status||'under-review').toLowerCase().replace(/\s+/g,'-')%>"><%=item.status||'Under Review'%></span><%}else{%><em><%=item.journal||''%></em><%if(item.volume){%>, <strong><%=item.volume%></strong><%}if(item.issue){%>(<%=item.issue%>)<%}if(item.article){%>, <%=item.article%><%}%> (<%=item.year%>)<%}%></div><% if(item.doi){%><div class="pub-actions"><a href="<%=item.doi%>" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a></div><%}%></div>
+<% } %>
+</div>
+<% } %>
+</div>
+<div class="pub-no-results" id="pub-no-results" style="display:none;"><i class="fa-solid fa-filter-circle-xmark" style="font-size:2rem;color:#cbd5e1;margin-bottom:.5rem;"></i><p>No publications match the selected filters.</p></div>
+</div>
+<aside class="pub-sidebar-col">
+<h5 class="pub-sidebar-title">Type</h5>
+<div class="pub-sidebar-btns"><button class="pub-fbtn active" data-ftype="all">All <span class="pub-fcount">(<%=items.length%>)</span></button><button class="pub-fbtn" data-ftype="peer-reviewed">Peer-Reviewed <span class="pub-fcount">(<%=peerCount%>)</span></button><button class="pub-fbtn" data-ftype="under-review">Under Review <span class="pub-fcount">(<%=underCount%>)</span></button><button class="pub-fbtn" data-ftype="conference">Conference <span class="pub-fcount">(<%=confCount%>)</span></button></div>
+<% if(allCats.length>0){ %>
+<h5 class="pub-sidebar-title" style="margin-top:1.25rem;">Topic</h5>
+<div class="pub-sidebar-btns"><button class="pub-fbtn active" data-fcat="all">All</button><% for(var ci=0;ci<allCats.length;ci++){ %><button class="pub-fbtn" data-fcat="<%=allCats[ci]%>"><%=allCats[ci]%></button><% } %></div>
+<% } %>
+</aside>
+</div>
+<script>
+(function(){
+  var activeType='all',activeCat='all';
+  function applyFilters(){
+    document.querySelectorAll('.pub-item').forEach(function(el){
+      var t=el.dataset.type||'';
+      var cats=el.dataset.cats?el.dataset.cats.split(','):[];
+      el.classList.toggle('pub-hidden',(activeType!=='all'&&t!==activeType)||(activeCat!=='all'&&cats.indexOf(activeCat)===-1));
+    });
+    document.querySelectorAll('.pub-year-section').forEach(function(s){
+      s.classList.toggle('pub-hidden',!s.querySelector('.pub-item:not(.pub-hidden)'));
+    });
+    var noRes=document.getElementById('pub-no-results');
+    if(noRes) noRes.style.display=document.querySelector('#pub-list .pub-item:not(.pub-hidden)')?'none':'flex';
+  }
+  document.querySelectorAll('[data-ftype]').forEach(function(b){
+    b.addEventListener('click',function(){
+      activeType=this.dataset.ftype;
+      document.querySelectorAll('[data-ftype]').forEach(function(x){x.classList.remove('active');});
+      this.classList.add('active'); applyFilters();
+    });
+  });
+  document.querySelectorAll('[data-fcat]').forEach(function(b){
+    b.addEventListener('click',function(){
+      activeCat=this.dataset.fcat;
+      document.querySelectorAll('[data-fcat]').forEach(function(x){x.classList.remove('active');});
+      this.classList.add('active'); applyFilters();
+    });
+  });
+}());
+</script>

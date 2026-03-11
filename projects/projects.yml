@@ -1,4 +1,22 @@
 - path:
+  title: "TAM-Atlas: Tumor-Associated Macrophage Heterogeneity Across Cancers"
+  image: "../files/projects/tam-atlas.jpg"
+  image-alt: "TAM-Atlas"
+  description: "A computational framework analyzing tumor-associated macrophage (TAM) heterogeneity across 8 cancer types to predict immunotherapy response using single-cell transcriptomics. Integrates ~640,000 cells from published datasets through a seven-phase pipeline, identifying 6 conserved macrophage states and linking SPP1+ and TREM2+ populations to checkpoint inhibitor resistance. Employs scVI deep generative modeling, gene regulatory network inference, and Open Targets druggability prioritization."
+  categories:
+    - Single-Cell
+    - Cancer Genomics
+  tags:
+    - Python
+    - Scanpy
+    - scVI-tools
+    - Pan-Cancer
+    - Tumor Immunology
+  links:
+    - label: "GitHub"
+      url: "https://github.com/hossainlab/TAM-Atlas"
+
+- path:
   title: "Single-Cell Atlas of COVID-19 Lung Pathology"
   image: "../files/projects/covid19-lung-atlas.jpg"
   image-alt: "COVID-19 Lung Atlas"

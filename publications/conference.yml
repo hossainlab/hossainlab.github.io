@@ -1,0 +1,125 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# Conference Presentations
+# ──────────────────────────────────────────────────────────────────────────────
+# Fields:
+#   title          – Presentation title (required)
+#   authors        – Author string; wrap "**Name**" to bold your name
+#   corresponding  – true if you are the corresponding author
+#   year           – Presentation year (integer)
+#   venue          – Conference name
+#   location       – City, Country
+#   subtype        – poster | oral
+#   type           – Must be: conference
+#   categories     – List of research topics for filtering
+# ──────────────────────────────────────────────────────────────────────────────
+
+- title: "Diagnostic and Electrophysiological Features of Hirayama Disease in Young Adult Male: A Case Report"
+  authors: "**Hossain, M. J.**, & Das, M."
+  corresponding: false
+  year: 2024
+  venue: "International Conference of Public Health, IEDCR"
+  location: "Dhaka, Bangladesh"
+  type: conference
+  subtype: poster
+  categories:
+    - Global Health
+
+- title: "Level of knowledge regarding breast cancer and breast self-examination among school and college-going girls in Bangladesh"
+  authors: "Das, M., Kajol, M. M., Mim, N. A., Maruf, M. F. I., Hirko, K., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2024
+  venue: "International Conference of Public Health, IEDCR"
+  location: "Dhaka, Bangladesh"
+  type: conference
+  subtype: poster
+  categories:
+    - Global Health
+
+- title: "Lack of knowledge and training about antibiotic resistance among community pharmacists in Bangladesh"
+  authors: "Shahariar, M., Joarder Barsha, L. H., Shahjahan, M., Towhid, S. T., Sheikh, M. K., Hasan, M. M., Rahaman, M. H., Sazid, M. S., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2024
+  venue: "International Conference of Public Health, IEDCR"
+  location: "Dhaka, Bangladesh"
+  type: conference
+  subtype: poster
+  categories:
+    - Public Health
+
+- title: "Influence of Meteorological Factors on Dengue Incidence: A 23-Year Retrospective Analysis in Bangladesh"
+  authors: "Afrin, N., Howlader, G., Bhattacharjee, A., Akter, N., Mesu, M. H., Mazumder, E., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2024
+  venue: "International Conference of Public Health, IEDCR"
+  location: "Dhaka, Bangladesh"
+  type: conference
+  subtype: poster
+  categories:
+    - Infectious Disease
+
+- title: "Particulate Matter PM2.5 Pollution and Air Quality Index (AQI) Trends Evaluation with Meteorological Factors in Dhaka City"
+  authors: "Akter, N., Mim, N. A., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2024
+  venue: "International Conference of Public Health, IEDCR"
+  location: "Dhaka, Bangladesh"
+  type: conference
+  subtype: poster
+  categories:
+    - Environmental Health
+
+- title: "Exploring the Factors Influencing Heat Stress Risks Using the Discomfort Index Method in Bangladesh"
+  authors: "Tuhin, M. A. A., Mim, N. A., Akter, N., Jamal, F., Sakib, M. N., Mehjabin, K., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2024
+  venue: "International Conference on Environmental Science and Resource Management (ICESRM 2024)"
+  location: "Bangladesh"
+  type: conference
+  subtype: oral
+  categories:
+    - Environmental Health
+
+- title: "Temporal Trends and Factors Influencing Diarrhea Prevalence Among Children in the Rangamati Hill Tract Region: A Time Series Analysis"
+  authors: "Mim, N. A., Akter, N., Tuhin, M. A. A., Hossain, S., Alam, K. E., Mouli, N. J., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2024
+  venue: "International Conference on Environmental Science and Resource Management (ICESRM 2024)"
+  location: "Bangladesh"
+  type: conference
+  subtype: oral
+  categories:
+    - Public Health
+
+- title: "Quantitative Microbial Risk Assessment from Vancomycin-Resistant Enterococcus faecalis and Enterococcus faecium from a Specific Neighborhood in Dhaka City, Bangladesh"
+  authors: "Nayeem, M. U., Mrittika, M. A., **Hossain, M. J.**, Azad, A. K., Ferdous, J., Ahmed, S., Sanyal, S. K., & Towhid, S. T."
+  corresponding: false
+  year: 2023
+  venue: "36th Bangladesh Society of Microbiologists Annual Conference"
+  location: "Shahjalal University of Science and Technology, Sylhet, Bangladesh"
+  type: conference
+  subtype: oral
+  categories:
+    - Infectious Disease
+
+- title: "Factors Influencing Heat Stress Risk in Bangladesh"
+  authors: "**Hossain, M. J.**, Habiba, U., Rozario, C., Tuhin, M. L. A., Mabsurah, K., & Uddin, N. F."
+  corresponding: false
+  year: 2023
+  venue: "9th International Public Health Conference, Public Health Foundation at BMRC"
+  location: "Bangladesh"
+  type: conference
+  subtype: oral
+  categories:
+    - Environmental Health
+
+- title: "Monitoring Water-Borne Disease (Vibrio cholerae) Using NASA Earth Observation Data"
+  authors: "**Hossain, M. J.**, Nowshin, N., Momtaj, Yeana, I. Y., & Nohor, N."
+  corresponding: false
+  year: 2023
+  venue: "9th International Public Health Conference, Public Health Foundation at BMRC"
+  location: "Bangladesh"
+  type: conference
+  subtype: oral
+  categories:
+    - Environmental Health
+    - Infectious Disease
