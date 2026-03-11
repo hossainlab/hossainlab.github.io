@@ -43,6 +43,9 @@ website:
         text: Publications
       - text: CV
         href: cv/professional-cv/CV-HossainMJ.pdf
+      - href: https://tidycal.com/hossainlab/30-minute-meeting
+        text: Book a Meeting
+        target: _blank
 
     right:
       - icon: envelope
