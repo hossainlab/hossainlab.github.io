@@ -4,6 +4,8 @@
 
 3. Bari, S.M., Fuad, M., **Hossain, M.J.** et al. A meta-analysis of public RNA-Seq data identifies conserved stress responses in rainbow trout. BMC Genomics 26, 999 (2025). <https://doi.org/10.1186/s12864-025-12127-2>
 
-4. GBD 2023 Vaccine Coverage Collaborators (**Hossain, M. J.**, 2025). Global, regional, and national trends in routine childhood vaccination coverage from 1980 to 2023 with forecasts to 2030: A systematic analysis for the Global Burden of Disease Study 2023. *The Lancet*. <https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)01037-2/>
+4. GBD 2023 Vaccine Coverage Collaborators. Global, regional, and national trends in routine childhood vaccination coverage from 1980 to 2023 with forecasts to 2030: A systematic analysis for the Global Burden of Disease Study 2023. *The Lancet*. <https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)01037-2/>
 
-5. GBD 2023 Headache Collaborators (**Hossain, M. J.**, 2025). Global, regional, and national burden of headache disorders, 1990–2023: a systematic analysis for the Global Burden of Disease Study 2023. *Lancet Neurology*. <https://www.thelancet.com/journals/laneur/article/PIIS1474-4422(25)00402-8/fulltext>
+5. GBD 2023 Headache Collaborators. Global, regional, and national burden of headache disorders, 1990–2023: a systematic analysis for the Global Burden of Disease Study 2023. *Lancet Neurology*. <https://www.thelancet.com/journals/laneur/article/PIIS1474-4422(25)00402-8/fulltext>
+
+6. GBD 2023 Breast Cancer Collaborators. Global, regional, and national burden of breast cancer among females, 1990–2023, with forecasts to 2050: a systematic analysis for the Global Burden of Disease Study 2023. *Lancet Neurology*. <https://www.thelancet.com/journals/lanonc/article/PIIS1470-2045(25)00730-2/fulltext>

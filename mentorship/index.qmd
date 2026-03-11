@@ -1,0 +1,146 @@
+---
+title: "1-on-1 Bioinformatics Mentorship"
+subtitle: "Personalised guidance to master bioinformatics and computational biology"
+title-block-banner: true
+page-layout: full
+toc: false
+listing:
+  - id: mentor-plans
+    contents: plans.yml
+    template: ../_templates/mentor-plan.ejs
+  - id: mentor-reviews
+    contents: testimonials.yml
+    template: ../_templates/mentor-review.ejs
+---
+
+```{=html}
+<div class="mentor-header">
+  <div class="mentor-profile-row">
+    <div class="mentor-photo-wrap">
+      <img src="/files/profiles/jubayer.jpg" alt="Jubayer Hossain" class="mentor-photo">
+      <div class="quick-responder-badge">⚡ Quick Responder</div>
+    </div>
+    <div class="mentor-info">
+      <h1 class="mentor-name">Jubayer Hossain</h1>
+      <p class="mentor-title-line">Bioinformatician · Researcher · Educator</p>
+      <div class="mentor-meta-row">
+        <span>📍 Bangladesh</span>
+        <span>✅ Available now</span>
+        <span>⏱️ Responds within 24 hours</span>
+      </div>
+      <div class="mentor-rating-row">
+        <span class="stars">★★★★★</span>
+        <span class="rating-num">5.0</span>
+        <span class="rating-reviews">(25+ mentees trained)</span>
+      </div>
+      <div class="mentor-skill-tags">
+        <span class="mentor-skill-tag">Bioinformatics</span>
+        <span class="mentor-skill-tag">NGS Analysis</span>
+        <span class="mentor-skill-tag">scRNA-seq</span>
+        <span class="mentor-skill-tag">Python</span>
+        <span class="mentor-skill-tag">R</span>
+        <span class="mentor-skill-tag">Machine Learning</span>
+        <span class="mentor-skill-tag">+ 12 more</span>
+      </div>
+      <div class="mentor-cta-row">
+        <a href="https://tidycal.com/hossainlab/30-minute-meeting" target="_blank" class="btn-apply-primary">📅 Book Free Intro Call</a>
+        <a href="mailto:contact.jubayerhossain@gmail.com" class="btn-message-outline">✉️ Send Message</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mentor-stats-strip">
+  <div class="mstat"><div class="mstat-num">5+</div><div class="mstat-label">Years Mentoring</div></div>
+  <div class="mstat"><div class="mstat-num">25+</div><div class="mstat-label">Mentees Trained</div></div>
+  <div class="mstat"><div class="mstat-num">16</div><div class="mstat-label">Skills Covered</div></div>
+  <div class="mstat"><div class="mstat-num">10+</div><div class="mstat-label">Projects Guided</div></div>
+</div>
+
+<div class="mentor-section-header">
+  <h2 class="mentor-section-title">Choose Your Plan</h2>
+  <p class="mentor-section-sub">🔥 Only a few spots available — apply early!</p>
+</div>
+```
+
+::: {#mentor-plans}
+:::
+
+```{=html}
+<div class="mentor-section">
+  <h2 class="mentor-section-title">About</h2>
+  <div class="mentor-about-text">
+    <p>I am a bioinformatician, researcher, and educator with over 5 years of experience in next-generation sequencing (NGS) data analysis, computational biology, and AI applications in biosciences. I have worked extensively with bulk RNA-seq, single-cell RNA-seq (scRNA-seq), spatial transcriptomics, and multi-omics integration across cancer genomics and infectious disease research.</p>
+    <p>My mission is to make bioinformatics accessible — whether you are a student starting from scratch, a wet-lab researcher wanting to analyse your own data, or a computational scientist looking to deepen your skills in machine learning and multi-omics.</p>
+    <p><strong>What you can expect:</strong></p>
+    <ul class="mentor-key-points">
+      <li>Personalised learning roadmap tailored to your background and goals</li>
+      <li>Hands-on project work using real biological datasets</li>
+      <li>In-depth guidance on NGS pipelines (RNA-seq, scRNA-seq, spatial omics)</li>
+      <li>Python &amp; R programming for bioinformatics from the ground up</li>
+      <li>Machine learning applications in genomics and computational biology</li>
+      <li>Career advice: CV reviews, interview prep, and academic/industry pathways</li>
+      <li>Publication-quality figures and reproducible analysis workflows</li>
+    </ul>
+  </div>
+</div>
+
+<div class="mentor-section">
+  <h2 class="mentor-section-title">Skills &amp; Topics</h2>
+  <div class="mentor-skills-full">
+    <span class="mskill">Bioinformatics</span>
+    <span class="mskill">Bulk RNA-seq</span>
+    <span class="mskill">scRNA-seq</span>
+    <span class="mskill">Spatial Transcriptomics</span>
+    <span class="mskill">Multi-omics</span>
+    <span class="mskill">ATAC-seq</span>
+    <span class="mskill">Python</span>
+    <span class="mskill">R</span>
+    <span class="mskill">Machine Learning</span>
+    <span class="mskill">Deep Learning</span>
+    <span class="mskill">Data Visualization</span>
+    <span class="mskill">Statistics</span>
+    <span class="mskill">Nextflow</span>
+    <span class="mskill">Linux / Shell</span>
+    <span class="mskill">Docker</span>
+    <span class="mskill">Cancer Genomics</span>
+    <span class="mskill">Career Development</span>
+    <span class="mskill">Research Methods</span>
+  </div>
+</div>
+
+<div class="mentor-section-header">
+  <h2 class="mentor-section-title">What Mentees Say</h2>
+</div>
+```
+
+::: {#mentor-reviews}
+:::
+
+```{=html}
+<div class="mentor-section">
+  <h2 class="mentor-section-title">Frequently Asked Questions</h2>
+  <div class="mfaq-list">
+    <details class="mfaq-item">
+      <summary class="mfaq-q">Who is this mentorship for?</summary>
+      <div class="mfaq-a">This programme is designed for students, wet-lab researchers, and early-career scientists who want to learn bioinformatics, computational biology, and data science. Whether you are a complete beginner or looking to advance specific skills, the sessions are fully personalised to your level and goals.</div>
+    </details>
+    <details class="mfaq-item">
+      <summary class="mfaq-q">What happens in the first session?</summary>
+      <div class="mfaq-a">The first session is a discovery call where we discuss your background, learning goals, current projects, and challenges. Based on this, I create a customised learning roadmap for you before our next meeting.</div>
+    </details>
+    <details class="mfaq-item">
+      <summary class="mfaq-q">Do I need prior programming experience?</summary>
+      <div class="mfaq-a">No prior programming experience is required. I teach Python and R from the basics for beginners. If you already have experience, we can skip ahead and focus on advanced topics like multi-omics, machine learning, or workflow automation.</div>
+    </details>
+    <details class="mfaq-item">
+      <summary class="mfaq-q">How are sessions conducted?</summary>
+      <div class="mfaq-a">All sessions are conducted online via Zoom or Google Meet. I share my screen, live-code with you, and provide Jupyter notebooks or R Markdown files after each session for your reference.</div>
+    </details>
+    <details class="mfaq-item">
+      <summary class="mfaq-q">Can I cancel or pause my plan?</summary>
+      <div class="mfaq-a">Yes, you can cancel at any time. I recommend completing at least one month to see meaningful progress, but there is no long-term commitment required.</div>
+    </details>
+  </div>
+</div>
+```

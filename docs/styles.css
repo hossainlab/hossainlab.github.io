@@ -762,6 +762,750 @@ table {
   .pub-yr-title     { font-size: 1.1rem; }
 }
 
+/* ── Mentorship Program Page ── */
+
+.mentor-header {
+  background: linear-gradient(135deg, #f8fafc 0%, #edf4ff 100%);
+  border-radius: 16px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid #e2e8f0;
+}
+
+.mentor-profile-row {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.mentor-photo-wrap {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.mentor-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+.quick-responder-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #fff7ed;
+  color: #c05621;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  border: 1px solid #fbd38d;
+  margin-top: 0.5rem;
+}
+
+.mentor-info { flex: 1; }
+
+.mentor-name {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 0.25rem;
+}
+
+.mentor-title-line {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 0.75rem;
+}
+
+.mentor-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+.mentor-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.stars { color: #f6ad55; }
+.rating-num { font-weight: 700; color: #1a202c; }
+.rating-reviews { color: #718096; font-size: 0.82rem; }
+
+.mentor-skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.mentor-skill-tag {
+  background: #ebf4ff;
+  color: #2b6cb0;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  border: 1px solid #bee3f8;
+}
+
+.mentor-cta-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.btn-apply-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #2b6cb0;
+  color: #fff !important;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.65rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.btn-apply-primary:hover {
+  background: #2c5282;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(43,108,176,0.35);
+}
+
+.btn-message-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #fff;
+  color: #2b6cb0 !important;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.65rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none !important;
+  border: 1.5px solid #2b6cb0;
+  transition: all 0.2s ease;
+}
+
+.btn-message-outline:hover { background: #ebf4ff; }
+
+/* Stats strip */
+.mentor-stats-strip {
+  display: flex;
+  gap: 0;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.mstat {
+  flex: 1;
+  min-width: 80px;
+  text-align: center;
+  padding: 0.25rem 0.5rem;
+}
+
+.mstat + .mstat { border-left: 1px solid #e2e8f0; }
+
+.mstat-num {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2b6cb0;
+  line-height: 1;
+}
+
+.mstat-label {
+  font-size: 0.72rem;
+  color: #718096;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.3rem;
+}
+
+/* Page layout */
+.mentor-page-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.mentor-page-main { flex: 1; min-width: 0; }
+
+.mentor-page-sidebar {
+  flex: 0 0 300px;
+  width: 300px;
+  position: sticky;
+  top: 80px;
+}
+
+/* Sections */
+.mentor-section { margin-bottom: 2.5rem; }
+
+.mentor-section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a202c;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.mentor-about-text {
+  font-size: 0.92rem;
+  color: #4a5568;
+  line-height: 1.75;
+}
+
+.mentor-key-points {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+.mentor-key-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: #4a5568;
+  padding: 0.35rem 0;
+  line-height: 1.5;
+}
+
+.mentor-key-points li::before {
+  content: "✓";
+  color: #2b6cb0;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.mentor-skills-full {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.mskill {
+  background: #f1f5f9;
+  color: #334155;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+}
+
+/* Reviews */
+.mentor-review-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.review-stars { color: #f6ad55; font-size: 0.9rem; margin-bottom: 0.5rem; }
+
+.review-text {
+  font-size: 0.88rem;
+  color: #4a5568;
+  line-height: 1.65;
+  margin-bottom: 0.75rem;
+}
+
+.review-author { display: flex; align-items: center; gap: 0.75rem; }
+
+.review-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ebf4ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2b6cb0;
+  flex-shrink: 0;
+}
+
+.review-name { font-size: 0.85rem; font-weight: 600; color: #1a202c; }
+.review-plan { font-size: 0.75rem; color: #718096; }
+
+/* Pricing cards */
+.plan-card {
+  background: #fff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.plan-card.featured {
+  border-color: #2b6cb0;
+  box-shadow: 0 4px 20px rgba(43,108,176,0.15);
+}
+
+.plan-badge {
+  display: inline-block;
+  background: #2b6cb0;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.plan-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 0.2rem;
+}
+
+.plan-price {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2b6cb0;
+  line-height: 1;
+}
+
+.plan-price-unit { font-size: 0.85rem; color: #718096; }
+
+.plan-desc { font-size: 0.8rem; color: #718096; margin: 0.35rem 0 0.75rem; }
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+}
+
+.plan-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.84rem;
+  color: #4a5568;
+  padding: 0.28rem 0;
+}
+
+.plan-features li::before {
+  content: "✓";
+  color: #38a169;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.plan-apply-btn {
+  display: block;
+  text-align: center;
+  background: #2b6cb0;
+  color: #fff !important;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+
+.plan-apply-btn:hover { background: #2c5282; }
+
+.plan-apply-btn.outline {
+  background: transparent;
+  color: #2b6cb0 !important;
+  border: 1.5px solid #2b6cb0;
+}
+
+.plan-apply-btn.outline:hover { background: #ebf4ff; }
+
+.plan-note {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.plan-not-sure {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #4a5568;
+}
+
+/* ── Mentor Plan Cards (EJS listing) ── */
+.mplan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.mplan-card {
+  background: #fff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.mplan-card.mplan-featured {
+  border-color: #2b6cb0;
+  box-shadow: 0 4px 24px rgba(43,108,176,0.15);
+}
+
+.mplan-badge {
+  display: inline-block;
+  background: #2b6cb0;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.6rem;
+  width: fit-content;
+}
+
+.mplan-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 0.25rem;
+}
+
+.mplan-price-row {
+  margin: 0.25rem 0 0;
+  line-height: 1.2;
+}
+
+.mplan-price {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2b6cb0;
+  line-height: 1;
+}
+
+.mplan-unit {
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+.mplan-price-bdt {
+  margin: 0.1rem 0 0;
+  line-height: 1.2;
+}
+
+.mplan-bdt-amount {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #276749;
+}
+
+.mplan-bdt-unit {
+  font-size: 0.78rem;
+  color: #718096;
+}
+
+.mplan-desc {
+  font-size: 0.82rem;
+  color: #718096;
+  margin: 0.4rem 0 0.85rem;
+}
+
+.mplan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+  flex: 1;
+}
+
+.mplan-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.84rem;
+  color: #4a5568;
+  padding: 0.28rem 0;
+}
+
+.mplan-features li::before {
+  content: "✓";
+  color: #38a169;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.mplan-btn {
+  display: block;
+  text-align: center;
+  background: #2b6cb0;
+  color: #fff !important;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  text-decoration: none !important;
+  transition: background 0.2s ease;
+}
+
+.mplan-btn:hover { background: #2c5282; }
+
+.mplan-btn.mplan-btn-outline {
+  background: transparent;
+  color: #2b6cb0 !important;
+  border: 1.5px solid #2b6cb0;
+}
+
+.mplan-btn.mplan-btn-outline:hover { background: #ebf4ff; }
+
+.mplan-note {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.mplan-cta-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.88rem;
+  color: #4a5568;
+  margin-bottom: 2rem;
+}
+
+.mplan-cta-link {
+  flex-shrink: 0;
+  font-size: 0.85rem !important;
+  padding: 0.5rem 1.1rem !important;
+}
+
+/* ── Mentor Review Cards (EJS listing) ── */
+.mreview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.mreview-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.mreview-stars {
+  color: #f6ad55;
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.mreview-text {
+  font-size: 0.87rem;
+  color: #4a5568;
+  line-height: 1.68;
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.mreview-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mreview-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #ebf4ff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #2b6cb0;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.mreview-authorinfo {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.mreview-name {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #1a202c;
+}
+
+.mreview-plan {
+  font-size: 0.75rem;
+  color: #718096;
+}
+
+/* ── Mentor section helpers ── */
+.mentor-section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.mentor-section-sub {
+  font-size: 0.85rem;
+  color: #c05621;
+  font-weight: 600;
+  background: #fff7ed;
+  border: 1px solid #fbd38d;
+  border-radius: 20px;
+  padding: 0.2rem 0.75rem;
+  margin: 0;
+}
+
+/* ── FAQ (details/summary) ── */
+.mfaq-list { margin-bottom: 2rem; }
+
+.mfaq-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+.mfaq-q {
+  background: #f8fafc;
+  padding: 0.9rem 1.1rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #1a202c;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mfaq-q::-webkit-details-marker { display: none; }
+
+.mfaq-q::after {
+  content: "+";
+  font-size: 1.1rem;
+  color: #94a3b8;
+}
+
+details[open] .mfaq-q::after { content: "−"; }
+
+.mfaq-a {
+  padding: 0.85rem 1.1rem;
+  font-size: 0.88rem;
+  color: #4a5568;
+  line-height: 1.7;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* ── Responsive: tablet ── */
+@media (max-width: 900px) {
+  .mplan-grid { grid-template-columns: 1fr; }
+  .mreview-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .mplan-cta-box { flex-direction: column; text-align: center; }
+  .mplan-cta-link { width: 100%; justify-content: center; }
+}
+
+.spots-left {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #fff7ed;
+  border: 1px solid #fbd38d;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  color: #c05621;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* FAQ */
+.faq-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+.faq-q {
+  background: #f8fafc;
+  padding: 0.85rem 1.1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1a202c;
+}
+
+.faq-a {
+  padding: 0.75rem 1.1rem;
+  font-size: 0.86rem;
+  color: #4a5568;
+  line-height: 1.65;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .mentor-page-layout { flex-direction: column; }
+  .mentor-page-sidebar { flex: none; width: 100%; position: static; }
+}
+
+@media (max-width: 640px) {
+  .mentor-header { padding: 1.5rem; }
+  .mentor-profile-row { flex-direction: column; align-items: center; text-align: center; }
+  .mentor-cta-row, .mentor-meta-row, .mentor-rating-row, .mentor-skill-tags { justify-content: center; }
+  .mstat + .mstat { border-left: none; border-top: 1px solid #e2e8f0; }
+  .mstat { width: 50%; flex: none; }
+  .mentor-stats-strip { flex-wrap: wrap; }
+}
+
 /* ── Pipeline extras ── */
 .pipeline-category {
   font-size: 0.72rem;

@@ -1,0 +1,21 @@
+<div class="mplan-grid">
+<% for (const item of items) { %>
+<div class="mplan-card<%= item.featured === 'true' ? ' mplan-featured' : '' %>">
+<% if (item.badge) { %><div class="mplan-badge"><%= item.badge %></div><% } %>
+<div class="mplan-name"><%= item.title %></div>
+<p class="mplan-price-row"><span class="mplan-price"><%= item.price %></span><span class="mplan-unit"> <%= item.unit %></span></p><p class="mplan-price-bdt"><span class="mplan-bdt-amount"><%= item.price_bdt %></span><span class="mplan-bdt-unit"> <%= item.unit %></span></p>
+<p class="mplan-desc"><%= item.description %></p>
+<ul class="mplan-features">
+<% for (const f of (item.tags || [])) { %>
+<li><%= f %></li>
+<% } %>
+</ul>
+<a href="<%= item.link %>" target="_blank" class="mplan-btn<%= item.featured === 'true' ? '' : ' mplan-btn-outline' %>">Apply Now</a>
+<p class="mplan-note">Start with a free 30-min intro call</p>
+</div>
+<% } %>
+</div>
+<div class="mplan-cta-box">
+<strong>Not sure which plan fits?</strong> Book a free 30-minute intro call and we'll figure it out together.
+<a href="https://tidycal.com/hossainlab/30-minute-meeting" target="_blank" class="btn-apply-primary mplan-cta-link">Book Free Call</a>
+</div>

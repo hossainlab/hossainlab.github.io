@@ -9,7 +9,7 @@
 <meta name="author" content="Jubayer Hossain">
 <meta name="description" content="Academic Website for Jubayer Hossain">
 
-<title>working-papers – Jubayer Hossain</title>
+<title>1-on-1 Bioinformatics Mentorship – Jubayer Hossain</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,26 +25,28 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../../">
-<link href="../../../..//files/profiles/icon.png" rel="icon" type="image/png">
-<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="../../../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="..//files/profiles/icon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,21 +74,107 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-mentor-plans .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
 
-<link rel="stylesheet" href="../../../../styles.css">
+    const options = {
+      valueNames: ['listing-title','listing-price','listing-price_bdt','listing-unit','listing-description','listing-featured','listing-badge','listing-link','listing-tags',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-price","listing-price_bdt","listing-unit","listing-description","listing-featured","listing-badge","listing-link","listing-tags"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-mentor-plans'] = new List('listing-mentor-plans', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-mentor-reviews .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-initial','listing-plan-type','listing-stars','listing-description',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-initial","listing-plan-type","listing-stars","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-mentor-reviews'] = new List('listing-mentor-reviews', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../../../index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="../../../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Jubayer Hossain</span>
     </a>
   </div>
@@ -97,7 +185,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../../index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -106,11 +194,11 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
         <li>
-    <a class="dropdown-item" href="../../../../projects/index.html">
+    <a class="dropdown-item" href="../projects/index.html">
  <span class="dropdown-text">Research Projects</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../projects/pipelines.html">
+    <a class="dropdown-item" href="../projects/pipelines.html">
  <span class="dropdown-text">Pipelines</span></a>
   </li>  
     </ul>
@@ -121,30 +209,30 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-teaching">    
         <li>
-    <a class="dropdown-item" href="../../../../teaching/index.html">
+    <a class="dropdown-item" href="../teaching/index.html">
  <span class="dropdown-text">Courses</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../../teaching/videos.html">
+    <a class="dropdown-item" href="../teaching/videos.html">
  <span class="dropdown-text">Videos</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../../../blog/index.html"> 
+    <a class="nav-link" href="../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../../publications/index.html"> 
+    <a class="nav-link" href="../publications/index.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../../cv/professional-cv/CV-HossainMJ.pdf"> 
-<span class="menu-text">CV</span></a>
+    <a class="nav-link active" href="../mentorship/index.html" aria-current="page"> 
+<span class="menu-text">Mentorship</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://tidycal.com/hossainlab/30-minute-meeting" target="_blank"> 
-<span class="menu-text">Book a Meeting</span></a>
+    <a class="nav-link" href="../cv/professional-cv/CV-HossainMJ.pdf"> 
+<span class="menu-text">CV</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -193,24 +281,312 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page">
+      <h1 class="title">1-on-1 Bioinformatics Mentorship</h1>
+            <p class="subtitle lead">Personalised guidance to master bioinformatics and computational biology</p>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
 
 
 
 
-<ol type="1">
-<li><p><strong>Hossain, M. J.</strong>, Shahjahan, M., &amp; Fuad, M. (2025). Fezf2-mediated cortical development: Multi-omics analysis. <em>Working Paper/GitHub</em>. <a href="https://github.com/hossainlab/fezf2-multiomics" class="uri">https://github.com/hossainlab/fezf2-multiomics</a></p></li>
-<li><p><strong>Hossain, M. J.</strong>, Shahjahan, M., &amp; Fuad, M. (2025). Single-cell meta-analysis of microglial activation in Alzheimer’s disease. <em>Working Paper/GitHub</em>. <a href="https://github.com/hossainlab/alzheimers-microglia-meta-analysis" class="uri">https://github.com/hossainlab/alzheimers-microglia-meta-analysis</a></p></li>
-<li><p><strong>Hossain, M. J.</strong>, Shahjahan, M., &amp; Fuad, M. (2025). Integrative spatial-scRNA-seq atlas of immunotherapy resistance mechanisms across cancer types. <em>Working Paper/GitHub</em>. <a href="https://github.com/hossainlab/spatial-scRNA-immune-resistance" class="uri">https://github.com/hossainlab/spatial-scRNA-immune-resistance</a></p></li>
-<li><p><strong>Hossain, M. J.</strong>, Shahjahan, M., &amp; Fuad, M. (2026). Pan-Cancer Tumor-Associated Macrophage Reprogramming Atlas and Immunotherapy Response Prediction. <em>Working Paper/GitHub</em>. <a href="https://github.com/hossainlab/TAM-Atlas" class="uri">https://github.com/hossainlab/TAM-Atlas</a></p></li>
-</ol>
+
+<div class="mentor-header">
+  <div class="mentor-profile-row">
+    <div class="mentor-photo-wrap">
+      <img src="../files/profiles/jubayer.jpg" alt="Jubayer Hossain" class="mentor-photo">
+      <div class="quick-responder-badge">⚡ Quick Responder</div>
+    </div>
+    <div class="mentor-info">
+      <h1 class="mentor-name">Jubayer Hossain</h1>
+      <p class="mentor-title-line">Bioinformatician · Researcher · Educator</p>
+      <div class="mentor-meta-row">
+        <span>📍 Bangladesh</span>
+        <span>✅ Available now</span>
+        <span>⏱️ Responds within 24 hours</span>
+      </div>
+      <div class="mentor-rating-row">
+        <span class="stars">★★★★★</span>
+        <span class="rating-num">5.0</span>
+        <span class="rating-reviews">(25+ mentees trained)</span>
+      </div>
+      <div class="mentor-skill-tags">
+        <span class="mentor-skill-tag">Bioinformatics</span>
+        <span class="mentor-skill-tag">NGS Analysis</span>
+        <span class="mentor-skill-tag">scRNA-seq</span>
+        <span class="mentor-skill-tag">Python</span>
+        <span class="mentor-skill-tag">R</span>
+        <span class="mentor-skill-tag">Machine Learning</span>
+        <span class="mentor-skill-tag">+ 12 more</span>
+      </div>
+      <div class="mentor-cta-row">
+        <a href="https://tidycal.com/hossainlab/30-minute-meeting" target="_blank" class="btn-apply-primary">📅 Book Free Intro Call</a>
+        <a href="mailto:contact.jubayerhossain@gmail.com" class="btn-message-outline">✉️ Send Message</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mentor-stats-strip">
+  <div class="mstat"><div class="mstat-num">5+</div><div class="mstat-label">Years Mentoring</div></div>
+  <div class="mstat"><div class="mstat-num">25+</div><div class="mstat-label">Mentees Trained</div></div>
+  <div class="mstat"><div class="mstat-num">16</div><div class="mstat-label">Skills Covered</div></div>
+  <div class="mstat"><div class="mstat-num">10+</div><div class="mstat-label">Projects Guided</div></div>
+</div>
+
+<div class="mentor-section-header">
+  <h2 class="mentor-section-title anchored">Choose Your Plan</h2>
+  <p class="mentor-section-sub">🔥 Only a few spots available — apply early!</p>
+</div>
+<div id="listing-mentor-plans" class="quarto-listing quarto-listing-container-custom">
+<div class="mplan-grid">
+<div class="mplan-card">
+<div class="mplan-name">
+Starter
+</div>
+<p class="mplan-price-row">
+<span class="mplan-price">$99</span><span class="mplan-unit"> / month</span>
+</p>
+<p class="mplan-price-bdt">
+<span class="mplan-bdt-amount">৳5,000</span><span class="mplan-bdt-unit"> / month</span>
+</p>
+<p class="mplan-desc">
+Ideal for students and beginners exploring bioinformatics
+</p>
+<ul class="mplan-features">
+<li>
+2 calls per month (45 min each)
+</li>
+<li>
+Unlimited Q&amp;A via chat
+</li>
+<li>
+Personalised learning roadmap
+</li>
+<li>
+Curated resources &amp; reading lists
+</li>
+<li>
+Response within 24 hours
+</li>
+</ul>
+<a href="https://tidycal.com/hossainlab/30-minute-meeting" target="_blank" class="mplan-btn mplan-btn-outline">Apply Now</a>
+<p class="mplan-note">
+Start with a free 30-min intro call
+</p>
+</div>
+<div class="mplan-card mplan-featured">
+<div class="mplan-badge">
+Most Popular
+</div>
+<div class="mplan-name">
+Standard
+</div>
+<p class="mplan-price-row">
+<span class="mplan-price">$199</span><span class="mplan-unit"> / month</span>
+</p>
+<p class="mplan-price-bdt">
+<span class="mplan-bdt-amount">৳10,000</span><span class="mplan-bdt-unit"> / month</span>
+</p>
+<p class="mplan-desc">
+For researchers ready to work on real bioinformatics projects
+</p>
+<ul class="mplan-features">
+<li>
+4 calls per month (45 min each)
+</li>
+<li>
+Unlimited Q&amp;A via chat
+</li>
+<li>
+Personalised learning roadmap
+</li>
+<li>
+Hands-on project guidance
+</li>
+<li>
+Code &amp; analysis reviews
+</li>
+<li>
+Response within 12 hours
+</li>
+</ul>
+<a href="https://tidycal.com/hossainlab/30-minute-meeting" target="_blank" class="mplan-btn">Apply Now</a>
+<p class="mplan-note">
+Start with a free 30-min intro call
+</p>
+</div>
+<div class="mplan-card">
+<div class="mplan-name">
+Intensive
+</div>
+<p class="mplan-price-row">
+<span class="mplan-price">$349</span><span class="mplan-unit"> / month</span>
+</p>
+<p class="mplan-price-bdt">
+<span class="mplan-bdt-amount">৳15,000</span><span class="mplan-bdt-unit"> / month</span>
+</p>
+<p class="mplan-desc">
+For fast-track skill development and career acceleration
+</p>
+<ul class="mplan-features">
+<li>
+8 calls per month (45 min each)
+</li>
+<li>
+Unlimited Q&amp;A via chat
+</li>
+<li>
+Full project mentorship
+</li>
+<li>
+CV &amp; manuscript review
+</li>
+<li>
+Interview preparation
+</li>
+<li>
+Priority response within 6 hours
+</li>
+</ul>
+<a href="https://tidycal.com/hossainlab/30-minute-meeting" target="_blank" class="mplan-btn mplan-btn-outline">Apply Now</a>
+<p class="mplan-note">
+Start with a free 30-min intro call
+</p>
+</div>
+</div>
+<div class="mplan-cta-box">
+<p><strong>Not sure which plan fits?</strong> Book a free 30-minute intro call and we’ll figure it out together. <a href="https://tidycal.com/hossainlab/30-minute-meeting" target="_blank" class="btn-apply-primary mplan-cta-link">Book Free Call</a></p>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+<div class="mentor-section">
+  <h2 class="mentor-section-title anchored">About</h2>
+  <div class="mentor-about-text">
+    <p>I am a bioinformatician, researcher, and educator with over 5 years of experience in next-generation sequencing (NGS) data analysis, computational biology, and AI applications in biosciences. I have worked extensively with bulk RNA-seq, single-cell RNA-seq (scRNA-seq), spatial transcriptomics, and multi-omics integration across cancer genomics and infectious disease research.</p>
+    <p>My mission is to make bioinformatics accessible — whether you are a student starting from scratch, a wet-lab researcher wanting to analyse your own data, or a computational scientist looking to deepen your skills in machine learning and multi-omics.</p>
+    <p><strong>What you can expect:</strong></p>
+    <ul class="mentor-key-points">
+      <li>Personalised learning roadmap tailored to your background and goals</li>
+      <li>Hands-on project work using real biological datasets</li>
+      <li>In-depth guidance on NGS pipelines (RNA-seq, scRNA-seq, spatial omics)</li>
+      <li>Python &amp; R programming for bioinformatics from the ground up</li>
+      <li>Machine learning applications in genomics and computational biology</li>
+      <li>Career advice: CV reviews, interview prep, and academic/industry pathways</li>
+      <li>Publication-quality figures and reproducible analysis workflows</li>
+    </ul>
+  </div>
+</div>
+
+<div class="mentor-section">
+  <h2 class="mentor-section-title anchored">Skills &amp; Topics</h2>
+  <div class="mentor-skills-full">
+    <span class="mskill">Bioinformatics</span>
+    <span class="mskill">Bulk RNA-seq</span>
+    <span class="mskill">scRNA-seq</span>
+    <span class="mskill">Spatial Transcriptomics</span>
+    <span class="mskill">Multi-omics</span>
+    <span class="mskill">ATAC-seq</span>
+    <span class="mskill">Python</span>
+    <span class="mskill">R</span>
+    <span class="mskill">Machine Learning</span>
+    <span class="mskill">Deep Learning</span>
+    <span class="mskill">Data Visualization</span>
+    <span class="mskill">Statistics</span>
+    <span class="mskill">Nextflow</span>
+    <span class="mskill">Linux / Shell</span>
+    <span class="mskill">Docker</span>
+    <span class="mskill">Cancer Genomics</span>
+    <span class="mskill">Career Development</span>
+    <span class="mskill">Research Methods</span>
+  </div>
+</div>
+
+<div class="mentor-section-header">
+  <h2 class="mentor-section-title anchored">What Mentees Say</h2>
+</div>
+<div id="listing-mentor-reviews" class="quarto-listing quarto-listing-container-custom">
+<div class="mreview-grid">
+<div class="mreview-card">
+<div class="mreview-stars">
+★★★★★
+</div>
+<p class="mreview-text">
+Jubayer is an exceptional mentor. He guided me through my first scRNA-seq analysis step by step — from QC to clustering and differential expression. He doesn’t just give you the code; he makes sure you understand every step. I now feel confident running my own pipelines independently.
+</p>
+<div class="mreview-author">
+<span class="mreview-avatar">R</span><span class="mreview-authorinfo"><strong class="mreview-name">Rahnuma T.</strong><br><small class="mreview-plan">Standard Plan · 3 months</small></span>
+</div>
+</div>
+<div class="mreview-card">
+<div class="mreview-stars">
+★★★★★
+</div>
+<p class="mreview-text">
+As a wet-lab biologist transitioning into computational work, I was completely lost with RNA-seq analysis. Jubayer built a curriculum perfectly matched to my pace — covering Python basics, then bulk RNA-seq with DESeq2, and finally visualisation. His patience and clear explanations are truly remarkable.
+</p>
+<div class="mreview-author">
+<span class="mreview-avatar">F</span><span class="mreview-authorinfo"><strong class="mreview-name">Fayez A.</strong><br><small class="mreview-plan">Starter Plan · 2 months</small></span>
+</div>
+</div>
+<div class="mreview-card">
+<div class="mreview-stars">
+★★★★★
+</div>
+<p class="mreview-text">
+I came to Jubayer wanting to learn multi-omics integration for my PhD research. Not only did he teach me the technical skills, but he also helped me frame my research questions and think like a computational biologist. His mentorship significantly shaped my thesis work.
+</p>
+<div class="mreview-author">
+<span class="mreview-avatar">L</span><span class="mreview-authorinfo"><strong class="mreview-name">Lamisa M.</strong><br><small class="mreview-plan">Standard Plan · 4 months</small></span>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+<div class="mentor-section">
+  <h2 class="mentor-section-title anchored">Frequently Asked Questions</h2>
+  <div class="mfaq-list">
+    <details class="mfaq-item">
+      <summary class="mfaq-q">Who is this mentorship for?</summary>
+      <div class="mfaq-a">This programme is designed for students, wet-lab researchers, and early-career scientists who want to learn bioinformatics, computational biology, and data science. Whether you are a complete beginner or looking to advance specific skills, the sessions are fully personalised to your level and goals.</div>
+    </details>
+    <details class="mfaq-item">
+      <summary class="mfaq-q">What happens in the first session?</summary>
+      <div class="mfaq-a">The first session is a discovery call where we discuss your background, learning goals, current projects, and challenges. Based on this, I create a customised learning roadmap for you before our next meeting.</div>
+    </details>
+    <details class="mfaq-item">
+      <summary class="mfaq-q">Do I need prior programming experience?</summary>
+      <div class="mfaq-a">No prior programming experience is required. I teach Python and R from the basics for beginners. If you already have experience, we can skip ahead and focus on advanced topics like multi-omics, machine learning, or workflow automation.</div>
+    </details>
+    <details class="mfaq-item">
+      <summary class="mfaq-q">How are sessions conducted?</summary>
+      <div class="mfaq-a">All sessions are conducted online via Zoom or Google Meet. I share my screen, live-code with you, and provide Jupyter notebooks or R Markdown files after each session for your reference.</div>
+    </details>
+    <details class="mfaq-item">
+      <summary class="mfaq-q">Can I cancel or pause my plan?</summary>
+      <div class="mfaq-a">Yes, you can cancel at any time. I recommend completing at least one month to see meaningful progress, but there is no long-term commitment required.</div>
+    </details>
+  </div>
+</div>
+
 
 
 

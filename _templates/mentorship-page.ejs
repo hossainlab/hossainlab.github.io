@@ -1,0 +1,143 @@
+<% const d = items[0]; %>
+
+<!-- Profile Header -->
+<div class="mentor-header">
+  <div class="mentor-profile-row">
+    <div class="mentor-photo-wrap">
+      <img src="<%= d.photo %>" alt="<%= d.name %>" class="mentor-photo">
+      <div class="quick-responder-badge">⚡ <%= d.badge %></div>
+    </div>
+    <div class="mentor-info">
+      <h1 class="mentor-name"><%= d.name %></h1>
+      <p class="mentor-title-line"><%= d.tagline %></p>
+      <div class="mentor-meta-row">
+        <span>📍 <%= d.location %></span>
+        <span>✅ Available</span>
+        <span>⏱️ <%= d.response %></span>
+      </div>
+      <div class="mentor-rating-row">
+        <span class="stars">★★★★★</span>
+        <span class="rating-num"><%= d.rating %></span>
+        <span class="rating-reviews">(<%= d.reviews_count %>)</span>
+      </div>
+      <div class="mentor-skill-tags">
+        <% for (const skill of d.skills.slice(0, 6)) { %>
+        <span class="mentor-skill-tag"><%= skill %></span>
+        <% } %>
+        <% if (d.skills.length > 6) { %>
+        <span class="mentor-skill-tag">+ <%= d.skills.length - 6 %> more</span>
+        <% } %>
+      </div>
+      <div class="mentor-cta-row">
+        <a href="<%= d.book_url %>" target="_blank" class="btn-apply-primary">📅 Book Free Intro Call</a>
+        <a href="mailto:<%= d.email %>" class="btn-message-outline">✉️ Send Message</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Stats Strip -->
+<div class="mentor-stats-strip">
+  <% for (const stat of d.stats) { %>
+  <div class="mstat">
+    <div class="mstat-num"><%= stat.num %></div>
+    <div class="mstat-label"><%= stat.label %></div>
+  </div>
+  <% } %>
+</div>
+
+<!-- Main Layout: Content + Sidebar -->
+<div class="mentor-page-layout">
+
+  <!-- Left: Main Content -->
+  <div class="mentor-page-main">
+
+    <!-- About -->
+    <div class="mentor-section">
+      <h2 class="mentor-section-title">About</h2>
+      <div class="mentor-about-text">
+        <p><%= d.about %></p>
+        <p><strong>What you can expect from my mentorship:</strong></p>
+        <ul class="mentor-key-points">
+          <% for (const point of d.key_points) { %>
+          <li><%= point %></li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="mentor-section">
+      <h2 class="mentor-section-title">Skills &amp; Topics</h2>
+      <div class="mentor-skills-full">
+        <% for (const skill of d.skills) { %>
+        <span class="mskill"><%= skill %></span>
+        <% } %>
+      </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="mentor-section">
+      <h2 class="mentor-section-title">What Mentees Say</h2>
+      <% for (const review of d.testimonials) { %>
+      <div class="mentor-review-card">
+        <div class="review-stars"><% for (let i = 0; i < review.stars; i++) { %>★<% } %></div>
+        <p class="review-text"><%= review.text %></p>
+        <div class="review-author">
+          <div class="review-avatar"><%= review.initial %></div>
+          <div class="review-author-info">
+            <div class="review-name"><%= review.name %></div>
+            <div class="review-plan"><%= review.plan %></div>
+          </div>
+        </div>
+      </div>
+      <% } %>
+    </div>
+
+    <!-- FAQ -->
+    <div class="mentor-section">
+      <h2 class="mentor-section-title">Frequently Asked Questions</h2>
+      <% for (const item of d.faq) { %>
+      <div class="faq-item">
+        <div class="faq-q"><%= item.q %></div>
+        <div class="faq-a"><%= item.a %></div>
+      </div>
+      <% } %>
+    </div>
+
+  </div>
+
+  <!-- Right: Pricing Sidebar -->
+  <div class="mentor-page-sidebar">
+
+    <div class="spots-left">🔥 Only a few spots available — apply early!</div>
+
+    <% for (const plan of d.plans) { %>
+    <div class="plan-card<%= plan.featured ? ' featured' : '' %>">
+      <% if (plan.badge) { %><div class="plan-badge"><%= plan.badge %></div><% } %>
+      <div class="plan-name"><%= plan.name %></div>
+      <div>
+        <span class="plan-price"><%= plan.price %></span>
+        <span class="plan-price-unit"> <%= plan.unit %></span>
+      </div>
+      <p class="plan-desc"><%= plan.desc %></p>
+      <ul class="plan-features">
+        <% for (const feature of plan.features) { %>
+        <li><%= feature %></li>
+        <% } %>
+      </ul>
+      <a href="<%= d.book_url %>" target="_blank" class="plan-apply-btn<%= plan.featured ? '' : ' outline' %>">Apply Now</a>
+      <p class="plan-note">Start with a free 30-min intro call</p>
+    </div>
+    <% } %>
+
+    <div class="plan-not-sure">
+      <strong>Not sure which plan fits?</strong><br>
+      Book a free 30-minute intro call and we'll figure it out together.
+      <br><br>
+      <a href="<%= d.book_url %>" target="_blank" class="btn-apply-primary" style="font-size:0.85rem;padding:0.5rem 1.1rem;display:inline-flex;">Book Free Call</a>
+    </div>
+
+  </div>
+
+</div>

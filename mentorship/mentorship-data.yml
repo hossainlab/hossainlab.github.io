@@ -1,0 +1,120 @@
+- path: ""
+  title: "1-on-1 Bioinformatics Mentorship"
+  name: "Jubayer Hossain"
+  photo: "/files/profiles/jubayer.jpg"
+  tagline: "Bioinformatics Scientist · Educator · Entrepreneur"
+  location: "Bangladesh"
+  response: "Responds within 24 hours"
+  rating: "5.0"
+  reviews_count: "25+ mentees trained"
+  badge: "Quick Responder"
+  book_url: "https://tidycal.com/hossainlab/30-minute-meeting"
+  email: "contact.jubayerhossain@gmail.com"
+
+  stats:
+    - num: "5+"
+      label: "Years Mentoring"
+    - num: "25+"
+      label: "1-on-1 Mentees Trained"
+    - num: "16"
+      label: "Skills Covered"
+    - num: "10+"
+      label: "Projects Guided"
+
+  about: "I am a bioinformatician, researcher, and educator with over 5 years of experience in next-generation sequencing (NGS) data analysis, computational biology, and AI applications in biosciences. I have worked extensively with bulk RNA-seq, single-cell RNA-seq, spatial transcriptomics, and multi-omics integration across cancer genomics and infectious disease research. My mission is to make bioinformatics accessible — whether you are a student starting from scratch, a wet-lab researcher wanting to analyse your own data, or a computational scientist looking to deepen your skills."
+
+  key_points:
+    - "Personalised learning roadmap tailored to your background and goals"
+    - "Hands-on project work using real biological datasets"
+    - "In-depth guidance on NGS pipelines (RNA-seq, scRNA-seq, spatial omics)"
+    - "Python & R programming for bioinformatics from the ground up"
+    - "Machine learning applications in genomics and computational biology"
+    - "Career advice: CV reviews, interview prep, and academic/industry pathways"
+    - "Publication-quality figures and reproducible analysis workflows"
+
+  skills:
+    - Bioinformatics
+    - Bulk RNA-seq
+    - scRNA-seq
+    - Spatial Transcriptomics
+    - Multi-omics
+    - ATAC-seq
+    - Python
+    - R
+    - Machine Learning
+    - Deep Learning
+    - Data Visualization
+    - Statistics
+    - Nextflow
+    - Linux / Shell
+    - Docker
+    - Cancer Genomics
+    - Career Development
+    - Research Methods
+
+  plans:
+    - name: "Starter"
+      price: "$99"
+      unit: "/ month"
+      desc: "Ideal for students and beginners exploring bioinformatics"
+      featured: false
+      features:
+        - "2 calls per month (45 min each)"
+        - "Unlimited Q&A via chat"
+        - "Personalised learning roadmap"
+        - "Curated resources & reading lists"
+        - "Response within 24 hours"
+    - name: "Standard"
+      price: "$199"
+      unit: "/ month"
+      desc: "For researchers ready to work on real bioinformatics projects"
+      featured: true
+      badge: "Most Popular"
+      features:
+        - "4 calls per month (45 min each)"
+        - "Unlimited Q&A via chat"
+        - "Personalised learning roadmap"
+        - "Hands-on project guidance"
+        - "Code & analysis reviews"
+        - "Response within 12 hours"
+    - name: "Intensive"
+      price: "$349"
+      unit: "/ month"
+      desc: "For fast-track skill development and career acceleration"
+      featured: false
+      features:
+        - "8 calls per month (45 min each)"
+        - "Unlimited Q&A via chat"
+        - "Full project mentorship"
+        - "CV & manuscript review"
+        - "Interview preparation"
+        - "Priority response within 6 hours"
+
+  testimonials:
+    - name: "Rahnuma T."
+      initial: "R"
+      plan: "Standard Plan · 3 months"
+      stars: 5
+      text: "Jubayer is an exceptional mentor. He guided me through my first scRNA-seq analysis step by step — from QC to clustering and differential expression. He doesn't just give you the code; he makes sure you understand every step. I now feel confident running my own pipelines independently."
+    - name: "Fayez A."
+      initial: "F"
+      plan: "Starter Plan · 2 months"
+      stars: 5
+      text: "As a wet-lab biologist transitioning into computational work, I was completely lost with RNA-seq analysis. Jubayer built a curriculum perfectly matched to my pace — covering Python basics, then bulk RNA-seq with DESeq2, and finally visualisation. His patience and clear explanations are truly remarkable."
+    - name: "Lamisa M."
+      initial: "L"
+      plan: "Standard Plan · 4 months"
+      stars: 5
+      text: "I came to Jubayer wanting to learn multi-omics integration for my PhD research. Not only did he teach me the technical skills, but he also helped me frame my research questions and think like a computational biologist. His mentorship significantly shaped my thesis work."
+
+  faq:
+    - q: "Who is this mentorship for?"
+      a: "This programme is designed for students, wet-lab researchers, and early-career scientists who want to learn bioinformatics, computational biology, and data science. Whether you are a complete beginner or looking to advance specific skills, the sessions are fully personalised to your level and goals."
+    - q: "What happens in the first session?"
+      a: "The first session is a discovery call where we discuss your background, learning goals, current projects, and challenges. Based on this, I create a customised learning roadmap for you before our next meeting."
+    - q: "Do I need prior programming experience?"
+      a: "No prior programming experience is required. I teach Python and R from the basics for beginners. If you already have experience, we can skip ahead and focus on advanced topics like multi-omics, machine learning, or workflow automation."
+    - q: "How are sessions conducted?"
+      a: "All sessions are conducted online via Zoom or Google Meet. I share my screen, live-code with you, and provide Jupyter notebooks or R Markdown files after each session for your reference."
+    - q: "Can I cancel or pause my plan?"
+      a: "Yes, you can cancel at any time. I recommend completing at least one month to see meaningful progress, but there is no long-term commitment required."

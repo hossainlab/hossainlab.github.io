@@ -31,5 +31,9 @@
   {
     "listing": "/publications/index.html",
     "items": []
+  },
+  {
+    "listing": "/mentorship/index.html",
+    "items": []
   }
 ]

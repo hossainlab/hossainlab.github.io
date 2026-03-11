@@ -1,0 +1,9 @@
+<div class="mreview-grid">
+<% for (const item of items) { %>
+<div class="mreview-card">
+<div class="mreview-stars"><% for (let i = 0; i < parseInt(item.stars || 5); i++) { %>★<% } %></div>
+<p class="mreview-text"><%= item.description %></p>
+<div class="mreview-author"><span class="mreview-avatar"><%= item.initial %></span><span class="mreview-authorinfo"><strong class="mreview-name"><%= item.title %></strong><br><small class="mreview-plan"><%= item['plan-type'] %></small></span></div>
+</div>
+<% } %>
+</div>

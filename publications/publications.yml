@@ -1,0 +1,390 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# Publications Data
+# ──────────────────────────────────────────────────────────────────────────────
+# Fields:
+#   title          – Paper/presentation title (required)
+#   authors        – Author string; wrap "**Name**" to bold your name
+#   corresponding  – true if you are the corresponding author
+#   year           – Publication/presentation year (integer)
+#   journal        – Journal name (peer-reviewed)
+#   volume         – Volume number
+#   issue          – Issue number
+#   article        – Article number or page range
+#   doi            – Full DOI / URL
+#   type           – peer-reviewed | under-review | conference
+#   subtype        – (conference only) poster | oral
+#   venue          – (conference only) Conference name
+#   location       – (conference only) Location
+#   target_journal – (under-review only) Target journal name
+#   status         – (under-review only) Submitted | Under Review
+#   categories     – List of research topics for filtering
+# ──────────────────────────────────────────────────────────────────────────────
+
+# ── Peer-reviewed ──────────────────────────────────────────────────────────────
+
+- title: "Pan-cancer analysis reveals immunological and prognostic significance of CCT5 in human tumors"
+  authors: "Ahmed, M. Z., Billah, M. M., Ferdous, J., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2025
+  journal: "Scientific Reports"
+  volume: "15"
+  article: "14405"
+  doi: "https://doi.org/10.1038/s41598-025-88339-z"
+  type: peer-reviewed
+  categories:
+    - Bioinformatics
+
+- title: "Comprehensive bioinformatics analysis reveals prognostic significance and immunological roles of WNT gene family in breast cancer"
+  authors: "Fariha, F. T. J., Fuad, M., Saha, C. S., Hossen, S., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2025
+  journal: "Scientific Reports"
+  volume: "15"
+  article: "34490"
+  doi: "https://doi.org/10.1038/s41598-025-13315-6"
+  type: peer-reviewed
+  categories:
+    - Bioinformatics
+
+- title: "A meta-analysis of public RNA-Seq data identifies conserved stress responses in rainbow trout"
+  authors: "Bari, S. M., Fuad, M., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2025
+  journal: "BMC Genomics"
+  volume: "26"
+  article: "999"
+  doi: "https://doi.org/10.1186/s12864-025-12127-2"
+  type: peer-reviewed
+  categories:
+    - Bioinformatics
+
+- title: "Global, regional, and national trends in routine childhood vaccination coverage from 1980 to 2023 with forecasts to 2030: A systematic analysis for the Global Burden of Disease Study 2023"
+  authors: "GBD 2023 Vaccine Coverage Collaborators"
+  corresponding: false
+  year: 2025
+  journal: "The Lancet"
+  doi: "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)01037-2/"
+  type: peer-reviewed
+  categories:
+    - Global Health
+
+- title: "Clinical and hematological manifestation of dengue patients in 2022 outbreak: A tertiary care hospital-based cross-sectional study"
+  authors: "**Hossain, M. J.**, Das, M., Shahjahan, M., Islam, M. W., & Towhid, S. T."
+  corresponding: true
+  year: 2025
+  journal: "Health Science Reports"
+  volume: "8"
+  article: "e70356"
+  doi: "https://doi.org/10.1002/hsr2.70356"
+  type: peer-reviewed
+  categories:
+    - Global Health
+    - Infectious Disease
+
+- title: "Young stroke in Bangladesh: Addressing rare cases with diagnostic challenges and much-needed solutions"
+  authors: "Das, M., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2025
+  journal: "Stroke and Vascular Neurology"
+  doi: "https://svn.bmj.com/content/early/2025/04/07/svn-2025-004178"
+  type: peer-reviewed
+  categories:
+    - Global Health
+
+- title: "Preventing the silent threat: A perspective on preparing Bangladesh for Human Metapneumovirus (HMPV)"
+  authors: "**Hossain, M. J.**, Sony, S. A., Fariha, F. T. J., & Hossen, S."
+  corresponding: true
+  year: 2025
+  journal: "Health Science Reports"
+  volume: "8"
+  article: "e71101"
+  doi: "https://doi.org/10.1002/hsr2.71101"
+  type: peer-reviewed
+  categories:
+    - Infectious Disease
+
+- title: "Resistance and co-resistance of metallo-beta-lactamase genes in diarrheal and urinary-tract pathogens in Bangladesh"
+  authors: "Shanta, A. S., Islam, N., Al Asad, M., Akter, K., Habib, M. B., **Hossain, M. J.**, Nahar, S., Godman, B., & Islam, S."
+  corresponding: false
+  year: 2024
+  journal: "Microorganisms"
+  volume: "12"
+  issue: "8"
+  article: "1589"
+  doi: "https://doi.org/10.3390/microorganisms12081589"
+  type: peer-reviewed
+  categories:
+    - Infectious Disease
+
+- title: "Urgent call for compulsory premarital screening: A crucial step towards thalassemia prevention in Bangladesh"
+  authors: "**Hossain, M. J.**, Das, M., & Munni, U. R."
+  corresponding: true
+  year: 2024
+  journal: "Orphanet Journal of Rare Diseases"
+  volume: "19"
+  article: "326"
+  doi: "https://doi.org/10.1186/s13023-024-03344-1"
+  type: peer-reviewed
+  categories:
+    - Global Health
+
+- title: "Factors contributing to antibiotic misuse among parents of school-going children in Dhaka City, Bangladesh"
+  authors: "Islam, M. W., Shahjahan, M., Azad, A. K., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2024
+  journal: "Scientific Reports"
+  volume: "14"
+  article: "2318"
+  doi: "https://doi.org/10.1038/s41598-024-52313-y"
+  type: peer-reviewed
+  categories:
+    - Public Health
+
+- title: "Community engagement and social participation in dengue prevention: A cross-sectional study in Dhaka City"
+  authors: "**Hossain, M. J.**, Das, M., Islam, M. W., Shahjahan, M., & Ferdous, J."
+  corresponding: true
+  year: 2024
+  journal: "Health Science Reports"
+  volume: "7"
+  article: "e2022"
+  doi: "https://doi.org/10.1002/hsr2.2022"
+  type: peer-reviewed
+  categories:
+    - Global Health
+    - Infectious Disease
+
+- title: "Prevalence, antibiotic resistance pattern for bacteriuria from patients with urinary tract infections"
+  authors: "**Hossain, M. J.**, Azad, A. K., Shahid, M. S. B., Shahjahan, M., & Ferdous, J."
+  corresponding: true
+  year: 2024
+  journal: "Health Science Reports"
+  volume: "7"
+  article: "e2039"
+  doi: "https://doi.org/10.1002/hsr2.2039"
+  type: peer-reviewed
+  categories:
+    - Infectious Disease
+
+- title: "Food consumption patterns and sedentary behaviors among the university students: A cross-sectional study"
+  authors: "Akter, M. M., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2024
+  journal: "Health Science Reports"
+  volume: "7"
+  article: "e70259"
+  doi: "https://doi.org/10.1002/hsr2.70259"
+  type: peer-reviewed
+  categories:
+    - Public Health
+
+- title: "Health-related quality of life among thalassemia patients in Bangladesh using the SF-36 questionnaire"
+  authors: "**Hossain, M. J.**, Islam, M. W., Munni, U. R., Gulshan, R., Mukta, S. A., Miah, M. S., Sultana, S., Karmakar, M., Ferdous, J., & Islam, M. A."
+  corresponding: true
+  year: 2023
+  journal: "Scientific Reports"
+  volume: "13"
+  issue: "1"
+  doi: "https://doi.org/10.1038/s41598-023-34205-9"
+  type: peer-reviewed
+  categories:
+    - Global Health
+
+- title: "Knowledge and Self-Management Practice Among Diabetic Patients from the Urban Areas in Bangladesh"
+  authors: "**Hossain, M. J.**, Towhid, S. T., Akter, S., Shahjahan, M., Roy, T., Akter, B., & Nodee, T. A."
+  corresponding: true
+  year: 2023
+  journal: "Journal of Angiotherapy"
+  volume: "7"
+  issue: "1"
+  article: "1–10"
+  doi: "https://doi.org/10.25163/angiotherapy.717340"
+  type: peer-reviewed
+  categories:
+    - Public Health
+
+- title: "Perception of Students on Antibiotic Resistance and Prevention: An Online, Community-Based Case Study from Dhaka, Bangladesh"
+  authors: "Towhid, S. T., **Hossain, M. J.**, Sammo, M. A. S., & Akter, S."
+  corresponding: false
+  year: 2022
+  journal: "European Journal of Biology and Biotechnology"
+  doi: "https://doi.org/10.24018/ejbio.2022.3.3.341"
+  type: peer-reviewed
+  categories:
+    - Public Health
+
+- title: "Knowledge and Attitudes towards Thalassemia among Public University Students in Bangladesh"
+  authors: "**Hossain, M. J.**, Towhid, S. T., Sultana, S., Mukta, S. A., Gulshan, R., & Miah, M. S."
+  corresponding: false
+  year: 2022
+  journal: "Microbial Bioactives"
+  volume: "5"
+  issue: "2"
+  doi: "https://doi.org/10.25163/microbbioacts.526325"
+  type: peer-reviewed
+  categories:
+    - Global Health
+
+# ── Under Review ───────────────────────────────────────────────────────────────
+
+- title: "Integrative bioinformatics analysis reveals COL13A1 and COL23A1 as potential diagnostic and prognostic biomarkers in thyroid cancer"
+  authors: "Islam, M. W., Rahman, M. M., Naznin, H., Hossain, M. S., Akter, T., Shatabde, Z. A., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2025
+  target_journal: "Health Science Reports"
+  status: "Submitted"
+  type: under-review
+  categories:
+    - Bioinformatics
+
+- title: "Bioinformatics-driven multi-omics profiling of CDK1 and CDK6 identifies prognostic and therapeutic roles in breast cancer"
+  authors: "Islam, M. W., Fariha, F. T. J., Ahmed, M. Z., Ferdous, J., Lota, H. B., Hossain, M. S., Kundu, P., Shahjahan, M., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2025
+  target_journal: "Health Science Reports"
+  status: "Under Review"
+  type: under-review
+  categories:
+    - Bioinformatics
+
+- title: "Multi-omics pan-cancer analysis reveals an immunological role and prognostic potential of WDR76"
+  authors: "Billah, M. M., Mabsurah, K., Ahammad, K., Yeana, I. J., Sumaiya, M., Islam, T., Bhattacharjee, A., Ferdous, J., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2025
+  target_journal: "Discover Oncology"
+  status: "Under Review"
+  type: under-review
+  categories:
+    - Bioinformatics
+
+- title: "Predicting early antenatal care initiation at the first trimester among reproductive women in Bangladesh using machine learning"
+  authors: "Sony, S. A., Kundu, L. R., Limon, M. H., Chowdhury, T. B. K., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2025
+  target_journal: "BMC Pregnancy and Childbirth"
+  status: "Under Review"
+  type: under-review
+  categories:
+    - Public Health
+
+- title: "Lack of knowledge and training about antibiotic resistance among community pharmacists in Bangladesh: A cross-sectional study"
+  authors: "**Hossain, M. J.**, Shahariar, M., Barsha, L. H. J., Shahjahan, M., Towhid, S. T., Sheikh, M. K., Hasan, M. M., Rahman, M. H., & Sazid, M. S."
+  corresponding: true
+  year: 2025
+  target_journal: "Health Science Reports"
+  status: "Under Review"
+  type: under-review
+  categories:
+    - Public Health
+
+# ── Conferences ────────────────────────────────────────────────────────────────
+
+- title: "Diagnostic and Electrophysiological Features of Hirayama Disease in Young Adult Male: A Case Report"
+  authors: "**Hossain, M. J.**, & Das, M."
+  corresponding: false
+  year: 2024
+  venue: "International Conference of Public Health, IEDCR"
+  location: "Dhaka, Bangladesh"
+  type: conference
+  subtype: poster
+  categories:
+    - Global Health
+
+- title: "Level of knowledge regarding breast cancer and breast self-examination among school and college-going girls in Bangladesh"
+  authors: "Das, M., Kajol, M. M., Mim, N. A., Maruf, M. F. I., Hirko, K., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2024
+  venue: "International Conference of Public Health, IEDCR"
+  location: "Dhaka, Bangladesh"
+  type: conference
+  subtype: poster
+  categories:
+    - Global Health
+
+- title: "Lack of knowledge and training about antibiotic resistance among community pharmacists in Bangladesh"
+  authors: "Shahariar, M., Joarder Barsha, L. H., Shahjahan, M., Towhid, S. T., Sheikh, M. K., Hasan, M. M., Rahaman, M. H., Sazid, M. S., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2024
+  venue: "International Conference of Public Health, IEDCR"
+  location: "Dhaka, Bangladesh"
+  type: conference
+  subtype: poster
+  categories:
+    - Public Health
+
+- title: "Influence of Meteorological Factors on Dengue Incidence: A 23-Year Retrospective Analysis in Bangladesh"
+  authors: "Afrin, N., Howlader, G., Bhattacharjee, A., Akter, N., Mesu, M. H., Mazumder, E., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2024
+  venue: "International Conference of Public Health, IEDCR"
+  location: "Dhaka, Bangladesh"
+  type: conference
+  subtype: poster
+  categories:
+    - Infectious Disease
+
+- title: "Particulate Matter PM2.5 Pollution and Air Quality Index (AQI) Trends Evaluation with Meteorological Factors in Dhaka City"
+  authors: "Akter, N., Mim, N. A., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2024
+  venue: "International Conference of Public Health, IEDCR"
+  location: "Dhaka, Bangladesh"
+  type: conference
+  subtype: poster
+  categories:
+    - Environmental Health
+
+- title: "Exploring the Factors Influencing Heat Stress Risks Using the Discomfort Index Method in Bangladesh"
+  authors: "Tuhin, M. A. A., Mim, N. A., Akter, N., Jamal, F., Sakib, M. N., Mehjabin, K., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2024
+  venue: "International Conference on Environmental Science and Resource Management (ICESRM 2024)"
+  location: "Bangladesh"
+  type: conference
+  subtype: oral
+  categories:
+    - Environmental Health
+
+- title: "Temporal Trends and Factors Influencing Diarrhea Prevalence Among Children in the Rangamati Hill Tract Region: A Time Series Analysis"
+  authors: "Mim, N. A., Akter, N., Tuhin, M. A. A., Hossain, S., Alam, K. E., Mouli, N. J., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2024
+  venue: "International Conference on Environmental Science and Resource Management (ICESRM 2024)"
+  location: "Bangladesh"
+  type: conference
+  subtype: oral
+  categories:
+    - Public Health
+
+- title: "Quantitative Microbial Risk Assessment from Vancomycin-Resistant Enterococcus faecalis and Enterococcus faecium from a Specific Neighborhood in Dhaka City, Bangladesh"
+  authors: "Nayeem, M. U., Mrittika, M. A., **Hossain, M. J.**, Azad, A. K., Ferdous, J., Ahmed, S., Sanyal, S. K., & Towhid, S. T."
+  corresponding: false
+  year: 2023
+  venue: "36th Bangladesh Society of Microbiologists Annual Conference"
+  location: "Shahjalal University of Science and Technology, Sylhet, Bangladesh"
+  type: conference
+  subtype: oral
+  categories:
+    - Infectious Disease
+
+- title: "Factors Influencing Heat Stress Risk in Bangladesh"
+  authors: "**Hossain, M. J.**, Habiba, U., Rozario, C., Tuhin, M. L. A., Mabsurah, K., & Uddin, N. F."
+  corresponding: false
+  year: 2023
+  venue: "9th International Public Health Conference, Public Health Foundation at BMRC"
+  location: "Bangladesh"
+  type: conference
+  subtype: oral
+  categories:
+    - Environmental Health
+
+- title: "Monitoring Water-Borne Disease (Vibrio cholerae) Using NASA Earth Observation Data"
+  authors: "**Hossain, M. J.**, Nowshin, N., Momtaj, Yeana, I. Y., & Nohor, N."
+  corresponding: false
+  year: 2023
+  venue: "9th International Public Health Conference, Public Health Foundation at BMRC"
+  location: "Bangladesh"
+  type: conference
+  subtype: oral
+  categories:
+    - Environmental Health
+    - Infectious Disease

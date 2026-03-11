@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Bash(quarto render:*)"
+      "Bash(quarto render:*)",
+      "Bash(claude mcp:*)",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_resize"
     ]
   }
 }
