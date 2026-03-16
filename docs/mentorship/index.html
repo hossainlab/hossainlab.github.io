@@ -105,6 +105,34 @@ ul.task-list li input[type="checkbox"] {
   
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-mentor-endorsements .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-photo','listing-name','listing-initial','listing-role','listing-affiliation','listing-relation','listing-description',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-photo","listing-name","listing-initial","listing-role","listing-affiliation","listing-relation","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-mentor-endorsements'] = new List('listing-mentor-endorsements', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
     const listingTargetEl = window.document.querySelector('#listing-mentor-reviews .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
@@ -112,9 +140,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-initial','listing-plan-type','listing-stars','listing-description',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-photo','listing-title','listing-initial','listing-plan-type','listing-university','listing-department','listing-stars','listing-description',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-title","listing-initial","listing-plan-type","listing-stars","listing-description"],
+      searchColumns: ["listing-photo","listing-title","listing-initial","listing-plan-type","listing-university","listing-department","listing-stars","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -215,6 +243,10 @@ window.Quarto = {
         <li>
     <a class="dropdown-item" href="../teaching/videos.html">
  <span class="dropdown-text">Videos</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../teaching-portfolio/index.html">
+ <span class="dropdown-text">Teaching Portfolio</span></a>
   </li>  
     </ul>
   </li>
@@ -317,7 +349,7 @@ window.Quarto = {
     </div>
     <div class="mentor-info">
       <h1 class="mentor-name">Jubayer Hossain</h1>
-      <p class="mentor-title-line">Bioinformatician · Researcher · Educator</p>
+      <p class="mentor-title-line">Bioinformatics Scientist · Educator · Entrepreneur</p>
       <div class="mentor-meta-row">
         <span>📍 Bangladesh</span>
         <span>✅ Available now</span>
@@ -339,7 +371,7 @@ window.Quarto = {
       </div>
       <div class="mentor-cta-row">
         <a href="https://tidycal.com/hossainlab/30-minute-meeting" target="_blank" class="btn-apply-primary">📅 Book Free Intro Call</a>
-        <a href="mailto:contact.jubayerhossain@gmail.com" class="btn-message-outline">✉️ Send Message</a>
+        <a href="mailto:contact.jubayerhossain@gmail.com" class="btn-message-outline">✉️ Send Email</a>
       </div>
     </div>
   </div>
@@ -353,39 +385,39 @@ window.Quarto = {
 </div>
 
 <div class="mentor-section-header">
-  <h2 class="mentor-section-title anchored">Choose Your Plan</h2>
+  <h2 class="mentor-section-title anchored">Choose Your Track</h2>
   <p class="mentor-section-sub">🔥 Only a few spots available — apply early!</p>
 </div>
 <div id="listing-mentor-plans" class="quarto-listing quarto-listing-container-custom">
 <div class="mplan-grid">
 <div class="mplan-card">
 <div class="mplan-name">
-Starter
+Skill Acquisition
 </div>
 <p class="mplan-price-row">
-<span class="mplan-price">$99</span><span class="mplan-unit"> / month</span>
+<span class="mplan-price">$50</span><span class="mplan-unit"> / month</span>
 </p>
 <p class="mplan-price-bdt">
 <span class="mplan-bdt-amount">৳5,000</span><span class="mplan-bdt-unit"> / month</span>
 </p>
 <p class="mplan-desc">
-Ideal for students and beginners exploring bioinformatics
+Foundational track for students transitioning to computational biology and dry-lab research.
 </p>
 <ul class="mplan-features">
 <li>
-2 calls per month (45 min each)
+2 Mentorship Session / month (50 min each)
 </li>
 <li>
-Unlimited Q&amp;A via chat
+Unlimited Technical Q&amp;A via chat
 </li>
 <li>
-Personalised learning roadmap
+Personalized Academic Roadmap
 </li>
 <li>
-Curated resources &amp; reading lists
+Curated Research Bibliography &amp; Resources
 </li>
 <li>
-Response within 24 hours
+Guided Learning Support (24h response)
 </li>
 </ul>
 <a href="https://tidycal.com/hossainlab/30-minute-meeting" target="_blank" class="mplan-btn mplan-btn-outline">Apply Now</a>
@@ -398,7 +430,7 @@ Start with a free 30-min intro call
 Most Popular
 </div>
 <div class="mplan-name">
-Standard
+Publication Track
 </div>
 <p class="mplan-price-row">
 <span class="mplan-price">$199</span><span class="mplan-unit"> / month</span>
@@ -407,26 +439,26 @@ Standard
 <span class="mplan-bdt-amount">৳10,000</span><span class="mplan-bdt-unit"> / month</span>
 </p>
 <p class="mplan-desc">
-For researchers ready to work on real bioinformatics projects
+Research-intensive mentorship for students ready to analyze real-world datasets for scientific contribution.
 </p>
 <ul class="mplan-features">
 <li>
-4 calls per month (45 min each)
+4 Mentorship Tutorials / month (45 min each)
 </li>
 <li>
-Unlimited Q&amp;A via chat
+Hands-on Project Supervision
 </li>
 <li>
-Personalised learning roadmap
+Code Review &amp; Pipeline Optimization
 </li>
 <li>
-Hands-on project guidance
+Biological Data Interpretation
 </li>
 <li>
-Code &amp; analysis reviews
+Unlimited Technical Q&amp;A via chat
 </li>
 <li>
-Response within 12 hours
+Priority Academic Support (12h response)
 </li>
 </ul>
 <a href="https://tidycal.com/hossainlab/30-minute-meeting" target="_blank" class="mplan-btn">Apply Now</a>
@@ -436,7 +468,7 @@ Start with a free 30-min intro call
 </div>
 <div class="mplan-card">
 <div class="mplan-name">
-Intensive
+Dissertation &amp; Thesis Support
 </div>
 <p class="mplan-price-row">
 <span class="mplan-price">$349</span><span class="mplan-unit"> / month</span>
@@ -445,26 +477,26 @@ Intensive
 <span class="mplan-bdt-amount">৳15,000</span><span class="mplan-bdt-unit"> / month</span>
 </p>
 <p class="mplan-desc">
-For fast-track skill development and career acceleration
+Advanced mentorship for final-year students focused on thesis completion and career transition.
 </p>
 <ul class="mplan-features">
 <li>
-8 calls per month (45 min each)
+8 Mentorship Tutorials / month (45 min each)
 </li>
 <li>
-Unlimited Q&amp;A via chat
+Full Dissertation &amp; Project Mentorship
 </li>
 <li>
-Full project mentorship
+Manuscript &amp; Abstract Peer-Review
 </li>
 <li>
-CV &amp; manuscript review
+Academic CV &amp; Portfolio Development
 </li>
 <li>
-Interview preparation
+PhD &amp; Industry Interview Prep
 </li>
 <li>
-Priority response within 6 hours
+Urgent Academic Support (6h response)
 </li>
 </ul>
 <a href="https://tidycal.com/hossainlab/30-minute-meeting" target="_blank" class="mplan-btn mplan-btn-outline">Apply Now</a>
@@ -521,6 +553,47 @@ Start with a free 30-min intro call
 </div>
 
 <div class="mentor-section-header">
+  <h2 class="mentor-section-title anchored">What Mentors &amp; Collaborators Say</h2>
+</div>
+<div id="listing-mentor-endorsements" class="quarto-listing quarto-listing-container-custom">
+<div class="mreview-grid">
+<div class="mreview-card">
+<div class="mendorse-card-top">
+<span class="mendorse-quote">“</span><span class="mendorse-relation-badge">PhD Mentor</span>
+</div>
+<p class="mreview-text">
+Jubayer is one of the most dedicated and intellectually curious researchers I have had the pleasure of mentoring. His ability to bridge wet-lab biology with rigorous computational analysis is rare and impressive. He brings both technical depth and genuine enthusiasm to every project he undertakes.
+</p>
+<div class="mreview-author">
+<span class="mreview-avatar">D</span><span class="mreview-authorinfo"><strong class="mreview-name">Dr.&nbsp;[Name]</strong><br><small class="mreview-plan">Associate Professor, Department of Computational Biology</small><br><small class="mreview-plan">[University Name]</small></span>
+</div>
+</div>
+<div class="mreview-card">
+<div class="mendorse-card-top">
+<span class="mendorse-quote">“</span><span class="mendorse-relation-badge">Research Collaborator</span>
+</div>
+<p class="mreview-text">
+Collaborating with Jubayer on our multi-omics project was a truly rewarding experience. He is methodical, communicative, and consistently delivers high-quality analyses. His expertise in single-cell RNA-seq and machine learning made a significant contribution to our shared work.
+</p>
+<div class="mreview-author">
+<span class="mreview-avatar">D</span><span class="mreview-authorinfo"><strong class="mreview-name">Dr.&nbsp;[Name]</strong><br><small class="mreview-plan">Senior Bioinformatics Scientist</small><br><small class="mreview-plan">[Institution Name]</small></span>
+</div>
+</div>
+<div class="mreview-card">
+<div class="mendorse-card-top">
+<span class="mendorse-quote">“</span><span class="mendorse-relation-badge">Collaborator</span>
+</div>
+<p class="mreview-text">
+Jubayer’s contributions to our cancer genomics research were outstanding. His deep understanding of NGS data analysis and his ability to translate complex findings into actionable insights set him apart. I would highly recommend him to any researcher seeking a skilled and reliable computational collaborator.
+</p>
+<div class="mreview-author">
+<span class="mreview-avatar">D</span><span class="mreview-authorinfo"><strong class="mreview-name">Dr.&nbsp;[Name]</strong><br><small class="mreview-plan">Principal Investigator, Cancer Genomics Lab</small><br><small class="mreview-plan">[Research Institute]</small></span>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+<div class="mentor-section-header">
   <h2 class="mentor-section-title anchored">What Mentees Say</h2>
 </div>
 <div id="listing-mentor-reviews" class="quarto-listing quarto-listing-container-custom">
@@ -530,10 +603,10 @@ Start with a free 30-min intro call
 ★★★★★
 </div>
 <p class="mreview-text">
-Jubayer is an exceptional mentor. He guided me through my first scRNA-seq analysis step by step — from QC to clustering and differential expression. He doesn’t just give you the code; he makes sure you understand every step. I now feel confident running my own pipelines independently.
+I had the privilege of being mentored by Jubayer during my GSA Bioinformatics Internship. His mentorship was transformative — he not only taught me the technical skills but also how to think critically about data and research questions. His guidance was instrumental in my successful internship experience.
 </p>
 <div class="mreview-author">
-<span class="mreview-avatar">R</span><span class="mreview-authorinfo"><strong class="mreview-name">Rahnuma T.</strong><br><small class="mreview-plan">Standard Plan · 3 months</small></span>
+<span class="mreview-avatar">R</span><span class="mreview-authorinfo"><strong class="mreview-name">Rahnuma T.</strong><br><small class="mreview-plan">GSA Bioinformatics Internship · 6 months</small><br><small class="mreview-plan">Jagannath University</small><br><small class="mreview-plan">Biochemistry &amp; Molecular Biology</small></span>
 </div>
 </div>
 <div class="mreview-card">
@@ -541,10 +614,10 @@ Jubayer is an exceptional mentor. He guided me through my first scRNA-seq analys
 ★★★★★
 </div>
 <p class="mreview-text">
-As a wet-lab biologist transitioning into computational work, I was completely lost with RNA-seq analysis. Jubayer built a curriculum perfectly matched to my pace — covering Python basics, then bulk RNA-seq with DESeq2, and finally visualisation. His patience and clear explanations are truly remarkable.
+Jubayer’s mentorship during my GSA Bioinformatics Internship was exceptional. He provided clear guidance, constructive feedback, and was always available to answer my questions. His mentorship significantly enhanced my learning experience and helped me develop the skills needed for my research.
 </p>
 <div class="mreview-author">
-<span class="mreview-avatar">F</span><span class="mreview-authorinfo"><strong class="mreview-name">Fayez A.</strong><br><small class="mreview-plan">Starter Plan · 2 months</small></span>
+<span class="mreview-avatar">F</span><span class="mreview-authorinfo"><strong class="mreview-name">Fayez A.</strong><br><small class="mreview-plan">GSA Bioinformatics Internship · 6 months</small></span>
 </div>
 </div>
 <div class="mreview-card">
@@ -552,10 +625,32 @@ As a wet-lab biologist transitioning into computational work, I was completely l
 ★★★★★
 </div>
 <p class="mreview-text">
-I came to Jubayer wanting to learn multi-omics integration for my PhD research. Not only did he teach me the technical skills, but he also helped me frame my research questions and think like a computational biologist. His mentorship significantly shaped my thesis work.
+I am incredibly grateful for Jubayer’s mentorship during my GSA Bioinformatics Internship. He was patient, knowledgeable, and always willing to go the extra mile to ensure I understood the material. His mentorship played a crucial role in my growth as a bioinformatician and my successful completion of the internship.
 </p>
 <div class="mreview-author">
-<span class="mreview-avatar">L</span><span class="mreview-authorinfo"><strong class="mreview-name">Lamisa M.</strong><br><small class="mreview-plan">Standard Plan · 4 months</small></span>
+<span class="mreview-avatar">L</span><span class="mreview-authorinfo"><strong class="mreview-name">Lamisa M.</strong><br><small class="mreview-plan">GSA Bioinformatics Internship · 6 months</small></span>
+</div>
+</div>
+<div class="mreview-card">
+<div class="mreview-stars">
+★★★★★
+</div>
+<p class="mreview-text">
+Jubayer’s mentorship during my GSA Bioinformatics Internship was outstanding. He provided me with the tools and knowledge I needed to succeed, and his encouragement kept me motivated throughout the internship. I am thankful for his support and guidance, which were key to my successful experience.
+</p>
+<div class="mreview-author">
+<span class="mreview-avatar">S</span><span class="mreview-authorinfo"><strong class="mreview-name">Sabbir K.</strong><br><small class="mreview-plan">GSA Bioinformatics Internship · 6 months</small></span>
+</div>
+</div>
+<div class="mreview-card">
+<div class="mreview-stars">
+★★★★★
+</div>
+<p class="mreview-text">
+Jubayer’s mentorship during my GSA Bioinformatics Internship was invaluable. He was always approachable and provided insightful feedback that helped me improve my skills. His mentorship not only enhanced my technical abilities but also boosted my confidence in tackling complex bioinformatics problems.
+</p>
+<div class="mreview-author">
+<span class="mreview-avatar">M</span><span class="mreview-authorinfo"><strong class="mreview-name">Md Shakil A.</strong><br><small class="mreview-plan">GSA Bioinformatics Internship · 6 months</small></span>
 </div>
 </div>
 </div>

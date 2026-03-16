@@ -1,0 +1,279 @@
+<% const d = items[0]; %>
+<!-- PDF Download Bar -->
+<div class="tp-download-bar no-print">
+<div class="tp-download-bar-inner">
+<span class="tp-download-label">📄 Teaching Portfolio — <%= d.name %></span>
+<button class="tp-download-btn" onclick="window.print()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download as PDF</button>
+</div>
+</div>
+<!-- Header -->
+<div class="tp-header print-section">
+<div class="tp-header-inner">
+<div class="tp-photo-col">
+<img src="<%= d.photo %>" alt="<%= d.name %>" class="tp-profile-photo">
+</div>
+<div class="tp-header-info">
+<h1 class="tp-name"><%= d.name %></h1>
+<p class="tp-title"><%= d.title %></p>
+<p class="tp-affiliation"><strong><%= d.institution %></strong> · <%= d.department %></p>
+<p class="tp-location">📍 <%= d.location %></p>
+<div class="tp-contact-row">
+<a href="mailto:<%= d.email %>" class="tp-contact-link">✉️ <%= d.email %></a>
+<a href="https://orcid.org/<%= d.orcid %>" target="_blank" class="tp-contact-link">🔗 ORCID: <%= d.orcid %></a>
+<a href="<%= d.website %>" target="_blank" class="tp-contact-link">🌐 <%= d.website.replace('https://','') %></a>
+</div>
+</div>
+</div>
+</div>
+<!-- Stats Strip -->
+<div class="tp-stats-strip">
+<% for (const stat of d.stats) { %>
+<div class="tp-stat">
+<div class="tp-stat-num"><%= stat.num %></div>
+<div class="tp-stat-label"><%= stat.label %></div>
+</div>
+<% } %>
+</div>
+<!-- Section 01: Teaching Philosophy -->
+<div class="tp-section print-section">
+<div class="tp-section-header">
+<span class="tp-section-num">01</span>
+<h2 class="tp-section-title">Teaching Philosophy</h2>
+</div>
+<div class="tp-section-body">
+<div class="tp-philosophy-statement">
+<p><%= d.philosophy_statement %></p>
+</div>
+<div class="tp-principles-grid">
+<% for (const p of d.philosophy_principles) { %>
+<div class="tp-principle-card">
+<div class="tp-principle-icon"><%= p.icon %></div>
+<div class="tp-principle-content">
+<h4 class="tp-principle-title"><%= p.title %></h4>
+<p class="tp-principle-desc"><%= p.description %></p>
+</div>
+</div>
+<% } %>
+</div>
+</div>
+</div>
+<!-- Section 02: Teaching Experience -->
+<div class="tp-section print-section">
+<div class="tp-section-header">
+<span class="tp-section-num">02</span>
+<h2 class="tp-section-title">Teaching Experience</h2>
+</div>
+<div class="tp-section-body">
+<div class="tp-table-wrap">
+<table class="tp-table">
+<thead>
+<tr>
+<th>Year(s)</th>
+<th>Course / Module</th>
+<th>Institution</th>
+<th>Level</th>
+<th>Students</th>
+<th>Role</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<% for (const c of d.courses_taught) { %>
+<tr>
+<td class="tp-td-year"><%= c.year %></td>
+<td class="tp-td-course"><% if (c.url) { %><a href="<%= c.url %>" target="_blank" class="tp-table-link"><%= c.course %></a><% } else { %><%= c.course %><% } %></td>
+<td><%= c.institution %></td>
+<td><span class="tp-level-badge"><%= c.level %></span></td>
+<td class="tp-td-center"><%= c.students %>+</td>
+<td><span class="tp-role-badge"><%= c.role %></span></td>
+<td><%= c.format %></td>
+</tr>
+<% } %>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Section 03: Supervision -->
+<div class="tp-section print-section">
+<div class="tp-section-header">
+<span class="tp-section-num">03</span>
+<h2 class="tp-section-title">Supervision Experience</h2>
+</div>
+<div class="tp-section-body">
+<div class="tp-table-wrap">
+<table class="tp-table">
+<thead>
+<tr>
+<th>Year</th>
+<th>Project / Thesis Title</th>
+<th>Institution</th>
+<th>Level</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<% for (const s of d.supervision) { %>
+<tr>
+<td class="tp-td-year"><%= s.year %></td>
+<td><em><%= s.title %></em></td>
+<td><%= s.institution %></td>
+<td><span class="tp-level-badge"><%= s.level %></span></td>
+<td><span class="tp-role-badge"><%= s.role %></span></td>
+</tr>
+<% } %>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Section 04: Learning Materials -->
+<div class="tp-section print-section">
+<div class="tp-section-header">
+<span class="tp-section-num">04</span>
+<h2 class="tp-section-title">Learning Materials Produced</h2>
+</div>
+<div class="tp-section-body">
+<div class="tp-materials-grid">
+<% for (const mat of d.materials) { %>
+<div class="tp-material-card">
+<div class="tp-material-header">
+<span class="tp-material-icon"><%= mat.icon %></span>
+<span class="tp-material-type"><%= mat.type %></span>
+</div>
+<h4 class="tp-material-title"><% if (mat.url) { %><a href="<%= mat.url %>" target="_blank" class="tp-table-link"><%= mat.title %></a><% } else { %><%= mat.title %><% } %></h4>
+<p class="tp-material-desc"><%= mat.description %></p>
+<div class="tp-material-tags">
+<% for (const tag of mat.tags) { %>
+<span class="tp-tag"><%= tag %></span>
+<% } %>
+</div>
+</div>
+<% } %>
+</div>
+</div>
+</div>
+<!-- Section 05: Pedagogical Studies -->
+<div class="tp-section print-section">
+<div class="tp-section-header">
+<span class="tp-section-num">05</span>
+<h2 class="tp-section-title">Pedagogical Studies &amp; Professional Development</h2>
+</div>
+<div class="tp-section-body">
+<div class="tp-timeline">
+<% for (const ps of d.pedagogical_studies) { %>
+<div class="tp-timeline-item">
+<div class="tp-timeline-year"><%= ps.year %></div>
+<div class="tp-timeline-dot"></div>
+<div class="tp-timeline-content">
+<div class="tp-timeline-activity"><%= ps.activity %></div>
+<div class="tp-timeline-meta"><%= ps.institution %> · <span class="tp-type-chip"><%= ps.type %></span></div>
+</div>
+</div>
+<% } %>
+</div>
+</div>
+</div>
+<!-- Section 06: Student Feedback -->
+<div class="tp-section print-section">
+<div class="tp-section-header">
+<span class="tp-section-num">06</span>
+<h2 class="tp-section-title">Student Feedback &amp; Evaluations</h2>
+</div>
+<div class="tp-section-body">
+<div class="tp-feedback-grid">
+<% for (const fb of d.feedback) { %>
+<div class="tp-feedback-card">
+<div class="tp-feedback-stars"><% for (let i = 0; i < fb.stars; i++) { %><span class="tp-star">★</span><% } %></div>
+<blockquote class="tp-feedback-quote">"<%= fb.quote %>"</blockquote>
+<div class="tp-feedback-meta">
+<strong><%= fb.student %></strong>
+<span class="tp-feedback-course"><%= fb.course %></span>
+<span class="tp-feedback-institution"><%= fb.institution %></span>
+</div>
+</div>
+<% } %>
+</div>
+</div>
+</div>
+<!-- Section 07: Awards -->
+<div class="tp-section print-section">
+<div class="tp-section-header">
+<span class="tp-section-num">07</span>
+<h2 class="tp-section-title">Teaching Awards &amp; Recognition</h2>
+</div>
+<div class="tp-section-body">
+<div class="tp-awards-list">
+<% for (const award of d.awards) { %>
+<div class="tp-award-item">
+<div class="tp-award-year"><%= award.year %></div>
+<div class="tp-award-content">
+<div class="tp-award-name">🏆 <%= award.award %></div>
+<div class="tp-award-institution"><%= award.institution %></div>
+<div class="tp-award-desc"><%= award.description %></div>
+</div>
+</div>
+<% } %>
+</div>
+</div>
+</div>
+<!-- Section 08: Teaching Demonstration -->
+<div class="tp-section print-section">
+<div class="tp-section-header">
+<span class="tp-section-num">08</span>
+<h2 class="tp-section-title">Teaching Demonstration</h2>
+</div>
+<div class="tp-section-body">
+<div class="tp-demo-card">
+<div class="tp-demo-grid">
+<div class="tp-demo-field"><span class="tp-demo-label">Topic</span><span class="tp-demo-value"><strong><%= d.demonstration.topic %></strong></span></div>
+<div class="tp-demo-field"><span class="tp-demo-label">Date</span><span class="tp-demo-value"><%= d.demonstration.date %></span></div>
+<div class="tp-demo-field"><span class="tp-demo-label">Venue</span><span class="tp-demo-value"><%= d.demonstration.venue %></span></div>
+<div class="tp-demo-field"><span class="tp-demo-label">Audience</span><span class="tp-demo-value"><%= d.demonstration.audience %></span></div>
+<div class="tp-demo-field"><span class="tp-demo-label">Format</span><span class="tp-demo-value"><%= d.demonstration.format %></span></div>
+<div class="tp-demo-field tp-demo-full"><span class="tp-demo-label">Outcome</span><span class="tp-demo-value"><%= d.demonstration.outcome %></span></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 09: Development -->
+<div class="tp-section print-section">
+<div class="tp-section-header">
+<span class="tp-section-num">09</span>
+<h2 class="tp-section-title">Curriculum &amp; Pedagogical Development</h2>
+</div>
+<div class="tp-section-body">
+<div class="tp-dev-list">
+<% for (const dev of d.development) { %>
+<div class="tp-dev-item">
+<div class="tp-dev-dot"></div>
+<div class="tp-dev-content">
+<div class="tp-dev-activity"><strong><%= dev.activity %></strong></div>
+<div class="tp-dev-desc"><%= dev.description %></div>
+</div>
+</div>
+<% } %>
+</div>
+</div>
+</div>
+<!-- Bottom CTA -->
+<div class="tp-bottom-cta no-print">
+<div class="tp-cta-content">
+<h3>Want to collaborate on educational initiatives?</h3>
+<p>I am open to curriculum development partnerships, guest lectures, and collaborative research in computational biology education.</p>
+<div class="tp-cta-btns">
+<a href="mailto:<%= d.email %>" class="tp-cta-primary">✉️ Get in Touch</a>
+<button class="tp-cta-secondary" onclick="window.print()"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:5px"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download as PDF</button>
+</div>
+</div>
+</div>
+<!-- Print-only footer -->
+<div class="print-only-header">
+<div style="display:flex;align-items:center;gap:16px;margin-bottom:8px">
+<strong style="font-size:20px"><%= d.name %></strong>
+<span style="color:#555">·</span>
+<span style="color:#555"><%= d.title %></span>
+</div>
+<div style="color:#777;font-size:13px"><%= d.institution %> · <%= d.email %> · <%= d.website %></div>
+<hr style="margin:12px 0;border-color:#ddd">
+</div>

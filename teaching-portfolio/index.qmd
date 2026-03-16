@@ -1,0 +1,238 @@
+---
+title: "Teaching Portfolio"
+subtitle: "Jubayer Hossain · CHIRAL Bangladesh"
+format:
+  html:
+    toc: false
+    page-layout: full
+css: portfolio.css
+---
+
+```{python}
+#| echo: false
+
+from IPython.display import HTML, display
+import yaml
+from pathlib import Path
+
+# ── Load data ────────────────────────────────────────────────
+d = yaml.safe_load(Path("portfolio.yml").read_text(encoding="utf-8"))[0]
+
+# ── Helpers ──────────────────────────────────────────────────
+def esc(s):
+    if not s:
+        return ""
+    return str(s).replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")
+
+def link_or_text(text, url, cls=""):
+    t = esc(text)
+    if url:
+        c = f' class="{cls}"' if cls else ""
+        return f'<a href="{url}" target="_blank"{c}>{t}</a>'
+    return t
+
+def badge(text, kind="level"):
+    return f'<span class="pf-badge pf-badge-{kind}">{esc(text)}</span>'
+
+def stars(n):
+    return '<span class="pf-stars">' + "★" * n + '</span>'
+
+def section(num, title, body):
+    return f'<div class="pf-section"><div class="pf-section-head"><span class="pf-section-num">{num}</span><h2 class="pf-section-title">{title}</h2></div><div class="pf-section-body">{body}</div></div>'
+
+# ─────────────────────────────────────────────────────────────
+# HEADER
+# ─────────────────────────────────────────────────────────────
+contacts = (
+    f'<a href="mailto:{d["email"]}" class="pf-contact-pill">&#9993; {esc(d["email"])}</a>'
+    f'<a href="https://orcid.org/{d["orcid"]}" target="_blank" class="pf-contact-pill">ORCID: {esc(d["orcid"])}</a>'
+    f'<a href="{d["website"]}" target="_blank" class="pf-contact-pill">&#127760; {esc(d["website"].replace("https://",""))}</a>'
+)
+header = (
+    f'<div class="pf-header">'
+    f'<div class="pf-photo-col"><img src="{d["photo"]}" alt="{esc(d["name"])}" class="pf-photo"></div>'
+    f'<div class="pf-info">'
+    f'<div class="pf-name">{esc(d["name"])}</div>'
+    f'<div class="pf-title">{esc(d["title"])}</div>'
+    f'<div class="pf-affil">{esc(d["institution"])} &bull; {esc(d["department"])} &bull; {esc(d["location"])}</div>'
+    f'<div class="pf-contacts">{contacts}</div>'
+    f'</div></div>'
+)
+display(HTML(header))
+
+# ─────────────────────────────────────────────────────────────
+# STATS
+# ─────────────────────────────────────────────────────────────
+stats_html = '<div class="pf-stats">'
+for s in d['stats']:
+    stats_html += f'<div class="pf-stat"><span class="pf-stat-num">{esc(s["num"])}</span><span class="pf-stat-label">{esc(s["label"])}</span></div>'
+stats_html += '</div>'
+display(HTML(stats_html))
+
+# ─────────────────────────────────────────────────────────────
+# 01  TEACHING PHILOSOPHY
+# ─────────────────────────────────────────────────────────────
+principles = ''
+for p in d['philosophy_principles']:
+    principles += (
+        f'<div class="pf-principle">'
+        f'<span class="pf-principle-icon">{p["icon"]}</span>'
+        f'<div><div class="pf-principle-title">{esc(p["title"])}</div>'
+        f'<div class="pf-principle-desc">{esc(p["description"])}</div></div>'
+        f'</div>'
+    )
+body = f'<div class="pf-philosophy-quote">{esc(d["philosophy_statement"])}</div><div class="pf-principles">{principles}</div>'
+display(HTML(section("01", "Teaching Philosophy", body)))
+
+# ─────────────────────────────────────────────────────────────
+# 02  TEACHING EXPERIENCE
+# ─────────────────────────────────────────────────────────────
+rows = ""
+for c in d['courses_taught']:
+    title_cell = link_or_text(c['course'], c.get('url',''), 'pf-td-link')
+    rows += (
+        f'<tr>'
+        f'<td class="pf-td-year">{esc(c["year"])}</td>'
+        f'<td class="pf-td-title">{title_cell}</td>'
+        f'<td>{esc(c["institution"])}</td>'
+        f'<td>{badge(c["level"],"level")}</td>'
+        f'<td style="text-align:center;font-weight:600">{c["students"]}+</td>'
+        f'<td>{badge(c["role"],"role")}</td>'
+        f'<td style="font-size:0.78rem;color:#64748b">{esc(c["format"])}</td>'
+        f'</tr>'
+    )
+body = (
+    f'<div style="overflow-x:auto"><table class="pf-table">'
+    f'<thead><tr><th>Year(s)</th><th>Course / Module</th><th>Institution</th>'
+    f'<th>Level</th><th>Students</th><th>Role</th><th>Format</th></tr></thead>'
+    f'<tbody>{rows}</tbody></table></div>'
+)
+display(HTML(section("02", "Teaching Experience", body)))
+
+# ─────────────────────────────────────────────────────────────
+# 03  SUPERVISION
+# ─────────────────────────────────────────────────────────────
+rows = ""
+for s in d['supervision']:
+    rows += (
+        f'<tr>'
+        f'<td class="pf-td-year">{esc(s["year"])}</td>'
+        f'<td class="pf-td-title"><em>{esc(s["title"])}</em></td>'
+        f'<td>{esc(s["institution"])}</td>'
+        f'<td>{badge(s["level"],"level")}</td>'
+        f'<td>{badge(s["role"],"role")}</td>'
+        f'</tr>'
+    )
+body = (
+    f'<div style="overflow-x:auto"><table class="pf-table">'
+    f'<thead><tr><th>Year</th><th>Project / Thesis Title</th><th>Institution</th><th>Level</th><th>Role</th></tr></thead>'
+    f'<tbody>{rows}</tbody></table></div>'
+)
+display(HTML(section("03", "Supervision Experience", body)))
+
+# ─────────────────────────────────────────────────────────────
+# 04  LEARNING MATERIALS
+# ─────────────────────────────────────────────────────────────
+cards = ""
+for m in d['materials']:
+    title_html = link_or_text(m['title'], m.get('url',''), '')
+    tag_html = "".join(f'<span class="pf-tag">{esc(t)}</span>' for t in m.get('tags',[]))
+    cards += (
+        f'<div class="pf-material">'
+        f'<div class="pf-material-type">{m["icon"]} {esc(m["type"])}</div>'
+        f'<div class="pf-material-title">{title_html}</div>'
+        f'<div class="pf-material-desc">{esc(m["description"])}</div>'
+        f'<div class="pf-tags">{tag_html}</div>'
+        f'</div>'
+    )
+display(HTML(section("04", "Learning Materials Produced", f'<div class="pf-materials">{cards}</div>')))
+
+# ─────────────────────────────────────────────────────────────
+# 05  PEDAGOGICAL STUDIES
+# ─────────────────────────────────────────────────────────────
+items_html = ""
+for p in d['pedagogical_studies']:
+    items_html += (
+        f'<div class="pf-tl-item">'
+        f'<div class="pf-tl-year">{esc(p["year"])}</div>'
+        f'<div class="pf-tl-dot"></div>'
+        f'<div><div class="pf-tl-text">{esc(p["activity"])}</div>'
+        f'<div class="pf-tl-meta">{esc(p["institution"])} <span class="pf-chip">{esc(p["type"])}</span></div></div>'
+        f'</div>'
+    )
+display(HTML(section("05", "Pedagogical Studies &amp; Professional Development", f'<div class="pf-timeline">{items_html}</div>')))
+
+# ─────────────────────────────────────────────────────────────
+# 06  STUDENT FEEDBACK
+# ─────────────────────────────────────────────────────────────
+cards = ""
+for fb in d['feedback']:
+    cards += (
+        f'<div class="pf-feedback-card">'
+        f'{stars(fb["stars"])}'
+        f'<div class="pf-quote">{esc(fb["quote"])}</div>'
+        f'<span class="pf-reviewer-name">{esc(fb["student"])}</span>'
+        f'<span class="pf-reviewer-meta">{esc(fb["course"])} &bull; {esc(fb["institution"])}</span>'
+        f'</div>'
+    )
+display(HTML(section("06", "Student Feedback &amp; Evaluations", f'<div class="pf-feedback">{cards}</div>')))
+
+# ─────────────────────────────────────────────────────────────
+# 07  AWARDS
+# ─────────────────────────────────────────────────────────────
+items_html = ""
+for a in d['awards']:
+    items_html += (
+        f'<div class="pf-award">'
+        f'<span class="pf-award-year">{esc(a["year"])}</span>'
+        f'<div><div class="pf-award-name">&#127942; {esc(a["award"])}</div>'
+        f'<div class="pf-award-inst">{esc(a["institution"])}</div>'
+        f'<div class="pf-award-desc">{esc(a["description"])}</div></div>'
+        f'</div>'
+    )
+display(HTML(section("07", "Teaching Awards &amp; Recognition", f'<div class="pf-awards">{items_html}</div>')))
+
+# ─────────────────────────────────────────────────────────────
+# 08  TEACHING DEMONSTRATION
+# ─────────────────────────────────────────────────────────────
+dm = d['demonstration']
+demo_body = (
+    f'<div class="pf-demo"><div class="pf-demo-grid">'
+    f'<div><span class="pf-demo-label">Topic</span><span class="pf-demo-value"><strong>{esc(dm["topic"])}</strong></span></div>'
+    f'<div><span class="pf-demo-label">Date</span><span class="pf-demo-value">{esc(dm["date"])}</span></div>'
+    f'<div><span class="pf-demo-label">Venue</span><span class="pf-demo-value">{esc(dm["venue"])}</span></div>'
+    f'<div><span class="pf-demo-label">Audience</span><span class="pf-demo-value">{esc(dm["audience"])}</span></div>'
+    f'<div><span class="pf-demo-label">Format</span><span class="pf-demo-value">{esc(dm["format"])}</span></div>'
+    f'<div class="pf-demo-full"><span class="pf-demo-label">Outcome</span><span class="pf-demo-value">{esc(dm["outcome"])}</span></div>'
+    f'</div></div>'
+)
+display(HTML(section("08", "Teaching Demonstration", demo_body)))
+
+# ─────────────────────────────────────────────────────────────
+# 09  CURRICULUM DEVELOPMENT
+# ─────────────────────────────────────────────────────────────
+items_html = ""
+for dev in d['development']:
+    items_html += (
+        f'<div class="pf-dev-item">'
+        f'<div class="pf-dev-dot"></div>'
+        f'<div><div class="pf-dev-title">{esc(dev["activity"])}</div>'
+        f'<div class="pf-dev-desc">{esc(dev["description"])}</div></div>'
+        f'</div>'
+    )
+display(HTML(section("09", "Curriculum &amp; Pedagogical Development", f'<div class="pf-dev">{items_html}</div>')))
+
+# ─────────────────────────────────────────────────────────────
+# BOTTOM CTA
+# ─────────────────────────────────────────────────────────────
+cta = (
+    f'<div class="pf-cta no-print">'
+    f'<h3>Want to collaborate on educational initiatives?</h3>'
+    f'<p>Open to curriculum development partnerships, guest lectures, and collaborative research in computational biology education.</p>'
+    f'<div class="pf-cta-btns">'
+    f'<a href="mailto:{d["email"]}" class="pf-cta-primary">&#9993; Get in Touch</a>'
+    f'<a href="javascript:window.print()" class="pf-cta-primary" style="background:#0f766e">&#128424; Print / Save as PDF</a>'
+    f'</div></div>'
+)
+display(HTML(cta))
+```

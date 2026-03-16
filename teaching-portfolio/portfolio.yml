@@ -1,0 +1,333 @@
+- path: ""
+  name: "Jubayer Hossain"
+  title: "Researcher & Educator in Computational Biology & Bioinformatics"
+  institution: "CHIRAL Bangladesh"
+  department: "Health Informatics"
+  location: "Dhaka, Bangladesh"
+  email: "contact.jubayerhossain@gmail.com"
+  photo: "../files/profiles/jubayer.jpg"
+  orcid: "0000-0001-9323-4997"
+  github: "hossainlab"
+  youtube: "@hossainlab"
+  website: "https://hossainlab.github.io"
+
+  # --- Quick Stats ---
+  stats:
+    - num: "6+"
+      label: "Years Teaching"
+    - num: "500+"
+      label: "Students Trained"
+    - num: "10+"
+      label: "Courses Designed"
+    - num: "50+"
+      label: "Workshops & Seminars"
+
+  # --- Teaching Philosophy ---
+  philosophy_statement: >
+    My teaching philosophy is rooted in the belief that computational skills should
+    be accessible to every biologist and health researcher — regardless of their
+    programming background. I design learning experiences that are hands-on, inquiry-driven,
+    and grounded in real biological problems. By connecting abstract concepts to
+    tangible datasets and clinical questions, I help students build not just technical
+    competence but scientific confidence. I continuously adapt my methods based on
+    student feedback, ensuring that each cohort receives a current, relevant, and
+    inclusive learning experience.
+
+  philosophy_principles:
+    - icon: "🔬"
+      title: "Real-World Problem Orientation"
+      description: >
+        Every concept is introduced through a concrete biological or clinical problem.
+        Students learn DESeq2 by analysing actual cancer RNA-seq data, not toy examples.
+        This approach sustains motivation and builds transferable analytical intuition.
+    - icon: "🤝"
+      title: "Inclusive & Accessible Learning"
+      description: >
+        I design courses that assume no prior programming experience. Step-by-step
+        scaffolding, bilingual explanations, and flexible pacing ensure students from
+        diverse backgrounds — wet-lab biologists, clinicians, public health professionals —
+        can thrive alongside computational experts.
+    - icon: "🔄"
+      title: "Iterative Feedback & Reflection"
+      description: >
+        I collect structured feedback after every session and course cohort.
+        Student evaluations directly shape the next iteration of my curriculum,
+        keeping content current and pedagogically sound.
+    - icon: "🛠️"
+      title: "Reproducible & Open Science"
+      description: >
+        All course materials — code, notebooks, datasets, and slides — are made
+        freely available on GitHub. I teach students to document their workflows
+        using R Markdown and Jupyter, embedding reproducibility as a scientific habit.
+    - icon: "🎯"
+      title: "Goal-Aligned Curriculum Design"
+      description: >
+        Courses are structured around learning outcomes mapped to real career goals:
+        publishing a bioinformatics paper, analysing a dissertation dataset, or
+        transitioning into computational research. Every session connects to a
+        tangible milestone.
+
+  # --- Teaching Experience ---
+  courses_taught:
+    - year: "2024–Present"
+      course: "Statistical Analysis with R for Research"
+      institution: "CHIRAL Bangladesh"
+      level: "Graduate / Professional"
+      students: 30
+      role: "Sole Instructor"
+      format: "Online (Live)"
+      url: "https://rforresearch.netlify.app/"
+    - year: "2024–Present"
+      course: "Transcriptomics Data Analysis (Bulk + Single Cell)"
+      institution: "CHIRAL Bangladesh"
+      level: "Graduate / Professional"
+      students: 25
+      role: "Sole Instructor"
+      format: "Online (Live)"
+      url: "https://github.com/hossainlab/transcriptomics"
+    - year: "2024"
+      course: "Biomarker Identification using Machine Learning"
+      institution: "CHIRAL Bangladesh"
+      level: "Graduate / Professional"
+      students: 20
+      role: "Sole Instructor"
+      format: "Online (Live)"
+      url: "https://github.com/hossainlab/biomarker_identification"
+    - year: "2024"
+      course: "Pan-Cancer Bioinformatics with R: Ideation to Publication"
+      institution: "CHIRAL Bangladesh"
+      level: "Graduate / Professional"
+      students: 18
+      role: "Sole Instructor"
+      format: "Online (Live)"
+      url: ""
+    - year: "2024"
+      course: "AI in Drug Discovery: In Silico Toxicology Modeling"
+      institution: "CHIRAL Bangladesh"
+      level: "Professional (Workshop)"
+      students: 40
+      role: "Sole Instructor"
+      format: "Online (1-day Workshop)"
+      url: ""
+    - year: "2023–2024"
+      course: "Data Science and Machine Learning for Biologists"
+      institution: "CBLAST, University of Dhaka"
+      level: "Undergraduate / Graduate"
+      students: 35
+      role: "Guest Lecturer"
+      format: "In-Person"
+      url: "https://github.com/hossainlab/dsb"
+    - year: "2022–Present"
+      course: "GSA Bioinformatics Internship Program"
+      institution: "CHIRAL Bangladesh (Global South Academics)"
+      level: "Undergraduate / Graduate"
+      students: 60
+      role: "Program Director & Lead Instructor"
+      format: "Online (Cohort-based)"
+      url: ""
+    - year: "2021–Present"
+      course: "Introduction to Bioinformatics (Python)"
+      institution: "CHIRAL Bangladesh"
+      level: "Undergraduate"
+      students: 50
+      role: "Sole Instructor"
+      format: "Online (Live)"
+      url: ""
+
+  # --- Supervision Experience ---
+  supervision:
+    - year: "2024"
+      title: "Identification of Prognostic Biomarkers in Non-Small Cell Lung Cancer using Bulk RNA-seq"
+      student: "Confidential (on request)"
+      institution: "University of Dhaka"
+      level: "Master's"
+      role: "Co-supervisor"
+    - year: "2024"
+      title: "Single-cell Transcriptomic Analysis of Tumour Microenvironment in Colorectal Cancer"
+      student: "Confidential (on request)"
+      institution: "CHIRAL Bangladesh"
+      level: "Research Project"
+      role: "Main Supervisor"
+    - year: "2023–2024"
+      title: "Machine Learning-Based Prediction of Drug Toxicity Using Molecular Descriptors"
+      student: "Confidential (on request)"
+      institution: "CHIRAL Bangladesh"
+      level: "Research Project"
+      role: "Main Supervisor"
+    - year: "2022–2023"
+      title: "Differential Gene Expression Analysis in COVID-19 Severity using Public GEO Datasets"
+      student: "Confidential (on request)"
+      institution: "CHIRAL Bangladesh / University of Dhaka"
+      level: "Bachelor's"
+      role: "Co-supervisor"
+    - year: "2022"
+      title: "Epidemiological Modelling of Dengue Transmission in Urban Bangladesh"
+      student: "Confidential (on request)"
+      institution: "CHIRAL Bangladesh"
+      level: "Research Project"
+      role: "Main Supervisor"
+
+  # --- Pedagogical Studies & Professional Development ---
+  pedagogical_studies:
+    - year: "2024"
+      activity: "Teaching Statistics and Machine Learning to Biologists"
+      institution: "Self-designed Curriculum Development (CHIRAL Bangladesh)"
+      type: "Curriculum Design"
+    - year: "2023"
+      activity: "Science Communication & Open Educational Resources Workshop"
+      institution: "Online (International)"
+      type: "Workshop"
+    - year: "2023"
+      activity: "Bioinformatics Training Network — Instructor Collaboration"
+      institution: "Global Bioinformatics Community"
+      type: "Collaborative Teaching"
+    - year: "2022"
+      activity: "Introduction to Online Course Design (Coursera / edX platforms)"
+      institution: "Online (Self-paced)"
+      type: "Online Course"
+    - year: "2021"
+      activity: "Teaching and Learning in Higher Education (Pedagogy Foundations)"
+      institution: "Online (Self-paced)"
+      type: "Online Course"
+    - year: "2020–Present"
+      activity: "Continuous Learning via RStudio Conf, Bioconductor Conference, PyCon"
+      institution: "Various (Annual)"
+      type: "Conference / Seminar"
+
+  # --- Learning Materials Produced ---
+  materials:
+    - type: "Online Course"
+      icon: "📚"
+      title: "Statistical Analysis with R for Research"
+      description: "Comprehensive course covering data manipulation, visualisation, hypothesis testing, and regression analysis using R. Designed for researchers with no prior programming experience."
+      url: "https://rforresearch.netlify.app/"
+      tags:
+        - "R"
+        - "Statistics"
+        - "ggplot2"
+    - type: "Course Repository"
+      icon: "💻"
+      title: "Transcriptomics Data Analysis (Bulk + scRNA-seq)"
+      description: "Full course materials including R Markdown notebooks, annotated code, and datasets for RNA-seq and single-cell analysis using DESeq2, Seurat, and Scanpy."
+      url: "https://github.com/hossainlab/transcriptomics"
+      tags:
+        - "RNA-seq"
+        - "scRNA-seq"
+        - "Bioconductor"
+    - type: "Video Tutorials"
+      icon: "🎬"
+      title: "Bioinformatics Video Tutorial Series (YouTube)"
+      description: "50+ hours of video tutorials on bioinformatics, computational biology, Python, and R published on YouTube, freely accessible to learners worldwide."
+      url: "https://www.youtube.com/@hossainlab"
+      tags:
+        - "YouTube"
+        - "Video"
+        - "Open Access"
+    - type: "Course Repository"
+      icon: "🤖"
+      title: "Data Science and Machine Learning for Biologists"
+      description: "Open-source course materials covering data processing, visualisation, and machine learning with Python and R, applied to genomics and health data."
+      url: "https://github.com/hossainlab/dsb"
+      tags:
+        - "Python"
+        - "Machine Learning"
+        - "scikit-learn"
+    - type: "Workshop Materials"
+      icon: "⚗️"
+      title: "AI in Drug Discovery: In Silico Toxicology Modeling"
+      description: "Hands-on workshop materials for applying machine learning to toxicology prediction problems in drug discovery, including Jupyter notebooks and datasets."
+      url: ""
+      tags:
+        - "RDKit"
+        - "Cheminformatics"
+        - "Drug Discovery"
+    - type: "GitHub Organization"
+      icon: "🐙"
+      title: "CHIRAL Bangladesh — Open Educational Resources"
+      description: "All CHIRAL Bangladesh course materials, pipelines, and internship resources maintained in open GitHub repositories for community access."
+      url: "https://github.com/hossainlab"
+      tags:
+        - "Open Science"
+        - "GitHub"
+        - "Community"
+
+  # --- Student Feedback ---
+  feedback:
+    - quote: >
+        Jubayer's teaching style is exceptional. He breaks down complex bioinformatics
+        concepts into digestible pieces and always provides real-world examples.
+        The hands-on approach during the GSA internship completely transformed my
+        understanding of RNA-seq analysis.
+      student: "GSA Internship Participant"
+      course: "GSA Bioinformatics Internship"
+      institution: "University of Dhaka"
+      stars: 5
+    - quote: >
+        The R for Research course was exactly what I needed as a PhD student. Jubayer
+        is patient, thorough, and genuinely invested in student success. I now use R
+        daily for my dissertation research.
+      student: "PhD Student"
+      course: "Statistical Analysis with R for Research"
+      institution: "BRAC University"
+      stars: 5
+    - quote: >
+        Learning single-cell RNA-seq analysis from Jubayer was a career-changing
+        experience. His step-by-step approach and availability for questions made
+        even the most challenging concepts accessible.
+      student: "Research Scientist"
+      course: "Transcriptomics Data Analysis"
+      institution: "CHIRAL Bangladesh"
+      stars: 5
+    - quote: >
+        The machine learning course gave me the exact tools I needed to advance my
+        biomarker research. Jubayer's ability to connect ML concepts to biological
+        problems is truly remarkable.
+      student: "Graduate Researcher"
+      course: "Biomarker Identification using Machine Learning"
+      institution: "University of Chittagong"
+      stars: 5
+    - quote: >
+        Jubayer's YouTube tutorials are a gold mine. They helped me get started with
+        bioinformatics when I had absolutely no idea where to begin. Clear, concise,
+        and incredibly practical.
+      student: "Undergraduate Student"
+      course: "Self-paced via YouTube"
+      institution: "Independent"
+      stars: 5
+
+  # --- Teaching Awards & Recognition ---
+  awards:
+    - year: "2024"
+      award: "Featured Educator — GSA Bioinformatics Program"
+      institution: "Global South Academics (GSA)"
+      description: "Recognised for outstanding contribution to bioinformatics education in South Asia through the GSA Internship Program."
+    - year: "2023"
+      award: "Open Science Champion"
+      institution: "CHIRAL Bangladesh"
+      description: "Awarded for commitment to open educational resources and freely sharing all course materials on GitHub and YouTube."
+    - year: "2022"
+      award: "Best Instructor — Bioinformatics Track"
+      institution: "CHIRAL Bangladesh Annual Review"
+      description: "Selected by student cohort vote for highest-rated instruction in the bioinformatics track."
+
+  # --- Teaching Demonstration ---
+  demonstration:
+    date: "March 2024"
+    topic: "Introduction to Single-Cell RNA-seq Analysis with Seurat in R"
+    venue: "CHIRAL Bangladesh Online Workshop"
+    audience: "Graduate students and early-career researchers"
+    format: "Live online demonstration (90 minutes)"
+    outcome: "Highly rated by participants; session recording made publicly available on YouTube"
+
+  # --- Pedagogical Development & Administration ---
+  development:
+    - activity: "Curriculum design for 8 original bioinformatics courses"
+      description: "Developed learning objectives, session plans, assessments, and feedback mechanisms for all CHIRAL Bangladesh training programs."
+    - activity: "GSA Internship Program Director"
+      description: "Founded and lead the Global South Academics Bioinformatics Internship, a structured 3-month program for undergraduate and graduate students across South Asia."
+    - activity: "YouTube Education Channel Management"
+      description: "Produce, edit, and maintain 50+ bioinformatics tutorial videos with over a thousand cumulative views, serving as open-access learning resources."
+    - activity: "GitHub Open Curriculum Maintainer"
+      description: "Maintain open-source course repositories enabling instructors and learners worldwide to access, fork, and adapt teaching materials."
+    - activity: "Peer Support & Mentorship"
+      description: "Provide ongoing technical mentorship to early-career bioinformatics instructors within the CHIRAL Bangladesh network."

@@ -8,4 +8,6 @@
 
 5. **Hossain, M. J.**\*, Shahariar, M., Barsha, LHJ. Shahjahan, M., Towhid, ST., Sheikh, MK., Hasan, MM., Rahman, MH., Sazid, MS. (2024). Lack of knowledge and training about antibiotic resistance among community pharmacists in Bangladesh: a cross-sectional study. [Under Review in Health Science Reports].
 
+6. Kundu, P., Shahariar, M., Munny, F. A., Riya, A. T., Lota, H. B., Ahmed, M. Z., Meme, M. A., Kona, U. M. P., Mahmuda, F., Chowdhury, S. S., Sraboni, S. A., & **Hossain, M. J.** (2026). Computational identification of Taxus baccata-derived phytochemicals targeting EZH2 to overcome therapeutic resistance in melanoma. Research Square. <https://doi.org/10.21203/rs.3.rs-8494315/v1>
+
 

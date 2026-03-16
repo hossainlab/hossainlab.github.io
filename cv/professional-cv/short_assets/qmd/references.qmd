@@ -1,20 +1,15 @@
-```{=typst}
-#grid(
-  columns: (1fr, 1fr, 1fr),
-  gutter: 1em,
-  [
-    *Dr. Syeda Tasneem Towhid* \
-    Associate Professor \
-    Department of Microbiology \
-    Jagannath University \
-    Email: towhidst\@mib.jnu.ac.bd
-  ],
-  [
-    *Dr. Md. Salequl Islam* \
-    Professor \
-    Department of Microbiology  \
-    Jahangirnagar University \
-    Email: salequl\@juniv.edu 
-  ]
-)
-```
+::: {layout="[[1, 1]]"}
+::: {#first-column}
+**Dr. Syeda Tasneem Towhid** Associate Professor  
+Department of Microbiology  
+Jagannath University  
+Email: towhidst@mib.jnu.ac.bd
+:::
+
+::: {#second-column style="text-align: right;"}
+**Dr. Md. Salequl Islam** Professor  
+Department of Microbiology  
+Jahangirnagar University  
+Email: salequl@juniv.edu
+:::
+:::

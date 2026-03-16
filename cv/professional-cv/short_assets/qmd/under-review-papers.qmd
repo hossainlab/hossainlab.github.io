@@ -3,3 +3,4 @@
 2. Islam, M. W., Fariha, F. T. J., Ahmed, M. Z., Ferdous, J., Lota, H. B., Hossain, M. S., Kundu, P., Shahjahan, M., & **Hossain, M. J.**\* (2025). "Bioinformatics-driven multi-omics profiling of CDK1 and CDK6 identifies prognostic and therapeutic roles in breast cancer".*Under Review.*
 
 3. Mabsurah, K., Yeana, I. J., Sumaiya, M., Islam, T., Ahammad, K., Bhattacharjee, A., Ferdous, J., Billah, M. M., & **Hossain, M. J.**\* (2025). "Pan-cancer analysis identifies potential prognostic and immunological role of RAS-degrading WDR76 in human tumors".*Under Review.*
+4. Kundu, P., Shahariar, M., Munny, F. A., Riya, A. T., Lota, H. B., Ahmed, M. Z., Meme, M. A., Kona, U. M. P., Mahmuda, F., Chowdhury, S. S., Sraboni, S. A., & **Hossain, M. J.** (2026). Computational identification of Taxus baccata-derived phytochemicals targeting EZH2 to overcome therapeutic resistance in melanoma. Research Square. <https://doi.org/10.21203/rs.3.rs-8494315/v1>. *Under Review.*

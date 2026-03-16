@@ -1,0 +1,9 @@
+<div class="mreview-grid">
+<% for (const item of items) { %>
+<div class="mreview-card">
+<div class="mendorse-card-top"><span class="mendorse-quote">"</span><span class="mendorse-relation-badge"><%= item.relation %></span></div>
+<p class="mreview-text"><%= item.description %></p>
+<div class="mreview-author"><% if (item.photo) { %><img class="mreview-photo" src="<%= item.photo %>" alt="<%= item.name %>"><% } else { %><span class="mreview-avatar"><%= item.initial %></span><% } %><span class="mreview-authorinfo"><strong class="mreview-name"><%= item.name %></strong><br><small class="mreview-plan"><%= item.role %></small><br><small class="mreview-plan"><%= item.affiliation %></small></span></div>
+</div>
+<% } %>
+</div>

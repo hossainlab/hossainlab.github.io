@@ -4,6 +4,7 @@ project:
   render:
     - "*.qmd"
     - "blog/**/*.qmd"
+    - "teaching-portfolio/**/*.qmd"
     - "!academic-cv/"
 
 # Meta
@@ -41,8 +42,6 @@ website:
         text: Blog
       - href: publications/index.qmd
         text: Publications
-      - href: mentorship/index.qmd
-        text: Mentorship
       - text: CV
         href: cv/professional-cv/CV-HossainMJ.pdf
 

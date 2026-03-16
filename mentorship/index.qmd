@@ -8,6 +8,9 @@ listing:
   - id: mentor-plans
     contents: plans.yml
     template: ../_templates/mentor-plan.ejs
+  - id: mentor-endorsements
+    contents: endorsements.yml
+    template: ../_templates/mentor-endorsement.ejs
   - id: mentor-reviews
     contents: testimonials.yml
     template: ../_templates/mentor-review.ejs
@@ -22,7 +25,7 @@ listing:
     </div>
     <div class="mentor-info">
       <h1 class="mentor-name">Jubayer Hossain</h1>
-      <p class="mentor-title-line">Bioinformatician · Researcher · Educator</p>
+      <p class="mentor-title-line">Bioinformatics Scientist · Educator · Entrepreneur</p>
       <div class="mentor-meta-row">
         <span>📍 Bangladesh</span>
         <span>✅ Available now</span>
@@ -44,7 +47,7 @@ listing:
       </div>
       <div class="mentor-cta-row">
         <a href="https://tidycal.com/hossainlab/30-minute-meeting" target="_blank" class="btn-apply-primary">📅 Book Free Intro Call</a>
-        <a href="mailto:contact.jubayerhossain@gmail.com" class="btn-message-outline">✉️ Send Message</a>
+        <a href="mailto:contact.jubayerhossain@gmail.com" class="btn-message-outline">✉️ Send Email</a>
       </div>
     </div>
   </div>
@@ -58,7 +61,7 @@ listing:
 </div>
 
 <div class="mentor-section-header">
-  <h2 class="mentor-section-title">Choose Your Plan</h2>
+  <h2 class="mentor-section-title">Choose Your Track</h2>
   <p class="mentor-section-sub">🔥 Only a few spots available — apply early!</p>
 </div>
 ```
@@ -109,6 +112,15 @@ listing:
   </div>
 </div>
 
+<div class="mentor-section-header">
+  <h2 class="mentor-section-title">What Mentors &amp; Collaborators Say</h2>
+</div>
+```
+
+::: {#mentor-endorsements}
+:::
+
+```{=html}
 <div class="mentor-section-header">
   <h2 class="mentor-section-title">What Mentees Say</h2>
 </div>

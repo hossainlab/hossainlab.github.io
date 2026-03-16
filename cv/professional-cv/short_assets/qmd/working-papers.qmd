@@ -5,3 +5,4 @@
 3. **Hossain, M. J.**, Shahjahan, M., & Fuad, M. (2025). Integrative spatial-scRNA-seq atlas of immunotherapy resistance mechanisms across cancer types. *Working Paper/GitHub*. <https://github.com/hossainlab/spatial-scRNA-immune-resistance>
 
 4. **Hossain, M. J.**, Shahjahan, M., & Fuad, M. (2026). Pan-Cancer Tumor-Associated Macrophage Reprogramming Atlas and Immunotherapy Response Prediction. *Working Paper/GitHub*. <https://github.com/hossainlab/TAM-Atlas>
+5. DeepAMR: AI-powered antimicrobial resistance prediction from genomic data.*Working Paper/Github*. <https://github.com/hossainlab/DeepAMR>

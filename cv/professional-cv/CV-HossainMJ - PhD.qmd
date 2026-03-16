@@ -46,9 +46,8 @@ My research focuses on developing reproducible bioinformatics pipelines for larg
 # Technical Skills 
 {{< include assets/qmd/skills.qmd >}}
 
-
 # Research Experience
-{{< yaml assets/yml/research.yml >}}
+{{< yaml short_assets/yml/research.yml >}}
 
 # Selected Publications 
 {{< include short_assets/qmd/publications.qmd >}}
@@ -59,11 +58,8 @@ My research focuses on developing reproducible bioinformatics pipelines for larg
 # Working Papers 
 {{< include short_assets/qmd/working-papers.qmd >}}
 
-# Selected Conference Presentations  
+# Selected Conferences 
 {{< include short_assets/qmd/conferences.qmd >}}
-
-# Invited Talks  
-{{< include assets/qmd/talks.qmd >}}
 
 # Teaching Experience 
 {{< yaml assets/yml/teaching.yml >}}

@@ -1,0 +1,712 @@
+/* ============================================================
+   TEACHING PORTFOLIO — Professional Academic Stylesheet
+   Compatible with WeasyPrint PDF + HTML
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* ── Variables ─────────────────────────────────────────────── */
+:root {
+  --navy:    #1a2e4a;
+  --blue:    #1d4ed8;
+  --teal:    #0f766e;
+  --muted:   #64748b;
+  --light:   #f8fafc;
+  --border:  #e2e8f0;
+  --text:    #1e293b;
+  --accent:  #dbeafe;
+}
+
+/* ── Base ───────────────────────────────────────────────────── */
+html, body {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.65;
+  background: #fff;
+}
+
+/* hide quarto title block — we render our own header */
+.quarto-title-banner,
+.quarto-title,
+#title-block-header,
+.quarto-title-meta { display: none !important; }
+
+/* hide sidebar TOC */
+#TOC, .sidebar { display: none !important; }
+
+/* make main column full width */
+#quarto-content,
+.page-full .page-columns,
+.page-full #quarto-content > div,
+.content-page { max-width: 960px !important; margin: 0 auto; padding: 0 1.5rem; }
+
+/* ── Portfolio Header ───────────────────────────────────────── */
+.pf-header {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 2rem;
+  align-items: center;
+  background: linear-gradient(135deg, var(--navy) 0%, #1e3a5f 100%);
+  color: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.pf-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255,255,255,0.3);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.pf-name {
+  font-size: 1.9rem;
+  font-weight: 800;
+  margin: 0 0 0.2rem 0;
+  letter-spacing: -0.02em;
+}
+
+.pf-title {
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.85;
+  margin: 0 0 0.5rem 0;
+}
+
+.pf-affil {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin: 0 0 0.75rem 0;
+}
+
+.pf-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pf-contact-pill {
+  font-size: 0.78rem;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 20px;
+  padding: 0.2rem 0.7rem;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* ── Stats Bar ──────────────────────────────────────────────── */
+.pf-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--navy);
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.pf-stat {
+  padding: 1rem;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.pf-stat:last-child { border-right: none; }
+
+.pf-stat-num {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #93c5fd;
+  display: block;
+  line-height: 1.2;
+}
+
+.pf-stat-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  opacity: 0.65;
+  display: block;
+}
+
+/* ── Section ────────────────────────────────────────────────── */
+.pf-section {
+  margin-bottom: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  page-break-inside: avoid;
+}
+
+.pf-section-head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1.25rem;
+  background: var(--light);
+  border-bottom: 1px solid var(--border);
+}
+
+.pf-section-num {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--blue);
+  background: var(--accent);
+  padding: 0.18rem 0.5rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.pf-section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0;
+}
+
+.pf-section-body {
+  padding: 1.25rem 1.5rem;
+}
+
+/* ── Philosophy ─────────────────────────────────────────────── */
+.pf-philosophy-quote {
+  background: #eff6ff;
+  border-left: 4px solid var(--blue);
+  padding: 1rem 1.2rem;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.93rem;
+  line-height: 1.75;
+  color: #334155;
+  margin-bottom: 1.25rem;
+  font-style: italic;
+}
+
+.pf-principles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0.75rem;
+}
+
+.pf-principle {
+  display: flex;
+  gap: 0.75rem;
+  background: var(--light);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  align-items: flex-start;
+}
+
+.pf-principle-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.pf-principle-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0 0 0.2rem 0;
+}
+
+.pf-principle-desc {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ── Tables ─────────────────────────────────────────────────── */
+.pf-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+  margin: 0;
+}
+
+.pf-table thead tr {
+  background: #f1f5f9;
+}
+
+.pf-table th {
+  padding: 0.55rem 0.75rem;
+  text-align: left;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--border);
+  white-space: nowrap;
+}
+
+.pf-table td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid #f1f5f9;
+  color: var(--text);
+  vertical-align: middle;
+}
+
+.pf-table tr:last-child td { border-bottom: none; }
+.pf-table tr:hover td { background: #fafbff; }
+
+.pf-td-year {
+  white-space: nowrap;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.pf-td-title {
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.pf-td-title a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.pf-td-title a:hover { text-decoration: underline; }
+
+.pf-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 0.1rem 0.55rem;
+  white-space: nowrap;
+}
+
+.pf-badge-level {
+  background: #f0fdf4;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.pf-badge-role {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+/* ── Materials Grid ─────────────────────────────────────────── */
+.pf-materials {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 0.85rem;
+}
+
+.pf-material {
+  background: var(--light);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  transition: box-shadow 0.2s;
+}
+
+.pf-material:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+}
+
+.pf-material-type {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.pf-material-title {
+  font-size: 0.87rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0;
+  line-height: 1.35;
+}
+
+.pf-material-title a { color: var(--navy); text-decoration: none; }
+.pf-material-title a:hover { color: var(--blue); }
+
+.pf-material-desc {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+
+.pf-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.2rem;
+}
+
+.pf-tag {
+  font-size: 0.68rem;
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+}
+
+/* ── Timeline ───────────────────────────────────────────────── */
+.pf-timeline { display: flex; flex-direction: column; }
+
+.pf-tl-item {
+  display: grid;
+  grid-template-columns: 72px 20px 1fr;
+  gap: 0 0.85rem;
+  padding-bottom: 1rem;
+  align-items: start;
+}
+
+.pf-tl-item:last-child { padding-bottom: 0; }
+
+.pf-tl-year {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-align: right;
+  padding-top: 2px;
+  line-height: 1.4;
+}
+
+.pf-tl-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--blue);
+  border: 2px solid #bfdbfe;
+  margin-top: 4px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.pf-tl-text {
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.15rem;
+}
+
+.pf-tl-meta {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.pf-chip {
+  display: inline-block;
+  font-size: 0.65rem;
+  background: #f0fdf4;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+  border-radius: 20px;
+  padding: 0.1rem 0.4rem;
+  margin-left: 4px;
+  font-weight: 600;
+}
+
+/* ── Feedback Grid ──────────────────────────────────────────── */
+.pf-feedback {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 0.85rem;
+}
+
+.pf-feedback-card {
+  background: var(--light);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.pf-stars {
+  color: #f59e0b;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.pf-quote {
+  font-size: 0.82rem;
+  color: #334155;
+  line-height: 1.65;
+  font-style: italic;
+  margin: 0 0 0.65rem 0;
+}
+
+.pf-quote::before { content: '\201C'; }
+.pf-quote::after  { content: '\201D'; }
+
+.pf-reviewer-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--navy);
+  display: block;
+}
+
+.pf-reviewer-meta {
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+/* ── Awards ─────────────────────────────────────────────────── */
+.pf-awards { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.pf-award {
+  display: flex;
+  gap: 1rem;
+  background: var(--light);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.9rem 1.1rem;
+  align-items: flex-start;
+}
+
+.pf-award-year {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--blue);
+  background: var(--accent);
+  border-radius: 4px;
+  padding: 0.18rem 0.5rem;
+  white-space: nowrap;
+  height: fit-content;
+  flex-shrink: 0;
+}
+
+.pf-award-name {
+  font-size: 0.87rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.pf-award-inst {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-bottom: 0.2rem;
+}
+
+.pf-award-desc { font-size: 0.78rem; color: #475569; }
+
+/* ── Demo Card ──────────────────────────────────────────────── */
+.pf-demo {
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.pf-demo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.pf-demo-full { grid-column: 1 / -1; }
+
+.pf-demo-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #0284c7;
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.pf-demo-value {
+  font-size: 0.85rem;
+  color: var(--navy);
+}
+
+/* ── Dev List ───────────────────────────────────────────────── */
+.pf-dev { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.pf-dev-item {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+}
+
+.pf-dev-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--blue);
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.pf-dev-title {
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.15rem;
+}
+
+.pf-dev-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+
+/* ── Download Bar (HTML only) ───────────────────────────────── */
+.pf-dl-bar {
+  background: var(--navy);
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pf-dl-label { font-size: 0.85rem; opacity: 0.75; }
+
+.pf-dl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--blue);
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.45rem 1.1rem;
+  font-size: 0.83rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.pf-dl-btn:hover { background: #1e40af; color: #fff; }
+
+/* ── Bottom CTA (HTML only) ─────────────────────────────────── */
+.pf-cta {
+  background: linear-gradient(135deg, var(--navy) 0%, #1d4ed8 100%);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  color: #fff;
+  margin-top: 1.5rem;
+}
+
+.pf-cta h3 { font-size: 1.2rem; font-weight: 700; margin: 0 0 0.4rem 0; color: #fff; }
+.pf-cta p  { font-size: 0.87rem; opacity: 0.8; margin: 0 0 1.1rem 0; }
+
+.pf-cta-btns { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+
+.pf-cta-primary {
+  background: #3b82f6;
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.87rem;
+}
+
+.pf-cta-primary:hover { background: #2563eb; color: #fff; }
+
+/* ── Print / WeasyPrint ─────────────────────────────────────── */
+.no-print { }
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 1.8cm 1.5cm 1.8cm 1.5cm;
+  }
+
+  html, body { font-size: 11px !important; background: #fff !important; }
+
+  .no-print,
+  .pf-dl-bar,
+  .pf-cta,
+  .navbar,
+  nav,
+  footer,
+  #quarto-header,
+  .quarto-title-banner,
+  .page-footer,
+  .sidebar,
+  #TOC { display: none !important; }
+
+  .pf-header {
+    background: var(--navy) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    border-radius: 0 !important;
+    padding: 1.2rem !important;
+  }
+
+  .pf-stats {
+    background: var(--navy) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    border-radius: 0 !important;
+  }
+
+  .pf-section {
+    border-radius: 0 !important;
+    page-break-inside: avoid;
+    margin-bottom: 10pt !important;
+  }
+
+  .pf-section-head {
+    background: #f1f5f9 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .pf-table th {
+    background: #f1f5f9 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .pf-badge-level {
+    background: #f0fdf4 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .pf-badge-role {
+    background: #fef3c7 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .pf-section-num {
+    background: var(--accent) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .pf-principles { grid-template-columns: repeat(2, 1fr) !important; }
+  .pf-materials  { grid-template-columns: repeat(2, 1fr) !important; }
+  .pf-feedback   { grid-template-columns: repeat(2, 1fr) !important; }
+
+  .pf-table { font-size: 8pt !important; }
+  .pf-table td, .pf-table th { padding: 0.35rem 0.5rem !important; }
+
+  #quarto-content, .page-full .page-columns, .content-page {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
