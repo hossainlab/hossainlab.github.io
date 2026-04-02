@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jubayer Hossain">
+<meta name="dcterms.date" content="2026-04-02">
+<meta name="description" content="Academic Website for Jubayer Hossain">
+
+<title>Introduction to Single-Cell RNA-seq – Jubayer Hossain</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../..//files/profiles/icon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Jubayer Hossain</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Projects</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
+        <li>
+    <a class="dropdown-item" href="../../projects/index.html">
+ <span class="dropdown-text">Research Projects</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../projects/pipelines.html">
+ <span class="dropdown-text">Pipelines</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-teaching" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Teaching</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-teaching">    
+        <li>
+    <a class="dropdown-item" href="../../teaching/index.html">
+ <span class="dropdown-text">Courses</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../teaching/videos.html">
+ <span class="dropdown-text">Videos</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../tutorials/index.html"> 
+<span class="menu-text">Tutorials</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../publications/index.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../cv/professional-cv/CV-HossainMJ.pdf"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:hossainmj@gmail.com"> <i class="bi bi-envelope" role="img" aria-label="email">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://orcid.org/0000-0001-9323-4997" target="_blank"> 
+<span class="menu-text"><i class="ai  ai-orcid" aria-label="orcid"></i></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=9_K4ekoAAAAJ&amp;hl=en&amp;authuser=5" target="_blank"> 
+<span class="menu-text"><i class="ai  ai-google-scholar" aria-label="google-scholar"></i></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=9_K4ekoAAAAJ&amp;hl=en&amp;authuser=5" target="_blank"> 
+<span class="menu-text"><i class="ai  ai-researchgate" aria-label="researchgate"></i></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/hossainmj" target="_blank"> <i class="bi bi-linkedin" role="img" aria-label="linkedin">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/hossain_lab" target="_blank"> <i class="bi bi-twitter" role="img" aria-label="twitter">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/hossainlab" target="_blank"> <i class="bi bi-github" role="img" aria-label="github">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/@hossainlab" target="_blank"> <i class="bi bi-youtube" role="img" aria-label="youtube">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-averaging-problem-why-single-cell" id="toc-the-averaging-problem-why-single-cell" class="nav-link active" data-scroll-target="#the-averaging-problem-why-single-cell">1. The Averaging Problem: Why Single-Cell?</a></li>
+  <li><a href="#a-decade-that-changed-biology" id="toc-a-decade-that-changed-biology" class="nav-link" data-scroll-target="#a-decade-that-changed-biology">2. A Decade That Changed Biology</a></li>
+  <li><a href="#inside-the-experiment-from-tissue-to-library" id="toc-inside-the-experiment-from-tissue-to-library" class="nav-link" data-scroll-target="#inside-the-experiment-from-tissue-to-library">3. Inside the Experiment: From Tissue to Library</a>
+  <ul class="collapse">
+  <li><a href="#starting-material-the-single-cell-suspension" id="toc-starting-material-the-single-cell-suspension" class="nav-link" data-scroll-target="#starting-material-the-single-cell-suspension">3.1 Starting Material: The Single-Cell Suspension</a></li>
+  <li><a href="#capturing-individual-cells-three-strategies" id="toc-capturing-individual-cells-three-strategies" class="nav-link" data-scroll-target="#capturing-individual-cells-three-strategies">3.2 Capturing Individual Cells: Three Strategies</a></li>
+  <li><a href="#inside-the-10x-chromium-how-a-gem-works" id="toc-inside-the-10x-chromium-how-a-gem-works" class="nav-link" data-scroll-target="#inside-the-10x-chromium-how-a-gem-works">3.3 Inside the 10x Chromium: How a GEM Works</a></li>
+  </ul></li>
+  <li><a href="#barcodes-and-umis-the-digital-identity-of-each-cell" id="toc-barcodes-and-umis-the-digital-identity-of-each-cell" class="nav-link" data-scroll-target="#barcodes-and-umis-the-digital-identity-of-each-cell">4. Barcodes and UMIs: The Digital Identity of Each Cell</a>
+  <ul class="collapse">
+  <li><a href="#the-cell-barcode" id="toc-the-cell-barcode" class="nav-link" data-scroll-target="#the-cell-barcode">4.1 The Cell Barcode</a></li>
+  <li><a href="#the-umi-and-why-it-exists" id="toc-the-umi-and-why-it-exists" class="nav-link" data-scroll-target="#the-umi-and-why-it-exists">4.2 The UMI and Why It Exists</a></li>
+  <li><a href="#the-cell-ranger-starsolo-pipeline" id="toc-the-cell-ranger-starsolo-pipeline" class="nav-link" data-scroll-target="#the-cell-ranger-starsolo-pipeline">4.3 The Cell Ranger / STARsolo Pipeline</a></li>
+  </ul></li>
+  <li><a href="#the-count-matrix-your-data-structure" id="toc-the-count-matrix-your-data-structure" class="nav-link" data-scroll-target="#the-count-matrix-your-data-structure">5. The Count Matrix: Your Data Structure</a>
+  <ul class="collapse">
+  <li><a href="#the-dropout-problem" id="toc-the-dropout-problem" class="nav-link" data-scroll-target="#the-dropout-problem">5.1 The Dropout Problem</a></li>
+  </ul></li>
+  <li><a href="#the-computational-pipeline-a-map-of-whats-ahead" id="toc-the-computational-pipeline-a-map-of-whats-ahead" class="nav-link" data-scroll-target="#the-computational-pipeline-a-map-of-whats-ahead">6. The Computational Pipeline: A Map of What’s Ahead</a></li>
+  <li><a href="#what-single-cell-resolution-actually-reveals" id="toc-what-single-cell-resolution-actually-reveals" class="nav-link" data-scroll-target="#what-single-cell-resolution-actually-reveals">7. What Single-Cell Resolution Actually Reveals</a>
+  <ul class="collapse">
+  <li><a href="#disease-associated-microglia-in-alzheimers-disease" id="toc-disease-associated-microglia-in-alzheimers-disease" class="nav-link" data-scroll-target="#disease-associated-microglia-in-alzheimers-disease">Disease-Associated Microglia in Alzheimer’s Disease</a></li>
+  <li><a href="#resolving-t-cell-exhaustion-in-melanoma" id="toc-resolving-t-cell-exhaustion-in-melanoma" class="nav-link" data-scroll-target="#resolving-t-cell-exhaustion-in-melanoma">Resolving T Cell Exhaustion in Melanoma</a></li>
+  <li><a href="#multiplexing-samples-to-eliminate-batch-effects" id="toc-multiplexing-samples-to-eliminate-batch-effects" class="nav-link" data-scroll-target="#multiplexing-samples-to-eliminate-batch-effects">Multiplexing Samples to Eliminate Batch Effects</a></li>
+  </ul></li>
+  <li><a href="#the-python-ecosystem-your-toolkit" id="toc-the-python-ecosystem-your-toolkit" class="nav-link" data-scroll-target="#the-python-ecosystem-your-toolkit">8. The Python Ecosystem: Your Toolkit</a></li>
+  <li><a href="#the-dataset-we-will-use-throughout-this-series" id="toc-the-dataset-we-will-use-throughout-this-series" class="nav-link" data-scroll-target="#the-dataset-we-will-use-throughout-this-series">9. The Dataset We Will Use Throughout This Series</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">10. Summary</a></li>
+  <li><a href="#whats-next" id="toc-whats-next" class="nav-link" data-scroll-target="#whats-next">What’s Next</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Introduction to Single-Cell RNA-seq</h1>
+<p class="subtitle lead">Why one cell at a time changes everything — concepts, technology, and the road ahead</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">scRNA-seq</div>
+    <div class="quarto-category">Single-Cell</div>
+    <div class="quarto-category">Overview</div>
+    <div class="quarto-category">scverse</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    A deep-dive introduction to single-cell RNA sequencing: the biological motivation, the technology behind it, how a count matrix is born, and the computational toolkit you will use throughout this series.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jubayer Hossain <a href="https://orcid.org/0000-0001-9323-4997" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 2, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Learning Objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>By the end of this tutorial you will be able to:</p>
+<ul>
+<li>Explain <strong>why</strong> single-cell RNA-seq was invented and what bulk approaches cannot reveal</li>
+<li>Describe the key wet-lab steps that generate scRNA-seq data</li>
+<li>Understand what <strong>cell barcodes</strong> and <strong>UMIs</strong> are, and why they are indispensable</li>
+<li>Read and interpret a <strong>gene × cell count matrix</strong></li>
+<li>Appreciate the <strong>dropout problem</strong> and why scRNA-seq data is inherently sparse</li>
+<li>Navigate the standard <strong>computational analysis pipeline</strong> at a conceptual level</li>
+<li>Know the core <strong>Python tools</strong> (the scverse ecosystem) used throughout this series</li>
+</ul>
+<p><strong>Estimated reading time:</strong> 20–25 minutes <strong>Prerequisites:</strong> None — this is the starting point</p>
+</div>
+</div>
+<hr>
+<section id="the-averaging-problem-why-single-cell" class="level2">
+<h2 class="anchored" data-anchor-id="the-averaging-problem-why-single-cell">1. The Averaging Problem: Why Single-Cell?</h2>
+<p>In 2011, a study of colorectal cancer tumours used bulk RNA-seq and concluded that the tumour immune microenvironment was immunosuppressed. A decade later, single-cell analysis of the same tumour type revealed something far more complex: within what bulk analysis called “immunosuppressed”, there were activated cytotoxic T cells trying to kill, Tregs blocking them, exhausted CD8+ cells giving up, and M2-polarised macrophages fuelling the tumour — all co-existing in the same biopsy <span class="citation" data-cites="Zhangetal2020">[@Zhangetal2020]</span>. Bulk sequencing had <strong>averaged</strong> all of this into silence.</p>
+<p>This is the core problem. When you take a tissue and homogenise it for bulk RNA-seq, you are computing a <strong>weighted average</strong> of the transcriptomes of every cell type present. The signal you measure is not the signal of any real cell — it is an artefact of mixture proportions.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/intro/sc_vs_bulk_cells.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Mixing two cell populations with opposing gene–gene relationships produces a misleading average correlation (left). Only by resolving cells individually does the true biology emerge (right). <em>Adapted from HBC Training Materials.</em></figcaption>
+</figure>
+</div>
+<p>The consequence is profound. Rare cell types that constitute 1–2% of a tissue are invisible. Transitional states between mature cell types are blurred away. A stimulus that activates 30% of T cells while leaving 70% unaffected looks like a mild, uniform response. Tumour subclones with distinct mutation profiles are averaged together.</p>
+<p>Single-cell RNA sequencing (<strong>scRNA-seq</strong>) solves this by measuring the transcriptome of <strong>each cell individually</strong> — turning a single averaged measurement into a data matrix with one row per cell, capturing the true diversity of biological states.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Bulk vs Single-Cell: When to Use Which
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>scRNA-seq is not always the right choice. Bulk RNA-seq is cheaper, more sensitive (detects low-abundance transcripts reliably), and better for large-cohort studies. Use scRNA-seq when your biological question is about <strong>cell type composition, rare populations, cellular heterogeneity, or cell state transitions</strong>. For straightforward differential expression across conditions with known cell types, bulk RNA-seq remains powerful and cost-effective.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="a-decade-that-changed-biology" class="level2">
+<h2 class="anchored" data-anchor-id="a-decade-that-changed-biology">2. A Decade That Changed Biology</h2>
+<p>The idea of sequencing a single cell’s transcriptome was demonstrated as early as 2009 by Tang et al., who sequenced the transcriptome of a single mouse oocyte using a custom amplification protocol <span class="citation" data-cites="Tangetal2009">[@Tangetal2009]</span>. The data were sparse and the throughput was one cell at a time — but the proof of concept was established.</p>
+<p>The real revolution came in <strong>2015</strong>, when two groups published back-to-back in the same issue of <em>Cell</em>:</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Two Papers That Changed Everything (Published the Same Week)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Macosko et al., 2015 — Drop-seq</strong> <span class="citation" data-cites="Macoskoetal2015">[@Macoskoetal2015]</span> Encapsulated single cells in nanolitre-scale aqueous droplets alongside DNA-barcoded beads in an oil stream. Profiled <strong>44,808 retinal cells</strong> from the mouse retina in a single experiment, discovering 39 transcriptionally distinct cell populations. Cost per cell dropped to <strong>$0.06</strong> — orders of magnitude cheaper than any previous method.</p>
+<p><strong>Klein et al., 2015 — inDrop</strong> <span class="citation" data-cites="Kleinetal2015">[@Kleinetal2015]</span> Published simultaneously, independently arriving at a nearly identical droplet-based solution. Profiled mouse embryonic stem cells undergoing differentiation, capturing continuous transcriptional trajectories invisible to bulk methods.</p>
+<p>These papers established the <strong>droplet microfluidics</strong> paradigm that dominates the field today.</p>
+</div>
+</div>
+<p>By 2017, <strong>10x Genomics</strong> had commercialised droplet capture into the <strong>Chromium</strong> platform, making scRNA-seq accessible to any lab with $50,000 and an Illumina sequencer. Zheng et al.&nbsp;demonstrated profiling of <strong>1.3 million mouse brain cells</strong> in a single run <span class="citation" data-cites="Zhengetal2017">[@Zhengetal2017]</span>. That same year, the <strong>Human Cell Atlas</strong> consortium was announced — an international effort to map every cell type in the human body <span class="citation" data-cites="HCA2017">[@HCA2017]</span>.</p>
+<p>The pace accelerated. By 2023, single-cell atlases existed for the entire human immune system, the developing brain, the lung across COVID-19 severity, and dozens of tumour types. What Tang et al.&nbsp;did painstakingly for one cell in 2009, researchers now do for a million cells before lunch.</p>
+<hr>
+</section>
+<section id="inside-the-experiment-from-tissue-to-library" class="level2">
+<h2 class="anchored" data-anchor-id="inside-the-experiment-from-tissue-to-library">3. Inside the Experiment: From Tissue to Library</h2>
+<p>Understanding the wet-lab pipeline is essential for interpreting the data computationally. Every artefact you will encounter — batch effects, dropouts, doublets — has a specific biological or technical origin in the experiment.</p>
+<section id="starting-material-the-single-cell-suspension" class="level3">
+<h3 class="anchored" data-anchor-id="starting-material-the-single-cell-suspension">3.1 Starting Material: The Single-Cell Suspension</h3>
+<p>scRNA-seq requires a <strong>single-cell suspension</strong> — individual cells floating freely in buffer, not clumped or embedded in tissue. Achieving this from solid tissues requires enzymatic and/or mechanical dissociation, which introduces its own artefacts:</p>
+<ul>
+<li><strong>Stress response genes</strong> (<em>FOS</em>, <em>JUN</em>, <em>HSPA1A</em>) are upregulated during dissociation, a phenomenon well-documented in brain tissue <span class="citation" data-cites="vande2019">[@vande2019]</span>. This can create spurious “activation” clusters.</li>
+<li><strong>Fragile cell types</strong> (neurons, adipocytes) are preferentially lost during dissociation, biasing the recovered cell composition.</li>
+<li><strong>Time on ice</strong> and <strong>cold vs warm dissociation</strong> protocols produce measurably different transcriptomes.</li>
+</ul>
+<p>Blood (PBMCs) and bone marrow are fortunate exceptions — cells already exist in suspension and require minimal processing. This is why PBMC datasets dominate the benchmarking literature.</p>
+</section>
+<section id="capturing-individual-cells-three-strategies" class="level3">
+<h3 class="anchored" data-anchor-id="capturing-individual-cells-three-strategies">3.2 Capturing Individual Cells: Three Strategies</h3>
+<p>Modern platforms split into three broad families based on how they physically isolate single cells:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/intro/sc_library_overviews.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption>Three major cell capture strategies: droplet-based pooled amplification (left), FACS-sorted plate-based individual amplification (middle), and microfluidic chip-based capture (right). Each trades off throughput, sensitivity, and cost differently. <em>Source: Papalexi &amp; Satija, Nat Rev Immunol, 2018.</em></figcaption>
+</figure>
+</div>
+<p><strong>Droplet-based methods</strong> (10x Chromium, Drop-seq, inDrop) are by far the most widely used. Cells and barcoded beads are co-encapsulated in oil droplets at nanolitre scale. Throughput is 500–10,000 cells per run, cost per cell is very low (~$0.10–0.50), but only the 3′ or 5′ end of transcripts is captured.</p>
+<p><strong>Plate-based methods</strong> (Smart-seq2, Smart-seq3) sort individual cells into wells of a 96- or 384-well plate. Each cell is processed separately. Throughput is low (96–384 cells per run), cost per cell is high, but <strong>full-length transcript coverage</strong> enables detection of splice variants, allele-specific expression, and V(D)J recombination.</p>
+<p><strong>Split-pool barcoding</strong> (SPLiT-seq, SHARE-seq) barcodes cells in situ through multiple rounds of split-pool ligation — <strong>no physical separation required</strong>. Cells are fixed, split across many wells, ligated with a unique barcode, pooled, then split again. Theoretically unlimited throughput.</p>
+<p>For this tutorial series, we focus on the <strong>10x Chromium</strong> platform because it generates the majority of public datasets and is the current default in most research settings.</p>
+</section>
+<section id="inside-the-10x-chromium-how-a-gem-works" class="level3">
+<h3 class="anchored" data-anchor-id="inside-the-10x-chromium-how-a-gem-works">3.3 Inside the 10x Chromium: How a GEM Works</h3>
+<p>The key innovation of the 10x Chromium is the <strong>Gel Bead in Emulsion (GEM)</strong>. Here is what happens in the fraction of a second when a GEM forms:</p>
+<ol type="1">
+<li>A cell and a gel bead are co-encapsulated in an oil droplet</li>
+<li>The gel bead dissolves, releasing millions of oligonucleotides, each carrying:
+<ul>
+<li>An <strong>Illumina sequencing adapter</strong></li>
+<li>A <strong>16 bp cell barcode</strong> (same sequence on all oligos from one bead — this is the cell’s identity tag)</li>
+<li>A <strong>12 bp Unique Molecular Identifier (UMI)</strong> (random sequence — unique per molecule)</li>
+<li>A <strong>poly-dT</strong> anchor that captures polyadenylated mRNA</li>
+</ul></li>
+<li>mRNA molecules in the droplet hybridise to the poly-dT</li>
+<li>Reverse transcriptase converts them to cDNA with the barcode and UMI incorporated</li>
+<li>Droplets are broken, cDNA from all cells is pooled, PCR-amplified, and sequenced together</li>
+</ol>
+<p>The entire complexity of identifying which read came from which cell is handled <strong>downstream by software</strong> using the cell barcode sequence.</p>
+<hr>
+</section>
+</section>
+<section id="barcodes-and-umis-the-digital-identity-of-each-cell" class="level2">
+<h2 class="anchored" data-anchor-id="barcodes-and-umis-the-digital-identity-of-each-cell">4. Barcodes and UMIs: The Digital Identity of Each Cell</h2>
+<p>The barcode-UMI system is one of the most elegant engineering decisions in modern genomics. Understanding it deeply will prevent many common analysis mistakes.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/intro/umis.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>Each sequencing read carries two key identifiers: a <strong>cell barcode</strong> (here in green, e.g.&nbsp;<code>TTGCCGTGGTGT</code>) identifying the source cell, and a <strong>UMI</strong> (in red, e.g.&nbsp;<code>GCGGGG</code>) identifying the individual mRNA molecule captured. Cell 3 has two reads mapping to ACTB but they share the same UMI — they are PCR duplicates of <strong>one molecule</strong>. Cell 4 has two reads mapping to ARL1 with <strong>different UMIs</strong> — these are two distinct molecules. <em>Adapted from HBC Training Materials.</em></figcaption>
+</figure>
+</div>
+<section id="the-cell-barcode" class="level3">
+<h3 class="anchored" data-anchor-id="the-cell-barcode">4.1 The Cell Barcode</h3>
+<p>Every oligo on a given bead carries an <strong>identical cell barcode</strong> — a 16 bp sequence from a whitelist of ~6,000 to 8 million valid barcodes (depending on the kit version). After sequencing, software assigns each read to a cell by matching its barcode to this whitelist, allowing up to 1 mismatched base (hamming distance correction).</p>
+<p>The number of unique cell barcodes detected — and the shape of the <strong>barcode rank plot</strong> — is how you assess how many real cells were captured (more on this in the QC tutorial).</p>
+</section>
+<section id="the-umi-and-why-it-exists" class="level3">
+<h3 class="anchored" data-anchor-id="the-umi-and-why-it-exists">4.2 The UMI and Why It Exists</h3>
+<p>PCR amplification is necessary to generate enough material for sequencing, but it distorts count estimates. A highly expressed gene might be amplified 1,000-fold while a lowly expressed gene is amplified only 10-fold — and this amplification efficiency varies between molecules. Without correction, you would be comparing amplification noise, not biology.</p>
+<p>The UMI solves this: each mRNA molecule captured in a droplet receives a <strong>unique 12 bp random tag</strong> before PCR. After PCR, all copies of the same original molecule carry the same barcode+UMI combination. When counting expression, you count <strong>unique UMIs, not reads</strong>. Two reads with the same cell barcode, same gene, and same UMI are collapsed into a single count of 1.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Why UMI Counting Matters
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The transition from read counts to UMI counts was critical for making scRNA-seq data quantitative. Earlier methods without UMIs (e.g., early Smart-seq versions) counted reads, making normalization and comparison across cells unreliable. The introduction of UMIs in CEL-seq (Hashimshony et al., 2012) and their adoption across all major platforms is a key reason why scRNA-seq data became tractable.</p>
+</div>
+</div>
+</section>
+<section id="the-cell-ranger-starsolo-pipeline" class="level3">
+<h3 class="anchored" data-anchor-id="the-cell-ranger-starsolo-pipeline">4.3 The Cell Ranger / STARsolo Pipeline</h3>
+<p>The journey from raw FASTQ reads to a count matrix involves several filtering steps, each with a specific biological rationale:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/intro/SC3pGEX-algo-diagram.png" class="img-fluid figure-img" style="width:55.0%"></p>
+<figcaption>The Cell Ranger processing cascade transforms raw sequencing reads into a filtered UMI count matrix through sequential filtering steps: barcode validation, genome alignment, transcriptomic mapping, UMI deduplication, and cell calling. <em>Source: 10x Genomics Cell Ranger documentation.</em></figcaption>
+</figure>
+</div>
+<p>At each step, reads are discarded for a specific reason — invalid barcode, unmapped sequence, multimapping, low base quality. The survivors — confidently mapped, uniquely barcoded reads with valid UMIs — are collapsed into the final count matrix.</p>
+<p>The equivalent open-source tools are <strong>STARsolo</strong> (integrated into the STAR aligner) and <strong>Alevin</strong> (part of Salmon), which produce identical outputs while avoiding the Cell Ranger licence requirement.</p>
+<hr>
+</section>
+</section>
+<section id="the-count-matrix-your-data-structure" class="level2">
+<h2 class="anchored" data-anchor-id="the-count-matrix-your-data-structure">5. The Count Matrix: Your Data Structure</h2>
+<p>The output of preprocessing is a <strong>gene × cell count matrix</strong> — the fundamental data object you will work with throughout this series.</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/intro/count_matrix2.png" class="img-fluid figure-img"></p>
+<figcaption>The count matrix has <strong>genes as rows</strong> and <strong>cells as columns</strong>. Each entry is the number of UMIs detected for that gene in that cell. <em>Adapted from HBC Training Materials.</em></figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/intro/sparse_matrix.png" class="img-fluid figure-img"></p>
+<figcaption>In practice, the vast majority of entries are <strong>zero</strong>. A typical 10x Chromium dataset is 90–95% sparse. This is not just a storage problem — it shapes every normalisation and statistical method used downstream. <em>Adapted from HBC Training Materials.</em></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>A typical 10x Chromium experiment profiling human PBMCs might produce:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Quantity</th>
+<th>Typical value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Cells captured</td>
+<td>3,000 – 10,000</td>
+</tr>
+<tr class="even">
+<td>Genes in genome</td>
+<td>~33,000 (human)</td>
+</tr>
+<tr class="odd">
+<td>Genes detected per cell</td>
+<td>1,500 – 4,000</td>
+</tr>
+<tr class="even">
+<td>Median UMIs per cell</td>
+<td>2,000 – 8,000</td>
+</tr>
+<tr class="odd">
+<td>Matrix sparsity</td>
+<td>90 – 95% zeros</td>
+</tr>
+<tr class="even">
+<td>Raw matrix size (dense)</td>
+<td>~5 GB</td>
+</tr>
+<tr class="odd">
+<td>Raw matrix size (sparse)</td>
+<td>~50 MB</td>
+</tr>
+</tbody>
+</table>
+<section id="the-dropout-problem" class="level3">
+<h3 class="anchored" data-anchor-id="the-dropout-problem">5.1 The Dropout Problem</h3>
+<p>A gene that is expressed in a cell may still appear as zero in the count matrix. This happens because the <strong>capture efficiency of the 10x platform is approximately 10–30%</strong> — for every 10 mRNA molecules present in a cell, only 1–3 are captured, reverse-transcribed, and sequenced. Lowly expressed genes — those with only 1–5 copies per cell — frequently produce zero counts even when genuinely expressed. This is called <strong>dropout</strong>.</p>
+<p>Dropout has important consequences: - You cannot distinguish a <strong>true biological zero</strong> (gene not expressed) from a <strong>technical zero</strong> (gene expressed but not captured) - Normalisation must account for the fact that total counts per cell reflect both biology and capture efficiency - Imputation methods (MAGIC, scVI) attempt to statistically recover dropout values, though this remains controversial</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>The Sparsity Trap
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A common mistake is treating all zeros as “not expressed”. In reality, a zero in a single cell tells you very little. The signal in scRNA-seq lives in <strong>patterns across many cells</strong> — not in individual entries. Methods that rely on single-cell level values (e.g.&nbsp;naive correlation between genes) are severely distorted by sparsity. Always think at the population level.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="the-computational-pipeline-a-map-of-whats-ahead" class="level2">
+<h2 class="anchored" data-anchor-id="the-computational-pipeline-a-map-of-whats-ahead">6. The Computational Pipeline: A Map of What’s Ahead</h2>
+<p>The journey from a raw count matrix to biological insight spans several well-defined steps. The figure below shows the <strong>complete modern analysis pipeline</strong> as described by Luecken &amp; Theis in their landmark methods review <span class="citation" data-cites="LueckenTheis2019">[@LueckenTheis2019]</span>:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/scRNA-seq_steps_image.jpg" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption>The complete scRNA-seq computational pipeline. Pre-processing (left column) converts raw data into analysis-ready format. Downstream analysis (right) extracts biological insight. Every step in this figure corresponds to one or more tutorials in this series. <em>Source: Luecken &amp; Theis, Mol Sys Biol, 2019.</em></figcaption>
+</figure>
+</div>
+<p>Here is a concise map of each stage and where it lives in this series:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>What it does</th>
+<th>Tutorial</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>QC</strong></td>
+<td>Remove dead cells, doublets, low-quality barcodes</td>
+<td>#4</td>
+</tr>
+<tr class="even">
+<td><strong>Normalisation</strong></td>
+<td>Correct for library size differences</td>
+<td>#6</td>
+</tr>
+<tr class="odd">
+<td><strong>Feature selection</strong></td>
+<td>Focus on highly variable genes</td>
+<td>#6</td>
+</tr>
+<tr class="even">
+<td><strong>Dimensionality reduction</strong></td>
+<td>PCA → UMAP, compress 20,000 genes to 2D</td>
+<td>#7–8</td>
+</tr>
+<tr class="odd">
+<td><strong>Clustering</strong></td>
+<td>Group cells by transcriptional similarity</td>
+<td>#9</td>
+</tr>
+<tr class="even">
+<td><strong>Annotation</strong></td>
+<td>Assign cell type labels to clusters</td>
+<td>#10</td>
+</tr>
+<tr class="odd">
+<td><strong>Differential expression</strong></td>
+<td>Compare gene programs between groups</td>
+<td>Later</td>
+</tr>
+<tr class="even">
+<td><strong>Trajectory inference</strong></td>
+<td>Model pseudotime, differentiation paths</td>
+<td>Later</td>
+</tr>
+<tr class="odd">
+<td><strong>Compositional analysis</strong></td>
+<td>Compare cell type abundances across conditions</td>
+<td>Later</td>
+</tr>
+</tbody>
+</table>
+<p>A simplified view of the core pipeline:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/sc_workflow_2022.jpg" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption>The minimal computational workflow from sequence reads to biological interpretation. Each arrow in this diagram represents a tutorial in this series. <em>Adapted from HBC Training Materials.</em></figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="what-single-cell-resolution-actually-reveals" class="level2">
+<h2 class="anchored" data-anchor-id="what-single-cell-resolution-actually-reveals">7. What Single-Cell Resolution Actually Reveals</h2>
+<p>The reason scRNA-seq has become ubiquitous is not just technical capability — it is because the biology being revealed was <strong>genuinely not accessible before</strong>. There are at least five categories of biological variation that only single-cell resolution can capture:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/sc_biol_variability.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Five types of biological information accessible only at single-cell resolution. Discrete cell types and continuous phenotypes are the most commonly analysed, but rare subtype discovery, spatial mapping, and temporal dynamics represent some of the most biologically impactful applications. <em>Adapted from Luecken &amp; Theis, 2019.</em></figcaption>
+</figure>
+</div>
+<p>Let us look at three landmark studies that exemplify what this resolution makes possible:</p>
+<section id="disease-associated-microglia-in-alzheimers-disease" class="level3">
+<h3 class="anchored" data-anchor-id="disease-associated-microglia-in-alzheimers-disease">Disease-Associated Microglia in Alzheimer’s Disease</h3>
+<p>Keren-Shaul et al.&nbsp;(2017) profiled microglia from the brains of Alzheimer’s mouse models at single-cell resolution. Within what was previously considered a homogeneous “activated microglia” population, they discovered a transcriptionally distinct subpopulation — <strong>disease-associated microglia (DAM)</strong> — defined by upregulation of <em>Trem2</em>, <em>Apoe</em>, and <em>Lpl</em>, and downregulation of homeostatic genes <em>P2ry12</em> and <em>Cx3cr1</em> <span class="citation" data-cites="KerenShaul2017">[@KerenShaul2017]</span>. This TREM2-dependent transition had been completely invisible to bulk approaches because DAMs constitute a minority of total microglia. The discovery opened an entire therapeutic target space for Alzheimer’s disease.</p>
+</section>
+<section id="resolving-t-cell-exhaustion-in-melanoma" class="level3">
+<h3 class="anchored" data-anchor-id="resolving-t-cell-exhaustion-in-melanoma">Resolving T Cell Exhaustion in Melanoma</h3>
+<p>Tirosh et al.&nbsp;(2016) performed scRNA-seq on 4,645 cells from 19 melanoma tumours, resolving tumour cells, T cells, B cells, macrophages, and cancer-associated fibroblasts within each biopsy <span class="citation" data-cites="Tirosh2016Science">[@Tirosh2016Science]</span>. They discovered that <strong>intratumoural T cells</strong> showed a continuous spectrum from functional to exhausted states — a trajectory that bulk T cell gene signatures had conflated into a single “dysfunction” category. They identified a cell-cycle-related gene programme in malignant cells that explained inter-tumour heterogeneity. This paper is still cited as a template for single-cell TME analysis.</p>
+</section>
+<section id="multiplexing-samples-to-eliminate-batch-effects" class="level3">
+<h3 class="anchored" data-anchor-id="multiplexing-samples-to-eliminate-batch-effects">Multiplexing Samples to Eliminate Batch Effects</h3>
+<p>A practical landmark: Kang et al.&nbsp;(2018) introduced <strong>cell multiplexing</strong> using natural genetic variation. By pooling PBMCs from multiple donors into a single 10x run and then demultiplexing computationally by SNP profile (using the <em>demuxlet</em> tool), they could capture multiple samples simultaneously — <strong>halving costs</strong> and <strong>eliminating batch effects</strong> between samples within the same study <span class="citation" data-cites="Kang2018NatBiotech">[@Kang2018NatBiotech]</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/kangetal_image.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>Multiplexing: cells from multiple genetically distinct donors are encapsulated together, labelled by their donor SNP profile, then computationally demultiplexed. Doublets (two cells from different donors in one droplet) are simultaneously identified and removed. <em>Source: Kang et al., Nat Biotechnol, 2018.</em></figcaption>
+</figure>
+</div>
+<p>This technique — or its modern relatives (hashtag oligos, MULTI-seq, CMO labelling) — is now standard practice in clinical scRNA-seq studies with multiple patients.</p>
+<hr>
+</section>
+</section>
+<section id="the-python-ecosystem-your-toolkit" class="level2">
+<h2 class="anchored" data-anchor-id="the-python-ecosystem-your-toolkit">8. The Python Ecosystem: Your Toolkit</h2>
+<p>All analysis in this series uses the <strong>scverse</strong> — a coordinated ecosystem of Python packages that share a common data structure (AnnData) and design philosophy.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Package</th>
+<th>Role</th>
+<th>Key operations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>anndata</strong></td>
+<td>Data structure</td>
+<td>Store and manipulate annotated data matrices</td>
+</tr>
+<tr class="even">
+<td><strong>scanpy</strong></td>
+<td>Core analysis</td>
+<td>QC, normalisation, PCA, UMAP, clustering, DE</td>
+</tr>
+<tr class="odd">
+<td><strong>scvi-tools</strong></td>
+<td>Deep generative models</td>
+<td>Probabilistic normalisation, integration, doublet detection</td>
+</tr>
+<tr class="even">
+<td><strong>cellrank</strong></td>
+<td>Trajectory inference</td>
+<td>Cell fate prediction using RNA velocity and pseudotime</td>
+</tr>
+<tr class="odd">
+<td><strong>squidpy</strong></td>
+<td>Spatial transcriptomics</td>
+<td>Spatial neighbourhood graphs, image analysis</td>
+</tr>
+<tr class="even">
+<td><strong>muon</strong></td>
+<td>Multi-modal data</td>
+<td>CITE-seq, ATAC+RNA, multi-omics integration</td>
+</tr>
+</tbody>
+</table>
+<p>The central object is the <strong>AnnData</strong> (Annotated Data) structure — a matrix-centric data container that keeps your count matrix, cell metadata, gene metadata, dimensionality reductions, and analysis results together in a single object. Tutorial #3 is dedicated entirely to understanding AnnData.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scanpy <span class="im">as</span> sc</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># This one line loads a count matrix and wraps it in AnnData</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>adata <span class="op">=</span> sc.read_10x_mtx(<span class="st">"filtered_feature_bc_matrix/"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># You now have:</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>adata         <span class="co"># AnnData object: 8,412 cells × 33,538 genes</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>adata.X       <span class="co"># The count matrix (sparse)</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>adata.obs     <span class="co"># Cell metadata (DataFrame)</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>adata.var     <span class="co"># Gene metadata (DataFrame)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If this looks unfamiliar, don’t worry — we dedicate an entire tutorial to the AnnData structure before writing a single line of analysis code.</p>
+<hr>
+</section>
+<section id="the-dataset-we-will-use-throughout-this-series" class="level2">
+<h2 class="anchored" data-anchor-id="the-dataset-we-will-use-throughout-this-series">9. The Dataset We Will Use Throughout This Series</h2>
+<p>All tutorials in this series use a <strong>real clinical scRNA-seq dataset</strong> from a published study of human peripheral blood mononuclear cells (PBMCs) profiled across three conditions:</p>
+<ul>
+<li><strong>Control</strong> (4 samples) — Healthy or untreated donors</li>
+<li><strong>Pre-treatment</strong> (4 samples) — Patients before intervention</li>
+<li><strong>Post-treatment</strong> (4 samples) — Same patients after intervention</li>
+</ul>
+<p>The dataset consists of 12 count matrices stored as compressed CSV files (<code>.csv.gz</code>), with cells as columns and genes as rows. In total, you are working with <strong>tens of thousands of real human immune cells</strong> across a treatment time course — the kind of data that generates publishable biological findings.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Why This Dataset?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Clinical scRNA-seq datasets with paired pre/post samples are among the most powerful study designs in the field, because you can:</p>
+<ol type="1">
+<li>Identify which <strong>cell types</strong> expand or contract in response to treatment</li>
+<li>Find which <strong>gene programmes</strong> are activated or suppressed within each cell type</li>
+<li>Detect cell type-specific <strong>treatment responders</strong> vs non-responders</li>
+</ol>
+<p>This is the exact type of analysis driving precision medicine applications today.</p>
+</div>
+</div>
+<p>We will not load this data until <strong>Tutorial #3</strong> (The AnnData Object Explained). For now, simply know that every figure you will produce — every UMAP, every heatmap, every volcano plot — will come from these 12 real human samples.</p>
+<hr>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">10. Summary</h2>
+<p>Single-cell RNA-seq is not just a more expensive version of bulk RNA-seq — it answers questions that bulk approaches are structurally incapable of addressing. The core insight is that biological tissues are <strong>heterogeneous mixtures</strong>, and averaging across that heterogeneity destroys the signal you care about.</p>
+<p>The technology achieves single-cell resolution through <strong>droplet microfluidics</strong> (primarily) — co-encapsulating a cell and a barcoded bead, reverse-transcribing the cell’s mRNA with a unique cell barcode and per-molecule UMI, then sequencing millions of tagged cDNA fragments in a single sequencer run.</p>
+<p>The output — a <strong>sparse gene × cell count matrix</strong> — is the starting point for all computational analysis: QC, normalisation, dimensionality reduction, clustering, cell type annotation, and downstream biological interpretation.</p>
+<p>The Python <strong>scverse</strong> ecosystem — centred on <code>scanpy</code> and <code>anndata</code> — provides a coherent, well-maintained framework for every step of this pipeline. In the next tutorial, you will set up your environment and install everything you need.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Key Concepts Checklist
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before moving on, make sure you can explain:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Why bulk RNA-seq fails to capture cellular heterogeneity</label></li>
+<li><label><input type="checkbox">What a GEM is and how a cell barcode is assigned</label></li>
+<li><label><input type="checkbox">The difference between a <strong>read count</strong> and a <strong>UMI count</strong></label></li>
+<li><label><input type="checkbox">What the rows, columns, and values of a count matrix represent</label></li>
+<li><label><input type="checkbox">Why most entries in a count matrix are zero (dropout)</label></li>
+<li><label><input type="checkbox">The names and roles of the five core scverse packages</label></li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+<section id="whats-next" class="level2">
+<h2 class="anchored" data-anchor-id="whats-next">What’s Next</h2>
+<p><strong>Tutorial #2 — Setting Up Your Python Environment</strong> Install scanpy, anndata, and the full scverse stack. Create a reproducible conda environment. Verify your installation with a Hello World single-cell analysis.</p>
+<hr>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" role="list">
+
+</div>
+<ul>
+<li><p><strong>Tang F et al.</strong> (2009). mRNA-Seq whole-transcriptome analysis of a single cell. <em>Nature Methods</em>, 6, 377–382. DOI: <a href="https://doi.org/10.1038/nmeth.1315">10.1038/nmeth.1315</a></p></li>
+<li><p><strong>Macosko EZ et al.</strong> (2015). Highly parallel genome-wide expression profiling of individual cells using nanoliter droplets. <em>Cell</em>, 161(5), 1202–1214. DOI: <a href="https://doi.org/10.1016/j.cell.2015.05.002">10.1016/j.cell.2015.05.002</a></p></li>
+<li><p><strong>Klein AM et al.</strong> (2015). Droplet barcoding for single-cell transcriptomics applied to embryonic stem cells. <em>Cell</em>, 161(5), 1187–1201. DOI: <a href="https://doi.org/10.1016/j.cell.2015.04.044">10.1016/j.cell.2015.04.044</a></p></li>
+<li><p><strong>Zheng GXY et al.</strong> (2017). Massively parallel digital transcriptional profiling of single cells. <em>Nature Communications</em>, 8, 14049. DOI: <a href="https://doi.org/10.1038/ncomms14049">10.1038/ncomms14049</a></p></li>
+<li><p><strong>Regev A et al.</strong> (2017). The Human Cell Atlas. <em>eLife</em>, 6, e27041. DOI: <a href="https://doi.org/10.7554/eLife.27041">10.7554/eLife.27041</a></p></li>
+<li><p><strong>Tirosh I et al.</strong> (2016). Dissecting the multicellular ecosystem of metastatic melanoma by single-cell RNA-seq. <em>Science</em>, 352(6282), 189–196. DOI: <a href="https://doi.org/10.1126/science.aad0501">10.1126/science.aad0501</a></p></li>
+<li><p><strong>Keren-Shaul H et al.</strong> (2017). A unique microglia type associated with restricting development of Alzheimer’s disease. <em>Cell</em>, 169(7), 1276–1290. DOI: <a href="https://doi.org/10.1016/j.cell.2017.05.018">10.1016/j.cell.2017.05.018</a></p></li>
+<li><p><strong>Kang HM et al.</strong> (2018). Multiplexed droplet single-cell RNA-sequencing using natural genetic variation. <em>Nature Biotechnology</em>, 36, 89–94. DOI: <a href="https://doi.org/10.1038/nbt.4042">10.1038/nbt.4042</a></p></li>
+<li><p><strong>Zhang L et al.</strong> (2020). Lineage tracking reveals dynamic relationships of T cells in colorectal cancer. <em>Nature</em>, 564, 268–272. DOI: <a href="https://doi.org/10.1038/s41586-018-0694-x">10.1038/s41586-018-0694-x</a></p></li>
+<li><p><strong>Luecken MD &amp; Theis FJ</strong> (2019). Current best practices in single-cell RNA-seq analysis: a tutorial. <em>Molecular Systems Biology</em>, 15(6), e8746. DOI: <a href="https://doi.org/10.15252/msb.20188746">10.15252/msb.20188746</a></p></li>
+<li><p><strong>Papalexi E &amp; Satija R</strong> (2018). Single-cell RNA sequencing to explore immune cell heterogeneity. <em>Nature Reviews Immunology</em>, 18, 35–45. DOI: <a href="https://doi.org/10.1038/nri.2017.76">10.1038/nri.2017.76</a></p></li>
+<li><p><strong>van den Brink SC et al.</strong> (2017). Single-cell sequencing reveals dissociation-induced gene expression in tissue subpopulations. <em>Nature Methods</em>, 14, 935–936. DOI: <a href="https://doi.org/10.1038/nmeth.4437">10.1038/nmeth.4437</a></p></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© Copyright 2025, Jubayer Hossain</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

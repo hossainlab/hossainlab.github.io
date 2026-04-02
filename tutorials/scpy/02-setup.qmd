@@ -1,0 +1,622 @@
+---
+title: "Setting Up Your Python Environment"
+subtitle: "Local conda/mamba, Google Colab, and VS Code — three paths, one goal"
+author:
+  - name: Jubayer Hossain
+    orcid: 0000-0001-9323-4997
+date: "2026-04-02"
+categories: [Setup, Python, scanpy, scverse, Google Colab, conda]
+description: "Install scanpy and the full scverse stack using the approach that suits your hardware: local conda/mamba on any OS, Google Colab for zero-install cloud computing, or VS Code for IDE-based workflows."
+toc: true
+toc-depth: 3
+---
+
+::: {.callout-note}
+## Learning Objectives
+
+By the end of this tutorial you will be able to:
+
+- Choose the **right setup path** for your hardware and workflow
+- Create an **isolated, reproducible conda environment** for the series
+- Install the **complete scverse stack**: `scanpy`, `anndata`, `scvi-tools`, `cellrank`, `squidpy`
+- Run a **verification script** that confirms every package is installed correctly
+- Set up **Google Colab** and persist your work to Google Drive
+- Apply the **seven best practices** that keep a single-cell project reproducible and shareable
+
+**Estimated time:** 15–30 minutes (depending on your download speed)
+**Prerequisites:** Tutorial #1 — Introduction to Single-Cell RNA-seq
+:::
+
+---
+
+## 1. Choosing Your Setup Path
+
+There is no single "correct" environment for single-cell analysis. The right choice depends on your hardware, internet connection, and workflow preferences. Here is an honest comparison:
+
+| | Local (conda/mamba) | Google Colab | VS Code + conda |
+|---|---|---|---|
+| **Cost** | Free | Free (Pro \$9.99/mo) | Free |
+| **Hardware requirement** | 8 GB RAM minimum, 16 GB recommended | Any browser | Any, same as Local |
+| **GPU support** | Only if you have one | Free T4 GPU | Only if you have one |
+| **Persistence** | Full — files stay | Resets each session | Full |
+| **Internet required** | Download only | Always | Download only |
+| **Reproducibility** | Excellent (pinned env) | Good (with Drive) | Excellent |
+| **Best for** | Daily analysis work | Trying things quickly, GPU methods | Code-first workflows |
+
+::: {.callout-tip}
+## Recommendation
+
+If you have a laptop with ≥ 8 GB RAM, **use the local conda setup** (Path A). It is faster, persistent, and you learn to manage environments properly — a skill that matters throughout your career.
+
+If you are on a shared computer, have less than 8 GB RAM, or want to run GPU-accelerated methods like `scvi-tools`, **use Google Colab** (Path B). It is genuinely excellent and free.
+
+These paths are **not mutually exclusive** — many researchers develop locally and offload GPU tasks to Colab.
+:::
+
+---
+
+## 2. Path A — Local Setup with Miniforge + Mamba
+
+### 2.1 Why Miniforge, Not Anaconda?
+
+You may have heard of Anaconda. We recommend **Miniforge** instead for three reasons:
+
+1. **Licence** — Anaconda's default channel has a commercial-use restriction since 2020. Miniforge uses `conda-forge` by default, which is fully open-source and has no such restriction.
+2. **Speed** — Miniforge ships with **mamba**, a C++ reimplementation of the conda solver that resolves environments in seconds instead of minutes.
+3. **Size** — Miniforge is a minimal installer (~90 MB). You install only what you need.
+
+### 2.2 Install Miniforge
+
+::: {.panel-tabset}
+
+## macOS / Linux
+
+Open your terminal and run:
+
+```bash
+# Download the installer
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+
+# Run the installer (follow the prompts — accept defaults)
+bash Miniforge3-$(uname)-$(uname -m).sh
+
+# Restart your terminal, then verify
+conda --version
+mamba --version
+```
+
+## Windows
+
+1. Download the **Miniforge3 Windows 64-bit** installer from:
+   `https://github.com/conda-forge/miniforge/releases/latest`
+2. Run the `.exe` installer. Use the default settings.
+3. Open **Miniforge Prompt** from the Start Menu (not PowerShell — until you configure it).
+4. Verify:
+
+```bash
+conda --version
+mamba --version
+```
+
+:::
+
+::: {.callout-tip}
+## Always Use `mamba`, Never `conda solve`
+
+After installing Miniforge, use **`mamba`** everywhere you would have typed `conda` for creating environments and installing packages. It uses the same syntax but is 10–50× faster. The only exception is `conda activate` — that command stays as `conda`.
+
+```bash
+# Slow — do not use for installs
+conda install scanpy
+
+# Fast — use this
+mamba install scanpy
+```
+:::
+
+### 2.3 Create the Series Environment
+
+Instead of installing packages into your `base` environment (a common mistake that causes dependency conflicts), create a **dedicated environment** for this tutorial series.
+
+Download `environment.yml` to your project folder, or copy the block below:
+
+```{.yaml filename="environment.yml"}
+name: scpy
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.11
+  - scanpy>=1.10
+  - anndata>=0.10
+  - leidenalg
+  - python-igraph
+  - harmonypy
+  - matplotlib
+  - seaborn
+  - pandas
+  - numpy
+  - scipy
+  - scikit-learn
+  - jupyterlab>=4.0
+  - ipywidgets
+  - tqdm
+  - h5py
+  - pytables
+  - pip
+  - pip:
+      - scvi-tools>=1.1
+      - cellrank>=2.0
+      - squidpy>=1.4
+      - muon>=0.1
+```
+
+Create and activate the environment:
+
+```bash
+# Create from file (takes 3–8 minutes on first run)
+mamba env create -f environment.yml
+
+# Activate
+conda activate scpy
+
+# Verify activation — your prompt should show (scpy)
+python --version
+```
+
+::: {.callout-important}
+## Never Install into `base`
+
+`base` is your safety net — the environment that always works. The moment you start installing analysis packages into it, dependency conflicts accumulate and it becomes unstable. Always create a new named environment for each project. The command `conda activate scpy` takes two seconds and protects months of work.
+:::
+
+### 2.4 Install JupyterLab and Register the Kernel
+
+JupyterLab is already included in `environment.yml`. Launch it from within your activated environment:
+
+```bash
+# Make sure the environment is active
+conda activate scpy
+
+# Register the kernel so Jupyter sees this environment
+python -m ipykernel install --user --name scpy --display-name "Python (scpy)"
+
+# Launch JupyterLab
+jupyter lab
+```
+
+Your browser will open at `http://localhost:8888`. When creating a new notebook, select the **"Python (scpy)"** kernel from the launcher. This ensures your notebooks always use the correct environment.
+
+---
+
+## 3. Path B — Google Colab
+
+Google Colab provides free access to cloud-hosted Jupyter notebooks with Python pre-installed, a generous CPU runtime, and optionally a free NVIDIA T4 GPU. It is the best option for learners without access to local computing resources.
+
+### 3.1 Getting Started with Colab
+
+1. Go to [colab.research.google.com](https://colab.research.google.com)
+2. Sign in with a Google account
+3. Click **New notebook** (or open a shared tutorial notebook)
+4. You now have a running Python environment in the cloud
+
+### 3.2 Install the scverse Stack on Colab
+
+Colab comes with many scientific Python packages pre-installed, but the scverse stack must be installed at the start of **every session** (Colab resets when it goes idle).
+
+Create a cell at the very top of each notebook and run:
+
+```python
+# ── Install scverse ecosystem ─────────────────────────────────────────────────
+# Run this cell at the start of every Colab session (takes ~2 minutes)
+import subprocess, sys
+
+packages = [
+    "scanpy>=1.10",
+    "scvi-tools>=1.1",
+    "cellrank>=2.0",
+    "squidpy>=1.4",
+    "leidenalg",
+    "python-igraph",
+    "harmonypy",
+]
+
+subprocess.check_call([
+    sys.executable, "-m", "pip", "install", "--quiet", *packages
+])
+print("Installation complete.")
+```
+
+::: {.callout-tip}
+## Why `subprocess` Instead of `!pip install`?
+
+Both work, but `subprocess.check_call` raises an exception if the install fails — so you know immediately if something went wrong, rather than discovering the error three cells later when you try to import. It is a safer pattern for shared notebooks.
+:::
+
+### 3.3 Enable GPU Acceleration
+
+For tutorials that use `scvi-tools` (deep generative models), a GPU reduces computation time from hours to minutes.
+
+1. In Colab: **Runtime → Change runtime type**
+2. Select **T4 GPU** under Hardware accelerator
+3. Click **Save**
+
+::: {.callout-warning}
+## GPU Availability
+
+Free Colab does not guarantee GPU availability — you may be given a CPU runtime if demand is high. If you see "GPU not available", connect to a CPU runtime and proceed — most tutorials in this series run fine on CPU. Only the integration tutorial (scvi-tools SCVI/scANVI) benefits significantly from a GPU.
+
+**Colab Pro** (\$9.99/month) provides priority GPU access and longer runtimes if you need reliable GPU access.
+:::
+
+### 3.4 Persist Your Work with Google Drive
+
+Colab's file system is temporary — files stored there vanish when the session ends. Mount your **Google Drive** at the start of every session to persist notebooks, data, and results:
+
+```python
+# ── Mount Google Drive ────────────────────────────────────────────────────────
+from google.colab import drive
+drive.mount("/content/drive")
+
+# Set your project path on Drive
+import os
+PROJECT = "/content/drive/MyDrive/scpy-tutorial"
+os.makedirs(PROJECT, exist_ok=True)
+
+# Change into it so all relative paths work
+os.chdir(PROJECT)
+print(f"Working directory: {os.getcwd()}")
+```
+
+When prompted, follow the link, grant permissions, and copy the auth code. After mounting:
+
+```python
+# Save AnnData objects here (not to Colab's /content/ which is temporary)
+adata.write_h5ad(f"{PROJECT}/data/processed/adata_qc.h5ad")
+```
+
+### 3.5 Managing Colab Sessions
+
+Colab disconnects after **~90 minutes of idle time** on the free tier. This means:
+
+- Always save your processed `AnnData` objects to Drive at the end of a cell, not the end of a notebook
+- Use `adata.write_h5ad(...)` liberally — think of it like Ctrl+S in a word processor
+- Long-running cells (clustering, UMAP on large datasets) can trigger timeouts — consider running these cells and then immediately saving the result
+
+```python
+# Good habit: save after every major step
+CHECKPOINT_DIR = f"{PROJECT}/data/processed"
+os.makedirs(CHECKPOINT_DIR, exist_ok=True)
+
+adata.write_h5ad(f"{CHECKPOINT_DIR}/adata_after_qc.h5ad")
+print(f"Saved {adata.n_obs} cells to {CHECKPOINT_DIR}/adata_after_qc.h5ad")
+```
+
+---
+
+## 4. Path C — VS Code with the Jupyter Extension
+
+If you prefer an IDE to a browser-based interface, VS Code is the most polished option. It uses the same `scpy` conda environment you created in Path A.
+
+### 4.1 Setup
+
+1. Install [VS Code](https://code.visualstudio.com/)
+2. Install these extensions:
+   - **Python** (Microsoft)
+   - **Jupyter** (Microsoft)
+   - **Rainbow CSV** (for exploring metadata files)
+3. Open your project folder: **File → Open Folder**
+4. Select the interpreter: `Ctrl+Shift+P` → **Python: Select Interpreter** → choose `scpy`
+
+### 4.2 Two Workflow Modes in VS Code
+
+**Notebook mode** (`.ipynb`) — Click **New File → Jupyter Notebook**. Works identically to JupyterLab but inside VS Code. Best for exploratory analysis.
+
+**Script + `# %%` cells** (`.py`) — Write a regular Python script, add `# %%` to create executable cells (called an "Interactive Window"). Best when you want version-controlled, diff-friendly code files.
+
+```python
+# %% [markdown]
+# ## Load and inspect the dataset
+
+# %%
+import scanpy as sc
+
+adata = sc.read_h5ad("data/processed/adata_raw.h5ad")
+adata
+```
+
+::: {.callout-tip}
+## VS Code vs JupyterLab: Which to Choose?
+
+Use **JupyterLab** if you like rich inline outputs, interactive widget exploration, and drag-and-drop cell reordering.
+
+Use **VS Code** if you want integrated git, refactoring tools, debugging, and prefer keeping analysis in `.py` files (better for version control — notebooks produce noisy git diffs).
+
+Both use the same `scpy` kernel and produce identical outputs.
+:::
+
+---
+
+## 5. Verifying Your Installation
+
+Run this verification script regardless of your setup path. It imports every package in the series, prints versions, and runs a real analysis on a toy dataset to confirm everything works end-to-end.
+
+```python
+# ── Verification Script ───────────────────────────────────────────────────────
+# Run this after installation to confirm everything is working.
+
+import sys
+print(f"Python {sys.version}\n")
+
+# Core imports
+import scanpy as sc
+import anndata as ad
+import numpy as np
+import pandas as pd
+import scipy
+import matplotlib
+import seaborn as sns
+
+# scverse stack
+import scvi
+import cellrank as cr
+import squidpy as sq
+import muon as mu
+
+# Versions table
+packages = {
+    "scanpy":     sc.__version__,
+    "anndata":    ad.__version__,
+    "scvi-tools": scvi.__version__,
+    "cellrank":   cr.__version__,
+    "squidpy":    sq.__version__,
+    "muon":       mu.__version__,
+    "numpy":      np.__version__,
+    "pandas":     pd.__version__,
+    "scipy":      scipy.__version__,
+    "matplotlib": matplotlib.__version__,
+    "seaborn":    sns.__version__,
+}
+
+print("Installed package versions:")
+print("-" * 35)
+for pkg, ver in packages.items():
+    status = "✓" if ver else "✗"
+    print(f"  {status}  {pkg:<18} {ver}")
+
+# ── End-to-end sanity check ───────────────────────────────────────────────────
+print("\nRunning end-to-end sanity check...")
+
+adata = sc.datasets.pbmc3k()               # Download 3k PBMC demo dataset
+sc.pp.filter_cells(adata, min_genes=200)   # Basic filter
+sc.pp.filter_genes(adata, min_cells=3)
+sc.pp.normalize_total(adata)               # Normalise
+sc.pp.log1p(adata)
+sc.pp.pca(adata, n_comps=10)              # PCA
+sc.pp.neighbors(adata)                     # Neighbour graph
+sc.tl.umap(adata)                          # UMAP
+
+print(f"\n  ✓  End-to-end pipeline complete")
+print(f"  ✓  Dataset: {adata.n_obs} cells × {adata.n_vars} genes")
+print(f"  ✓  UMAP coordinates computed: {adata.obsm['X_umap'].shape}")
+print("\nAll checks passed. Your environment is ready.")
+```
+
+Expected output:
+
+```
+Python 3.11.x [...]
+
+Installed package versions:
+-----------------------------------
+  ✓  scanpy             1.10.x
+  ✓  anndata            0.10.x
+  ✓  scvi-tools         1.1.x
+  ✓  cellrank           2.0.x
+  ✓  squidpy            1.4.x
+  ✓  muon               0.1.x
+  ✓  numpy              1.26.x
+  ✓  pandas             2.x.x
+  ✓  scipy              1.12.x
+  ✓  matplotlib         3.8.x
+  ✓  seaborn            0.13.x
+
+Running end-to-end sanity check...
+
+  ✓  End-to-end pipeline complete
+  ✓  Dataset: 2638 cells × 1838 genes
+  ✓  UMAP coordinates computed: (2638, 2)
+
+All checks passed. Your environment is ready.
+```
+
+::: {.callout-warning}
+## Troubleshooting Common Issues
+
+**`leidenalg` fails on Windows**
+Use conda to install it rather than pip: `mamba install leidenalg -c conda-forge`
+
+**`scvi-tools` import error about `torch`**
+PyTorch was not installed. Run: `mamba install pytorch cpuonly -c pytorch`
+
+**`ModuleNotFoundError` in Jupyter despite installing**
+Your notebook is using a different kernel. In JupyterLab: Kernel → Change Kernel → Python (scpy). In VS Code: bottom-right interpreter selector → `scpy`.
+
+**Slow mamba environment creation (>15 minutes)**
+Add `--no-deps` to pip installs in the YAML and resolve conda packages first. Or use `conda config --set channel_priority strict`.
+
+**Colab: "Your session crashed after using all available RAM"**
+The PBMC3k demo uses ~1 GB. For our 12-sample dataset in later tutorials, request a **High-RAM runtime** in Colab Pro, or downsample to fewer cells during development.
+:::
+
+---
+
+## 6. Standard Notebook Header
+
+Every notebook in this series begins with the same header block. Paste it into the first cell of any new notebook and run it before anything else.
+
+```python
+# ── Standard header — paste at the top of every notebook ─────────────────────
+import warnings
+import random
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import scanpy as sc
+import anndata as ad
+
+# Suppress noisy deprecation warnings (optional)
+warnings.filterwarnings("ignore", category=FutureWarning)
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+
+# Global random seed — set once, use everywhere
+SEED = 42
+random.seed(SEED)
+np.random.seed(SEED)
+
+# Scanpy display settings
+sc.settings.verbosity = 2          # 0=errors only, 1=warnings, 2=info, 3=hints
+sc.settings.set_figure_params(
+    dpi=100,
+    dpi_save=300,                  # Publication quality on save
+    facecolor="white",
+    figsize=(5, 5),
+    frameon=False,
+)
+sc.settings.figdir = "figures/"    # All sc.pl.* figures saved here
+
+# Pandas display options
+pd.set_option("display.max_columns", 30)
+pd.set_option("display.max_rows", 20)
+
+print(f"scanpy {sc.__version__} | anndata {ad.__version__} | numpy {np.__version__}")
+```
+
+::: {.callout-important}
+## Why Set a Random Seed?
+
+Several steps in the single-cell pipeline are stochastic: UMAP initialisation, Leiden clustering tie-breaking, and neural network weight initialisation (scvi-tools). Without a fixed seed, your UMAP will look slightly different every run, and cluster numbers will shift. Setting `SEED = 42` at the top of every notebook ensures your figures are **exactly reproducible** — critical when revising a manuscript six months after the analysis was done.
+:::
+
+---
+
+## 7. Project Directory Structure: Best Practices
+
+Before you write a single line of analysis code, set up a clean directory structure. Investing five minutes here saves hours of confusion later.
+
+```
+scpy-tutorial/
+├── data/
+│   ├── raw/                  ← Original files, NEVER modified
+│   │   └── GSM5320459_Ctrl1_count_matrix.csv.gz
+│   └── processed/            ← AnnData checkpoints (.h5ad)
+│       ├── adata_raw.h5ad
+│       ├── adata_qc.h5ad
+│       └── adata_final.h5ad
+├── notebooks/
+│   ├── 01-introduction.ipynb
+│   ├── 02-setup.ipynb
+│   └── 03-anndata.ipynb
+├── figures/                  ← All plot outputs (auto-created by scanpy)
+├── results/                  ← Tables, DEG lists, cluster annotations
+├── environment.yml           ← Reproducible environment spec
+└── README.md                 ← What this project is, how to reproduce it
+```
+
+The key rules:
+
+**Rule 1 — Raw data is sacred.**
+Never overwrite, rename, or edit files in `data/raw/`. If you need to modify something, copy it to `data/processed/` first.
+
+**Rule 2 — Save AnnData checkpoints.**
+After each major step (QC, normalisation, clustering), write the AnnData object to an `.h5ad` file. This way, you can restart any tutorial from that point without rerunning everything.
+
+```python
+# After QC
+adata.write_h5ad("data/processed/adata_qc.h5ad")
+
+# Reload later (instant — no recomputation)
+adata = sc.read_h5ad("data/processed/adata_qc.h5ad")
+```
+
+**Rule 3 — One notebook per major analysis step.**
+Do not cram quality control, normalisation, clustering, and annotation into one 500-cell notebook. Give each step its own file. Your future self will thank you.
+
+**Rule 4 — Log your parameters.**
+Record the key parameters you used — QC thresholds, number of PCs, clustering resolution — in a dedicated cell or a YAML config file. This makes it trivial to revisit parameter choices when a reviewer asks.
+
+**Rule 5 — Version pin your environment.**
+When your analysis is complete and ready for publication, snapshot the exact versions:
+
+```bash
+conda activate scpy
+conda env export > environment_frozen.yml
+```
+
+The frozen YAML will allow anyone (including you, 18 months later) to recreate the exact environment.
+
+---
+
+## 8. A Note on Data
+
+The 12 count matrix files for this series are already in `tutorials/scpy/data/`. Each file is a compressed CSV with genes as rows and cells as columns. In Tutorial #3 (The AnnData Object Explained), we will load them, explore their structure, and convert them to `AnnData` format.
+
+You do not need to download anything — if you are following along locally, the data files travel with the tutorial repository. On Google Colab, we will show how to upload them to your Drive in Tutorial #3.
+
+---
+
+## Summary
+
+You now have a fully functional single-cell analysis environment. Here is what you set up:
+
+| Component | Purpose |
+|---|---|
+| `scpy` conda environment | Isolated, reproducible Python environment |
+| `scanpy` | Core analysis: QC, normalisation, PCA, UMAP, clustering |
+| `anndata` | The AnnData data structure |
+| `scvi-tools` | Probabilistic models: deep learning-based normalisation and integration |
+| `cellrank` | Trajectory inference and cell fate prediction |
+| `squidpy` | Spatial transcriptomics analysis |
+| `muon` | Multi-modal (CITE-seq, ATAC+RNA) analysis |
+
+The environment is defined in `environment.yml`, so any collaborator can reproduce it exactly with one command:
+
+```bash
+mamba env create -f environment.yml
+```
+
+::: {.callout-note}
+## Best Practices Checklist
+
+Before starting any analysis:
+
+- [ ] Activate the `scpy` environment (or install on Colab)
+- [ ] Start your notebook with the **standard header** (seed, verbosity, figure settings)
+- [ ] Set up the **project directory structure** before writing code
+- [ ] Raw data files are in `data/raw/` and will **never be modified**
+- [ ] You know how to **save and reload AnnData checkpoints**
+- [ ] Your `environment.yml` is committed to version control
+:::
+
+---
+
+## What's Next
+
+**Tutorial #3 — The AnnData Object Explained**
+Load your first real single-cell dataset, dissect the AnnData structure (`.X`, `.obs`, `.var`, `.obsm`, `.uns`), and learn the indexing, slicing, and metadata operations you will use in every analysis.
+
+---
+
+## References
+
+- **Wolf FA, Angerer P, Theis FJ** (2018). SCANPY: large-scale single-cell gene expression data analysis. *Genome Biology*, 19, 15. DOI: [10.1186/s13059-017-1382-0](https://doi.org/10.1186/s13059-017-1382-0)
+
+- **Virshup I et al.** (2021). anndata: Annotated data. *bioRxiv*. DOI: [10.1101/2021.12.16.473007](https://doi.org/10.1101/2021.12.16.473007)
+
+- **Lopez R et al.** (2018). Deep generative modeling for single-cell transcriptomics. *Nature Methods*, 15, 1053–1058. DOI: [10.1038/s41592-018-0229-2](https://doi.org/10.1038/s41592-018-0229-2)
+
+- **Palla G et al.** (2022). Squidpy: a scalable framework for spatial omics analysis. *Nature Methods*, 19, 171–178. DOI: [10.1038/s41592-021-01358-2](https://doi.org/10.1038/s41592-021-01358-2)
+
+- **Lange M et al.** (2022). CellRank for directed single-cell fate mapping. *Nature Methods*, 19, 159–170. DOI: [10.1038/s41592-021-01346-6](https://doi.org/10.1038/s41592-021-01346-6)

@@ -1,0 +1,81 @@
+<%
+const modules = {};
+const moduleOrder = [];
+for (const item of items) {
+  const modKey = item.module || 'General';
+  if (!modules[modKey]) {
+    modules[modKey] = [];
+    moduleOrder.push(modKey);
+  }
+  modules[modKey].push(item);
+}
+const totalAvailable = items.filter(i => (i.status || 'available') === 'available').length;
+const totalLessons = items.length;
+%>
+<div class="tut-wrapper">
+<% for (let mi = 0; mi < moduleOrder.length; mi++) { %>
+<% const modKey = moduleOrder[mi]; %>
+<% const lessons = modules[modKey]; %>
+<% const availableInModule = lessons.filter(l => (l.status || 'available') === 'available').length; %>
+<div class="tut-module">
+<div class="tut-module-header">
+<div class="tut-module-num"><%= mi + 1 %></div>
+<div class="tut-module-info">
+<div class="tut-module-title"><%= modKey %></div>
+<div class="tut-module-count"><%= lessons.length %> lesson<%= lessons.length !== 1 ? 's' : '' %> &bull; <%= availableInModule %> available</div>
+</div>
+<div class="tut-module-progress">
+<% for (const l of lessons) { %>
+<div class="tut-progress-dot<%= (l.status || 'available') === 'available' ? ' dot-available' : '' %>"></div>
+<% } %>
+</div>
+</div>
+<div class="tut-lessons">
+<% for (const lesson of lessons) { %>
+<% const isAvailable = (lesson.status || 'available') === 'available'; %>
+<% const diff = lesson.difficulty || 'Beginner'; %>
+<% const diffSlug = diff.toLowerCase().replace(/\s/g, ''); %>
+<div class="tut-lesson<%= isAvailable ? '' : ' coming-soon' %>">
+<div class="tut-lesson-icon<%= isAvailable ? ' available' : '' %>">
+<% if (isAvailable) { %>
+<i class="fa-solid fa-circle-play"></i>
+<% } else { %>
+<i class="fa-solid fa-lock"></i>
+<% } %>
+</div>
+<div class="tut-lesson-num">#<%= lesson.number || '' %></div>
+<div class="tut-lesson-body">
+<div class="tut-lesson-top">
+<span class="tut-lesson-title"><%= lesson.title %></span>
+<span class="tut-badge tut-badge-<%= isAvailable ? 'available' : 'coming' %>"><%= isAvailable ? 'Available' : 'Coming Soon' %></span>
+<span class="tut-badge tut-badge-<%= diffSlug %>"><%= diff %></span>
+</div>
+<% if (lesson.description) { %>
+<p class="tut-lesson-desc"><%= lesson.description %></p>
+<% } %>
+<div class="tut-lesson-meta">
+<% if (lesson.duration) { %>
+<span class="tut-duration"><i class="fa-regular fa-clock"></i> <%= lesson.duration %></span>
+<% } %>
+<% if (lesson.tags && lesson.tags.length > 0) { %>
+<div class="tut-tags">
+<% for (const tag of lesson.tags) { %>
+<span class="tut-tag"><%= tag %></span>
+<% } %>
+</div>
+<% } %>
+</div>
+<% if (lesson.links && lesson.links.length > 0 && isAvailable) { %>
+<div class="tut-links">
+<% for (const link of lesson.links) { %>
+<a href="<%= link.url %>" class="tut-btn" target="_blank"><% if (link.icon) { %><i class="<%= link.icon %>"></i> <% } %><%= link.label %></a>
+<% } %>
+</div>
+<% } %>
+</div>
+</div>
+<% } %>
+</div>
+</div>
+<% } %>
+</div>

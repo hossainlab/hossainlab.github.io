@@ -1,0 +1,132 @@
+# ── Module 1: Getting Started ─────────────────────────────────────────────────
+
+- title: "Introduction to Single-Cell RNA-seq"
+  module: "Module 1: Getting Started"
+  number: 1
+  description: "The biological motivation for scRNA-seq, how droplet microfluidics works, barcodes and UMIs explained, the count matrix structure, and a tour of the scverse ecosystem."
+  status: available
+  difficulty: Beginner
+  duration: "~25 min"
+  tags:
+    - scRNA-seq
+    - Overview
+    - scverse
+    - UMIs
+  links:
+    - label: "Read Tutorial"
+      url: "01-introduction.html"
+      icon: "fa-solid fa-book-open"
+
+- title: "Setting Up Your Python Environment"
+  module: "Module 1: Getting Started"
+  number: 2
+  description: "Three setup paths — local conda/mamba, Google Colab, and VS Code. Install the complete scverse stack, run the verification script, and apply the seven best practices that keep your project reproducible."
+  status: available
+  difficulty: Beginner
+  duration: "~20 min"
+  tags:
+    - Python
+    - conda
+    - mamba
+    - Google Colab
+    - scverse
+  links:
+    - label: "Read Tutorial"
+      url: "02-setup.html"
+      icon: "fa-solid fa-book-open"
+    - label: "environment.yml"
+      url: "environment.yml"
+      icon: "fa-solid fa-download"
+
+- title: "The AnnData Object Explained"
+  module: "Module 1: Getting Started"
+  number: 3
+  description: "Build AnnData from scratch, load all 12 real PBMC samples from CSV.gz files, concatenate them into one 107k-cell object, master indexing and slicing, understand layers and embeddings, and save your first checkpoint."
+  status: available
+  difficulty: Beginner
+  duration: "~35 min"
+  tags:
+    - anndata
+    - Python
+    - sparse matrix
+    - concatenation
+  links:
+    - label: "Read Tutorial"
+      url: "03-anndata.html"
+      icon: "fa-solid fa-book-open"
+
+# ── Module 2: Preprocessing & Quality Control ─────────────────────────────────
+
+- title: "Loading Raw Data and Quality Control Metrics"
+  module: "Module 2: Preprocessing & QC"
+  number: 4
+  description: "Read 10x Genomics data into AnnData, compute QC metrics (total counts, n_genes, mitochondrial fraction), and visualise distributions."
+  status: coming-soon
+  difficulty: Beginner
+  duration: "~45 min"
+  tags:
+    - scanpy
+    - QC
+    - 10x Genomics
+
+- title: "Filtering Cells and Genes"
+  module: "Module 2: Preprocessing & QC"
+  number: 5
+  description: "Apply QC thresholds to remove low-quality cells, doublets, and uninformative genes. Best practices for threshold selection."
+  status: coming-soon
+  difficulty: Beginner
+  duration: "~30 min"
+  tags:
+    - scanpy
+    - filtering
+    - doublets
+
+- title: "Normalization, Log-Transformation & Feature Selection"
+  module: "Module 2: Preprocessing & QC"
+  number: 6
+  description: "Library-size normalisation, log1p transformation, and highly variable gene selection to prepare data for dimensionality reduction."
+  status: coming-soon
+  difficulty: Intermediate
+  duration: "~35 min"
+  tags:
+    - normalization
+    - HVGs
+    - scanpy
+
+# ── Module 3: Dimensionality Reduction & Clustering ───────────────────────────
+
+- title: "PCA and the Neighborhood Graph"
+  module: "Module 3: Dimensionality Reduction & Clustering"
+  number: 7
+  description: "Run PCA on highly variable genes, choose the number of components, and build a k-nearest-neighbor graph for downstream analyses."
+  status: coming-soon
+  difficulty: Intermediate
+  duration: "~40 min"
+  tags:
+    - PCA
+    - kNN
+    - scanpy
+
+- title: "UMAP and t-SNE Visualisation"
+  module: "Module 3: Dimensionality Reduction & Clustering"
+  number: 8
+  description: "Generate UMAP and t-SNE embeddings, interpret scatter plots, and understand the strengths and limitations of each method."
+  status: coming-soon
+  difficulty: Intermediate
+  duration: "~35 min"
+  tags:
+    - UMAP
+    - t-SNE
+    - visualisation
+
+- title: "Clustering with Leiden and Louvain"
+  module: "Module 3: Dimensionality Reduction & Clustering"
+  number: 9
+  description: "Apply community-detection algorithms to identify cell clusters, tune resolution, and evaluate clustering stability."
+  status: coming-soon
+  difficulty: Intermediate
+  duration: "~40 min"
+  tags:
+    - Leiden
+    - Louvain
+    - clustering

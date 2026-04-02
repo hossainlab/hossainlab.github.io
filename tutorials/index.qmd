@@ -1,0 +1,57 @@
+---
+title: "Tutorials"
+subtitle: "Step-by-step tutorial series on computational biology, bioinformatics, and data science"
+page-layout: full
+toc: false
+title-block-banner: true
+---
+
+```{=html}
+<div class="tut-catalog">
+
+<a href="scpy/" class="tut-series-card">
+<div class="tut-series-card-banner">
+<span class="tut-series-card-icon">🧬</span>
+</div>
+<div class="tut-series-card-body">
+<div class="tut-series-card-title">Single-Cell Analysis with Python</div>
+<p class="tut-series-card-desc">A step-by-step guide to analysing scRNA-seq data using scanpy and the scverse ecosystem — from raw counts to biological insight.</p>
+<div class="tut-series-card-footer">
+<span class="tut-series-stat-pill">20+ Lessons</span>
+<span class="tut-series-stat-pill">6 Modules</span>
+<span class="tut-series-stat-pill">Python</span>
+<span class="tut-series-status">Active</span>
+</div>
+</div>
+</a>
+
+<div class="tut-series-card tut-series-card-placeholder">
+<div class="tut-series-card-banner tut-banner-coming">
+<span class="tut-series-card-icon">🔬</span>
+</div>
+<div class="tut-series-card-body">
+<div class="tut-series-card-title">Bulk RNA-seq Analysis with Python</div>
+<p class="tut-series-card-desc">End-to-end differential expression analysis, pathway enrichment, and visualisation using PyDESeq2 and related tools.</p>
+<div class="tut-series-card-footer">
+<span class="tut-series-stat-pill">Python</span>
+<span class="tut-series-status tut-status-soon">Coming Soon</span>
+</div>
+</div>
+</div>
+
+<div class="tut-series-card tut-series-card-placeholder">
+<div class="tut-series-card-banner tut-banner-coming">
+<span class="tut-series-card-icon">🤖</span>
+</div>
+<div class="tut-series-card-body">
+<div class="tut-series-card-title">Machine Learning for Genomics</div>
+<p class="tut-series-card-desc">Apply supervised and unsupervised machine learning to genomic data using scikit-learn and PyTorch.</p>
+<div class="tut-series-card-footer">
+<span class="tut-series-stat-pill">Python</span>
+<span class="tut-series-status tut-status-soon">Coming Soon</span>
+</div>
+</div>
+</div>
+
+</div>
+```

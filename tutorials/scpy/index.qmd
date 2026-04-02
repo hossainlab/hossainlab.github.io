@@ -1,0 +1,35 @@
+---
+title: "Single-Cell Analysis with Python"
+subtitle: "A practical, hands-on guide from raw data to biological insight using scanpy & the scverse ecosystem"
+page-layout: full
+toc: false
+title-block-banner: true
+listing:
+  - id: tutorials
+    contents: tutorials.yml
+    template: ../../_templates/tutorial-card.ejs
+---
+
+```{=html}
+<div class="tut-series-overview">
+<div class="tut-stat-group">
+<div class="tut-stat-item"><span class="tut-stat-val">20+</span><span class="tut-stat-lbl">Lessons</span></div>
+<div class="tut-stat-item"><span class="tut-stat-val">6</span><span class="tut-stat-lbl">Modules</span></div>
+<div class="tut-stat-item"><span class="tut-stat-val">Python</span><span class="tut-stat-lbl">Language</span></div>
+<div class="tut-stat-item"><span class="tut-stat-val">All Levels</span><span class="tut-stat-lbl">Audience</span></div>
+<div class="tut-stat-item"><span class="tut-stat-val">Free</span><span class="tut-stat-lbl">Access</span></div>
+</div>
+<div class="tut-tools-row">
+<span class="tut-tool-chip">scanpy</span>
+<span class="tut-tool-chip">anndata</span>
+<span class="tut-tool-chip">scvi-tools</span>
+<span class="tut-tool-chip">cellrank</span>
+<span class="tut-tool-chip">squidpy</span>
+<span class="tut-tool-chip">Python</span>
+<span class="tut-tool-chip">Jupyter</span>
+</div>
+</div>
+```
+
+:::{#tutorials}
+:::

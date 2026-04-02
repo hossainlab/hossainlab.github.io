@@ -1,0 +1,1681 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jubayer Hossain">
+<meta name="dcterms.date" content="2026-04-02">
+<meta name="description" content="Academic Website for Jubayer Hossain">
+
+<title>The AnnData Object Explained – Jubayer Hossain</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../..//files/profiles/icon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Jubayer Hossain</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Projects</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
+        <li>
+    <a class="dropdown-item" href="../../projects/index.html">
+ <span class="dropdown-text">Research Projects</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../projects/pipelines.html">
+ <span class="dropdown-text">Pipelines</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-teaching" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Teaching</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-teaching">    
+        <li>
+    <a class="dropdown-item" href="../../teaching/index.html">
+ <span class="dropdown-text">Courses</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../teaching/videos.html">
+ <span class="dropdown-text">Videos</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../tutorials/index.html"> 
+<span class="menu-text">Tutorials</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../publications/index.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../cv/professional-cv/CV-HossainMJ.pdf"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:hossainmj@gmail.com"> <i class="bi bi-envelope" role="img" aria-label="email">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://orcid.org/0000-0001-9323-4997" target="_blank"> 
+<span class="menu-text"><i class="ai  ai-orcid" aria-label="orcid"></i></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=9_K4ekoAAAAJ&amp;hl=en&amp;authuser=5" target="_blank"> 
+<span class="menu-text"><i class="ai  ai-google-scholar" aria-label="google-scholar"></i></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=9_K4ekoAAAAJ&amp;hl=en&amp;authuser=5" target="_blank"> 
+<span class="menu-text"><i class="ai  ai-researchgate" aria-label="researchgate"></i></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/hossainmj" target="_blank"> <i class="bi bi-linkedin" role="img" aria-label="linkedin">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/hossain_lab" target="_blank"> <i class="bi bi-twitter" role="img" aria-label="twitter">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/hossainlab" target="_blank"> <i class="bi bi-github" role="img" aria-label="github">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/@hossainlab" target="_blank"> <i class="bi bi-youtube" role="img" aria-label="youtube">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-problem-anndata-solves" id="toc-the-problem-anndata-solves" class="nav-link active" data-scroll-target="#the-problem-anndata-solves">1. The Problem AnnData Solves</a></li>
+  <li><a href="#the-full-anatomy-of-anndata" id="toc-the-full-anatomy-of-anndata" class="nav-link" data-scroll-target="#the-full-anatomy-of-anndata">2. The Full Anatomy of AnnData</a></li>
+  <li><a href="#building-anndata-from-scratch" id="toc-building-anndata-from-scratch" class="nav-link" data-scroll-target="#building-anndata-from-scratch">3. Building AnnData from Scratch</a>
+  <ul class="collapse">
+  <li><a href="#adding-to-.uns" id="toc-adding-to-.uns" class="nav-link" data-scroll-target="#adding-to-.uns">Adding to <code>.uns</code></a></li>
+  </ul></li>
+  <li><a href="#loading-our-real-dataset" id="toc-loading-our-real-dataset" class="nav-link" data-scroll-target="#loading-our-real-dataset">4. Loading Our Real Dataset</a>
+  <ul class="collapse">
+  <li><a href="#inspecting-the-loaded-object" id="toc-inspecting-the-loaded-object" class="nav-link" data-scroll-target="#inspecting-the-loaded-object">Inspecting the loaded object</a></li>
+  </ul></li>
+  <li><a href="#working-with-.obs-cell-metadata" id="toc-working-with-.obs-cell-metadata" class="nav-link" data-scroll-target="#working-with-.obs-cell-metadata">5. Working with <code>.obs</code> — Cell Metadata</a>
+  <ul class="collapse">
+  <li><a href="#computing-per-cell-summary-statistics" id="toc-computing-per-cell-summary-statistics" class="nav-link" data-scroll-target="#computing-per-cell-summary-statistics">Computing per-cell summary statistics</a></li>
+  </ul></li>
+  <li><a href="#working-with-.var-gene-metadata" id="toc-working-with-.var-gene-metadata" class="nav-link" data-scroll-target="#working-with-.var-gene-metadata">6. Working with <code>.var</code> — Gene Metadata</a></li>
+  <li><a href="#layers-storing-multiple-expression-matrices" id="toc-layers-storing-multiple-expression-matrices" class="nav-link" data-scroll-target="#layers-storing-multiple-expression-matrices">7. Layers — Storing Multiple Expression Matrices</a></li>
+  <li><a href="#embeddings-.obsm-and-.obsp" id="toc-embeddings-.obsm-and-.obsp" class="nav-link" data-scroll-target="#embeddings-.obsm-and-.obsp">8. Embeddings — <code>.obsm</code> and <code>.obsp</code></a></li>
+  <li><a href="#loading-and-concatenating-all-12-samples" id="toc-loading-and-concatenating-all-12-samples" class="nav-link" data-scroll-target="#loading-and-concatenating-all-12-samples">9. Loading and Concatenating All 12 Samples</a>
+  <ul class="collapse">
+  <li><a href="#inspect-the-merged-object" id="toc-inspect-the-merged-object" class="nav-link" data-scroll-target="#inspect-the-merged-object">Inspect the merged object</a></li>
+  </ul></li>
+  <li><a href="#indexing-and-slicing" id="toc-indexing-and-slicing" class="nav-link" data-scroll-target="#indexing-and-slicing">10. Indexing and Slicing</a>
+  <ul class="collapse">
+  <li><a href="#boolean-indexing-most-common" id="toc-boolean-indexing-most-common" class="nav-link" data-scroll-target="#boolean-indexing-most-common">Boolean indexing (most common)</a></li>
+  <li><a href="#gene-indexing" id="toc-gene-indexing" class="nav-link" data-scroll-target="#gene-indexing">Gene indexing</a></li>
+  </ul></li>
+  <li><a href="#views-vs-copies" id="toc-views-vs-copies" class="nav-link" data-scroll-target="#views-vs-copies">11. Views vs Copies</a></li>
+  <li><a href="#saving-and-loading-the-.h5ad-format" id="toc-saving-and-loading-the-.h5ad-format" class="nav-link" data-scroll-target="#saving-and-loading-the-.h5ad-format">12. Saving and Loading — The <code>.h5ad</code> Format</a>
+  <ul class="collapse">
+  <li><a href="#file-size-expectations" id="toc-file-size-expectations" class="nav-link" data-scroll-target="#file-size-expectations">File size expectations</a></li>
+  </ul></li>
+  <li><a href="#putting-it-all-together" id="toc-putting-it-all-together" class="nav-link" data-scroll-target="#putting-it-all-together">13. Putting It All Together</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#whats-next" id="toc-whats-next" class="nav-link" data-scroll-target="#whats-next">What’s Next</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">The AnnData Object Explained</h1>
+<p class="subtitle lead">The single data structure that holds your entire single-cell experiment</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">AnnData</div>
+    <div class="quarto-category">scverse</div>
+    <div class="quarto-category">Python</div>
+    <div class="quarto-category">Data Structures</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    A complete walkthrough of the AnnData data structure — building from scratch, loading real 10x count matrices, working with obs/var metadata, layers, embeddings, concatenating 12 samples, and saving checkpoints.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jubayer Hossain <a href="https://orcid.org/0000-0001-9323-4997" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 2, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Learning Objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>By the end of this tutorial you will be able to:</p>
+<ul>
+<li>Explain <strong>why AnnData exists</strong> and what coordination problem it solves</li>
+<li>Describe every component of an AnnData object: <code>.X</code>, <code>.obs</code>, <code>.var</code>, <code>.obsm</code>, <code>.obsp</code>, <code>.layers</code>, <code>.uns</code></li>
+<li><strong>Load a real 10x count matrix</strong> from a CSV.gz file into AnnData</li>
+<li><strong>Add and manipulate cell metadata</strong> in <code>.obs</code></li>
+<li><strong>Concatenate 12 samples</strong> into a single merged AnnData with batch labels</li>
+<li><strong>Index and slice</strong> an AnnData object by cells or genes</li>
+<li>Understand the <strong>view vs copy</strong> distinction and why it matters</li>
+<li><strong>Save and reload</strong> AnnData checkpoints with <code>.h5ad</code></li>
+</ul>
+<p><strong>Estimated time:</strong> 30–40 minutes <strong>Prerequisites:</strong> Tutorial #2 — Setting Up Your Python Environment <strong>Data:</strong> <code>tutorials/scpy/data/</code> — 12 × <code>*_count_matrix.csv.gz</code></p>
+</div>
+</div>
+<hr>
+<section id="the-problem-anndata-solves" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem-anndata-solves">1. The Problem AnnData Solves</h2>
+<p>Before AnnData, a typical single-cell analysis looked like this:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The old, fragile way</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>count_matrix <span class="op">=</span> np.load(<span class="st">"counts.npy"</span>)          <span class="co"># shape: (9413, 33538)</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>cell_barcodes <span class="op">=</span> pd.read_csv(<span class="st">"barcodes.csv"</span>)   <span class="co"># shape: (9413,)</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>gene_names    <span class="op">=</span> pd.read_csv(<span class="st">"genes.csv"</span>)      <span class="co"># shape: (33538,)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>pca_coords    <span class="op">=</span> np.load(<span class="st">"pca.npy"</span>)            <span class="co"># shape: (9413, 50)</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>cell_types    <span class="op">=</span> pd.read_csv(<span class="st">"labels.csv"</span>)     <span class="co"># shape: (9413,)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Everything is a separate variable. There is nothing stopping your <code>cell_types</code> DataFrame from drifting out of sync with your <code>count_matrix</code> after a filtering step. Sort one, forget to sort the others — and your cell type labels silently swap to the wrong cells. This happens.</p>
+<p><strong>AnnData</strong> is a single container that keeps your count matrix and every piece of associated metadata together, indexed by the same cell and gene names. Subsetting the matrix automatically subsets the metadata. Adding a column to <code>.obs</code> is permanently attached to the cells it describes. There is no drift.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> anndata <span class="im">as</span> ad</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Everything in one object</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>adata              <span class="co"># AnnData: 9413 cells × 33538 genes</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>adata.X            <span class="co"># The count matrix — always in sync</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>adata.obs          <span class="co"># Cell metadata DataFrame — same row order as .X</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>adata.var          <span class="co"># Gene metadata DataFrame — same row order as .X columns</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>adata.obsm[<span class="st">"X_pca"</span>]   <span class="co"># PCA embedding — same number of rows as .X</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Filter 1,000 low-quality cells and every component updates together:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>adata <span class="op">=</span> adata[adata.obs[<span class="st">"n_genes"</span>] <span class="op">&gt;</span> <span class="dv">500</span>, :]</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Now: 8413 cells × 33538 genes — obs, var, obsm all shrunk consistently</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="the-full-anatomy-of-anndata" class="level2">
+<h2 class="anchored" data-anchor-id="the-full-anatomy-of-anndata">2. The Full Anatomy of AnnData</h2>
+<pre><code>┌──────────────────────────────────────────────────────────────────────────┐
+│                           AnnData (n_obs × n_vars)                        │
+│                                                                            │
+│   var_names ──►  Gene1   Gene2   Gene3   Gene4  ...  GeneM               │
+│                ┌───────────────────────────────────────────┐              │
+│   obs_names    │                                           │  ◄── .X      │
+│   Cell_1   ──► │   3       0       1       0   ...    0   │  (sparse     │
+│   Cell_2   ──► │   0       2       0       5   ...    0   │   matrix,    │
+│   Cell_3   ──► │   0       0       0       0   ...    7   │   cells ×    │
+│   ...      ──► │   .       .       .       .   ...    .   │   genes)     │
+│   Cell_N   ──► │   0       1       3       0   ...    2   │              │
+│                └───────────────────────────────────────────┘              │
+│                                                                            │
+│   .obs  (n_obs × any)      .var  (n_vars × any)                          │
+│   ┌──────────────────┐     ┌─────────────────────────┐                   │
+│   │ condition donor  │     │ gene_ids  n_cells  hvg   │                   │
+│   │ "Ctrl"     1     │     │ ENSG...    4821   True   │                   │
+│   │ "Ctrl"     1     │     │ ENSG...     312   False  │                   │
+│   │ ...        .     │     │ ...         ...    ...   │                   │
+│   └──────────────────┘     └─────────────────────────┘                   │
+│                                                                            │
+│   .obsm   {"X_pca": (N,50), "X_umap": (N,2)}   ◄── per-cell embeddings  │
+│   .obsp   {"connectivities": sparse(N,N)}        ◄── cell-cell distances  │
+│   .varm   {"PCs": (M,50)}                        ◄── per-gene loadings    │
+│   .layers {"counts": sparse, "log1p": sparse}    ◄── extra matrices       │
+│   .uns    {"neighbors": {}, "leiden": {}, ...}   ◄── free-form metadata   │
+└──────────────────────────────────────────────────────────────────────────┘</code></pre>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Type</th>
+<th>Holds</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>.X</code></td>
+<td>sparse matrix <code>(n_obs, n_vars)</code></td>
+<td>Current expression matrix (raw counts or normalised)</td>
+</tr>
+<tr class="even">
+<td><code>.obs</code></td>
+<td><code>pd.DataFrame (n_obs, *)</code></td>
+<td>Cell-level metadata: condition, QC metrics, cluster labels</td>
+</tr>
+<tr class="odd">
+<td><code>.var</code></td>
+<td><code>pd.DataFrame (n_vars, *)</code></td>
+<td>Gene-level metadata: gene IDs, detection rates, HVG flag</td>
+</tr>
+<tr class="even">
+<td><code>.obsm</code></td>
+<td><code>dict of arrays (n_obs, k)</code></td>
+<td>Per-cell embeddings: PCA, UMAP, diffusion map</td>
+</tr>
+<tr class="odd">
+<td><code>.obsp</code></td>
+<td><code>dict of sparse (n_obs, n_obs)</code></td>
+<td>Cell–cell graphs: kNN connectivities, distances</td>
+</tr>
+<tr class="even">
+<td><code>.varm</code></td>
+<td><code>dict of arrays (n_vars, k)</code></td>
+<td>Per-gene embeddings: PCA loadings</td>
+</tr>
+<tr class="odd">
+<td><code>.layers</code></td>
+<td><code>dict of matrices (n_obs, n_vars)</code></td>
+<td>Additional expression matrices: raw, normalised, log1p</td>
+</tr>
+<tr class="even">
+<td><code>.uns</code></td>
+<td><code>dict</code></td>
+<td>Unstructured: algorithm parameters, colour palettes, cluster trees</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="building-anndata-from-scratch" class="level2">
+<h2 class="anchored" data-anchor-id="building-anndata-from-scratch">3. Building AnnData from Scratch</h2>
+<p>Before working with real data, build a tiny AnnData by hand. This is the fastest way to understand each component.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.sparse <span class="im">as</span> sp</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> anndata <span class="im">as</span> ad</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Step 1: the count matrix ──────────────────────────────────────────────────</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 5 cells, 4 genes — small enough to inspect by eye</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> np.array([</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">3</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>],   <span class="co"># Cell A</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">5</span>],   <span class="co"># Cell B</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">7</span>],   <span class="co"># Cell C</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">0</span>],   <span class="co"># Cell D</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">4</span>, <span class="dv">1</span>],   <span class="co"># Cell E</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>], dtype<span class="op">=</span>np.int32)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Step 2: metadata ─────────────────────────────────────────────────────────</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>cell_meta <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">"condition"</span>: [<span class="st">"Ctrl"</span>, <span class="st">"Ctrl"</span>, <span class="st">"Pre"</span>, <span class="st">"Pre"</span>, <span class="st">"Post"</span>],</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">"donor"</span>:     [<span class="dv">1</span>,      <span class="dv">1</span>,      <span class="dv">1</span>,     <span class="dv">1</span>,      <span class="dv">1</span>],</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>}, index<span class="op">=</span>[<span class="st">"CellA"</span>, <span class="st">"CellB"</span>, <span class="st">"CellC"</span>, <span class="st">"CellD"</span>, <span class="st">"CellE"</span>])</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>gene_meta <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">"gene_id"</span>: [<span class="st">"ENSG001"</span>, <span class="st">"ENSG002"</span>, <span class="st">"ENSG003"</span>, <span class="st">"ENSG004"</span>],</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">"chromosome"</span>: [<span class="st">"chr1"</span>, <span class="st">"chr2"</span>, <span class="st">"chrX"</span>, <span class="st">"chrMT"</span>],</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>}, index<span class="op">=</span>[<span class="st">"CD3D"</span>, <span class="st">"CD19"</span>, <span class="st">"XIST"</span>, <span class="st">"MT-CO1"</span>])</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Step 3: assemble ─────────────────────────────────────────────────────────</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>adata <span class="op">=</span> ad.AnnData(</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    X   <span class="op">=</span> sp.csr_matrix(counts),  <span class="co"># store as sparse — always do this</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    obs <span class="op">=</span> cell_meta,</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>    var <span class="op">=</span> gene_meta,</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adata)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<pre><code>AnnData object with n_obs × n_vars = 5 × 4
+    obs: 'condition', 'donor'
+    var: 'gene_id', 'chromosome'</code></pre>
+<p>The one-line print is your dashboard. It tells you dimensions and what metadata exists. Let us explore each component.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── .X — the expression matrix ───────────────────────────────────────────────</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(adata.X))           <span class="co"># &lt;class 'scipy.sparse._csr.csr_matrix'&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adata.X.toarray())       <span class="co"># Dense view (only for small data!)</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># [[3 0 1 0]</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">#  [0 2 0 5]</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">#  [0 0 0 7]</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co">#  [1 3 2 0]</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co">#  [0 0 4 1]]</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co"># ── .obs — cell metadata ──────────────────────────────────────────────────────</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adata.obs)</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co">#        condition  donor</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="co"># CellA      Ctrl      1</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="co"># CellB      Ctrl      1</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="co"># CellC       Pre      1</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="co"># CellD       Pre      1</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="co"># CellE      Post      1</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co"># ── .var — gene metadata ──────────────────────────────────────────────────────</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adata.var)</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="co">#          gene_id chromosome</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="co"># CD3D     ENSG001       chr1</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="co"># CD19     ENSG002       chr2</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="co"># XIST     ENSG003       chrX</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="co"># MT-CO1   ENSG004      chrMT</span></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="co"># ── obs_names and var_names ───────────────────────────────────────────────────</span></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adata.obs_names.tolist())   <span class="co"># ['CellA', 'CellB', 'CellC', 'CellD', 'CellE']</span></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adata.var_names.tolist())   <span class="co"># ['CD3D', 'CD19', 'XIST', 'MT-CO1']</span></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Shape convenience ─────────────────────────────────────────────────────────</span></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adata.n_obs, adata.n_vars)  <span class="co"># 5 4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="adding-to-.uns" class="level3">
+<h3 class="anchored" data-anchor-id="adding-to-.uns">Adding to <code>.uns</code></h3>
+<p><code>.uns</code> (unstructured) is a plain Python dictionary. Store anything that belongs to the experiment but does not fit the matrix structure — algorithm parameters, colour palettes, log entries.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>adata.uns[<span class="st">"experiment"</span>] <span class="op">=</span> {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"platform"</span>: <span class="st">"10x Chromium"</span>,</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"organism"</span>: <span class="st">"Homo sapiens"</span>,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"tissue"</span>:   <span class="st">"PBMC"</span>,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"date"</span>:     <span class="st">"2021-06-15"</span>,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>adata.uns[<span class="st">"scanpy_version"</span>] <span class="op">=</span> <span class="st">"1.10.3"</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adata)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co"># AnnData object with n_obs × n_vars = 5 × 4</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co">#     obs: 'condition', 'donor'</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="co">#     var: 'gene_id', 'chromosome'</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co">#     uns: 'experiment', 'scanpy_version'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="loading-our-real-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="loading-our-real-dataset">4. Loading Our Real Dataset</h2>
+<p>Our data lives in <code>data/</code> as 12 compressed CSV files. Each file has <strong>genes as rows</strong> and <strong>cells as columns</strong> — the convention in most count matrix exports. AnnData requires the opposite: <strong>cells as rows, genes as columns</strong>. The transposition is the one step you cannot forget.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.sparse <span class="im">as</span> sp</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> anndata <span class="im">as</span> ad</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Load one sample ───────────────────────────────────────────────────────────</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>filepath <span class="op">=</span> <span class="st">"data/GSM5320459_Ctrl1_count_matrix.csv.gz"</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(filepath, index_col<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Raw file shape (genes × cells):"</span>, df.shape)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Raw file shape (genes × cells): (33538, 9413)</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"First 3 gene names:"</span>, df.index[:<span class="dv">3</span>].tolist())</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="co"># ['MIR1302-2HG', 'FAM138A', 'OR4F5']</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"First 3 cell barcodes:"</span>, df.columns[:<span class="dv">3</span>].tolist())</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="co"># ['AAACCCACAAGCGATG-1', 'AAACCCACACTCCACT-1', 'AAACCCAGTATAGGAT-1']</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Now transpose and wrap in AnnData:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Transpose: genes×cells  →  cells×genes</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Then convert to CSR sparse matrix to save memory</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> sp.csr_matrix(df.T.values)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>adata <span class="op">=</span> ad.AnnData(X<span class="op">=</span>X)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>adata.obs_names <span class="op">=</span> df.columns.tolist()   <span class="co"># cell barcodes as row labels</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>adata.var_names <span class="op">=</span> df.index.tolist()     <span class="co"># gene names as column labels</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adata)</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="co"># AnnData object with n_obs × n_vars = 9413 × 33538</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Always Store Counts as Sparse CSR
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A dense 9,413 × 33,538 float64 matrix requires <strong>~2.5 GB</strong> of RAM. The same matrix stored as <code>scipy.sparse.csr_matrix</code> (compressed sparse row), given 94.6% sparsity, occupies <strong>~140 MB</strong> — an 18× reduction. Always convert with <code>sp.csr_matrix(...)</code> when creating an AnnData from a dense array or DataFrame. Scanpy will raise a warning if you pass a dense matrix to functions expecting sparse input.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dense — do NOT do this for real data</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>adata <span class="op">=</span> ad.AnnData(X<span class="op">=</span>df.T.values)             <span class="co"># 2.5 GB per sample</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Sparse — always do this</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>adata <span class="op">=</span> ad.AnnData(X<span class="op">=</span>sp.csr_matrix(df.T.values))   <span class="co"># 140 MB per sample</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<section id="inspecting-the-loaded-object" class="level3">
+<h3 class="anchored" data-anchor-id="inspecting-the-loaded-object">Inspecting the loaded object</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Cells   : </span><span class="sc">{</span>adata<span class="sc">.</span>n_obs<span class="sc">:,}</span><span class="ss">"</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Genes   : </span><span class="sc">{</span>adata<span class="sc">.</span>n_vars<span class="sc">:,}</span><span class="ss">"</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Sparsity: </span><span class="sc">{</span><span class="dv">1</span> <span class="op">-</span> adata<span class="sc">.</span>X<span class="sc">.</span>nnz <span class="op">/</span> (adata.n_obs <span class="op">*</span> adata.n_vars)<span class="sc">:.1%}</span><span class="ss">"</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Cells   : 9,413</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Genes   : 33,538</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Sparsity: 94.6%</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Total UMIs per cell (sum across genes)</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>total_counts <span class="op">=</span> np.array(adata.X.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)).flatten()</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Median UMIs/cell : </span><span class="sc">{</span>np<span class="sc">.</span>median(total_counts)<span class="sc">:,.0f}</span><span class="ss">"</span>)</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Mean UMIs/cell   : </span><span class="sc">{</span>np<span class="sc">.</span>mean(total_counts)<span class="sc">:,.0f}</span><span class="ss">"</span>)</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Median UMIs/cell : 5,569</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Mean UMIs/cell   : 6,342</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="working-with-.obs-cell-metadata" class="level2">
+<h2 class="anchored" data-anchor-id="working-with-.obs-cell-metadata">5. Working with <code>.obs</code> — Cell Metadata</h2>
+<p><code>.obs</code> is a pandas <code>DataFrame</code> where each row is a cell. It starts empty (only the index, i.e.&nbsp;the barcodes). You populate it as the analysis progresses.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The obs DataFrame starts with just the index</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adata.obs.head(<span class="dv">3</span>))</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co">#                         (empty — no columns yet)</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># AAACCCACAAGCGATG-1</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co"># AAACCCACACTCCACT-1</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co"># AAACCCAGTATAGGAT-1</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Add sample-level metadata ─────────────────────────────────────────────────</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>adata.obs[<span class="st">"sample_id"</span>]  <span class="op">=</span> <span class="st">"GSM5320459"</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>adata.obs[<span class="st">"condition"</span>]  <span class="op">=</span> <span class="st">"Ctrl"</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>adata.obs[<span class="st">"donor"</span>]      <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>adata.obs[<span class="st">"sample"</span>]     <span class="op">=</span> <span class="st">"Ctrl1"</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adata.obs.head(<span class="dv">3</span>))</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="co">#                       sample_id condition  donor sample</span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="co"># AAACCCACAAGCGATG-1  GSM5320459      Ctrl      1  Ctrl1</span></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="co"># AAACCCACACTCCACT-1  GSM5320459      Ctrl      1  Ctrl1</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="co"># AAACCCAGTATAGGAT-1  GSM5320459      Ctrl      1  Ctrl1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="computing-per-cell-summary-statistics" class="level3">
+<h3 class="anchored" data-anchor-id="computing-per-cell-summary-statistics">Computing per-cell summary statistics</h3>
+<p>Scanpy provides a convenience function <code>sc.pp.calculate_qc_metrics()</code> to compute standard QC columns (we cover this fully in Tutorial #4). For now, let us compute the basics manually to see how <code>.obs</code> gets populated:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scanpy <span class="im">as</span> sc</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Total UMI counts per cell</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>adata.obs[<span class="st">"total_counts"</span>] <span class="op">=</span> np.array(adata.X.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)).flatten()</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Number of genes detected (non-zero entries per row)</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>adata.obs[<span class="st">"n_genes_by_counts"</span>] <span class="op">=</span> np.array((adata.X <span class="op">&gt;</span> <span class="dv">0</span>).<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)).flatten()</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Flag mitochondrial genes</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>adata.var[<span class="st">"mt"</span>] <span class="op">=</span> adata.var_names.<span class="bu">str</span>.startswith(<span class="st">"MT-"</span>)</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Mitochondrial UMI fraction per cell</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>mt_mask  <span class="op">=</span> adata.var[<span class="st">"mt"</span>].values</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>mt_counts <span class="op">=</span> np.array(adata.X[:, mt_mask].<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)).flatten()</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>adata.obs[<span class="st">"pct_counts_mt"</span>] <span class="op">=</span> mt_counts <span class="op">/</span> adata.obs[<span class="st">"total_counts"</span>] <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adata.obs[[<span class="st">"total_counts"</span>, <span class="st">"n_genes_by_counts"</span>, <span class="st">"pct_counts_mt"</span>]].describe().<span class="bu">round</span>(<span class="dv">2</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<pre><code>       total_counts  n_genes_by_counts  pct_counts_mt
+count       9413.00            9413.00        9413.00
+mean        6342.18            1812.34           3.87
+std         4891.23             752.61           3.12
+min           500.00             201.00           0.00
+25%         3102.00            1201.00           1.82
+50%         5569.00            1812.00           3.14
+75%         8214.00            2389.00           5.21
+max        98432.00            9102.00          49.63</code></pre>
+<p>This is what a populated <code>.obs</code> looks like — a table of per-cell measurements that grows throughout the analysis pipeline:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/metadata_scrnaseq_new.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption>A fully populated cell metadata table. Each row is a cell (barcode), and each column is a property computed during the analysis — QC metrics, cluster labels, cell type annotations, and sample information all live here in <code>.obs</code>. <em>Adapted from HBC Training Materials.</em></figcaption>
+</figure>
+</div>
+<hr>
+</section>
+</section>
+<section id="working-with-.var-gene-metadata" class="level2">
+<h2 class="anchored" data-anchor-id="working-with-.var-gene-metadata">6. Working with <code>.var</code> — Gene Metadata</h2>
+<p><code>.var</code> works exactly like <code>.obs</code> but for genes. It accumulates gene-level properties as the analysis progresses.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adata.var.head(<span class="dv">5</span>))</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co">#                 mt</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co"># MIR1302-2HG  False</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># FAM138A      False</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co"># OR4F5        False</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co"># AL627309.1   False</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co"># AL627309.3   False</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Number of cells expressing each gene ─────────────────────────────────────</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>adata.var[<span class="st">"n_cells_by_counts"</span>] <span class="op">=</span> np.array((adata.X <span class="op">&gt;</span> <span class="dv">0</span>).<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">0</span>)).flatten()</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Mean expression across all cells ─────────────────────────────────────────</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>adata.var[<span class="st">"mean_counts"</span>] <span class="op">=</span> np.array(adata.X.mean(axis<span class="op">=</span><span class="dv">0</span>)).flatten()</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adata.var[[<span class="st">"n_cells_by_counts"</span>, <span class="st">"mean_counts"</span>]].sort_values(</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"n_cells_by_counts"</span>, ascending<span class="op">=</span><span class="va">False</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>).head(<span class="dv">8</span>))</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="co">#         n_cells_by_counts  mean_counts</span></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a><span class="co"># MALAT1               9389       412.3</span></span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a><span class="co"># B2M                  9301       189.6</span></span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a><span class="co"># FTL                  9287       204.1</span></span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a><span class="co"># FTH1                 9251       176.8</span></span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a><span class="co"># ACTB                 9198        89.2</span></span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a><span class="co"># S100A9               9102       143.7</span></span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a><span class="co"># LYZ                  9088       156.4</span></span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a><span class="co"># S100A8               9041       131.9</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>What <code>.var</code> Will Contain by Tutorial #6
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>By the end of Tutorial #6 (Normalisation &amp; Feature Selection), your <code>.var</code> DataFrame will contain many new columns added automatically by scanpy:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Added by</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>mt</code></td>
+<td>You</td>
+<td>Boolean: is this a mitochondrial gene?</td>
+</tr>
+<tr class="even">
+<td><code>n_cells_by_counts</code></td>
+<td><code>sc.pp.calculate_qc_metrics</code></td>
+<td>Cells expressing this gene</td>
+</tr>
+<tr class="odd">
+<td><code>highly_variable</code></td>
+<td><code>sc.pp.highly_variable_genes</code></td>
+<td>Selected for downstream analysis</td>
+</tr>
+<tr class="even">
+<td><code>means</code></td>
+<td><code>sc.pp.highly_variable_genes</code></td>
+<td>Mean expression</td>
+</tr>
+<tr class="odd">
+<td><code>dispersions_norm</code></td>
+<td><code>sc.pp.highly_variable_genes</code></td>
+<td>Normalised dispersion (variance)</td>
+</tr>
+</tbody>
+</table>
+<p>Everything stays in <code>.var</code> — one DataFrame, always aligned to your genes.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="layers-storing-multiple-expression-matrices" class="level2">
+<h2 class="anchored" data-anchor-id="layers-storing-multiple-expression-matrices">7. Layers — Storing Multiple Expression Matrices</h2>
+<p><code>.layers</code> is a dictionary of matrices, each the same shape as <code>.X</code> (<code>n_obs × n_vars</code>). It is designed for exactly one workflow pattern: <strong>preserve raw counts while working with normalised values</strong>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Save raw counts BEFORE any normalisation ──────────────────────────────────</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># This is the single most important best practice in the pipeline.</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>adata.layers[<span class="st">"counts"</span>] <span class="op">=</span> adata.X.copy()</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Later in the pipeline: normalise and log-transform .X</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>sc.pp.normalize_total(adata, target_sum<span class="op">=</span><span class="fl">1e4</span>)</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>sc.pp.log1p(adata)</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Now .X holds log-normalised values, but raw counts are safe in .layers</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"log-normalised .X, first cell, first gene:"</span>, adata.X[<span class="dv">0</span>, <span class="dv">0</span>])</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"raw counts      in layer, same entry:      "</span>, adata.layers[<span class="st">"counts"</span>][<span class="dv">0</span>, <span class="dv">0</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Save Raw Counts Before Normalising — Always
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The very first thing you should do after loading data is:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>adata.layers[<span class="st">"counts"</span>] <span class="op">=</span> adata.X.copy()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Several downstream tools (notably <code>scvi-tools</code>, <code>DESeq2</code> via PyDESeq2, and compositional analysis methods) require raw integer counts as input, <strong>not</strong> log-normalised values. If you normalise <code>.X</code> and forget to save the original counts, you cannot recover them without reloading from disk. This is among the most common and most frustrating mistakes in single-cell analysis.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="embeddings-.obsm-and-.obsp" class="level2">
+<h2 class="anchored" data-anchor-id="embeddings-.obsm-and-.obsp">8. Embeddings — <code>.obsm</code> and <code>.obsp</code></h2>
+<p><code>.obsm</code> stores <strong>multi-dimensional per-cell arrays</strong> — anything where each cell has a vector of numbers rather than a single value:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># After running PCA, UMAP, etc., the coordinates land in .obsm</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>sc.pp.pca(adata, n_comps<span class="op">=</span><span class="dv">50</span>)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>sc.pp.neighbors(adata)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>sc.tl.umap(adata)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adata.obsm.keys())</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="co"># KeysView: odict_keys(['X_pca', 'X_umap'])</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adata.obsm[<span class="st">"X_pca"</span>].shape)    <span class="co"># (9413, 50)  — 50 principal components</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adata.obsm[<span class="st">"X_umap"</span>].shape)   <span class="co"># (9413, 2)   — 2D UMAP coordinates</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Access the UMAP coordinates for the first 3 cells</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adata.obsm[<span class="st">"X_umap"</span>][:<span class="dv">3</span>])</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a><span class="co"># [[ 3.21  -8.14]</span></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a><span class="co">#  [ 3.19  -7.98]</span></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a><span class="co">#  [-5.82   2.37]]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>.obsp</code> stores <strong>cell × cell sparse matrices</strong> — pairwise relationships like the kNN graph:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adata.obsp.keys())</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co"># odict_keys(['distances', 'connectivities'])</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adata.obsp[<span class="st">"connectivities"</span>].shape)   <span class="co"># (9413, 9413)</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(adata.obsp[<span class="st">"connectivities"</span>]))   <span class="co"># scipy.sparse._csr.csr_matrix</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="loading-and-concatenating-all-12-samples" class="level2">
+<h2 class="anchored" data-anchor-id="loading-and-concatenating-all-12-samples">9. Loading and Concatenating All 12 Samples</h2>
+<p>The real power of AnnData emerges when you merge all 12 samples into one object. Write a reusable <code>load_sample()</code> function, then loop over the files.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> glob</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.sparse <span class="im">as</span> sp</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> anndata <span class="im">as</span> ad</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> load_sample(filepath: <span class="bu">str</span>) <span class="op">-&gt;</span> ad.AnnData:</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="co">    Load one count matrix CSV.gz file into AnnData.</span></span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a><span class="co">    File naming convention:</span></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a><span class="co">        GSM5320459_Ctrl1_count_matrix.csv.gz</span></span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a><span class="co">        GSM5320463_Pre1_count_matrix.csv.gz</span></span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a><span class="co">        GSM5320467_Post1_count_matrix.csv.gz</span></span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>    path <span class="op">=</span> Path(filepath)</span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>    stem <span class="op">=</span> path.name.replace(<span class="st">"_count_matrix.csv.gz"</span>, <span class="st">""</span>)   <span class="co"># e.g. GSM5320459_Ctrl1</span></span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a>    parts <span class="op">=</span> stem.split(<span class="st">"_"</span>, <span class="dv">1</span>)                              <span class="co"># ['GSM5320459', 'Ctrl1']</span></span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a>    gsm_id <span class="op">=</span> parts[<span class="dv">0</span>]</span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a>    cond_donor <span class="op">=</span> parts[<span class="dv">1</span>]                                   <span class="co"># e.g. 'Ctrl1'</span></span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Parse condition and donor number (Ctrl1 → condition=Ctrl, donor=1)</span></span>
+<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a>    match <span class="op">=</span> re.match(<span class="vs">r"</span><span class="kw">(</span><span class="pp">[A-Za-z]</span><span class="op">+</span><span class="kw">)(</span><span class="dv">\d</span><span class="op">+</span><span class="kw">)</span><span class="dv">$</span><span class="vs">"</span>, cond_donor)</span>
+<span id="cb21-25"><a href="#cb21-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> match:</span>
+<span id="cb21-26"><a href="#cb21-26" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"Cannot parse condition/donor from: </span><span class="sc">{</span>cond_donor<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb21-27"><a href="#cb21-27" aria-hidden="true" tabindex="-1"></a>    condition <span class="op">=</span> match.group(<span class="dv">1</span>)   <span class="co"># 'Ctrl', 'Pre', or 'Post'</span></span>
+<span id="cb21-28"><a href="#cb21-28" aria-hidden="true" tabindex="-1"></a>    donor     <span class="op">=</span> <span class="bu">int</span>(match.group(<span class="dv">2</span>))</span>
+<span id="cb21-29"><a href="#cb21-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-30"><a href="#cb21-30" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ── Load the CSV.gz ──────────────────────────────────────────────────────</span></span>
+<span id="cb21-31"><a href="#cb21-31" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> pd.read_csv(filepath, index_col<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb21-32"><a href="#cb21-32" aria-hidden="true" tabindex="-1"></a>    <span class="co"># df.shape: (33538 genes, N cells)</span></span>
+<span id="cb21-33"><a href="#cb21-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-34"><a href="#cb21-34" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ── Build AnnData (transpose: genes×cells → cells×genes) ────────────────</span></span>
+<span id="cb21-35"><a href="#cb21-35" aria-hidden="true" tabindex="-1"></a>    adata <span class="op">=</span> ad.AnnData(X<span class="op">=</span>sp.csr_matrix(df.T.values))</span>
+<span id="cb21-36"><a href="#cb21-36" aria-hidden="true" tabindex="-1"></a>    adata.obs_names <span class="op">=</span> df.columns.tolist()</span>
+<span id="cb21-37"><a href="#cb21-37" aria-hidden="true" tabindex="-1"></a>    adata.var_names <span class="op">=</span> df.index.tolist()</span>
+<span id="cb21-38"><a href="#cb21-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-39"><a href="#cb21-39" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ── Attach sample-level metadata to every cell ───────────────────────────</span></span>
+<span id="cb21-40"><a href="#cb21-40" aria-hidden="true" tabindex="-1"></a>    adata.obs[<span class="st">"sample_id"</span>]  <span class="op">=</span> gsm_id</span>
+<span id="cb21-41"><a href="#cb21-41" aria-hidden="true" tabindex="-1"></a>    adata.obs[<span class="st">"condition"</span>]  <span class="op">=</span> condition</span>
+<span id="cb21-42"><a href="#cb21-42" aria-hidden="true" tabindex="-1"></a>    adata.obs[<span class="st">"donor"</span>]      <span class="op">=</span> donor</span>
+<span id="cb21-43"><a href="#cb21-43" aria-hidden="true" tabindex="-1"></a>    adata.obs[<span class="st">"sample"</span>]     <span class="op">=</span> cond_donor                  <span class="co"># e.g. 'Ctrl1'</span></span>
+<span id="cb21-44"><a href="#cb21-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-45"><a href="#cb21-45" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ── Mark mitochondrial genes ─────────────────────────────────────────────</span></span>
+<span id="cb21-46"><a href="#cb21-46" aria-hidden="true" tabindex="-1"></a>    adata.var[<span class="st">"mt"</span>] <span class="op">=</span> adata.var_names.<span class="bu">str</span>.startswith(<span class="st">"MT-"</span>)</span>
+<span id="cb21-47"><a href="#cb21-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-48"><a href="#cb21-48" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  Loaded </span><span class="sc">{</span>cond_donor<span class="sc">:8s}</span><span class="ss"> (</span><span class="sc">{</span>gsm_id<span class="sc">}</span><span class="ss">) — </span><span class="sc">{</span>adata<span class="sc">.</span>n_obs<span class="sc">:&gt;5,}</span><span class="ss"> cells"</span>)</span>
+<span id="cb21-49"><a href="#cb21-49" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> adata</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Now load all 12 and concatenate:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>DATA_DIR <span class="op">=</span> <span class="st">"data/"</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>files <span class="op">=</span> <span class="bu">sorted</span>(glob.glob(os.path.join(DATA_DIR, <span class="st">"*_count_matrix.csv.gz"</span>)))</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Found </span><span class="sc">{</span><span class="bu">len</span>(files)<span class="sc">}</span><span class="ss"> sample files</span><span class="ch">\n</span><span class="ss">"</span>)</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Load each sample</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>adatas <span class="op">=</span> [load_sample(f) <span class="cf">for</span> f <span class="kw">in</span> files]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<pre><code>Found 12 sample files
+
+  Loaded Ctrl1    (GSM5320459) —  9,413 cells
+  Loaded Ctrl2    (GSM5320460) —  8,891 cells
+  Loaded Ctrl3    (GSM5320461) —  9,102 cells
+  Loaded Ctrl4    (GSM5320462) —  8,764 cells
+  Loaded Post1    (GSM5320467) —  9,208 cells
+  Loaded Post2    (GSM5320468) —  8,543 cells
+  Loaded Post3    (GSM5320469) —  9,017 cells
+  Loaded Post4    (GSM5320470) —  8,320 cells
+  Loaded Pre1     (GSM5320463) —  9,334 cells
+  Loaded Pre2     (GSM5320464) —  8,978 cells
+  Loaded Pre3     (GSM5320465) —  9,211 cells
+  Loaded Pre4     (GSM5320466) —  8,643 cells</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Concatenate ──────────────────────────────────────────────────────────────</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>adata_all <span class="op">=</span> ad.concat(</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    adatas,</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    join<span class="op">=</span><span class="st">"inner"</span>,           <span class="co"># keep only genes present in ALL samples</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>    merge<span class="op">=</span><span class="st">"same"</span>,           <span class="co"># var metadata columns that are identical across samples</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>    label<span class="op">=</span><span class="st">"sample"</span>,         <span class="co"># new .obs column recording which sample each cell came from</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>    keys<span class="op">=</span>[a.obs[<span class="st">"sample"</span>].iloc[<span class="dv">0</span>] <span class="cf">for</span> a <span class="kw">in</span> adatas],</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Make obs_names unique (barcodes repeat across samples)</span></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>adata_all.obs_names_make_unique()</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adata_all)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<pre><code>AnnData object with n_obs × n_vars = 107,424 × 33,538
+    obs: 'sample_id', 'condition', 'donor', 'sample'
+    var: 'mt'</code></pre>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span><code>join="inner"</code> vs <code>join="outer"</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>join="inner"</code> keeps only genes present in <strong>all</strong> samples — the safest default when samples come from the same library preparation protocol (they should have identical gene sets).</p>
+<p><code>join="outer"</code> keeps all genes from any sample, filling missing entries with zeros. Use this when comparing samples from different platforms or gene panel designs.</p>
+<p>For our 12 PBMC samples from the same 10x library prep, <code>join="inner"</code> is correct — all files have identical genes (33,538).</p>
+</div>
+</div>
+<section id="inspect-the-merged-object" class="level3">
+<h3 class="anchored" data-anchor-id="inspect-the-merged-object">Inspect the merged object</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cell counts per condition</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adata_all.obs[<span class="st">"condition"</span>].value_counts())</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Ctrl    36,170</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Pre     36,166</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Post    35,088</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Cell counts per sample</span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adata_all.obs[<span class="st">"sample"</span>].value_counts().sort_index())</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Ctrl1    9,413</span></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Ctrl2    8,891</span></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Ctrl3    9,102</span></span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Ctrl4    8,764</span></span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Post1    9,208</span></span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a><span class="co"># ...</span></span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Barcodes are now unique (sample prefix added)</span></span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adata_all.obs_names[:<span class="dv">3</span>].tolist())</span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a><span class="co"># ['Ctrl1-AAACCCACAAGCGATG-1',</span></span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a><span class="co">#  'Ctrl1-AAACCCACACTCCACT-1',</span></span>
+<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a><span class="co">#  'Ctrl1-AAACCCAGTATAGGAT-1']</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The merged <code>.obs</code> table now shows condition and sample labels for every cell:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/merged_seurat_meta.png" class="img-fluid figure-img" style="width:85.0%"></p>
+<figcaption>After merging samples, <code>.obs</code> contains one row per cell with all per-sample metadata attached. This table will grow with QC metrics, normalised statistics, cluster labels, and cell type annotations over the next tutorials. <em>Adapted from HBC Training Materials.</em></figcaption>
+</figure>
+</div>
+<hr>
+</section>
+</section>
+<section id="indexing-and-slicing" class="level2">
+<h2 class="anchored" data-anchor-id="indexing-and-slicing">10. Indexing and Slicing</h2>
+<p>AnnData supports two indexing styles, both using standard Python bracket notation.</p>
+<section id="boolean-indexing-most-common" class="level3">
+<h3 class="anchored" data-anchor-id="boolean-indexing-most-common">Boolean indexing (most common)</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Subset by condition ───────────────────────────────────────────────────────</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>ctrl_cells <span class="op">=</span> adata_all.obs[<span class="st">"condition"</span>] <span class="op">==</span> <span class="st">"Ctrl"</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>adata_ctrl <span class="op">=</span> adata_all[ctrl_cells, :]</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Control cells: </span><span class="sc">{</span>adata_ctrl<span class="sc">.</span>n_obs<span class="sc">:,}</span><span class="ss">"</span>)   <span class="co"># 36,170</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Subset by multiple conditions ────────────────────────────────────────────</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>adata_pre_post <span class="op">=</span> adata_all[</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>    adata_all.obs[<span class="st">"condition"</span>].isin([<span class="st">"Pre"</span>, <span class="st">"Post"</span>]), :</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Pre + Post cells: </span><span class="sc">{</span>adata_pre_post<span class="sc">.</span>n_obs<span class="sc">:,}</span><span class="ss">"</span>)   <span class="co"># 71,254</span></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Subset by QC threshold (after QC metrics are computed) ───────────────────</span></span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a><span class="co"># (Illustrative — these columns exist after Tutorial #4)</span></span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a><span class="co"># high_quality = (</span></span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a><span class="co">#     (adata_all.obs["n_genes_by_counts"] &gt; 500) &amp;</span></span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a><span class="co">#     (adata_all.obs["pct_counts_mt"] &lt; 20)</span></span>
+<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a><span class="co"># )</span></span>
+<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a><span class="co"># adata_qc = adata_all[high_quality, :]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="gene-indexing" class="level3">
+<h3 class="anchored" data-anchor-id="gene-indexing">Gene indexing</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Subset to specific genes ─────────────────────────────────────────────────</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="co"># T cell markers</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>tcell_genes <span class="op">=</span> [<span class="st">"CD3D"</span>, <span class="st">"CD3E"</span>, <span class="st">"CD3G"</span>, <span class="st">"CD4"</span>, <span class="st">"CD8A"</span>, <span class="st">"CD8B"</span>]</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>adata_tcell <span class="op">=</span> adata_all[:, tcell_genes]</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adata_tcell)</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="co"># AnnData object with n_obs × n_vars = 107,424 × 6</span></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="co">#     obs: 'sample_id', 'condition', 'donor', 'sample'</span></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Subset cells AND genes simultaneously ────────────────────────────────────</span></span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a><span class="co"># First 1000 control cells, mitochondrial genes only</span></span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a>mt_genes <span class="op">=</span> adata_all.var_names[adata_all.var[<span class="st">"mt"</span>]]</span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a>adata_mt  <span class="op">=</span> adata_all[ctrl_cells, mt_genes]</span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"MT subset: </span><span class="sc">{</span>adata_mt<span class="sc">.</span>n_obs<span class="sc">}</span><span class="ss"> cells × </span><span class="sc">{</span>adata_mt<span class="sc">.</span>n_vars<span class="sc">}</span><span class="ss"> genes"</span>)</span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a><span class="co"># MT subset: 36170 cells × 13 genes</span></span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Access expression of a single gene across all cells ──────────────────────</span></span>
+<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a>cd3d_expr <span class="op">=</span> adata_all[:, <span class="st">"CD3D"</span>].X.toarray().flatten()</span>
+<span id="cb28-19"><a href="#cb28-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"CD3D — mean: </span><span class="sc">{</span>cd3d_expr<span class="sc">.</span>mean()<span class="sc">:.2f}</span><span class="ss">, max: </span><span class="sc">{</span>cd3d_expr<span class="sc">.</span><span class="bu">max</span>()<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="views-vs-copies" class="level2">
+<h2 class="anchored" data-anchor-id="views-vs-copies">11. Views vs Copies</h2>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>The View Trap — Read This Before Slicing
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In AnnData (≤ 0.9), slicing an AnnData returns a <strong>view</strong> — a lightweight reference that shares memory with the original. Modifying a view modifies the original. In AnnData ≥ 0.10 (which this series uses), most operations return a copy, but it is still best practice to be explicit.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This is a slice — may be a view or copy depending on AnnData version</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>adata_ctrl <span class="op">=</span> adata_all[ctrl_cells, :]</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Always materialise explicitly when you intend to modify a subset</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>adata_ctrl <span class="op">=</span> adata_all[ctrl_cells, :].copy()  <span class="co"># ← safe, always a new object</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>When to use <code>.copy()</code>:</strong></p>
+<ul>
+<li>Before normalising a subset separately from the rest</li>
+<li>Before adding new <code>.obs</code> columns to a subset</li>
+<li>Any time you write <code>adata_subset = adata_all[some_mask, :]</code> and then modify <code>adata_subset</code></li>
+</ul>
+<p>The cost is memory (you now have two copies). The benefit is correctness. For most workflows, copy the subset once at the start and work with the copy.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="saving-and-loading-the-.h5ad-format" class="level2">
+<h2 class="anchored" data-anchor-id="saving-and-loading-the-.h5ad-format">12. Saving and Loading — The <code>.h5ad</code> Format</h2>
+<p>AnnData’s native serialisation format is <strong>HDF5-backed AnnData</strong> (<code>.h5ad</code>). It stores the sparse matrix, all DataFrames, and all dict components efficiently in a single binary file.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scanpy <span class="im">as</span> sc</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>os.makedirs(<span class="st">"data/processed"</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Save ──────────────────────────────────────────────────────────────────────</span></span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>adata_all.write_h5ad(<span class="st">"data/processed/adata_merged.h5ad"</span>)</span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Saved."</span>)</span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Reload (almost instant — no recomputation) ────────────────────────────────</span></span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>adata <span class="op">=</span> sc.read_h5ad(<span class="st">"data/processed/adata_merged.h5ad"</span>)</span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adata)</span>
+<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a><span class="co"># AnnData object with n_obs × n_vars = 107,424 × 33,538</span></span>
+<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a><span class="co">#     obs: 'sample_id', 'condition', 'donor', 'sample'</span></span>
+<span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a><span class="co">#     var: 'mt'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="file-size-expectations" class="level3">
+<h3 class="anchored" data-anchor-id="file-size-expectations">File size expectations</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>State</th>
+<th>File size (approx.)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Merged raw counts (12 samples)</td>
+<td>~800 MB</td>
+</tr>
+<tr class="even">
+<td>After QC filtering (~80k cells)</td>
+<td>~600 MB</td>
+</tr>
+<tr class="odd">
+<td>After normalisation + HVG selection (~3k genes)</td>
+<td>~50 MB</td>
+</tr>
+<tr class="even">
+<td>After PCA + UMAP (final analysis object)</td>
+<td>~60 MB</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Backed Mode for Very Large Datasets
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For datasets with millions of cells, loading the entire <code>.X</code> into RAM is impractical. AnnData supports <strong>backed mode</strong>: the matrix stays on disk and only the requested rows are loaded on access.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Open backed (disk-based) — .X is not loaded into RAM</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>adata <span class="op">=</span> sc.read_h5ad(<span class="st">"data/processed/adata_merged.h5ad"</span>, backed<span class="op">=</span><span class="st">"r"</span>)</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adata.X)   <span class="co"># &lt;HDF5 dataset — on disk&gt;</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="co"># To do in-memory operations, load explicitly:</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>adata.X <span class="op">=</span> adata.X[:]   <span class="co"># loads full matrix into RAM</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Backed mode is covered in the integration tutorial. For our ~100k cell dataset, 32 GB RAM comfortably holds everything.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="putting-it-all-together" class="level2">
+<h2 class="anchored" data-anchor-id="putting-it-all-together">13. Putting It All Together</h2>
+<p>Here is the complete, production-ready script to load all 12 samples, concatenate them, add metadata, flag mitochondrial genes, and save the checkpoint. This is your Tutorial #3 notebook cell that you run once and never touch again.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os, re, glob</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.sparse <span class="im">as</span> sp</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> anndata <span class="im">as</span> ad</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scanpy <span class="im">as</span> sc</span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>sc.settings.verbosity <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Parameters ────────────────────────────────────────────────────────────────</span></span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a>DATA_DIR      <span class="op">=</span> <span class="st">"data/"</span></span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a>PROCESSED_DIR <span class="op">=</span> <span class="st">"data/processed/"</span></span>
+<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a>os.makedirs(PROCESSED_DIR, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-15"><a href="#cb32-15" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Helper ────────────────────────────────────────────────────────────────────</span></span>
+<span id="cb32-16"><a href="#cb32-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> load_sample(filepath: <span class="bu">str</span>) <span class="op">-&gt;</span> ad.AnnData:</span>
+<span id="cb32-17"><a href="#cb32-17" aria-hidden="true" tabindex="-1"></a>    path <span class="op">=</span> Path(filepath)</span>
+<span id="cb32-18"><a href="#cb32-18" aria-hidden="true" tabindex="-1"></a>    stem <span class="op">=</span> path.name.replace(<span class="st">"_count_matrix.csv.gz"</span>, <span class="st">""</span>)</span>
+<span id="cb32-19"><a href="#cb32-19" aria-hidden="true" tabindex="-1"></a>    gsm_id, cond_donor <span class="op">=</span> stem.split(<span class="st">"_"</span>, <span class="dv">1</span>)</span>
+<span id="cb32-20"><a href="#cb32-20" aria-hidden="true" tabindex="-1"></a>    match <span class="op">=</span> re.match(<span class="vs">r"</span><span class="kw">(</span><span class="pp">[A-Za-z]</span><span class="op">+</span><span class="kw">)(</span><span class="dv">\d</span><span class="op">+</span><span class="kw">)</span><span class="dv">$</span><span class="vs">"</span>, cond_donor)</span>
+<span id="cb32-21"><a href="#cb32-21" aria-hidden="true" tabindex="-1"></a>    condition, donor <span class="op">=</span> match.group(<span class="dv">1</span>), <span class="bu">int</span>(match.group(<span class="dv">2</span>))</span>
+<span id="cb32-22"><a href="#cb32-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-23"><a href="#cb32-23" aria-hidden="true" tabindex="-1"></a>    df    <span class="op">=</span> pd.read_csv(filepath, index_col<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb32-24"><a href="#cb32-24" aria-hidden="true" tabindex="-1"></a>    adata <span class="op">=</span> ad.AnnData(X<span class="op">=</span>sp.csr_matrix(df.T.values))</span>
+<span id="cb32-25"><a href="#cb32-25" aria-hidden="true" tabindex="-1"></a>    adata.obs_names <span class="op">=</span> df.columns.tolist()</span>
+<span id="cb32-26"><a href="#cb32-26" aria-hidden="true" tabindex="-1"></a>    adata.var_names <span class="op">=</span> df.index.tolist()</span>
+<span id="cb32-27"><a href="#cb32-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-28"><a href="#cb32-28" aria-hidden="true" tabindex="-1"></a>    adata.obs[<span class="st">"sample_id"</span>]  <span class="op">=</span> gsm_id</span>
+<span id="cb32-29"><a href="#cb32-29" aria-hidden="true" tabindex="-1"></a>    adata.obs[<span class="st">"condition"</span>]  <span class="op">=</span> condition</span>
+<span id="cb32-30"><a href="#cb32-30" aria-hidden="true" tabindex="-1"></a>    adata.obs[<span class="st">"donor"</span>]      <span class="op">=</span> donor</span>
+<span id="cb32-31"><a href="#cb32-31" aria-hidden="true" tabindex="-1"></a>    adata.obs[<span class="st">"sample"</span>]     <span class="op">=</span> cond_donor</span>
+<span id="cb32-32"><a href="#cb32-32" aria-hidden="true" tabindex="-1"></a>    adata.var[<span class="st">"mt"</span>]         <span class="op">=</span> adata.var_names.<span class="bu">str</span>.startswith(<span class="st">"MT-"</span>)</span>
+<span id="cb32-33"><a href="#cb32-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> adata</span>
+<span id="cb32-34"><a href="#cb32-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-35"><a href="#cb32-35" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Load and merge ────────────────────────────────────────────────────────────</span></span>
+<span id="cb32-36"><a href="#cb32-36" aria-hidden="true" tabindex="-1"></a>files  <span class="op">=</span> <span class="bu">sorted</span>(glob.glob(os.path.join(DATA_DIR, <span class="st">"*_count_matrix.csv.gz"</span>)))</span>
+<span id="cb32-37"><a href="#cb32-37" aria-hidden="true" tabindex="-1"></a>adatas <span class="op">=</span> [load_sample(f) <span class="cf">for</span> f <span class="kw">in</span> files]</span>
+<span id="cb32-38"><a href="#cb32-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-39"><a href="#cb32-39" aria-hidden="true" tabindex="-1"></a>adata <span class="op">=</span> ad.concat(</span>
+<span id="cb32-40"><a href="#cb32-40" aria-hidden="true" tabindex="-1"></a>    adatas,</span>
+<span id="cb32-41"><a href="#cb32-41" aria-hidden="true" tabindex="-1"></a>    join<span class="op">=</span><span class="st">"inner"</span>,</span>
+<span id="cb32-42"><a href="#cb32-42" aria-hidden="true" tabindex="-1"></a>    merge<span class="op">=</span><span class="st">"same"</span>,</span>
+<span id="cb32-43"><a href="#cb32-43" aria-hidden="true" tabindex="-1"></a>    label<span class="op">=</span><span class="st">"sample"</span>,</span>
+<span id="cb32-44"><a href="#cb32-44" aria-hidden="true" tabindex="-1"></a>    keys<span class="op">=</span>[a.obs[<span class="st">"sample"</span>].iloc[<span class="dv">0</span>] <span class="cf">for</span> a <span class="kw">in</span> adatas],</span>
+<span id="cb32-45"><a href="#cb32-45" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb32-46"><a href="#cb32-46" aria-hidden="true" tabindex="-1"></a>adata.obs_names_make_unique()</span>
+<span id="cb32-47"><a href="#cb32-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-48"><a href="#cb32-48" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Store raw counts before any normalisation ─────────────────────────────────</span></span>
+<span id="cb32-49"><a href="#cb32-49" aria-hidden="true" tabindex="-1"></a>adata.layers[<span class="st">"counts"</span>] <span class="op">=</span> adata.X.copy()</span>
+<span id="cb32-50"><a href="#cb32-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-51"><a href="#cb32-51" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Save checkpoint ───────────────────────────────────────────────────────────</span></span>
+<span id="cb32-52"><a href="#cb32-52" aria-hidden="true" tabindex="-1"></a>out <span class="op">=</span> os.path.join(PROCESSED_DIR, <span class="st">"adata_merged_raw.h5ad"</span>)</span>
+<span id="cb32-53"><a href="#cb32-53" aria-hidden="true" tabindex="-1"></a>adata.write_h5ad(out)</span>
+<span id="cb32-54"><a href="#cb32-54" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Checkpoint saved: </span><span class="sc">{</span>out<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb32-55"><a href="#cb32-55" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(adata)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<pre><code>Checkpoint saved: data/processed/adata_merged_raw.h5ad
+
+AnnData object with n_obs × n_vars = 107,424 × 33,538
+    obs: 'sample_id', 'condition', 'donor', 'sample'
+    var: 'mt'
+    layers: 'counts'</code></pre>
+<hr>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>AnnData is not just a data container — it is the disciplined habit of keeping every piece of your analysis in one place, indexed consistently.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>You learned</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>.X</code> is always sparse</td>
+<td>Memory: 18× smaller than dense</td>
+</tr>
+<tr class="even">
+<td><code>.obs</code> / <code>.var</code> grow through the analysis</td>
+<td>Every QC metric, cluster label, and annotation lives here</td>
+</tr>
+<tr class="odd">
+<td><code>.layers["counts"]</code> saves raw data</td>
+<td>Required by downstream tools that need integer counts</td>
+</tr>
+<tr class="even">
+<td><code>.obsm</code> holds embeddings</td>
+<td>PCA, UMAP, diffusion map — all attached to cells</td>
+</tr>
+<tr class="odd">
+<td><code>ad.concat()</code> merges samples</td>
+<td>With <code>batch_key</code> for downstream batch correction</td>
+</tr>
+<tr class="even">
+<td><code>.write_h5ad()</code> / <code>.read_h5ad()</code></td>
+<td>Instant reload, no recomputation</td>
+</tr>
+<tr class="odd">
+<td>Always <code>.copy()</code> before modifying a slice</td>
+<td>Correctness, no silent mutations</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Checkpoint
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before moving to Tutorial #4, verify:</p>
+<ul class="task-list">
+<li><label><input type="checkbox"><code>data/processed/adata_merged_raw.h5ad</code> exists on disk</label></li>
+<li><label><input type="checkbox"><code>adata.n_obs</code> is around 107,000 (±5% due to sample variability)</label></li>
+<li><label><input type="checkbox"><code>adata.n_vars</code> is 33,538</label></li>
+<li><label><input type="checkbox"><code>adata.obs</code> has columns: <code>sample_id</code>, <code>condition</code>, <code>donor</code>, <code>sample</code></label></li>
+<li><label><input type="checkbox"><code>adata.layers["counts"]</code> exists (raw integer counts)</label></li>
+<li><label><input type="checkbox"><code>adata.var["mt"]</code> exists (mitochondrial gene flag)</label></li>
+</ul>
+<p>If any check fails, re-run the “Putting It All Together” script above.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="whats-next" class="level2">
+<h2 class="anchored" data-anchor-id="whats-next">What’s Next</h2>
+<p><strong>Tutorial #4 — Quality Control: Filtering Cells and Genes</strong> Use the merged AnnData to compute QC metrics (total counts, genes detected, mitochondrial fraction), visualise their distributions, choose principled filtering thresholds, and remove low-quality cells, empty droplets, and doublets — reducing 107k raw barcodes to a high-quality analysis dataset.</p>
+<hr>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ul>
+<li><p><strong>Virshup I et al.</strong> (2021). anndata: Annotated data. <em>bioRxiv</em>. DOI: <a href="https://doi.org/10.1101/2021.12.16.473007">10.1101/2021.12.16.473007</a></p></li>
+<li><p><strong>Wolf FA, Angerer P, Theis FJ</strong> (2018). SCANPY: large-scale single-cell gene expression data analysis. <em>Genome Biology</em>, 19, 15. DOI: <a href="https://doi.org/10.1186/s13059-017-1382-0">10.1186/s13059-017-1382-0</a></p></li>
+<li><p><strong>Luecken MD &amp; Theis FJ</strong> (2019). Current best practices in single-cell RNA-seq analysis: a tutorial. <em>Molecular Systems Biology</em>, 15(6), e8746. DOI: <a href="https://doi.org/10.15252/msb.20188746">10.15252/msb.20188746</a></p></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© Copyright 2025, Jubayer Hossain</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

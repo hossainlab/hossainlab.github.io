@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jubayer Hossain">
+<meta name="dcterms.date" content="2026-04-02">
+<meta name="description" content="Academic Website for Jubayer Hossain">
+
+<title>Setting Up Your Python Environment – Jubayer Hossain</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../..//files/profiles/icon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Jubayer Hossain</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Projects</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
+        <li>
+    <a class="dropdown-item" href="../../projects/index.html">
+ <span class="dropdown-text">Research Projects</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../projects/pipelines.html">
+ <span class="dropdown-text">Pipelines</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-teaching" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Teaching</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-teaching">    
+        <li>
+    <a class="dropdown-item" href="../../teaching/index.html">
+ <span class="dropdown-text">Courses</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../teaching/videos.html">
+ <span class="dropdown-text">Videos</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../tutorials/index.html"> 
+<span class="menu-text">Tutorials</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../publications/index.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../cv/professional-cv/CV-HossainMJ.pdf"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:hossainmj@gmail.com"> <i class="bi bi-envelope" role="img" aria-label="email">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://orcid.org/0000-0001-9323-4997" target="_blank"> 
+<span class="menu-text"><i class="ai  ai-orcid" aria-label="orcid"></i></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=9_K4ekoAAAAJ&amp;hl=en&amp;authuser=5" target="_blank"> 
+<span class="menu-text"><i class="ai  ai-google-scholar" aria-label="google-scholar"></i></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=9_K4ekoAAAAJ&amp;hl=en&amp;authuser=5" target="_blank"> 
+<span class="menu-text"><i class="ai  ai-researchgate" aria-label="researchgate"></i></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/hossainmj" target="_blank"> <i class="bi bi-linkedin" role="img" aria-label="linkedin">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/hossain_lab" target="_blank"> <i class="bi bi-twitter" role="img" aria-label="twitter">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/hossainlab" target="_blank"> <i class="bi bi-github" role="img" aria-label="github">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/@hossainlab" target="_blank"> <i class="bi bi-youtube" role="img" aria-label="youtube">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#choosing-your-setup-path" id="toc-choosing-your-setup-path" class="nav-link active" data-scroll-target="#choosing-your-setup-path">1. Choosing Your Setup Path</a></li>
+  <li><a href="#path-a-local-setup-with-miniforge-mamba" id="toc-path-a-local-setup-with-miniforge-mamba" class="nav-link" data-scroll-target="#path-a-local-setup-with-miniforge-mamba">2. Path A — Local Setup with Miniforge + Mamba</a>
+  <ul class="collapse">
+  <li><a href="#why-miniforge-not-anaconda" id="toc-why-miniforge-not-anaconda" class="nav-link" data-scroll-target="#why-miniforge-not-anaconda">2.1 Why Miniforge, Not Anaconda?</a></li>
+  <li><a href="#install-miniforge" id="toc-install-miniforge" class="nav-link" data-scroll-target="#install-miniforge">2.2 Install Miniforge</a></li>
+  <li><a href="#create-the-series-environment" id="toc-create-the-series-environment" class="nav-link" data-scroll-target="#create-the-series-environment">2.3 Create the Series Environment</a></li>
+  <li><a href="#install-jupyterlab-and-register-the-kernel" id="toc-install-jupyterlab-and-register-the-kernel" class="nav-link" data-scroll-target="#install-jupyterlab-and-register-the-kernel">2.4 Install JupyterLab and Register the Kernel</a></li>
+  </ul></li>
+  <li><a href="#path-b-google-colab" id="toc-path-b-google-colab" class="nav-link" data-scroll-target="#path-b-google-colab">3. Path B — Google Colab</a>
+  <ul class="collapse">
+  <li><a href="#getting-started-with-colab" id="toc-getting-started-with-colab" class="nav-link" data-scroll-target="#getting-started-with-colab">3.1 Getting Started with Colab</a></li>
+  <li><a href="#install-the-scverse-stack-on-colab" id="toc-install-the-scverse-stack-on-colab" class="nav-link" data-scroll-target="#install-the-scverse-stack-on-colab">3.2 Install the scverse Stack on Colab</a></li>
+  <li><a href="#enable-gpu-acceleration" id="toc-enable-gpu-acceleration" class="nav-link" data-scroll-target="#enable-gpu-acceleration">3.3 Enable GPU Acceleration</a></li>
+  <li><a href="#persist-your-work-with-google-drive" id="toc-persist-your-work-with-google-drive" class="nav-link" data-scroll-target="#persist-your-work-with-google-drive">3.4 Persist Your Work with Google Drive</a></li>
+  <li><a href="#managing-colab-sessions" id="toc-managing-colab-sessions" class="nav-link" data-scroll-target="#managing-colab-sessions">3.5 Managing Colab Sessions</a></li>
+  </ul></li>
+  <li><a href="#path-c-vs-code-with-the-jupyter-extension" id="toc-path-c-vs-code-with-the-jupyter-extension" class="nav-link" data-scroll-target="#path-c-vs-code-with-the-jupyter-extension">4. Path C — VS Code with the Jupyter Extension</a>
+  <ul class="collapse">
+  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">4.1 Setup</a></li>
+  <li><a href="#two-workflow-modes-in-vs-code" id="toc-two-workflow-modes-in-vs-code" class="nav-link" data-scroll-target="#two-workflow-modes-in-vs-code">4.2 Two Workflow Modes in VS Code</a></li>
+  </ul></li>
+  <li><a href="#verifying-your-installation" id="toc-verifying-your-installation" class="nav-link" data-scroll-target="#verifying-your-installation">5. Verifying Your Installation</a></li>
+  <li><a href="#standard-notebook-header" id="toc-standard-notebook-header" class="nav-link" data-scroll-target="#standard-notebook-header">6. Standard Notebook Header</a></li>
+  <li><a href="#project-directory-structure-best-practices" id="toc-project-directory-structure-best-practices" class="nav-link" data-scroll-target="#project-directory-structure-best-practices">7. Project Directory Structure: Best Practices</a></li>
+  <li><a href="#a-note-on-data" id="toc-a-note-on-data" class="nav-link" data-scroll-target="#a-note-on-data">8. A Note on Data</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#whats-next" id="toc-whats-next" class="nav-link" data-scroll-target="#whats-next">What’s Next</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Setting Up Your Python Environment</h1>
+<p class="subtitle lead">Local conda/mamba, Google Colab, and VS Code — three paths, one goal</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Setup</div>
+    <div class="quarto-category">Python</div>
+    <div class="quarto-category">scanpy</div>
+    <div class="quarto-category">scverse</div>
+    <div class="quarto-category">Google Colab</div>
+    <div class="quarto-category">conda</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Install scanpy and the full scverse stack using the approach that suits your hardware: local conda/mamba on any OS, Google Colab for zero-install cloud computing, or VS Code for IDE-based workflows.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jubayer Hossain <a href="https://orcid.org/0000-0001-9323-4997" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 2, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Learning Objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>By the end of this tutorial you will be able to:</p>
+<ul>
+<li>Choose the <strong>right setup path</strong> for your hardware and workflow</li>
+<li>Create an <strong>isolated, reproducible conda environment</strong> for the series</li>
+<li>Install the <strong>complete scverse stack</strong>: <code>scanpy</code>, <code>anndata</code>, <code>scvi-tools</code>, <code>cellrank</code>, <code>squidpy</code></li>
+<li>Run a <strong>verification script</strong> that confirms every package is installed correctly</li>
+<li>Set up <strong>Google Colab</strong> and persist your work to Google Drive</li>
+<li>Apply the <strong>seven best practices</strong> that keep a single-cell project reproducible and shareable</li>
+</ul>
+<p><strong>Estimated time:</strong> 15–30 minutes (depending on your download speed) <strong>Prerequisites:</strong> Tutorial #1 — Introduction to Single-Cell RNA-seq</p>
+</div>
+</div>
+<hr>
+<section id="choosing-your-setup-path" class="level2">
+<h2 class="anchored" data-anchor-id="choosing-your-setup-path">1. Choosing Your Setup Path</h2>
+<p>There is no single “correct” environment for single-cell analysis. The right choice depends on your hardware, internet connection, and workflow preferences. Here is an honest comparison:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Local (conda/mamba)</th>
+<th>Google Colab</th>
+<th>VS Code + conda</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Cost</strong></td>
+<td>Free</td>
+<td>Free (Pro $9.99/mo)</td>
+<td>Free</td>
+</tr>
+<tr class="even">
+<td><strong>Hardware requirement</strong></td>
+<td>8 GB RAM minimum, 16 GB recommended</td>
+<td>Any browser</td>
+<td>Any, same as Local</td>
+</tr>
+<tr class="odd">
+<td><strong>GPU support</strong></td>
+<td>Only if you have one</td>
+<td>Free T4 GPU</td>
+<td>Only if you have one</td>
+</tr>
+<tr class="even">
+<td><strong>Persistence</strong></td>
+<td>Full — files stay</td>
+<td>Resets each session</td>
+<td>Full</td>
+</tr>
+<tr class="odd">
+<td><strong>Internet required</strong></td>
+<td>Download only</td>
+<td>Always</td>
+<td>Download only</td>
+</tr>
+<tr class="even">
+<td><strong>Reproducibility</strong></td>
+<td>Excellent (pinned env)</td>
+<td>Good (with Drive)</td>
+<td>Excellent</td>
+</tr>
+<tr class="odd">
+<td><strong>Best for</strong></td>
+<td>Daily analysis work</td>
+<td>Trying things quickly, GPU methods</td>
+<td>Code-first workflows</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Recommendation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you have a laptop with ≥ 8 GB RAM, <strong>use the local conda setup</strong> (Path A). It is faster, persistent, and you learn to manage environments properly — a skill that matters throughout your career.</p>
+<p>If you are on a shared computer, have less than 8 GB RAM, or want to run GPU-accelerated methods like <code>scvi-tools</code>, <strong>use Google Colab</strong> (Path B). It is genuinely excellent and free.</p>
+<p>These paths are <strong>not mutually exclusive</strong> — many researchers develop locally and offload GPU tasks to Colab.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="path-a-local-setup-with-miniforge-mamba" class="level2">
+<h2 class="anchored" data-anchor-id="path-a-local-setup-with-miniforge-mamba">2. Path A — Local Setup with Miniforge + Mamba</h2>
+<section id="why-miniforge-not-anaconda" class="level3">
+<h3 class="anchored" data-anchor-id="why-miniforge-not-anaconda">2.1 Why Miniforge, Not Anaconda?</h3>
+<p>You may have heard of Anaconda. We recommend <strong>Miniforge</strong> instead for three reasons:</p>
+<ol type="1">
+<li><strong>Licence</strong> — Anaconda’s default channel has a commercial-use restriction since 2020. Miniforge uses <code>conda-forge</code> by default, which is fully open-source and has no such restriction.</li>
+<li><strong>Speed</strong> — Miniforge ships with <strong>mamba</strong>, a C++ reimplementation of the conda solver that resolves environments in seconds instead of minutes.</li>
+<li><strong>Size</strong> — Miniforge is a minimal installer (~90 MB). You install only what you need.</li>
+</ol>
+</section>
+<section id="install-miniforge" class="level3">
+<h3 class="anchored" data-anchor-id="install-miniforge">2.2 Install Miniforge</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">macOS / Linux</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Windows</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Open your terminal and run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Download the installer</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-L</span> <span class="at">-O</span> <span class="st">"https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-</span><span class="va">$(</span><span class="fu">uname</span><span class="va">)</span><span class="st">-</span><span class="va">$(</span><span class="fu">uname</span> <span class="at">-m</span><span class="va">)</span><span class="st">.sh"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the installer (follow the prompts — accept defaults)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> Miniforge3-<span class="va">$(</span><span class="fu">uname</span><span class="va">)</span>-<span class="va">$(</span><span class="fu">uname</span> <span class="at">-m</span><span class="va">)</span>.sh</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Restart your terminal, then verify</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> <span class="at">--version</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ex">mamba</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<ol type="1">
+<li>Download the <strong>Miniforge3 Windows 64-bit</strong> installer from: <code>https://github.com/conda-forge/miniforge/releases/latest</code></li>
+<li>Run the <code>.exe</code> installer. Use the default settings.</li>
+<li>Open <strong>Miniforge Prompt</strong> from the Start Menu (not PowerShell — until you configure it).</li>
+<li>Verify:</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> <span class="at">--version</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">mamba</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Always Use <code>mamba</code>, Never <code>conda solve</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>After installing Miniforge, use <strong><code>mamba</code></strong> everywhere you would have typed <code>conda</code> for creating environments and installing packages. It uses the same syntax but is 10–50× faster. The only exception is <code>conda activate</code> — that command stays as <code>conda</code>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Slow — do not use for installs</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install scanpy</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Fast — use this</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ex">mamba</span> install scanpy</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</section>
+<section id="create-the-series-environment" class="level3">
+<h3 class="anchored" data-anchor-id="create-the-series-environment">2.3 Create the Series Environment</h3>
+<p>Instead of installing packages into your <code>base</code> environment (a common mistake that causes dependency conflicts), create a <strong>dedicated environment</strong> for this tutorial series.</p>
+<p>Download <code>environment.yml</code> to your project folder, or copy the block below:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>environment.yml</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-filename="environment.yml"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> scpy</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">channels</span><span class="kw">:</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> conda-forge</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> bioconda</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> defaults</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dependencies</span><span class="kw">:</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> python=3.11</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> scanpy&gt;=1.10</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> anndata&gt;=0.10</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> leidenalg</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> python-igraph</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> harmonypy</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> matplotlib</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> seaborn</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> pandas</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> numpy</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> scipy</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> scikit-learn</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> jupyterlab&gt;=4.0</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> ipywidgets</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> tqdm</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> h5py</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> pytables</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> pip</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">pip</span><span class="kw">:</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> scvi-tools&gt;=1.1</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> cellrank&gt;=2.0</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> squidpy&gt;=1.4</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> muon&gt;=0.1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Create and activate the environment:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create from file (takes 3–8 minutes on first run)</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">mamba</span> env create <span class="at">-f</span> environment.yml</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Activate</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate scpy</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify activation — your prompt should show (scpy)</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Never Install into <code>base</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>base</code> is your safety net — the environment that always works. The moment you start installing analysis packages into it, dependency conflicts accumulate and it becomes unstable. Always create a new named environment for each project. The command <code>conda activate scpy</code> takes two seconds and protects months of work.</p>
+</div>
+</div>
+</section>
+<section id="install-jupyterlab-and-register-the-kernel" class="level3">
+<h3 class="anchored" data-anchor-id="install-jupyterlab-and-register-the-kernel">2.4 Install JupyterLab and Register the Kernel</h3>
+<p>JupyterLab is already included in <code>environment.yml</code>. Launch it from within your activated environment:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Make sure the environment is active</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate scpy</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Register the kernel so Jupyter sees this environment</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> ipykernel install <span class="at">--user</span> <span class="at">--name</span> scpy <span class="at">--display-name</span> <span class="st">"Python (scpy)"</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Launch JupyterLab</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> lab</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Your browser will open at <code>http://localhost:8888</code>. When creating a new notebook, select the <strong>“Python (scpy)”</strong> kernel from the launcher. This ensures your notebooks always use the correct environment.</p>
+<hr>
+</section>
+</section>
+<section id="path-b-google-colab" class="level2">
+<h2 class="anchored" data-anchor-id="path-b-google-colab">3. Path B — Google Colab</h2>
+<p>Google Colab provides free access to cloud-hosted Jupyter notebooks with Python pre-installed, a generous CPU runtime, and optionally a free NVIDIA T4 GPU. It is the best option for learners without access to local computing resources.</p>
+<section id="getting-started-with-colab" class="level3">
+<h3 class="anchored" data-anchor-id="getting-started-with-colab">3.1 Getting Started with Colab</h3>
+<ol type="1">
+<li>Go to <a href="https://colab.research.google.com">colab.research.google.com</a></li>
+<li>Sign in with a Google account</li>
+<li>Click <strong>New notebook</strong> (or open a shared tutorial notebook)</li>
+<li>You now have a running Python environment in the cloud</li>
+</ol>
+</section>
+<section id="install-the-scverse-stack-on-colab" class="level3">
+<h3 class="anchored" data-anchor-id="install-the-scverse-stack-on-colab">3.2 Install the scverse Stack on Colab</h3>
+<p>Colab comes with many scientific Python packages pre-installed, but the scverse stack must be installed at the start of <strong>every session</strong> (Colab resets when it goes idle).</p>
+<p>Create a cell at the very top of each notebook and run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Install scverse ecosystem ─────────────────────────────────────────────────</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Run this cell at the start of every Colab session (takes ~2 minutes)</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> subprocess, sys</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>packages <span class="op">=</span> [</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"scanpy&gt;=1.10"</span>,</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"scvi-tools&gt;=1.1"</span>,</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cellrank&gt;=2.0"</span>,</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"squidpy&gt;=1.4"</span>,</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"leidenalg"</span>,</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"python-igraph"</span>,</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"harmonypy"</span>,</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>subprocess.check_call([</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    sys.executable, <span class="st">"-m"</span>, <span class="st">"pip"</span>, <span class="st">"install"</span>, <span class="st">"--quiet"</span>, <span class="op">*</span>packages</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Installation complete."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Why <code>subprocess</code> Instead of <code>!pip install</code>?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Both work, but <code>subprocess.check_call</code> raises an exception if the install fails — so you know immediately if something went wrong, rather than discovering the error three cells later when you try to import. It is a safer pattern for shared notebooks.</p>
+</div>
+</div>
+</section>
+<section id="enable-gpu-acceleration" class="level3">
+<h3 class="anchored" data-anchor-id="enable-gpu-acceleration">3.3 Enable GPU Acceleration</h3>
+<p>For tutorials that use <code>scvi-tools</code> (deep generative models), a GPU reduces computation time from hours to minutes.</p>
+<ol type="1">
+<li>In Colab: <strong>Runtime → Change runtime type</strong></li>
+<li>Select <strong>T4 GPU</strong> under Hardware accelerator</li>
+<li>Click <strong>Save</strong></li>
+</ol>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>GPU Availability
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Free Colab does not guarantee GPU availability — you may be given a CPU runtime if demand is high. If you see “GPU not available”, connect to a CPU runtime and proceed — most tutorials in this series run fine on CPU. Only the integration tutorial (scvi-tools SCVI/scANVI) benefits significantly from a GPU.</p>
+<p><strong>Colab Pro</strong> ($9.99/month) provides priority GPU access and longer runtimes if you need reliable GPU access.</p>
+</div>
+</div>
+</section>
+<section id="persist-your-work-with-google-drive" class="level3">
+<h3 class="anchored" data-anchor-id="persist-your-work-with-google-drive">3.4 Persist Your Work with Google Drive</h3>
+<p>Colab’s file system is temporary — files stored there vanish when the session ends. Mount your <strong>Google Drive</strong> at the start of every session to persist notebooks, data, and results:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Mount Google Drive ────────────────────────────────────────────────────────</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> drive</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>drive.mount(<span class="st">"/content/drive"</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Set your project path on Drive</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>PROJECT <span class="op">=</span> <span class="st">"/content/drive/MyDrive/scpy-tutorial"</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>os.makedirs(PROJECT, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Change into it so all relative paths work</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>os.chdir(PROJECT)</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Working directory: </span><span class="sc">{</span>os<span class="sc">.</span>getcwd()<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>When prompted, follow the link, grant permissions, and copy the auth code. After mounting:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save AnnData objects here (not to Colab's /content/ which is temporary)</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>adata.write_h5ad(<span class="ss">f"</span><span class="sc">{</span>PROJECT<span class="sc">}</span><span class="ss">/data/processed/adata_qc.h5ad"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="managing-colab-sessions" class="level3">
+<h3 class="anchored" data-anchor-id="managing-colab-sessions">3.5 Managing Colab Sessions</h3>
+<p>Colab disconnects after <strong>~90 minutes of idle time</strong> on the free tier. This means:</p>
+<ul>
+<li>Always save your processed <code>AnnData</code> objects to Drive at the end of a cell, not the end of a notebook</li>
+<li>Use <code>adata.write_h5ad(...)</code> liberally — think of it like Ctrl+S in a word processor</li>
+<li>Long-running cells (clustering, UMAP on large datasets) can trigger timeouts — consider running these cells and then immediately saving the result</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Good habit: save after every major step</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>CHECKPOINT_DIR <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>PROJECT<span class="sc">}</span><span class="ss">/data/processed"</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>os.makedirs(CHECKPOINT_DIR, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>adata.write_h5ad(<span class="ss">f"</span><span class="sc">{</span>CHECKPOINT_DIR<span class="sc">}</span><span class="ss">/adata_after_qc.h5ad"</span>)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Saved </span><span class="sc">{</span>adata<span class="sc">.</span>n_obs<span class="sc">}</span><span class="ss"> cells to </span><span class="sc">{</span>CHECKPOINT_DIR<span class="sc">}</span><span class="ss">/adata_after_qc.h5ad"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="path-c-vs-code-with-the-jupyter-extension" class="level2">
+<h2 class="anchored" data-anchor-id="path-c-vs-code-with-the-jupyter-extension">4. Path C — VS Code with the Jupyter Extension</h2>
+<p>If you prefer an IDE to a browser-based interface, VS Code is the most polished option. It uses the same <code>scpy</code> conda environment you created in Path A.</p>
+<section id="setup" class="level3">
+<h3 class="anchored" data-anchor-id="setup">4.1 Setup</h3>
+<ol type="1">
+<li>Install <a href="https://code.visualstudio.com/">VS Code</a></li>
+<li>Install these extensions:
+<ul>
+<li><strong>Python</strong> (Microsoft)</li>
+<li><strong>Jupyter</strong> (Microsoft)</li>
+<li><strong>Rainbow CSV</strong> (for exploring metadata files)</li>
+</ul></li>
+<li>Open your project folder: <strong>File → Open Folder</strong></li>
+<li>Select the interpreter: <code>Ctrl+Shift+P</code> → <strong>Python: Select Interpreter</strong> → choose <code>scpy</code></li>
+</ol>
+</section>
+<section id="two-workflow-modes-in-vs-code" class="level3">
+<h3 class="anchored" data-anchor-id="two-workflow-modes-in-vs-code">4.2 Two Workflow Modes in VS Code</h3>
+<p><strong>Notebook mode</strong> (<code>.ipynb</code>) — Click <strong>New File → Jupyter Notebook</strong>. Works identically to JupyterLab but inside VS Code. Best for exploratory analysis.</p>
+<p><strong>Script + <code># %%</code> cells</strong> (<code>.py</code>) — Write a regular Python script, add <code># %%</code> to create executable cells (called an “Interactive Window”). Best when you want version-controlled, diff-friendly code files.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># %% [markdown]</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ## Load and inspect the dataset</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># %%</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scanpy <span class="im">as</span> sc</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>adata <span class="op">=</span> sc.read_h5ad(<span class="st">"data/processed/adata_raw.h5ad"</span>)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>adata</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>VS Code vs JupyterLab: Which to Choose?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Use <strong>JupyterLab</strong> if you like rich inline outputs, interactive widget exploration, and drag-and-drop cell reordering.</p>
+<p>Use <strong>VS Code</strong> if you want integrated git, refactoring tools, debugging, and prefer keeping analysis in <code>.py</code> files (better for version control — notebooks produce noisy git diffs).</p>
+<p>Both use the same <code>scpy</code> kernel and produce identical outputs.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="verifying-your-installation" class="level2">
+<h2 class="anchored" data-anchor-id="verifying-your-installation">5. Verifying Your Installation</h2>
+<p>Run this verification script regardless of your setup path. It imports every package in the series, prints versions, and runs a real analysis on a toy dataset to confirm everything works end-to-end.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Verification Script ───────────────────────────────────────────────────────</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Run this after installation to confirm everything is working.</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Python </span><span class="sc">{</span>sys<span class="sc">.</span>version<span class="sc">}</span><span class="ch">\n</span><span class="ss">"</span>)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Core imports</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scanpy <span class="im">as</span> sc</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> anndata <span class="im">as</span> ad</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="co"># scverse stack</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scvi</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> cellrank <span class="im">as</span> cr</span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> squidpy <span class="im">as</span> sq</span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> muon <span class="im">as</span> mu</span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Versions table</span></span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>packages <span class="op">=</span> {</span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">"scanpy"</span>:     sc.__version__,</span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">"anndata"</span>:    ad.__version__,</span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">"scvi-tools"</span>: scvi.__version__,</span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cellrank"</span>:   cr.__version__,</span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a>    <span class="st">"squidpy"</span>:    sq.__version__,</span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a>    <span class="st">"muon"</span>:       mu.__version__,</span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a>    <span class="st">"numpy"</span>:      np.__version__,</span>
+<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a>    <span class="st">"pandas"</span>:     pd.__version__,</span>
+<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a>    <span class="st">"scipy"</span>:      scipy.__version__,</span>
+<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a>    <span class="st">"matplotlib"</span>: matplotlib.__version__,</span>
+<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a>    <span class="st">"seaborn"</span>:    sns.__version__,</span>
+<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Installed package versions:"</span>)</span>
+<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"-"</span> <span class="op">*</span> <span class="dv">35</span>)</span>
+<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> pkg, ver <span class="kw">in</span> packages.items():</span>
+<span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a>    status <span class="op">=</span> <span class="st">"✓"</span> <span class="cf">if</span> ver <span class="cf">else</span> <span class="st">"✗"</span></span>
+<span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  </span><span class="sc">{</span>status<span class="sc">}</span><span class="ss">  </span><span class="sc">{</span>pkg<span class="sc">:&lt;18}</span><span class="ss"> </span><span class="sc">{</span>ver<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-43"><a href="#cb12-43" aria-hidden="true" tabindex="-1"></a><span class="co"># ── End-to-end sanity check ───────────────────────────────────────────────────</span></span>
+<span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Running end-to-end sanity check..."</span>)</span>
+<span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-46"><a href="#cb12-46" aria-hidden="true" tabindex="-1"></a>adata <span class="op">=</span> sc.datasets.pbmc3k()               <span class="co"># Download 3k PBMC demo dataset</span></span>
+<span id="cb12-47"><a href="#cb12-47" aria-hidden="true" tabindex="-1"></a>sc.pp.filter_cells(adata, min_genes<span class="op">=</span><span class="dv">200</span>)   <span class="co"># Basic filter</span></span>
+<span id="cb12-48"><a href="#cb12-48" aria-hidden="true" tabindex="-1"></a>sc.pp.filter_genes(adata, min_cells<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb12-49"><a href="#cb12-49" aria-hidden="true" tabindex="-1"></a>sc.pp.normalize_total(adata)               <span class="co"># Normalise</span></span>
+<span id="cb12-50"><a href="#cb12-50" aria-hidden="true" tabindex="-1"></a>sc.pp.log1p(adata)</span>
+<span id="cb12-51"><a href="#cb12-51" aria-hidden="true" tabindex="-1"></a>sc.pp.pca(adata, n_comps<span class="op">=</span><span class="dv">10</span>)              <span class="co"># PCA</span></span>
+<span id="cb12-52"><a href="#cb12-52" aria-hidden="true" tabindex="-1"></a>sc.pp.neighbors(adata)                     <span class="co"># Neighbour graph</span></span>
+<span id="cb12-53"><a href="#cb12-53" aria-hidden="true" tabindex="-1"></a>sc.tl.umap(adata)                          <span class="co"># UMAP</span></span>
+<span id="cb12-54"><a href="#cb12-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-55"><a href="#cb12-55" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">  ✓  End-to-end pipeline complete"</span>)</span>
+<span id="cb12-56"><a href="#cb12-56" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  ✓  Dataset: </span><span class="sc">{</span>adata<span class="sc">.</span>n_obs<span class="sc">}</span><span class="ss"> cells × </span><span class="sc">{</span>adata<span class="sc">.</span>n_vars<span class="sc">}</span><span class="ss"> genes"</span>)</span>
+<span id="cb12-57"><a href="#cb12-57" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  ✓  UMAP coordinates computed: </span><span class="sc">{</span>adata<span class="sc">.</span>obsm[<span class="st">'X_umap'</span>]<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb12-58"><a href="#cb12-58" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">All checks passed. Your environment is ready."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Expected output:</p>
+<pre><code>Python 3.11.x [...]
+
+Installed package versions:
+-----------------------------------
+  ✓  scanpy             1.10.x
+  ✓  anndata            0.10.x
+  ✓  scvi-tools         1.1.x
+  ✓  cellrank           2.0.x
+  ✓  squidpy            1.4.x
+  ✓  muon               0.1.x
+  ✓  numpy              1.26.x
+  ✓  pandas             2.x.x
+  ✓  scipy              1.12.x
+  ✓  matplotlib         3.8.x
+  ✓  seaborn            0.13.x
+
+Running end-to-end sanity check...
+
+  ✓  End-to-end pipeline complete
+  ✓  Dataset: 2638 cells × 1838 genes
+  ✓  UMAP coordinates computed: (2638, 2)
+
+All checks passed. Your environment is ready.</code></pre>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Troubleshooting Common Issues
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong><code>leidenalg</code> fails on Windows</strong> Use conda to install it rather than pip: <code>mamba install leidenalg -c conda-forge</code></p>
+<p><strong><code>scvi-tools</code> import error about <code>torch</code></strong> PyTorch was not installed. Run: <code>mamba install pytorch cpuonly -c pytorch</code></p>
+<p><strong><code>ModuleNotFoundError</code> in Jupyter despite installing</strong> Your notebook is using a different kernel. In JupyterLab: Kernel → Change Kernel → Python (scpy). In VS Code: bottom-right interpreter selector → <code>scpy</code>.</p>
+<p><strong>Slow mamba environment creation (&gt;15 minutes)</strong> Add <code>--no-deps</code> to pip installs in the YAML and resolve conda packages first. Or use <code>conda config --set channel_priority strict</code>.</p>
+<p><strong>Colab: “Your session crashed after using all available RAM”</strong> The PBMC3k demo uses ~1 GB. For our 12-sample dataset in later tutorials, request a <strong>High-RAM runtime</strong> in Colab Pro, or downsample to fewer cells during development.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="standard-notebook-header" class="level2">
+<h2 class="anchored" data-anchor-id="standard-notebook-header">6. Standard Notebook Header</h2>
+<p>Every notebook in this series begins with the same header block. Paste it into the first cell of any new notebook and run it before anything else.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Standard header — paste at the top of every notebook ─────────────────────</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scanpy <span class="im">as</span> sc</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> anndata <span class="im">as</span> ad</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Suppress noisy deprecation warnings (optional)</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">"ignore"</span>, category<span class="op">=</span><span class="pp">FutureWarning</span>)</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">"ignore"</span>, category<span class="op">=</span><span class="pp">DeprecationWarning</span>)</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Global random seed — set once, use everywhere</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">42</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>random.seed(SEED)</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>np.random.seed(SEED)</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Scanpy display settings</span></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>sc.settings.verbosity <span class="op">=</span> <span class="dv">2</span>          <span class="co"># 0=errors only, 1=warnings, 2=info, 3=hints</span></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>sc.settings.set_figure_params(</span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>    dpi<span class="op">=</span><span class="dv">100</span>,</span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>    dpi_save<span class="op">=</span><span class="dv">300</span>,                  <span class="co"># Publication quality on save</span></span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>    facecolor<span class="op">=</span><span class="st">"white"</span>,</span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>    figsize<span class="op">=</span>(<span class="dv">5</span>, <span class="dv">5</span>),</span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>    frameon<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a>sc.settings.figdir <span class="op">=</span> <span class="st">"figures/"</span>    <span class="co"># All sc.pl.* figures saved here</span></span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Pandas display options</span></span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a>pd.set_option(<span class="st">"display.max_columns"</span>, <span class="dv">30</span>)</span>
+<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a>pd.set_option(<span class="st">"display.max_rows"</span>, <span class="dv">20</span>)</span>
+<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"scanpy </span><span class="sc">{</span>sc<span class="sc">.</span>__version__<span class="sc">}</span><span class="ss"> | anndata </span><span class="sc">{</span>ad<span class="sc">.</span>__version__<span class="sc">}</span><span class="ss"> | numpy </span><span class="sc">{</span>np<span class="sc">.</span>__version__<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Why Set a Random Seed?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Several steps in the single-cell pipeline are stochastic: UMAP initialisation, Leiden clustering tie-breaking, and neural network weight initialisation (scvi-tools). Without a fixed seed, your UMAP will look slightly different every run, and cluster numbers will shift. Setting <code>SEED = 42</code> at the top of every notebook ensures your figures are <strong>exactly reproducible</strong> — critical when revising a manuscript six months after the analysis was done.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="project-directory-structure-best-practices" class="level2">
+<h2 class="anchored" data-anchor-id="project-directory-structure-best-practices">7. Project Directory Structure: Best Practices</h2>
+<p>Before you write a single line of analysis code, set up a clean directory structure. Investing five minutes here saves hours of confusion later.</p>
+<pre><code>scpy-tutorial/
+├── data/
+│   ├── raw/                  ← Original files, NEVER modified
+│   │   └── GSM5320459_Ctrl1_count_matrix.csv.gz
+│   └── processed/            ← AnnData checkpoints (.h5ad)
+│       ├── adata_raw.h5ad
+│       ├── adata_qc.h5ad
+│       └── adata_final.h5ad
+├── notebooks/
+│   ├── 01-introduction.ipynb
+│   ├── 02-setup.ipynb
+│   └── 03-anndata.ipynb
+├── figures/                  ← All plot outputs (auto-created by scanpy)
+├── results/                  ← Tables, DEG lists, cluster annotations
+├── environment.yml           ← Reproducible environment spec
+└── README.md                 ← What this project is, how to reproduce it</code></pre>
+<p>The key rules:</p>
+<p><strong>Rule 1 — Raw data is sacred.</strong> Never overwrite, rename, or edit files in <code>data/raw/</code>. If you need to modify something, copy it to <code>data/processed/</code> first.</p>
+<p><strong>Rule 2 — Save AnnData checkpoints.</strong> After each major step (QC, normalisation, clustering), write the AnnData object to an <code>.h5ad</code> file. This way, you can restart any tutorial from that point without rerunning everything.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># After QC</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>adata.write_h5ad(<span class="st">"data/processed/adata_qc.h5ad"</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Reload later (instant — no recomputation)</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>adata <span class="op">=</span> sc.read_h5ad(<span class="st">"data/processed/adata_qc.h5ad"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Rule 3 — One notebook per major analysis step.</strong> Do not cram quality control, normalisation, clustering, and annotation into one 500-cell notebook. Give each step its own file. Your future self will thank you.</p>
+<p><strong>Rule 4 — Log your parameters.</strong> Record the key parameters you used — QC thresholds, number of PCs, clustering resolution — in a dedicated cell or a YAML config file. This makes it trivial to revisit parameter choices when a reviewer asks.</p>
+<p><strong>Rule 5 — Version pin your environment.</strong> When your analysis is complete and ready for publication, snapshot the exact versions:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate scpy</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env export <span class="op">&gt;</span> environment_frozen.yml</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The frozen YAML will allow anyone (including you, 18 months later) to recreate the exact environment.</p>
+<hr>
+</section>
+<section id="a-note-on-data" class="level2">
+<h2 class="anchored" data-anchor-id="a-note-on-data">8. A Note on Data</h2>
+<p>The 12 count matrix files for this series are already in <code>tutorials/scpy/data/</code>. Each file is a compressed CSV with genes as rows and cells as columns. In Tutorial #3 (The AnnData Object Explained), we will load them, explore their structure, and convert them to <code>AnnData</code> format.</p>
+<p>You do not need to download anything — if you are following along locally, the data files travel with the tutorial repository. On Google Colab, we will show how to upload them to your Drive in Tutorial #3.</p>
+<hr>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>You now have a fully functional single-cell analysis environment. Here is what you set up:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>scpy</code> conda environment</td>
+<td>Isolated, reproducible Python environment</td>
+</tr>
+<tr class="even">
+<td><code>scanpy</code></td>
+<td>Core analysis: QC, normalisation, PCA, UMAP, clustering</td>
+</tr>
+<tr class="odd">
+<td><code>anndata</code></td>
+<td>The AnnData data structure</td>
+</tr>
+<tr class="even">
+<td><code>scvi-tools</code></td>
+<td>Probabilistic models: deep learning-based normalisation and integration</td>
+</tr>
+<tr class="odd">
+<td><code>cellrank</code></td>
+<td>Trajectory inference and cell fate prediction</td>
+</tr>
+<tr class="even">
+<td><code>squidpy</code></td>
+<td>Spatial transcriptomics analysis</td>
+</tr>
+<tr class="odd">
+<td><code>muon</code></td>
+<td>Multi-modal (CITE-seq, ATAC+RNA) analysis</td>
+</tr>
+</tbody>
+</table>
+<p>The environment is defined in <code>environment.yml</code>, so any collaborator can reproduce it exactly with one command:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">mamba</span> env create <span class="at">-f</span> environment.yml</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Best Practices Checklist
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before starting any analysis:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Activate the <code>scpy</code> environment (or install on Colab)</label></li>
+<li><label><input type="checkbox">Start your notebook with the <strong>standard header</strong> (seed, verbosity, figure settings)</label></li>
+<li><label><input type="checkbox">Set up the <strong>project directory structure</strong> before writing code</label></li>
+<li><label><input type="checkbox">Raw data files are in <code>data/raw/</code> and will <strong>never be modified</strong></label></li>
+<li><label><input type="checkbox">You know how to <strong>save and reload AnnData checkpoints</strong></label></li>
+<li><label><input type="checkbox">Your <code>environment.yml</code> is committed to version control</label></li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+<section id="whats-next" class="level2">
+<h2 class="anchored" data-anchor-id="whats-next">What’s Next</h2>
+<p><strong>Tutorial #3 — The AnnData Object Explained</strong> Load your first real single-cell dataset, dissect the AnnData structure (<code>.X</code>, <code>.obs</code>, <code>.var</code>, <code>.obsm</code>, <code>.uns</code>), and learn the indexing, slicing, and metadata operations you will use in every analysis.</p>
+<hr>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ul>
+<li><p><strong>Wolf FA, Angerer P, Theis FJ</strong> (2018). SCANPY: large-scale single-cell gene expression data analysis. <em>Genome Biology</em>, 19, 15. DOI: <a href="https://doi.org/10.1186/s13059-017-1382-0">10.1186/s13059-017-1382-0</a></p></li>
+<li><p><strong>Virshup I et al.</strong> (2021). anndata: Annotated data. <em>bioRxiv</em>. DOI: <a href="https://doi.org/10.1101/2021.12.16.473007">10.1101/2021.12.16.473007</a></p></li>
+<li><p><strong>Lopez R et al.</strong> (2018). Deep generative modeling for single-cell transcriptomics. <em>Nature Methods</em>, 15, 1053–1058. DOI: <a href="https://doi.org/10.1038/s41592-018-0229-2">10.1038/s41592-018-0229-2</a></p></li>
+<li><p><strong>Palla G et al.</strong> (2022). Squidpy: a scalable framework for spatial omics analysis. <em>Nature Methods</em>, 19, 171–178. DOI: <a href="https://doi.org/10.1038/s41592-021-01358-2">10.1038/s41592-021-01358-2</a></p></li>
+<li><p><strong>Lange M et al.</strong> (2022). CellRank for directed single-cell fate mapping. <em>Nature Methods</em>, 19, 159–170. DOI: <a href="https://doi.org/10.1038/s41592-021-01346-6">10.1038/s41592-021-01346-6</a></p></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© Copyright 2025, Jubayer Hossain</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

@@ -5,6 +5,7 @@ project:
     - "*.qmd"
     - "blog/**/*.qmd"
     - "teaching-portfolio/**/*.qmd"
+    - "tutorials/**/*.qmd"
     - "!academic-cv/"
 
 # Meta
@@ -38,6 +39,8 @@ website:
             text: Courses
           - href: teaching/videos.qmd
             text: Videos
+      - href: tutorials/index.qmd
+        text: Tutorials
       - href: blog/index.qmd
         text: Blog
       - href: publications/index.qmd
