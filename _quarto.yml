@@ -2,10 +2,7 @@ project:
   type: website
   output-dir: docs
   render:
-    - "*.qmd"
-    - "blog/**/*.qmd"
-    - "teaching-portfolio/**/*.qmd"
-    - "tutorials/**/*.qmd"
+    - "**/*.qmd"
     - "!academic-cv/"
 
 # Meta
