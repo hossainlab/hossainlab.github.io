@@ -1,0 +1,34 @@
+---
+title: "About"
+subtitle: "Bioinformatician, Researcher, Educator & Entrepreneur"
+title-block-banner: true
+page-layout: full
+toc: false
+listing:
+  - id: education-list
+    contents: education.yml
+    template: ../_templates/education-card.ejs
+  - id: certificate-list
+    contents: certificates.yml
+    template: ../_templates/certificate-card.ejs
+---
+
+```{=html}
+<div class="ab-section-header">
+<h2 class="ab-section-title">Education</h2>
+<p class="ab-section-sub">Academic background and formal training</p>
+</div>
+```
+
+::: {#education-list}
+:::
+
+```{=html}
+<div class="ab-section-header">
+<h2 class="ab-section-title">Online Certificates</h2>
+<p class="ab-section-sub">Continuing education and professional development</p>
+</div>
+```
+
+::: {#certificate-list}
+:::

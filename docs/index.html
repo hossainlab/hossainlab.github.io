@@ -99,6 +99,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about/index.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Projects</span>
@@ -236,6 +240,29 @@ ul.task-list li input[type="checkbox"] {
 </div></div>
 </div>
 
+<!-- Newsletter push notification -->
+<div id="newsletter-toast" class="newsletter-toast no-print">
+<div class="newsletter-toast-header">
+<p><span class="newsletter-toast-title">✉️ &nbsp;Subscribe to my Newsletter</span> <button class="newsletter-toast-close" onclick="dismissNewsletter()" aria-label="Close">✕</button></p>
+</div>
+<iframe src="https://thehossainlab.substack.com/embed" width="100%" height="220" style="border:none; background:transparent;" frameborder="0" scrolling="no">
+</iframe>
+</div>
+<script>
+(function() {
+  if (!localStorage.getItem('newsletter-dismissed')) {
+    setTimeout(function() {
+      var el = document.getElementById('newsletter-toast');
+      if (el) el.classList.add('newsletter-toast-show');
+    }, 3000);
+  }
+})();
+function dismissNewsletter() {
+  var el = document.getElementById('newsletter-toast');
+  if (el) el.classList.remove('newsletter-toast-show');
+  localStorage.setItem('newsletter-dismissed', '1');
+}
+</script>
 
 
 

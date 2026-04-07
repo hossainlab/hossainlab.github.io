@@ -1,0 +1,23 @@
+<div class="cert-list">
+<% for (const item of items) { %>
+<div class="cert-list-item">
+<div class="cert-list-left">
+<div class="cert-platform-badge"><%= item.platform %></div>
+</div>
+<div class="cert-list-body">
+<h4 class="cert-title"><%= item.title %></h4>
+<p class="cert-issuer"><%= item.issuer %><% if (item.date) { %> &nbsp;·&nbsp; 📅 <%= item.date %><% } %></p>
+<% if (item.skills && item.skills.length) { %>
+<div class="cert-skills">
+<% for (const s of item.skills) { %>
+<span class="cert-skill-tag"><%= s %></span>
+<% } %>
+</div>
+<% } %>
+</div>
+<% if (item.credential_url) { %>
+<a href="<%= item.credential_url %>" target="_blank" class="cert-verify-btn">View ↗</a>
+<% } %>
+</div>
+<% } %>
+</div>

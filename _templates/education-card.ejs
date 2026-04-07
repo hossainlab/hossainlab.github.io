@@ -1,0 +1,24 @@
+<div class="edu-timeline">
+<% for (const item of items) { %>
+<div class="edu-item">
+<div class="edu-dot"></div>
+<div class="edu-card">
+<div class="edu-card-top">
+<div class="edu-degree-badge"><%= item.degree %></div>
+<span class="edu-period"><%= item.period %></span>
+</div>
+<h3 class="edu-title"><%= item.title %></h3>
+<p class="edu-institution">🏛️ <%= item.institution %> &nbsp;·&nbsp; 📍 <%= item.location %></p>
+<% if (item.description) { %>
+<p class="edu-desc"><%= item.description %></p>
+<% } %>
+<% if (item.thesis) { %>
+<p class="edu-thesis"><strong>Thesis:</strong> <%= item.thesis %></p>
+<% } %>
+<% if (item.gpa) { %>
+<span class="edu-gpa">GPA: <%= item.gpa %></span>
+<% } %>
+</div>
+</div>
+<% } %>
+</div>

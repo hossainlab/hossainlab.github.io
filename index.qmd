@@ -28,3 +28,28 @@ about:
 ![](files/research/interests.svg){width=100% style="max-width:480px; display:block; margin:1.5rem auto;"}
 
 :::
+
+<!-- Newsletter push notification -->
+<div id="newsletter-toast" class="newsletter-toast no-print">
+<div class="newsletter-toast-header">
+<span class="newsletter-toast-title">✉️ &nbsp;Subscribe to my Newsletter</span>
+<button class="newsletter-toast-close" onclick="dismissNewsletter()" aria-label="Close">&#x2715;</button>
+</div>
+<iframe src="https://thehossainlab.substack.com/embed" width="100%" height="220" style="border:none; background:transparent;" frameborder="0" scrolling="no"></iframe>
+</div>
+
+<script>
+(function() {
+  if (!localStorage.getItem('newsletter-dismissed')) {
+    setTimeout(function() {
+      var el = document.getElementById('newsletter-toast');
+      if (el) el.classList.add('newsletter-toast-show');
+    }, 3000);
+  }
+})();
+function dismissNewsletter() {
+  var el = document.getElementById('newsletter-toast');
+  if (el) el.classList.remove('newsletter-toast-show');
+  localStorage.setItem('newsletter-dismissed', '1');
+}
+</script>

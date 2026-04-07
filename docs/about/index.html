@@ -9,7 +9,7 @@
 <meta name="author" content="Jubayer Hossain">
 <meta name="description" content="Academic Website for Jubayer Hossain">
 
-<title>Research Blog – Jubayer Hossain</title>
+<title>About – Jubayer Hossain</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -77,20 +77,48 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-blog-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-education-list .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-image','listing-title','listing-author','listing-date','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-institution','listing-location','listing-period','listing-degree','listing-field','listing-status','listing-description','listing-gpa','listing-thesis',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-institution","listing-location","listing-period","listing-degree","listing-field","listing-status","listing-description","listing-gpa","listing-thesis"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-blog-listing'] = new List('listing-blog-listing', options);
+    window['quarto-listings']['listing-education-list'] = new List('listing-education-list', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-certificate-list .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-issuer','listing-platform','listing-date','listing-credential_url','listing-skills',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      
+      searchColumns: ["listing-title","listing-issuer","listing-platform","listing-date","listing-credential_url","listing-skills"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-certificate-list'] = new List('listing-certificate-list', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -161,7 +189,7 @@ window.Quarto = {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about/index.html"> 
+    <a class="nav-link active" href="../about/index.html" aria-current="page"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -199,7 +227,7 @@ window.Quarto = {
 <span class="menu-text">Tutorials</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../blog/index.html" aria-current="page"> 
+    <a class="nav-link" href="../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
@@ -259,14 +287,14 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Research Blog</h1>
-            <p class="subtitle lead">Insights from Single-Cell Genomics, Neurogenomics &amp; Cancer Biology</p>
+    <div class="quarto-title column-page">
+      <h1 class="title">About</h1>
+            <p class="subtitle lead">Bioinformatician, Researcher, Educator &amp; Entrepreneur</p>
                       </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta column-page">
 
       
     
@@ -277,163 +305,385 @@ window.Quarto = {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="QWx6aGVpbWVyJ3MlMjBEaXNlYXNl">Alzheimer's Disease <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q2FuY2VyJTIwR2Vub21pY3M=">Cancer Genomics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TWV0aG9kcw==">Methods <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TWljcm9nbGlh">Microglia <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TmV1cm9nZW5vbWljcw==">Neurogenomics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c2NSTkEtc2Vx">scRNA-seq <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U2luZ2xlLUNlbGw=">Single-Cell <span class="quarto-category-count">(3)</span></div><div class="category" data-category="U3BhdGlhbCUyMFRyYW5zY3JpcHRvbWljcw==">Spatial Transcriptomics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VHVtb3IlMjBNaWNyb2Vudmlyb25tZW50">Tumor Microenvironment <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
 
 
 
 
 
+<div class="ab-section-header">
+<h2 class="ab-section-title anchored">Education</h2>
+<p class="ab-section-sub">Academic background and formal training</p>
+</div>
+<div id="listing-education-list" class="quarto-listing quarto-listing-container-custom">
+<div class="edu-timeline">
+<div class="edu-item">
+<div class="edu-dot">
 
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-blog-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="U2luZ2xlLUNlbGwlMkNzY1JOQS1zZXElMkNNZXRob2Rz" data-listing-date-sort="1771524000000" data-listing-file-modified-sort="1771914331210" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="173">
-<div class="thumbnail"><a href="../blog/posts/intro-scrna-seq/index.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/intro-scrna-seq/thumbnail.svg" class="thumbnail-image" style="height: 150px;">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/intro-scrna-seq/index.html" class="no-external">Introduction to Single-Cell RNA Sequencing</a>
+</div>
+<div class="edu-card">
+<div class="edu-card-top">
+<div class="edu-degree-badge">
+MS
+</div>
+<p><span class="edu-period">2018 – 2020</span></p>
+</div>
+<h3 class="edu-title anchored">
+Master of Science in Microbiology
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U2luZ2xlLUNlbGw='); return false;">Single-Cell</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c2NSTkEtc2Vx'); return false;">scRNA-seq</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWV0aG9kcw=='); return false;">Methods</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/posts/intro-scrna-seq/index.html" class="no-external">
-<p>A primer on single-cell RNA sequencing — from library preparation to computational analysis — and why it has transformed our understanding of cellular heterogeneity.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/intro-scrna-seq/index.html" class="no-external">
-<div class="listing-date">
-Feb 20, 2026
-</div>
-<div class="listing-author">
-Jubayer Hossain
-</div>
-</a>
+<p class="edu-institution">
+🏛️ Jagannath University &nbsp;·&nbsp; 📍 Dhaka, Bangladesh
+</p>
+<p class="edu-desc">
+Focused on molecular biology, genomics, and computational approaches in microbial research.
+</p>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="TmV1cm9nZW5vbWljcyUyQ01pY3JvZ2xpYSUyQ0FsemhlaW1lcidzJTIwRGlzZWFzZSUyQ1NpbmdsZS1DZWxs" data-listing-date-sort="1771092000000" data-listing-file-modified-sort="1771914331210" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="165">
-<div class="thumbnail"><a href="../blog/posts/microglial-states-alzheimers/index.html" class="no-external">
+<div class="edu-item">
+<div class="edu-dot">
 
-<img loading="lazy" src="../blog/posts/microglial-states-alzheimers/thumbnail.svg" class="thumbnail-image" style="height: 150px;">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/microglial-states-alzheimers/index.html" class="no-external">Microglial Activation States in Alzheimer’s Disease</a>
+</div>
+<div class="edu-card">
+<div class="edu-card-top">
+<div class="edu-degree-badge">
+BS
+</div>
+<p><span class="edu-period">2014 – 2018</span></p>
+</div>
+<h3 class="edu-title anchored">
+Bachelor of Science in Microbiology
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TmV1cm9nZW5vbWljcw=='); return false;">Neurogenomics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWljcm9nbGlh'); return false;">Microglia</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QWx6aGVpbWVyJ3MlMjBEaXNlYXNl'); return false;">Alzheimer's Disease</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U2luZ2xlLUNlbGw='); return false;">Single-Cell</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/posts/microglial-states-alzheimers/index.html" class="no-external">
-<p>How single-cell transcriptomics has revealed the diverse activation states of microglia in Alzheimer’s disease, from homeostatic to disease-associated phenotypes.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/microglial-states-alzheimers/index.html" class="no-external">
-<div class="listing-date">
-Feb 15, 2026
-</div>
-<div class="listing-author">
-Jubayer Hossain
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="U3BhdGlhbCUyMFRyYW5zY3JpcHRvbWljcyUyQ0NhbmNlciUyMEdlbm9taWNzJTJDTWV0aG9kcw==" data-listing-date-sort="1770660000000" data-listing-file-modified-sort="1771914331210" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="153">
-<div class="thumbnail"><a href="../blog/posts/spatial-transcriptomics-cancer/index.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/spatial-transcriptomics-cancer/thumbnail.svg" class="thumbnail-image" style="height: 150px;">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/spatial-transcriptomics-cancer/index.html" class="no-external">Spatial Transcriptomics in Cancer Research</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U3BhdGlhbCUyMFRyYW5zY3JpcHRvbWljcw=='); return false;">Spatial Transcriptomics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2FuY2VyJTIwR2Vub21pY3M='); return false;">Cancer Genomics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWV0aG9kcw=='); return false;">Methods</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/posts/spatial-transcriptomics-cancer/index.html" class="no-external">
-<p>An overview of spatial transcriptomics technologies and how they are reshaping our understanding of tumor architecture and the spatial organization of the tumor microenvironment.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/spatial-transcriptomics-cancer/index.html" class="no-external">
-<div class="listing-date">
-Feb 10, 2026
-</div>
-<div class="listing-author">
-Jubayer Hossain
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Q2FuY2VyJTIwR2Vub21pY3MlMkNTaW5nbGUtQ2VsbCUyQ1R1bW9yJTIwTWljcm9lbnZpcm9ubWVudA==" data-listing-date-sort="1770228000000" data-listing-file-modified-sort="1771914331210" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="171">
-<div class="thumbnail"><a href="../blog/posts/scrna-tumor-microenvironment/index.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/scrna-tumor-microenvironment/thumbnail.svg" class="thumbnail-image" style="height: 150px;">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/scrna-tumor-microenvironment/index.html" class="no-external">Single-Cell Dissection of the Tumor Microenvironment</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2FuY2VyJTIwR2Vub21pY3M='); return false;">Cancer Genomics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U2luZ2xlLUNlbGw='); return false;">Single-Cell</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('VHVtb3IlMjBNaWNyb2Vudmlyb25tZW50'); return false;">Tumor Microenvironment</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/posts/scrna-tumor-microenvironment/index.html" class="no-external">
-<p>How single-cell genomics is uncovering the cellular complexity of the tumor microenvironment, from exhausted T cells to tumor-associated macrophages.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/scrna-tumor-microenvironment/index.html" class="no-external">
-<div class="listing-date">
-Feb 5, 2026
-</div>
-<div class="listing-author">
-Jubayer Hossain
-</div>
-</a>
+<p class="edu-institution">
+🏛️ Jagannath University &nbsp;·&nbsp; 📍 Dhaka, Bangladesh
+</p>
+<p class="edu-desc">
+Core coursework in microbiology, biochemistry, genetics, and cell biology.
+</p>
 </div>
 </div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</div>
+<div class="ab-section-header">
+<h2 class="ab-section-title anchored">Online Certificates</h2>
+<p class="ab-section-sub">Continuing education and professional development</p>
+</div>
+<div id="listing-certificate-list" class="quarto-listing quarto-listing-container-custom">
+<div class="cert-list">
+<div class="cert-list-item">
+<div class="cert-list-left">
+<div class="cert-platform-badge">
+Pluralsight
+</div>
+</div>
+<div class="cert-list-body">
+<h4 class="cert-title anchored">
+Harnessing the Power of Data to Improve Public Health
+</h4>
+<p class="cert-issuer">
+Pluralsight &nbsp;·&nbsp; 📅 Jan 1, 2020
+</p>
+<div class="cert-skills">
+<p><span class="cert-skill-tag">Public Health</span></p>
+<p><span class="cert-skill-tag">Data Analysis</span></p>
+<p><span class="cert-skill-tag">Health Informatics</span></p>
+</div>
+</div>
+<p><a href="../files/certificates/Certificate_PluralSight_Harnessing_the_Power_of_Data_to_Improve_Public_Health.pdf" target="_blank" class="cert-verify-btn">View ↗</a></p>
+</div>
+<div class="cert-list-item">
+<div class="cert-list-left">
+<div class="cert-platform-badge">
+Pluralsight
+</div>
+</div>
+<div class="cert-list-body">
+<h4 class="cert-title anchored">
+Interpreting Data Using Descriptive Statistics with Python
+</h4>
+<p class="cert-issuer">
+Pluralsight &nbsp;·&nbsp; 📅 Jan 1, 2024
+</p>
+<div class="cert-skills">
+<p><span class="cert-skill-tag">Python</span></p>
+<p><span class="cert-skill-tag">Descriptive Statistics</span></p>
+<p><span class="cert-skill-tag">Data Analysis</span></p>
+</div>
+</div>
+<p><a href="../files/certificates/Certificate_PluralSight_Interpreting_Data_Using_Descriptive_Statistics_with_Python.pdf" target="_blank" class="cert-verify-btn">View ↗</a></p>
+</div>
+<div class="cert-list-item">
+<div class="cert-list-left">
+<div class="cert-platform-badge">
+Pluralsight
+</div>
+</div>
+<div class="cert-list-body">
+<h4 class="cert-title anchored">
+Python for Data Analysis
+</h4>
+<p class="cert-issuer">
+Pluralsight &nbsp;·&nbsp; 📅 Jan 1, 2024
+</p>
+<div class="cert-skills">
+<p><span class="cert-skill-tag">Python</span></p>
+<p><span class="cert-skill-tag">Data Analysis</span></p>
+<p><span class="cert-skill-tag">Pandas</span></p>
+</div>
+</div>
+<p><a href="../files/certificates/Certificate_PluralSight_Python_for_Data_Analysis.pdf" target="_blank" class="cert-verify-btn">View ↗</a></p>
+</div>
+<div class="cert-list-item">
+<div class="cert-list-left">
+<div class="cert-platform-badge">
+Pluralsight
+</div>
+</div>
+<div class="cert-list-body">
+<h4 class="cert-title anchored">
+Working with Multidimensional Data Using NumPy
+</h4>
+<p class="cert-issuer">
+Pluralsight &nbsp;·&nbsp; 📅 Jan 1, 2024
+</p>
+<div class="cert-skills">
+<p><span class="cert-skill-tag">Python</span></p>
+<p><span class="cert-skill-tag">NumPy</span></p>
+<p><span class="cert-skill-tag">Scientific Computing</span></p>
+</div>
+</div>
+<p><a href="../files/certificates/Certificate_PluralSight_Working_with_Multidimensional_Data_Using_Numpy.pdf" target="_blank" class="cert-verify-btn">View ↗</a></p>
+</div>
+<div class="cert-list-item">
+<div class="cert-list-left">
+<div class="cert-platform-badge">
+Coursera
+</div>
+</div>
+<div class="cert-list-body">
+<h4 class="cert-title anchored">
+Analyze Box Office Data with Seaborn and Python
+</h4>
+<p class="cert-issuer">
+Coursera &nbsp;·&nbsp; 📅 Jan 1, 2020
+</p>
+<div class="cert-skills">
+<p><span class="cert-skill-tag">Python</span></p>
+<p><span class="cert-skill-tag">Seaborn</span></p>
+<p><span class="cert-skill-tag">Data Visualization</span></p>
+</div>
+</div>
+</div>
+<div class="cert-list-item">
+<div class="cert-list-left">
+<div class="cert-platform-badge">
+Coursera
+</div>
+</div>
+<div class="cert-list-body">
+<h4 class="cert-title anchored">
+Spreadsheets for Beginners using Google Sheets
+</h4>
+<p class="cert-issuer">
+Coursera &nbsp;·&nbsp; 📅 Jan 1, 2020
+</p>
+<div class="cert-skills">
+<p><span class="cert-skill-tag">Google Sheets</span></p>
+<p><span class="cert-skill-tag">Spreadsheets</span></p>
+<p><span class="cert-skill-tag">Data Analysis</span></p>
+</div>
+</div>
+</div>
+<div class="cert-list-item">
+<div class="cert-list-left">
+<div class="cert-platform-badge">
+Coursera
+</div>
+</div>
+<div class="cert-list-body">
+<h4 class="cert-title anchored">
+The Data Scientist’s Toolbox
+</h4>
+<p class="cert-issuer">
+Coursera / Johns Hopkins University &nbsp;·&nbsp; 📅 Jan 1, 2020
+</p>
+<div class="cert-skills">
+<p><span class="cert-skill-tag">R</span></p>
+<p><span class="cert-skill-tag">Data Science</span></p>
+<p><span class="cert-skill-tag">Version Control</span></p>
+</div>
+</div>
+</div>
+<div class="cert-list-item">
+<div class="cert-list-left">
+<div class="cert-platform-badge">
+Coursera
+</div>
+</div>
+<div class="cert-list-body">
+<h4 class="cert-title anchored">
+Essential Epidemiologic Tools for Public Health
+</h4>
+<p class="cert-issuer">
+Coursera &nbsp;·&nbsp; 📅 Jan 1, 2020
+</p>
+<div class="cert-skills">
+<p><span class="cert-skill-tag">Epidemiology</span></p>
+<p><span class="cert-skill-tag">Public Health</span></p>
+<p><span class="cert-skill-tag">Biostatistics</span></p>
+</div>
+</div>
+</div>
+<div class="cert-list-item">
+<div class="cert-list-left">
+<div class="cert-platform-badge">
+Coursera
+</div>
+</div>
+<div class="cert-list-body">
+<h4 class="cert-title anchored">
+AI and Public Health
+</h4>
+<p class="cert-issuer">
+Coursera / DeepLearning.AI &nbsp;·&nbsp; 📅 Jan 1, 2020
+</p>
+<div class="cert-skills">
+<p><span class="cert-skill-tag">Artificial Intelligence</span></p>
+<p><span class="cert-skill-tag">Public Health</span></p>
+<p><span class="cert-skill-tag">Machine Learning</span></p>
+</div>
+</div>
+<p><a href="https://coursera.org/share/e33cd4a7b43a0907a3da61df164f9264" target="_blank" class="cert-verify-btn">View ↗</a></p>
+</div>
+<div class="cert-list-item">
+<div class="cert-list-left">
+<div class="cert-platform-badge">
+Coursera
+</div>
+</div>
+<div class="cert-list-body">
+<h4 class="cert-title anchored">
+Statistical Data Visualization with Seaborn
+</h4>
+<p class="cert-issuer">
+Coursera &nbsp;·&nbsp; 📅 Jan 1, 2020
+</p>
+<div class="cert-skills">
+<p><span class="cert-skill-tag">Python</span></p>
+<p><span class="cert-skill-tag">Seaborn</span></p>
+<p><span class="cert-skill-tag">Statistical Visualization</span></p>
+</div>
+</div>
+</div>
+<div class="cert-list-item">
+<div class="cert-list-left">
+<div class="cert-platform-badge">
+CHRF
+</div>
+</div>
+<div class="cert-list-body">
+<h4 class="cert-title anchored">
+AI for Public Health
+</h4>
+<p class="cert-issuer">
+Child Health Research Foundation &nbsp;·&nbsp; 📅 Jan 1, 2023
+</p>
+<div class="cert-skills">
+<p><span class="cert-skill-tag">Artificial Intelligence</span></p>
+<p><span class="cert-skill-tag">Public Health</span></p>
+<p><span class="cert-skill-tag">Machine Learning</span></p>
+</div>
+</div>
+</div>
+<div class="cert-list-item">
+<div class="cert-list-left">
+<div class="cert-platform-badge">
+Coursera
+</div>
+</div>
+<div class="cert-list-body">
+<h4 class="cert-title anchored">
+Programming for Everybody (Getting Started with Python)
+</h4>
+<p class="cert-issuer">
+Coursera / University of Michigan &nbsp;·&nbsp; 📅 Jan 1, 2020
+</p>
+<div class="cert-skills">
+<p><span class="cert-skill-tag">Python</span></p>
+<p><span class="cert-skill-tag">Programming Fundamentals</span></p>
+</div>
+</div>
+</div>
+<div class="cert-list-item">
+<div class="cert-list-left">
+<div class="cert-platform-badge">
+Coursera
+</div>
+</div>
+<div class="cert-list-body">
+<h4 class="cert-title anchored">
+Create Interactive Dashboards with Streamlit and Python
+</h4>
+<p class="cert-issuer">
+Coursera
+</p>
+<div class="cert-skills">
+<p><span class="cert-skill-tag">Python</span></p>
+<p><span class="cert-skill-tag">Streamlit</span></p>
+<p><span class="cert-skill-tag">Data Visualization</span></p>
+</div>
+</div>
+</div>
+<div class="cert-list-item">
+<div class="cert-list-left">
+<div class="cert-platform-badge">
+Coursera
+</div>
+</div>
+<div class="cert-list-body">
+<h4 class="cert-title anchored">
+Exploratory Data Analysis with Seaborn
+</h4>
+<p class="cert-issuer">
+Coursera
+</p>
+<div class="cert-skills">
+<p><span class="cert-skill-tag">Python</span></p>
+<p><span class="cert-skill-tag">Seaborn</span></p>
+<p><span class="cert-skill-tag">Exploratory Data Analysis</span></p>
+</div>
+</div>
+</div>
+<div class="cert-list-item">
+<div class="cert-list-left">
+<div class="cert-platform-badge">
+Coursera
+</div>
+</div>
+<div class="cert-list-body">
+<h4 class="cert-title anchored">
+COVID-19 Data Analysis Using Python
+</h4>
+<p class="cert-issuer">
+Coursera
+</p>
+<div class="cert-skills">
+<p><span class="cert-skill-tag">Python</span></p>
+<p><span class="cert-skill-tag">Data Analysis</span></p>
+<p><span class="cert-skill-tag">COVID-19</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

@@ -1,0 +1,148 @@
+- title: "Harnessing the Power of Data to Improve Public Health"
+  issuer: "Pluralsight"
+  platform: "Pluralsight"
+  date: "2020"
+  credential_url: "/files/certificates/Certificate_PluralSight_Harnessing_the_Power_of_Data_to_Improve_Public_Health.pdf"
+  skills:
+    - Public Health
+    - Data Analysis
+    - Health Informatics
+
+- title: "Interpreting Data Using Descriptive Statistics with Python"
+  issuer: "Pluralsight"
+  platform: "Pluralsight"
+  date: "2024"
+  credential_url: "/files/certificates/Certificate_PluralSight_Interpreting_Data_Using_Descriptive_Statistics_with_Python.pdf"
+  skills:
+    - Python
+    - Descriptive Statistics
+    - Data Analysis
+
+- title: "Python for Data Analysis"
+  issuer: "Pluralsight"
+  platform: "Pluralsight"
+  date: "2024"
+  credential_url: "/files/certificates/Certificate_PluralSight_Python_for_Data_Analysis.pdf"
+  skills:
+    - Python
+    - Data Analysis
+    - Pandas
+
+- title: "Working with Multidimensional Data Using NumPy"
+  issuer: "Pluralsight"
+  platform: "Pluralsight"
+  date: "2024"
+  credential_url: "/files/certificates/Certificate_PluralSight_Working_with_Multidimensional_Data_Using_Numpy.pdf"
+  skills:
+    - Python
+    - NumPy
+    - Scientific Computing
+
+- title: "Analyze Box Office Data with Seaborn and Python"
+  issuer: "Coursera"
+  platform: "Coursera"
+  date: "2020"
+  credential_url: ""
+  skills:
+    - Python
+    - Seaborn
+    - Data Visualization
+
+- title: "Spreadsheets for Beginners using Google Sheets"
+  issuer: "Coursera"
+  platform: "Coursera"
+  date: "2020"
+  credential_url: ""
+  skills:
+    - Google Sheets
+    - Spreadsheets
+    - Data Analysis
+
+- title: "The Data Scientist's Toolbox"
+  issuer: "Coursera / Johns Hopkins University"
+  platform: "Coursera"
+  date: "2020"
+  credential_url: ""
+  skills:
+    - R
+    - Data Science
+    - Version Control
+
+- title: "Essential Epidemiologic Tools for Public Health"
+  issuer: "Coursera"
+  platform: "Coursera"
+  date: "2020"
+  credential_url: ""
+  skills:
+    - Epidemiology
+    - Public Health
+    - Biostatistics
+
+- title: "AI and Public Health"
+  issuer: "Coursera / DeepLearning.AI"
+  platform: "Coursera"
+  date: "2020"
+  credential_url: "https://coursera.org/share/e33cd4a7b43a0907a3da61df164f9264"
+  skills:
+    - Artificial Intelligence
+    - Public Health
+    - Machine Learning
+
+- title: "Statistical Data Visualization with Seaborn"
+  issuer: "Coursera"
+  platform: "Coursera"
+  date: "2020"
+  credential_url: ""
+  skills:
+    - Python
+    - Seaborn
+    - Statistical Visualization
+
+- title: "AI for Public Health"
+  issuer: "Child Health Research Foundation"
+  platform: "CHRF"
+  date: "2023"
+  credential_url: ""
+  skills:
+    - Artificial Intelligence
+    - Public Health
+    - Machine Learning
+
+- title: "Programming for Everybody (Getting Started with Python)"
+  issuer: "Coursera / University of Michigan"
+  platform: "Coursera"
+  date: "2020"
+  credential_url: ""
+  skills:
+    - Python
+    - Programming Fundamentals
+
+- title: "Create Interactive Dashboards with Streamlit and Python"
+  issuer: "Coursera"
+  platform: "Coursera"
+  date: ""
+  credential_url: ""
+  skills:
+    - Python
+    - Streamlit
+    - Data Visualization
+
+- title: "Exploratory Data Analysis with Seaborn"
+  issuer: "Coursera"
+  platform: "Coursera"
+  date: ""
+  credential_url: ""
+  skills:
+    - Python
+    - Seaborn
+    - Exploratory Data Analysis
+
+- title: "COVID-19 Data Analysis Using Python"
+  issuer: "Coursera"
+  platform: "Coursera"
+  date: ""
+  credential_url: ""
+  skills:
+    - Python
+    - Data Analysis
+    - COVID-19
