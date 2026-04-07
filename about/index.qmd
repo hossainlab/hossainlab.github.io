@@ -5,6 +5,9 @@ title-block-banner: true
 page-layout: full
 toc: false
 listing:
+  - id: venture-list
+    contents: ventures.yml
+    template: ../_templates/venture-card.ejs
   - id: education-list
     contents: education.yml
     template: ../_templates/education-card.ejs
@@ -12,6 +15,16 @@ listing:
     contents: certificates.yml
     template: ../_templates/certificate-card.ejs
 ---
+
+```{=html}
+<div class="ab-section-header">
+<h2 class="ab-section-title">Entrepreneurial Journey</h2>
+<p class="ab-section-sub">Ventures founded and led in bioinformatics, research, and education</p>
+</div>
+```
+
+::: {#venture-list}
+:::
 
 ```{=html}
 <div class="ab-section-header">

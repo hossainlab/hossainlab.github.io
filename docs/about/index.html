@@ -77,6 +77,34 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-venture-list .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-name','listing-role','listing-period','listing-location','listing-url','listing-tagline','listing-type','listing-description','listing-highlights','listing-stats',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-name","listing-role","listing-period","listing-location","listing-url","listing-tagline","listing-type","listing-description","listing-highlights","listing-stats"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-venture-list'] = new List('listing-venture-list', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
     const listingTargetEl = window.document.querySelector('#listing-education-list .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
@@ -84,9 +112,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-institution','listing-location','listing-period','listing-degree','listing-field','listing-status','listing-description','listing-gpa','listing-thesis',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-title','listing-institution','listing-location','listing-period','listing-degree','listing-field','listing-status','listing-description','listing-thesis','listing-gpa',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-title","listing-institution","listing-location","listing-period","listing-degree","listing-field","listing-status","listing-description","listing-gpa","listing-thesis"],
+      searchColumns: ["listing-title","listing-institution","listing-location","listing-period","listing-degree","listing-field","listing-status","listing-description","listing-thesis","listing-gpa"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -314,6 +342,147 @@ window.Quarto = {
 
 
 <div class="ab-section-header">
+<h2 class="ab-section-title anchored">Entrepreneurial Journey</h2>
+<p class="ab-section-sub">Ventures founded and led in bioinformatics, research, and education</p>
+</div>
+<div id="listing-venture-list" class="quarto-listing quarto-listing-container-custom">
+<div class="venture-list">
+<div class="venture-card">
+<div class="venture-card-top">
+<p><span class="venture-type-badge">Research Startup</span> <span class="venture-meta">📅 Jan 2025 – Present &nbsp;·&nbsp; 📍 Dhaka, Bangladesh</span></p>
+</div>
+<a href="https://deepbioltd.com" target="_blank" class="venture-name-link">
+<h3 class="venture-name anchored">
+DeepBio Limited ↗
+</h3>
+</a>
+<p class="venture-role">
+Founder, CEO &amp; Bioinformatics Scientist
+</p>
+<p class="venture-tagline">
+“Data-Driven Life Science”
+</p>
+<p class="venture-desc">
+A Bangladesh-based research startup at the intersection of AI, bioinformatics, and public health informatics — transforming biological data into actionable solutions for global health.
+</p>
+<ul class="venture-highlights">
+<li>
+Lead a team of 13 researchers executing scRNA-seq and bulk RNA-seq analysis pipelines for cancer genomics
+</li>
+<li>
+Develop scalable bioinformatics workflows for biomarker discovery in cancer and neurodegenerative diseases
+</li>
+<li>
+Build AI-integrated computational infrastructure for multi-omics data processing
+</li>
+<li>
+250+ genomes analyzed · 99% model precision · 12+ specialized services
+</li>
+</ul>
+<div class="venture-stats">
+<div class="venture-stat">
+<p><span class="venture-stat-value">13+</span> <span class="venture-stat-label">Team</span></p>
+</div>
+<div class="venture-stat">
+<p><span class="venture-stat-value">250+</span> <span class="venture-stat-label">Genomes</span></p>
+</div>
+<div class="venture-stat">
+<p><span class="venture-stat-value">12+</span> <span class="venture-stat-label">Services</span></p>
+</div>
+</div>
+</div>
+<div class="venture-card">
+<div class="venture-card-top">
+<p><span class="venture-type-badge">EdTech Platform</span> <span class="venture-meta">📅 2025 – Present &nbsp;·&nbsp; 📍 Dhaka, Bangladesh</span></p>
+</div>
+<a href="https://deepbioacademy.com" target="_blank" class="venture-name-link">
+<h3 class="venture-name anchored">
+DeepBio Academy ↗
+</h3>
+</a>
+<p class="venture-role">
+Founder &amp; Lead Instructor
+</p>
+<p class="venture-tagline">
+“Master the Future of Bioinformatics &amp; Computational Biology”
+</p>
+<p class="venture-desc">
+Online learning platform specializing in bioinformatics and computational biology education — democratizing access to advanced computational training for researchers across South Asia.
+</p>
+<ul class="venture-highlights">
+<li>
+Deliver expert-led courses in bioinformatics, computational biology, and AI in life sciences
+</li>
+<li>
+Tiered membership programs covering beginner-to-advanced progression
+</li>
+<li>
+Hands-on projects with mentorship and GitHub-based portfolio development
+</li>
+<li>
+Verified digital certificates · 4.9/5 rating from 500+ student reviews
+</li>
+</ul>
+<div class="venture-stats">
+<div class="venture-stat">
+<p><span class="venture-stat-value">500+</span> <span class="venture-stat-label">Students</span></p>
+</div>
+<div class="venture-stat">
+<p><span class="venture-stat-value">6+</span> <span class="venture-stat-label">Courses</span></p>
+</div>
+<div class="venture-stat">
+<p><span class="venture-stat-value">4.9/5</span> <span class="venture-stat-label">Rating</span></p>
+</div>
+</div>
+</div>
+<div class="venture-card">
+<div class="venture-card-top">
+<p><span class="venture-type-badge">Non-profit</span> <span class="venture-meta">📅 June 2020 – Present &nbsp;·&nbsp; 📍 Dhaka, Bangladesh</span></p>
+</div>
+<a href="https://chiralbd.org" target="_blank" class="venture-name-link">
+<h3 class="venture-name anchored">
+CHIRAL Bangladesh ↗
+</h3>
+</a>
+<p class="venture-role">
+Founder &amp; Capacity Building Director
+</p>
+<p class="venture-tagline">
+“Non-profit Research Institute”
+</p>
+<p class="venture-desc">
+A non-profit research institute with dedicated divisions in Bioinformatics, Public Health, Geospatial Health, and AI-Healthcare — building research capacity across Bangladesh and South Asia.
+</p>
+<ul class="venture-highlights">
+<li>
+Published 20+ peer-reviewed articles in Q1/Q2 journals and 40+ conference papers
+</li>
+<li>
+Supervised 15+ manuscripts through analytical development and peer-review preparation
+</li>
+<li>
+Collaborated with Michigan State University on biomedical research capacity-building in South Asia
+</li>
+<li>
+Trained 3,000+ early-career researchers in data science and computational biology
+</li>
+</ul>
+<div class="venture-stats">
+<div class="venture-stat">
+<p><span class="venture-stat-value">3,000+</span> <span class="venture-stat-label">Researchers Trained</span></p>
+</div>
+<div class="venture-stat">
+<p><span class="venture-stat-value">20+</span> <span class="venture-stat-label">Publications</span></p>
+</div>
+<div class="venture-stat">
+<p><span class="venture-stat-value">40+</span> <span class="venture-stat-label">Conference Papers</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+<div class="ab-section-header">
 <h2 class="ab-section-title anchored">Education</h2>
 <p class="ab-section-sub">Academic background and formal training</p>
 </div>
@@ -326,9 +495,53 @@ window.Quarto = {
 <div class="edu-card">
 <div class="edu-card-top">
 <div class="edu-degree-badge">
+Course
+</div>
+<p><span class="edu-period">January 2026</span></p>
+</div>
+<h3 class="edu-title anchored">
+Interdisciplinary Computational Biology
+</h3>
+<p class="edu-institution">
+🏛️ BRAC University &nbsp;·&nbsp; 📍 Dhaka, Bangladesh
+</p>
+<p class="edu-desc">
+Mastered high-resolution protein structure prediction and molecular visualization using AlphaFold2/3 and ChimeraX to investigate complex protein-ligand interactions. Applied AI/ML frameworks and docking protocols to structural data from PDB and UniProt, culminating in an interdisciplinary project on predictive molecular modeling.
+</p>
+</div>
+</div>
+<div class="edu-item">
+<div class="edu-dot">
+
+</div>
+<div class="edu-card">
+<div class="edu-card-top">
+<div class="edu-degree-badge">
+Training
+</div>
+<p><span class="edu-period">Sep 2023</span></p>
+</div>
+<h3 class="edu-title anchored">
+AI in Public Health
+</h3>
+<p class="edu-institution">
+🏛️ Child Health Research Foundation (CHRF) &nbsp;·&nbsp; 📍 Dhaka, Bangladesh
+</p>
+<p class="edu-desc">
+Developed predictive models and data pipelines for disease surveillance, focusing on the calculation of typhoid incidence and vaccine impact in Bangladesh. Built LLM-based code generation and computer vision frameworks for medical image analysis while analyzing the ethical implications of algorithmic bias.
+</p>
+</div>
+</div>
+<div class="edu-item">
+<div class="edu-dot">
+
+</div>
+<div class="edu-card">
+<div class="edu-card-top">
+<div class="edu-degree-badge">
 MS
 </div>
-<p><span class="edu-period">2018 – 2020</span></p>
+<p><span class="edu-period">2019 – 2020</span></p>
 </div>
 <h3 class="edu-title anchored">
 Master of Science in Microbiology
@@ -337,7 +550,7 @@ Master of Science in Microbiology
 🏛️ Jagannath University &nbsp;·&nbsp; 📍 Dhaka, Bangladesh
 </p>
 <p class="edu-desc">
-Focused on molecular biology, genomics, and computational approaches in microbial research.
+Relevant Coursework: Genomics, Proteomics, Bioinformatics, Research Methodology and Scientific Writing.
 </p>
 </div>
 </div>
@@ -350,7 +563,7 @@ Focused on molecular biology, genomics, and computational approaches in microbia
 <div class="edu-degree-badge">
 BS
 </div>
-<p><span class="edu-period">2014 – 2018</span></p>
+<p><span class="edu-period">2016 – 2019</span></p>
 </div>
 <h3 class="edu-title anchored">
 Bachelor of Science in Microbiology
@@ -359,7 +572,7 @@ Bachelor of Science in Microbiology
 🏛️ Jagannath University &nbsp;·&nbsp; 📍 Dhaka, Bangladesh
 </p>
 <p class="edu-desc">
-Core coursework in microbiology, biochemistry, genetics, and cell biology.
+Relevant Coursework: Biostatistics, Public Health and Hygiene, Bioinformatics I, Bioinformatics II.
 </p>
 </div>
 </div>

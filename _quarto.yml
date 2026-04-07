@@ -29,10 +29,12 @@ website:
         text: Home
       - href: about/index.qmd
         text: About
-      - text: Projects
+      - text: Research
         menu:
+          - href: research/index.qmd
+            text: Overview
           - href: projects/index.qmd
-            text: Research Projects
+            text: Projects
           - href: projects/pipelines.qmd
             text: Pipelines
       - text: Teaching

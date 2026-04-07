@@ -9,7 +9,8 @@
       "mcp__playwright__browser_evaluate",
       "Bash(python:*)",
       "Bash(pip install:*)",
-      "Bash(pip:*)"
+      "Bash(pip:*)",
+      "WebFetch(domain:deepbioltd.com)"
     ]
   }
 }

@@ -1,0 +1,27 @@
+<div class="venture-list">
+<% for (const item of items) { %>
+<div class="venture-card">
+<div class="venture-card-top">
+<span class="venture-type-badge"><%= item.type %></span>
+<span class="venture-meta">📅 <%= item.period %> &nbsp;·&nbsp; 📍 <%= item.location %></span>
+</div>
+<a href="<%= item.url %>" target="_blank" class="venture-name-link"><h3 class="venture-name"><%= item.name %> ↗</h3></a>
+<p class="venture-role"><%= item.role %></p>
+<p class="venture-tagline">"<%= item.tagline %>"</p>
+<p class="venture-desc"><%= item.description %></p>
+<ul class="venture-highlights">
+<% for (const h of (item.highlights || [])) { %>
+<li><%= h %></li>
+<% } %>
+</ul>
+<div class="venture-stats">
+<% for (const s of (item.stats || [])) { %>
+<div class="venture-stat">
+<span class="venture-stat-value"><%= s.value %></span>
+<span class="venture-stat-label"><%= s.label %></span>
+</div>
+<% } %>
+</div>
+</div>
+<% } %>
+</div>
