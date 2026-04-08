@@ -28,7 +28,7 @@ listing:
 
 ```{=html}
 <div class="ab-section-header">
-<h2 class="ab-section-title">Education</h2>
+<h2 class="ab-section-title">Education and Training</h2>
 <p class="ab-section-sub">Academic background and formal training</p>
 </div>
 ```
