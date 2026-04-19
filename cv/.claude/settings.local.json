@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:bioconductor.org)",
+      "WebFetch(domain:rdrr.io)"
+    ]
+  }
+}

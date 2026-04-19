@@ -91,7 +91,7 @@ draft-mode: unlinked
   
 # google analytics 
 google-analytics:
-    tracking-id: ""  # Please delete or replace with your own tracking ID
+    tracking-id: "G-4KLN6W9N3N"
     anonymize-ip: true
     
     
