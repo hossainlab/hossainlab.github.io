@@ -20,25 +20,33 @@
   module: "Module 1: Introduction & Setup"
   number: 2
   description: "Install Java (required runtime), download the Nextflow launcher, verify your setup, and configure the environment on Linux, macOS, and WSL2."
-  status: coming-soon
+  status: available
   difficulty: Beginner
   duration: "~20 min"
   tags:
     - Nextflow
     - Installation
     - Java
+  links:
+    - label: "Read Tutorial"
+      url: "02-installation.html"
+      icon: "fa-solid fa-book-open"
 
 - title: "Hello World: Your First Nextflow Pipeline"
   module: "Module 1: Introduction & Setup"
   number: 3
   description: "Write and run a minimal pipeline, understand the working directory layout, interpret Nextflow output logs, and resume a run with `-resume`."
-  status: coming-soon
+  status: available
   difficulty: Beginner
   duration: "~25 min"
   tags:
     - Nextflow
     - Hello World
     - resume
+  links:
+    - label: "Read Tutorial"
+      url: "03-hello-world.html"
+      icon: "fa-solid fa-book-open"
 
 # ── Module 2: Nextflow Language Fundamentals ──────────────────────────────────
 

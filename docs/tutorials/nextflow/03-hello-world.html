@@ -1,0 +1,1732 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jubayer Hossain">
+<meta name="dcterms.date" content="2026-04-20">
+<meta name="description" content="Academic Website for Jubayer Hossain">
+
+<title>Hello World: Your First Nextflow Pipeline – Jubayer Hossain</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../..//files/profiles/icon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Jubayer Hossain</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about/index.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-research" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Research</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-research">    
+        <li>
+    <a class="dropdown-item" href="../../research/index.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../projects/index.html">
+ <span class="dropdown-text">Projects</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../projects/pipelines.html">
+ <span class="dropdown-text">Pipelines</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-teaching" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Teaching</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-teaching">    
+        <li>
+    <a class="dropdown-item" href="../../teaching/index.html">
+ <span class="dropdown-text">Courses</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../teaching/videos.html">
+ <span class="dropdown-text">Videos</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../tutorials/index.html"> 
+<span class="menu-text">Tutorials</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../publications/index.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../cv/professional-cv/CV-HossainMJ.pdf"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:hossainmj@gmail.com"> <i class="bi bi-envelope" role="img" aria-label="email">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://orcid.org/0000-0001-9323-4997" target="_blank"> 
+<span class="menu-text"><i class="ai  ai-orcid" aria-label="orcid"></i></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=9_K4ekoAAAAJ&amp;hl=en&amp;authuser=5" target="_blank"> 
+<span class="menu-text"><i class="ai  ai-google-scholar" aria-label="google-scholar"></i></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=9_K4ekoAAAAJ&amp;hl=en&amp;authuser=5" target="_blank"> 
+<span class="menu-text"><i class="ai  ai-researchgate" aria-label="researchgate"></i></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/hossainmj" target="_blank"> <i class="bi bi-linkedin" role="img" aria-label="linkedin">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/hossain_lab" target="_blank"> <i class="bi bi-twitter" role="img" aria-label="twitter">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/hossainlab" target="_blank"> <i class="bi bi-github" role="img" aria-label="github">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/@hossainlab" target="_blank"> <i class="bi bi-youtube" role="img" aria-label="youtube">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#before-you-begin" id="toc-before-you-begin" class="nav-link active" data-scroll-target="#before-you-begin">1. Before You Begin</a></li>
+  <li><a href="#the-three-block-structure-of-a-nextflow-pipeline" id="toc-the-three-block-structure-of-a-nextflow-pipeline" class="nav-link" data-scroll-target="#the-three-block-structure-of-a-nextflow-pipeline">2. The Three-Block Structure of a Nextflow Pipeline</a>
+  <ul class="collapse">
+  <li><a href="#process-what-to-run" id="toc-process-what-to-run" class="nav-link" data-scroll-target="#process-what-to-run">2.1 <code>process</code> — What to Run</a></li>
+  <li><a href="#workflow-how-to-connect-them" id="toc-workflow-how-to-connect-them" class="nav-link" data-scroll-target="#workflow-how-to-connect-them">2.2 <code>workflow</code> — How to Connect Them</a></li>
+  <li><a href="#params-user-configurable-inputs" id="toc-params-user-configurable-inputs" class="nav-link" data-scroll-target="#params-user-configurable-inputs">2.3 <code>params</code> — User-Configurable Inputs</a></li>
+  </ul></li>
+  <li><a href="#pipeline-1-the-minimal-hello-world" id="toc-pipeline-1-the-minimal-hello-world" class="nav-link" data-scroll-target="#pipeline-1-the-minimal-hello-world">3. Pipeline 1 — The Minimal Hello World</a>
+  <ul class="collapse">
+  <li><a href="#reading-the-execution-log" id="toc-reading-the-execution-log" class="nav-link" data-scroll-target="#reading-the-execution-log">3.1 Reading the Execution Log</a></li>
+  <li><a href="#the-view-operator" id="toc-the-view-operator" class="nav-link" data-scroll-target="#the-view-operator">3.2 The <code>| view</code> Operator</a></li>
+  </ul></li>
+  <li><a href="#dissecting-every-line-of-main.nf" id="toc-dissecting-every-line-of-main.nf" class="nav-link" data-scroll-target="#dissecting-every-line-of-main.nf">4. Dissecting Every Line of <code>main.nf</code></a>
+  <ul class="collapse">
+  <li><a href="#nextflow.enable.dsl2" id="toc-nextflow.enable.dsl2" class="nav-link" data-scroll-target="#nextflow.enable.dsl2">4.1 <code>nextflow.enable.dsl=2</code></a></li>
+  <li><a href="#the-process-block" id="toc-the-process-block" class="nav-link" data-scroll-target="#the-process-block">4.2 The <code>process</code> Block</a></li>
+  <li><a href="#the-workflow-block" id="toc-the-workflow-block" class="nav-link" data-scroll-target="#the-workflow-block">4.3 The <code>workflow</code> Block</a></li>
+  </ul></li>
+  <li><a href="#exploring-the-work-directory" id="toc-exploring-the-work-directory" class="nav-link" data-scroll-target="#exploring-the-work-directory">5. Exploring the <code>work/</code> Directory</a>
+  <ul class="collapse">
+  <li><a href="#reading-.command.sh" id="toc-reading-.command.sh" class="nav-link" data-scroll-target="#reading-.command.sh">5.1 Reading <code>.command.sh</code></a></li>
+  <li><a href="#reading-.command.log" id="toc-reading-.command.log" class="nav-link" data-scroll-target="#reading-.command.log">5.2 Reading <code>.command.log</code></a></li>
+  <li><a href="#reading-.exitcode" id="toc-reading-.exitcode" class="nav-link" data-scroll-target="#reading-.exitcode">5.3 Reading <code>.exitcode</code></a></li>
+  </ul></li>
+  <li><a href="#pipeline-2-adding-parameters-and-file-output" id="toc-pipeline-2-adding-parameters-and-file-output" class="nav-link" data-scroll-target="#pipeline-2-adding-parameters-and-file-output">6. Pipeline 2 — Adding Parameters and File Output</a>
+  <ul class="collapse">
+  <li><a href="#what-is-new-here" id="toc-what-is-new-here" class="nav-link" data-scroll-target="#what-is-new-here">6.1 What Is New Here</a></li>
+  </ul></li>
+  <li><a href="#the--resume-flag-incremental-execution" id="toc-the--resume-flag-incremental-execution" class="nav-link" data-scroll-target="#the--resume-flag-incremental-execution">7. The <code>-resume</code> Flag: Incremental Execution</a>
+  <ul class="collapse">
+  <li><a href="#how-the-cache-works" id="toc-how-the-cache-works" class="nav-link" data-scroll-target="#how-the-cache-works">7.1 How the Cache Works</a></li>
+  <li><a href="#when--resume-cannot-help" id="toc-when--resume-cannot-help" class="nav-link" data-scroll-target="#when--resume-cannot-help">7.2 When <code>-resume</code> Cannot Help</a></li>
+  </ul></li>
+  <li><a href="#interpreting-the-execution-log-in-detail" id="toc-interpreting-the-execution-log-in-detail" class="nav-link" data-scroll-target="#interpreting-the-execution-log-in-detail">8. Interpreting the Execution Log in Detail</a>
+  <ul class="collapse">
+  <li><a href="#the-process-status-line" id="toc-the-process-status-line" class="nav-link" data-scroll-target="#the-process-status-line">8.1 The Process Status Line</a></li>
+  <li><a href="#the-ansi-progress-bar" id="toc-the-ansi-progress-bar" class="nav-link" data-scroll-target="#the-ansi-progress-bar">8.2 The ANSI Progress Bar</a></li>
+  <li><a href="#execution-summary" id="toc-execution-summary" class="nav-link" data-scroll-target="#execution-summary">8.3 Execution Summary</a></li>
+  </ul></li>
+  <li><a href="#managing-run-history-with-nextflow-log" id="toc-managing-run-history-with-nextflow-log" class="nav-link" data-scroll-target="#managing-run-history-with-nextflow-log">9. Managing Run History with <code>nextflow log</code></a>
+  <ul class="collapse">
+  <li><a href="#list-all-runs" id="toc-list-all-runs" class="nav-link" data-scroll-target="#list-all-runs">9.1 List All Runs</a></li>
+  <li><a href="#query-a-specific-run" id="toc-query-a-specific-run" class="nav-link" data-scroll-target="#query-a-specific-run">9.2 Query a Specific Run</a></li>
+  <li><a href="#clean-up-run-directories" id="toc-clean-up-run-directories" class="nav-link" data-scroll-target="#clean-up-run-directories">9.3 Clean Up Run Directories</a></li>
+  </ul></li>
+  <li><a href="#pipeline-3-reading-real-files" id="toc-pipeline-3-reading-real-files" class="nav-link" data-scroll-target="#pipeline-3-reading-real-files">10. Pipeline 3 — Reading Real Files</a>
+  <ul class="collapse">
+  <li><a href="#what-is-new-here-1" id="toc-what-is-new-here-1" class="nav-link" data-scroll-target="#what-is-new-here-1">10.1 What Is New Here</a></li>
+  </ul></li>
+  <li><a href="#pipeline-4-paired-end-files-with-fromfilepairs" id="toc-pipeline-4-paired-end-files-with-fromfilepairs" class="nav-link" data-scroll-target="#pipeline-4-paired-end-files-with-fromfilepairs">11. Pipeline 4 — Paired-End Files with <code>fromFilePairs</code></a>
+  <ul class="collapse">
+  <li><a href="#how-fromfilepairs-works" id="toc-how-fromfilepairs-works" class="nav-link" data-scroll-target="#how-fromfilepairs-works">11.1 How <code>fromFilePairs</code> Works</a></li>
+  </ul></li>
+  <li><a href="#handling-pipeline-failures" id="toc-handling-pipeline-failures" class="nav-link" data-scroll-target="#handling-pipeline-failures">12. Handling Pipeline Failures</a>
+  <ul class="collapse">
+  <li><a href="#simulating-a-failure" id="toc-simulating-a-failure" class="nav-link" data-scroll-target="#simulating-a-failure">12.1 Simulating a Failure</a></li>
+  <li><a href="#fix-and-resume" id="toc-fix-and-resume" class="nav-link" data-scroll-target="#fix-and-resume">12.2 Fix and Resume</a></li>
+  <li><a href="#errorstrategy" id="toc-errorstrategy" class="nav-link" data-scroll-target="#errorstrategy">12.3 <code>errorStrategy</code></a></li>
+  </ul></li>
+  <li><a href="#a-complete-working-pipeline" id="toc-a-complete-working-pipeline" class="nav-link" data-scroll-target="#a-complete-working-pipeline">13. A Complete Working Pipeline</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">14. Summary</a></li>
+  <li><a href="#whats-next" id="toc-whats-next" class="nav-link" data-scroll-target="#whats-next">What’s Next</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Hello World: Your First Nextflow Pipeline</h1>
+<p class="subtitle lead">Write, run, and dissect a minimal DSL2 pipeline — then master the work directory and -resume</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Nextflow</div>
+    <div class="quarto-category">DSL2</div>
+    <div class="quarto-category">Hello World</div>
+    <div class="quarto-category">Bioinformatics</div>
+    <div class="quarto-category">Reproducibility</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Build a complete Nextflow DSL2 pipeline from a blank file. Understand every line of code, interpret the execution log, navigate the work directory, and use -resume to skip completed steps during iterative development.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jubayer Hossain <a href="https://orcid.org/0000-0001-9323-4997" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 20, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Learning Objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>By the end of this tutorial you will be able to:</p>
+<ul>
+<li>Write a complete, working Nextflow <strong>DSL2 pipeline</strong> from a blank file</li>
+<li>Explain the role of the three top-level blocks: <strong><code>process</code></strong>, <strong><code>workflow</code></strong>, and <strong><code>params</code></strong></li>
+<li>Understand how <strong><code>Channel.of</code></strong>, <strong><code>Channel.fromPath</code></strong>, and <strong><code>Channel.fromFilePairs</code></strong> create input data streams</li>
+<li>Run a pipeline with <code>nextflow run</code> and <strong>interpret every line of the execution log</strong></li>
+<li>Navigate the <strong><code>work/</code> directory</strong> and read <code>.command.sh</code>, <code>.command.log</code>, and <code>.exitcode</code></li>
+<li>Use <strong><code>-resume</code></strong> to skip completed steps after a partial or failed run</li>
+<li>Use <strong><code>nextflow log</code></strong> and <strong><code>nextflow clean</code></strong> to inspect and manage run history</li>
+</ul>
+<p><strong>Estimated reading time:</strong> 25–30 minutes <strong>Prerequisites:</strong> Tutorial 2 (Installing Nextflow and Java); Nextflow installed and <code>nextflow run hello</code> working</p>
+</div>
+</div>
+<hr>
+<section id="before-you-begin" class="level2">
+<h2 class="anchored" data-anchor-id="before-you-begin">1. Before You Begin</h2>
+<p>Create a dedicated working directory for this tutorial. Keeping each pipeline in its own directory prevents <code>work/</code> directories from mixing across projects.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/nf-tutorial/03-hello-world</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/nf-tutorial/03-hello-world</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>All files in this tutorial live in this directory. All <code>nextflow run</code> commands are executed from here.</p>
+<p>Confirm your Nextflow installation is working:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> info</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Runtime line should show Java 11 or later</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="the-three-block-structure-of-a-nextflow-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="the-three-block-structure-of-a-nextflow-pipeline">2. The Three-Block Structure of a Nextflow Pipeline</h2>
+<p>Every Nextflow DSL2 pipeline is built from three types of top-level blocks. You will see all three in this tutorial.</p>
+<section id="process-what-to-run" class="level3">
+<h3 class="anchored" data-anchor-id="process-what-to-run">2.1 <code>process</code> — What to Run</h3>
+<p>A <strong>process</strong> defines a single computational step: the inputs it expects, the outputs it produces, and the shell script to execute.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>process SAY_HELLO <span class="op">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    input<span class="op">:</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    val name</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    output<span class="op">:</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    stdout</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    script<span class="op">:</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"""</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="st">    echo "Hello, </span><span class="ss">${</span>name<span class="ss">}</span><span class="st">!"</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="st">    """</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="workflow-how-to-connect-them" class="level3">
+<h3 class="anchored" data-anchor-id="workflow-how-to-connect-them">2.2 <code>workflow</code> — How to Connect Them</h3>
+<p>A <strong>workflow</strong> block wires processes together using channels — it is the pipeline’s “wiring diagram”.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>workflow <span class="op">{</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Channel</span><span class="op">.</span><span class="fu">of</span><span class="op">(</span><span class="st">"Alice"</span><span class="op">,</span> <span class="st">"Bob"</span><span class="op">,</span> <span class="st">"Carol"</span><span class="op">)</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        <span class="op">|</span> SAY_HELLO</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        <span class="op">|</span> view</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="params-user-configurable-inputs" class="level3">
+<h3 class="anchored" data-anchor-id="params-user-configurable-inputs">2.3 <code>params</code> — User-Configurable Inputs</h3>
+<p><strong><code>params</code></strong> is a built-in map of user-configurable parameters. Values are set with defaults in the pipeline and overridden at runtime with <code>--param_name value</code>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>params<span class="op">.</span>greeting <span class="op">=</span> <span class="st">"Hello"</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>params<span class="op">.</span>names    <span class="op">=</span> <span class="st">"Alice,Bob,Carol"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>These three blocks are the skeleton of every Nextflow pipeline, from “Hello World” to a 50-process WGS variant calling pipeline.</p>
+<hr>
+</section>
+</section>
+<section id="pipeline-1-the-minimal-hello-world" class="level2">
+<h2 class="anchored" data-anchor-id="pipeline-1-the-minimal-hello-world">3. Pipeline 1 — The Minimal Hello World</h2>
+<p>Create a file called <code>main.nf</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> main.nf</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Open it in your editor and add the following:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">// main.nf  –  Minimal Hello World</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>nextflow<span class="op">.</span>enable<span class="op">.</span>dsl<span class="op">=</span><span class="dv">2</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>process SAY_HELLO <span class="op">{</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    input<span class="op">:</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    val name</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    output<span class="op">:</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    stdout</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    script<span class="op">:</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"""</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="st">    echo "Hello, </span><span class="ss">${</span>name<span class="ss">}</span><span class="st">!"</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="st">    """</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>workflow <span class="op">{</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Channel</span><span class="op">.</span><span class="fu">of</span><span class="op">(</span><span class="st">"Alice"</span><span class="op">,</span> <span class="st">"Bob"</span><span class="op">,</span> <span class="st">"Carol"</span><span class="op">)</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>        <span class="op">|</span> SAY_HELLO</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>        <span class="op">|</span> view</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Run it:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> run main.nf</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="reading-the-execution-log" class="level3">
+<h3 class="anchored" data-anchor-id="reading-the-execution-log">3.1 Reading the Execution Log</h3>
+<p>Nextflow prints a structured log to the terminal. Here is a line-by-line explanation:</p>
+<pre><code>N E X T F L O W  ~  version 24.x.x         ← Nextflow banner + version
+Launching `main.nf` [sharp_darwin] DSL2 - revision: a1b2c3d4e5   ← run name (random adjective+name) and script hash
+
+executor &gt;  local (3)                         ← executor used; 3 process invocations scheduled
+
+[a1/bc23de] SAY_HELLO (1) | 3 of 3 ✔        ← process name; hash of one work dir shown; 3/3 completed
+
+Hello, Carol!                                  ← stdout from one invocation (order is non-deterministic)
+Hello, Alice!
+Hello, Bob!</code></pre>
+<p>Key points to notice:</p>
+<ul>
+<li><strong>Run name</strong> (<code>sharp_darwin</code>): a randomly generated two-word name assigned to each run. Used with <code>nextflow log</code> and <code>nextflow clean</code> to refer to specific runs.</li>
+<li><strong>Work directory hash</strong> (<code>a1/bc23de</code>): the first 8 characters of the full UUID path under <code>work/</code>. This is how you find a specific task’s working directory.</li>
+<li><strong><code>3 of 3 ✔</code></strong>: three items flowed through the channel, three process invocations completed successfully.</li>
+<li><strong>Output order is non-deterministic</strong>: all three SAY_HELLO processes ran in parallel and completed in whatever order the OS scheduled them. This is expected — do not rely on output order in dataflow pipelines.</li>
+</ul>
+</section>
+<section id="the-view-operator" class="level3">
+<h3 class="anchored" data-anchor-id="the-view-operator">3.2 The <code>| view</code> Operator</h3>
+<p><code>view</code> is a terminal operator that prints each item in a channel to the terminal. It is the <code>print()</code> of Nextflow — invaluable for debugging.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">Channel</span><span class="op">.</span><span class="fu">of</span><span class="op">(</span><span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">3</span><span class="op">)</span> <span class="op">|</span> view              <span class="co">// prints: 1  2  3 (one per line)</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">Channel</span><span class="op">.</span><span class="fu">of</span><span class="op">(</span><span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">3</span><span class="op">)</span> <span class="op">|</span> view <span class="op">{</span> <span class="st">"Item: </span><span class="ss">$it</span><span class="st">"</span> <span class="op">}</span>  <span class="co">// prints: Item: 1  Item: 2  Item: 3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="dissecting-every-line-of-main.nf" class="level2">
+<h2 class="anchored" data-anchor-id="dissecting-every-line-of-main.nf">4. Dissecting Every Line of <code>main.nf</code></h2>
+<p>Let’s go through the pipeline line by line.</p>
+<section id="nextflow.enable.dsl2" class="level3">
+<h3 class="anchored" data-anchor-id="nextflow.enable.dsl2">4.1 <code>nextflow.enable.dsl=2</code></h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>nextflow<span class="op">.</span>enable<span class="op">.</span>dsl<span class="op">=</span><span class="dv">2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This enables DSL2 syntax. Since Nextflow 22, DSL2 is the default and this line is <strong>optional</strong> — but including it is good practice because it makes the intent explicit and prevents accidental execution under older syntax rules if the pipeline is run with a very old Nextflow version.</p>
+</section>
+<section id="the-process-block" class="level3">
+<h3 class="anchored" data-anchor-id="the-process-block">4.2 The <code>process</code> Block</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>process SAY_HELLO <span class="op">{</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Process names are <strong>SCREAMING_SNAKE_CASE</strong> by convention (all-caps with underscores). This is not enforced by Nextflow, but it is the universal nf-core convention and strongly recommended — it visually distinguishes processes from channels and variables.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>    input<span class="op">:</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    val name</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The <code>input:</code> block declares what data the process expects. <code>val name</code> means: accept a single <strong>value</strong> (string, integer, etc.) and bind it to the variable <code>name</code>. Other input qualifiers include <code>path</code> (a file path that Nextflow will stage) and <code>tuple</code> (a group of values).</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>    output<span class="op">:</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    stdout</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>stdout</code> is a special output qualifier that captures everything the script prints to standard output and emits it as a channel item. Other qualifiers include <code>path("filename.txt")</code> (a file produced by the script) and <code>tuple</code>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>    script<span class="op">:</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"""</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="st">    echo "Hello, </span><span class="ss">${</span>name<span class="ss">}</span><span class="st">!"</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="st">    """</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The triple-quoted string is a <strong>heredoc</strong> passed verbatim to <code>/bin/bash -ue</code>. <code>${name}</code> is Nextflow variable interpolation — it substitutes the value of the <code>name</code> input. Use <code>\$BASH_VAR</code> (escaped dollar) for shell variables you do <strong>not</strong> want Nextflow to interpolate.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Nextflow Interpolation vs Shell Variables
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Inside <code>script:</code> blocks, <code>${name}</code> is interpolated by Nextflow (Groovy) <strong>before</strong> the script reaches bash. <code>\${BASH_VAR}</code> or <code>\$BASH_VAR</code> is passed through to bash unchanged.</p>
+<p><strong>Rule of thumb:</strong> use <code>${name}</code> for Nextflow input/param variables; use <code>\$var</code> for shell variables defined inside the script (e.g., loop counters, <code>awk</code> variables).</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>script<span class="op">:</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="st">sample=</span><span class="ss">${</span>sample_id<span class="ss">}</span><span class="st">          // ← WRONG: Groovy will try to interpolate sample_id as a map key</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="st">sample=</span><span class="er">\$</span><span class="st">{sample_id}         // ← WRONG for the same reason</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="st">sample="</span><span class="ss">${</span>sample_id<span class="ss">}</span><span class="st">"         // ← CORRECT: Nextflow interpolates the input variable</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="st">for i in 1 2 3; do</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="st">    echo "Item </span><span class="er">\$</span><span class="st">i from </span><span class="ss">${</span>sample_id<span class="ss">}</span><span class="st">"   // ← shell </span><span class="er">\$</span><span class="st">i, Nextflow </span><span class="ss">${</span>sample_id<span class="ss">}</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="st">done</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</section>
+<section id="the-workflow-block" class="level3">
+<h3 class="anchored" data-anchor-id="the-workflow-block">4.3 The <code>workflow</code> Block</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>workflow <span class="op">{</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Channel</span><span class="op">.</span><span class="fu">of</span><span class="op">(</span><span class="st">"Alice"</span><span class="op">,</span> <span class="st">"Bob"</span><span class="op">,</span> <span class="st">"Carol"</span><span class="op">)</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>        <span class="op">|</span> SAY_HELLO</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>        <span class="op">|</span> view</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>Channel.of(...)</code> creates a <strong>queue channel</strong> emitting the listed items one at a time. The pipe <code>|</code> operator passes the channel as input to the next process or operator. This is equivalent (and preferred in modern Nextflow) to:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>workflow <span class="op">{</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">def</span> names_ch <span class="op">=</span> <span class="bu">Channel</span><span class="op">.</span><span class="fu">of</span><span class="op">(</span><span class="st">"Alice"</span><span class="op">,</span> <span class="st">"Bob"</span><span class="op">,</span> <span class="st">"Carol"</span><span class="op">)</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">SAY_HELLO</span><span class="op">(</span>names_ch<span class="op">)</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    SAY_HELLO<span class="op">.</span>out <span class="op">|</span> view</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Both forms are valid. The pipe syntax is more concise for linear chains.</p>
+<hr>
+</section>
+</section>
+<section id="exploring-the-work-directory" class="level2">
+<h2 class="anchored" data-anchor-id="exploring-the-work-directory">5. Exploring the <code>work/</code> Directory</h2>
+<p>After the run, explore the <code>work/</code> directory that Nextflow created:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> work/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You will see two-character subdirectories — the first two characters of each process invocation’s UUID:</p>
+<pre><code>a1/  c4/  f7/</code></pre>
+<p>Each contains a full UUID subdirectory:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> work/a1/</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="co"># bc23de45f6789012345678901234567890/</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Navigate into one:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> work/a1/bc23de45f6789012345678901234567890/</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-la</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You will find:</p>
+<pre><code>.command.begin      ← timestamp when execution started
+.command.err        ← stderr (separate from stdout)
+.command.log        ← combined stdout + stderr
+.command.out        ← stdout only
+.command.run        ← full Nextflow wrapper script (sets up environment, runs .command.sh)
+.command.sh         ← the exact script you wrote in the script: block
+.exitcode           ← exit status (0 = success)</code></pre>
+<section id="reading-.command.sh" class="level3">
+<h3 class="anchored" data-anchor-id="reading-.command.sh">5.1 Reading <code>.command.sh</code></h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> .command.sh</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Output:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash -ue</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Hello, Bob!"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This is the <strong>exact bash script</strong> that was executed — Nextflow has already substituted <code>${name}</code> with <code>"Bob"</code>. When debugging a process failure, <code>.command.sh</code> tells you precisely what command ran and you can test it directly:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> .command.sh</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Hello, Bob!</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="reading-.command.log" class="level3">
+<h3 class="anchored" data-anchor-id="reading-.command.log">5.2 Reading <code>.command.log</code></h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> .command.log</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>For a successful run this shows the stdout output. For a failing process it shows the error message from the tool — this is the first place to look when a pipeline step fails.</p>
+</section>
+<section id="reading-.exitcode" class="level3">
+<h3 class="anchored" data-anchor-id="reading-.exitcode">5.3 Reading <code>.exitcode</code></h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> .exitcode</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>0</code> means success. Any non-zero value means failure. Nextflow uses this file to determine whether a process succeeded after the job completes (especially important for SLURM jobs where the process runs asynchronously).</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Finding a Work Directory Quickly
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Nextflow prints the short hash of each process in the execution log, e.g., <code>[a1/bc23de]</code>. You can use <code>find</code> or Nextflow’s own log to get the full path:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Using the find command</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> work/a1 <span class="at">-name</span> <span class="st">".command.sh"</span> <span class="kw">|</span> <span class="fu">head</span> <span class="at">-1</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Using nextflow log (covered in Section 7)</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> log sharp_darwin <span class="at">-f</span> workdir</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="pipeline-2-adding-parameters-and-file-output" class="level2">
+<h2 class="anchored" data-anchor-id="pipeline-2-adding-parameters-and-file-output">6. Pipeline 2 — Adding Parameters and File Output</h2>
+<p>Now extend the pipeline to accept user parameters and write output to a file instead of stdout.</p>
+<p>Create a new file <code>params_pipeline.nf</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co">// params_pipeline.nf  –  Parameters + file output</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>nextflow<span class="op">.</span>enable<span class="op">.</span>dsl<span class="op">=</span><span class="dv">2</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="co">// ── Default parameter values ──────────────────────────────────────────────────</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>params<span class="op">.</span>names     <span class="op">=</span> <span class="st">"Alice,Bob,Carol"</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>params<span class="op">.</span>greeting  <span class="op">=</span> <span class="st">"Hello"</span></span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>params<span class="op">.</span>outdir    <span class="op">=</span> <span class="st">"results"</span></span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a><span class="co">// ── Process ───────────────────────────────────────────────────────────────────</span></span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>process GREET <span class="op">{</span></span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a>    publishDir <span class="st">"</span><span class="ss">${</span>params<span class="op">.</span>outdir<span class="ss">}</span><span class="st">"</span><span class="op">,</span> mode<span class="op">:</span> <span class="st">'copy'</span></span>
+<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a>    input<span class="op">:</span></span>
+<span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a>    val name</span>
+<span id="cb30-16"><a href="#cb30-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-17"><a href="#cb30-17" aria-hidden="true" tabindex="-1"></a>    output<span class="op">:</span></span>
+<span id="cb30-18"><a href="#cb30-18" aria-hidden="true" tabindex="-1"></a>    path <span class="st">"</span><span class="ss">${</span>name<span class="ss">}</span><span class="st">_greeting.txt"</span></span>
+<span id="cb30-19"><a href="#cb30-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-20"><a href="#cb30-20" aria-hidden="true" tabindex="-1"></a>    script<span class="op">:</span></span>
+<span id="cb30-21"><a href="#cb30-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">"""</span></span>
+<span id="cb30-22"><a href="#cb30-22" aria-hidden="true" tabindex="-1"></a><span class="st">    echo "</span><span class="ss">${</span>params<span class="op">.</span>greeting<span class="ss">}</span><span class="st">, </span><span class="ss">${</span>name<span class="ss">}</span><span class="st">!" &gt; </span><span class="ss">${</span>name<span class="ss">}</span><span class="st">_greeting.txt</span></span>
+<span id="cb30-23"><a href="#cb30-23" aria-hidden="true" tabindex="-1"></a><span class="st">    """</span></span>
+<span id="cb30-24"><a href="#cb30-24" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb30-25"><a href="#cb30-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-26"><a href="#cb30-26" aria-hidden="true" tabindex="-1"></a><span class="co">// ── Workflow ──────────────────────────────────────────────────────────────────</span></span>
+<span id="cb30-27"><a href="#cb30-27" aria-hidden="true" tabindex="-1"></a>workflow <span class="op">{</span></span>
+<span id="cb30-28"><a href="#cb30-28" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Channel</span><span class="op">.</span><span class="fu">of</span><span class="op">(</span>params<span class="op">.</span>names<span class="op">.</span><span class="fu">split</span><span class="op">(</span><span class="st">","</span><span class="op">))</span></span>
+<span id="cb30-29"><a href="#cb30-29" aria-hidden="true" tabindex="-1"></a>        <span class="op">|</span> GREET</span>
+<span id="cb30-30"><a href="#cb30-30" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Run it with defaults:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> run params_pipeline.nf</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then override parameters from the command line:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> run params_pipeline.nf <span class="dt">\</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">--names</span> <span class="st">"Jubayer,Nadia,Rahim"</span> <span class="dt">\</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">--greeting</span> <span class="st">"Assalamu Alaikum"</span> <span class="dt">\</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">--outdir</span> my_results</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="what-is-new-here" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-new-here">6.1 What Is New Here</h3>
+<p><strong><code>params.names.split(",")</code></strong> <code>params.names</code> is a string. <code>.split(",")</code> is a Groovy string method that splits it into an array. <code>Channel.of(array)</code> emits each element as a separate channel item, so each name triggers its own <code>GREET</code> process invocation.</p>
+<p><strong><code>publishDir</code></strong> The <code>publishDir</code> directive tells Nextflow to copy (or symlink) the process’s output files to a human-readable results directory. Without <code>publishDir</code>, outputs remain buried in <code>work/</code> subdirectories. With it, <code>results/Alice_greeting.txt</code>, <code>results/Bob_greeting.txt</code>, and <code>results/Carol_greeting.txt</code> appear in your results folder.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>publishDir <span class="st">"</span><span class="ss">${</span>params<span class="op">.</span>outdir<span class="ss">}</span><span class="st">"</span><span class="op">,</span> mode<span class="op">:</span> <span class="st">'copy'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Common <code>mode</code> values:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Mode</th>
+<th>Behaviour</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>'copy'</code></td>
+<td>Copy the file; original stays in <code>work/</code></td>
+</tr>
+<tr class="even">
+<td><code>'move'</code></td>
+<td>Move the file; original removed from <code>work/</code> (breaks <code>-resume</code>)</td>
+</tr>
+<tr class="odd">
+<td><code>'symlink'</code></td>
+<td>Create a symbolic link (default)</td>
+</tr>
+<tr class="even">
+<td><code>'link'</code></td>
+<td>Hard link (same filesystem only)</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Never Use <code>mode: 'move'</code> If You Want <code>-resume</code> to Work
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Moving files out of <code>work/</code> deletes them from the cache directory. If you re-run with <code>-resume</code>, Nextflow cannot verify that the cached output still exists and will re-run the process. Always use <code>'copy'</code> or the default <code>'symlink'</code>.</p>
+</div>
+</div>
+<p><strong><code>path "${name}_greeting.txt"</code></strong> The <code>path</code> output qualifier tells Nextflow to expect a file with this name in the working directory after the script completes. Nextflow checks the file exists; if it does not, the process fails with an error.</p>
+<p>After the run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> results/</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Alice_greeting.txt  Bob_greeting.txt  Carol_greeting.txt</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> results/Alice_greeting.txt</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Hello, Alice!</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="the--resume-flag-incremental-execution" class="level2">
+<h2 class="anchored" data-anchor-id="the--resume-flag-incremental-execution">7. The <code>-resume</code> Flag: Incremental Execution</h2>
+<p>One of Nextflow’s most important practical features. Run the params pipeline again, but with <code>-resume</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> run params_pipeline.nf <span class="at">-resume</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You will see:</p>
+<pre><code>executor &gt;  local (3)
+[a1/bc23de] GREET (Alice) | 3 of 3, cached: 3 ✔</code></pre>
+<p><code>cached: 3</code> means all three processes were skipped — Nextflow found their outputs already in the cache and reused them. The run finished in milliseconds.</p>
+<p>Now simulate changing just one parameter:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> run params_pipeline.nf <span class="dt">\</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">--greeting</span> <span class="st">"Greetings"</span> <span class="dt">\</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">-resume</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Output:</p>
+<pre><code>executor &gt;  local (3)
+[b2/cd34ef] GREET (Alice) | 3 of 3 ✔</code></pre>
+<p>All three re-ran, because <code>params.greeting</code> is used in every <code>GREET</code> invocation — changing it invalidates all of them.</p>
+<p>Now demonstrate selective caching by adding a new name:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> run params_pipeline.nf <span class="dt">\</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">--names</span> <span class="st">"Alice,Bob,Carol,Diana"</span> <span class="dt">\</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">-resume</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Output:</p>
+<pre><code>executor &gt;  local (1)
+[c3/de45fg] GREET (Diana) | 4 of 4, cached: 3 ✔</code></pre>
+<p>Three processes were cached (Alice, Bob, Carol — unchanged) and only Diana’s <code>GREET</code> ran. This is the power of Nextflow’s input-hash caching: <strong>exactly the minimum amount of computation re-runs</strong>.</p>
+<section id="how-the-cache-works" class="level3">
+<h3 class="anchored" data-anchor-id="how-the-cache-works">7.1 How the Cache Works</h3>
+<p>When a process runs, Nextflow stores a hash of:</p>
+<ul>
+<li>The process script (after interpolation)</li>
+<li>All input values and file checksums</li>
+<li>The process directives (container, memory, cpus, etc.)</li>
+</ul>
+<p>This hash is the key in <code>.nextflow/cache/</code>. On <code>-resume</code>, Nextflow computes the same hash for each potential invocation and checks whether it exists in the cache with a non-failed exit code. If yes: use cached output. If no: run the process.</p>
+</section>
+<section id="when--resume-cannot-help" class="level3">
+<h3 class="anchored" data-anchor-id="when--resume-cannot-help">7.2 When <code>-resume</code> Cannot Help</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Situation</th>
+<th>What happens</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>First run (no cache)</td>
+<td>Everything runs</td>
+</tr>
+<tr class="even">
+<td>Changed input file <strong>content</strong> (same filename)</td>
+<td>Process re-runs (content hash changed)</td>
+</tr>
+<tr class="odd">
+<td>Changed a <code>params</code> value used in the script</td>
+<td>Process re-runs</td>
+</tr>
+<tr class="even">
+<td>Changed container image tag</td>
+<td>Process re-runs</td>
+</tr>
+<tr class="odd">
+<td><code>work/</code> directory deleted</td>
+<td>Everything re-runs (cache entries still exist but files are gone)</td>
+</tr>
+<tr class="even">
+<td>Changed only <code>publishDir</code></td>
+<td>Processes are <strong>cached</strong> (publishDir is not part of the hash)</td>
+</tr>
+<tr class="odd">
+<td>Added <code>-resume</code> but forgot after a <code>nextflow clean</code></td>
+<td>Everything re-runs</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="interpreting-the-execution-log-in-detail" class="level2">
+<h2 class="anchored" data-anchor-id="interpreting-the-execution-log-in-detail">8. Interpreting the Execution Log in Detail</h2>
+<p>Run the params pipeline one more time and look carefully at the log:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> run params_pipeline.nf</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<pre><code>N E X T F L O W  ~  version 24.x.x
+Launching `params_pipeline.nf` [focused_turing] DSL2 - revision: 9f8e7d6c5b
+
+executor &gt;  local (3)
+[a1/bc23de] GREET (Alice) | 3 of 3 ✔</code></pre>
+<section id="the-process-status-line" class="level3">
+<h3 class="anchored" data-anchor-id="the-process-status-line">8.1 The Process Status Line</h3>
+<p>The format of the process status line is:</p>
+<pre><code>[hash] PROCESS_NAME (tag) | N of M [, cached: C] [, failed: F] STATUS_ICON</code></pre>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>[a1/bc23de]</code></td>
+<td>Short hash of the <strong>last</strong> work directory for this process</td>
+</tr>
+<tr class="even">
+<td><code>GREET</code></td>
+<td>Process name</td>
+</tr>
+<tr class="odd">
+<td><code>(Alice)</code></td>
+<td>Process <strong>tag</strong> — the value of the first input by default, or a custom <code>tag</code> directive</td>
+</tr>
+<tr class="even">
+<td><code>3 of 3</code></td>
+<td>Completed invocations out of total</td>
+</tr>
+<tr class="odd">
+<td><code>cached: 3</code></td>
+<td>Invocations satisfied from cache (present only when <code>-resume</code> used)</td>
+</tr>
+<tr class="even">
+<td><code>✔</code></td>
+<td>All invocations succeeded</td>
+</tr>
+<tr class="odd">
+<td><code>✘</code></td>
+<td>One or more invocations failed</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="the-ansi-progress-bar" class="level3">
+<h3 class="anchored" data-anchor-id="the-ansi-progress-bar">8.2 The ANSI Progress Bar</h3>
+<p>While the pipeline is running, Nextflow shows a live updating display:</p>
+<pre><code>executor &gt;  local (3)
+[a1/bc23de] GREET | 1 of 3</code></pre>
+<p>The number before <code>of 3</code> updates in real time as processes complete. On slow terminals or in log files, use <code>-ansi-log false</code> to disable ANSI codes:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> run params_pipeline.nf <span class="at">-ansi-log</span> false</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="execution-summary" class="level3">
+<h3 class="anchored" data-anchor-id="execution-summary">8.3 Execution Summary</h3>
+<p>After every run, Nextflow prints an execution summary:</p>
+<pre><code>Completed at: 20-Apr-2026 14:32:15
+Duration    : 1.2s
+CPU hours   : (a few seconds)
+Succeeded   : 3</code></pre>
+<p>For large pipelines, <code>CPU hours</code> gives you an accurate billing estimate if you are running on cloud compute.</p>
+<hr>
+</section>
+</section>
+<section id="managing-run-history-with-nextflow-log" class="level2">
+<h2 class="anchored" data-anchor-id="managing-run-history-with-nextflow-log">9. Managing Run History with <code>nextflow log</code></h2>
+<p>Nextflow records every run in a hidden database (<code>.nextflow/history</code>). The <code>nextflow log</code> command lets you inspect and query this history.</p>
+<section id="list-all-runs" class="level3">
+<h3 class="anchored" data-anchor-id="list-all-runs">9.1 List All Runs</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> log</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Output:</p>
+<pre><code>TIMESTAMP          DURATION  RUN NAME         STATUS  REVISION ID  SESSION ID                            COMMAND
+2026-04-20 14:32   1.2s      focused_turing   OK      9f8e7d6c5b   xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  nextflow run params_pipeline.nf
+2026-04-20 14:29   0.8s      sharp_darwin     OK      9f8e7d6c5b   xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  nextflow run params_pipeline.nf -resume</code></pre>
+</section>
+<section id="query-a-specific-run" class="level3">
+<h3 class="anchored" data-anchor-id="query-a-specific-run">9.2 Query a Specific Run</h3>
+<p>Get the work directory path for every task in a run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb49"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> log focused_turing <span class="at">-f</span> name,workdir</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Get the exit status and script for all tasks:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb50"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> log focused_turing <span class="at">-f</span> name,exit,script</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Get only tasks that failed:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb51"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> log focused_turing <span class="at">-f</span> name,workdir,exit <span class="at">-filter</span> <span class="st">'exit != 0'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Available fields include: <code>name</code>, <code>workdir</code>, <code>exit</code>, <code>script</code>, <code>status</code>, <code>duration</code>, <code>realtime</code>, <code>container</code>, <code>tag</code>, <code>hash</code>.</p>
+</section>
+<section id="clean-up-run-directories" class="level3">
+<h3 class="anchored" data-anchor-id="clean-up-run-directories">9.3 Clean Up Run Directories</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb52"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove work dirs for a specific run (dry run first)</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> clean <span class="at">-n</span> focused_turing</span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Actually remove them</span></span>
+<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> clean <span class="at">-f</span> focused_turing</span>
+<span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-7"><a href="#cb52-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove all but the most recent run</span></span>
+<span id="cb52-8"><a href="#cb52-8" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> clean <span class="at">-f</span> <span class="at">-before</span> focused_turing</span>
+<span id="cb52-9"><a href="#cb52-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-10"><a href="#cb52-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove work dirs for all completed successful runs</span></span>
+<span id="cb52-11"><a href="#cb52-11" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> clean <span class="at">-f</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+</section>
+<section id="pipeline-3-reading-real-files" class="level2">
+<h2 class="anchored" data-anchor-id="pipeline-3-reading-real-files">10. Pipeline 3 — Reading Real Files</h2>
+<p>Move beyond synthetic data and build a pipeline that processes real files. Create some dummy FASTQ-like files to experiment with:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb53"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> data</span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create three minimal "FASTQ" files (4 lines per read, as per the FASTQ spec)</span></span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> sample <span class="kw">in</span> sample_A sample_B sample_C<span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">printf</span> <span class="st">"@read1\nACGTACGT\n+\nIIIIIIII\n@read2\nTGCATGCA\n+\nIIIIIIII\n"</span> <span class="dt">\</span></span>
+<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a>        <span class="op">&gt;</span> data/<span class="va">${sample}</span>.fastq</span>
+<span id="cb53-7"><a href="#cb53-7" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span>
+<span id="cb53-8"><a href="#cb53-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-9"><a href="#cb53-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> data/</span>
+<span id="cb53-10"><a href="#cb53-10" aria-hidden="true" tabindex="-1"></a><span class="co"># sample_A.fastq  sample_B.fastq  sample_C.fastq</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Create <code>count_reads.nf</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb54"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co">// count_reads.nf  –  Count reads in FASTQ files</span></span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>nextflow<span class="op">.</span>enable<span class="op">.</span>dsl<span class="op">=</span><span class="dv">2</span></span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>params<span class="op">.</span>reads  <span class="op">=</span> <span class="st">"data/*.fastq"</span></span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>params<span class="op">.</span>outdir <span class="op">=</span> <span class="st">"results"</span></span>
+<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a>process COUNT_READS <span class="op">{</span></span>
+<span id="cb54-8"><a href="#cb54-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-9"><a href="#cb54-9" aria-hidden="true" tabindex="-1"></a>    tag <span class="st">"</span><span class="ss">${</span>fastq<span class="op">.</span>baseName<span class="ss">}</span><span class="st">"</span></span>
+<span id="cb54-10"><a href="#cb54-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-11"><a href="#cb54-11" aria-hidden="true" tabindex="-1"></a>    publishDir <span class="st">"</span><span class="ss">${</span>params<span class="op">.</span>outdir<span class="ss">}</span><span class="st">"</span><span class="op">,</span> mode<span class="op">:</span> <span class="st">'copy'</span></span>
+<span id="cb54-12"><a href="#cb54-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-13"><a href="#cb54-13" aria-hidden="true" tabindex="-1"></a>    input<span class="op">:</span></span>
+<span id="cb54-14"><a href="#cb54-14" aria-hidden="true" tabindex="-1"></a>    path fastq</span>
+<span id="cb54-15"><a href="#cb54-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-16"><a href="#cb54-16" aria-hidden="true" tabindex="-1"></a>    output<span class="op">:</span></span>
+<span id="cb54-17"><a href="#cb54-17" aria-hidden="true" tabindex="-1"></a>    path <span class="st">"</span><span class="ss">${</span>fastq<span class="op">.</span>baseName<span class="ss">}</span><span class="st">_readcount.txt"</span></span>
+<span id="cb54-18"><a href="#cb54-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-19"><a href="#cb54-19" aria-hidden="true" tabindex="-1"></a>    script<span class="op">:</span></span>
+<span id="cb54-20"><a href="#cb54-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">"""</span></span>
+<span id="cb54-21"><a href="#cb54-21" aria-hidden="true" tabindex="-1"></a><span class="st">    count=</span><span class="er">\$</span><span class="st">(grep -c "^@" </span><span class="ss">${</span>fastq<span class="ss">}</span><span class="st">)</span></span>
+<span id="cb54-22"><a href="#cb54-22" aria-hidden="true" tabindex="-1"></a><span class="st">    echo "</span><span class="ss">${</span>fastq<span class="op">.</span>baseName<span class="ss">}</span><span class="st">: </span><span class="er">\$</span><span class="st">{count} reads" &gt; </span><span class="ss">${</span>fastq<span class="op">.</span>baseName<span class="ss">}</span><span class="st">_readcount.txt</span></span>
+<span id="cb54-23"><a href="#cb54-23" aria-hidden="true" tabindex="-1"></a><span class="st">    """</span></span>
+<span id="cb54-24"><a href="#cb54-24" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb54-25"><a href="#cb54-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-26"><a href="#cb54-26" aria-hidden="true" tabindex="-1"></a>workflow <span class="op">{</span></span>
+<span id="cb54-27"><a href="#cb54-27" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Channel</span><span class="op">.</span><span class="fu">fromPath</span><span class="op">(</span>params<span class="op">.</span>reads<span class="op">)</span></span>
+<span id="cb54-28"><a href="#cb54-28" aria-hidden="true" tabindex="-1"></a>        <span class="op">|</span> COUNT_READS</span>
+<span id="cb54-29"><a href="#cb54-29" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Run it:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb55"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> run count_reads.nf</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Check results:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb56"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> results/sample_A_readcount.txt</span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="co"># sample_A: 2 reads</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="what-is-new-here-1" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-new-here-1">10.1 What Is New Here</h3>
+<p><strong><code>Channel.fromPath(params.reads)</code></strong> Creates a queue channel where each item is a <code>Path</code> object pointing to a file matching the glob pattern <code>data/*.fastq</code>. Each file triggers one COUNT_READS invocation.</p>
+<p><strong><code>path fastq</code> input qualifier</strong> When a process input is declared as <code>path</code>, Nextflow <strong>stages</strong> the file into the process’s isolated work directory — it creates a symlink from the work directory to the actual file. The script sees <code>${fastq}</code> as a filename in the current directory, not the absolute path.</p>
+<p><strong><code>${fastq.baseName}</code></strong> Nextflow <code>Path</code> objects expose Groovy file properties. Useful ones:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Property</th>
+<th>Example (<code>sample_A.fastq</code>)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>${fastq}</code></td>
+<td><code>sample_A.fastq</code> (filename only, after staging)</td>
+</tr>
+<tr class="even">
+<td><code>${fastq.baseName}</code></td>
+<td><code>sample_A</code> (no extension)</td>
+</tr>
+<tr class="odd">
+<td><code>${fastq.name}</code></td>
+<td><code>sample_A.fastq</code> (same as <code>${fastq}</code>)</td>
+</tr>
+<tr class="even">
+<td><code>${fastq.extension}</code></td>
+<td><code>fastq</code></td>
+</tr>
+<tr class="odd">
+<td><code>${fastq.parent}</code></td>
+<td>Path to containing directory</td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>tag "${fastq.baseName}"</code></strong> The <code>tag</code> directive gives each process invocation a human-readable label. Without it, Nextflow shows <code>COUNT_READS (1)</code>, <code>COUNT_READS (2)</code>, etc. With it, you see <code>COUNT_READS (sample_A)</code>, <code>COUNT_READS (sample_B)</code> — much easier to debug at scale.</p>
+<p><strong><code>\$(grep ...)</code> vs <code>${fastq}</code></strong> Notice the mixed escaping in the script:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb57"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>count<span class="op">=</span>\$<span class="op">(</span>grep <span class="op">-</span>c <span class="st">"^@"</span> $<span class="op">{</span>fastq<span class="op">})</span></span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>echo <span class="st">"</span><span class="ss">${</span>fastq<span class="op">.</span>baseName<span class="ss">}</span><span class="st">: </span><span class="er">\$</span><span class="st">{count} reads"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><code>${fastq}</code> → Nextflow interpolates the staged filename</li>
+<li><code>${fastq.baseName}</code> → Nextflow interpolates the base name</li>
+<li><code>\$(grep ...)</code> → bash command substitution (escaped so Nextflow doesn’t touch it)</li>
+<li><code>\${count}</code> → bash variable reference (escaped so Nextflow doesn’t touch it)</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="pipeline-4-paired-end-files-with-fromfilepairs" class="level2">
+<h2 class="anchored" data-anchor-id="pipeline-4-paired-end-files-with-fromfilepairs">11. Pipeline 4 — Paired-End Files with <code>fromFilePairs</code></h2>
+<p>Real NGS data almost always comes in paired-end FASTQ files (<code>_R1</code> / <code>_R2</code>). Nextflow’s <code>Channel.fromFilePairs</code> handles this automatically.</p>
+<p>Create paired dummy files:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb58"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> sample <span class="kw">in</span> sample_A sample_B sample_C<span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">printf</span> <span class="st">"@read1\nACGTACGT\n+\nIIIIIIII\n"</span> <span class="op">&gt;</span> data/<span class="va">${sample}</span>_R1.fastq</span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">printf</span> <span class="st">"@read1\nTGCATGCA\n+\nIIIIIIII\n"</span> <span class="op">&gt;</span> data/<span class="va">${sample}</span>_R2.fastq</span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> data/<span class="pp">*</span>_R<span class="dt">{1</span><span class="op">,</span><span class="dt">2}</span>.fastq</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Create <code>paired_reads.nf</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb59"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="co">// paired_reads.nf  –  Paired-end read processing pattern</span></span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>nextflow<span class="op">.</span>enable<span class="op">.</span>dsl<span class="op">=</span><span class="dv">2</span></span>
+<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a>params<span class="op">.</span>reads  <span class="op">=</span> <span class="st">"data/*_{R1,R2}.fastq"</span></span>
+<span id="cb59-5"><a href="#cb59-5" aria-hidden="true" tabindex="-1"></a>params<span class="op">.</span>outdir <span class="op">=</span> <span class="st">"results_paired"</span></span>
+<span id="cb59-6"><a href="#cb59-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-7"><a href="#cb59-7" aria-hidden="true" tabindex="-1"></a>process PROCESS_PAIR <span class="op">{</span></span>
+<span id="cb59-8"><a href="#cb59-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-9"><a href="#cb59-9" aria-hidden="true" tabindex="-1"></a>    tag <span class="st">"</span><span class="ss">${</span>sample_id<span class="ss">}</span><span class="st">"</span></span>
+<span id="cb59-10"><a href="#cb59-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-11"><a href="#cb59-11" aria-hidden="true" tabindex="-1"></a>    publishDir <span class="st">"</span><span class="ss">${</span>params<span class="op">.</span>outdir<span class="ss">}</span><span class="st">"</span><span class="op">,</span> mode<span class="op">:</span> <span class="st">'copy'</span></span>
+<span id="cb59-12"><a href="#cb59-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-13"><a href="#cb59-13" aria-hidden="true" tabindex="-1"></a>    input<span class="op">:</span></span>
+<span id="cb59-14"><a href="#cb59-14" aria-hidden="true" tabindex="-1"></a>    tuple <span class="fu">val</span><span class="op">(</span>sample_id<span class="op">),</span> <span class="fu">path</span><span class="op">(</span>reads<span class="op">)</span></span>
+<span id="cb59-15"><a href="#cb59-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-16"><a href="#cb59-16" aria-hidden="true" tabindex="-1"></a>    output<span class="op">:</span></span>
+<span id="cb59-17"><a href="#cb59-17" aria-hidden="true" tabindex="-1"></a>    path <span class="st">"</span><span class="ss">${</span>sample_id<span class="ss">}</span><span class="st">_summary.txt"</span></span>
+<span id="cb59-18"><a href="#cb59-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-19"><a href="#cb59-19" aria-hidden="true" tabindex="-1"></a>    script<span class="op">:</span></span>
+<span id="cb59-20"><a href="#cb59-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">"""</span></span>
+<span id="cb59-21"><a href="#cb59-21" aria-hidden="true" tabindex="-1"></a><span class="st">    echo "Sample: </span><span class="ss">${</span>sample_id<span class="ss">}</span><span class="st">" &gt; </span><span class="ss">${</span>sample_id<span class="ss">}</span><span class="st">_summary.txt</span></span>
+<span id="cb59-22"><a href="#cb59-22" aria-hidden="true" tabindex="-1"></a><span class="st">    echo "R1: </span><span class="ss">${</span>reads<span class="op">[</span><span class="dv">0</span><span class="op">]</span><span class="ss">}</span><span class="st">" &gt;&gt; </span><span class="ss">${</span>sample_id<span class="ss">}</span><span class="st">_summary.txt</span></span>
+<span id="cb59-23"><a href="#cb59-23" aria-hidden="true" tabindex="-1"></a><span class="st">    echo "R2: </span><span class="ss">${</span>reads<span class="op">[</span><span class="dv">1</span><span class="op">]</span><span class="ss">}</span><span class="st">" &gt;&gt; </span><span class="ss">${</span>sample_id<span class="ss">}</span><span class="st">_summary.txt</span></span>
+<span id="cb59-24"><a href="#cb59-24" aria-hidden="true" tabindex="-1"></a><span class="st">    echo "R1 reads: </span><span class="er">\$</span><span class="st">(grep -c '^@' </span><span class="ss">${</span>reads<span class="op">[</span><span class="dv">0</span><span class="op">]</span><span class="ss">}</span><span class="st">)" &gt;&gt; </span><span class="ss">${</span>sample_id<span class="ss">}</span><span class="st">_summary.txt</span></span>
+<span id="cb59-25"><a href="#cb59-25" aria-hidden="true" tabindex="-1"></a><span class="st">    echo "R2 reads: </span><span class="er">\$</span><span class="st">(grep -c '^@' </span><span class="ss">${</span>reads<span class="op">[</span><span class="dv">1</span><span class="op">]</span><span class="ss">}</span><span class="st">)" &gt;&gt; </span><span class="ss">${</span>sample_id<span class="ss">}</span><span class="st">_summary.txt</span></span>
+<span id="cb59-26"><a href="#cb59-26" aria-hidden="true" tabindex="-1"></a><span class="st">    """</span></span>
+<span id="cb59-27"><a href="#cb59-27" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb59-28"><a href="#cb59-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-29"><a href="#cb59-29" aria-hidden="true" tabindex="-1"></a>workflow <span class="op">{</span></span>
+<span id="cb59-30"><a href="#cb59-30" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Channel</span><span class="op">.</span><span class="fu">fromFilePairs</span><span class="op">(</span>params<span class="op">.</span>reads<span class="op">)</span></span>
+<span id="cb59-31"><a href="#cb59-31" aria-hidden="true" tabindex="-1"></a>        <span class="op">|</span> PROCESS_PAIR</span>
+<span id="cb59-32"><a href="#cb59-32" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Run it:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb60"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> run paired_reads.nf</span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> results_paired/sample_A_summary.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Expected output:</p>
+<pre><code>Sample: sample_A
+R1: sample_A_R1.fastq
+R2: sample_A_R2.fastq
+R1 reads: 1
+R2 reads: 1</code></pre>
+<section id="how-fromfilepairs-works" class="level3">
+<h3 class="anchored" data-anchor-id="how-fromfilepairs-works">11.1 How <code>fromFilePairs</code> Works</h3>
+<p><code>Channel.fromFilePairs("data/*_{R1,R2}.fastq")</code> emits <strong>tuples</strong> of the form <code>[sample_id, [file_R1, file_R2]]</code>:</p>
+<ul>
+<li>The <strong>sample ID</strong> is extracted automatically: everything before the <code>{R1,R2}</code> glob token becomes the key (<code>sample_A</code>)</li>
+<li>The <strong>file list</strong> is sorted lexicographically, so <code>_R1</code> always comes before <code>_R2</code> (indices 0 and 1 respectively)</li>
+</ul>
+<p>The process input <code>tuple val(sample_id), path(reads)</code> unpacks this tuple:</p>
+<ul>
+<li><code>val(sample_id)</code> binds the string key</li>
+<li><code>path(reads)</code> binds the file list (accessible as <code>reads[0]</code> and <code>reads[1]</code>)</li>
+</ul>
+<p>This <strong>tuple + fromFilePairs</strong> pattern is the foundation of nearly every real bioinformatics Nextflow pipeline. You will use it constantly.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Custom Grouping with <code>fromFilePairs</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>By default, <code>fromFilePairs</code> groups by stripping the matched glob token. You can customise this:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb62"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Extract sample ID from a more complex naming convention</span></span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a><span class="co">// e.g., SRR12345_1.fastq.gz and SRR12345_2.fastq.gz</span></span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a><span class="bu">Channel</span><span class="op">.</span><span class="fu">fromFilePairs</span><span class="op">(</span><span class="st">"data/SRR*_{1,2}.fastq.gz"</span><span class="op">)</span></span>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">map</span> <span class="op">{</span> sample_id<span class="op">,</span> files <span class="op">-&gt;</span> <span class="fu">tuple</span><span class="op">(</span>sample_id<span class="op">,</span> files<span class="op">)</span> <span class="op">}</span></span>
+<span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">|</span> view</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>For completely custom grouping, use <code>Channel.fromPath</code> + <code>.map</code> + <code>.groupTuple</code> — covered in Tutorial 5.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="handling-pipeline-failures" class="level2">
+<h2 class="anchored" data-anchor-id="handling-pipeline-failures">12. Handling Pipeline Failures</h2>
+<p>Understanding how Nextflow reports and recovers from failures is essential for real-world use.</p>
+<section id="simulating-a-failure" class="level3">
+<h3 class="anchored" data-anchor-id="simulating-a-failure">12.1 Simulating a Failure</h3>
+<p>Create <code>fail_test.nf</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb63"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="co">// fail_test.nf  –  Demonstrates error reporting</span></span>
+<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>nextflow<span class="op">.</span>enable<span class="op">.</span>dsl<span class="op">=</span><span class="dv">2</span></span>
+<span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-4"><a href="#cb63-4" aria-hidden="true" tabindex="-1"></a>process WILL_FAIL <span class="op">{</span></span>
+<span id="cb63-5"><a href="#cb63-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-6"><a href="#cb63-6" aria-hidden="true" tabindex="-1"></a>    input<span class="op">:</span></span>
+<span id="cb63-7"><a href="#cb63-7" aria-hidden="true" tabindex="-1"></a>    val n</span>
+<span id="cb63-8"><a href="#cb63-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-9"><a href="#cb63-9" aria-hidden="true" tabindex="-1"></a>    output<span class="op">:</span></span>
+<span id="cb63-10"><a href="#cb63-10" aria-hidden="true" tabindex="-1"></a>    stdout</span>
+<span id="cb63-11"><a href="#cb63-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-12"><a href="#cb63-12" aria-hidden="true" tabindex="-1"></a>    script<span class="op">:</span></span>
+<span id="cb63-13"><a href="#cb63-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"""</span></span>
+<span id="cb63-14"><a href="#cb63-14" aria-hidden="true" tabindex="-1"></a><span class="st">    if [ "</span><span class="ss">${</span>n<span class="ss">}</span><span class="st">" = "2" ]; then</span></span>
+<span id="cb63-15"><a href="#cb63-15" aria-hidden="true" tabindex="-1"></a><span class="st">        echo "Intentional failure on item </span><span class="ss">${</span>n<span class="ss">}</span><span class="st">" &gt;&amp;2</span></span>
+<span id="cb63-16"><a href="#cb63-16" aria-hidden="true" tabindex="-1"></a><span class="st">        exit 1</span></span>
+<span id="cb63-17"><a href="#cb63-17" aria-hidden="true" tabindex="-1"></a><span class="st">    fi</span></span>
+<span id="cb63-18"><a href="#cb63-18" aria-hidden="true" tabindex="-1"></a><span class="st">    echo "Processed item </span><span class="ss">${</span>n<span class="ss">}</span><span class="st">"</span></span>
+<span id="cb63-19"><a href="#cb63-19" aria-hidden="true" tabindex="-1"></a><span class="st">    """</span></span>
+<span id="cb63-20"><a href="#cb63-20" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb63-21"><a href="#cb63-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-22"><a href="#cb63-22" aria-hidden="true" tabindex="-1"></a>workflow <span class="op">{</span></span>
+<span id="cb63-23"><a href="#cb63-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Channel</span><span class="op">.</span><span class="fu">of</span><span class="op">(</span><span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">3</span><span class="op">)</span></span>
+<span id="cb63-24"><a href="#cb63-24" aria-hidden="true" tabindex="-1"></a>        <span class="op">|</span> WILL_FAIL</span>
+<span id="cb63-25"><a href="#cb63-25" aria-hidden="true" tabindex="-1"></a>        <span class="op">|</span> view</span>
+<span id="cb63-26"><a href="#cb63-26" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Run it:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb64"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> run fail_test.nf</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Nextflow will run items 1 and 3 successfully, but item 2 will fail. The output shows:</p>
+<pre><code>executor &gt;  local (3)
+[a1/bc23de] WILL_FAIL (1) | 3 of 3, failed: 1 ✘
+
+ERROR ~ Error executing process &gt; 'WILL_FAIL (2)'
+
+Caused by:
+  Process `WILL_FAIL (2)` terminated with an error exit status (1)
+
+Command executed:
+  if [ "2" = "2" ]; then
+      echo "Intentional failure on item 2" &gt;&amp;2
+      exit 1
+  fi
+  echo "Processed item 2"
+
+Command exit status:
+  1
+
+Command error:
+  Intentional failure on item 2
+
+Work dir:
+  /home/user/nf-tutorial/03-hello-world/work/xx/yyyyy...
+
+Tip: view the command output by changing to the directory `.../work/xx/yyyy` and entering the command `cat .command.log`.</code></pre>
+</section>
+<section id="fix-and-resume" class="level3">
+<h3 class="anchored" data-anchor-id="fix-and-resume">12.2 Fix and Resume</h3>
+<p>After fixing the issue (in a real scenario: fixing the tool or the input data), re-run with <code>-resume</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb66"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> run fail_test.nf <span class="at">-resume</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Nextflow skips items 1 and 3 (cached) and only re-runs item 2.</p>
+</section>
+<section id="errorstrategy" class="level3">
+<h3 class="anchored" data-anchor-id="errorstrategy">12.3 <code>errorStrategy</code></h3>
+<p>The default behaviour when a process fails is to <strong>abort the entire pipeline</strong> after all currently-running tasks complete. You can change this with the <code>errorStrategy</code> directive:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb67"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>process WILL_FAIL <span class="op">{</span></span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a>    errorStrategy <span class="st">'ignore'</span>   <span class="co">// continue past this failure; emit nothing for this item</span></span>
+<span id="cb67-4"><a href="#cb67-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-5"><a href="#cb67-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">// or:</span></span>
+<span id="cb67-6"><a href="#cb67-6" aria-hidden="true" tabindex="-1"></a>    errorStrategy <span class="st">'retry'</span>    <span class="co">// retry the failed task (useful for transient errors)</span></span>
+<span id="cb67-7"><a href="#cb67-7" aria-hidden="true" tabindex="-1"></a>    maxRetries <span class="dv">3</span>             <span class="co">// retry up to 3 times before giving up</span></span>
+<span id="cb67-8"><a href="#cb67-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-9"><a href="#cb67-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">// or:</span></span>
+<span id="cb67-10"><a href="#cb67-10" aria-hidden="true" tabindex="-1"></a>    errorStrategy <span class="st">'finish'</span>   <span class="co">// finish currently running tasks, then stop (default)</span></span>
+<span id="cb67-11"><a href="#cb67-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-12"><a href="#cb67-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ...</span></span>
+<span id="cb67-13"><a href="#cb67-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>For bioinformatics pipelines, <code>errorStrategy 'ignore'</code> is useful for processes that can fail on certain samples without invalidating the entire run (e.g., a tool that fails on low-quality input).</p>
+<hr>
+</section>
+</section>
+<section id="a-complete-working-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="a-complete-working-pipeline">13. A Complete Working Pipeline</h2>
+<p>Putting everything together, here is a complete, clean DSL2 pipeline incorporating all concepts from this tutorial:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb68"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="co">// complete_pipeline.nf  –  A complete, annotated Hello World pipeline</span></span>
+<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a>nextflow<span class="op">.</span>enable<span class="op">.</span>dsl<span class="op">=</span><span class="dv">2</span></span>
+<span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-4"><a href="#cb68-4" aria-hidden="true" tabindex="-1"></a><span class="co">// ── Parameters (override with --param_name value on the command line) ─────────</span></span>
+<span id="cb68-5"><a href="#cb68-5" aria-hidden="true" tabindex="-1"></a>params<span class="op">.</span>reads  <span class="op">=</span> <span class="st">"data/*_{R1,R2}.fastq"</span></span>
+<span id="cb68-6"><a href="#cb68-6" aria-hidden="true" tabindex="-1"></a>params<span class="op">.</span>outdir <span class="op">=</span> <span class="st">"results_complete"</span></span>
+<span id="cb68-7"><a href="#cb68-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-8"><a href="#cb68-8" aria-hidden="true" tabindex="-1"></a><span class="co">// ── Process: count reads in each file of a pair ───────────────────────────────</span></span>
+<span id="cb68-9"><a href="#cb68-9" aria-hidden="true" tabindex="-1"></a>process COUNT_PAIRED_READS <span class="op">{</span></span>
+<span id="cb68-10"><a href="#cb68-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-11"><a href="#cb68-11" aria-hidden="true" tabindex="-1"></a>    tag <span class="st">"</span><span class="ss">${</span>sample_id<span class="ss">}</span><span class="st">"</span></span>
+<span id="cb68-12"><a href="#cb68-12" aria-hidden="true" tabindex="-1"></a>    publishDir <span class="st">"</span><span class="ss">${</span>params<span class="op">.</span>outdir<span class="ss">}</span><span class="st">"</span><span class="op">,</span> mode<span class="op">:</span> <span class="st">'copy'</span></span>
+<span id="cb68-13"><a href="#cb68-13" aria-hidden="true" tabindex="-1"></a>    errorStrategy <span class="st">'finish'</span></span>
+<span id="cb68-14"><a href="#cb68-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-15"><a href="#cb68-15" aria-hidden="true" tabindex="-1"></a>    input<span class="op">:</span></span>
+<span id="cb68-16"><a href="#cb68-16" aria-hidden="true" tabindex="-1"></a>    tuple <span class="fu">val</span><span class="op">(</span>sample_id<span class="op">),</span> <span class="fu">path</span><span class="op">(</span>reads<span class="op">)</span></span>
+<span id="cb68-17"><a href="#cb68-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-18"><a href="#cb68-18" aria-hidden="true" tabindex="-1"></a>    output<span class="op">:</span></span>
+<span id="cb68-19"><a href="#cb68-19" aria-hidden="true" tabindex="-1"></a>    path <span class="st">"</span><span class="ss">${</span>sample_id<span class="ss">}</span><span class="st">_counts.txt"</span></span>
+<span id="cb68-20"><a href="#cb68-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-21"><a href="#cb68-21" aria-hidden="true" tabindex="-1"></a>    script<span class="op">:</span></span>
+<span id="cb68-22"><a href="#cb68-22" aria-hidden="true" tabindex="-1"></a>    <span class="st">"""</span></span>
+<span id="cb68-23"><a href="#cb68-23" aria-hidden="true" tabindex="-1"></a><span class="st">    r1_count=</span><span class="er">\$</span><span class="st">(grep -c '^@' </span><span class="ss">${</span>reads<span class="op">[</span><span class="dv">0</span><span class="op">]</span><span class="ss">}</span><span class="st">)</span></span>
+<span id="cb68-24"><a href="#cb68-24" aria-hidden="true" tabindex="-1"></a><span class="st">    r2_count=</span><span class="er">\$</span><span class="st">(grep -c '^@' </span><span class="ss">${</span>reads<span class="op">[</span><span class="dv">1</span><span class="op">]</span><span class="ss">}</span><span class="st">)</span></span>
+<span id="cb68-25"><a href="#cb68-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-26"><a href="#cb68-26" aria-hidden="true" tabindex="-1"></a><span class="st">    echo "Sample,R1_reads,R2_reads"              &gt; </span><span class="ss">${</span>sample_id<span class="ss">}</span><span class="st">_counts.txt</span></span>
+<span id="cb68-27"><a href="#cb68-27" aria-hidden="true" tabindex="-1"></a><span class="st">    echo "</span><span class="ss">${</span>sample_id<span class="ss">}</span><span class="st">,</span><span class="er">\$</span><span class="st">{r1_count},</span><span class="er">\$</span><span class="st">{r2_count}" &gt;&gt; </span><span class="ss">${</span>sample_id<span class="ss">}</span><span class="st">_counts.txt</span></span>
+<span id="cb68-28"><a href="#cb68-28" aria-hidden="true" tabindex="-1"></a><span class="st">    """</span></span>
+<span id="cb68-29"><a href="#cb68-29" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb68-30"><a href="#cb68-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-31"><a href="#cb68-31" aria-hidden="true" tabindex="-1"></a><span class="co">// ── Workflow ──────────────────────────────────────────────────────────────────</span></span>
+<span id="cb68-32"><a href="#cb68-32" aria-hidden="true" tabindex="-1"></a>workflow <span class="op">{</span></span>
+<span id="cb68-33"><a href="#cb68-33" aria-hidden="true" tabindex="-1"></a>    reads_ch <span class="op">=</span> <span class="bu">Channel</span><span class="op">.</span><span class="fu">fromFilePairs</span><span class="op">(</span>params<span class="op">.</span>reads<span class="op">)</span></span>
+<span id="cb68-34"><a href="#cb68-34" aria-hidden="true" tabindex="-1"></a>    <span class="fu">COUNT_PAIRED_READS</span><span class="op">(</span>reads_ch<span class="op">)</span></span>
+<span id="cb68-35"><a href="#cb68-35" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Run with defaults, then with custom parameters:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb69"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> run complete_pipeline.nf</span>
+<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> run complete_pipeline.nf <span class="at">--outdir</span> my_counts <span class="at">-resume</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">14. Summary</h2>
+<p>You have written four Nextflow pipelines from scratch, progressively introducing every fundamental concept needed for real bioinformatics work.</p>
+<p><strong>What you built:</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pipeline</th>
+<th>Concepts introduced</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>main.nf</code></td>
+<td><code>process</code>, <code>workflow</code>, <code>Channel.of</code>, <code>\| view</code>, <code>val</code> input, <code>stdout</code> output</td>
+</tr>
+<tr class="even">
+<td><code>params_pipeline.nf</code></td>
+<td><code>params</code>, <code>publishDir</code>, <code>path</code> output, command-line overrides</td>
+</tr>
+<tr class="odd">
+<td><code>count_reads.nf</code></td>
+<td><code>Channel.fromPath</code>, <code>path</code> input, <code>tag</code>, file path properties</td>
+</tr>
+<tr class="even">
+<td><code>paired_reads.nf</code></td>
+<td><code>Channel.fromFilePairs</code>, <code>tuple val/path</code>, paired-end pattern</td>
+</tr>
+<tr class="odd">
+<td><code>complete_pipeline.nf</code></td>
+<td>Full integration of all above; <code>errorStrategy</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core rules to remember:</strong></p>
+<ul>
+<li>Use <code>${param}</code> for Nextflow variables; use <code>\$var</code> for shell variables inside <code>script:</code></li>
+<li>Every process invocation runs in its own isolated <code>work/</code> subdirectory</li>
+<li>Always use <code>publishDir mode: 'copy'</code> (not <code>'move'</code>) to preserve <code>-resume</code> behaviour</li>
+<li>Use <code>tag</code> directives — they make debugging dramatically easier at scale</li>
+<li><code>nextflow log &lt;run-name&gt;</code> is your history and forensics tool</li>
+<li><code>-resume</code> uses input hashes, not timestamps — only changed inputs trigger re-execution</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Key Concepts Checklist
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before moving on, make sure you can:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Write a DSL2 <code>process</code> with <code>val</code>, <code>path</code>, <code>tuple</code>, and <code>stdout</code> qualifiers</label></li>
+<li><label><input type="checkbox">Use <code>params.*</code> with defaults and command-line overrides</label></li>
+<li><label><input type="checkbox">Create channels with <code>Channel.of</code>, <code>Channel.fromPath</code>, and <code>Channel.fromFilePairs</code></label></li>
+<li><label><input type="checkbox">Connect processes with the pipe <code>|</code> operator</label></li>
+<li><label><input type="checkbox">Find and read <code>.command.sh</code>, <code>.command.log</code>, and <code>.exitcode</code> in <code>work/</code></label></li>
+<li><label><input type="checkbox">Use <code>-resume</code> and explain when it will and will not cache results</label></li>
+<li><label><input type="checkbox">Use <code>nextflow log</code> to inspect run history and find work directories</label></li>
+<li><label><input type="checkbox">Use <code>publishDir</code> with <code>mode: 'copy'</code> to expose results</label></li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+<section id="whats-next" class="level2">
+<h2 class="anchored" data-anchor-id="whats-next">What’s Next</h2>
+<p><strong>Tutorial #4 — Processes and Channels</strong> Go deep on the two core Nextflow abstractions. Learn every input/output qualifier (<code>val</code>, <code>path</code>, <code>tuple</code>, <code>env</code>, <code>stdin</code>), understand queue channels vs value channels, and build multi-process pipelines where outputs from one process feed directly into the next.</p>
+<hr>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ul>
+<li><p><strong>Nextflow Documentation: Basic pipeline.</strong> Seqera Labs. <a href="https://www.nextflow.io/docs/latest/basic.html">https://www.nextflow.io/docs/latest/basic.html</a></p></li>
+<li><p><strong>Nextflow Documentation: Process.</strong> Seqera Labs. <a href="https://www.nextflow.io/docs/latest/process.html">https://www.nextflow.io/docs/latest/process.html</a></p></li>
+<li><p><strong>Nextflow Documentation: Channel.</strong> Seqera Labs. <a href="https://www.nextflow.io/docs/latest/channel.html">https://www.nextflow.io/docs/latest/channel.html</a></p></li>
+<li><p><strong>Di Tommaso P et al.</strong> (2017). Nextflow enables reproducible computational workflows. <em>Nature Biotechnology</em>, 35, 316–319. DOI: <a href="https://doi.org/10.1038/nbt.3820">10.1038/nbt.3820</a></p></li>
+<li><p><strong>Seqera Labs.</strong> Nextflow training: Hello Nextflow. <a href="https://training.nextflow.io/hello_nextflow/">https://training.nextflow.io/hello_nextflow/</a></p></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© Copyright 2025, Jubayer Hossain</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

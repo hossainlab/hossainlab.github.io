@@ -1,0 +1,1063 @@
+---
+title: "Hello World: Your First Nextflow Pipeline"
+subtitle: "Write, run, and dissect a minimal DSL2 pipeline — then master the work directory and -resume"
+author:
+  - name: Jubayer Hossain
+    orcid: 0000-0001-9323-4997
+date: "2026-04-20"
+categories: [Nextflow, DSL2, Hello World, Bioinformatics, Reproducibility]
+description: "Build a complete Nextflow DSL2 pipeline from a blank file. Understand every line of code, interpret the execution log, navigate the work directory, and use -resume to skip completed steps during iterative development."
+toc: true
+toc-depth: 3
+---
+
+::: {.callout-note}
+## Learning Objectives
+
+By the end of this tutorial you will be able to:
+
+- Write a complete, working Nextflow **DSL2 pipeline** from a blank file
+- Explain the role of the three top-level blocks: **`process`**, **`workflow`**, and **`params`**
+- Understand how **`Channel.of`**, **`Channel.fromPath`**, and **`Channel.fromFilePairs`** create input data streams
+- Run a pipeline with `nextflow run` and **interpret every line of the execution log**
+- Navigate the **`work/` directory** and read `.command.sh`, `.command.log`, and `.exitcode`
+- Use **`-resume`** to skip completed steps after a partial or failed run
+- Use **`nextflow log`** and **`nextflow clean`** to inspect and manage run history
+
+**Estimated reading time:** 25–30 minutes
+**Prerequisites:** Tutorial 2 (Installing Nextflow and Java); Nextflow installed and `nextflow run hello` working
+:::
+
+---
+
+## 1. Before You Begin
+
+Create a dedicated working directory for this tutorial. Keeping each pipeline in its own directory prevents `work/` directories from mixing across projects.
+
+```bash
+mkdir -p ~/nf-tutorial/03-hello-world
+cd ~/nf-tutorial/03-hello-world
+```
+
+All files in this tutorial live in this directory. All `nextflow run` commands are executed from here.
+
+Confirm your Nextflow installation is working:
+
+```bash
+nextflow info
+# Runtime line should show Java 11 or later
+```
+
+---
+
+## 2. The Three-Block Structure of a Nextflow Pipeline
+
+Every Nextflow DSL2 pipeline is built from three types of top-level blocks. You will see all three in this tutorial.
+
+### 2.1 `process` — What to Run
+
+A **process** defines a single computational step: the inputs it expects, the outputs it produces, and the shell script to execute.
+
+```groovy
+process SAY_HELLO {
+    input:
+    val name
+
+    output:
+    stdout
+
+    script:
+    """
+    echo "Hello, ${name}!"
+    """
+}
+```
+
+### 2.2 `workflow` — How to Connect Them
+
+A **workflow** block wires processes together using channels — it is the pipeline's "wiring diagram".
+
+```groovy
+workflow {
+    Channel.of("Alice", "Bob", "Carol")
+        | SAY_HELLO
+        | view
+}
+```
+
+### 2.3 `params` — User-Configurable Inputs
+
+**`params`** is a built-in map of user-configurable parameters. Values are set with defaults in the pipeline and overridden at runtime with `--param_name value`.
+
+```groovy
+params.greeting = "Hello"
+params.names    = "Alice,Bob,Carol"
+```
+
+These three blocks are the skeleton of every Nextflow pipeline, from "Hello World" to a 50-process WGS variant calling pipeline.
+
+---
+
+## 3. Pipeline 1 — The Minimal Hello World
+
+Create a file called `main.nf`:
+
+```bash
+touch main.nf
+```
+
+Open it in your editor and add the following:
+
+```groovy
+// main.nf  –  Minimal Hello World
+nextflow.enable.dsl=2
+
+process SAY_HELLO {
+
+    input:
+    val name
+
+    output:
+    stdout
+
+    script:
+    """
+    echo "Hello, ${name}!"
+    """
+}
+
+workflow {
+    Channel.of("Alice", "Bob", "Carol")
+        | SAY_HELLO
+        | view
+}
+```
+
+Run it:
+
+```bash
+nextflow run main.nf
+```
+
+### 3.1 Reading the Execution Log
+
+Nextflow prints a structured log to the terminal. Here is a line-by-line explanation:
+
+```
+N E X T F L O W  ~  version 24.x.x         ← Nextflow banner + version
+Launching `main.nf` [sharp_darwin] DSL2 - revision: a1b2c3d4e5   ← run name (random adjective+name) and script hash
+
+executor >  local (3)                         ← executor used; 3 process invocations scheduled
+
+[a1/bc23de] SAY_HELLO (1) | 3 of 3 ✔        ← process name; hash of one work dir shown; 3/3 completed
+
+Hello, Carol!                                  ← stdout from one invocation (order is non-deterministic)
+Hello, Alice!
+Hello, Bob!
+```
+
+Key points to notice:
+
+- **Run name** (`sharp_darwin`): a randomly generated two-word name assigned to each run. Used with `nextflow log` and `nextflow clean` to refer to specific runs.
+- **Work directory hash** (`a1/bc23de`): the first 8 characters of the full UUID path under `work/`. This is how you find a specific task's working directory.
+- **`3 of 3 ✔`**: three items flowed through the channel, three process invocations completed successfully.
+- **Output order is non-deterministic**: all three SAY_HELLO processes ran in parallel and completed in whatever order the OS scheduled them. This is expected — do not rely on output order in dataflow pipelines.
+
+### 3.2 The `| view` Operator
+
+`view` is a terminal operator that prints each item in a channel to the terminal. It is the `print()` of Nextflow — invaluable for debugging.
+
+```groovy
+Channel.of(1, 2, 3) | view              // prints: 1  2  3 (one per line)
+Channel.of(1, 2, 3) | view { "Item: $it" }  // prints: Item: 1  Item: 2  Item: 3
+```
+
+---
+
+## 4. Dissecting Every Line of `main.nf`
+
+Let's go through the pipeline line by line.
+
+### 4.1 `nextflow.enable.dsl=2`
+
+```groovy
+nextflow.enable.dsl=2
+```
+
+This enables DSL2 syntax. Since Nextflow 22, DSL2 is the default and this line is **optional** — but including it is good practice because it makes the intent explicit and prevents accidental execution under older syntax rules if the pipeline is run with a very old Nextflow version.
+
+### 4.2 The `process` Block
+
+```groovy
+process SAY_HELLO {
+```
+
+Process names are **SCREAMING_SNAKE_CASE** by convention (all-caps with underscores). This is not enforced by Nextflow, but it is the universal nf-core convention and strongly recommended — it visually distinguishes processes from channels and variables.
+
+```groovy
+    input:
+    val name
+```
+
+The `input:` block declares what data the process expects. `val name` means: accept a single **value** (string, integer, etc.) and bind it to the variable `name`. Other input qualifiers include `path` (a file path that Nextflow will stage) and `tuple` (a group of values).
+
+```groovy
+    output:
+    stdout
+```
+
+`stdout` is a special output qualifier that captures everything the script prints to standard output and emits it as a channel item. Other qualifiers include `path("filename.txt")` (a file produced by the script) and `tuple`.
+
+```groovy
+    script:
+    """
+    echo "Hello, ${name}!"
+    """
+```
+
+The triple-quoted string is a **heredoc** passed verbatim to `/bin/bash -ue`. `${name}` is Nextflow variable interpolation — it substitutes the value of the `name` input. Use `\$BASH_VAR` (escaped dollar) for shell variables you do **not** want Nextflow to interpolate.
+
+::: {.callout-warning}
+## Nextflow Interpolation vs Shell Variables
+
+Inside `script:` blocks, `${name}` is interpolated by Nextflow (Groovy) **before** the script reaches bash. `\${BASH_VAR}` or `\$BASH_VAR` is passed through to bash unchanged.
+
+**Rule of thumb:** use `${name}` for Nextflow input/param variables; use `\$var` for shell variables defined inside the script (e.g., loop counters, `awk` variables).
+
+```groovy
+script:
+"""
+sample=${sample_id}          // ← WRONG: Groovy will try to interpolate sample_id as a map key
+sample=\${sample_id}         // ← WRONG for the same reason
+sample="${sample_id}"         // ← CORRECT: Nextflow interpolates the input variable
+
+for i in 1 2 3; do
+    echo "Item \$i from ${sample_id}"   // ← shell \$i, Nextflow ${sample_id}
+done
+"""
+```
+:::
+
+### 4.3 The `workflow` Block
+
+```groovy
+workflow {
+    Channel.of("Alice", "Bob", "Carol")
+        | SAY_HELLO
+        | view
+}
+```
+
+`Channel.of(...)` creates a **queue channel** emitting the listed items one at a time. The pipe `|` operator passes the channel as input to the next process or operator. This is equivalent (and preferred in modern Nextflow) to:
+
+```groovy
+workflow {
+    def names_ch = Channel.of("Alice", "Bob", "Carol")
+    SAY_HELLO(names_ch)
+    SAY_HELLO.out | view
+}
+```
+
+Both forms are valid. The pipe syntax is more concise for linear chains.
+
+---
+
+## 5. Exploring the `work/` Directory
+
+After the run, explore the `work/` directory that Nextflow created:
+
+```bash
+ls work/
+```
+
+You will see two-character subdirectories — the first two characters of each process invocation's UUID:
+
+```
+a1/  c4/  f7/
+```
+
+Each contains a full UUID subdirectory:
+
+```bash
+ls work/a1/
+# bc23de45f6789012345678901234567890/
+```
+
+Navigate into one:
+
+```bash
+cd work/a1/bc23de45f6789012345678901234567890/
+ls -la
+```
+
+You will find:
+
+```
+.command.begin      ← timestamp when execution started
+.command.err        ← stderr (separate from stdout)
+.command.log        ← combined stdout + stderr
+.command.out        ← stdout only
+.command.run        ← full Nextflow wrapper script (sets up environment, runs .command.sh)
+.command.sh         ← the exact script you wrote in the script: block
+.exitcode           ← exit status (0 = success)
+```
+
+### 5.1 Reading `.command.sh`
+
+```bash
+cat .command.sh
+```
+
+Output:
+```bash
+#!/bin/bash -ue
+echo "Hello, Bob!"
+```
+
+This is the **exact bash script** that was executed — Nextflow has already substituted `${name}` with `"Bob"`. When debugging a process failure, `.command.sh` tells you precisely what command ran and you can test it directly:
+
+```bash
+bash .command.sh
+# Hello, Bob!
+```
+
+### 5.2 Reading `.command.log`
+
+```bash
+cat .command.log
+```
+
+For a successful run this shows the stdout output. For a failing process it shows the error message from the tool — this is the first place to look when a pipeline step fails.
+
+### 5.3 Reading `.exitcode`
+
+```bash
+cat .exitcode
+# 0
+```
+
+`0` means success. Any non-zero value means failure. Nextflow uses this file to determine whether a process succeeded after the job completes (especially important for SLURM jobs where the process runs asynchronously).
+
+::: {.callout-tip}
+## Finding a Work Directory Quickly
+
+Nextflow prints the short hash of each process in the execution log, e.g., `[a1/bc23de]`. You can use `find` or Nextflow's own log to get the full path:
+
+```bash
+# Using the find command
+find work/a1 -name ".command.sh" | head -1
+
+# Using nextflow log (covered in Section 7)
+nextflow log sharp_darwin -f workdir
+```
+:::
+
+---
+
+## 6. Pipeline 2 — Adding Parameters and File Output
+
+Now extend the pipeline to accept user parameters and write output to a file instead of stdout.
+
+Create a new file `params_pipeline.nf`:
+
+```groovy
+// params_pipeline.nf  –  Parameters + file output
+nextflow.enable.dsl=2
+
+// ── Default parameter values ──────────────────────────────────────────────────
+params.names     = "Alice,Bob,Carol"
+params.greeting  = "Hello"
+params.outdir    = "results"
+
+// ── Process ───────────────────────────────────────────────────────────────────
+process GREET {
+
+    publishDir "${params.outdir}", mode: 'copy'
+
+    input:
+    val name
+
+    output:
+    path "${name}_greeting.txt"
+
+    script:
+    """
+    echo "${params.greeting}, ${name}!" > ${name}_greeting.txt
+    """
+}
+
+// ── Workflow ──────────────────────────────────────────────────────────────────
+workflow {
+    Channel.of(params.names.split(","))
+        | GREET
+}
+```
+
+Run it with defaults:
+
+```bash
+nextflow run params_pipeline.nf
+```
+
+Then override parameters from the command line:
+
+```bash
+nextflow run params_pipeline.nf \
+    --names "Jubayer,Nadia,Rahim" \
+    --greeting "Assalamu Alaikum" \
+    --outdir my_results
+```
+
+### 6.1 What Is New Here
+
+**`params.names.split(",")`**
+`params.names` is a string. `.split(",")` is a Groovy string method that splits it into an array. `Channel.of(array)` emits each element as a separate channel item, so each name triggers its own `GREET` process invocation.
+
+**`publishDir`**
+The `publishDir` directive tells Nextflow to copy (or symlink) the process's output files to a human-readable results directory. Without `publishDir`, outputs remain buried in `work/` subdirectories. With it, `results/Alice_greeting.txt`, `results/Bob_greeting.txt`, and `results/Carol_greeting.txt` appear in your results folder.
+
+```groovy
+publishDir "${params.outdir}", mode: 'copy'
+```
+
+Common `mode` values:
+
+| Mode | Behaviour |
+|---|---|
+| `'copy'` | Copy the file; original stays in `work/` |
+| `'move'` | Move the file; original removed from `work/` (breaks `-resume`) |
+| `'symlink'` | Create a symbolic link (default) |
+| `'link'` | Hard link (same filesystem only) |
+
+::: {.callout-warning}
+## Never Use `mode: 'move'` If You Want `-resume` to Work
+
+Moving files out of `work/` deletes them from the cache directory. If you re-run with `-resume`, Nextflow cannot verify that the cached output still exists and will re-run the process. Always use `'copy'` or the default `'symlink'`.
+:::
+
+**`path "${name}_greeting.txt"`**
+The `path` output qualifier tells Nextflow to expect a file with this name in the working directory after the script completes. Nextflow checks the file exists; if it does not, the process fails with an error.
+
+After the run:
+
+```bash
+ls results/
+# Alice_greeting.txt  Bob_greeting.txt  Carol_greeting.txt
+
+cat results/Alice_greeting.txt
+# Hello, Alice!
+```
+
+---
+
+## 7. The `-resume` Flag: Incremental Execution
+
+One of Nextflow's most important practical features. Run the params pipeline again, but with `-resume`:
+
+```bash
+nextflow run params_pipeline.nf -resume
+```
+
+You will see:
+
+```
+executor >  local (3)
+[a1/bc23de] GREET (Alice) | 3 of 3, cached: 3 ✔
+```
+
+`cached: 3` means all three processes were skipped — Nextflow found their outputs already in the cache and reused them. The run finished in milliseconds.
+
+Now simulate changing just one parameter:
+
+```bash
+nextflow run params_pipeline.nf \
+    --greeting "Greetings" \
+    -resume
+```
+
+Output:
+```
+executor >  local (3)
+[b2/cd34ef] GREET (Alice) | 3 of 3 ✔
+```
+
+All three re-ran, because `params.greeting` is used in every `GREET` invocation — changing it invalidates all of them.
+
+Now demonstrate selective caching by adding a new name:
+
+```bash
+nextflow run params_pipeline.nf \
+    --names "Alice,Bob,Carol,Diana" \
+    -resume
+```
+
+Output:
+```
+executor >  local (1)
+[c3/de45fg] GREET (Diana) | 4 of 4, cached: 3 ✔
+```
+
+Three processes were cached (Alice, Bob, Carol — unchanged) and only Diana's `GREET` ran. This is the power of Nextflow's input-hash caching: **exactly the minimum amount of computation re-runs**.
+
+### 7.1 How the Cache Works
+
+When a process runs, Nextflow stores a hash of:
+
+- The process script (after interpolation)
+- All input values and file checksums
+- The process directives (container, memory, cpus, etc.)
+
+This hash is the key in `.nextflow/cache/`. On `-resume`, Nextflow computes the same hash for each potential invocation and checks whether it exists in the cache with a non-failed exit code. If yes: use cached output. If no: run the process.
+
+### 7.2 When `-resume` Cannot Help
+
+| Situation | What happens |
+|---|---|
+| First run (no cache) | Everything runs |
+| Changed input file **content** (same filename) | Process re-runs (content hash changed) |
+| Changed a `params` value used in the script | Process re-runs |
+| Changed container image tag | Process re-runs |
+| `work/` directory deleted | Everything re-runs (cache entries still exist but files are gone) |
+| Changed only `publishDir` | Processes are **cached** (publishDir is not part of the hash) |
+| Added `-resume` but forgot after a `nextflow clean` | Everything re-runs |
+
+---
+
+## 8. Interpreting the Execution Log in Detail
+
+Run the params pipeline one more time and look carefully at the log:
+
+```bash
+nextflow run params_pipeline.nf
+```
+
+```
+N E X T F L O W  ~  version 24.x.x
+Launching `params_pipeline.nf` [focused_turing] DSL2 - revision: 9f8e7d6c5b
+
+executor >  local (3)
+[a1/bc23de] GREET (Alice) | 3 of 3 ✔
+```
+
+### 8.1 The Process Status Line
+
+The format of the process status line is:
+
+```
+[hash] PROCESS_NAME (tag) | N of M [, cached: C] [, failed: F] STATUS_ICON
+```
+
+| Field | Meaning |
+|---|---|
+| `[a1/bc23de]` | Short hash of the **last** work directory for this process |
+| `GREET` | Process name |
+| `(Alice)` | Process **tag** — the value of the first input by default, or a custom `tag` directive |
+| `3 of 3` | Completed invocations out of total |
+| `cached: 3` | Invocations satisfied from cache (present only when `-resume` used) |
+| `✔` | All invocations succeeded |
+| `✘` | One or more invocations failed |
+
+### 8.2 The ANSI Progress Bar
+
+While the pipeline is running, Nextflow shows a live updating display:
+
+```
+executor >  local (3)
+[a1/bc23de] GREET | 1 of 3
+```
+
+The number before `of 3` updates in real time as processes complete. On slow terminals or in log files, use `-ansi-log false` to disable ANSI codes:
+
+```bash
+nextflow run params_pipeline.nf -ansi-log false
+```
+
+### 8.3 Execution Summary
+
+After every run, Nextflow prints an execution summary:
+
+```
+Completed at: 20-Apr-2026 14:32:15
+Duration    : 1.2s
+CPU hours   : (a few seconds)
+Succeeded   : 3
+```
+
+For large pipelines, `CPU hours` gives you an accurate billing estimate if you are running on cloud compute.
+
+---
+
+## 9. Managing Run History with `nextflow log`
+
+Nextflow records every run in a hidden database (`.nextflow/history`). The `nextflow log` command lets you inspect and query this history.
+
+### 9.1 List All Runs
+
+```bash
+nextflow log
+```
+
+Output:
+```
+TIMESTAMP          DURATION  RUN NAME         STATUS  REVISION ID  SESSION ID                            COMMAND
+2026-04-20 14:32   1.2s      focused_turing   OK      9f8e7d6c5b   xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  nextflow run params_pipeline.nf
+2026-04-20 14:29   0.8s      sharp_darwin     OK      9f8e7d6c5b   xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  nextflow run params_pipeline.nf -resume
+```
+
+### 9.2 Query a Specific Run
+
+Get the work directory path for every task in a run:
+
+```bash
+nextflow log focused_turing -f name,workdir
+```
+
+Get the exit status and script for all tasks:
+
+```bash
+nextflow log focused_turing -f name,exit,script
+```
+
+Get only tasks that failed:
+
+```bash
+nextflow log focused_turing -f name,workdir,exit -filter 'exit != 0'
+```
+
+Available fields include: `name`, `workdir`, `exit`, `script`, `status`, `duration`, `realtime`, `container`, `tag`, `hash`.
+
+### 9.3 Clean Up Run Directories
+
+```bash
+# Remove work dirs for a specific run (dry run first)
+nextflow clean -n focused_turing
+
+# Actually remove them
+nextflow clean -f focused_turing
+
+# Remove all but the most recent run
+nextflow clean -f -before focused_turing
+
+# Remove work dirs for all completed successful runs
+nextflow clean -f
+```
+
+---
+
+## 10. Pipeline 3 — Reading Real Files
+
+Move beyond synthetic data and build a pipeline that processes real files. Create some dummy FASTQ-like files to experiment with:
+
+```bash
+mkdir -p data
+
+# Create three minimal "FASTQ" files (4 lines per read, as per the FASTQ spec)
+for sample in sample_A sample_B sample_C; do
+    printf "@read1\nACGTACGT\n+\nIIIIIIII\n@read2\nTGCATGCA\n+\nIIIIIIII\n" \
+        > data/${sample}.fastq
+done
+
+ls data/
+# sample_A.fastq  sample_B.fastq  sample_C.fastq
+```
+
+Create `count_reads.nf`:
+
+```groovy
+// count_reads.nf  –  Count reads in FASTQ files
+nextflow.enable.dsl=2
+
+params.reads  = "data/*.fastq"
+params.outdir = "results"
+
+process COUNT_READS {
+
+    tag "${fastq.baseName}"
+
+    publishDir "${params.outdir}", mode: 'copy'
+
+    input:
+    path fastq
+
+    output:
+    path "${fastq.baseName}_readcount.txt"
+
+    script:
+    """
+    count=\$(grep -c "^@" ${fastq})
+    echo "${fastq.baseName}: \${count} reads" > ${fastq.baseName}_readcount.txt
+    """
+}
+
+workflow {
+    Channel.fromPath(params.reads)
+        | COUNT_READS
+}
+```
+
+Run it:
+
+```bash
+nextflow run count_reads.nf
+```
+
+Check results:
+
+```bash
+cat results/sample_A_readcount.txt
+# sample_A: 2 reads
+```
+
+### 10.1 What Is New Here
+
+**`Channel.fromPath(params.reads)`**
+Creates a queue channel where each item is a `Path` object pointing to a file matching the glob pattern `data/*.fastq`. Each file triggers one COUNT_READS invocation.
+
+**`path fastq` input qualifier**
+When a process input is declared as `path`, Nextflow **stages** the file into the process's isolated work directory — it creates a symlink from the work directory to the actual file. The script sees `${fastq}` as a filename in the current directory, not the absolute path.
+
+**`${fastq.baseName}`**
+Nextflow `Path` objects expose Groovy file properties. Useful ones:
+
+| Property | Example (`sample_A.fastq`) |
+|---|---|
+| `${fastq}` | `sample_A.fastq` (filename only, after staging) |
+| `${fastq.baseName}` | `sample_A` (no extension) |
+| `${fastq.name}` | `sample_A.fastq` (same as `${fastq}`) |
+| `${fastq.extension}` | `fastq` |
+| `${fastq.parent}` | Path to containing directory |
+
+**`tag "${fastq.baseName}"`**
+The `tag` directive gives each process invocation a human-readable label. Without it, Nextflow shows `COUNT_READS (1)`, `COUNT_READS (2)`, etc. With it, you see `COUNT_READS (sample_A)`, `COUNT_READS (sample_B)` — much easier to debug at scale.
+
+**`\$(grep ...)` vs `${fastq}`**
+Notice the mixed escaping in the script:
+
+```groovy
+count=\$(grep -c "^@" ${fastq})
+echo "${fastq.baseName}: \${count} reads"
+```
+
+- `${fastq}` → Nextflow interpolates the staged filename
+- `${fastq.baseName}` → Nextflow interpolates the base name
+- `\$(grep ...)` → bash command substitution (escaped so Nextflow doesn't touch it)
+- `\${count}` → bash variable reference (escaped so Nextflow doesn't touch it)
+
+---
+
+## 11. Pipeline 4 — Paired-End Files with `fromFilePairs`
+
+Real NGS data almost always comes in paired-end FASTQ files (`_R1` / `_R2`). Nextflow's `Channel.fromFilePairs` handles this automatically.
+
+Create paired dummy files:
+
+```bash
+for sample in sample_A sample_B sample_C; do
+    printf "@read1\nACGTACGT\n+\nIIIIIIII\n" > data/${sample}_R1.fastq
+    printf "@read1\nTGCATGCA\n+\nIIIIIIII\n" > data/${sample}_R2.fastq
+done
+
+ls data/*_R{1,2}.fastq
+```
+
+Create `paired_reads.nf`:
+
+```groovy
+// paired_reads.nf  –  Paired-end read processing pattern
+nextflow.enable.dsl=2
+
+params.reads  = "data/*_{R1,R2}.fastq"
+params.outdir = "results_paired"
+
+process PROCESS_PAIR {
+
+    tag "${sample_id}"
+
+    publishDir "${params.outdir}", mode: 'copy'
+
+    input:
+    tuple val(sample_id), path(reads)
+
+    output:
+    path "${sample_id}_summary.txt"
+
+    script:
+    """
+    echo "Sample: ${sample_id}" > ${sample_id}_summary.txt
+    echo "R1: ${reads[0]}" >> ${sample_id}_summary.txt
+    echo "R2: ${reads[1]}" >> ${sample_id}_summary.txt
+    echo "R1 reads: \$(grep -c '^@' ${reads[0]})" >> ${sample_id}_summary.txt
+    echo "R2 reads: \$(grep -c '^@' ${reads[1]})" >> ${sample_id}_summary.txt
+    """
+}
+
+workflow {
+    Channel.fromFilePairs(params.reads)
+        | PROCESS_PAIR
+}
+```
+
+Run it:
+
+```bash
+nextflow run paired_reads.nf
+cat results_paired/sample_A_summary.txt
+```
+
+Expected output:
+```
+Sample: sample_A
+R1: sample_A_R1.fastq
+R2: sample_A_R2.fastq
+R1 reads: 1
+R2 reads: 1
+```
+
+### 11.1 How `fromFilePairs` Works
+
+`Channel.fromFilePairs("data/*_{R1,R2}.fastq")` emits **tuples** of the form `[sample_id, [file_R1, file_R2]]`:
+
+- The **sample ID** is extracted automatically: everything before the `{R1,R2}` glob token becomes the key (`sample_A`)
+- The **file list** is sorted lexicographically, so `_R1` always comes before `_R2` (indices 0 and 1 respectively)
+
+The process input `tuple val(sample_id), path(reads)` unpacks this tuple:
+
+- `val(sample_id)` binds the string key
+- `path(reads)` binds the file list (accessible as `reads[0]` and `reads[1]`)
+
+This **tuple + fromFilePairs** pattern is the foundation of nearly every real bioinformatics Nextflow pipeline. You will use it constantly.
+
+::: {.callout-tip}
+## Custom Grouping with `fromFilePairs`
+
+By default, `fromFilePairs` groups by stripping the matched glob token. You can customise this:
+
+```groovy
+// Extract sample ID from a more complex naming convention
+// e.g., SRR12345_1.fastq.gz and SRR12345_2.fastq.gz
+Channel.fromFilePairs("data/SRR*_{1,2}.fastq.gz")
+    .map { sample_id, files -> tuple(sample_id, files) }
+    | view
+```
+
+For completely custom grouping, use `Channel.fromPath` + `.map` + `.groupTuple` — covered in Tutorial 5.
+:::
+
+---
+
+## 12. Handling Pipeline Failures
+
+Understanding how Nextflow reports and recovers from failures is essential for real-world use.
+
+### 12.1 Simulating a Failure
+
+Create `fail_test.nf`:
+
+```groovy
+// fail_test.nf  –  Demonstrates error reporting
+nextflow.enable.dsl=2
+
+process WILL_FAIL {
+
+    input:
+    val n
+
+    output:
+    stdout
+
+    script:
+    """
+    if [ "${n}" = "2" ]; then
+        echo "Intentional failure on item ${n}" >&2
+        exit 1
+    fi
+    echo "Processed item ${n}"
+    """
+}
+
+workflow {
+    Channel.of(1, 2, 3)
+        | WILL_FAIL
+        | view
+}
+```
+
+Run it:
+
+```bash
+nextflow run fail_test.nf
+```
+
+Nextflow will run items 1 and 3 successfully, but item 2 will fail. The output shows:
+
+```
+executor >  local (3)
+[a1/bc23de] WILL_FAIL (1) | 3 of 3, failed: 1 ✘
+
+ERROR ~ Error executing process > 'WILL_FAIL (2)'
+
+Caused by:
+  Process `WILL_FAIL (2)` terminated with an error exit status (1)
+
+Command executed:
+  if [ "2" = "2" ]; then
+      echo "Intentional failure on item 2" >&2
+      exit 1
+  fi
+  echo "Processed item 2"
+
+Command exit status:
+  1
+
+Command error:
+  Intentional failure on item 2
+
+Work dir:
+  /home/user/nf-tutorial/03-hello-world/work/xx/yyyyy...
+
+Tip: view the command output by changing to the directory `.../work/xx/yyyy` and entering the command `cat .command.log`.
+```
+
+### 12.2 Fix and Resume
+
+After fixing the issue (in a real scenario: fixing the tool or the input data), re-run with `-resume`:
+
+```bash
+nextflow run fail_test.nf -resume
+```
+
+Nextflow skips items 1 and 3 (cached) and only re-runs item 2.
+
+### 12.3 `errorStrategy`
+
+The default behaviour when a process fails is to **abort the entire pipeline** after all currently-running tasks complete. You can change this with the `errorStrategy` directive:
+
+```groovy
+process WILL_FAIL {
+
+    errorStrategy 'ignore'   // continue past this failure; emit nothing for this item
+
+    // or:
+    errorStrategy 'retry'    // retry the failed task (useful for transient errors)
+    maxRetries 3             // retry up to 3 times before giving up
+
+    // or:
+    errorStrategy 'finish'   // finish currently running tasks, then stop (default)
+
+    // ...
+}
+```
+
+For bioinformatics pipelines, `errorStrategy 'ignore'` is useful for processes that can fail on certain samples without invalidating the entire run (e.g., a tool that fails on low-quality input).
+
+---
+
+## 13. A Complete Working Pipeline
+
+Putting everything together, here is a complete, clean DSL2 pipeline incorporating all concepts from this tutorial:
+
+```groovy
+// complete_pipeline.nf  –  A complete, annotated Hello World pipeline
+nextflow.enable.dsl=2
+
+// ── Parameters (override with --param_name value on the command line) ─────────
+params.reads  = "data/*_{R1,R2}.fastq"
+params.outdir = "results_complete"
+
+// ── Process: count reads in each file of a pair ───────────────────────────────
+process COUNT_PAIRED_READS {
+
+    tag "${sample_id}"
+    publishDir "${params.outdir}", mode: 'copy'
+    errorStrategy 'finish'
+
+    input:
+    tuple val(sample_id), path(reads)
+
+    output:
+    path "${sample_id}_counts.txt"
+
+    script:
+    """
+    r1_count=\$(grep -c '^@' ${reads[0]})
+    r2_count=\$(grep -c '^@' ${reads[1]})
+
+    echo "Sample,R1_reads,R2_reads"              > ${sample_id}_counts.txt
+    echo "${sample_id},\${r1_count},\${r2_count}" >> ${sample_id}_counts.txt
+    """
+}
+
+// ── Workflow ──────────────────────────────────────────────────────────────────
+workflow {
+    reads_ch = Channel.fromFilePairs(params.reads)
+    COUNT_PAIRED_READS(reads_ch)
+}
+```
+
+Run with defaults, then with custom parameters:
+
+```bash
+nextflow run complete_pipeline.nf
+nextflow run complete_pipeline.nf --outdir my_counts -resume
+```
+
+---
+
+## 14. Summary
+
+You have written four Nextflow pipelines from scratch, progressively introducing every fundamental concept needed for real bioinformatics work.
+
+**What you built:**
+
+| Pipeline | Concepts introduced |
+|---|---|
+| `main.nf` | `process`, `workflow`, `Channel.of`, `\| view`, `val` input, `stdout` output |
+| `params_pipeline.nf` | `params`, `publishDir`, `path` output, command-line overrides |
+| `count_reads.nf` | `Channel.fromPath`, `path` input, `tag`, file path properties |
+| `paired_reads.nf` | `Channel.fromFilePairs`, `tuple val/path`, paired-end pattern |
+| `complete_pipeline.nf` | Full integration of all above; `errorStrategy` |
+
+**Core rules to remember:**
+
+- Use `${param}` for Nextflow variables; use `\$var` for shell variables inside `script:`
+- Every process invocation runs in its own isolated `work/` subdirectory
+- Always use `publishDir mode: 'copy'` (not `'move'`) to preserve `-resume` behaviour
+- Use `tag` directives — they make debugging dramatically easier at scale
+- `nextflow log <run-name>` is your history and forensics tool
+- `-resume` uses input hashes, not timestamps — only changed inputs trigger re-execution
+
+::: {.callout-note}
+## Key Concepts Checklist
+
+Before moving on, make sure you can:
+
+- [ ] Write a DSL2 `process` with `val`, `path`, `tuple`, and `stdout` qualifiers
+- [ ] Use `params.*` with defaults and command-line overrides
+- [ ] Create channels with `Channel.of`, `Channel.fromPath`, and `Channel.fromFilePairs`
+- [ ] Connect processes with the pipe `|` operator
+- [ ] Find and read `.command.sh`, `.command.log`, and `.exitcode` in `work/`
+- [ ] Use `-resume` and explain when it will and will not cache results
+- [ ] Use `nextflow log` to inspect run history and find work directories
+- [ ] Use `publishDir` with `mode: 'copy'` to expose results
+:::
+
+---
+
+## What's Next
+
+**Tutorial #4 — Processes and Channels**
+Go deep on the two core Nextflow abstractions. Learn every input/output qualifier (`val`, `path`, `tuple`, `env`, `stdin`), understand queue channels vs value channels, and build multi-process pipelines where outputs from one process feed directly into the next.
+
+---
+
+## References
+
+- **Nextflow Documentation: Basic pipeline.** Seqera Labs. [https://www.nextflow.io/docs/latest/basic.html](https://www.nextflow.io/docs/latest/basic.html)
+
+- **Nextflow Documentation: Process.** Seqera Labs. [https://www.nextflow.io/docs/latest/process.html](https://www.nextflow.io/docs/latest/process.html)
+
+- **Nextflow Documentation: Channel.** Seqera Labs. [https://www.nextflow.io/docs/latest/channel.html](https://www.nextflow.io/docs/latest/channel.html)
+
+- **Di Tommaso P et al.** (2017). Nextflow enables reproducible computational workflows. *Nature Biotechnology*, 35, 316–319. DOI: [10.1038/nbt.3820](https://doi.org/10.1038/nbt.3820)
+
+- **Seqera Labs.** Nextflow training: Hello Nextflow. [https://training.nextflow.io/hello_nextflow/](https://training.nextflow.io/hello_nextflow/)

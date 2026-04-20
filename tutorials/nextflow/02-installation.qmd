@@ -1,0 +1,727 @@
+---
+title: "Installing Nextflow and Java"
+subtitle: "Set up your Nextflow environment from scratch on Linux, macOS, and Windows (WSL2)"
+author:
+  - name: Jubayer Hossain
+    orcid: 0000-0001-9323-4997
+date: "2026-04-20"
+categories: [Nextflow, Installation, Java, WSL2, Bioinformatics]
+description: "A step-by-step guide to installing Java (the required runtime), downloading the Nextflow launcher, verifying your setup, and configuring essential environment settings for local and HPC use."
+toc: true
+toc-depth: 3
+---
+
+::: {.callout-note}
+## Learning Objectives
+
+By the end of this tutorial you will be able to:
+
+- Explain **why Java is required** by Nextflow and which versions are supported
+- Install a **Java Development Kit (JDK)** on Linux, macOS, and Windows (WSL2)
+- Download and install the **Nextflow launcher** (`nextflow`) as a self-updating executable
+- Verify the installation with `nextflow info` and run the **built-in hello world** test
+- Configure key **environment variables** (`NXF_HOME`, `NXF_JAVA_HOME`, `NXF_CACHE_DIR`)
+- Understand the **Nextflow directory layout** created after a first run
+- Install **nf-core tools** (optional but recommended)
+- Troubleshoot the **five most common installation errors**
+
+**Estimated reading time:** 20–25 minutes
+**Prerequisites:** Tutorial 1 (What is Nextflow?); basic Linux/macOS terminal familiarity; internet connection
+:::
+
+---
+
+## 1. Prerequisites and System Requirements
+
+Before you begin, confirm that your system meets the minimum requirements.
+
+| Requirement | Minimum | Recommended |
+|---|---|---|
+| Operating system | Linux (kernel 3.10+), macOS 11+, WSL2 on Windows 10/11 | Ubuntu 22.04 LTS / macOS 13+ |
+| RAM | 4 GB | 16 GB+ |
+| Disk space (for Nextflow + test data) | 2 GB free | 20 GB+ |
+| Java | 11 | 21 (LTS) |
+| Internet access | Required for download | — |
+
+::: {.callout-important}
+## Windows Users: Use WSL2, Not PowerShell
+
+Nextflow is a Unix-native tool. It **does not run natively on Windows**. Windows users must install **Windows Subsystem for Linux 2 (WSL2)** and work inside a Linux distribution (Ubuntu 22.04 recommended). All commands in this tutorial assume a Unix (Linux/macOS) shell environment.
+
+If you are already using WSL2, open a WSL terminal for all steps below. PowerShell and CMD commands are not covered.
+:::
+
+### 1.1 Installing WSL2 (Windows Users Only)
+
+Open **PowerShell as Administrator** and run:
+
+```powershell
+wsl --install
+```
+
+This installs WSL2 with Ubuntu by default. Restart when prompted. After restarting, open the **Ubuntu** application from the Start Menu and complete the initial setup (create a Unix username and password). Then follow the Linux instructions below from within the Ubuntu terminal.
+
+To verify WSL2 is correctly installed:
+
+```bash
+# Inside your Ubuntu WSL2 terminal
+uname -r     # should show a kernel version ≥ 5.x
+lsb_release -a   # should show Ubuntu 22.04 or similar
+```
+
+---
+
+## 2. Step 1 — Install Java
+
+Nextflow is written in **Groovy**, which runs on the **Java Virtual Machine (JVM)**. Java must be installed before Nextflow can run. There is no workaround for this requirement.
+
+### 2.1 Which Java Version?
+
+Nextflow supports **Java 11, 17, and 21**. Java 21 is the current LTS (Long Term Support) release and is the recommended choice for new installations. Nextflow does **not** support Java 8 (EOL) or Java 9/10 (non-LTS).
+
+::: {.callout-tip}
+## JDK vs JRE — Which Do I Need?
+
+A **JRE** (Java Runtime Environment) is sufficient to *run* Nextflow. A **JDK** (Java Development Kit) includes the JRE plus development tools. Either works, but most Linux distributions install the JDK by default through their package managers, so there is usually no reason to specifically seek out a JRE-only install.
+:::
+
+### 2.2 Installing Java on Ubuntu / Debian (including WSL2)
+
+The simplest approach uses the Ubuntu package manager:
+
+```bash
+# Update package index
+sudo apt update
+
+# Install OpenJDK 21 (LTS)
+sudo apt install -y openjdk-21-jdk
+
+# Verify installation
+java -version
+```
+
+Expected output:
+```
+openjdk version "21.0.x" 2024-xx-xx
+OpenJDK Runtime Environment (build 21.0.x+xx)
+OpenJDK 64-Bit Server VM (build 21.0.x+xx, mixed mode, sharing)
+```
+
+If your distribution's repositories only carry OpenJDK 17, that is also fully supported:
+
+```bash
+sudo apt install -y openjdk-17-jdk
+```
+
+### 2.3 Installing Java on macOS
+
+The recommended approach on macOS is **SDKMAN!** — a tool for managing parallel versions of Java and other JVM SDKs. It avoids system-wide Java installations and makes switching between versions easy.
+
+**Install SDKMAN!:**
+
+```bash
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+```
+
+**Install Java 21:**
+
+```bash
+sdk install java 21.0.3-tem
+```
+
+**Verify:**
+
+```bash
+java -version
+sdk current java
+```
+
+Alternatively, if you prefer Homebrew:
+
+```bash
+brew install openjdk@21
+echo 'export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+java -version
+```
+
+### 2.4 Installing Java on CentOS / RHEL / Rocky Linux
+
+```bash
+# On RHEL/CentOS 8+ and Rocky Linux
+sudo dnf install -y java-21-openjdk-devel
+
+# On older CentOS 7 (uses yum)
+sudo yum install -y java-11-openjdk-devel
+
+java -version
+```
+
+### 2.5 Verifying JAVA_HOME
+
+Nextflow uses the `JAVA_HOME` environment variable to locate the JVM. Verify it is set correctly:
+
+```bash
+echo $JAVA_HOME
+```
+
+If the output is empty, set it manually. Find the Java installation path first:
+
+```bash
+# Linux
+readlink -f $(which java) | sed 's|/bin/java||'
+
+# macOS (with SDKMAN)
+echo $JAVA_HOME    # SDKMAN sets this automatically
+```
+
+Add to your shell profile (`~/.bashrc`, `~/.zshrc`, or `~/.profile`):
+
+```bash
+export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64   # adjust path for your system
+export PATH=$JAVA_HOME/bin:$PATH
+```
+
+Reload:
+
+```bash
+source ~/.bashrc   # or source ~/.zshrc
+```
+
+---
+
+## 3. Step 2 — Install Nextflow
+
+Nextflow is distributed as a single **self-contained launcher script** that downloads and caches its own runtime on first execution. There is no traditional installer, no `sudo` required, and no package manager needed.
+
+### 3.1 Download the Nextflow Launcher
+
+```bash
+# Download the launcher into the current directory
+curl -s https://get.nextflow.io | bash
+```
+
+This command:
+1. Downloads a small bash script from `get.nextflow.io`
+2. The script detects your Java version and downloads the matching Nextflow runtime JAR
+3. Creates an executable file named `nextflow` in the current directory
+
+You will see output similar to:
+
+```
+      N E X T F L O W
+      version 24.x.x build xxxx
+      created xx-xx-xxxx xx:xx UTC (xx hours ago)
+      cite doi:10.1038/nbt.3820
+      http://nextflow.io
+
+Nextflow installation completed. Please note:
+- the executable file `nextflow` has been created in the folder: /home/youruser
+- you may complete the installation by moving it to a directory in your $PATH, e.g: `sudo mv nextflow /usr/local/bin`
+```
+
+### 3.2 Move Nextflow to Your PATH
+
+For convenience, move the launcher to a directory in your `$PATH` so you can call `nextflow` from anywhere:
+
+```bash
+# Option A: user-local bin (no sudo required)
+mkdir -p ~/.local/bin
+mv nextflow ~/.local/bin/
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+
+# Option B: system-wide (requires sudo)
+sudo mv nextflow /usr/local/bin/
+```
+
+Verify the command is accessible:
+
+```bash
+which nextflow
+# /home/youruser/.local/bin/nextflow  (or /usr/local/bin/nextflow)
+```
+
+### 3.3 Verify the Installation
+
+```bash
+nextflow -version
+```
+
+Expected output:
+
+```
+      N E X T F L O W
+      version 24.x.x build xxxx
+      created xx-xx-xxxx xx:xx UTC
+      cite doi:10.1038/nbt.3820
+      http://nextflow.io
+```
+
+Get detailed environment information:
+
+```bash
+nextflow info
+```
+
+This prints:
+
+```
+  Version: 24.x.x build xxxx
+  Created: xx-xx-xxxx xx:xx UTC
+  System: Linux 5.15.0
+  Runtime: Groovy 4.x on OpenJDK 64-Bit Server VM 21.0.x+x
+  Encoding: UTF-8 (UTF-8)
+  Process: 12345@hostname
+  CPUs: 8; Memory: 15.5 GB; Storage: 245 GB (193 GB avail)
+  nextflow home directory: /home/youruser/.nextflow
+```
+
+The line `Runtime: Groovy 4.x on OpenJDK 64-Bit Server VM 21.0.x+x` confirms Nextflow found your Java installation.
+
+### 3.4 Run the Built-in Hello World Test
+
+Nextflow includes a minimal hello-world pipeline hosted on GitHub. Run it now to confirm your installation is fully functional:
+
+```bash
+nextflow run hello
+```
+
+This command:
+1. Pulls the `nextflow-io/hello` repository from GitHub (cached for future runs)
+2. Executes four trivial processes that print greetings in different languages
+3. Shows the execution log
+
+Expected output:
+
+```
+N E X T F L O W  ~  version 24.x.x
+Launching `https://github.com/nextflow-io/hello` [pensive_darwin] DSL2 - revision: 4eab81bd4c
+
+executor >  local (4)
+[c7/f2a981] SAYHI (1) | 4 of 4 ✔
+
+Hello world!
+Ciao world!
+Hola world!
+Bonjour world!
+```
+
+If you see four greeting messages and all process statuses show `✔`, your Nextflow installation is working correctly.
+
+---
+
+## 4. The Nextflow Directory Layout
+
+After the first `nextflow run hello`, several directories and files are created. Understanding them prevents confusion later.
+
+```
+~/                              # your home directory
+├── .nextflow/                  # Nextflow home (NXF_HOME)
+│   ├── cache/                  # execution cache (enables -resume)
+│   ├── assets/                 # cloned pipeline repositories
+│   │   └── nextflow-io/
+│   │       └── hello/          # the hello pipeline we just ran
+│   └── tmp/                    # temporary download files
+│
+└── work/                       # created in the run directory
+    └── c7/
+        └── f2a981.../          # one subdirectory per process invocation
+            ├── .command.sh     # exact script that was executed
+            ├── .command.log    # stdout + stderr
+            ├── .command.run    # Nextflow wrapper script
+            ├── .exitcode       # exit status (0 = success)
+            └── (output files)
+```
+
+### 4.1 The `work/` Directory
+
+Every process invocation runs in its own isolated subdirectory inside `work/`. This directory contains:
+
+- **`.command.sh`** — the exact shell script that ran. Reading this file tells you precisely what command was executed with what arguments. Indispensable for debugging.
+- **`.command.log`** — combined stdout and stderr from the process.
+- **`.exitcode`** — the return code (0 = success; non-zero = failure).
+
+::: {.callout-tip}
+## Debugging a Failed Process
+
+When a process fails, Nextflow prints the path to the failed work directory:
+
+```
+ERROR ~ Error executing process > 'ALIGN_READS (sample_A)'
+
+Caused by:
+  Process `ALIGN_READS (sample_A)` terminated with an error exit status (1)
+
+Command executed:
+  STAR --genomeDir /path/to/genome ...
+
+Work dir:
+  /home/user/work/ab/3f8d92a7c2...
+
+Tip: view the command output by changing to the directory `/home/user/work/ab/3f8d92a7c2` and entering the command `cat .command.log`.
+```
+
+Navigate there and read `.command.log` to see the actual error message from the tool.
+:::
+
+### 4.2 The `.nextflow/cache/` Directory
+
+This is the checksum database that powers `-resume`. Each process invocation stores:
+- A hash of its input files and parameters
+- The location of its output files
+
+When you re-run with `-resume`, Nextflow compares current inputs against this cache. Matching entries are skipped; only changed or failed processes re-run.
+
+::: {.callout-warning}
+## Do Not Delete `work/` During Development
+
+The `-resume` mechanism requires that the actual output files in `work/` still exist — the cache only stores their paths, not the files themselves. If you delete `work/`, all cached results are lost and Nextflow must re-run everything from scratch. Only clean `work/` when you are done with a run and sure you will not need to resume it.
+:::
+
+---
+
+## 5. Configuring Nextflow Environment Variables
+
+Nextflow's behaviour can be customised through environment variables. The following are the most useful for day-to-day work.
+
+| Variable | Default | Purpose |
+|---|---|---|
+| `NXF_HOME` | `$HOME/.nextflow` | Nextflow home: caches, assets, plugins |
+| `NXF_WORK` | `./work` | Location of the work directory |
+| `NXF_ASSETS` | `$NXF_HOME/assets` | Where pulled pipelines are stored |
+| `NXF_CACHE_DIR` | `$NXF_HOME/cache` | Resume cache location |
+| `NXF_JAVA_HOME` | Uses `$JAVA_HOME` | Override Java location for Nextflow only |
+| `NXF_CONDA_CACHEDIR` | `$NXF_HOME/conda` | Conda environment cache |
+| `NXF_SINGULARITY_CACHEDIR` | none | Where Singularity SIF images are cached |
+| `NXF_DOCKER_LEGACY_PULL` | false | Use legacy `docker pull` behaviour |
+| `TOWER_ACCESS_TOKEN` | none | API token for Seqera Platform (Tower) |
+
+### 5.1 Recommended Minimal Configuration
+
+Add the following to your `~/.bashrc` (or `~/.zshrc` on macOS):
+
+```bash
+# ── Nextflow configuration ────────────────────────────────────────────────────
+
+# Keep all Nextflow files in one place (optional: change to a shared location)
+export NXF_HOME="$HOME/.nextflow"
+
+# Cache Singularity images in a dedicated location (avoids re-downloading)
+# On HPC: point this to a shared filesystem accessible from all nodes
+export NXF_SINGULARITY_CACHEDIR="$HOME/.singularity_cache"
+mkdir -p "$NXF_SINGULARITY_CACHEDIR"
+
+# Store conda environments in a shared cache
+export NXF_CONDA_CACHEDIR="$HOME/.conda_envs"
+
+# ── end Nextflow configuration ────────────────────────────────────────────────
+```
+
+Reload:
+
+```bash
+source ~/.bashrc
+```
+
+### 5.2 HPC-Specific Configuration
+
+On shared HPC clusters, point `NXF_SINGULARITY_CACHEDIR` and `NXF_CONDA_CACHEDIR` to **shared storage** (e.g., a group-writable directory on a `/scratch` or `/data` filesystem). This prevents every user from downloading the same container images independently:
+
+```bash
+# In ~/.bashrc on an HPC node
+export NXF_SINGULARITY_CACHEDIR="/data/shared/singularity_cache"
+export NXF_CONDA_CACHEDIR="/data/shared/conda_envs"
+```
+
+Coordinate with your HPC system administrator to establish the shared cache location.
+
+---
+
+## 6. Keeping Nextflow Up to Date
+
+### 6.1 Self-Update
+
+Nextflow can update itself:
+
+```bash
+nextflow self-update
+```
+
+This downloads the latest stable release and replaces the existing launcher. Your pipeline caches and configuration are not affected.
+
+### 6.2 Pin a Specific Version
+
+nf-core pipelines specify a minimum Nextflow version in their `nextflow.config`. If you need to run an older pipeline that requires an older Nextflow:
+
+```bash
+# Install a specific version alongside the current one
+export NXF_VER=23.10.0
+nextflow -version
+```
+
+Setting `NXF_VER` causes Nextflow to download and use that specific version for the current session. To make it permanent, add `export NXF_VER=x.x.x` to your shell profile — but generally prefer the latest stable release.
+
+### 6.3 Checking the Current Version
+
+```bash
+nextflow -version
+# or
+nextflow info | grep Version
+```
+
+The nf-core website lists the minimum Nextflow version for each pipeline. Always check this before running a pipeline that has been updated recently.
+
+---
+
+## 7. Installing nf-core Tools (Recommended)
+
+The `nf-core` Python package provides a CLI for downloading pipelines, browsing the module library, linting your own pipelines, and more. While not required to run Nextflow, it is essential if you plan to use the nf-core ecosystem.
+
+### 7.1 Install via pip (Python 3.8+)
+
+```bash
+# Verify Python version
+python3 --version   # should be ≥ 3.8
+
+# Install nf-core
+pip install nf-core
+
+# Verify
+nf-core --version
+```
+
+### 7.2 Install via conda (Recommended for Isolated Environments)
+
+```bash
+# Create a dedicated conda environment for nf-core tools
+conda create -n nf-core python=3.11 nf-core -c conda-forge -c bioconda -y
+conda activate nf-core
+
+nf-core --version
+```
+
+### 7.3 Test the nf-core Installation
+
+```bash
+# List all available nf-core pipelines
+nf-core list
+
+# Search for pipelines matching a keyword
+nf-core list rnaseq
+```
+
+Expected output (truncated):
+
+```
+                                          nf-core/pipelines
+
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Pipeline Name     ┃ Stars   ┃ Latest Release  ┃ Released       ┃ Last Pulled          ┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━┩
+│ nf-core/rnaseq    │ 850     │ 3.14.0          │ 3 weeks ago    │ -                    │
+│ nf-core/scrnaseq  │ 210     │ 2.7.1           │ 2 months ago   │ -                    │
+└───────────────────┴─────────┴─────────────────┴────────────────┴──────────────────────┘
+```
+
+---
+
+## 8. Troubleshooting Common Installation Issues
+
+### Issue 1: `java: command not found`
+
+**Symptom:** Running `nextflow` fails immediately with:
+```
+JAVA_HOME is not set and 'java' command not found
+```
+
+**Solution:** Java is not installed, or not in your `$PATH`. Complete Step 2 (install Java) and ensure `$JAVA_HOME` is set correctly.
+
+```bash
+# Diagnose
+which java
+echo $JAVA_HOME
+java -version
+```
+
+---
+
+### Issue 2: Wrong Java Version
+
+**Symptom:**
+```
+Error: Nextflow requires Java 11 or later (found: Java 1.8)
+```
+
+**Solution:** Multiple Java versions are installed and the wrong one is active.
+
+```bash
+# List installed Java versions (Ubuntu/Debian)
+sudo update-alternatives --list java
+
+# Switch to Java 21
+sudo update-alternatives --config java
+# Select the entry for Java 21
+
+# Verify
+java -version
+```
+
+On macOS with SDKMAN:
+
+```bash
+sdk list java         # shows all installed versions
+sdk use java 21.0.3-tem
+java -version
+```
+
+---
+
+### Issue 3: `curl: (35) SSL connect error` (Corporate Network / Proxy)
+
+**Symptom:** The `curl -s https://get.nextflow.io | bash` command fails with SSL or connection errors.
+
+**Solution:** You are behind a corporate proxy or firewall that intercepts HTTPS. Set proxy environment variables:
+
+```bash
+export http_proxy=http://proxy.example.com:8080
+export https_proxy=http://proxy.example.com:8080
+export no_proxy=localhost,127.0.0.1
+
+curl -s https://get.nextflow.io | bash
+```
+
+Alternatively, download the Nextflow launcher from the GitHub releases page manually and transfer it to your system.
+
+---
+
+### Issue 4: `Permission denied` When Running `nextflow`
+
+**Symptom:**
+```
+bash: /usr/local/bin/nextflow: Permission denied
+```
+
+**Solution:** The executable bit is not set on the downloaded file.
+
+```bash
+chmod +x ~/.local/bin/nextflow
+# or if system-wide:
+sudo chmod +x /usr/local/bin/nextflow
+
+nextflow -version
+```
+
+---
+
+### Issue 5: `work/` Directory Fills Up Your Disk
+
+**Symptom:** After running several pipelines, disk usage has grown dramatically. A `du -sh work/` shows gigabytes of data.
+
+**Solution:** The `work/` directory accumulates all intermediate files from every run. Clean it up with:
+
+```bash
+# Remove work directories for completed/successful tasks only
+nextflow clean -f
+
+# Remove work directories for all runs (including failed)
+nextflow clean -f -a
+
+# Dry run: see what would be deleted without deleting
+nextflow clean -n
+```
+
+::: {.callout-warning}
+## Running `nextflow clean` Invalidates Resume Cache
+
+After `nextflow clean`, the work files that cache entries reference are gone. The `-resume` flag will not be able to skip any steps in subsequent runs. Only clean when you are done iterating on a pipeline run.
+:::
+
+---
+
+## 9. Verifying a Complete Installation
+
+Run through this checklist to confirm everything is working before proceeding to the next tutorial.
+
+```bash
+# 1. Java version ≥ 11
+java -version
+# Expected: openjdk version "21.x.x" ...
+
+# 2. JAVA_HOME is set
+echo $JAVA_HOME
+# Expected: non-empty path to your JDK
+
+# 3. Nextflow launcher is in PATH
+which nextflow
+# Expected: /home/user/.local/bin/nextflow or /usr/local/bin/nextflow
+
+# 4. Nextflow version and runtime info
+nextflow info
+# Expected: version, Groovy runtime, system details
+
+# 5. Hello world pipeline runs successfully
+nextflow run hello
+# Expected: 4 processes complete with ✔, four greetings printed
+
+# 6. nf-core tools (optional)
+nf-core --version
+# Expected: nf-core, version x.x.x
+```
+
+If all six commands succeed, you are ready to write your first Nextflow pipeline.
+
+---
+
+## 10. Summary
+
+Installing Nextflow requires two steps: installing Java (the JVM runtime that Nextflow depends on) and downloading the self-contained Nextflow launcher script.
+
+**Key points to remember:**
+
+- Nextflow requires **Java 11 or later**; Java 21 (LTS) is recommended
+- The Nextflow launcher is a **single executable file** — no package manager required
+- Move `nextflow` to `~/.local/bin/` (or `/usr/local/bin/`) to make it accessible everywhere
+- `nextflow run hello` is the canonical smoke test for a working installation
+- The `work/` directory holds all intermediate files; never delete it during active development
+- `NXF_SINGULARITY_CACHEDIR` should point to shared storage on HPC clusters
+- Use `nextflow self-update` to stay current; pin versions with `NXF_VER` when needed
+
+::: {.callout-note}
+## Installation Checklist
+
+Before moving on, verify:
+
+- [ ] `java -version` shows Java 11 or later
+- [ ] `$JAVA_HOME` is set and non-empty
+- [ ] `which nextflow` returns a valid path
+- [ ] `nextflow info` shows your Java runtime in the `Runtime:` line
+- [ ] `nextflow run hello` completes with all processes showing `✔`
+- [ ] (Optional) `nf-core --version` confirms nf-core tools are installed
+:::
+
+---
+
+## What's Next
+
+**Tutorial #3 — Hello World: Your First Nextflow Pipeline**
+Write and run a minimal DSL2 pipeline from scratch. Understand the `process`, `channel`, and `workflow` blocks, explore the `work/` directory layout in detail, and use the `-resume` flag to skip completed steps during iterative development.
+
+---
+
+## References
+
+- **Nextflow Documentation: Installation.** Seqera Labs. [https://www.nextflow.io/docs/latest/install.html](https://www.nextflow.io/docs/latest/install.html)
+
+- **Di Tommaso P et al.** (2017). Nextflow enables reproducible computational workflows. *Nature Biotechnology*, 35, 316–319. DOI: [10.1038/nbt.3820](https://doi.org/10.1038/nbt.3820)
+
+- **Ewels PA et al.** (2020). The nf-core framework for community-curated bioinformatics pipelines. *Nature Biotechnology*, 38, 276–278. DOI: [10.1038/s41587-020-0439-x](https://doi.org/10.1038/s41587-020-0439-x)
+
+- **OpenJDK.** Eclipse Temurin (Adoptium) distributions. [https://adoptium.net](https://adoptium.net)
+
+- **SDKMAN!** Software Development Kit Manager. [https://sdkman.io](https://sdkman.io)
+
+- **nf-core/tools documentation.** [https://nf-co.re/docs/nf-core-tools](https://nf-co.re/docs/nf-core-tools)
+
+- **Kurtzer GM et al.** (2017). Singularity: Scientific containers for mobility of compute. *PLOS ONE*, 12(5): e0177459. DOI: [10.1371/journal.pone.0177459](https://doi.org/10.1371/journal.pone.0177459)

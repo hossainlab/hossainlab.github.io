@@ -1,4 +1,4 @@
-*Note: **Bold** indicates the CV author; \* indicates corresponding author*
+*Note: **Bold** indicates the co-author; \* indicates corresponding author*
 
 1. Ahmed, M. Z., Billah, M. M., Ferdous, J., & **Hossain, M. J.**\* (2025). Pan-cancer analysis reveals immunological and prognostic significance of CCT5 in human tumors. *Scientific Reports, 15*, 14405. <https://doi.org/10.1038/s41598-025-88339-z>
 
