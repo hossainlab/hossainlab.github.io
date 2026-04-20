@@ -1,0 +1,7 @@
+- **Programming Languages**: Python, R, Julia, SQL, Bash, JavaScript
+- **Statistical Software**: SAS, SPSS, R (Bioconductor, tidyverse), Python (statsmodels, scipy)
+- **Bioinformatics**: Bulk RNA-Seq, Single-Cell RNA-Seq, Spatial Transcriptomics, Multi-omics, Microbiome Analysis (16S rRNA)
+- **Workflow Management & Reproducibility**: Nextflow (DSL2), nf-core, Docker, Singularity, Git, GitHub
+- **Machine Learning & AI**: Scikit-learn, XGBoost, SHAP, PyTorch, Transformers (HuggingFace), DeepChem
+- **Molecular Tools**: AlphaFold2/3, ChimeraX, RDKit, BioPython
+- **Computing Environments**: UNIX/Linux, HPC clusters, Cloud (AWS, Google Cloud)

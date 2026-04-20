@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jubayer Hossain">
+<meta name="dcterms.date" content="2026-04-20">
+<meta name="description" content="Academic Website for Jubayer Hossain">
+
+<title>What is Nextflow? Concepts and Use Cases – Jubayer Hossain</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../..//files/profiles/icon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Jubayer Hossain</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about/index.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-research" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Research</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-research">    
+        <li>
+    <a class="dropdown-item" href="../../research/index.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../projects/index.html">
+ <span class="dropdown-text">Projects</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../projects/pipelines.html">
+ <span class="dropdown-text">Pipelines</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-teaching" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Teaching</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-teaching">    
+        <li>
+    <a class="dropdown-item" href="../../teaching/index.html">
+ <span class="dropdown-text">Courses</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../teaching/videos.html">
+ <span class="dropdown-text">Videos</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../tutorials/index.html"> 
+<span class="menu-text">Tutorials</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../publications/index.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../cv/professional-cv/CV-HossainMJ.pdf"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:hossainmj@gmail.com"> <i class="bi bi-envelope" role="img" aria-label="email">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://orcid.org/0000-0001-9323-4997" target="_blank"> 
+<span class="menu-text"><i class="ai  ai-orcid" aria-label="orcid"></i></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=9_K4ekoAAAAJ&amp;hl=en&amp;authuser=5" target="_blank"> 
+<span class="menu-text"><i class="ai  ai-google-scholar" aria-label="google-scholar"></i></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=9_K4ekoAAAAJ&amp;hl=en&amp;authuser=5" target="_blank"> 
+<span class="menu-text"><i class="ai  ai-researchgate" aria-label="researchgate"></i></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/hossainmj" target="_blank"> <i class="bi bi-linkedin" role="img" aria-label="linkedin">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/hossain_lab" target="_blank"> <i class="bi bi-twitter" role="img" aria-label="twitter">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/hossainlab" target="_blank"> <i class="bi bi-github" role="img" aria-label="github">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/@hossainlab" target="_blank"> <i class="bi bi-youtube" role="img" aria-label="youtube">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-problem-bioinformatics-pipelines-are-hard-to-run-twice" id="toc-the-problem-bioinformatics-pipelines-are-hard-to-run-twice" class="nav-link active" data-scroll-target="#the-problem-bioinformatics-pipelines-are-hard-to-run-twice">1. The Problem: Bioinformatics Pipelines Are Hard to Run Twice</a>
+  <ul class="collapse">
+  <li><a href="#the-shell-script-era" id="toc-the-shell-script-era" class="nav-link" data-scroll-target="#the-shell-script-era">1.1 The Shell Script Era</a></li>
+  <li><a href="#make-and-snakemake-an-improvement" id="toc-make-and-snakemake-an-improvement" class="nav-link" data-scroll-target="#make-and-snakemake-an-improvement">1.2 Make and Snakemake: An Improvement</a></li>
+  </ul></li>
+  <li><a href="#what-is-nextflow" id="toc-what-is-nextflow" class="nav-link" data-scroll-target="#what-is-nextflow">2. What is Nextflow?</a>
+  <ul class="collapse">
+  <li><a href="#a-brief-history" id="toc-a-brief-history" class="nav-link" data-scroll-target="#a-brief-history">2.1 A Brief History</a></li>
+  </ul></li>
+  <li><a href="#the-dataflow-programming-model" id="toc-the-dataflow-programming-model" class="nav-link" data-scroll-target="#the-dataflow-programming-model">3. The Dataflow Programming Model</a>
+  <ul class="collapse">
+  <li><a href="#visualising-a-simple-dataflow-graph" id="toc-visualising-a-simple-dataflow-graph" class="nav-link" data-scroll-target="#visualising-a-simple-dataflow-graph">3.1 Visualising a Simple Dataflow Graph</a></li>
+  </ul></li>
+  <li><a href="#the-four-core-abstractions" id="toc-the-four-core-abstractions" class="nav-link" data-scroll-target="#the-four-core-abstractions">4. The Four Core Abstractions</a>
+  <ul class="collapse">
+  <li><a href="#processes" id="toc-processes" class="nav-link" data-scroll-target="#processes">4.1 Processes</a></li>
+  <li><a href="#channels" id="toc-channels" class="nav-link" data-scroll-target="#channels">4.2 Channels</a></li>
+  <li><a href="#operators" id="toc-operators" class="nav-link" data-scroll-target="#operators">4.3 Operators</a></li>
+  <li><a href="#executors" id="toc-executors" class="nav-link" data-scroll-target="#executors">4.4 Executors</a></li>
+  </ul></li>
+  <li><a href="#dsl2-modular-pipeline-design" id="toc-dsl2-modular-pipeline-design" class="nav-link" data-scroll-target="#dsl2-modular-pipeline-design">5. DSL2: Modular Pipeline Design</a>
+  <ul class="collapse">
+  <li><a href="#modules" id="toc-modules" class="nav-link" data-scroll-target="#modules">5.1 Modules</a></li>
+  <li><a href="#subworkflows" id="toc-subworkflows" class="nav-link" data-scroll-target="#subworkflows">5.2 Subworkflows</a></li>
+  </ul></li>
+  <li><a href="#the-nf-core-ecosystem" id="toc-the-nf-core-ecosystem" class="nav-link" data-scroll-target="#the-nf-core-ecosystem">6. The nf-core Ecosystem</a>
+  <ul class="collapse">
+  <li><a href="#selected-nf-core-pipelines" id="toc-selected-nf-core-pipelines" class="nav-link" data-scroll-target="#selected-nf-core-pipelines">6.1 Selected nf-core Pipelines</a></li>
+  <li><a href="#nf-core-guarantees" id="toc-nf-core-guarantees" class="nav-link" data-scroll-target="#nf-core-guarantees">6.2 nf-core Guarantees</a></li>
+  </ul></li>
+  <li><a href="#containers-the-reproducibility-layer" id="toc-containers-the-reproducibility-layer" class="nav-link" data-scroll-target="#containers-the-reproducibility-layer">7. Containers: The Reproducibility Layer</a></li>
+  <li><a href="#workflow-managers-where-does-nextflow-fit" id="toc-workflow-managers-where-does-nextflow-fit" class="nav-link" data-scroll-target="#workflow-managers-where-does-nextflow-fit">8. Workflow Managers: Where Does Nextflow Fit?</a></li>
+  <li><a href="#real-world-use-cases" id="toc-real-world-use-cases" class="nav-link" data-scroll-target="#real-world-use-cases">9. Real-World Use Cases</a>
+  <ul class="collapse">
+  <li><a href="#clinical-genomics" id="toc-clinical-genomics" class="nav-link" data-scroll-target="#clinical-genomics">9.1 Clinical Genomics</a></li>
+  <li><a href="#population-scale-genomics" id="toc-population-scale-genomics" class="nav-link" data-scroll-target="#population-scale-genomics">9.2 Population-Scale Genomics</a></li>
+  <li><a href="#cancer-genomics-atlases" id="toc-cancer-genomics-atlases" class="nav-link" data-scroll-target="#cancer-genomics-atlases">9.3 Cancer Genomics Atlases</a></li>
+  <li><a href="#drug-discovery" id="toc-drug-discovery" class="nav-link" data-scroll-target="#drug-discovery">9.4 Drug Discovery</a></li>
+  <li><a href="#your-research-lab" id="toc-your-research-lab" class="nav-link" data-scroll-target="#your-research-lab">9.5 Your Research Lab</a></li>
+  </ul></li>
+  <li><a href="#the-nextflow-execution-model" id="toc-the-nextflow-execution-model" class="nav-link" data-scroll-target="#the-nextflow-execution-model">10. The Nextflow Execution Model</a>
+  <ul class="collapse">
+  <li><a href="#the--resume-flag" id="toc-the--resume-flag" class="nav-link" data-scroll-target="#the--resume-flag">10.1 The <code>-resume</code> Flag</a></li>
+  </ul></li>
+  <li><a href="#your-first-look-at-a-nextflow-pipeline" id="toc-your-first-look-at-a-nextflow-pipeline" class="nav-link" data-scroll-target="#your-first-look-at-a-nextflow-pipeline">11. Your First Look at a Nextflow Pipeline</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">12. Summary</a></li>
+  <li><a href="#whats-next" id="toc-whats-next" class="nav-link" data-scroll-target="#whats-next">What’s Next</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">What is Nextflow? Concepts and Use Cases</h1>
+<p class="subtitle lead">Why bioinformatics pipelines need a dedicated workflow manager — and how Nextflow solves the problem</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Nextflow</div>
+    <div class="quarto-category">Workflow Management</div>
+    <div class="quarto-category">Bioinformatics</div>
+    <div class="quarto-category">Reproducibility</div>
+    <div class="quarto-category">nf-core</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    A conceptual introduction to Nextflow: the reproducibility and scalability problems it solves, the dataflow programming model, the role of nf-core, and how it compares to alternative workflow managers.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jubayer Hossain <a href="https://orcid.org/0000-0001-9323-4997" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 20, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Learning Objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>By the end of this tutorial you will be able to:</p>
+<ul>
+<li>Explain the <strong>reproducibility and scalability problems</strong> that motivated the development of workflow managers</li>
+<li>Describe what Nextflow is and understand its <strong>dataflow programming model</strong></li>
+<li>Define the four core abstractions: <strong>processes</strong>, <strong>channels</strong>, <strong>operators</strong>, and <strong>executors</strong></li>
+<li>Understand the difference between <strong>Nextflow DSL1 and DSL2</strong></li>
+<li>Recognise the <strong>nf-core</strong> community and the value it provides</li>
+<li>Make an informed choice between Nextflow and alternative workflow managers (Snakemake, WDL, CWL)</li>
+<li>Identify real-world bioinformatics <strong>use cases</strong> where Nextflow excels</li>
+</ul>
+<p><strong>Estimated reading time:</strong> 20–25 minutes <strong>Prerequisites:</strong> Basic familiarity with the Linux command line; no Nextflow experience required</p>
+</div>
+</div>
+<hr>
+<section id="the-problem-bioinformatics-pipelines-are-hard-to-run-twice" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem-bioinformatics-pipelines-are-hard-to-run-twice">1. The Problem: Bioinformatics Pipelines Are Hard to Run Twice</h2>
+<p>Ask any bioinformatician whether they have ever struggled to reproduce a published analysis — or even their own analysis from six months earlier — and the answer is almost universally yes.</p>
+<p>The root of this problem is that a typical NGS analysis is not a single program. It is a <strong>chain of tools</strong> that must be executed in the right order, on the right input files, with the right software versions, on hardware that may have very different properties from run to run. A standard bulk RNA-seq pipeline, for example, involves:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A([Raw FASTQ]) --&gt; B[FastQC\nQuality Control]
+    B --&gt; C[Trim Galore\nAdapter Trimming]
+    C --&gt; D[STAR\nAlignment]
+    D --&gt; E[featureCounts\nQuantification]
+    E --&gt; F[MultiQC\nQC Report]
+    F --&gt; G([DESeq2 / edgeR\nDiff. Expression])
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Each arrow in that chain represents a separate tool with its own software version, its own parameters, its own input and output file formats, and its own resource requirements (some steps need 32 GB of RAM and 8 CPUs; others need almost nothing).</p>
+<section id="the-shell-script-era" class="level3">
+<h3 class="anchored" data-anchor-id="the-shell-script-era">1.1 The Shell Script Era</h3>
+<p>The first instinct of most researchers — and historically the dominant approach — is to write a <strong>bash shell script</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">fastqc</span> raw_data/<span class="pp">*</span>.fastq.gz <span class="at">-o</span> qc/</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">trim_galore</span> <span class="at">--paired</span> raw_data/<span class="pp">*</span>_R1.fastq.gz raw_data/<span class="pp">*</span>_R2.fastq.gz <span class="at">-o</span> trimmed/</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">STAR</span> <span class="at">--genomeDir</span> genome/ <span class="at">--readFilesIn</span> trimmed/<span class="pp">*</span>_R1_val_1.fq.gz trimmed/<span class="pp">*</span>_R2_val_2.fq.gz <span class="dt">\</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">--outSAMtype</span> BAM SortedByCoordinate <span class="at">--outFileNamePrefix</span> aligned/</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># ... and so on</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This works for a single sample, run once, on one machine. It fails in every other situation:</p>
+<p><strong>Failure mode 1: Multiple samples.</strong> Add a <code>for</code> loop and the script becomes fragile — one failed sample aborts the entire run, and you have no easy way to restart from the point of failure.</p>
+<p><strong>Failure mode 2: Different machines.</strong> The script hardcodes paths, resource requirements, and tool locations that do not exist on another system.</p>
+<p><strong>Failure mode 3: Scaling.</strong> Running 100 samples sequentially takes 100× as long as running 1. Parallelising with <code>&amp;</code> and <code>wait</code> works until one job crashes and corrupts shared files.</p>
+<p><strong>Failure mode 4: Reproducibility.</strong> There is no automatic record of which software versions were used. Rerunning a year later with updated tools may silently produce different results.</p>
+</section>
+<section id="make-and-snakemake-an-improvement" class="level3">
+<h3 class="anchored" data-anchor-id="make-and-snakemake-an-improvement">1.2 Make and Snakemake: An Improvement</h3>
+<p><strong>GNU Make</strong>, designed in 1976 for compiling software, introduced the concept of <strong>rules</strong> — declarative specifications of how to build an output file from input files. If the output is newer than the input, skip the step. This solved the restart problem.</p>
+<p><strong>Snakemake</strong> (Mölder et al., 2021) brought this approach to bioinformatics with Python integration. It is widely used and genuinely effective. But both Make and Snakemake share a fundamental assumption: files live on a <strong>shared local filesystem</strong>. Scaling to cloud object storage (S3, GCS), distributed HPC schedulers, or container orchestration platforms requires substantial boilerplate.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Snakemake vs Nextflow: A Fair Comparison
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Snakemake and Nextflow are both mature, excellent tools with large communities. The choice is often a matter of preference:</p>
+<ul>
+<li><strong>Snakemake</strong> uses a <strong>file-centric</strong> model (rules define how to build files). Configuration is in Python/YAML — familiar to most bioinformaticians.</li>
+<li><strong>Nextflow</strong> uses a <strong>data-centric</strong> model (channels carry data between processes). Configuration is in a custom Groovy-based DSL designed for dataflow.</li>
+</ul>
+<p>Nextflow has a stronger story for <strong>cloud portability</strong> and <strong>container integration</strong>. Snakemake has better support for <strong>R integration</strong> and feels closer to a Python-native workflow. Both can run on HPC and cloud; neither is objectively superior in all scenarios.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="what-is-nextflow" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-nextflow">2. What is Nextflow?</h2>
+<p><strong>Nextflow</strong> is an open-source workflow framework and domain-specific language (DSL) for building scalable, reproducible bioinformatics data analysis pipelines. It was created by <strong>Paolo Di Tommaso</strong> and released in 2013 at the Center for Genomic Regulation (CRG) in Barcelona. It is maintained by <strong>Seqera Labs</strong> and has a large open-source community.</p>
+<p>The official definition from the Nextflow documentation is:</p>
+<blockquote class="blockquote">
+<p><em>Nextflow enables scalable and reproducible scientific workflows using software containers. It allows the adaptation of pipelines written in the most common scripting languages.</em></p>
+</blockquote>
+<p>Two words in that definition deserve unpacking: <strong>scalable</strong> and <strong>reproducible</strong>.</p>
+<ul>
+<li><p><strong>Scalable</strong> means that the exact same pipeline code runs locally on a laptop, on a university HPC cluster via SLURM, or on AWS Batch — without changing a single line of pipeline logic. You change a configuration profile; the code stays identical.</p></li>
+<li><p><strong>Reproducible</strong> means that every process in the pipeline can be executed inside a <strong>Docker or Singularity container</strong>, completely specifying the software environment. Anyone with the pipeline code, the containers, and the data can reproduce the result exactly, months or years later.</p></li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>What Nextflow is NOT
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Nextflow is not a bioinformatics tool itself. It does not align reads, call variants, or normalise expression. It is a <strong>framework for orchestrating other tools</strong>. Every process in a Nextflow pipeline is essentially a shell script that calls an existing tool (BWA, STAR, GATK, DeepVariant, etc.) on specific inputs.</p>
+<p>Think of Nextflow as the conductor of an orchestra — it does not play any instrument, but it ensures that every instrument plays the right notes at the right time, and that the performance can be repeated identically on any stage.</p>
+</div>
+</div>
+<section id="a-brief-history" class="level3">
+<h3 class="anchored" data-anchor-id="a-brief-history">2.1 A Brief History</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Year</th>
+<th>Milestone</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2013</td>
+<td>Nextflow 0.1 released by Paolo Di Tommaso at CRG Barcelona</td>
+</tr>
+<tr class="even">
+<td>2017</td>
+<td>Groovy-based DSL becomes stable; major HPC adoption begins</td>
+</tr>
+<tr class="odd">
+<td>2018</td>
+<td><strong>nf-core</strong> community founded by Phil Ewels; first curated pipeline suite</td>
+</tr>
+<tr class="even">
+<td>2020</td>
+<td><strong>DSL2</strong> released — modular pipeline design, reusable process modules</td>
+</tr>
+<tr class="odd">
+<td>2021</td>
+<td><strong>Seqera Platform</strong> (formerly Nextflow Tower) launched for pipeline monitoring</td>
+</tr>
+<tr class="even">
+<td>2022</td>
+<td>DSL1 officially deprecated; DSL2 becomes the only supported syntax</td>
+</tr>
+<tr class="odd">
+<td>2023</td>
+<td>nf-core surpasses 100 community pipelines; 1,000+ contributors worldwide</td>
+</tr>
+<tr class="even">
+<td>2024</td>
+<td>Nextflow adds native support for <strong>nf-test</strong> integration; Wave containers launched</td>
+</tr>
+</tbody>
+</table>
+<p>DSL2 is the version you will learn in this series. DSL1 code looks syntactically similar but has important differences in how processes are defined and composed — if you encounter older tutorials online, be aware of this distinction.</p>
+<hr>
+</section>
+</section>
+<section id="the-dataflow-programming-model" class="level2">
+<h2 class="anchored" data-anchor-id="the-dataflow-programming-model">3. The Dataflow Programming Model</h2>
+<p>To understand Nextflow deeply, you need to understand the <strong>dataflow programming paradigm</strong> — the conceptual model that underpins the entire framework.</p>
+<p>In a traditional sequential program, statements execute one after another in a defined order. Parallelism must be explicitly programmed. In a dataflow program, <strong>computation is triggered by data availability</strong>. A process executes as soon as all its required inputs are present, regardless of what other processes are doing.</p>
+<p>This model maps beautifully onto bioinformatics pipelines:</p>
+<ul>
+<li>Aligning sample A does not depend on the state of sample B — it only depends on the FASTQ file for sample A being available.</li>
+<li>Variant calling for sample A depends only on the BAM file for sample A, which is produced by alignment.</li>
+<li>MultiQC depends on all QC report files from all samples being ready.</li>
+</ul>
+<p>In Nextflow, this data dependency graph is described through <strong>channels</strong> — streams of data that connect processes together.</p>
+<section id="visualising-a-simple-dataflow-graph" class="level3">
+<h3 class="anchored" data-anchor-id="visualising-a-simple-dataflow-graph">3.1 Visualising a Simple Dataflow Graph</h3>
+<p>Consider a minimal RNA-seq pipeline with three steps: trimming, alignment, and quantification. In Nextflow’s mental model:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A([FASTQ files channel]) --&gt; B
+    B["TRIM_READS\nruns independently per sample"] --&gt;|trimmed FASTQ channel| C
+    C["ALIGN_READS\nstarts as soon as trimmed FASTQ ready"] --&gt;|BAM channel| D
+    D["QUANTIFY_READS\none count matrix per sample"] --&gt;|counts channel| E
+    E([Output: count matrices])
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>If you have 10 samples, all 10 TRIM_READS processes can run simultaneously. As soon as sample 3’s trimming finishes, its ALIGN_READS process starts — without waiting for samples 1, 2, 4–10 to finish trimming. This automatic, fine-grained parallelism is one of Nextflow’s most important practical advantages.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Why This Matters at Scale
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A sequential shell script processing 100 samples one at a time might take 100 hours. A Nextflow pipeline with the same 100 samples, submitted to a SLURM cluster that can schedule 20 concurrent jobs, might take 5–6 hours — with no changes to the pipeline logic. The scheduler is invisible to the pipeline code.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="the-four-core-abstractions" class="level2">
+<h2 class="anchored" data-anchor-id="the-four-core-abstractions">4. The Four Core Abstractions</h2>
+<p>Nextflow pipelines are built from four fundamental concepts. Understanding these before writing a single line of code is worth the investment.</p>
+<section id="processes" class="level3">
+<h3 class="anchored" data-anchor-id="processes">4.1 Processes</h3>
+<p>A <strong>process</strong> is the basic execution unit in Nextflow. It defines: - What <strong>inputs</strong> it expects (files, strings, integers) - What <strong>outputs</strong> it produces (files, strings) - The <strong>script</strong> to execute (bash, Python, R, or any language)</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>process TRIM_READS <span class="op">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    input<span class="op">:</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    tuple <span class="fu">val</span><span class="op">(</span>sample_id<span class="op">),</span> <span class="fu">path</span><span class="op">(</span>reads<span class="op">)</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    output<span class="op">:</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    tuple <span class="fu">val</span><span class="op">(</span>sample_id<span class="op">),</span> <span class="fu">path</span><span class="op">(</span><span class="st">"*_trimmed.fastq.gz"</span><span class="op">)</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    script<span class="op">:</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"""</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="st">    trim_galore --paired </span><span class="ss">${</span>reads<span class="op">[</span><span class="dv">0</span><span class="op">]</span><span class="ss">}</span><span class="st"> </span><span class="ss">${</span>reads<span class="op">[</span><span class="dv">1</span><span class="op">]</span><span class="ss">}</span><span class="st"> --basename </span><span class="ss">${</span>sample_id<span class="ss">}</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="st">    """</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Each invocation of a process runs in its own <strong>isolated working directory</strong>. Processes cannot share mutable state — they communicate exclusively through channels. This isolation is what makes processes safe to run in parallel and inside containers.</p>
+</section>
+<section id="channels" class="level3">
+<h3 class="anchored" data-anchor-id="channels">4.2 Channels</h3>
+<p>A <strong>channel</strong> is an asynchronous queue that carries data between processes. There are two types:</p>
+<p><strong>Queue channels</strong> carry data items that are consumed once — each item flows to exactly one downstream process invocation. This is used for per-sample processing.</p>
+<p><strong>Value channels</strong> carry a single value that can be read by multiple processes indefinitely. This is used for reference files (a genome index, an annotation GTF) shared by all samples.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Queue channel: each FASTQ pair flows to one TRIM_READS invocation</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">Channel</span><span class="op">.</span><span class="fu">fromFilePairs</span><span class="op">(</span><span class="st">"data/*_{R1,R2}.fastq.gz"</span><span class="op">)</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">set</span> <span class="op">{</span> reads_ch <span class="op">}</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">// Value channel: shared reference used by all alignment processes</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="bu">Channel</span><span class="op">.</span><span class="fu">value</span><span class="op">(</span><span class="fu">file</span><span class="op">(</span><span class="st">"genome/GRCh38.fa"</span><span class="op">))</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">set</span> <span class="op">{</span> genome_ch <span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="operators" class="level3">
+<h3 class="anchored" data-anchor-id="operators">4.3 Operators</h3>
+<p><strong>Operators</strong> are functions that transform channels — filtering items, reshaping them, combining two channels, or collecting all items into a list. They are the glue between processes.</p>
+<p>Common operators you will use constantly:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>map</code></td>
+<td>Transform each item in a channel</td>
+</tr>
+<tr class="even">
+<td><code>filter</code></td>
+<td>Keep only items matching a condition</td>
+</tr>
+<tr class="odd">
+<td><code>collect</code></td>
+<td>Wait for all items and emit as a single list</td>
+</tr>
+<tr class="even">
+<td><code>groupTuple</code></td>
+<td>Group items sharing a common key</td>
+</tr>
+<tr class="odd">
+<td><code>combine</code></td>
+<td>Combine every item of channel A with every item of channel B</td>
+</tr>
+<tr class="even">
+<td><code>branch</code></td>
+<td>Split a channel into multiple named sub-channels</td>
+</tr>
+<tr class="odd">
+<td><code>join</code></td>
+<td>Merge two channels on a shared key</td>
+</tr>
+</tbody>
+</table>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Example: extract just the sample_id from a tuple channel</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>reads_ch</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">map</span> <span class="op">{</span> sample_id<span class="op">,</span> reads <span class="op">-&gt;</span> sample_id <span class="op">}</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">view</span> <span class="op">{</span> <span class="st">"Processing sample: </span><span class="ss">$it</span><span class="st">"</span> <span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="executors" class="level3">
+<h3 class="anchored" data-anchor-id="executors">4.4 Executors</h3>
+<p>An <strong>executor</strong> is the system that actually runs each process. Nextflow ships with executors for:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Executor</th>
+<th>Where it runs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>local</code></td>
+<td>Your current machine (default)</td>
+</tr>
+<tr class="even">
+<td><code>slurm</code></td>
+<td>SLURM HPC scheduler</td>
+</tr>
+<tr class="odd">
+<td><code>lsf</code></td>
+<td>IBM LSF scheduler</td>
+</tr>
+<tr class="even">
+<td><code>pbs</code> / <code>pbspro</code></td>
+<td>PBS/Torque schedulers</td>
+</tr>
+<tr class="odd">
+<td><code>sge</code></td>
+<td>Sun/Oracle Grid Engine</td>
+</tr>
+<tr class="even">
+<td><code>awsbatch</code></td>
+<td>AWS Batch</td>
+</tr>
+<tr class="odd">
+<td><code>google-batch</code></td>
+<td>Google Cloud Batch</td>
+</tr>
+<tr class="even">
+<td><code>k8s</code></td>
+<td>Kubernetes</td>
+</tr>
+<tr class="odd">
+<td><code>azurebatch</code></td>
+<td>Microsoft Azure Batch</td>
+</tr>
+</tbody>
+</table>
+<p>The critical point: <strong>you change the executor in a configuration file, not in the pipeline code</strong>. The same <code>main.nf</code> file runs locally for development and on a 10,000-core HPC cluster for production. This separation of concerns is a major architectural advantage.</p>
+<hr>
+</section>
+</section>
+<section id="dsl2-modular-pipeline-design" class="level2">
+<h2 class="anchored" data-anchor-id="dsl2-modular-pipeline-design">5. DSL2: Modular Pipeline Design</h2>
+<p><strong>DSL2</strong> (Domain-Specific Language version 2) is the current syntax for Nextflow, released in 2020 and now the only supported version. Its key innovation over DSL1 is <strong>modules</strong> — reusable, shareable process definitions that can be imported into any pipeline.</p>
+<section id="modules" class="level3">
+<h3 class="anchored" data-anchor-id="modules">5.1 Modules</h3>
+<p>In DSL2, a process can be defined in its own file and imported with <code>include</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">// modules/trim_reads.nf</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>process TRIM_READS <span class="op">{</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    container <span class="st">'quay.io/biocontainers/trim-galore:0.6.7--hdfd78af_0'</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    input<span class="op">:</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    tuple <span class="fu">val</span><span class="op">(</span>sample_id<span class="op">),</span> <span class="fu">path</span><span class="op">(</span>reads<span class="op">)</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    output<span class="op">:</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    tuple <span class="fu">val</span><span class="op">(</span>sample_id<span class="op">),</span> <span class="fu">path</span><span class="op">(</span><span class="st">"*_trimmed.fastq.gz"</span><span class="op">)</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    script<span class="op">:</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"""</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="st">    trim_galore --paired </span><span class="ss">${</span>reads<span class="op">[</span><span class="dv">0</span><span class="op">]</span><span class="ss">}</span><span class="st"> </span><span class="ss">${</span>reads<span class="op">[</span><span class="dv">1</span><span class="op">]</span><span class="ss">}</span><span class="st"> --basename </span><span class="ss">${</span>sample_id<span class="ss">}</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="st">    """</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">// main.nf</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>include <span class="op">{</span> TRIM_READS <span class="op">}</span> from <span class="st">'./modules/trim_reads'</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>include <span class="op">{</span> ALIGN_READS <span class="op">}</span> from <span class="st">'./modules/align_reads'</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>workflow <span class="op">{</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    reads_ch <span class="op">=</span> <span class="bu">Channel</span><span class="op">.</span><span class="fu">fromFilePairs</span><span class="op">(</span>params<span class="op">.</span>reads<span class="op">)</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">TRIM_READS</span><span class="op">(</span>reads_ch<span class="op">)</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ALIGN_READS</span><span class="op">(</span>TRIM_READS<span class="op">.</span>out<span class="op">)</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This modularity is what makes nf-core possible — a library of standardised, tested, containerised modules that any pipeline can import.</p>
+</section>
+<section id="subworkflows" class="level3">
+<h3 class="anchored" data-anchor-id="subworkflows">5.2 Subworkflows</h3>
+<p>A <strong>subworkflow</strong> is a named, reusable chain of processes — a pipeline within a pipeline. Complex pipelines (e.g., a complete WGS variant calling pipeline) are decomposed into subworkflows: <code>PREPROCESSING</code>, <code>VARIANT_CALLING</code>, <code>ANNOTATION</code>. Each subworkflow can be tested independently and reused across pipelines.</p>
+<hr>
+</section>
+</section>
+<section id="the-nf-core-ecosystem" class="level2">
+<h2 class="anchored" data-anchor-id="the-nf-core-ecosystem">6. The nf-core Ecosystem</h2>
+<p><strong>nf-core</strong> is a community effort to collect a curated set of analysis pipelines built using Nextflow. It was founded by <strong>Phil Ewels</strong> (now at Seqera) in 2018 and has grown into one of the most active open-source communities in computational biology.</p>
+<p>The nf-core mission statement is:</p>
+<blockquote class="blockquote">
+<p><em>A community effort to collect a curated set of analysis pipelines built using Nextflow. All nf-core pipelines follow a strict set of guidelines to ensure high quality, reproducibility, and portability.</em></p>
+</blockquote>
+<p>As of 2024, nf-core includes:</p>
+<ul>
+<li><strong>100+ peer-reviewed pipelines</strong> covering genomics, transcriptomics, proteomics, metagenomics, imaging analysis, and more</li>
+<li><strong>1,000+ contributors</strong> from research institutions worldwide</li>
+<li>A shared <strong>module library</strong> (nf-core/modules) with 1,000+ tested, containerised process modules</li>
+<li>A <strong>template</strong> that standardises pipeline structure, testing, CI/CD, documentation, and release management</li>
+<li>The <strong>nf-core/tools</strong> CLI for creating, linting, and updating pipelines</li>
+</ul>
+<section id="selected-nf-core-pipelines" class="level3">
+<h3 class="anchored" data-anchor-id="selected-nf-core-pipelines">6.1 Selected nf-core Pipelines</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pipeline</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>nf-core/rnaseq</code></td>
+<td>RNA-seq: alignment, QC, quantification (STAR/Salmon + DESeq2)</td>
+</tr>
+<tr class="even">
+<td><code>nf-core/sarek</code></td>
+<td>Germline and somatic variant calling (WGS/WES)</td>
+</tr>
+<tr class="odd">
+<td><code>nf-core/chipseq</code></td>
+<td>ChIP-seq peak calling and annotation</td>
+</tr>
+<tr class="even">
+<td><code>nf-core/atacseq</code></td>
+<td>ATAC-seq chromatin accessibility analysis</td>
+</tr>
+<tr class="odd">
+<td><code>nf-core/methylseq</code></td>
+<td>Bisulfite sequencing (WGBS / RRBS)</td>
+</tr>
+<tr class="even">
+<td><code>nf-core/scrnaseq</code></td>
+<td>Single-cell RNA-seq (Cell Ranger, STARsolo, Alevin)</td>
+</tr>
+<tr class="odd">
+<td><code>nf-core/taxprofiler</code></td>
+<td>Metagenomic taxonomic profiling</td>
+</tr>
+<tr class="even">
+<td><code>nf-core/mag</code></td>
+<td>Metagenomic assembly and binning</td>
+</tr>
+<tr class="odd">
+<td><code>nf-core/proteomicslfq</code></td>
+<td>Label-free quantification proteomics</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Running an nf-core Pipeline is Three Commands
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The ergonomics of nf-core are genuinely impressive. To run the complete nf-core/rnaseq pipeline — FASTQ to counts, with MultiQC report — on your data:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Install nf-core tools (once)</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install nf-core</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Download the pipeline</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> pull nf-core/rnaseq</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Run it</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> run nf-core/rnaseq <span class="dt">\</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">--input</span> samplesheet.csv <span class="dt">\</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">--outdir</span> results/ <span class="dt">\</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">--genome</span> GRCh38 <span class="dt">\</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">-profile</span> docker</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Nextflow automatically pulls the required container images. No manual software installation required beyond Nextflow itself and Docker.</p>
+</div>
+</div>
+</section>
+<section id="nf-core-guarantees" class="level3">
+<h3 class="anchored" data-anchor-id="nf-core-guarantees">6.2 nf-core Guarantees</h3>
+<p>Every nf-core pipeline must:</p>
+<ul>
+<li>Pass <strong>automated linting</strong> (<code>nf-core lint</code>) checking 150+ code quality rules</li>
+<li>Include a <strong>test profile</strong> that runs end-to-end on minimal data in CI</li>
+<li>Specify container images for every process (Docker + Singularity)</li>
+<li>Follow a standardised <strong>samplesheet</strong> format for input specification</li>
+<li>Include a <strong>MultiQC report</strong> with QC metrics for all samples</li>
+<li>Maintain <strong>semantic versioning</strong> (patch/minor/major) with changelogs</li>
+<li>Be reviewed and approved by at least two community members</li>
+</ul>
+<p>This standardisation means that if you know how to run one nf-core pipeline, you essentially know how to run all of them.</p>
+<hr>
+</section>
+</section>
+<section id="containers-the-reproducibility-layer" class="level2">
+<h2 class="anchored" data-anchor-id="containers-the-reproducibility-layer">7. Containers: The Reproducibility Layer</h2>
+<p>Nextflow’s reproducibility guarantee comes from its integration with <strong>containers</strong>. A container packages a complete software environment — the tool, its dependencies, and the operating system libraries it needs — into an immutable, versioned image.</p>
+<p>When Nextflow runs a process with <code>container 'quay.io/biocontainers/star:2.7.10a--h9ee0642_0'</code>, it means:</p>
+<ul>
+<li>STAR version exactly 2.7.10a</li>
+<li>On a specific build of the conda-forge environment</li>
+<li>With all system libraries pinned to specific versions</li>
+<li>Reproducible on any Linux system with Docker or Singularity installed</li>
+<li>Archived permanently on the Quay.io or Docker Hub registry</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Docker vs Singularity: When to Use Which
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Docker</strong> requires root (or sudoless Docker daemon access). It works on laptops, cloud VMs, and container platforms. Most HPC systems <strong>do not allow Docker</strong> because it grants effective root access to the host.</p>
+<p><strong>Singularity</strong> (also called Apptainer) runs containers <strong>without root</strong>. It is the container runtime of choice for HPC clusters. Nextflow supports both identically — you switch between them with <code>-profile docker</code> or <code>-profile singularity</code>.</p>
+<p>The rule of thumb: use Docker for local development and cloud; use Singularity on HPC.</p>
+</div>
+</div>
+<p>The combination of Nextflow + containers means that a pipeline run in 2024 can be reproduced exactly in 2030, as long as the container images are still accessible. This is a stronger reproducibility guarantee than conda environments (which can silently change when packages are updated) or module-based HPC environments (which vary between clusters).</p>
+<hr>
+</section>
+<section id="workflow-managers-where-does-nextflow-fit" class="level2">
+<h2 class="anchored" data-anchor-id="workflow-managers-where-does-nextflow-fit">8. Workflow Managers: Where Does Nextflow Fit?</h2>
+<p>The bioinformatics workflow manager landscape has several mature options. Here is a practical comparison to help you understand Nextflow’s position:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th>Nextflow</th>
+<th>Snakemake</th>
+<th>WDL</th>
+<th>CWL</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Paradigm</td>
+<td>Dataflow (channel-based)</td>
+<td>File-based (rule-based)</td>
+<td>Task-based</td>
+<td>Graph-based</td>
+</tr>
+<tr class="even">
+<td>Language</td>
+<td>Groovy DSL</td>
+<td>Python</td>
+<td>JSON/YAML-like</td>
+<td>YAML/JSON</td>
+</tr>
+<tr class="odd">
+<td>Container support</td>
+<td>Excellent (Docker, Singularity, Conda, Wave)</td>
+<td>Good</td>
+<td>Good</td>
+<td>Good</td>
+</tr>
+<tr class="even">
+<td>Cloud portability</td>
+<td>Excellent (native AWS/GCP/Azure)</td>
+<td>Good (with wrappers)</td>
+<td>Good (Terra/DNAnexus)</td>
+<td>Limited</td>
+</tr>
+<tr class="odd">
+<td>HPC support</td>
+<td>Excellent</td>
+<td>Excellent</td>
+<td>Moderate</td>
+<td>Moderate</td>
+</tr>
+<tr class="even">
+<td>Community pipelines</td>
+<td>nf-core (100+)</td>
+<td>Snakemake-workflows (50+)</td>
+<td>Broad Institute GATK</td>
+<td>Limited</td>
+</tr>
+<tr class="odd">
+<td>Learning curve</td>
+<td>Moderate (new DSL)</td>
+<td>Low (Python-like)</td>
+<td>Moderate</td>
+<td>High</td>
+</tr>
+<tr class="even">
+<td>Monitoring/UI</td>
+<td>Seqera Platform</td>
+<td>None native</td>
+<td>Terra</td>
+<td>None native</td>
+</tr>
+<tr class="odd">
+<td>Primary adopters</td>
+<td>Genomics, oncology, rare disease</td>
+<td>Genomics, ecology, structural biology</td>
+<td>Broad Institute, TCGA, TOPMed</td>
+<td>Bioinformatics standards bodies</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>WDL and CWL: When to Use Them
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>WDL (Workflow Description Language)</strong> was developed by the Broad Institute and is the standard language for pipelines on the <strong>Terra</strong> and <strong>DNAnexus</strong> platforms. If your work involves TCGA data or Broad Institute tools (GATK, Mutect2), WDL is the practical choice.</p>
+<p><strong>CWL (Common Workflow Language)</strong> is an open standard designed for interoperability between platforms. It is rarely written by hand but is often used as an intermediate representation or output format. If you are submitting to a platform that requires CWL, tools exist to convert from other languages.</p>
+<p>Neither WDL nor CWL has a community pipeline ecosystem comparable to nf-core.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="real-world-use-cases" class="level2">
+<h2 class="anchored" data-anchor-id="real-world-use-cases">9. Real-World Use Cases</h2>
+<p>Nextflow is used in production at some of the world’s largest genomics operations. Understanding where it excels helps you evaluate whether it is the right tool for your own work.</p>
+<section id="clinical-genomics" class="level3">
+<h3 class="anchored" data-anchor-id="clinical-genomics">9.1 Clinical Genomics</h3>
+<p><strong>Clinical Genomics Sweden</strong> uses nf-core/sarek to process whole-genome sequencing data from rare disease patients. The pipeline runs on a SLURM cluster, uses Singularity containers, and has been validated against the AstraZeneca rare disease programme requirements. The same pipeline code runs on ~50 samples per week in a clinical diagnostic context where <strong>reproducibility is a regulatory requirement</strong>, not just good practice.</p>
+</section>
+<section id="population-scale-genomics" class="level3">
+<h3 class="anchored" data-anchor-id="population-scale-genomics">9.2 Population-Scale Genomics</h3>
+<p>The <strong>UK Biobank</strong> analysis of 500,000 exomes used Nextflow-based pipelines running on AWS. The scale — petabytes of data, millions of compute hours — would be impractical with any file-system-centric workflow manager. Nextflow’s native AWS Batch integration allowed data to be processed where it was stored (S3), avoiding massive data transfer costs.</p>
+</section>
+<section id="cancer-genomics-atlases" class="level3">
+<h3 class="anchored" data-anchor-id="cancer-genomics-atlases">9.3 Cancer Genomics Atlases</h3>
+<p>The <strong>ICGC/PCAWG</strong> (Pan-Cancer Analysis of Whole Genomes) project processed whole genomes from 2,658 donors across 38 cancer types using a harmonised Nextflow pipeline. Different member institutions (in different countries, on different HPC systems) ran the <strong>identical pipeline code</strong> using institution-specific profiles — ensuring that results were comparable across sites.</p>
+</section>
+<section id="drug-discovery" class="level3">
+<h3 class="anchored" data-anchor-id="drug-discovery">9.4 Drug Discovery</h3>
+<p>Several pharmaceutical companies (AstraZeneca, Roche, Novartis) use nf-core pipelines in their internal bioinformatics platforms. The standardisation and audit trail provided by Nextflow + containers satisfies GxP (Good Practice) regulatory requirements for drug discovery workflows.</p>
+</section>
+<section id="your-research-lab" class="level3">
+<h3 class="anchored" data-anchor-id="your-research-lab">9.5 Your Research Lab</h3>
+<p>For a typical academic bioinformatics group, Nextflow solves three practical problems:</p>
+<ol type="1">
+<li><strong>New lab members</strong> can run existing pipelines without understanding every tool — they only need to provide a samplesheet and a profile name.</li>
+<li><strong>Results are reproducible</strong> when you submit your manuscript six months after running the analysis.</li>
+<li><strong>The same analysis</strong> scales from 5 test samples on your laptop to 500 samples on your institution’s HPC without rewriting any code.</li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="the-nextflow-execution-model" class="level2">
+<h2 class="anchored" data-anchor-id="the-nextflow-execution-model">10. The Nextflow Execution Model</h2>
+<p>When you run <code>nextflow run main.nf</code>, here is what happens under the hood:</p>
+<ol type="1">
+<li><p><strong>Nextflow compiles</strong> the pipeline script into an internal dataflow graph (a DAG — Directed Acyclic Graph). Each node is a process; each edge is a channel.</p></li>
+<li><p><strong>The scheduler</strong> monitors channel states. When all inputs for a process invocation are available, it is submitted to the executor.</p></li>
+<li><p><strong>Each process invocation</strong> runs in an isolated working directory under <code>work/</code>. Nextflow stages input files (via symlink or copy), runs the script, and captures output files.</p></li>
+<li><p><strong>The results directory</strong> (<code>--outdir</code>) receives only the files explicitly published by processes. The <code>work/</code> directory contains full provenance: the exact script run, the stdout/stderr, the return code, and all intermediate files.</p></li>
+<li><p><strong>The <code>.nextflow.log</code></strong> records every decision made by the scheduler. The <code>.nextflow/cache/</code> directory stores checksums of inputs — enabling <code>-resume</code>.</p></li>
+</ol>
+<section id="the--resume-flag" class="level3">
+<h3 class="anchored" data-anchor-id="the--resume-flag">10.1 The <code>-resume</code> Flag</h3>
+<p>One of Nextflow’s most valuable practical features is <strong>caching</strong>. When you run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> run main.nf <span class="at">-resume</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Nextflow checks the checksum of each process’s inputs and parameters. If they match a previously completed run, the cached output is used — that process is skipped. Only processes whose inputs have changed (or which previously failed) are re-executed.</p>
+<p>This means: - If trimming succeeded but alignment failed, rerunning with <code>-resume</code> skips trimming entirely - If you change a parameter that only affects the last step, only the last step re-runs - Iterative development (tweak a parameter → rerun → inspect results) is fast</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>When <code>-resume</code> Does NOT Work
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Caching depends on input checksums. If you: - Modify an input file in place (rather than creating a new version) - Change the container image without changing the tag - Manually delete the <code>work/</code> directory</p>
+<p>…then the cache is invalidated or lost, and <code>-resume</code> will re-run everything. Keep your <code>work/</code> directory intact during development.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="your-first-look-at-a-nextflow-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="your-first-look-at-a-nextflow-pipeline">11. Your First Look at a Nextflow Pipeline</h2>
+<p>To make the concepts concrete, here is a complete, minimal Nextflow DSL2 pipeline — a “Hello World” that counts the number of reads in each FASTQ file in a directory:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode groovy code-with-copy"><code class="sourceCode groovy"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">// main.nf</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>nextflow<span class="op">.</span>enable<span class="op">.</span>dsl<span class="op">=</span><span class="dv">2</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>process COUNT_READS <span class="op">{</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    input<span class="op">:</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    path fastq</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    output<span class="op">:</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    stdout</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    script<span class="op">:</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"""</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="st">    echo "</span><span class="ss">${</span>fastq<span class="ss">}</span><span class="st">: </span><span class="er">\$</span><span class="st">(zcat </span><span class="ss">${</span>fastq<span class="ss">}</span><span class="st"> | wc -l | awk '{print </span><span class="er">\$</span><span class="st">1/4}') reads"</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="st">    """</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>workflow <span class="op">{</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Channel</span><span class="op">.</span><span class="fu">fromPath</span><span class="op">(</span><span class="st">"data/*.fastq.gz"</span><span class="op">)</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>        <span class="op">|</span> COUNT_READS</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>        <span class="op">|</span> view</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Running this pipeline:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> run main.nf</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Produces output like:</p>
+<pre><code>sample_A.fastq.gz: 2543871 reads
+sample_B.fastq.gz: 3102456 reads
+sample_C.fastq.gz: 1987234 reads</code></pre>
+<p>All three COUNT_READS invocations run in parallel, in isolated working directories. The <code>| view</code> operator prints results to the terminal as they complete.</p>
+<p>In the next tutorial, you will install Nextflow and run this exact pipeline yourself.</p>
+<hr>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">12. Summary</h2>
+<p>Bioinformatics pipelines are complex, multi-step, multi-tool processes that fail to be reproducible and scalable when implemented as shell scripts. Workflow managers exist to solve this problem by providing a framework for:</p>
+<ul>
+<li><strong>Declaring</strong> data dependencies between steps (rather than sequencing them imperatively)</li>
+<li><strong>Parallelising</strong> automatically across samples</li>
+<li><strong>Isolating</strong> execution environments with containers</li>
+<li><strong>Resuming</strong> from failure without rerunning successful steps</li>
+<li><strong>Porting</strong> between local, HPC, and cloud execution environments with configuration changes only</li>
+</ul>
+<p><strong>Nextflow</strong> implements a <strong>dataflow programming model</strong> where processes communicate through <strong>channels</strong> — asynchronous data streams. The four core abstractions — processes, channels, operators, and executors — compose into pipelines of any complexity.</p>
+<p><strong>DSL2</strong> is the current Nextflow syntax, enabling modular, reusable pipeline components (modules and subworkflows) that can be shared across projects.</p>
+<p><strong>nf-core</strong> is the community ecosystem of standardised, peer-reviewed Nextflow pipelines that solve the most common bioinformatics analysis scenarios — from RNA-seq and variant calling to metagenomics and proteomics.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Key Concepts Checklist
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before moving on, make sure you can explain:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Why shell scripts are insufficient for production bioinformatics pipelines</label></li>
+<li><label><input type="checkbox">What the <strong>dataflow programming model</strong> is and why it enables automatic parallelism</label></li>
+<li><label><input type="checkbox">The difference between a <strong>process</strong>, a <strong>channel</strong>, an <strong>operator</strong>, and an <strong>executor</strong></label></li>
+<li><label><input type="checkbox">What <strong>DSL2 modules</strong> are and why they matter</label></li>
+<li><label><input type="checkbox">What <strong>nf-core</strong> is and what guarantees its pipelines provide</label></li>
+<li><label><input type="checkbox">The difference between <strong>Docker</strong> and <strong>Singularity</strong> and when to use each</label></li>
+<li><label><input type="checkbox">What the <code>-resume</code> flag does and when it works</label></li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+<section id="whats-next" class="level2">
+<h2 class="anchored" data-anchor-id="whats-next">What’s Next</h2>
+<p><strong>Tutorial #2 — Installing Nextflow and Java</strong> Set up your Nextflow environment from scratch. Install the Java runtime, download the Nextflow launcher, verify your installation, and configure essential settings for local and HPC use.</p>
+<hr>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ul>
+<li><p><strong>Di Tommaso P et al.</strong> (2017). Nextflow enables reproducible computational workflows. <em>Nature Biotechnology</em>, 35, 316–319. DOI: <a href="https://doi.org/10.1038/nbt.3820">10.1038/nbt.3820</a></p></li>
+<li><p><strong>Ewels PA et al.</strong> (2020). The nf-core framework for community-curated bioinformatics pipelines. <em>Nature Biotechnology</em>, 38, 276–278. DOI: <a href="https://doi.org/10.1038/s41587-020-0439-x">10.1038/s41587-020-0439-x</a></p></li>
+<li><p><strong>Mölder F et al.</strong> (2021). Sustainable data analysis with Snakemake. <em>F1000Research</em>, 10, 33. DOI: <a href="https://doi.org/10.12688/f1000research.29032.2">10.12688/f1000research.29032.2</a></p></li>
+<li><p><strong>Amstutz P et al.</strong> (2016). Common Workflow Language, v1.0. <em>Figshare</em>. DOI: <a href="https://doi.org/10.6084/m9.figshare.3115156.v2">10.6084/m9.figshare.3115156.v2</a></p></li>
+<li><p><strong>Voss K et al.</strong> (2017). Full-stack genomics pipelining with GATK4 + WDL + Cromwell. <em>F1000Research</em>, 6(ISCB Comm J):1381. DOI: <a href="https://doi.org/10.7490/f1000research.1114634.1">10.7490/f1000research.1114634.1</a></p></li>
+<li><p><strong>Merkel D</strong> (2014). Docker: Lightweight Linux containers for consistent development and deployment. <em>Linux Journal</em>, 2014(239), 2.</p></li>
+<li><p><strong>Kurtzer GM et al.</strong> (2017). Singularity: Scientific containers for mobility of compute. <em>PLOS ONE</em>, 12(5): e0177459. DOI: <a href="https://doi.org/10.1371/journal.pone.0177459">10.1371/journal.pone.0177459</a></p></li>
+<li><p><strong>Campbell MS et al.</strong> (2022). nf-core/sarek: A portable workflow for whole-genome sequencing analysis of germline and somatic variants. <em>F1000Research</em>, 10:1125. DOI: <a href="https://doi.org/10.12688/f1000research.16665.2">10.12688/f1000research.16665.2</a></p></li>
+<li><p><strong>PCAWG Consortium</strong> (2020). Pan-cancer analysis of whole genomes. <em>Nature</em>, 578, 82–93. DOI: <a href="https://doi.org/10.1038/s41586-020-1969-6">10.1038/s41586-020-1969-6</a></p></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>© Copyright 2025, Jubayer Hossain</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

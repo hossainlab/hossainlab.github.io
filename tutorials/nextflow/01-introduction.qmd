@@ -1,0 +1,603 @@
+---
+title: "What is Nextflow? Concepts and Use Cases"
+subtitle: "Why bioinformatics pipelines need a dedicated workflow manager — and how Nextflow solves the problem"
+author:
+  - name: Jubayer Hossain
+    orcid: 0000-0001-9323-4997
+date: "2026-04-20"
+categories: [Nextflow, Workflow Management, Bioinformatics, Reproducibility, nf-core]
+description: "A conceptual introduction to Nextflow: the reproducibility and scalability problems it solves, the dataflow programming model, the role of nf-core, and how it compares to alternative workflow managers."
+toc: true
+toc-depth: 3
+---
+
+::: {.callout-note}
+## Learning Objectives
+
+By the end of this tutorial you will be able to:
+
+- Explain the **reproducibility and scalability problems** that motivated the development of workflow managers
+- Describe what Nextflow is and understand its **dataflow programming model**
+- Define the four core abstractions: **processes**, **channels**, **operators**, and **executors**
+- Understand the difference between **Nextflow DSL1 and DSL2**
+- Recognise the **nf-core** community and the value it provides
+- Make an informed choice between Nextflow and alternative workflow managers (Snakemake, WDL, CWL)
+- Identify real-world bioinformatics **use cases** where Nextflow excels
+
+**Estimated reading time:** 20–25 minutes
+**Prerequisites:** Basic familiarity with the Linux command line; no Nextflow experience required
+:::
+
+---
+
+## 1. The Problem: Bioinformatics Pipelines Are Hard to Run Twice
+
+Ask any bioinformatician whether they have ever struggled to reproduce a published analysis — or even their own analysis from six months earlier — and the answer is almost universally yes.
+
+The root of this problem is that a typical NGS analysis is not a single program. It is a **chain of tools** that must be executed in the right order, on the right input files, with the right software versions, on hardware that may have very different properties from run to run. A standard bulk RNA-seq pipeline, for example, involves:
+
+```{mermaid}
+flowchart LR
+    A([Raw FASTQ]) --> B[FastQC\nQuality Control]
+    B --> C[Trim Galore\nAdapter Trimming]
+    C --> D[STAR\nAlignment]
+    D --> E[featureCounts\nQuantification]
+    E --> F[MultiQC\nQC Report]
+    F --> G([DESeq2 / edgeR\nDiff. Expression])
+```
+
+Each arrow in that chain represents a separate tool with its own software version, its own parameters, its own input and output file formats, and its own resource requirements (some steps need 32 GB of RAM and 8 CPUs; others need almost nothing).
+
+### 1.1 The Shell Script Era
+
+The first instinct of most researchers — and historically the dominant approach — is to write a **bash shell script**:
+
+```bash
+#!/bin/bash
+fastqc raw_data/*.fastq.gz -o qc/
+trim_galore --paired raw_data/*_R1.fastq.gz raw_data/*_R2.fastq.gz -o trimmed/
+STAR --genomeDir genome/ --readFilesIn trimmed/*_R1_val_1.fq.gz trimmed/*_R2_val_2.fq.gz \
+     --outSAMtype BAM SortedByCoordinate --outFileNamePrefix aligned/
+# ... and so on
+```
+
+This works for a single sample, run once, on one machine. It fails in every other situation:
+
+**Failure mode 1: Multiple samples.** Add a `for` loop and the script becomes fragile — one failed sample aborts the entire run, and you have no easy way to restart from the point of failure.
+
+**Failure mode 2: Different machines.** The script hardcodes paths, resource requirements, and tool locations that do not exist on another system.
+
+**Failure mode 3: Scaling.** Running 100 samples sequentially takes 100× as long as running 1. Parallelising with `&` and `wait` works until one job crashes and corrupts shared files.
+
+**Failure mode 4: Reproducibility.** There is no automatic record of which software versions were used. Rerunning a year later with updated tools may silently produce different results.
+
+### 1.2 Make and Snakemake: An Improvement
+
+**GNU Make**, designed in 1976 for compiling software, introduced the concept of **rules** — declarative specifications of how to build an output file from input files. If the output is newer than the input, skip the step. This solved the restart problem.
+
+**Snakemake** (Mölder et al., 2021) brought this approach to bioinformatics with Python integration. It is widely used and genuinely effective. But both Make and Snakemake share a fundamental assumption: files live on a **shared local filesystem**. Scaling to cloud object storage (S3, GCS), distributed HPC schedulers, or container orchestration platforms requires substantial boilerplate.
+
+::: {.callout-tip}
+## Snakemake vs Nextflow: A Fair Comparison
+
+Snakemake and Nextflow are both mature, excellent tools with large communities. The choice is often a matter of preference:
+
+- **Snakemake** uses a **file-centric** model (rules define how to build files). Configuration is in Python/YAML — familiar to most bioinformaticians.
+- **Nextflow** uses a **data-centric** model (channels carry data between processes). Configuration is in a custom Groovy-based DSL designed for dataflow.
+
+Nextflow has a stronger story for **cloud portability** and **container integration**. Snakemake has better support for **R integration** and feels closer to a Python-native workflow. Both can run on HPC and cloud; neither is objectively superior in all scenarios.
+:::
+
+---
+
+## 2. What is Nextflow?
+
+**Nextflow** is an open-source workflow framework and domain-specific language (DSL) for building scalable, reproducible bioinformatics data analysis pipelines. It was created by **Paolo Di Tommaso** and released in 2013 at the Center for Genomic Regulation (CRG) in Barcelona. It is maintained by **Seqera Labs** and has a large open-source community.
+
+The official definition from the Nextflow documentation is:
+
+> *Nextflow enables scalable and reproducible scientific workflows using software containers. It allows the adaptation of pipelines written in the most common scripting languages.*
+
+Two words in that definition deserve unpacking: **scalable** and **reproducible**.
+
+- **Scalable** means that the exact same pipeline code runs locally on a laptop, on a university HPC cluster via SLURM, or on AWS Batch — without changing a single line of pipeline logic. You change a configuration profile; the code stays identical.
+
+- **Reproducible** means that every process in the pipeline can be executed inside a **Docker or Singularity container**, completely specifying the software environment. Anyone with the pipeline code, the containers, and the data can reproduce the result exactly, months or years later.
+
+::: {.callout-important}
+## What Nextflow is NOT
+
+Nextflow is not a bioinformatics tool itself. It does not align reads, call variants, or normalise expression. It is a **framework for orchestrating other tools**. Every process in a Nextflow pipeline is essentially a shell script that calls an existing tool (BWA, STAR, GATK, DeepVariant, etc.) on specific inputs.
+
+Think of Nextflow as the conductor of an orchestra — it does not play any instrument, but it ensures that every instrument plays the right notes at the right time, and that the performance can be repeated identically on any stage.
+:::
+
+### 2.1 A Brief History
+
+| Year | Milestone |
+|---|---|
+| 2013 | Nextflow 0.1 released by Paolo Di Tommaso at CRG Barcelona |
+| 2017 | Groovy-based DSL becomes stable; major HPC adoption begins |
+| 2018 | **nf-core** community founded by Phil Ewels; first curated pipeline suite |
+| 2020 | **DSL2** released — modular pipeline design, reusable process modules |
+| 2021 | **Seqera Platform** (formerly Nextflow Tower) launched for pipeline monitoring |
+| 2022 | DSL1 officially deprecated; DSL2 becomes the only supported syntax |
+| 2023 | nf-core surpasses 100 community pipelines; 1,000+ contributors worldwide |
+| 2024 | Nextflow adds native support for **nf-test** integration; Wave containers launched |
+
+DSL2 is the version you will learn in this series. DSL1 code looks syntactically similar but has important differences in how processes are defined and composed — if you encounter older tutorials online, be aware of this distinction.
+
+---
+
+## 3. The Dataflow Programming Model
+
+To understand Nextflow deeply, you need to understand the **dataflow programming paradigm** — the conceptual model that underpins the entire framework.
+
+In a traditional sequential program, statements execute one after another in a defined order. Parallelism must be explicitly programmed. In a dataflow program, **computation is triggered by data availability**. A process executes as soon as all its required inputs are present, regardless of what other processes are doing.
+
+This model maps beautifully onto bioinformatics pipelines:
+
+- Aligning sample A does not depend on the state of sample B — it only depends on the FASTQ file for sample A being available.
+- Variant calling for sample A depends only on the BAM file for sample A, which is produced by alignment.
+- MultiQC depends on all QC report files from all samples being ready.
+
+In Nextflow, this data dependency graph is described through **channels** — streams of data that connect processes together.
+
+### 3.1 Visualising a Simple Dataflow Graph
+
+Consider a minimal RNA-seq pipeline with three steps: trimming, alignment, and quantification. In Nextflow's mental model:
+
+```{mermaid}
+flowchart TD
+    A([FASTQ files channel]) --> B
+    B["TRIM_READS\nruns independently per sample"] -->|trimmed FASTQ channel| C
+    C["ALIGN_READS\nstarts as soon as trimmed FASTQ ready"] -->|BAM channel| D
+    D["QUANTIFY_READS\none count matrix per sample"] -->|counts channel| E
+    E([Output: count matrices])
+```
+
+If you have 10 samples, all 10 TRIM_READS processes can run simultaneously. As soon as sample 3's trimming finishes, its ALIGN_READS process starts — without waiting for samples 1, 2, 4–10 to finish trimming. This automatic, fine-grained parallelism is one of Nextflow's most important practical advantages.
+
+::: {.callout-note}
+## Why This Matters at Scale
+
+A sequential shell script processing 100 samples one at a time might take 100 hours. A Nextflow pipeline with the same 100 samples, submitted to a SLURM cluster that can schedule 20 concurrent jobs, might take 5–6 hours — with no changes to the pipeline logic. The scheduler is invisible to the pipeline code.
+:::
+
+---
+
+## 4. The Four Core Abstractions
+
+Nextflow pipelines are built from four fundamental concepts. Understanding these before writing a single line of code is worth the investment.
+
+### 4.1 Processes
+
+A **process** is the basic execution unit in Nextflow. It defines:
+- What **inputs** it expects (files, strings, integers)
+- What **outputs** it produces (files, strings)
+- The **script** to execute (bash, Python, R, or any language)
+
+```groovy
+process TRIM_READS {
+    input:
+    tuple val(sample_id), path(reads)
+
+    output:
+    tuple val(sample_id), path("*_trimmed.fastq.gz")
+
+    script:
+    """
+    trim_galore --paired ${reads[0]} ${reads[1]} --basename ${sample_id}
+    """
+}
+```
+
+Each invocation of a process runs in its own **isolated working directory**. Processes cannot share mutable state — they communicate exclusively through channels. This isolation is what makes processes safe to run in parallel and inside containers.
+
+### 4.2 Channels
+
+A **channel** is an asynchronous queue that carries data between processes. There are two types:
+
+**Queue channels** carry data items that are consumed once — each item flows to exactly one downstream process invocation. This is used for per-sample processing.
+
+**Value channels** carry a single value that can be read by multiple processes indefinitely. This is used for reference files (a genome index, an annotation GTF) shared by all samples.
+
+```groovy
+// Queue channel: each FASTQ pair flows to one TRIM_READS invocation
+Channel.fromFilePairs("data/*_{R1,R2}.fastq.gz")
+    .set { reads_ch }
+
+// Value channel: shared reference used by all alignment processes
+Channel.value(file("genome/GRCh38.fa"))
+    .set { genome_ch }
+```
+
+### 4.3 Operators
+
+**Operators** are functions that transform channels — filtering items, reshaping them, combining two channels, or collecting all items into a list. They are the glue between processes.
+
+Common operators you will use constantly:
+
+| Operator | What it does |
+|---|---|
+| `map` | Transform each item in a channel |
+| `filter` | Keep only items matching a condition |
+| `collect` | Wait for all items and emit as a single list |
+| `groupTuple` | Group items sharing a common key |
+| `combine` | Combine every item of channel A with every item of channel B |
+| `branch` | Split a channel into multiple named sub-channels |
+| `join` | Merge two channels on a shared key |
+
+```groovy
+// Example: extract just the sample_id from a tuple channel
+reads_ch
+    .map { sample_id, reads -> sample_id }
+    .view { "Processing sample: $it" }
+```
+
+### 4.4 Executors
+
+An **executor** is the system that actually runs each process. Nextflow ships with executors for:
+
+| Executor | Where it runs |
+|---|---|
+| `local` | Your current machine (default) |
+| `slurm` | SLURM HPC scheduler |
+| `lsf` | IBM LSF scheduler |
+| `pbs` / `pbspro` | PBS/Torque schedulers |
+| `sge` | Sun/Oracle Grid Engine |
+| `awsbatch` | AWS Batch |
+| `google-batch` | Google Cloud Batch |
+| `k8s` | Kubernetes |
+| `azurebatch` | Microsoft Azure Batch |
+
+The critical point: **you change the executor in a configuration file, not in the pipeline code**. The same `main.nf` file runs locally for development and on a 10,000-core HPC cluster for production. This separation of concerns is a major architectural advantage.
+
+---
+
+## 5. DSL2: Modular Pipeline Design
+
+**DSL2** (Domain-Specific Language version 2) is the current syntax for Nextflow, released in 2020 and now the only supported version. Its key innovation over DSL1 is **modules** — reusable, shareable process definitions that can be imported into any pipeline.
+
+### 5.1 Modules
+
+In DSL2, a process can be defined in its own file and imported with `include`:
+
+```groovy
+// modules/trim_reads.nf
+process TRIM_READS {
+    container 'quay.io/biocontainers/trim-galore:0.6.7--hdfd78af_0'
+
+    input:
+    tuple val(sample_id), path(reads)
+
+    output:
+    tuple val(sample_id), path("*_trimmed.fastq.gz")
+
+    script:
+    """
+    trim_galore --paired ${reads[0]} ${reads[1]} --basename ${sample_id}
+    """
+}
+```
+
+```groovy
+// main.nf
+include { TRIM_READS } from './modules/trim_reads'
+include { ALIGN_READS } from './modules/align_reads'
+
+workflow {
+    reads_ch = Channel.fromFilePairs(params.reads)
+    TRIM_READS(reads_ch)
+    ALIGN_READS(TRIM_READS.out)
+}
+```
+
+This modularity is what makes nf-core possible — a library of standardised, tested, containerised modules that any pipeline can import.
+
+### 5.2 Subworkflows
+
+A **subworkflow** is a named, reusable chain of processes — a pipeline within a pipeline. Complex pipelines (e.g., a complete WGS variant calling pipeline) are decomposed into subworkflows: `PREPROCESSING`, `VARIANT_CALLING`, `ANNOTATION`. Each subworkflow can be tested independently and reused across pipelines.
+
+---
+
+## 6. The nf-core Ecosystem
+
+**nf-core** is a community effort to collect a curated set of analysis pipelines built using Nextflow. It was founded by **Phil Ewels** (now at Seqera) in 2018 and has grown into one of the most active open-source communities in computational biology.
+
+The nf-core mission statement is:
+
+> *A community effort to collect a curated set of analysis pipelines built using Nextflow. All nf-core pipelines follow a strict set of guidelines to ensure high quality, reproducibility, and portability.*
+
+As of 2024, nf-core includes:
+
+- **100+ peer-reviewed pipelines** covering genomics, transcriptomics, proteomics, metagenomics, imaging analysis, and more
+- **1,000+ contributors** from research institutions worldwide
+- A shared **module library** (nf-core/modules) with 1,000+ tested, containerised process modules
+- A **template** that standardises pipeline structure, testing, CI/CD, documentation, and release management
+- The **nf-core/tools** CLI for creating, linting, and updating pipelines
+
+### 6.1 Selected nf-core Pipelines
+
+| Pipeline | What it does |
+|---|---|
+| `nf-core/rnaseq` | RNA-seq: alignment, QC, quantification (STAR/Salmon + DESeq2) |
+| `nf-core/sarek` | Germline and somatic variant calling (WGS/WES) |
+| `nf-core/chipseq` | ChIP-seq peak calling and annotation |
+| `nf-core/atacseq` | ATAC-seq chromatin accessibility analysis |
+| `nf-core/methylseq` | Bisulfite sequencing (WGBS / RRBS) |
+| `nf-core/scrnaseq` | Single-cell RNA-seq (Cell Ranger, STARsolo, Alevin) |
+| `nf-core/taxprofiler` | Metagenomic taxonomic profiling |
+| `nf-core/mag` | Metagenomic assembly and binning |
+| `nf-core/proteomicslfq` | Label-free quantification proteomics |
+
+::: {.callout-tip}
+## Running an nf-core Pipeline is Three Commands
+
+The ergonomics of nf-core are genuinely impressive. To run the complete nf-core/rnaseq pipeline — FASTQ to counts, with MultiQC report — on your data:
+
+```bash
+# 1. Install nf-core tools (once)
+pip install nf-core
+
+# 2. Download the pipeline
+nextflow pull nf-core/rnaseq
+
+# 3. Run it
+nextflow run nf-core/rnaseq \
+    --input samplesheet.csv \
+    --outdir results/ \
+    --genome GRCh38 \
+    -profile docker
+```
+
+Nextflow automatically pulls the required container images. No manual software installation required beyond Nextflow itself and Docker.
+:::
+
+### 6.2 nf-core Guarantees
+
+Every nf-core pipeline must:
+
+- Pass **automated linting** (`nf-core lint`) checking 150+ code quality rules
+- Include a **test profile** that runs end-to-end on minimal data in CI
+- Specify container images for every process (Docker + Singularity)
+- Follow a standardised **samplesheet** format for input specification
+- Include a **MultiQC report** with QC metrics for all samples
+- Maintain **semantic versioning** (patch/minor/major) with changelogs
+- Be reviewed and approved by at least two community members
+
+This standardisation means that if you know how to run one nf-core pipeline, you essentially know how to run all of them.
+
+---
+
+## 7. Containers: The Reproducibility Layer
+
+Nextflow's reproducibility guarantee comes from its integration with **containers**. A container packages a complete software environment — the tool, its dependencies, and the operating system libraries it needs — into an immutable, versioned image.
+
+When Nextflow runs a process with `container 'quay.io/biocontainers/star:2.7.10a--h9ee0642_0'`, it means:
+
+- STAR version exactly 2.7.10a
+- On a specific build of the conda-forge environment
+- With all system libraries pinned to specific versions
+- Reproducible on any Linux system with Docker or Singularity installed
+- Archived permanently on the Quay.io or Docker Hub registry
+
+::: {.callout-important}
+## Docker vs Singularity: When to Use Which
+
+**Docker** requires root (or sudoless Docker daemon access). It works on laptops, cloud VMs, and container platforms. Most HPC systems **do not allow Docker** because it grants effective root access to the host.
+
+**Singularity** (also called Apptainer) runs containers **without root**. It is the container runtime of choice for HPC clusters. Nextflow supports both identically — you switch between them with `-profile docker` or `-profile singularity`.
+
+The rule of thumb: use Docker for local development and cloud; use Singularity on HPC.
+:::
+
+The combination of Nextflow + containers means that a pipeline run in 2024 can be reproduced exactly in 2030, as long as the container images are still accessible. This is a stronger reproducibility guarantee than conda environments (which can silently change when packages are updated) or module-based HPC environments (which vary between clusters).
+
+---
+
+## 8. Workflow Managers: Where Does Nextflow Fit?
+
+The bioinformatics workflow manager landscape has several mature options. Here is a practical comparison to help you understand Nextflow's position:
+
+| Feature | Nextflow | Snakemake | WDL | CWL |
+|---|---|---|---|---|
+| Paradigm | Dataflow (channel-based) | File-based (rule-based) | Task-based | Graph-based |
+| Language | Groovy DSL | Python | JSON/YAML-like | YAML/JSON |
+| Container support | Excellent (Docker, Singularity, Conda, Wave) | Good | Good | Good |
+| Cloud portability | Excellent (native AWS/GCP/Azure) | Good (with wrappers) | Good (Terra/DNAnexus) | Limited |
+| HPC support | Excellent | Excellent | Moderate | Moderate |
+| Community pipelines | nf-core (100+) | Snakemake-workflows (50+) | Broad Institute GATK | Limited |
+| Learning curve | Moderate (new DSL) | Low (Python-like) | Moderate | High |
+| Monitoring/UI | Seqera Platform | None native | Terra | None native |
+| Primary adopters | Genomics, oncology, rare disease | Genomics, ecology, structural biology | Broad Institute, TCGA, TOPMed | Bioinformatics standards bodies |
+
+::: {.callout-note}
+## WDL and CWL: When to Use Them
+
+**WDL (Workflow Description Language)** was developed by the Broad Institute and is the standard language for pipelines on the **Terra** and **DNAnexus** platforms. If your work involves TCGA data or Broad Institute tools (GATK, Mutect2), WDL is the practical choice.
+
+**CWL (Common Workflow Language)** is an open standard designed for interoperability between platforms. It is rarely written by hand but is often used as an intermediate representation or output format. If you are submitting to a platform that requires CWL, tools exist to convert from other languages.
+
+Neither WDL nor CWL has a community pipeline ecosystem comparable to nf-core.
+:::
+
+---
+
+## 9. Real-World Use Cases
+
+Nextflow is used in production at some of the world's largest genomics operations. Understanding where it excels helps you evaluate whether it is the right tool for your own work.
+
+### 9.1 Clinical Genomics
+
+**Clinical Genomics Sweden** uses nf-core/sarek to process whole-genome sequencing data from rare disease patients. The pipeline runs on a SLURM cluster, uses Singularity containers, and has been validated against the AstraZeneca rare disease programme requirements. The same pipeline code runs on ~50 samples per week in a clinical diagnostic context where **reproducibility is a regulatory requirement**, not just good practice.
+
+### 9.2 Population-Scale Genomics
+
+The **UK Biobank** analysis of 500,000 exomes used Nextflow-based pipelines running on AWS. The scale — petabytes of data, millions of compute hours — would be impractical with any file-system-centric workflow manager. Nextflow's native AWS Batch integration allowed data to be processed where it was stored (S3), avoiding massive data transfer costs.
+
+### 9.3 Cancer Genomics Atlases
+
+The **ICGC/PCAWG** (Pan-Cancer Analysis of Whole Genomes) project processed whole genomes from 2,658 donors across 38 cancer types using a harmonised Nextflow pipeline. Different member institutions (in different countries, on different HPC systems) ran the **identical pipeline code** using institution-specific profiles — ensuring that results were comparable across sites.
+
+### 9.4 Drug Discovery
+
+Several pharmaceutical companies (AstraZeneca, Roche, Novartis) use nf-core pipelines in their internal bioinformatics platforms. The standardisation and audit trail provided by Nextflow + containers satisfies GxP (Good Practice) regulatory requirements for drug discovery workflows.
+
+### 9.5 Your Research Lab
+
+For a typical academic bioinformatics group, Nextflow solves three practical problems:
+
+1. **New lab members** can run existing pipelines without understanding every tool — they only need to provide a samplesheet and a profile name.
+2. **Results are reproducible** when you submit your manuscript six months after running the analysis.
+3. **The same analysis** scales from 5 test samples on your laptop to 500 samples on your institution's HPC without rewriting any code.
+
+---
+
+## 10. The Nextflow Execution Model
+
+When you run `nextflow run main.nf`, here is what happens under the hood:
+
+1. **Nextflow compiles** the pipeline script into an internal dataflow graph (a DAG — Directed Acyclic Graph). Each node is a process; each edge is a channel.
+
+2. **The scheduler** monitors channel states. When all inputs for a process invocation are available, it is submitted to the executor.
+
+3. **Each process invocation** runs in an isolated working directory under `work/`. Nextflow stages input files (via symlink or copy), runs the script, and captures output files.
+
+4. **The results directory** (`--outdir`) receives only the files explicitly published by processes. The `work/` directory contains full provenance: the exact script run, the stdout/stderr, the return code, and all intermediate files.
+
+5. **The `.nextflow.log`** records every decision made by the scheduler. The `.nextflow/cache/` directory stores checksums of inputs — enabling `-resume`.
+
+### 10.1 The `-resume` Flag
+
+One of Nextflow's most valuable practical features is **caching**. When you run:
+
+```bash
+nextflow run main.nf -resume
+```
+
+Nextflow checks the checksum of each process's inputs and parameters. If they match a previously completed run, the cached output is used — that process is skipped. Only processes whose inputs have changed (or which previously failed) are re-executed.
+
+This means:
+- If trimming succeeded but alignment failed, rerunning with `-resume` skips trimming entirely
+- If you change a parameter that only affects the last step, only the last step re-runs
+- Iterative development (tweak a parameter → rerun → inspect results) is fast
+
+::: {.callout-warning}
+## When `-resume` Does NOT Work
+
+Caching depends on input checksums. If you:
+- Modify an input file in place (rather than creating a new version)
+- Change the container image without changing the tag
+- Manually delete the `work/` directory
+
+...then the cache is invalidated or lost, and `-resume` will re-run everything. Keep your `work/` directory intact during development.
+:::
+
+---
+
+## 11. Your First Look at a Nextflow Pipeline
+
+To make the concepts concrete, here is a complete, minimal Nextflow DSL2 pipeline — a "Hello World" that counts the number of reads in each FASTQ file in a directory:
+
+```groovy
+// main.nf
+nextflow.enable.dsl=2
+
+process COUNT_READS {
+    input:
+    path fastq
+
+    output:
+    stdout
+
+    script:
+    """
+    echo "${fastq}: \$(zcat ${fastq} | wc -l | awk '{print \$1/4}') reads"
+    """
+}
+
+workflow {
+    Channel.fromPath("data/*.fastq.gz")
+        | COUNT_READS
+        | view
+}
+```
+
+Running this pipeline:
+
+```bash
+nextflow run main.nf
+```
+
+Produces output like:
+```
+sample_A.fastq.gz: 2543871 reads
+sample_B.fastq.gz: 3102456 reads
+sample_C.fastq.gz: 1987234 reads
+```
+
+All three COUNT_READS invocations run in parallel, in isolated working directories. The `| view` operator prints results to the terminal as they complete.
+
+In the next tutorial, you will install Nextflow and run this exact pipeline yourself.
+
+---
+
+## 12. Summary
+
+Bioinformatics pipelines are complex, multi-step, multi-tool processes that fail to be reproducible and scalable when implemented as shell scripts. Workflow managers exist to solve this problem by providing a framework for:
+
+- **Declaring** data dependencies between steps (rather than sequencing them imperatively)
+- **Parallelising** automatically across samples
+- **Isolating** execution environments with containers
+- **Resuming** from failure without rerunning successful steps
+- **Porting** between local, HPC, and cloud execution environments with configuration changes only
+
+**Nextflow** implements a **dataflow programming model** where processes communicate through **channels** — asynchronous data streams. The four core abstractions — processes, channels, operators, and executors — compose into pipelines of any complexity.
+
+**DSL2** is the current Nextflow syntax, enabling modular, reusable pipeline components (modules and subworkflows) that can be shared across projects.
+
+**nf-core** is the community ecosystem of standardised, peer-reviewed Nextflow pipelines that solve the most common bioinformatics analysis scenarios — from RNA-seq and variant calling to metagenomics and proteomics.
+
+::: {.callout-note}
+## Key Concepts Checklist
+
+Before moving on, make sure you can explain:
+
+- [ ] Why shell scripts are insufficient for production bioinformatics pipelines
+- [ ] What the **dataflow programming model** is and why it enables automatic parallelism
+- [ ] The difference between a **process**, a **channel**, an **operator**, and an **executor**
+- [ ] What **DSL2 modules** are and why they matter
+- [ ] What **nf-core** is and what guarantees its pipelines provide
+- [ ] The difference between **Docker** and **Singularity** and when to use each
+- [ ] What the `-resume` flag does and when it works
+:::
+
+---
+
+## What's Next
+
+**Tutorial #2 — Installing Nextflow and Java**
+Set up your Nextflow environment from scratch. Install the Java runtime, download the Nextflow launcher, verify your installation, and configure essential settings for local and HPC use.
+
+---
+
+## References
+
+- **Di Tommaso P et al.** (2017). Nextflow enables reproducible computational workflows. *Nature Biotechnology*, 35, 316–319. DOI: [10.1038/nbt.3820](https://doi.org/10.1038/nbt.3820)
+
+- **Ewels PA et al.** (2020). The nf-core framework for community-curated bioinformatics pipelines. *Nature Biotechnology*, 38, 276–278. DOI: [10.1038/s41587-020-0439-x](https://doi.org/10.1038/s41587-020-0439-x)
+
+- **Mölder F et al.** (2021). Sustainable data analysis with Snakemake. *F1000Research*, 10, 33. DOI: [10.12688/f1000research.29032.2](https://doi.org/10.12688/f1000research.29032.2)
+
+- **Amstutz P et al.** (2016). Common Workflow Language, v1.0. *Figshare*. DOI: [10.6084/m9.figshare.3115156.v2](https://doi.org/10.6084/m9.figshare.3115156.v2)
+
+- **Voss K et al.** (2017). Full-stack genomics pipelining with GATK4 + WDL + Cromwell. *F1000Research*, 6(ISCB Comm J):1381. DOI: [10.7490/f1000research.1114634.1](https://doi.org/10.7490/f1000research.1114634.1)
+
+- **Merkel D** (2014). Docker: Lightweight Linux containers for consistent development and deployment. *Linux Journal*, 2014(239), 2.
+
+- **Kurtzer GM et al.** (2017). Singularity: Scientific containers for mobility of compute. *PLOS ONE*, 12(5): e0177459. DOI: [10.1371/journal.pone.0177459](https://doi.org/10.1371/journal.pone.0177459)
+
+- **Campbell MS et al.** (2022). nf-core/sarek: A portable workflow for whole-genome sequencing analysis of germline and somatic variants. *F1000Research*, 10:1125. DOI: [10.12688/f1000research.16665.2](https://doi.org/10.12688/f1000research.16665.2)
+
+- **PCAWG Consortium** (2020). Pan-cancer analysis of whole genomes. *Nature*, 578, 82–93. DOI: [10.1038/s41586-020-1969-6](https://doi.org/10.1038/s41586-020-1969-6)

@@ -25,6 +25,22 @@ title-block-banner: true
 </div>
 </a>
 
+<a href="nextflow/" class="tut-series-card">
+<div class="tut-series-card-banner">
+<span class="tut-series-card-icon">⚡</span>
+</div>
+<div class="tut-series-card-body">
+<div class="tut-series-card-title">Nextflow and nf-core</div>
+<p class="tut-series-card-desc">Build scalable, reproducible bioinformatics pipelines with Nextflow DSL2, run nf-core community pipelines, and contribute your own.</p>
+<div class="tut-series-card-footer">
+<span class="tut-series-stat-pill">15 Lessons</span>
+<span class="tut-series-stat-pill">5 Modules</span>
+<span class="tut-series-stat-pill">DSL2</span>
+<span class="tut-series-status">Active</span>
+</div>
+</div>
+</a>
+
 <div class="tut-series-card tut-series-card-placeholder">
 <div class="tut-series-card-banner tut-banner-coming">
 <span class="tut-series-card-icon">🔬</span>

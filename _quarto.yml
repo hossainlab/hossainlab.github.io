@@ -101,6 +101,8 @@ format:
     css: styles.css
     toc: true
     toc-expand: 1
+    mermaid:
+      theme: neutral
 
 
 

@@ -47,5 +47,9 @@
   {
     "listing": "/about/index.html",
     "items": []
+  },
+  {
+    "listing": "/tutorials/nextflow/index.html",
+    "items": []
   }
 ]

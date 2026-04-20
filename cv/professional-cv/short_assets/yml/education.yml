@@ -4,7 +4,9 @@ ms:
   date: 2019—2020
   description: Jagannath University
   details:
-    - Relevant Coursework: Genomics, Proteomics, Bioinformatics, Research Methodology and Scientific Writing
+    - "CGPA: 3.56/4.0 | Medium of Instruction: English"
+    - "Capstone Project: Chikungunya Outbreak Management Strategies — Investigated vector surveillance, genomic surveillance, clinical epidemiology, and outbreak response frameworks for arboviral disease in urban Bangladesh"
+    - "Relevant Coursework: Genomics, Proteomics, Bioinformatics, Research Methodology and Scientific Writing"
 
 bs:
   title: Bachelor of Science in Microbiology
@@ -12,12 +14,24 @@ bs:
   date: 2016—2019
   description: Jagannath University
   details:
-    - Relevant Coursework: Biostatistics, Public Health and Hygiene, Bioinformatics I, Bioinformatics II
+    - "CGPA: 3.15/4.0 | Medium of Instruction: English"
+    - "Capstone Project: State of the Art of Microbial Genomics Analysis — Reviewed and applied contemporary computational approaches for genomic data analysis including quality control, sequence alignment, variant calling, and visualization of microbial genomic dataset"
+    - "Relevant Coursework: Biostatistics, Public Health and Hygiene, Bioinformatics I, Bioinformatics II"
+
+brac:
+  title: Certificate Program in Interdisciplinary Computational Biology
+  location: Dhaka, Bangladesh
+  date: January 2026
+  description: BRAC University
+  details:
+    - Mastered protein structure prediction and molecular visualization using AlphaFold2/3 and ChimeraX to investigate protein-ligand interactions
+    - Applied AI/ML frameworks and docking protocols to structural data from PDB and UniProt for predictive molecular modeling
 
 training:
-  title: Specialized Training: AI in Public Health
+  title: Specialized Training in AI for Public Health
   location: Dhaka, Bangladesh
-  date: 2023
+  date: Sep 2023
   description: Child Health Research Foundation (CHRF)
   details:
-    - Acquired Skills: Epidemiological Modeling, Disease Surveillance using AI, Time Series Analysis (LSTM, ARIMA), Medical Image Analysis (X-ray, MRI)
+    - Developed predictive models and data pipelines for disease surveillance, focusing on typhoid incidence and vaccine impact assessment in Bangladesh
+    - "Acquired Skills: Epidemiological Modeling, Disease Surveillance using AI, Time Series Analysis (LSTM, ARIMA), Medical Image Analysis (X-ray, MRI)"

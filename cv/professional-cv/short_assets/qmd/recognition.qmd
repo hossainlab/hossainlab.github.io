@@ -1,0 +1,8 @@
+- **Nextflow Ambassador** | Seqera, Barcelona, Spain | 2025–Present
+  Selected from the global bioinformatics community to promote reproducible, scalable workflow development using Nextflow DSL2.
+
+- **GBD Senior Collaborator** | Institute for Health Metrics and Evaluation (IHME), University of Washington | 2025–Present
+  Contributing analyst to three *Lancet*-family GBD 2023 publications on vaccine coverage, headache burden, and breast cancer burden.
+
+- **Expert Media Commentary** | The Business Standard, Bangladesh | 2024
+  Cited as subject-matter expert in two national health features on antibiotic resistance and self-medication practices.

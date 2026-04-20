@@ -1,0 +1,91 @@
+---
+title: "Md. Jubayer Hossain's CV"
+author:
+  # firstname: Md. Jubayer
+  lastname: Md. Jubayer Hossain
+  position: "Visiting Scholar, Department of Public Health, Daffodil International University"
+  address: "Daffodil Smart City, Birulia 1216, Bangladesh"
+  contacts:
+    - icon: fa phone
+      text: "+8801622345906"
+      url: "tel:+8801622345906"
+    - icon: fa envelope
+      text: hossainmj.me@gmail.com
+      url: "mailto:hossainmj.me@gmail.com"
+    - icon: fa globe
+      text: mdjubayerhossain.com
+      url: https://mdjubayerhossain.com
+format:
+  awesomecv-typst:
+    text-align: justify
+brand:
+  typography:
+    fonts:
+      - family: Poppins
+        source: google
+        weight: [100, 400, 700]
+      - family: Source Sans 3
+        source: google
+        weight: [100, 400, 700]
+        style: [normal, italic]
+    base: Source Sans 3
+  color:
+    primary: "#000000"
+    link: "#0563C1"
+  defaults:
+    awesomecv-typst:
+      font-header: Poppins
+---
+
+# Research Statement
+
+I am a computational biologist with a track record of building and deploying reproducible multi-omics frameworks to decode the molecular architecture of cancer and neurological diseases. My research addresses three interconnected questions: (1) How can integrative analysis of bulk RNA-seq, single-cell RNA-seq, and spatial transcriptomics identify robust immunological biomarkers and therapeutic targets within tumor microenvironments? (2) Can interpretable machine learning models trained on pan-cancer transcriptomic data reliably stratify patient prognosis and predict immunotherapy response? (3) What computational strategies best characterize dynamic cell-state transitions—such as tumor-associated macrophage reprogramming and microglial activation in neurodegeneration? My published work includes first- and corresponding-author pan-cancer analyses in *Scientific Reports* and *BMC Genomics*, and seven GitHub-hosted reproducible pipelines built on Nextflow, Docker, and nf-core standards. As a GBD Senior Collaborator at IHME, I have contributed to large-scale epidemiological analyses published in *The Lancet*. In my PhD, I aim to develop scalable, interpretable computational methods for cell-state inference and immune landscape modeling, translating multi-omics discoveries into clinically actionable biomarkers and therapeutic hypotheses.
+
+
+# Education and Training
+
+{{< yaml short_assets/yml/education.yml >}}
+
+# Technical Skills
+
+{{< include short_assets/qmd/skills.qmd >}}
+
+# Research Experience
+
+{{< yaml short_assets/yml/research.yml >}}
+
+# Selected Publications
+
+{{< include short_assets/qmd/publications.qmd >}}
+
+# Papers Under Review
+
+{{< include short_assets/qmd/under-review-papers.qmd >}}
+
+# Research in Progress
+
+{{< include short_assets/qmd/working-papers.qmd >}}
+
+# Selected Conferences
+
+{{< include short_assets/qmd/conferences.qmd >}}
+
+# Professional Recognition
+
+{{< include short_assets/qmd/recognition.qmd >}}
+
+# Teaching Experience
+
+{{< yaml short_assets/yml/teaching.yml >}}
+
+# Leadership Experience
+
+{{< yaml short_assets/yml/leadership.yml >}}
+
+# Community Engagement
+
+{{< yaml short_assets/yml/community.yml >}}
+
+# References
+
+{{< include short_assets/qmd/references.qmd >}}

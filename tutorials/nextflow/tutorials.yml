@@ -1,0 +1,198 @@
+# ── Module 1: Introduction & Setup ────────────────────────────────────────────
+
+- title: "What is Nextflow? Concepts and Use Cases"
+  module: "Module 1: Introduction & Setup"
+  number: 1
+  description: "Understand why workflow managers exist, how Nextflow solves reproducibility and scalability challenges, and where it fits in the modern bioinformatics ecosystem."
+  status: available
+  difficulty: Beginner
+  duration: "~20 min"
+  tags:
+    - Nextflow
+    - Workflow Management
+    - Reproducibility
+  links:
+    - label: "Read Tutorial"
+      url: "01-introduction.html"
+      icon: "fa-solid fa-book-open"
+
+- title: "Installing Nextflow and Java"
+  module: "Module 1: Introduction & Setup"
+  number: 2
+  description: "Install Java (required runtime), download the Nextflow launcher, verify your setup, and configure the environment on Linux, macOS, and WSL2."
+  status: coming-soon
+  difficulty: Beginner
+  duration: "~20 min"
+  tags:
+    - Nextflow
+    - Installation
+    - Java
+
+- title: "Hello World: Your First Nextflow Pipeline"
+  module: "Module 1: Introduction & Setup"
+  number: 3
+  description: "Write and run a minimal pipeline, understand the working directory layout, interpret Nextflow output logs, and resume a run with `-resume`."
+  status: coming-soon
+  difficulty: Beginner
+  duration: "~25 min"
+  tags:
+    - Nextflow
+    - Hello World
+    - resume
+
+# ── Module 2: Nextflow Language Fundamentals ──────────────────────────────────
+
+- title: "Processes and Channels"
+  module: "Module 2: Nextflow Language Fundamentals"
+  number: 4
+  description: "Learn the two core abstractions: processes (execution units) and channels (data streams). Define inputs, outputs, and scripts inside a process block."
+  status: coming-soon
+  difficulty: Beginner
+  duration: "~35 min"
+  tags:
+    - Processes
+    - Channels
+    - DSL2
+
+- title: "Operators and Data Transformations"
+  module: "Module 2: Nextflow Language Fundamentals"
+  number: 5
+  description: "Transform channel contents with operators such as `map`, `filter`, `collect`, `groupTuple`, and `combine` to build complex data flows."
+  status: coming-soon
+  difficulty: Intermediate
+  duration: "~40 min"
+  tags:
+    - Operators
+    - map
+    - groupTuple
+    - DSL2
+
+- title: "Configuration Files and Execution Profiles"
+  module: "Module 2: Nextflow Language Fundamentals"
+  number: 6
+  description: "Use `nextflow.config` to set resource requirements, container images, and executor settings. Switch between local, SLURM, and cloud profiles."
+  status: coming-soon
+  difficulty: Intermediate
+  duration: "~35 min"
+  tags:
+    - nextflow.config
+    - profiles
+    - SLURM
+    - HPC
+
+# ── Module 3: Containers and Reproducibility ──────────────────────────────────
+
+- title: "Running Pipelines with Docker"
+  module: "Module 3: Containers and Reproducibility"
+  number: 7
+  description: "Enable Docker in Nextflow, pull and specify container images per process, and understand how Nextflow mounts work directories inside containers."
+  status: coming-soon
+  difficulty: Intermediate
+  duration: "~30 min"
+  tags:
+    - Docker
+    - Containers
+    - Reproducibility
+
+- title: "Using Singularity on HPC Clusters"
+  module: "Module 3: Containers and Reproducibility"
+  number: 8
+  description: "Convert Docker images to Singularity SIF files, configure Singularity cache and bind paths, and run containerised pipelines on shared HPC systems."
+  status: coming-soon
+  difficulty: Intermediate
+  duration: "~30 min"
+  tags:
+    - Singularity
+    - HPC
+    - Containers
+
+- title: "Conda Environments in Nextflow"
+  module: "Module 3: Containers and Reproducibility"
+  number: 9
+  description: "Define per-process conda environments using YAML files or channel directives, and compare the trade-offs between conda, Docker, and Singularity."
+  status: coming-soon
+  difficulty: Beginner
+  duration: "~25 min"
+  tags:
+    - conda
+    - Environments
+    - Reproducibility
+
+# ── Module 4: nf-core Ecosystem ───────────────────────────────────────────────
+
+- title: "Introduction to nf-core"
+  module: "Module 4: nf-core Ecosystem"
+  number: 10
+  description: "Explore the nf-core community, browse available pipelines on nf-core.re, understand the release cycle and versioning, and learn nf-core conventions."
+  status: coming-soon
+  difficulty: Beginner
+  duration: "~20 min"
+  tags:
+    - nf-core
+    - Community
+    - Pipelines
+
+- title: "Running nf-core/rnaseq"
+  module: "Module 4: nf-core Ecosystem"
+  number: 11
+  description: "Download and run the nf-core/rnaseq pipeline end-to-end: prepare a samplesheet CSV, choose a reference genome, set resource profiles, and interpret MultiQC output."
+  status: coming-soon
+  difficulty: Intermediate
+  duration: "~50 min"
+  tags:
+    - nf-core/rnaseq
+    - RNA-seq
+    - MultiQC
+    - samplesheet
+
+- title: "nf-core Tools: Create, Lint, and Update Pipelines"
+  module: "Module 4: nf-core Ecosystem"
+  number: 12
+  description: "Install nf-core/tools, scaffold a new pipeline with `nf-core create`, run `nf-core lint` to check compliance, and sync with the latest nf-core template."
+  status: coming-soon
+  difficulty: Intermediate
+  duration: "~40 min"
+  tags:
+    - nf-core/tools
+    - lint
+    - scaffold
+    - template
+
+# ── Module 5: Building Custom Pipelines ───────────────────────────────────────
+
+- title: "Modular Pipeline Design with DSL2 Modules"
+  module: "Module 5: Building Custom Pipelines"
+  number: 13
+  description: "Structure reusable process modules, import them with `include`, and compose subworkflows to build maintainable, production-grade pipelines."
+  status: coming-soon
+  difficulty: Advanced
+  duration: "~45 min"
+  tags:
+    - DSL2
+    - Modules
+    - Subworkflows
+
+- title: "Testing Pipelines with nf-test"
+  module: "Module 5: Building Custom Pipelines"
+  number: 14
+  description: "Write unit tests for processes and integration tests for workflows using nf-test. Run tests locally and in CI via GitHub Actions."
+  status: coming-soon
+  difficulty: Advanced
+  duration: "~40 min"
+  tags:
+    - nf-test
+    - Testing
+    - CI/CD
+    - GitHub Actions
+
+- title: "Submitting Pipelines to nf-core"
+  module: "Module 5: Building Custom Pipelines"
+  number: 15
+  description: "Follow the nf-core contribution guide, pass all linting checks, open a pull request, and navigate the peer review process for community pipeline acceptance."
+  status: coming-soon
+  difficulty: Advanced
+  duration: "~30 min"
+  tags:
+    - nf-core
+    - Contribution
+    - Open Source

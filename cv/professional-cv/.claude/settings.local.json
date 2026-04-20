@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:mdjubayerhossain.com)",
+      "WebFetch(domain:gsabioinfointernship.owlstown.net)",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_take_screenshot",
+      "Bash(cp:*)",
+      "mcp__playwright__browser_evaluate"
+    ]
+  }
+}

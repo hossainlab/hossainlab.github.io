@@ -10,7 +10,8 @@
       "Bash(python:*)",
       "Bash(pip install:*)",
       "Bash(pip:*)",
-      "WebFetch(domain:deepbioltd.com)"
+      "WebFetch(domain:deepbioltd.com)",
+      "Bash(grep:*)"
     ]
   }
 }
