@@ -531,12 +531,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
-<pre class="mermaid mermaid-js">flowchart TD
-    A([FASTQ files channel]) --&gt; B
-    B["TRIM_READS\nruns independently per sample"] --&gt;|trimmed FASTQ channel| C
-    C["ALIGN_READS\nstarts as soon as trimmed FASTQ ready"] --&gt;|BAM channel| D
-    D["QUANTIFY_READS\none count matrix per sample"] --&gt;|counts channel| E
-    E([Output: count matrices])
+<pre class="mermaid mermaid-js">%%{init: {'theme': 'base', 'themeVariables': {'edgeLabelBackground': '#f8fafc'}}}%%
+flowchart TD
+    A([FASTQ files channel]):::ch
+    A --&gt; B["TRIM_READS&lt;br/&gt;runs independently per sample"]:::proc
+    B --&gt;|trimmed FASTQ channel| C["ALIGN_READS&lt;br/&gt;starts as soon as trimmed FASTQ ready"]:::proc
+    C --&gt;|BAM channel| D["QUANTIFY_READS&lt;br/&gt;one count matrix per sample"]:::proc
+    D --&gt;|counts channel| E([Output: count matrices]):::out
+
+    classDef ch   fill:#dcfce7,stroke:#4ade80,stroke-width:2px,color:#166534
+    classDef proc fill:#fff7ed,stroke:#fb923c,stroke-width:2px,color:#c2410c
+    classDef out  fill:#eff6ff,stroke:#60a5fa,stroke-width:2px,color:#1e40af
 </pre>
 </div>
 <p></p></figure><p></p>

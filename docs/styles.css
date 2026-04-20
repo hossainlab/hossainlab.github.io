@@ -3232,3 +3232,20 @@ details[open] .mfaq-q::after { content: "−"; }
   .edu-dot { display: none; }
   .cert-list-left { display: none; }
 }
+
+/* ── Tutorial series logos ───────────────────────────── */
+.tut-logos-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 1.25rem 0 0.25rem;
+}
+.tut-series-logo {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(1);
+  transition: opacity 0.2s;
+}
+.tut-series-logo:hover { opacity: 0.85; }

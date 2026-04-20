@@ -148,12 +148,17 @@ In Nextflow, this data dependency graph is described through **channels** — st
 Consider a minimal RNA-seq pipeline with three steps: trimming, alignment, and quantification. In Nextflow's mental model:
 
 ```{mermaid}
+%%{init: {'theme': 'base', 'themeVariables': {'edgeLabelBackground': '#f8fafc'}}}%%
 flowchart TD
-    A([FASTQ files channel]) --> B
-    B["TRIM_READS\nruns independently per sample"] -->|trimmed FASTQ channel| C
-    C["ALIGN_READS\nstarts as soon as trimmed FASTQ ready"] -->|BAM channel| D
-    D["QUANTIFY_READS\none count matrix per sample"] -->|counts channel| E
-    E([Output: count matrices])
+    A([FASTQ files channel]):::ch
+    A --> B["TRIM_READS<br/>runs independently per sample"]:::proc
+    B -->|trimmed FASTQ channel| C["ALIGN_READS<br/>starts as soon as trimmed FASTQ ready"]:::proc
+    C -->|BAM channel| D["QUANTIFY_READS<br/>one count matrix per sample"]:::proc
+    D -->|counts channel| E([Output: count matrices]):::out
+
+    classDef ch   fill:#dcfce7,stroke:#4ade80,stroke-width:2px,color:#166534
+    classDef proc fill:#fff7ed,stroke:#fb923c,stroke-width:2px,color:#c2410c
+    classDef out  fill:#eff6ff,stroke:#60a5fa,stroke-width:2px,color:#1e40af
 ```
 
 If you have 10 samples, all 10 TRIM_READS processes can run simultaneously. As soon as sample 3's trimming finishes, its ALIGN_READS process starts — without waiting for samples 1, 2, 4–10 to finish trimming. This automatic, fine-grained parallelism is one of Nextflow's most important practical advantages.
