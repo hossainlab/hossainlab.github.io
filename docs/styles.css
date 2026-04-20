@@ -3233,19 +3233,14 @@ details[open] .mfaq-q::after { content: "−"; }
   .cert-list-left { display: none; }
 }
 
-/* ── Tutorial series logos ───────────────────────────── */
-.tut-logos-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2.5rem;
-  padding: 1.25rem 0 0.25rem;
+/* ── Tutorial series card logos ─────────────────────── */
+.tut-banner-nextflow {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  gap: 1.5rem;
 }
-.tut-series-logo {
-  height: 42px;
+.tut-card-logo {
+  height: 38px;
   width: auto;
   object-fit: contain;
-  filter: brightness(1);
-  transition: opacity 0.2s;
+  mix-blend-mode: multiply;
 }
-.tut-series-logo:hover { opacity: 0.85; }

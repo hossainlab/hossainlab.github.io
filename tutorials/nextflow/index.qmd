@@ -12,10 +12,6 @@ listing:
 
 ```{=html}
 <div class="tut-series-overview">
-<div class="tut-logos-row">
-<img src="nextflow.png" alt="Nextflow" class="tut-series-logo">
-<img src="nf-core-logo.png" alt="nf-core" class="tut-series-logo">
-</div>
 <div class="tut-stat-group">
 <div class="tut-stat-item"><span class="tut-stat-val">15</span><span class="tut-stat-lbl">Lessons</span></div>
 <div class="tut-stat-item"><span class="tut-stat-val">5</span><span class="tut-stat-lbl">Modules</span></div>
