@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <filter id="soft-shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.1"/>
+    </filter>
+    
+    <linearGradient id="cell-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#bae6fd" />
+      <stop offset="100%" stop-color="#0ea5e9" />
+    </linearGradient>
+    
+    <linearGradient id="nuc-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+
+    <g id="cell-icon">
+      <circle cx="0" cy="0" r="16" fill="url(#cell-grad)" stroke="#0284c7" stroke-width="2"/>
+      <circle cx="-1" cy="-1" r="6" fill="url(#nuc-grad)" stroke="#b45309" stroke-width="1.5"/>
+      <circle cx="7" cy="6" r="2.5" fill="#10b981" opacity="0.9"/>
+    </g>
+
+    <path id="cluster-a" d="M 0,0 Q 20,-15 40,0 T 80,15 Q 60,30 40,25 T 0,0 Z" />
+    <path id="cluster-b" d="M 0,0 Q 15,-8 30,0 T 60,8 Q 45,20 30,18 T 0,0 Z" />
+  </defs>
+
+  <rect width="900" height="450" fill="#ffffff" />
+
+  <!-- STEP 1: DIVERSE DATASETS -->
+  <g transform="translate(40, 60)">
+    <text x="160" y="20" font-size="20" font-weight="800" fill="#334155" text-anchor="middle">1. Heterogeneous Datasets</text>
+    <rect x="0" y="40" width="320" height="320" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" filter="url(#soft-shadow)"/>
+    
+    <g transform="translate(25, 75)">
+      <!-- Study 1 -->
+      <rect x="0" y="0" width="125" height="110" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" />
+      <text x="62" y="30" font-size="16" font-weight="700" fill="#0f172a" text-anchor="middle">Study 1</text>
+      <use href="#cell-icon" x="62" y="65" />
+      <text x="62" y="100" font-size="12" font-weight="600" fill="#64748b" text-anchor="middle">Small cohorts</text>
+
+      <!-- Study 2 -->
+      <rect x="145" y="0" width="125" height="110" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" />
+      <text x="207" y="30" font-size="16" font-weight="700" fill="#0f172a" text-anchor="middle">Study 2</text>
+      <use href="#cell-icon" x="207" y="65" />
+      <text x="207" y="100" font-size="12" font-weight="600" fill="#64748b" text-anchor="middle">Limited cells</text>
+
+      <!-- Study 3 -->
+      <rect x="0" y="130" width="125" height="110" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" />
+      <text x="62" y="160" font-size="16" font-weight="700" fill="#0f172a" text-anchor="middle">Study 3</text>
+      <use href="#cell-icon" x="62" y="195" />
+      <text x="62" y="230" font-size="12" font-weight="600" fill="#64748b" text-anchor="middle">Specific tissue</text>
+
+      <!-- Study n -->
+      <rect x="145" y="130" width="125" height="110" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" />
+      <text x="207" y="160" font-size="16" font-weight="700" fill="#0f172a" text-anchor="middle">Study n</text>
+      <use href="#cell-icon" x="207" y="195" />
+      <text x="207" y="230" font-size="12" font-weight="600" fill="#64748b" text-anchor="middle">Batch effects</text>
+    </g>
+  </g>
+
+  <!-- ARROW 1 -->
+  <g transform="translate(375, 220)">
+    <path d="M 0,0 L 45,0" stroke="#94a3b8" stroke-width="4" stroke-dasharray="8,5" />
+    <polygon points="45,-8 60,0 45,8" fill="#94a3b8"/>
+  </g>
+
+  <!-- STEP 2: INTEGRATION ENGINE -->
+  <g transform="translate(450, 60)">
+    <text x="80" y="20" font-size="20" font-weight="800" fill="#334155" text-anchor="middle">2. Integration</text>
+    <rect x="0" y="40" width="160" height="320" rx="16" fill="#eff6ff" stroke="#3b82f6" stroke-width="2.5" filter="url(#soft-shadow)"/>
+    
+    <g transform="translate(80, 160)">
+      <circle r="55" fill="#ffffff" stroke="#2563eb" stroke-width="4" />
+      <text y="-8" font-size="22" font-weight="900" fill="#1e40af" text-anchor="middle">scVI</text>
+      <text y="20" font-size="11" font-weight="700" fill="#3b82f6" text-anchor="middle">Deep Learning</text>
+      
+      <circle r="65" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="2,12" stroke-linecap="round"/>
+    </g>
+    
+    <text x="80" y="295" font-size="14" font-weight="800" fill="#1e40af" text-anchor="middle">Harmonization</text>
+    <text x="80" y="320" font-size="13" font-weight="700" fill="#60a5fa" text-anchor="middle">&amp; Correction</text>
+  </g>
+
+  <!-- ARROW 2 -->
+  <g transform="translate(625, 220)">
+    <path d="M 0,0 L 45,0" stroke="#3b82f6" stroke-width="4" />
+    <polygon points="45,-8 60,0 45,8" fill="#3b82f6"/>
+  </g>
+
+  <!-- STEP 3: HARMONIZED ATLAS -->
+  <g transform="translate(700, 60)">
+    <text x="100" y="20" font-size="20" font-weight="800" fill="#334155" text-anchor="middle">3. Unified Atlas</text>
+    <rect x="0" y="40" width="200" height="320" rx="16" fill="#f0fdf4" stroke="#10b981" stroke-width="2.5" filter="url(#soft-shadow)"/>
+    
+    <g transform="translate(20, 100)">
+      <polygon points="10,0 150,0 130,120 -10,120" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" />
+      
+      <use href="#cluster-a" x="20" y="30" fill="#0ea5e9" opacity="0.85" />
+      <use href="#cluster-b" x="70" y="15" fill="#f59e0b" opacity="0.85" />
+      <use href="#cluster-a" x="80" y="60" fill="#10b981" opacity="0.85" />
+      <use href="#cluster-b" x="30" y="80" fill="#ec4899" opacity="0.85" />
+      
+      <text x="70" y="150" font-size="14" font-weight="800" fill="#065f46" text-anchor="middle">Unified Latent Space</text>
+    </g>
+
+    <g transform="translate(100, 285)">
+      <text font-size="13" font-weight="700" fill="#166534" text-anchor="middle">Multi-Patient Scale</text>
+      <text y="22" font-size="13" font-weight="700" fill="#166534" text-anchor="middle">Millions of Cells</text>
+    </g>
+  </g>
+</svg>

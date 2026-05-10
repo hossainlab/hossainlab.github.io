@@ -1,0 +1,15 @@
+1. **metaXpress** (R/Bioconductor Package).
+End-to-end package for bulk RNA-seq meta-analysis integrating QC, differential expression (DESeq2, edgeR, limma-voom), and six meta-analysis approaches (Fisher's, Stouffer's, fixed/random effects).
+*GitHub:* <https://github.com/hossainlab/metaXpress>
+
+2. **nf-core-rnaseqmeta** (Nextflow Pipeline).
+Reproducible pipeline for bulk RNA-seq meta-analysis across multiple studies with STAR/Salmon alignment, batch correction (ComBat-seq, SVA), and pathway enrichment.
+*GitHub:* <https://github.com/hossainlab/nf-core-rnaseqmeta>
+
+3. **Salmon RNA-Seq Quantification Pipeline** (R/Shell Pipeline).
+End-to-end bulk RNA-seq quantification pipeline using Salmon and SRA-Tools for ultra-fast transcript-level abundance estimation.
+*GitHub:* <https://github.com/hossainlab/salmon-rnaseq>
+
+4. **Single-Cell Analysis Workflow** (Bash, Python, and Workflow).
+End-to-end single-cell RNA-seq analysis workflow covering preprocessing, quality control, clustering, and cell type annotation.
+*GitHub:* <https://github.com/hossainlab/sc-workflow>

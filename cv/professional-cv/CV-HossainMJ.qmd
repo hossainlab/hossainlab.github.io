@@ -38,6 +38,10 @@ brand:
       font-header: Poppins
 ---
 
+```{=typst}
+#set text(hyphenate: false)
+```
+
 # Research Statement 
 My research focuses on developing reproducible bioinformatics pipelines for large-scale bulk and single-cell RNA-seq data to uncover molecular biomarkers, immunological signatures, and therapeutic targets in cancer and neurological diseases. By integrating multi-omics data analysis, machine learning, and biology, I aim to advance computational methods that bridge biological discovery and clinical translation.
 
@@ -73,11 +77,15 @@ My research focuses on developing reproducible bioinformatics pipelines for larg
 {{< include assets/qmd/courses.qmd >}}
 
 # Research Mentoring
-{{< include assets/qmd/mentoring.qmd >}}
+{{< yaml short_assets/yml/mentoring.yml >}}
 
 # Bioinformatics Workflows
 
 {{< include assets/qmd/bioinfo-workflows.qmd >}}
+
+# R/Bioconductor Packages
+
+{{< include assets/qmd/r-packages.qmd >}}
 
 # GenAI Projects
 

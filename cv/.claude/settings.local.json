@@ -2,7 +2,12 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:bioconductor.org)",
-      "WebFetch(domain:rdrr.io)"
+      "WebFetch(domain:rdrr.io)",
+      "WebFetch(domain:github.com)",
+      "Bash(gh repo:*)",
+      "Bash(gh api:*)",
+      "Bash(curl:*)",
+      "Bash(grep:*)"
     ]
   }
 }

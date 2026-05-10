@@ -1,0 +1,42 @@
+diu:
+  title: Visiting Scholar
+  location: Dhaka, Bangladesh
+  date: Sep 2025 – Present
+  description: Department of Public Health, Daffodil International University
+  details:
+    - Collaborated with faculty members to develop new research protocols for molecular and computational biology.
+    - Mentored junior researchers and students on data analysis techniques and the development of bioinformatics workflows.
+
+cblast:
+  title: Faculty (Bioinformatics)
+  location: Dhaka, Bangladesh
+  date: Aug 2023 – Present
+  description: University of Dhaka (cBLAST)
+  details:
+    - Taught Biomedical Machine Learning and RNA-seq analysis to 100+ trainees accross universities in Bangladesh.
+    - Directed student research projects applying deep learning to omics data.
+bmp:
+  title: Program Lead & Mentor
+  location: Dhaka, Bangladesh
+  date: 2026 – Present
+  description: "Bioinformatics Mentorship Program (BMP) | mdjubayerhossain.com/bmp"
+  details:
+    - Leads a 12-week intensive program training early-career researchers in RNA-seq analysis across cancer genomics and neurogenomics tracks.
+    - Mentees produce manuscript-ready, reproducible research outputs progressing to peer-reviewed publication.
+
+gsa_internship:
+  title: Program Lead & Mentor
+  location: Dhaka, Bangladesh
+  date: July 2025 – Present
+  description: "GSA Bioinformatics Internship | gsabioinfointernship.owlstown.net"
+  details:
+    - Organized in partnership with GNOBB, ASI School of Life, and SPSB bridging theoretical education and real-world bioinformatics research.
+    - Interns access the GNOBB-ASI Bioinformatics Hub to conduct RNA-Seq, multi-omics, and systems biology analyses.
+jnu_ta:
+  title: Teaching Assistant
+  location: Dhaka, Bangladesh
+  date: Oct 2022 – Dec 2022
+  description: Department of Microbiology, Jagannath University
+  details:
+    - Assisted in research methodology training covering experimental design and statistical analysis in public health microbiology.
+    - Supported departmental surveillance data processing and reviewed student research proposals.

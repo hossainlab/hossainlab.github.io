@@ -25,7 +25,12 @@ about:
 
 ::: {#hero-heading}
 
-![](files/research/interests.svg){width=100% style="max-width:480px; display:block; margin:1.5rem auto;"}
+![](files/research/harmonized-atlas.svg){width=100% style="max-width:100%; display:block; margin:1rem 0;"}
+
+<div class="ro-why-box ro-why-box-sc" style="margin-top: 1.5rem; text-align: left;">
+<span class="ro-why-label">Current Research Focus</span>
+**Harmonized Cell Atlas:** Individual single-cell studies often involve a small number of tumors and cells, which can limit the generalizability of findings. To overcome this, I am integrating diverse single-cell datasets into a **harmonized cell atlas** covering thousands of cells across patients. By leveraging publicly available data and deep generative modeling (scVI), this framework builds a comprehensive reference for understanding cellular heterogeneity in health and disease. [Explore my research projects &rarr;](projects/index.qmd)
+</div>
 
 :::
 

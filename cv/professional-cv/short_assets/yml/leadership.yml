@@ -1,23 +1,26 @@
 deepbio:
-  title: Founder & Principal Investigator
+  title: Founder, Bioinformatics Scientist & CEO
   location: Dhaka, Bangladesh
   date: Jan 2025 – Present
-  description: DeepBio Limited (Bioinformatics Research Group)
+  description: "DeepBio Limited | deepbioltd.com"
   details:
-    - Lead a research team of 13 scientists executing scRNA-seq and bulk RNA-seq analysis pipelines for cancer genomics and transcriptomics.
-    - Developed and benchmarked scalable bioinformatics workflows for biomarker discovery in cancer and neurodegenerative diseases.
-    - Built AI-integrated computational infrastructure for multi-omics data processing and interpretation.
-    - Designed and delivered a national training program in computational biology, upskilling undergraduate researchers across Bangladesh.
-    - Transitioning from operational leadership to a scientific advisory role to pursue full-time doctoral studies in 2026.
+    - Lead a team of 13 researchers executing scRNA-seq and bulk RNA-seq analysis pipelines for cancer genomics and transcriptomics projects.
+    - Develop and benchmark scalable bioinformatics workflows for biomarker discovery in cancer and neurodegenerative diseases.
+
+deepbio_academy:
+  title: Founder & Lead Instructor
+  location: Dhaka, Bangladesh
+  date: June 2020 – Present
+  description: "DeepBio Academy | deepbioacademy.com"
+  details:
+    - Designed bioinformatics curriculum specializing in bulk and scRNA-seq workflows, multi-omics integration, and deep learning for biological applications.
+    - Mentored undergraduate researchers in building computational portfolios emphasizing open-science standards and version control.
 
 chiral:
   title: Founder & Capacity Building Director
   location: Dhaka, Bangladesh
   date: June 2020 – Present
-  description: CHIRAL Bangladesh (Non-profit Research Institute)
+  description: "CHIRAL Bangladesh (Non-profit Research Institute) | deepbioltd.com/labs"
   details:
-    - Founded and lead a research institute with dedicated divisions in Bioinformatics, Public Health, Geospatial Health, and AI-Healthcare.
-    - Published 20+ peer-reviewed articles in Q1/Q2 journals and 40+ conference papers in health informatics and computational biology.
-    - Supervised 15+ manuscripts through analytical development and peer-review preparation in global health and bioinformatics.
-    - Collaborated with Michigan State University on biomedical research capacity-building initiatives in South Asia.
     - Trained 3,000+ early-career researchers in data science, research methodology, and computational biology workflows.
+    - Supervised 15+ manuscripts through analytical development and peer-review preparation in bioinformatics and global health.

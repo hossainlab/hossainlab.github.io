@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,6 +11,9 @@
 
 <title>skills – Jubayer Hossain</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -34,15 +37,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../..//files/profiles/icon.png" rel="icon" type="image/png">
 <script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
 <link href="../../../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -99,12 +101,46 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../../projects/index.html"> 
-<span class="menu-text">Projects</span></a>
+    <a class="nav-link" href="../../../../about/index.html"> 
+<span class="menu-text">About</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-research" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Research</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-research">    
+        <li>
+    <a class="dropdown-item" href="../../../../research/index.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../projects/index.html">
+ <span class="dropdown-text">Projects</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../projects/pipelines.html">
+ <span class="dropdown-text">Pipelines</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-teaching" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Teaching</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-teaching">    
+        <li>
+    <a class="dropdown-item" href="../../../../teaching/index.html">
+ <span class="dropdown-text">Courses</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../teaching/videos.html">
+ <span class="dropdown-text">Videos</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../../../teaching/index.html"> 
-<span class="menu-text">Teaching</span></a>
+    <a class="nav-link" href="../../../../tutorials/index.html"> 
+<span class="menu-text">Tutorials</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../../../blog/index.html"> 
@@ -115,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../../cv/professional-cv/CV-HossainMJ.pdf\"> 
+    <a class="nav-link" href="../../../../cv/professional-cv/CV-HossainMJ.pdf"> 
 <span class="menu-text">CV</span></a>
   </li>  
 </ul>
@@ -180,8 +216,9 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><strong>Programming Languages</strong>: Python, R, Julia, SQL, Bash, JavaScript</li>
 <li><strong>Bioinformatics</strong>: bulk RNA-Seq, Single-Cell, Spatial Omics, and Multi-omics</li>
-<li><strong>Workflow Management &amp; Reproducibility</strong>: Nextflow, Docker, Git, GitHub</li>
-<li><strong>Computing Environments</strong>: UNIX/Linux, HPC clusters, Cloud computing (AWS, Google Cloud)</li>
+<li><strong>Workflow Management &amp; Reproducibility</strong>: Nextflow (DSL2), nf-core, Docker, Singularity, Git, GitHub</li>
+<li><strong>HPC &amp; Cluster Computing</strong>: SLURM job scheduling (sbatch, sarray, resource profiling); building and submitting multi-step genomic pipelines on shared HPC clusters; Nextflow DSL2 pipelines with SLURM executor for scalable, reusable workflows</li>
+<li><strong>Cloud Computing</strong>: AWS S3, Google Cloud Storage for large genomic dataset management</li>
 </ul>
 
 

@@ -1,0 +1,4 @@
+1. **metaXpress**.
+End-to-end R/Bioconductor package for bulk RNA-seq meta-analysis, integrating data ingestion, QC, normalization, differential expression, and report generation in a single cohesive framework.
+*Tech:* R, Bioconductor, DESeq2, edgeR, limma-voom, ComBat, Harmony
+*GitHub:* <https://github.com/hossainlab/metaXpress>

@@ -1,9 +1,19 @@
 1. **Hossain, M. J.**, Shahjahan, M., & Fuad, M. (2025). Fezf2-mediated cortical development: Multi-omics analysis. *Working Paper/GitHub*. <https://github.com/hossainlab/fezf2-multiomics>
 
-2. **Hossain, M. J.**, Shahjahan, M., & Fuad, M. (2025). Single-cell meta-analysis of microglial activation in Alzheimer’s disease. *Working Paper/GitHub*. <https://github.com/hossainlab/alzheimers-microglia-meta-analysis>
+   Analyzed ~125,000 cells across 23 scRNA-seq and 3 scATAC-seq samples spanning the full E10–P4 cortical developmental timeline under wild-type, heterozygous, and knockout conditions. Multi-omics integration with peak-to-gene linkage reveals Fezf2 as a master regulator of corticofugal neuron specification, with 7,248 genes showing a measurable linear dose-response to Fezf2 dosage and a critical intervention window at E13–E15.
+
+2. **Hossain, M. J.**, Shahjahan, M., & Fuad, M. (2025). Single-cell meta-analysis of microglial activation in Alzheimer's disease. *Working Paper/GitHub*. <https://github.com/hossainlab/alzheimers-microglia-meta-analysis>
+
+   Cross-study meta-analysis of 5 public scRNA-seq datasets (human and mouse) using scVI batch-invariant integration and CellTypist for automated cell type classification. Fixed-effects meta-analysis with I² heterogeneity testing confirms reproducibility of disease-associated microglia (DAM), inflammatory, and interferon-responsive states across species — providing a statistical foundation absent from individual-study analyses.
 
 3. **Hossain, M. J.**, Shahjahan, M., & Fuad, M. (2025). Integrative spatial-scRNA-seq atlas of immunotherapy resistance mechanisms across cancer types. *Working Paper/GitHub*. <https://github.com/hossainlab/spatial-scRNA-immune-resistance>
 
-4. **Hossain, M. J.**, Shahjahan, M., & Fuad, M. (2026). Pan-Cancer Tumor-Associated Macrophage Reprogramming Atlas and Immunotherapy Response Prediction. *Working Paper/GitHub*. <https://github.com/hossainlab/TAM-Atlas>
-5. DeepAMR: AI-powered antimicrobial resistance prediction from genomic data.*Working Paper/Github*. <https://github.com/hossainlab/DeepAMR>
+   Integrates 50+ scRNA-seq datasets with spatial transcriptomics across 10+ cancer types to map spatially organized cellular niches that drive immunotherapy resistance — a scale that enables pan-cancer versus cancer-specific mechanism decomposition. A novel computational framework, SpatioResist, combines cell–cell communication networks with spatial localization to generate resistance risk scores directly from tumor microenvironment architecture.
 
+4. **Hossain, M. J.**, Shahjahan, M., & Fuad, M. (2026). Pan-Cancer Tumor-Associated Macrophage Reprogramming Atlas and Immunotherapy Response Prediction. *Working Paper/GitHub*. <https://github.com/hossainlab/TAM-Atlas>
+
+   Integrated ~640,000 single cells from 8 published scRNA-seq datasets spanning lung, breast, liver, colorectal, melanoma, BCC, ovarian, and prostate cancers into a unified pan-cancer macrophage atlas. scVI (30 latent dimensions) was selected over conventional batch-correction methods to preserve the subtle transcriptional signals that define 6 biologically distinct TAM functional states; GRNBoost2 TF regulon reconstruction (MAFB, HIF1A) and pseudobulk differential expression link specific TAM programs to immune checkpoint blockade response.
+
+5. **Hossain, M. J.** (2026). DeepAMR: AI-powered antimicrobial resistance prediction from genomic data. *Working Paper/GitHub*. <https://github.com/hossainlab/DeepAMR>
+
+   Multi-species, multi-label deep learning platform for predicting antimicrobial resistance phenotypes directly from bacterial whole-genome sequences, bypassing time-consuming culture-based susceptibility testing. K-mer feature extraction from NCBI Pathogen Detection genomes, combined with AMRFinderPlus ground-truth labeling, enables simultaneous resistance prediction across multiple drug classes from a single sequencing run.

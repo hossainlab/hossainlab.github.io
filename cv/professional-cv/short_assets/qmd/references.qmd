@@ -1,13 +1,20 @@
-**Dr. Syeda Tasneem Towhid**
-Associate Professor, Department of Microbiology
-Jagannath University, Dhaka, Bangladesh
-Email: towhidst@mib.jnu.ac.bd
-*Relationship: M.Sc. Project Supervisor and long-term research collaborator (2019–present)*
-
-**Dr. Md. Salequl Islam**
-Professor, Department of Microbiology
-Jahangirnagar University, Dhaka, Bangladesh
-Email: salequl@juniv.edu
-*Relationship: Collaborative researcher in antimicrobial resistance and microbiology studies*
-
-*Additional references from international collaborators at the Institute for Health Metrics and Evaluation (IHME, University of Washington) and Michigan State University are available upon request.*
+```{=typst}
+#grid(
+  columns: (1fr, 1fr),
+  gutter: 1em,
+  [
+    *Dr. Syeda Tasneem Towhid* \
+    Associate Professor \
+    Department of Microbiology \
+    Jagannath University \
+    Email: towhidst\@mib.jnu.ac.bd
+  ],
+  [
+    *Dr. Md. Salequl Islam* \
+    Professor \
+    Department of Microbiology  \
+    Jahangirnagar University \
+    Email: salequl\@juniv.edu 
+  ]
+)
+```

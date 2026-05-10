@@ -37,9 +37,9 @@ brand:
       font-header: Poppins
 ---
 
-# Research Statement
-
-I am a computational biologist with a track record of building and deploying reproducible multi-omics frameworks to decode the molecular architecture of cancer and neurological diseases. My research addresses three interconnected questions: (1) How can integrative analysis of bulk RNA-seq, single-cell RNA-seq, and spatial transcriptomics identify robust immunological biomarkers and therapeutic targets within tumor microenvironments? (2) Can interpretable machine learning models trained on pan-cancer transcriptomic data reliably stratify patient prognosis and predict immunotherapy response? (3) What computational strategies best characterize dynamic cell-state transitions—such as tumor-associated macrophage reprogramming and microglial activation in neurodegeneration? My published work includes first- and corresponding-author pan-cancer analyses in *Scientific Reports* and *BMC Genomics*, and seven GitHub-hosted reproducible pipelines built on Nextflow, Docker, and nf-core standards. As a GBD Senior Collaborator at IHME, I have contributed to large-scale epidemiological analyses published in *The Lancet*. In my PhD, I aim to develop scalable, interpretable computational methods for cell-state inference and immune landscape modeling, translating multi-omics discoveries into clinically actionable biomarkers and therapeutic hypotheses.
+```{=typst}
+#set text(hyphenate: false)
+```
 
 
 # Education and Training
@@ -50,9 +50,9 @@ I am a computational biologist with a track record of building and deploying rep
 
 {{< include short_assets/qmd/skills.qmd >}}
 
-# Research Experience
+# Academic Appointments 
 
-{{< yaml short_assets/yml/research.yml >}}
+{{< yaml short_assets/yml/academic-appointments.yml >}}
 
 # Selected Publications
 
@@ -66,17 +66,9 @@ I am a computational biologist with a track record of building and deploying rep
 
 {{< include short_assets/qmd/working-papers.qmd >}}
 
-# Selected Conferences
+# Software and Pipelines
 
-{{< include short_assets/qmd/conferences.qmd >}}
-
-# Professional Recognition
-
-{{< include short_assets/qmd/recognition.qmd >}}
-
-# Teaching Experience
-
-{{< yaml short_assets/yml/teaching.yml >}}
+{{< include short_assets/qmd/software.qmd >}}
 
 # Leadership Experience
 

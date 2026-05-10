@@ -1,8 +1,7 @@
 1. **Hossain, M. J.**, Shahjahan, M., & Fuad, M. (2025). Fezf2-mediated cortical development: Multi-omics analysis. *Working Paper/GitHub*. <https://github.com/hossainlab/fezf2-multiomics>
 
-2. **Hossain, M. J.**, Shahjahan, M., & Fuad, M. (2025). Single-cell meta-analysis of microglial activation in Alzheimer’s disease. *Working Paper/GitHub*. <https://github.com/hossainlab/alzheimers-microglia-meta-analysis>
+   Analyzed ~125,000 cells across 23 scRNA-seq and 3 scATAC-seq samples spanning the full E10–P4 cortical developmental timeline under wild-type, heterozygous, and knockout conditions. Multi-omics integration with peak-to-gene linkage reveals Fezf2 as a master regulator of corticofugal neuron specification, with 7,248 genes showing a measurable linear dose-response to Fezf2 dosage and a critical intervention window at E13–E15.
 
-3. **Hossain, M. J.**, Shahjahan, M., & Fuad, M. (2025). Integrative spatial-scRNA-seq atlas of immunotherapy resistance mechanisms across cancer types. *Working Paper/GitHub*. <https://github.com/hossainlab/spatial-scRNA-immune-resistance>
+2. **Hossain, M. J.**, Shahjahan, M., & Fuad, M. (2026). Pan-Cancer Tumor-Associated Macrophage Reprogramming Atlas and Immunotherapy Response Prediction. *Working Paper/GitHub*. <https://github.com/hossainlab/TAM-Atlas>
 
-4. **Hossain, M. J.**, Shahjahan, M., & Fuad, M. (2026). Pan-Cancer Tumor-Associated Macrophage Reprogramming Atlas and Immunotherapy Response Prediction. *Working Paper/GitHub*. <https://github.com/hossainlab/TAM-Atlas>
-5. DeepAMR: AI-powered antimicrobial resistance prediction from genomic data.*Working Paper/Github*. <https://github.com/hossainlab/DeepAMR>
+   Integrated ~640,000 single cells from 8 published scRNA-seq datasets spanning lung, breast, liver, colorectal, melanoma, BCC, ovarian, and prostate cancers into a unified pan-cancer macrophage atlas. scVI (30 latent dimensions) was selected over conventional batch-correction methods to preserve the subtle transcriptional signals that define 6 biologically distinct TAM functional states; GRNBoost2 TF regulon reconstruction (MAFB, HIF1A) and pseudobulk differential expression link specific TAM programs to immune checkpoint blockade response.

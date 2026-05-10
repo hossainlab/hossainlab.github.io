@@ -27,3 +27,8 @@ Automated GEO data retrieval, differential expression analysis, and ML dataset g
 Comprehensive microbiome pipeline combining QIIME 2 and DADA2 for taxonomic profiling.
 *Tech:* QIIME 2, R/DADA2, Phyloseq, VSEARCH
 *GitHub:* <https://github.com/hossainlab/16S-pipeline>
+
+7. **Single-Cell Analysis Workflow**.
+End-to-end single-cell RNA-seq analysis workflow covering preprocessing, quality control, clustering, and cell type annotation.
+*Tech:* Python, Scanpy, AnnData, scVI-tools, Harmony
+*GitHub:* <https://github.com/hossainlab/sc-workflow>
