@@ -34,27 +34,66 @@ about:
 
 :::
 
-<!-- Newsletter push notification -->
-<div id="newsletter-toast" class="newsletter-toast no-print">
-<div class="newsletter-toast-header">
-<span class="newsletter-toast-title">✉️ &nbsp;Subscribe to my Newsletter</span>
-<button class="newsletter-toast-close" onclick="dismissNewsletter()" aria-label="Close">&#x2715;</button>
-</div>
-<iframe src="https://thehossainlab.substack.com/embed" width="100%" height="220" style="border:none; background:transparent;" frameborder="0" scrolling="no"></iframe>
+```{=html}
+<!-- Program Spotlight Notification -->
+<div id="program-toast" class="program-toast no-print">
+  <div class="program-toast-header">
+    <span class="program-toast-title">🚀 Upcoming Programs</span>
+    <button class="program-toast-close" onclick="dismissProgramToast()" aria-label="Close">&#x2715;</button>
+  </div>
+  
+  <div class="program-tabs">
+    <button class="tab-btn active" onclick="showProgram('bmp')">Research (BMP)</button>
+    <button class="tab-btn" onclick="showProgram('nocode')">AI (No-Code)</button>
+  </div>
+
+  <div id="bmp-content" class="program-content active">
+    <h4>Bioinformatics Mentorship Program</h4>
+    <p>Go from raw sequencing data to a <strong>publication-ready manuscript</strong> in 12 weeks.</p>
+    <div class="program-meta">
+      <span>📅 12 Weeks</span>
+      <span>🔬 NGS & Genomics</span>
+    </div>
+    <a href="https://mdjubayerhossain.com/bmp/" target="_blank" class="program-link">Learn More & Apply &rarr;</a>
+  </div>
+
+  <div id="nocode-content" class="program-content">
+    <h4>No-Code & Agentic AI</h4>
+    <p>Automate literature reviews and Omics analysis using <strong>Agentic AI</strong>—no coding required.</p>
+    <div class="program-meta">
+      <span>📅 4 Weeks</span>
+      <span>🤖 LLMs & Agents</span>
+    </div>
+    <a href="https://mdjubayerhossain.com/NoCodeAI4LS/" target="_blank" class="program-link">Join the Revolution &rarr;</a>
+  </div>
 </div>
 
 <script>
+function showProgram(id) {
+  // Update buttons
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  // Find the button that was clicked
+  var clickedBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.innerText.toLowerCase().includes(id.toLowerCase()));
+  if (clickedBtn) clickedBtn.classList.add('active');
+  
+  // Update content
+  document.querySelectorAll('.program-content').forEach(content => content.classList.remove('active'));
+  document.getElementById(id + '-content').classList.add('active');
+}
+
 (function() {
-  if (!localStorage.getItem('newsletter-dismissed')) {
+  if (!localStorage.getItem('program-toast-dismissed')) {
     setTimeout(function() {
-      var el = document.getElementById('newsletter-toast');
-      if (el) el.classList.add('newsletter-toast-show');
-    }, 3000);
+      var el = document.getElementById('program-toast');
+      if (el) el.classList.add('program-toast-show');
+    }, 4000);
   }
 })();
-function dismissNewsletter() {
-  var el = document.getElementById('newsletter-toast');
-  if (el) el.classList.remove('newsletter-toast-show');
-  localStorage.setItem('newsletter-dismissed', '1');
+
+function dismissProgramToast() {
+  var el = document.getElementById('program-toast');
+  if (el) el.classList.remove('program-toast-show');
+  localStorage.setItem('program-toast-dismissed', '1');
 }
 </script>
+```
