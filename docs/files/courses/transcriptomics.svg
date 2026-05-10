@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250">
+  <defs>
+    <linearGradient id="gc2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5f3ff" />
+      <stop offset="100%" stop-color="#ede9fe" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="250" fill="url(#gc2)" />
+  
+  <!-- RNA-Seq Motif -->
+  <g transform="translate(200, 100)">
+    <!-- Heatmap representation -->
+    <rect x="-50" y="-40" width="25" height="25" fill="#7c3aed" opacity="0.8" />
+    <rect x="-20" y="-40" width="25" height="25" fill="#c084fc" opacity="0.6" />
+    <rect x="10" y="-40" width="25" height="25" fill="#7c3aed" />
+    
+    <rect x="-50" y="-10" width="25" height="25" fill="#c084fc" />
+    <rect x="-20" y="-10" width="25" height="25" fill="#7c3aed" opacity="0.7" />
+    <rect x="10" y="-10" width="25" height="25" fill="#c084fc" opacity="0.9" />
+    
+    <rect x="-50" y="20" width="25" height="25" fill="#7c3aed" opacity="0.9" />
+    <rect x="-20" y="20" width="25" height="25" fill="#c084fc" opacity="0.5" />
+    <rect x="10" y="20" width="25" height="25" fill="#7c3aed" />
+  </g>
+  
+  <text x="200" y="220" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#5b21b6">Transcriptomics Analysis</text>
+  <text x="200" y="238" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#64748b">Bulk + Single Cell RNA-Seq</text>
+</svg>

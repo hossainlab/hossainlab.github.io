@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250">
+  <defs>
+    <linearGradient id="g-sc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0f9ff" />
+      <stop offset="100%" stop-color="#e0f2fe" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.1"/>
+    </filter>
+    <!-- Cluster blobs -->
+    <path id="blob" d="M 0,0 Q 15,-10 30,0 T 60,10 Q 45,20 30,18 T 0,0 Z" />
+  </defs>
+  <rect width="400" height="250" fill="url(#g-sc)" />
+  
+  <!-- Single-Cell Essence: UMAP Clusters -->
+  <g transform="translate(200, 115) scale(1.1)">
+    <!-- 3D projection plane -->
+    <polygon points="-80,-40 80,-40 60,40 -100,40" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+    
+    <g filter="url(#shadow)">
+      <!-- Cluster 1 -->
+      <use href="#blob" x="-60" y="-20" fill="#0ea5e9" opacity="0.8" />
+      <!-- Cluster 2 -->
+      <use href="#blob" x="10" y="-30" fill="#f59e0b" opacity="0.8" />
+      <!-- Cluster 3 -->
+      <use href="#blob" x="-20" y="5" fill="#10b981" opacity="0.8" />
+      <!-- Cluster 4 -->
+      <use href="#blob" x="-70" y="15" fill="#ec4899" opacity="0.8" />
+    </g>
+    
+    <!-- Cell Icon overlay to show resolution -->
+    <g transform="translate(60, 25) scale(0.6)">
+      <circle r="14" fill="#fff" stroke="#0ea5e9" stroke-width="2"/>
+      <circle r="5" fill="#0ea5e9" />
+    </g>
+  </g>
+</svg>

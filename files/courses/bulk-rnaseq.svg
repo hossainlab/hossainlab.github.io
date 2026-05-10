@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250">
+  <defs>
+    <linearGradient id="g-rnaseq" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff1f2" />
+      <stop offset="100%" stop-color="#ffe4e6" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+  <rect width="400" height="250" fill="url(#g-rnaseq)" />
+  
+  <!-- Transcriptome / RNA-Seq Essence -->
+  <g transform="translate(200, 115) scale(1.1)">
+    <!-- RNA Strands -->
+    <path d="M-80,-40 C-60,-20 -100,20 -80,40" stroke="#f43f5e" stroke-width="3" fill="none" opacity="0.3" stroke-linecap="round"/>
+    <path d="M80,-40 C100,-20 60,20 80,40" stroke="#f43f5e" stroke-width="3" fill="none" opacity="0.3" stroke-linecap="round"/>
+
+    <!-- Volcano Plot Motif (Differential Expression) -->
+    <g transform="translate(0, 0)" filter="url(#shadow)">
+      <!-- Axes -->
+      <line x1="-50" y1="40" x2="50" y2="40" stroke="#475569" stroke-width="2" />
+      <line x1="0" y1="40" x2="0" y2="-40" stroke="#475569" stroke-width="1.5" stroke-dasharray="3,2" />
+      
+      <!-- Upregulated genes -->
+      <circle cx="25" cy="-20" r="5" fill="#e11d48" />
+      <circle cx="35" cy="-35" r="4" fill="#e11d48" opacity="0.8" />
+      <circle cx="15" cy="-5" r="3" fill="#e11d48" opacity="0.6" />
+      
+      <!-- Downregulated genes -->
+      <circle cx="-25" cy="-20" r="5" fill="#2563eb" />
+      <circle cx="-35" cy="-35" r="4" fill="#2563eb" opacity="0.8" />
+      <circle cx="-15" cy="-5" r="3" fill="#2563eb" opacity="0.6" />
+      
+      <!-- Insignificant -->
+      <circle cx="5" cy="30" r="2" fill="#94a3b8" />
+      <circle cx="-5" cy="32" r="2" fill="#94a3b8" />
+    </g>
+  </g>
+</svg>

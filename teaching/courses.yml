@@ -1,4 +1,113 @@
 - path:
+  title: "Bioinformatics Mentorship Program (BMP)"
+  image: "../files/courses/bmp.svg"
+  image-alt: "Bioinformatics Mentorship Program"
+  description: "Our flagship 12-week intensive research program designed for serious researchers. Master NGS data analysis lifecycle—from raw sequencing data to publication-ready manuscripts and polished figures. Includes personalized mentorship, HPC access, and proprietary research pipelines."
+  categories:
+    - Mentorship
+    - Research
+    - Genomics
+  tags:
+    - NGS
+    - Cancer Genomics
+    - Neurogenomics
+    - Publication
+  links:
+    - label: "Program Website"
+      url: "https://mdjubayerhossain.com/bmp/"
+      icon: "fa-solid fa-arrow-up-right-from-square"
+
+- path:
+  title: "No-Code & Agentic AI for Life Sciences"
+  image: "../files/courses/nocode-ai.svg"
+  image-alt: "No-Code & Agentic AI for Life Sciences"
+  description: "A 4-week live program focused on leveraging Generative and Agentic AI tools to automate biomedical research workflows. Learn to use Claude, NotebookLM, and Gemini for literature reviews, drug discovery, and Omics analysis—100% no-code."
+  categories:
+    - AI
+    - Data Science
+    - Life Sciences
+  tags:
+    - No-Code
+    - LLMs
+    - AI Agents
+    - Automation
+  links:
+    - label: "Program Website"
+      url: "https://mdjubayerhossain.com/NoCodeAI4LS/"
+      icon: "fa-solid fa-arrow-up-right-from-square"
+
+- path:
+  title: "Bulk RNA-Seq Analysis for Absolute Beginners"
+  image: "../files/courses/bulk-rnaseq.svg"
+  image-alt: "Bulk RNA-Seq Analysis for Absolute Beginners"
+  description: "Unlock the secrets of the transcriptome. Designed for biologists with zero programming experience, this course teaches the tools and statistical rigor required to turn raw sequencing data into publication-quality insights—covering Linux, R, DESeq2, and Pathway Analysis."
+  categories:
+    - Genomics
+    - Transcriptomics
+    - Data Science
+  tags:
+    - RNA-Seq
+    - DESeq2
+    - R/Bioconductor
+    - GSEA
+  links:
+    - label: "Course Repo"
+      url: "https://github.com/hossainlab/salmon-rnaseq"
+
+- path:
+  title: "Single-Cell RNA-Seq Analysis for Absolute Beginners"
+  image: "../files/courses/sc-rnaseq.svg"
+  image-alt: "Single-Cell RNA-Seq Analysis for Absolute Beginners"
+  description: "Master the resolution of individual cells. This course guides beginners through the complete single-cell workflow—from quality control and batch integration to clustering, cell-type annotation, and trajectory analysis using the scverse ecosystem."
+  categories:
+    - Genomics
+    - Single-Cell
+    - Data Science
+  tags:
+    - scRNA-Seq
+    - Scanpy
+    - Seurat
+    - Batch Correction
+  links:
+    - label: "Course Repo"
+      url: "https://github.com/hossainlab/sc-workflow"
+
+- path:
+  title: "NGS Data Analysis for Absolute Beginners"
+  image: "../files/courses/ngs-workflow.svg"
+  image-alt: "NGS Data Analysis for Absolute Beginners"
+  description: "A foundational course for mastering Next-Generation Sequencing (NGS) data. Learn the end-to-end workflow from raw FASTQ files to variants and expression matrices, covering quality control, read mapping, and downstream analysis using industry-standard tools."
+  categories:
+    - Genomics
+    - NGS
+    - Bioinformatics
+  tags:
+    - FASTQ
+    - BWA/Bowtie2
+    - GATK
+    - Quality Control
+  links:
+    - label: "Course Repo"
+      url: "https://github.com/deepbioacademy/ngs_workflow"
+
+- path:
+  title: "Reproducible Bioinformatics Workflows: Ideation to Execution"
+  image: "../files/courses/bioinfo-workflow.svg"
+  image-alt: "Reproducible Bioinformatics Workflows"
+  description: "A 3-day intensive workshop on building reproducible and scalable bioinformatics pipelines. Participants learn to orchestrate complex genomic workflows using industry-standard tools like Nextflow, Snakemake, and Docker, ensuring computational research is portable and transparent."
+  categories:
+    - Workflows
+    - Reproducible Research
+  tags:
+    - Nextflow
+    - Snakemake
+    - Docker
+    - Conda
+  links:
+    - label: "Course Repo"
+      url: "https://mdjubayerhossain.com/SAR/"
+
+- path:
   title: "Statistical Analysis with R for Research"
   image: "../files/courses/r-for-research.svg"
   image-alt: "Statistical Analysis with R for Research"
@@ -18,7 +127,7 @@
 
 - path:
   title: "Transcriptomics Data Analysis (Bulk + Single Cell)"
-  image: "../files/courses/tda.jpg"
+  image: "../files/courses/transcriptomics.svg"
   image-alt: "Transcriptomics Data Analysis"
   description: "A live, instructor-led training program covering best practices in high-throughput RNA-seq data analysis. Participants learn to independently analyze gene expression datasets using R, Bioconductor, and the scverse ecosystem — from raw counts to biological interpretation."
   categories:
@@ -38,7 +147,7 @@
 
 - path:
   title: "Biomarker Identification using Machine Learning"
-  image: "../files/courses/biomarkers.jpg"
+  image: "../files/courses/biomarkers.svg"
   image-alt: "Biomarker Identification using Machine Learning"
   description: "Hands-on course applying advanced machine learning and bioinformatics techniques to identify novel biomarkers from high-dimensional biological data. Focuses on cancer genomics using TCGA data to discover clinically relevant biomarkers for diagnosis, prognosis, and treatment selection."
   categories:
@@ -55,7 +164,7 @@
 
 - path:
   title: "Pan-Cancer Bioinformatics with R: Ideation to Publication"
-  image: "../files/courses/pan-cancer.jpg"
+  image: "../files/courses/pan-cancer.svg"
   image-alt: "Pan-Cancer Bioinformatics with R"
   description: "An intensive training program guiding participants through the complete journey of pan-cancer analysis — from research idea to publication. Covers TCGA data access, expression, survival, mutation, and immune analyses, multi-omics integration, publication-ready visualization, and manuscript preparation."
   categories:
@@ -69,7 +178,7 @@
 
 - path:
   title: "AI in Drug Discovery: In Silico Toxicology Modeling"
-  image: "../files/courses/ai-toxicology.jpg"
+  image: "../files/courses/ai-drug-discovery.svg"
   image-alt: "AI in Drug Discovery: In Silico Toxicology Modeling"
   description: "A one-day hands-on workshop introducing AI-powered toxicology modeling for drug discovery. Participants build machine learning models to predict compound toxicity, classify molecules, and analyze structure–activity relationships using real-world cheminformatics datasets."
   categories:
@@ -83,7 +192,7 @@
 
 - path:
   title: "Data Science and Machine Learning for Biologists"
-  image: "../files/courses/ml-ds-for-biologists.jpg"
+  image: "../files/courses/ml-ds-biologists.svg"
   image-alt: "Data Science and Machine Learning for Biologists"
   description: "Taught at CBLAST, University of Dhaka, this course introduces biologists to data science and machine learning through hands-on biological case studies. Covers data processing, visualization, and analysis using Python and R, with applications of supervised and unsupervised learning in genomics, transcriptomics, and health data."
   categories:

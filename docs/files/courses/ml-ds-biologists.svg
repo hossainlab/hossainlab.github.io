@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250">
+  <defs>
+    <linearGradient id="gc6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0fdfa" />
+      <stop offset="100%" stop-color="#ccfbf1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="250" fill="url(#gc6)" />
+  
+  <!-- Data Science for Biologists Motif -->
+  <g transform="translate(200, 105)">
+    <!-- Code + Biology -->
+    <path d="M-50,-20 L-70,0 L-50,20 M50,-20 L70,0 L50,20" fill="none" stroke="#0d9488" stroke-width="3" stroke-linecap="round" />
+    <circle cx="0" cy="0" r="35" fill="none" stroke="#0d9488" stroke-width="2" stroke-dasharray="8,4" />
+    <path d="M-15,-10 Q0,20 15,-10" fill="none" stroke="#0d9488" stroke-width="3" stroke-linecap="round" />
+    <circle cx="-10" cy="-5" r="3" fill="#0d9488" />
+    <circle cx="10" cy="-5" r="3" fill="#0d9488" />
+  </g>
+  
+  <text x="200" y="220" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#0f766e">DS &amp; ML for Biologists</text>
+  <text x="200" y="238" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#64748b">Hands-on Biological Case Studies</text>
+</svg>

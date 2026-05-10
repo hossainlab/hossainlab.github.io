@@ -1,6 +1,6 @@
 - path:
   title: "TAM-Atlas: Tumor-Associated Macrophage Heterogeneity Across Cancers"
-  image: "../files/projects/tam-atlas.jpg"
+  image: "../files/projects/tam-atlas.svg"
   image-alt: "TAM-Atlas"
   description: "A computational framework analyzing tumor-associated macrophage (TAM) heterogeneity across 8 cancer types to predict immunotherapy response using single-cell transcriptomics. Integrates ~640,000 cells from published datasets through a seven-phase pipeline, identifying 6 conserved macrophage states and linking SPP1+ and TREM2+ populations to checkpoint inhibitor resistance. Employs scVI deep generative modeling, gene regulatory network inference, and Open Targets druggability prioritization."
   categories:
@@ -18,7 +18,7 @@
 
 - path:
   title: "Single-Cell Atlas of COVID-19 Lung Pathology"
-  image: "../files/projects/covid19-lung-atlas.jpg"
+  image: "../files/projects/covid19-lung-atlas.svg"
   image-alt: "COVID-19 Lung Atlas"
   description: "Reanalysis of single-nucleus RNA-seq data from Melms et al. (2021) examining lung tissue from 26 COVID-19 patients and healthy controls. Identifies myeloid expansion, epithelial depletion, and pro-fibrotic remodeling across 94,027 cells using scVI batch correction and Leiden clustering, with an interactive 8-tab Shiny app for exploring gene expression and cell-cell interactions."
   categories:
@@ -37,7 +37,7 @@
 
 - path:
   title: "DeepAMR: AI-Powered Antimicrobial Resistance Prediction"
-  image: "../files/projects/deep-amr.jpeg"
+  image: "../files/projects/deep-amr.svg"
   image-alt: "DeepAMR Platform"
   description: "A deep learning platform that analyzes genomic sequences to predict antimicrobial resistance patterns, built for the Bangladesh healthcare system. Delivers AMR predictions in under 15 minutes with 95%+ accuracy, identifying resistance genes and mutations across 12+ organisms and 50+ antibiotics — reducing traditional culture-based testing from days to hours."
   categories:
@@ -55,7 +55,7 @@
 
 - path:
   title: "Fezf2-Mediated Cortical Development: Multi-Omics Analysis"
-  image: "../files/projects/Fezf2-Mediated.jpg"
+  image: "../files/projects/fezf2-development.svg"
   image-alt: "Fezf2 Multi-Omics Analysis"
   description: "Integrative analysis of bulk and single-cell RNA-Seq data to elucidate Fezf2's role in cortical neurogenesis. Leveraging the GSE153164 dataset (Di Bella et al. 2021) to investigate temporal and cell-type-specific mechanisms by which Fezf2 mutations disrupt cortical development."
   categories:
@@ -72,7 +72,7 @@
 
 - path:
   title: "Single-Cell Meta-Analysis of Microglial Activation in Alzheimer's Disease"
-  image: "../files/projects/alzheimers-microglia.jpg"
+  image: "../files/projects/alzheimers-microglia.svg"
   image-alt: "Alzheimer's Microglia Meta-Analysis"
   description: "Meta-analysis of single-cell RNA-Seq datasets to identify microglial states and activation patterns in Alzheimer's disease. Integrating multiple cohorts to characterize disease-associated microglia subtypes and their transcriptomic signatures across disease stages."
   categories:
@@ -90,7 +90,7 @@
 
 - path:
   title: "Integrative Spatial-scRNA-seq Atlas of Immunotherapy Resistance Across Cancer Types"
-  image: "../files/projects/Spatial-scRNA-seq.jpg"
+  image: "../files/projects/spatial-scrna-atlas.svg"
   image-alt: "Spatial scRNA-seq Immunotherapy Atlas"
   description: "Comprehensive spatial transcriptomics and single-cell analysis to map tumor microenvironment and resistance mechanisms in immunotherapy. Investigating how cell-type interactions influence tumor development and immunotherapeutic response, including SPP1-expressing macrophage-mediated resistance through adenosine pathway activation."
   categories:

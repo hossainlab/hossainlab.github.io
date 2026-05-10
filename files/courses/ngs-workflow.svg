@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250">
+  <defs>
+    <linearGradient id="g-ngs" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+    <filter id="glow-ngs" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <rect width="400" height="250" fill="url(#g-ngs)" />
+  
+  <!-- NGS Essence: Sequencer & Data -->
+  <g transform="translate(200, 110)">
+    <!-- Stylized DNA entering -->
+    <path d="M-120,-30 Q-100,0 -120,30 M-100,-30 Q-80,0 -100,30" stroke="#2563eb" stroke-width="3" fill="none" opacity="0.3" />
+    
+    <!-- Sequencer Box -->
+    <rect x="-60" y="-50" width="120" height="100" rx="12" fill="#ffffff" stroke="#334155" stroke-width="3" />
+    <rect x="-45" y="-35" width="90" height="50" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5" />
+    <!-- Screen / Pulse -->
+    <path d="M-35,-10 L-25,-10 L-20,-20 L-10,0 L0,-10 L10,-10" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
+    
+    <!-- Status lights -->
+    <circle cx="-45" cy="30" r="4" fill="#10b981" />
+    <circle cx="-30" cy="30" r="4" fill="#64748b" opacity="0.5" />
+    
+    <!-- Data Stream / Reads coming out -->
+    <g transform="translate(70, 0)">
+       <line x1="0" y1="-20" x2="40" y2="-20" stroke="#334155" stroke-width="3" stroke-linecap="round" stroke-dasharray="8,4" />
+       <line x1="10" y1="0" x2="50" y2="0" stroke="#334155" stroke-width="3" stroke-linecap="round" stroke-dasharray="12,6" />
+       <line x1="0" y1="20" x2="40" y2="20" stroke="#334155" stroke-width="3" stroke-linecap="round" stroke-dasharray="10,5" />
+    </g>
+  </g>
+  
+  <text x="200" y="220" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1e293b">NGS Data Analysis</text>
+  <text x="200" y="238" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#64748b">Raw Sequencing to Insights</text>
+</svg>
