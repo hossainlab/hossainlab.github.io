@@ -240,7 +240,9 @@ ul.task-list li input[type="checkbox"] {
 </div>
   </div>
   <div class="about-contents"><div id="hero-heading">
-<p><img src="files/research/harmonized-atlas.svg" class="img-fluid" style="max-width:100%; display:block; margin:1rem 0;;width:100.0%"></p>
+<div class="research-svg-container">
+<p><img src="files/research/harmonized-atlas.svg" class="img-fluid" style="display:block; margin:0 auto;;width:100.0%" loading="lazy"></p>
+</div>
 <div class="ro-why-box ro-why-box-sc" style="margin-top: 1.5rem; text-align: left;">
 <p><span class="ro-why-label">Current Research Focus</span> <strong>Harmonized Cell Atlas:</strong> Individual single-cell studies often involve a small number of tumors and cells, which can limit the generalizability of findings. To overcome this, I am integrating diverse single-cell datasets into a <strong>harmonized cell atlas</strong> covering thousands of cells across patients. By leveraging publicly available data and deep generative modeling (scVI), this framework builds a comprehensive reference for understanding cellular heterogeneity in health and disease. <a href="./projects/index.html">Explore my research projects →</a></p>
 </div>
@@ -255,8 +257,8 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
   <div class="program-tabs">
-    <button class="tab-btn active" onclick="showProgram('bmp')">Research (BMP)</button>
-    <button class="tab-btn" onclick="showProgram('nocode')">AI (No-Code)</button>
+    <button class="tab-btn active" data-id="bmp" onclick="showProgram('bmp')">Research (BMP)</button>
+    <button class="tab-btn" data-id="nocode" onclick="showProgram('nocode')">AI (No-Code)</button>
   </div>
 
   <div id="bmp-content" class="program-content active">
@@ -283,30 +285,34 @@ ul.task-list li input[type="checkbox"] {
 <script>
 function showProgram(id) {
   // Update buttons
-  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-  // Find the button that was clicked
-  var clickedBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.innerText.toLowerCase().includes(id.toLowerCase()));
-  if (clickedBtn) clickedBtn.classList.add('active');
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-id') === id);
+  });
   
   // Update content
-  document.querySelectorAll('.program-content').forEach(content => content.classList.remove('active'));
-  document.getElementById(id + '-content').classList.add('active');
+  document.querySelectorAll('.program-content').forEach(content => {
+    content.classList.toggle('active', content.id === id + '-content');
+  });
 }
-
-(function() {
-  if (!localStorage.getItem('program-toast-dismissed')) {
-    setTimeout(function() {
-      var el = document.getElementById('program-toast');
-      if (el) el.classList.add('program-toast-show');
-    }, 4000);
-  }
-})();
 
 function dismissProgramToast() {
-  var el = document.getElementById('program-toast');
+  const el = document.getElementById('program-toast');
   if (el) el.classList.remove('program-toast-show');
-  localStorage.setItem('program-toast-dismissed', '1');
+  localStorage.setItem('program-toast-dismissed', Date.now());
 }
+
+window.addEventListener('load', function() {
+  // If not dismissed in the last 24 hours, show it
+  const lastDismissed = localStorage.getItem('program-toast-dismissed');
+  const shouldShow = !lastDismissed || (Date.now() - lastDismissed > 24 * 60 * 60 * 1000);
+  
+  if (shouldShow) {
+    setTimeout(function() {
+      const el = document.getElementById('program-toast');
+      if (el) el.classList.add('program-toast-show');
+    }, 2000);
+  }
+});
 </script>
 
 
@@ -713,7 +719,7 @@ function dismissProgramToast() {
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>© Copyright 2025, Jubayer Hossain</p>
+<p>© Copyright 2026, Jubayer Hossain</p>
 </div>
     <div class="nav-footer-right">
       &nbsp;

@@ -1,4 +1,23 @@
 - path:
+  title: "GSA Bioinformatics Internship"
+  image: "../files/courses/GSABioinformaticsInternship.png"
+  image-alt: "GSA Bioinformatics Internship"
+  description: "A collaborative initiative by GNOBB, ASI School of Life, and SPSB. As Program Lead, I oversee this internship bridging theory and real-world research through hands-on projects mentored by experts from DeepBio Limited and Big Bioinformatics Lab. The program also features a Bioinformatics Camp for school students, where interns gain leadership experience through mentoring and public engagement."
+  categories:
+    - Mentorship
+    - Bioinformatics
+    - Global South
+  tags:
+    - Internship
+    - Computational Biology
+    - Research Training
+    - Capacity Building
+  links:
+    - label: "Program Website"
+      url: "https://gsabioinfointernship.github.io/"
+      icon: "fa-solid fa-arrow-up-right-from-square"
+
+- path:
   title: "Bioinformatics Mentorship Program (BMP)"
   image: "../files/courses/bmp.svg"
   image-alt: "Bioinformatics Mentorship Program"

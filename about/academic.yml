@@ -1,0 +1,19 @@
+- name: "Daffodil International University"
+  role: "Visiting Scholar"
+  period: "Sep 2025 – Present"
+  location: "Dhaka, Bangladesh"
+  description: "Department of Public Health. Investigating computational frameworks within public health genomics to facilitate large-scale biomarker discovery and clinical validation."
+  highlights:
+    - "Analyzing genomic surveillance data and identifying novel molecular signatures in disease"
+    - "Developing specialized curriculum for AI-driven disease modeling"
+    - "Synthesizing heterogeneous digital health records with genomic datasets to evaluate predictive models"
+
+- name: "University of Dhaka"
+  role: "Faculty (Bioinformatics)"
+  period: "Aug 2023 – Present"
+  location: "Dhaka, Bangladesh"
+  description: "Center for Bioinformatics Learning, Aid and Support (cBLAST). Instructing specialized modules in Biomedical Machine Learning and deep learning frameworks."
+  highlights:
+    - "Applying Python-based neural networks to sequence analysis"
+    - "Directing student research projects applying deep learning to identify regulatory elements"
+    - "Facilitating technical practicums for 100+ trainees on scalable data science methodologies"

@@ -1,0 +1,17 @@
+<div class="academic-list">
+<% for (const item of items) { %>
+<div class="academic-card">
+<div class="academic-card-top">
+<span class="academic-type-badge"><%= item.role %></span>
+<span class="academic-meta">📅 <%= item.period %> &nbsp;·&nbsp; 📍 <%= item.location %></span>
+</div>
+<h3 class="academic-name"><%= item.name %></h3>
+<p class="academic-desc"><%= item.description %></p>
+<ul class="academic-highlights">
+<% for (const h of (item.highlights || [])) { %>
+<li><%= h %></li>
+<% } %>
+</ul>
+</div>
+<% } %>
+</div>

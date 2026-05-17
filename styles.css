@@ -57,7 +57,88 @@ table {
   border-color: #2b6cb0;
 }
 
-/* ── Project Cards ── */
+/* ── Academic Cards ── */
+.academic-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+  max-width: 960px;
+  margin: 0 auto 2rem;
+  padding: 0 1rem;
+}
+
+.academic-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.5rem;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.academic-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.academic-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.academic-type-badge {
+  background: #ebf4ff;
+  color: #2b6cb0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.academic-meta {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.academic-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #1a202c;
+  margin: 0 0 0.6rem;
+  line-height: 1.3;
+}
+
+.academic-desc {
+  font-size: 0.88rem;
+  color: #4a5568;
+  line-height: 1.55;
+  margin: 0 0 1rem;
+}
+
+.academic-highlights {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.82rem;
+  color: #4a5568;
+}
+
+.academic-highlights li {
+  margin-bottom: 0.4rem;
+}
+
+@media (max-width: 480px) {
+  .academic-list {
+    grid-template-columns: 1fr;
+    padding: 0 0.5rem;
+  }
+}
+
 .project-grid {
   display: flex;
   flex-direction: column;
