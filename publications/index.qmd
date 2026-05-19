@@ -8,6 +8,7 @@ listing:
     contents:
       - peer-reviewed.yml
       - under-review.yml
+      - working-papers.yml
       - conference.yml
     template: ../_templates/publication-card.ejs
     sort-ui: false

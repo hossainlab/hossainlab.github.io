@@ -1,3 +1,21 @@
+
+- path:
+  title: "Deep Learning-Driven AMR Drug Repurposing"
+  image: "../files/projects/amr-drug-repurposing.svg"
+  image-alt: "AMR Drug Repurposing"
+  description: "A deep learning framework to identify FDA-approved non-antibiotic drugs with potential antibacterial activity against ESKAPE pathogens and M. tuberculosis. Leveraging ChEMBL bioactivity data and molecular fingerprints, the project uses an ensemble of Random Forest and Deep MLP classifiers with ChemBERTa integration to predict drug efficacy and interpret molecular features via SHAP."
+  categories:
+    - Deep Learning
+    - Bioinformatics
+  tags:
+    - Python
+    - PyTorch
+    - RDKit
+    - ChEMBL
+    - SHAP
+  links:
+    - label: "GitHub"
+      url: "https://github.com/hossainlab/amr_drug_repurposing"
 - path:
   title: "TAM-Atlas: Tumor-Associated Macrophage Heterogeneity Across Cancers"
   image: "../files/projects/tam-atlas.svg"

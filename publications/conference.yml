@@ -13,6 +13,50 @@
 #   categories     – List of research topics for filtering
 # ──────────────────────────────────────────────────────────────────────────────
 
+- title: "Identification of Subtype-Specific Prognostic Biomarkers in Esophageal Carcinoma through Integrated Bioinformatics Analysis"
+  authors: "Ahmad, F., Fuad, M., Shahjahan, M., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2025
+  venue: "9th BSM Annual Conference"
+  location: "University of Dhaka, Bangladesh"
+  subtype: poster
+  type: conference
+  categories:
+    - Bioinformatics
+
+- title: "Network-Driven Bioinformatics Approach Uncovers Prognostic Signatures and Therapeutic Targets in Pancreatic Ductal Adenocarcinoma"
+  authors: "Aditee, L. M., Fuad, M., Shahjahan, M., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2025
+  venue: "9th BSM Annual Conference"
+  location: "University of Dhaka, Bangladesh"
+  subtype: poster
+  type: conference
+  categories:
+    - Bioinformatics
+
+- title: "Bioinformatic Analysis of Transcriptomic Data Reveals Molecular Signatures Driving Colorectal Cancer"
+  authors: "Ahamed, M. S., Fuad, M., Shahjahan, M., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2025
+  venue: "9th BSM Annual Conference"
+  location: "University of Dhaka, Bangladesh"
+  subtype: poster
+  type: conference
+  categories:
+    - Bioinformatics
+
+- title: "Comparative Transcriptomic Meta-Analysis Reveals Shared and Distinct Transcriptional Networks and Pathway Crosstalk in Hepatocellular Carcinoma for Biomarker and Therapeutic Target Identification"
+  authors: "Tabassum, R., Fuad, M., Shahjahan, M., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2025
+  venue: "9th BSM Annual Conference"
+  location: "University of Dhaka, Bangladesh"
+  subtype: poster
+  type: conference
+  categories:
+    - Bioinformatics
+
 - title: "Diagnostic and Electrophysiological Features of Hirayama Disease in Young Adult Male: A Case Report"
   authors: "**Hossain, M. J.**, & Das, M."
   corresponding: false

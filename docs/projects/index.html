@@ -292,6 +292,7 @@ window.Quarto = {
 <div id="listing-projects" class="quarto-listing quarto-listing-container-custom">
 <div class="category-filters">
 <p><button class="category-btn active" data-category="all">All</button></p>
+<p><button class="category-btn" data-category="Bioinformatics">Bioinformatics</button></p>
 <p><button class="category-btn" data-category="Cancer Genomics">Cancer Genomics</button></p>
 <p><button class="category-btn" data-category="Deep Learning">Deep Learning</button></p>
 <p><button class="category-btn" data-category="Genomics">Genomics</button></p>
@@ -300,6 +301,29 @@ window.Quarto = {
 <p><button class="category-btn" data-category="Spatial Omics">Spatial Omics</button></p>
 </div>
 <div class="project-grid">
+<div class="project-card" data-categories="Deep Learning,Bioinformatics">
+<div class="project-image">
+<p><img src="../files/projects/amr-drug-repurposing.svg" alt="AMR Drug Repurposing" loading="lazy" decoding="async"></p>
+</div>
+<div class="project-content">
+<h3 class="project-title anchored">
+Deep Learning-Driven AMR Drug Repurposing
+</h3>
+<p>
+A deep learning framework to identify FDA-approved non-antibiotic drugs with potential antibacterial activity against ESKAPE pathogens and M. tuberculosis. Leveraging ChEMBL bioactivity data and molecular fingerprints, the project uses an ensemble of Random Forest and Deep MLP classifiers with ChemBERTa integration to predict drug efficacy and interpret molecular features via SHAP.
+</p>
+<div class="project-tags">
+<p><span class="tag">Python</span></p>
+<p><span class="tag">PyTorch</span></p>
+<p><span class="tag">RDKit</span></p>
+<p><span class="tag">ChEMBL</span></p>
+<p><span class="tag">SHAP</span></p>
+</div>
+<div class="project-links">
+<p><a href="https://github.com/hossainlab/amr_drug_repurposing" class="project-btn" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></p>
+</div>
+</div>
+</div>
 <div class="project-card" data-categories="Single-Cell,Cancer Genomics">
 <div class="project-image">
 <p><img src="../files/projects/tam-atlas.svg" alt="TAM-Atlas" loading="lazy" decoding="async"></p>

@@ -622,6 +622,7 @@ table {
 
 .pub-stat-peer  { color: #2b6cb0; }
 .pub-stat-under { color: #b45309; }
+.pub-stat-working { color: #6366f1; }
 .pub-stat-conf  { color: #065f46; }
 
 .pub-stat-l {
@@ -733,6 +734,7 @@ table {
 
 .pbadge-peer  { background: #ebf4ff; color: #2b6cb0; }
 .pbadge-under { background: #fffbeb; color: #b45309; }
+.pbadge-working { background: #e0e7ff; color: #4338ca; }
 .pbadge-conf  { background: #ecfdf5; color: #065f46; }
 .pbadge-corr  { background: #faf5ff; color: #6b21a8; }
 .pbadge-cat   { background: #f1f5f9; color: #475569; }

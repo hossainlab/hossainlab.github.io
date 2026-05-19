@@ -1,0 +1,68 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# Working Papers / Projects
+# ──────────────────────────────────────────────────────────────────────────────
+# Fields:
+#   title          – Paper/Project title (required)
+#   authors        – Author string; wrap "**Name**" to bold your name
+#   corresponding  – true if you are the corresponding author
+#   year           – Year (integer)
+#   journal        – Description or GitHub repository
+#   doi            – Full URL to repo or paper
+#   type           – Must be: working-paper
+#   categories     – List of research topics for filtering
+# ──────────────────────────────────────────────────────────────────────────────
+
+- title: "Fezf2-mediated cortical development: Multi-omics analysis"
+  authors: "**Hossain, M. J.**, Shahjahan, M., & Fuad, M."
+  corresponding: true
+  year: 2025
+  journal: "Working Paper / GitHub"
+  doi: "https://github.com/hossainlab/fezf2-multiomics"
+  type: working-paper
+  categories:
+    - Bioinformatics
+    - Neuroscience
+
+- title: "Single-cell meta-analysis of microglial activation in Alzheimer's disease"
+  authors: "**Hossain, M. J.**, Shahjahan, M., & Fuad, M."
+  corresponding: true
+  year: 2025
+  journal: "Working Paper / GitHub"
+  doi: "https://github.com/hossainlab/alzheimers-microglia-meta-analysis"
+  type: working-paper
+  categories:
+    - Bioinformatics
+    - Neuroscience
+
+- title: "Integrative spatial-scRNA-seq atlas of immunotherapy resistance mechanisms across cancer types"
+  authors: "**Hossain, M. J.**, Shahjahan, M., & Fuad, M."
+  corresponding: true
+  year: 2025
+  journal: "Working Paper / GitHub"
+  doi: "https://github.com/hossainlab/spatial-scRNA-immune-resistance"
+  type: working-paper
+  categories:
+    - Bioinformatics
+    - Oncology
+
+- title: "Pan-Cancer Tumor-Associated Macrophage Reprogramming Atlas and Immunotherapy Response Prediction"
+  authors: "**Hossain, M. J.**, Shahjahan, M., & Fuad, M."
+  corresponding: true
+  year: 2026
+  journal: "Working Paper / GitHub"
+  doi: "https://github.com/hossainlab/TAM-Atlas"
+  type: working-paper
+  categories:
+    - Bioinformatics
+    - Oncology
+
+- title: "DeepAMR: AI-powered antimicrobial resistance prediction from genomic data"
+  authors: "**Hossain, M. J.**"
+  corresponding: true
+  year: 2026
+  journal: "Working Paper / GitHub"
+  doi: "https://github.com/hossainlab/DeepAMR"
+  type: working-paper
+  categories:
+    - Machine Learning
+    - Infectious Disease
