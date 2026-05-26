@@ -1,0 +1,368 @@
+---
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    colorlinks: true
+    documentclass: scrartcl
+    papersize: letter
+    pdf-engine: xelatex
+    fontsize: 11pt
+    geometry:
+      - margin=1in
+      - heightrounded
+    include-in-header:
+      - preamble.tex
+execute:
+  warning: false
+  echo: false
+  message: false
+  eval: true
+---
+
+```{r}
+#| name: setup
+#| include: false
+#| message: false
+#| eval: true
+
+knitr::opts_chunk$set(
+  fig.path = "figs/",
+  fig.width = 7.252,
+  fig.height = 4,
+  comment = "#>",
+  fig.retina = 3
+)
+
+source("functions.R")
+
+# Store IDs
+gscholar_id <- '9_K4ekoAAAAJ'
+gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_id)
+```
+
+\par\centering{\LARGE{Md. Jubayer Hossain}}
+\par\centering{Department of Public Health}
+\vspace{-5pt}
+\par\centering{Daffodil International University}
+\vspace{-5pt}
+\par\centering{Daffodil Smart City}
+\vspace{-5pt}
+\par\centering{Birulia, Savar, Dhaka-1216, Bangladesh}
+\vspace{-5pt}
+\par\centering{{\large\Telefon} +8801662345906}
+\vspace{-5pt}
+\par\centering{{\large\Letter} hossainmj.me@gmail.com}
+\vspace{-5pt}
+\par\centering{\href{http://www.mdjubayerhossain.com}{www.mdjubayerhossain.com}}
+
+\vspace{-10pt}
+
+# Academic Appointments
+
+```{r}
+#| results: asis
+get_cv_sheet('academics') %>%
+  fill(start_date, end_date, role, institution, where) %>%
+  mutate(
+    date = ifelse(
+      is.na(end_date) | end_date == "Present",
+      paste0(format(start_date, "%b %Y"), " - Present"),
+      paste0(format(start_date, "%b %Y"), " - ", end_date)
+    )
+  ) %>%
+  make_cv_entries(date, role, institution, where, details)
+```
+
+# Leadership Experience
+
+```{r}
+#| results: asis
+get_cv_sheet('leadership') %>%
+  fill(start_date, end_date, role, institution, where) %>%
+  mutate(
+    date = ifelse(
+      is.na(end_date) | end_date == "Present",
+      paste0(format(start_date, "%b %Y"), " - Present"),
+      paste0(format(start_date, "%b %Y"), " - ", end_date)
+    )
+  ) %>%
+  make_cv_entries(date, role, institution, where, details)
+```
+
+# Community Engagement
+
+```{r}
+#| results: asis
+get_cv_sheet('community') %>%
+  fill(start_date, end_date, role, institution, where) %>%
+  mutate(
+    date = ifelse(
+      is.na(end_date) | end_date == "Present",
+      paste0(format(start_date, "%b %Y"), " - Present"),
+      paste0(format(start_date, "%b %Y"), " - ", end_date)
+    )
+  ) %>%
+  make_cv_entries(date, role, institution, where, details)
+```
+
+# Education & Training
+
+```{r}
+#| results: asis
+get_cv_sheet('education') %>%
+  make_cv_entries(year, degree, institution, where, details)
+```
+
+# Technical Skills 
+- **Programming Languages**: Python, R, Julia, SQL, Bash, JavaScript
+- **Bioinformatics**: Bulk RNA-Seq, Single-Cell RNA-Seq, Spatial Transcriptomics, Multi-omics
+- **Workflow Management & Reproducibility**: Nextflow (DSL2), nf-core, Docker, Singularity, Git, GitHub
+- **AI in Biology**: Scikit-learn, PyTorch, RDkit, DeepChem
+- **HPC & Cluster Computing**: SLURM (sbatch, sarray), Nextflow DSL2 with SLURM executor for scalable reusable pipelines
+- **Cloud**: AWS S3, Google Cloud Storage for large genomic datasets
+
+
+# Research Interests
+- **Bioinformatics**: Integrative analysis of bulk RNA-seq, single-cell RNA-seq, and spatial transcriptomics to identify robust immunological biomarkers and therapeutic targets within tumor microenvironments;
+
+- **AI in Biology**: Deep learning applications in single-cell genomics, particularly for data integration and cell type annotation.
+
+\vspace{-15pt}
+
+# Teaching Interests
+- **Programming \& Data Analytics**: Programming in R and Python; exploratory data analysis; data visualization; reproducibility.
+- **Bioinformatics**: Scalable, reproducible computational pipelines for single-cell, spatial, and bulk transcriptomics to elucidate complex disease biology (Bash, Nextflow, Docker).  
+- **AI in Biology**: Applying deep learning frameworks to single-cell genomics data for high-accuracy predictive modeling. 
+
+# Publications 
+
+  \apptocmd{\tightlist}{\setlength{\itemsep}{4pt}}{}{}
+
+ORCID: \href{https://orcid.org/0000-0001-9323-4997}{0000-0001-9323-4997} | [Google Scholar Profile](https://scholar.google.com/citations?user=9_K4ekoAAAAJ&hl=en&authuser=5)
+
+\underline{Underline} indicates mentee; ** undergraduate student; * corresponding 
+
+## A. Journal Articles
+```{r}
+pubs <- get_cv_sheet('pubs') %>%
+  mutate(
+    journal  = ifelse(is.na(journal), '', paste0('_', journal, '_.')),
+    number   = ifelse(is.na(number), '', paste0(number, '.')),
+    doi      = ifelse(
+               is.na(doi), '',
+               paste0('DOI: [', doi, '](', 'https://doi.org/', doi, ')')),
+    url_repo = ifelse(is.na(url_repo), '', paste0('[', url_repo, '](', url_repo, ')')),
+    year     = paste0("(", year, ")"),
+    title    = enquote(title),
+    citation = paste(author, year, title, journal, number, doi, url_repo)
+  ) %>% 
+  arrange(desc(pub_date))
+```
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(pubs, "peer_reviewed")
+```
+
+## B. GBD Contributions 
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(pubs, "gbd")
+```
+
+
+## C. Papers Under Review
+
+```{r}
+#| results: asis
+ 
+make_ordered_list_filtered(pubs, "under_review")
+```
+
+## D. Working Papers
+
+```{r}
+#| results: asis
+ 
+make_ordered_list_filtered(pubs, "working")
+```
+
+# Presentations
+
+```{r}
+presentations <- get_cv_sheet('presentations') %>%
+  arrange(desc(date)) %>% 
+  mutate(
+    with = ifelse(is.na(with), '', paste0(', with ', with)),
+    title = paste0(enquote(title), with),
+    title = ifelse(is.na(series), title, paste(title, series, sep = '. ')),
+    date = paste0(format(as.Date(date), format = "%b %d, %Y"), '.'),
+    citation = paste(title, host, location, date, sep = '. ')
+  )
+
+presentation_counts <- presentations %>%
+  count(category) %>%
+  left_join(data.frame(
+    category = c(
+      "invited", "panelist", "conference", "poster", "organizer", "discussant"
+    ),
+    order = seq(6)
+  )) %>%
+  mutate(
+    category = str_to_title(category),
+    category = ifelse(category == 'Invited', 'Invited Speaker', category),
+    category = ifelse(category == 'Panelist', 'Invited Panelist', category),
+    category = ifelse(category == 'Conference', 'Conference Presentation', category),
+    category = ifelse(category == 'Poster', '\\newline Poster Presentation', category),
+    cite = paste0(category, ' (', n, ')')
+  ) %>%
+  arrange(order) %>%
+  pull(cite) %>%
+  paste(collapse = ', ')
+```
+
+## A. Invited Speaker
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(presentations, "invited")
+```
+
+## B. Conference Presentations
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(presentations, "conference")
+```
+
+## C. Posters
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(presentations, "poster")
+```
+
+# Teaching & Education
+
+## A. Courses Taught
+
+```{r}
+df <- get_cv_sheet('classes') %>%
+    mutate(
+        course = paste0(number, ": ", name),
+        num = paste(responses, '/', enrolled),
+        score = paste(inst_mean, '/', dept_mean),
+        semester = ifelse(semester == 'S20', 'S20$^†$', semester)
+    ) %>%
+    select(
+        `Cohort.` = semester,
+        Course = course,
+        Level = level,
+        `N. Resp. / N. Enrolled` = num,
+        `Instr. FCE* / Dept Mean` = score
+    )
+
+df %>%
+    kbl(booktabs = TRUE, escape = FALSE, linesep = "") %>%
+    column_spec(4, width = "1.8cm") %>%
+    column_spec(5, width = "2cm") %>%
+    footnote(
+        symbol = c(
+            "Faculty Course Evaluations (FCE) are scored by students (1 = worst, 5 = best)."
+        )
+    )
+```
+
+## B. Workshops
+
+```{r}
+teaching <- get_cv_sheet('teaching') %>%
+    arrange(desc(date)) %>%
+    mutate(
+        with = ifelse(is.na(with), '', paste0(', with ', with)),
+        title_text = paste0(enquote(title), with),
+        title = ifelse(is.na(url), title_text, paste0("[", title_text, "](", url, ")")),
+        date = paste0(format(as.Date(date), format = "%b %d, %Y"), "."),
+        citation = paste(title, host, location, date, sep = '. ')
+    )
+```
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(teaching, "workshop")
+```
+
+# Media Coverage
+<!-- Set spacing in between list -->
+\apptocmd{\tightlist}{\setlength{\itemsep}{2pt}}{}{}
+
+```{r}
+media <- get_cv_sheet('media') %>%
+  arrange(desc(date)) %>%
+  mutate(
+      date = format(date, format = "%b %d, %Y"),
+      outlet = paste0("**", outlet, "**"),
+      citation = paste0(date, ", ", outlet, ": ", post, '.')
+  )
+
+media_counts <- media %>%
+  count(type) %>% 
+  mutate(
+    type = str_replace_all(type, '_', ' '),
+    type = str_to_title(type), 
+    type = ifelse(type == 'Tv', 'TV', type), 
+    type = ifelse(type == 'Government', 'Federal Government', type), 
+    cite = paste0(type, ' (', n, ')'),
+    has_press = str_detect(type, 'Press')
+  ) %>%
+  arrange(!has_press) %>%
+  pull(cite) %>%
+  paste(collapse = ', ')
+```
+
+
+```{r}
+#| results: asis
+
+media %>%
+  filter(highlight == 1) %>%
+  pull(citation) %>%
+  make_ordered_list()
+```
+
+
+# References
+
+\noindent
+\begin{minipage}[t]{0.32\linewidth}
+\textbf{Dr. Syeda Tasneem Towhid} \\
+Associate Professor \\
+Department of Microbiology \\
+Jagannath University \\
+Dhaka, Bangladesh \\
+\href{mailto:towhidst@mib.jnu.ac.bd}{towhidst@mib.jnu.ac.bd}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.32\linewidth}
+\textbf{Dr. Md. Salequl Islam} \\
+Professor \\
+Department of Microbiology \\
+Jahangirnagar University \\
+Dhaka, Bangladesh \\
+\href{mailto:salequl@juniv.edu}{salequl@juniv.edu}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.32\linewidth}
+\textbf{Dr. Zeba Islam Seraj} \\
+Director, cBLAST \\
+University of Dhaka \\
+Dhaka, Bangladesh \\
+\href{mailto:zebai@du.ac.bd}{zebai@du.ac.bd}
+\end{minipage}

@@ -1,5 +1,0 @@
-- **Programming Languages**: Python, R, Julia, SQL, Bash, JavaScript
-- **Bioinformatics**: bulk RNA-Seq, Single-Cell, Spatial Omics, and Multi-omics 
-- **Workflow Management & Reproducibility**: Nextflow (DSL2), nf-core, Docker, Singularity, Git, GitHub
-- **HPC & Cluster Computing**: SLURM job scheduling (sbatch, sarray, resource profiling); building and submitting multi-step genomic pipelines on shared HPC clusters; Nextflow DSL2 pipelines with SLURM executor for scalable, reusable workflows
-- **Cloud Computing**: AWS S3, Google Cloud Storage for large genomic dataset management

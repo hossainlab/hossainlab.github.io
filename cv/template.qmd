@@ -1,0 +1,863 @@
+---
+    format:
+    pdf:
+    toc: false
+number-sections: false
+colorlinks: true
+documentclass: scrartcl
+papersize: letter
+pdf-engine: xelatex
+fontsize: 10pt
+geometry:
+    - margin=1in
+- heightrounded
+include-in-header:
+    - preamble.tex
+execute:
+    warning: false
+echo: false
+message: false
+eval: true
+---
+
+    ```{r}
+#| name: setup
+#| include: false
+#| message: false
+#| eval: true
+
+knitr::opts_chunk$set(
+    fig.path = "figs/",
+    fig.width = 7.252,
+    fig.height = 4,
+    comment = "#>",
+    fig.retina = 3
+)
+
+source("functions.R")
+
+# Store IDs
+gscholar_id <- 'DY2D56IAAAAJ'
+gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_id)
+```
+
+\par\centering{\LARGE{John Paul Helveston, Ph.D.}}
+\par\centering{Engineering Management and Systems Engineering}
+\vspace{-5pt}
+\par\centering{The George Washington University}
+\vspace{-5pt}
+\par\centering{Science \& Engineering Hall, Office 2830}
+\vspace{-5pt}
+\par\centering{800 22nd St NW, Washington, DC 20052}
+\vspace{-5pt}
+\par\centering{{\large\Telefon} +1 (202) 994-7173}
+\vspace{-5pt}
+\par\centering{{\large\Letter} jph@gwu.edu}
+\vspace{-5pt}
+\par\centering{\href{http://www.jhelvy.com}{www.jhelvy.com}}
+
+\vspace{-10pt}
+
+# Academic Appointments
+
+\vspace{-10pt}
+
+```{r}
+#| results: asis
+get_cv_sheet('academics') %>%
+  mutate(
+    date = ifelse(
+      is.na(end_date) | end_date == "Present",
+      paste0(format(start_date, "%b %Y"), " - Present"),
+      paste0(format(start_date, "%b %Y"), " - ", end_date)
+    )
+  ) %>%
+  make_cv_entries(date, role, institution, where, details)
+```
+
+\vspace{-15pt}
+
+# Education & Training
+
+\vspace{-10pt}
+
+```{r}
+#| results: asis
+get_cv_sheet('education') %>%
+  make_cv_entries(year, degree, institution, where, details)
+```
+
+\vspace{-15pt}
+
+# Research Interests
+
+- **Clean Technology Development & Adoption**: Quantify how consumers, firms, markets, and policy affect the nature & pace of transitioning to sustainable energy and transportation technologies.
+- **Consumer Preferences for Emerging Technology**: Measure and model consumer preferences to assess policy and product design and simulate consumer choice behavior under uncertainty.
+- **Electric Vehicles & Sustainable Transportation Technologies**: Assess barriers and opportunities to accelerating the development & adoption of sustainable transportation technologies.
+- **U.S.-China Climate Relationship**: Study the critical relationship between the US and China in developing, scaling, and mass deploying low carbon energy technologies.
+
+\vspace{-15pt}
+
+# Teaching Interests
+
+- **Programming \& Data Analytics**: Programming in R and Python; exploratory data analysis; data visualization; reproducibility.
+- **Choice Modeling**: Discrete choice modeling; consumer preferences and choice behavior; conjoint analysis; design decisions.
+- **Team Projects**: Open-ended, team-based projects that emphasize critical thinking and real-world data collection and analysis.
+
+# External Grants
+
+```{r}
+grants <- get_cv_sheet('grants') %>%
+    arrange(desc(submitted)) %>%
+    filter(awarded == 1) %>%
+    filter(affiliated == 0) %>%
+    mutate(
+        title = enquote(title),
+        amount = ifelse(
+            is.na(budget_total), "",
+            scales::dollar(budget_total)
+        ),
+        percent = budget_jph / budget_total,
+        credit = ifelse(
+            is.na(budget_total), "", ifelse(
+                percent == 1, "100% Credit",
+                paste0("Helveston portion ", scales::dollar(budget_jph)
+                ))),
+        colabs = ifelse(
+            is.na(collaborators), amount,
+            paste(paste0("With ", collaborators), amount, sep = '. ')
+        ),
+        period = paste0(period, '.')
+    )
+
+grants_ex <- grants %>%
+    filter(external == 1)
+grants_ex_pi <- grants_ex %>%
+    filter(pi == 1)
+grants_ex_copi <- grants_ex %>%
+    filter(pi == 0)
+grants_internal <- grants %>%
+    filter(external == 0, pi == 1)
+
+total <- scales::dollar(sum(grants_ex$budget_total))
+total_ex_pi <- scales::dollar(sum(grants_ex_pi$budget_managed))
+```
+
+**Total External Funding**: `r total`
+
+**Total External Funding as PI**: `r total_ex_pi`
+
+## A. Principal Investigator
+
+```{r}
+#| results: asis
+
+make_grants_list <- function(df) {
+    df %>%
+        mutate(
+            title = ifelse(
+                is.na(url), title,
+                paste0('[', title, ']', '(', url, ')')
+            ),
+            citation = paste(
+                sponsor, title, colabs, credit, period, sep = '. '
+            )
+        ) %>%
+        pull(citation) %>%
+        make_ordered_list()
+}
+
+make_grants_list(grants_ex_pi)
+```
+
+## B. Co-Principal Investigator
+
+```{r}
+#| results: asis
+
+make_grants_list(grants_ex_copi)
+```
+
+# Internal Grants (GWU)
+
+```{r}
+#| results: asis
+
+make_grants_list(grants_internal)
+```
+
+# Honors / Awards
+
+```{r}
+awards <- get_cv_sheet('awards') %>%
+    arrange(desc(date)) %>%
+    mutate(citation = paste0(date, ": ", description, '.'))
+```
+
+```{r}
+#| results: asis
+
+awards %>%
+    filter(category != 'student') %>%
+    pull(citation) %>%
+    make_bullet_list()
+```
+
+# Publications
+
+<!-- Set spacing in between list -->
+
+    \apptocmd{\tightlist}{\setlength{\itemsep}{4pt}}{}{}
+
+ORCID: \href{https://orcid.org/0000-0002-2657-9191}{0000-0002-2657-9191} | [Google Scholar Profile](https://scholar.google.com/citations?user=DY2D56IAAAAJ&hl=en)
+
+\underline{Underline} indicates advisee; * graduate student, **undergraduate student
+
+\begin{small}
+\emph{Note on author order: In my field, it is conventional that the last author denotes intellectual direction by the senior author when advised student(s) are engaged on the study. On non–student papers, authorship effort is denoted in standard order}.
+\end{small}
+
+## A. Refereed Journal Articles
+
+```{r}
+pubs <- get_cv_sheet('pubs') %>%
+    mutate(
+        journal  = ifelse(is.na(journal), '', paste0('_', journal, '_.')),
+        number   = ifelse(is.na(number), '', paste0(number, '.')),
+        doi      = ifelse(
+            is.na(doi), '',
+            paste0('DOI: [', doi, '](', 'https://doi.org/', doi, ')')),
+        url_repo = ifelse(is.na(url_repo), '', paste0('[', url_repo, '](', url_repo, ')')),
+        year     = paste0("(", year, ")"),
+        title    = enquote(title),
+        citation = paste(author, year, title, journal, number, doi, url_repo)
+    ) %>%
+    arrange(desc(pub_date))
+```
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(pubs, "peer_reviewed")
+```
+
+## B. Refereed Articles in Conference Proceedings
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(pubs, "conference")
+```
+
+## C. Working Papers & Papers Under Review
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(pubs, "working")
+```
+
+## D. Books and Book Chapters
+
+```{r}
+#| results: asis
+
+pubs %>%
+    mutate(
+        url = markdown_url(url_pub),
+        citation = paste(author, year, title, journal, number, doi, url)
+    ) %>%
+    arrange(desc(pub_date)) %>%
+    make_ordered_list_filtered("book")
+```
+
+## E. Magazine Publications
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(pubs, "magazine")
+```
+
+## F. Opinion Editorials
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(pubs, "oped")
+```
+
+## G. Podcasts
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(pubs, "podcast")
+```
+
+## H. Other Publications
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(pubs, "other")
+```
+
+## I. Theses
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(pubs, "theses")
+```
+
+## J. Software
+
+```{r}
+#| results: asis
+
+# downloads <- cranlogs::cran_downloads(
+#     package = c("logitr", "cbcTools", "renderthis"),
+#     from = '2020-01-01'
+# ) %>%
+#     group_by(package) %>%
+#     summarise(count = sum(count))
+
+make_ordered_list_filtered(pubs, "software")
+```
+
+# Presentations / Conferences
+
+```{r}
+presentations <- get_cv_sheet('presentations') %>%
+    arrange(desc(date)) %>%
+    mutate(
+        with = ifelse(is.na(with), '', paste0(', with ', with)),
+        title = paste0(enquote(title), with),
+        title = ifelse(is.na(series), title, paste(title, series, sep = '. ')),
+        date = paste0(format(as.Date(date), format = "%b %d, %Y"), '.'),
+        citation = paste(title, host, location, date, sep = '. ')
+    )
+
+presentation_counts <- presentations %>%
+    count(category) %>%
+    left_join(data.frame(
+        category = c(
+            "invited", "panelist", "conference", "poster", "organizer", "discussant"
+        ),
+        order = seq(6)
+    )) %>%
+    mutate(
+        category = str_to_title(category),
+        category = ifelse(category == 'Invited', 'Invited Speaker', category),
+        category = ifelse(category == 'Panelist', 'Invited Panelist', category),
+        category = ifelse(category == 'Conference', 'Conference Presentation', category),
+        category = ifelse(category == 'Poster', '\\newline Poster Presentation', category),
+        cite = paste0(category, ' (', n, ')')
+    ) %>%
+    arrange(order) %>%
+    pull(cite) %>%
+    paste(collapse = ', ')
+```
+
+**Total Presentations by Category**:
+
+    `r presentation_counts`
+
+## A. Invited Speaker
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(presentations, "invited")
+```
+
+## B. Invited Panelist
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(presentations, "panelist")
+```
+
+## C. Conference Presentations
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(presentations, "conference")
+```
+
+## D. Conference Panel Organizer / Chair
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(presentations, "organizer")
+```
+
+## E. Posters
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(presentations, "poster")
+```
+
+## F. Discussant
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(presentations, "discussant")
+```
+
+# Selected Media Coverage: Impact of Research in Society
+
+<!-- Set spacing in between list -->
+
+    \apptocmd{\tightlist}{\setlength{\itemsep}{2pt}}{}{}
+
+```{r}
+media <- get_cv_sheet('media') %>%
+    arrange(desc(date)) %>%
+    mutate(
+        date = format(date, format = "%b %d, %Y"),
+        outlet = paste0("**", outlet, "**"),
+        citation = paste0(date, ", ", outlet, ": ", post, '.')
+    )
+
+media_counts <- media %>%
+    count(type) %>%
+    mutate(
+        type = str_replace_all(type, '_', ' '),
+        type = str_to_title(type),
+        type = ifelse(type == 'Tv', 'TV', type),
+        type = ifelse(type == 'Government', 'Federal Government', type),
+        cite = paste0(type, ' (', n, ')'),
+        has_press = str_detect(type, 'Press')
+    ) %>%
+    arrange(!has_press) %>%
+    pull(cite) %>%
+    paste(collapse = ', ')
+```
+
+**Total Media Appearances**
+
+    `r media_counts`
+
+```{r}
+#| results: asis
+
+media %>%
+    filter(highlight == 1) %>%
+    pull(citation) %>%
+    make_ordered_list()
+```
+
+# Teaching & Education
+
+## A. Courses Taught at George Washington University
+
+```{r}
+df <- get_cv_sheet('classes') %>%
+    mutate(
+        course = paste0(number, ": ", name),
+        num = paste(responses, '/', enrolled),
+        score = paste(inst_mean, '/', dept_mean),
+        semester = ifelse(semester == 'S20', 'S20$^†$', semester)
+    ) %>%
+    select(
+        `Sem.` = semester,
+        Course = course,
+        Level = level,
+        `N. Resp. / N. Enrolled` = num,
+        `Instr. FCE* / Dept Mean` = score
+    )
+
+df %>%
+    kbl(booktabs = TRUE, escape = FALSE, linesep = "") %>%
+    column_spec(4, width = "1.8cm") %>%
+    column_spec(5, width = "2cm") %>%
+    footnote(
+        symbol = c(
+            "Faculty Course Evaluations (FCE) are scored by students (1 = worst, 5 = best).",
+            "No course evaluations were recorded in Spring 2020 due to the COVID19 pandemic."
+        )
+    )
+```
+
+## B. Workshops
+
+```{r}
+teaching <- get_cv_sheet('teaching') %>%
+    arrange(desc(date)) %>%
+    mutate(
+        with = ifelse(is.na(with), '', paste0(', with ', with)),
+        title_text = paste0(enquote(title), with),
+        title = ifelse(is.na(url), title_text, paste0("[", title_text, "](", url, ")")),
+        date = paste0(format(as.Date(date), format = "%b %d, %Y"), "."),
+        citation = paste(title, host, location, date, sep = '. ')
+    )
+```
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(teaching, "workshop")
+```
+
+## C. Seminars
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(teaching, "seminar")
+```
+
+## D. Guest Lectures
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(teaching, "lecture")
+```
+
+## E. Educational Contributions
+
+### 1. Courses Developed at GWU
+
+- **[EMSE 4571 / 6571](http://p4a.seas.gwu.edu/): Intro to Programming for Analytics**. Developed new open-source introductory level course that provides a foundation in programming for data analytics using the [R programming language](https://www.r-project.org/) with a comparison to [Python](https://www.python.org/).
+- **[EMSE 4572 / 6572](http://eda.seas.gwu.edu/): Exploratory Data Analysis**. Developed new open-source course that provides a foundation in exploring data using the [R programming language](https://www.r-project.org/), including how to source, manage, wrangle, explore, and visualize a wide variety of data types. All analyses are reproducible from raw data to results using [RMarkdown](https://bookdown.org/yihui/rmarkdown/) and [Quarto](https://quarto.org/). Students demonstrate mastery of these skills through a semester-long research project of their own design, culminating in a reproducible final report and a 10-minute presentation of their findings.
+- **[EMSE 6035](http://madd.seas.gwu.edu/): Marketing Analytics for Design Decisions**. Developed a new open-source course that introduces data analysis techniques to inform design decisions in an uncertain, competitive market. Over the course of the semester, students learn and apply theory and methods to a team project to assess the market competitiveness of an emerging product or technology. Students learn how to design and field conjoint surveys as well as how to source, manage, and visualize data and modeling results using the [R programming language](https://www.r-project.org/). Students demonstrate mastery of these skills through a semester-long research project of their own design, culminating in a final report and a 10-minute presentation of their design insights.
+
+### 2. Resources Developed
+
+- **Textbook**: ["Programming for Analytics in R"](https://p4a.jhelvy.com/), written for [_EMSE 4571 / 6571: Intro to Programming for Analytics_](http://p4a.seas.gwu.edu/).
+- **Textbook**: ["Yet Another R Dataviz (YARD) Book"](https://yardbook.jhelvy.com/), written for [_EMSE 4572 / 6572: Exploratory Data Analysis_](http://eda.seas.gwu.edu/).
+- **Video lecture series** for [_EMSE 6035: Marketing of Technology_](http://madd.seas.gwu.edu/). Six-lecture series on conjoint survey theory and practice. [View on youtube](https://www.youtube.com/playlist?list=PLzFdSE-D7jUQnbczxdjohRqlBBrrsaFFg).
+- **Autograder** for [_EMSE 4571 / 6571: Intro to Programming for Analytics_](http://p4a.seas.gwu.edu/). Students can test and receive automated feedback on their programming assignments.
+- **Course website**: [http://p4a.seas.gwu.edu/](http://p4a.seas.gwu.edu/), for _EMSE 4571 / 6571: Intro to Programming for Analytics_. Open source lessons on the fundamentals of programming for data analytics in R with a comparison to Python.
+- **Course website**: [http://eda.seas.gwu.edu/](http://eda.seas.gwu.edu/), for _EMSE 4572 / 6572: Exploratory Data Analysis_. Open source lessons on sourcing, managing, transforming, and exploring a wide variety of data types in R.
+- **Course website**: [http://madd.seas.gwu.edu/](http://madd.seas.gwu.edu/), for _EMSE 6035: Marketing Analytics for Design Decisions_. Open source lessons on designing conjoint surveys and choice modeling in R.
+
+# Advising
+
+## A. Primary Research Advisor
+
+```{r}
+advisees <- get_cv_sheet('advising') %>%
+    arrange(date_start) %>%
+    mutate(
+        date = paste0(' (',  date_start, ' to ', date_stop, ').'),
+        citation = ifelse(
+            is.na(title), name, paste0(name, ', ', enquote(title))
+        ),
+        citation = paste0(citation, ', ', institution, ' ', date),
+        citation = ifelse(
+            is.na(defense_date), citation,
+            paste0(citation, ' _Defense date: ', defense_date, '_.')
+        )
+    )
+```
+
+### 1. Ph.D. Students - Current
+
+```{r}
+#| results: asis
+
+advisees %>%
+    filter(category == 'phd') %>%
+    filter(complete == 0) %>%
+    mutate(
+        date = paste0(' (',  date_start, ' to present).'),
+        citation = paste0(
+            name, ', ', enquote(title), ', ', institution, ' ', date, ' ',
+            '_Expected graduation: ', date_stop, '_.'
+        )
+    ) %>%
+    pull(citation) %>%
+    make_ordered_list()
+```
+
+### 2. Ph.D. Students - Completed
+
+```{r}
+#| results: asis
+
+advisees %>%
+    filter(complete == 1) %>%
+    make_ordered_list_filtered("phd")
+```
+
+### 3. Masters Students - Completed
+
+```{r}
+#| results: asis
+
+advisees %>%
+    filter(complete == 1) %>%
+    make_ordered_list_filtered("ms")
+```
+
+### 4. Undergraduate Students - Current
+
+```{r}
+#| results: asis
+
+advisees %>%
+    filter(complete == 0) %>%
+    make_ordered_list_filtered("ug")
+```
+
+### 5. Undergraduate Students - Completed
+
+```{r}
+#| results: asis
+
+advisees %>%
+    filter(complete == 1) %>%
+    make_ordered_list_filtered("ug")
+```
+
+### 4. High School Students
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(advisees, "hs")
+```
+
+## B. Ph.D. Committee Member
+
+
+### 1. Ph.D. Students - Current
+
+```{r}
+#| results: asis
+
+advisees %>%
+    filter(complete == 0) %>%
+    make_ordered_list_filtered("committee")
+```
+
+### 2. Ph.D. Students - Completed
+
+```{r}
+#| results: asis
+
+advisees %>%
+    filter(complete == 1) %>%
+    make_ordered_list_filtered("committee")
+```
+
+## Awards / Honors by Advised Students
+
+```{r}
+#| results: asis
+
+awards %>%
+    filter(category == 'student') %>%
+    pull(citation) %>%
+    make_bullet_list()
+```
+
+# Service
+
+```{r}
+service <- get_cv_sheet('service') %>%
+    mutate(citation = paste0(activity, ' (', dates, ').'))
+```
+
+## A. Departmental Service (EMSE)
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(service, "dept")
+```
+
+## B. College Level Service (School of Engineering and Applied Sciences, GWU)
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(service, "college")
+```
+
+## C. University Level Service (George Washington University)
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(service, "university")
+```
+
+## D. Professional Service
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(service, "professional")
+```
+
+## E. Peer Reviewer
+
+Completed 85 journal reviews and 14 conference paper reviews (2013 - present)
+
+_List of Journals_
+
+```{r}
+#| results: asis
+
+journals <- get_cv_sheet('reviews') %>%
+    filter(category == 'journal') %>%
+    pull(org)
+journals <- str_replace_all(journals, 'and', '&')
+n_journals <- length(journals)
+stop <- round(n_journals/2)
+df <- data.frame(
+    j1 = journals[1:stop],
+    j2 = journals[(stop + 1):n_journals]
+)
+
+table_latex <- df %>%
+    kbl(
+        col.names = NULL,
+        format = "latex",
+        booktabs = FALSE,
+        linesep = ""
+    ) %>%
+    column_spec(
+        1:2,
+        width = "8.5cm",
+        border_left = FALSE,
+        border_right = FALSE
+    ) %>%
+    kable_styling(
+        latex_options = c("hold_position"),
+        font_size = 9
+    ) %>%
+    row_spec(0, extra_latex_after = "") %>%
+    row_spec(1:nrow(df), hline_after = FALSE)
+
+# Remove all vertical lines
+table_latex <- gsub("\\\\hline", "", table_latex)
+table_latex <- gsub("\\\\cline\\{.*?\\}", "", table_latex)
+table_latex <- gsub("\\\\toprule", "", table_latex)
+table_latex <- gsub("\\\\midrule", "", table_latex)
+table_latex <- gsub("\\\\bottomrule", "", table_latex)
+table_latex <- gsub("\\\\addlinespace", "", table_latex)
+
+# Add custom LaTeX commands to remove vertical lines
+table_latex <- paste0(
+    "\\renewcommand{\\arraystretch}{1.0}\n",
+    "\\renewcommand{\\tabcolsep}{0.5em}\n",
+    "\\renewcommand{\\arrayrulewidth}{0.0pt}\n",
+    table_latex
+)
+
+cat(table_latex)
+```
+
+# Memberships in Professional Organizations
+
+- Transportation Research Board
+- Industry Studies Association
+- Academy of Management
+- INFORMS
+- U.S. Association for Energy Economics (USAEE / IAEE)
+- Tau Beta Pi
+- Phi Beta Kappa
+- Beijing Energy Network
+
+# Industry Experience
+
+- Intern, Electric Vehicle Charging Policy. Innovation Center for Energy & Transportation (iCET), Beijing, China (Jan. - May., 2011).
+- Engineering Intern, Wind Power Advanced Technology Operations. General Electric Company, Shanghai, China (Aug. - Dec., 2008).
+- Engineering Intern, Wind Power Advanced Technology Operations. General Electric Company, Greenville, SC, USA (Jun. - Aug., 2007).
+
+# Leadership, Volunteer, and Community Activities
+
+- _Co-Founder and Organizer_, [GW Coders](https://gwcoders.github.io/): Informal study group to apply computational and data analytics skills in research (2020-present).
+- _Analyst & Committee Member_, Boston University Climate Action Plan Task Force (2016 - 2018).
+- _Violinist_, Carnegie Mellon All University Orchestra, 1st Violin Section (2011 - 2015).
+_ Dance Instructor_, Tartan Swing (CMU Swing Dance Club) (2011 - 2015).
+- _Head Dance Instructor_, Solely Swing, Virginia Tech Swing Dance Club (2007 - 2010).
+- _Concert Master_, New River Valley Symphony Orchestra, Virginia Tech (2005 - 2010).
+- _Volunteer_, Virginia Tech Alternative Breaks Service Programs for Tau Beta Pi, Appalachia Service Project, & Presbyterian Campus Ministries (2006 - 2009).
+
+# Skills
+
+- **Language**: Mandarin Chinese (speaking: _fluent_, reading / writing: _intermediate_).
+- **Modeling & Analysis**: Discrete Choice Modeling, Conjoint Analysis, Decision Analysis, Monte Carlo Simulation, Consumer Preferences, Quantitative Policy Analysis, Process-Based Cost Modeling, Optimization, Regression.
+- **Data Collection**: Survey Design, Qualitative Interviews.
+- **Programming**: R, Python, Git, MatLab, LaTeX, Shiny, Stata, Mathematica, HTML, Wordpress.
+- **Software**: Adobe Photoshop, Adobe Illustrator, Microsoft Office, Analytica.
+
+# Dance Awards
+
+## A. Lindy Hop
+
+- **1st Place**: 2016 Advanced Jack \& Jill w/Banban, _China Lindy Hop Championships_, Beijing, China.
+- **3rd Place**: 2013 Open Jack \& Jill, _Rocktober_, Columbus, OH.
+- **5th Place**: 2012 Open Jack \& Jill, _Boston Tea Party_, Boston, MA.
+- **2nd Place**: 2012 Open Jack \& Jill w/Akemi Kinukawa, _Babble_, New York, NY.
+- **1st Place**: 2011 Open Strictly Lindy w/Annabel Truesdell Quisao, _International Lindy Hop Championships_, Washington, D.C.
+- **Finals**: 2011 Open Jack \& Jill, _Lindy Focus X_, Asheville, NC.
+- **Finals**: 2011 Open Jack \& Jill, _International Lindy Hop Championships_, Washington, D.C.
+
+## B. Solo Jazz / Charleston
+
+- **1st Place**: 2012 Solo Jazz, _Sparx_, Cleveland, OH.
+- **3rd Place**: 2012 Solo Charleston, _Stompology_, Rochester, NY.
+
+## C. Balboa
+
+- **Finals**: 2014 Strictly Balboa w/Jennifer Lee, _International Lindy Hop Championships_, Washington, D.C.
+- **3rd Place**: 2013 Amateur Strictly Balboa w/Annabel Truesdell Quisao, _All Balboa Weekend_, Independence, OH.
+- **4th Place**: 2013 Amateur Jack \& Jill, _All Balboa Weekend_, Independence, OH.
+- **Finals**: 2012 Amateur Jack \& Jill w/Nina Galicheva, _All Balboa Weekend_, Independence, OH.
+
+## D. Blues
+
+- **Finals**: 2013 Solo Riffin' Competition, _Steel City Blues_, Pittsburgh, PA.
+- **1st Place**: 2012 Solo Riffin' Competition, _Steel City Blues_, Pittsburgh, PA.
+- **Finals**: 2010 Open Jack \& Jill, _Steel City Blues_, Pittsburgh, PA.
+
+<!-- \newpage -->
+
+    <!-- # References -->
+
+    <!-- \begin{longtable}{p{7cm} p{8.6cm}} -->
+    <!--   \textbf{Erica R.H. Fuchs} & \textbf{Jeremy J. Michalek} \\ -->
+    <!--   Professor & Professor \\ -->
+    <!--   Department of Engineering and Public Policy & Department of Engineering and Public Policy \\ -->
+    <!--   Carnegie Mellon University & Department of Mechanical Engineering \\ -->
+    <!--   Baker Hall 131E & Carnegie Mellon University \\ -->
+    <!--   5000 Forbes Avenue & Scaife Hall 324 \\ -->
+    <!--   Pittsburgh, PA 15213 & 5000 Forbes Avenue \\ -->
+    <!--   Phone: +1 (412) 268-1877 & Pittsburgh, PA 15213 \\ -->
+    <!--   Email: erhf@andrew.cmu.edu & Phone: +1 (412) 268-3765 \\ -->
+    <!--   & Email: jmichalek@cmu.edu \\ -->
+    <!--   &  \\ -->
+    <!--   \textbf{Elea McDonnell Feit} & \textbf{Valerie J. Karplus}\\ -->
+    <!--   Associate Professor of Marketing & Associate Professor\\ -->
+    <!--   LeBow College of Business & Department of Engineering and Public Policy\\ -->
+    <!--   Drexel University & Carnegie Mellon University\\ -->
+    <!--   Gerri C. LeBow Hall 828 & Scott Hall 5113\\ -->
+    <!--   3141 Chestnut Street & 5000 Forbes Avenue\\ -->
+    <!--   Philadelphia, PA 19104 & Pittsburgh, PA 15213\\ -->
+    <!--   Phone: +1 (215) 571-4054 & Email: vkarplus@andrew.cmu.edu \\ -->
+    <!--   Email: efeit@drexel.edu & \\ -->
+    <!--   &  \\ -->
+    <!--   \textbf{Peter Fox-Penner} & \textbf{Zoe Szajnfarber} \\ -->
+    <!--   Director, Institute for Sustainable Energy & Professor \& Department Chair\\ -->
+    <!--   Questrom School of Business & Engineering Management and Systems Engineering\\ -->
+    <!--   Boston University & George Washington University\\ -->
+    <!--   Rafik B. Hariri Building, Room 514A & Science \& Engineering Hall 2670\\ -->
+    <!--   595 Commonwealth Ave. & 800 22nd Street, NW\\ -->
+    <!--   Boston, MA 02215 & Washington, DC 20052 \\ -->
+    <!--   Phone: +1 (617) 353-4298 & Phone: +1 (202) 994-7153\\ -->
+    <!--   Email: pfoxfp@bu.edu & Email: zszajnfa@gwu.edu\\ -->
+    <!-- \end{longtable} -->

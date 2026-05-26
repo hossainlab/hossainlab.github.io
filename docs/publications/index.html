@@ -9,7 +9,7 @@
 <meta name="author" content="Jubayer Hossain">
 <meta name="description" content="Academic Website for Jubayer Hossain">
 
-<title>Publications – Jubayer Hossain</title>
+<title>Publications &amp; Presentations – Jubayer Hossain</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -86,9 +86,10 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-authors','listing-corresponding','listing-year','listing-journal','listing-doi','listing-type','listing-categories','listing-volume','listing-article','listing-issue','listing-target_journal','listing-status','listing-venue','listing-location','listing-subtype',{ data: ['index'] },{ data: ['categories'] }],
-      
-      searchColumns: ["listing-title","listing-authors","listing-corresponding","listing-year","listing-journal","listing-doi","listing-type","listing-categories","listing-volume","listing-article","listing-issue","listing-target_journal","listing-status","listing-venue","listing-location","listing-subtype"],
+      valueNames: ['listing-title','listing-authors','listing-corresponding','listing-year','listing-journal','listing-volume','listing-article','listing-doi','listing-type','listing-categories','listing-issue','listing-target_journal','listing-status','listing-venue','listing-location','listing-subtype',{ data: ['index'] },{ data: ['categories'] }],
+      page: 25,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-title","listing-authors","listing-corresponding","listing-year","listing-journal","listing-volume","listing-article","listing-doi","listing-type","listing-categories","listing-issue","listing-target_journal","listing-status","listing-venue","listing-location","listing-subtype"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -264,8 +265,8 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page">
-      <h1 class="title">Publications</h1>
-            <p class="subtitle lead">Peer-reviewed articles, manuscripts under review, and conference presentations</p>
+      <h1 class="title">Publications &amp; Presentations</h1>
+            <p class="subtitle lead">Academic contributions, research manuscripts, and conference presentations</p>
                       </div>
   </div>
     
@@ -296,19 +297,19 @@ window.Quarto = {
 <div class="pub-main-col">
 <div class="pub-stats">
 <div class="pub-stat">
-<span class="pub-stat-n">44</span><span class="pub-stat-l">Total</span>
+<span class="pub-stat-n">48</span><span class="pub-stat-l">Total</span>
 </div>
 <div class="pub-stat-divider">
 
 </div>
 <div class="pub-stat">
-<span class="pub-stat-n pub-stat-peer">19</span><span class="pub-stat-l">Peer-Reviewed</span>
+<span class="pub-stat-n pub-stat-peer">18</span><span class="pub-stat-l">Peer-Reviewed</span>
 </div>
 <div class="pub-stat-divider">
 
 </div>
 <div class="pub-stat">
-<span class="pub-stat-n pub-stat-under">6</span><span class="pub-stat-l">Under Review</span>
+<span class="pub-stat-n pub-stat-under">10</span><span class="pub-stat-l">Under Review</span>
 </div>
 <div class="pub-stat-divider">
 
@@ -320,17 +321,34 @@ window.Quarto = {
 
 </div>
 <div class="pub-stat">
-<span class="pub-stat-n pub-stat-conf">14</span><span class="pub-stat-l">Conferences</span>
+<span class="pub-stat-n pub-stat-conf">15</span><span class="pub-stat-l">Conferences</span>
 </div>
 </div>
 <div id="pub-list" class="pub-list">
 <div id="pub-yr-2026" class="pub-year-section">
 <div class="pub-year-header">
-<span class="pub-yr-title">2026</span><span class="pub-yr-count">3 publications</span>
+<span class="pub-yr-title">2026</span><span class="pub-yr-count">4 publications</span>
+</div>
+<div class="pub-item pub-peer" data-type="peer-reviewed" data-cats="Global Health">
+<div class="pub-badges">
+<span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-cat">Global Health</span>
+</div>
+<div class="pub-title">
+<a href="https://doi.org/10.1016/S1470-2045(25)00730-2" target="_blank" rel="noopener">Global, regional, and national burden of breast cancer among females, 1990–2023, with forecasts to 2050: a systematic analysis for the Global Burden of Disease Study 2023</a>
+</div>
+<div class="pub-authors">
+GBD 2023 Breast Cancer Collaborators
+</div>
+<div class="pub-source">
+<em>The Lancet Oncology</em> (2026)
+</div>
+<div class="pub-actions">
+<a href="https://doi.org/10.1016/S1470-2045(25)00730-2" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
+</div>
 </div>
 <div class="pub-item pub-under" data-type="under-review" data-cats="Bioinformatics">
 <div class="pub-badges">
-<span class="pbadge pbadge-under">Under Review</span><span class="pbadge pbadge-cat">Bioinformatics</span>
+<span class="pbadge pbadge-under">Under Review</span><span class="pbadge pbadge-corr">Corresponding Author</span><span class="pbadge pbadge-cat">Bioinformatics</span>
 </div>
 <div class="pub-title">
 <a href="https://doi.org/10.21203/rs.3.rs-8494315/v1" target="_blank" rel="noopener">Computational identification of Taxus baccata-derived phytochemicals targeting EZH2 to overcome therapeutic resistance in melanoma</a>
@@ -339,7 +357,7 @@ window.Quarto = {
 Kundu, P., Shahariar, M., Munny, F. A., Riya, A. T., Lota, H. B., Ahmed, M. Z., Meme, M. A., Kona, U. M. P., Mahmuda, F., Chowdhury, S. S., Sraboni, S. A., &amp; <strong>Hossain, M. J.</strong>
 </div>
 <div class="pub-source">
-Submitted to <em>Research Square</em> &nbsp;<span class="pub-status-badge pub-status-under-review">Under Review</span>
+Submitted to <em>Scientific Reports</em> &nbsp;<span class="pub-status-badge pub-status-under-review">Under Review</span>
 </div>
 <div class="pub-actions">
 <a href="https://doi.org/10.21203/rs.3.rs-8494315/v1" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
@@ -382,40 +400,23 @@ Submitted to <em>Research Square</em> &nbsp;<span class="pub-status-badge pub-st
 </div>
 <div id="pub-yr-2025" class="pub-year-section">
 <div class="pub-year-header">
-<span class="pub-yr-title">2025</span><span class="pub-yr-count">21 publications</span>
-</div>
-<div class="pub-item pub-peer" data-type="peer-reviewed" data-cats="Global Health">
-<div class="pub-badges">
-<span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-cat">Global Health</span>
-</div>
-<div class="pub-title">
-<a href="https://www.thelancet.com/journals/lanonc/article/PIIS1470-2045(25)00730-2/fulltext" target="_blank" rel="noopener">Global, regional, and national burden of breast cancer among females, 1990–2023, with forecasts to 2050: a systematic analysis for the Global Burden of Disease Study 2023</a>
-</div>
-<div class="pub-authors">
-GBD 2023 Breast Cancer Collaborators
-</div>
-<div class="pub-source">
-<em>The Lancet Oncology</em> (2025)
-</div>
-<div class="pub-actions">
-<a href="https://www.thelancet.com/journals/lanonc/article/PIIS1470-2045(25)00730-2/fulltext" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
-</div>
+<span class="pub-yr-title">2025</span><span class="pub-yr-count">25 publications</span>
 </div>
 <div class="pub-item pub-peer" data-type="peer-reviewed" data-cats="Bioinformatics">
 <div class="pub-badges">
-<span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-corr">Corresponding Author</span><span class="pbadge pbadge-cat">Bioinformatics</span>
+<span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-cat">Bioinformatics</span>
 </div>
 <div class="pub-title">
-<a href="https://doi.org/10.1038/s41598-025-88339-z" target="_blank" rel="noopener">Pan-cancer analysis reveals immunological and prognostic significance of CCT5 in human tumors</a>
+<a href="https://doi.org/10.1186/s12864-025-12127-2" target="_blank" rel="noopener">A meta-analysis of public RNA-Seq data identifies conserved stress responses in rainbow trout</a>
 </div>
 <div class="pub-authors">
-Ahmed, M. Z., Billah, M. M., Ferdous, J., &amp; <strong>Hossain, M. J.</strong>
+Bari, S. M., Fuad, M., <strong>Hossain, M. J.</strong>, Ahammad, I., Begum, M., &amp; Helal, M. M. U.
 </div>
 <div class="pub-source">
-<em>Scientific Reports</em>, <strong>15</strong>, 14405 (2025)
+<em>BMC Genomics</em>, <strong>26</strong>, 999 (2025)
 </div>
 <div class="pub-actions">
-<a href="https://doi.org/10.1038/s41598-025-88339-z" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
+<a href="https://doi.org/10.1186/s12864-025-12127-2" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
 </div>
 </div>
 <div class="pub-item pub-peer" data-type="peer-reviewed" data-cats="Bioinformatics">
@@ -435,91 +436,6 @@ Fariha, F. T. J., Fuad, M., Saha, C. S., Hossen, S., &amp; <strong>Hossain, M. J
 <a href="https://doi.org/10.1038/s41598-025-13315-6" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
 </div>
 </div>
-<div class="pub-item pub-peer" data-type="peer-reviewed" data-cats="Bioinformatics">
-<div class="pub-badges">
-<span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-corr">Corresponding Author</span><span class="pbadge pbadge-cat">Bioinformatics</span>
-</div>
-<div class="pub-title">
-<a href="https://doi.org/10.1186/s12864-025-12127-2" target="_blank" rel="noopener">A meta-analysis of public RNA-Seq data identifies conserved stress responses in rainbow trout</a>
-</div>
-<div class="pub-authors">
-Bari, S. M., Fuad, M., &amp; <strong>Hossain, M. J.</strong>
-</div>
-<div class="pub-source">
-<em>BMC Genomics</em>, <strong>26</strong>, 999 (2025)
-</div>
-<div class="pub-actions">
-<a href="https://doi.org/10.1186/s12864-025-12127-2" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
-</div>
-</div>
-<div class="pub-item pub-peer" data-type="peer-reviewed" data-cats="Global Health">
-<div class="pub-badges">
-<span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-cat">Global Health</span>
-</div>
-<div class="pub-title">
-<a href="https://www.thelancet.com/journals/laneur/article/PIIS1474-4422(25)00402-8/fulltext" target="_blank" rel="noopener">Global, regional, and national burden of headache disorders, 1990–2023: a systematic analysis for the Global Burden of Disease Study 2023</a>
-</div>
-<div class="pub-authors">
-GBD 2023 Headache Collaborators
-</div>
-<div class="pub-source">
-<em>Lancet Neurology</em> (2025)
-</div>
-<div class="pub-actions">
-<a href="https://www.thelancet.com/journals/laneur/article/PIIS1474-4422(25)00402-8/fulltext" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
-</div>
-</div>
-<div class="pub-item pub-peer" data-type="peer-reviewed" data-cats="Global Health">
-<div class="pub-badges">
-<span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-cat">Global Health</span>
-</div>
-<div class="pub-title">
-<a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)01037-2/" target="_blank" rel="noopener">Global, regional, and national trends in routine childhood vaccination coverage from 1980 to 2023 with forecasts to 2030: A systematic analysis for the Global Burden of Disease Study 2023</a>
-</div>
-<div class="pub-authors">
-GBD 2023 Vaccine Coverage Collaborators
-</div>
-<div class="pub-source">
-<em>The Lancet</em> (2025)
-</div>
-<div class="pub-actions">
-<a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)01037-2/" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
-</div>
-</div>
-<div class="pub-item pub-peer" data-type="peer-reviewed" data-cats="Global Health,Infectious Disease">
-<div class="pub-badges">
-<span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-corr">Corresponding Author</span><span class="pbadge pbadge-cat">Global Health</span><span class="pbadge pbadge-cat">Infectious Disease</span>
-</div>
-<div class="pub-title">
-<a href="https://doi.org/10.1002/hsr2.70356" target="_blank" rel="noopener">Clinical and hematological manifestation of dengue patients in 2022 outbreak: A tertiary care hospital-based cross-sectional study</a>
-</div>
-<div class="pub-authors">
-<strong>Hossain, M. J.</strong>, Das, M., Shahjahan, M., Islam, M. W., &amp; Towhid, S. T.
-</div>
-<div class="pub-source">
-<em>Health Science Reports</em>, <strong>8</strong>, e70356 (2025)
-</div>
-<div class="pub-actions">
-<a href="https://doi.org/10.1002/hsr2.70356" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
-</div>
-</div>
-<div class="pub-item pub-peer" data-type="peer-reviewed" data-cats="Global Health">
-<div class="pub-badges">
-<span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-corr">Corresponding Author</span><span class="pbadge pbadge-cat">Global Health</span>
-</div>
-<div class="pub-title">
-<a href="https://svn.bmj.com/content/early/2025/04/07/svn-2025-004178" target="_blank" rel="noopener">Young stroke in Bangladesh: Addressing rare cases with diagnostic challenges and much-needed solutions</a>
-</div>
-<div class="pub-authors">
-Das, M., &amp; <strong>Hossain, M. J.</strong>
-</div>
-<div class="pub-source">
-<em>Stroke and Vascular Neurology</em> (2025)
-</div>
-<div class="pub-actions">
-<a href="https://svn.bmj.com/content/early/2025/04/07/svn-2025-004178" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
-</div>
-</div>
 <div class="pub-item pub-peer" data-type="peer-reviewed" data-cats="Infectious Disease">
 <div class="pub-badges">
 <span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-corr">Corresponding Author</span><span class="pbadge pbadge-cat">Infectious Disease</span>
@@ -537,6 +453,147 @@ Das, M., &amp; <strong>Hossain, M. J.</strong>
 <a href="https://doi.org/10.1002/hsr2.71101" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
 </div>
 </div>
+<div class="pub-item pub-peer" data-type="peer-reviewed" data-cats="Bioinformatics">
+<div class="pub-badges">
+<span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-corr">Corresponding Author</span><span class="pbadge pbadge-cat">Bioinformatics</span>
+</div>
+<div class="pub-title">
+<a href="https://doi.org/10.1038/s41598-025-88339-z" target="_blank" rel="noopener">Pan-cancer analysis reveals immunological and prognostic significance of CCT5 in human tumors</a>
+</div>
+<div class="pub-authors">
+Ahmed, M. Z., Billah, M. M., Ferdous, J., &amp; <strong>Hossain, M. J.</strong>
+</div>
+<div class="pub-source">
+<em>Scientific Reports</em>, <strong>15</strong>, 14405 (2025)
+</div>
+<div class="pub-actions">
+<a href="https://doi.org/10.1038/s41598-025-88339-z" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
+</div>
+</div>
+<div class="pub-item pub-peer" data-type="peer-reviewed" data-cats="Global Health">
+<div class="pub-badges">
+<span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-cat">Global Health</span>
+</div>
+<div class="pub-title">
+<a href="https://doi.org/10.1136/svn-2025-004178" target="_blank" rel="noopener">Young stroke in Bangladesh: Addressing rare cases with diagnostic challenges</a>
+</div>
+<div class="pub-authors">
+Das, M., &amp; <strong>Hossain, M. J.</strong>
+</div>
+<div class="pub-source">
+<em>Stroke and Vascular Neurology</em>, svn-2025-004178 (2025)
+</div>
+<div class="pub-actions">
+<a href="https://doi.org/10.1136/svn-2025-004178" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
+</div>
+</div>
+<div class="pub-item pub-peer" data-type="peer-reviewed" data-cats="Global Health,Infectious Disease">
+<div class="pub-badges">
+<span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-corr">Corresponding Author</span><span class="pbadge pbadge-cat">Global Health</span><span class="pbadge pbadge-cat">Infectious Disease</span>
+</div>
+<div class="pub-title">
+<a href="https://doi.org/10.1002/hsr2.70356" target="_blank" rel="noopener">Clinical and hematological manifestation of dengue patients in 2022 outbreak</a>
+</div>
+<div class="pub-authors">
+<strong>Hossain, M. J.</strong>, Das, M., Shahjahan, M., Islam, M. W., &amp; Towhid, S. T.
+</div>
+<div class="pub-source">
+<em>Health Science Reports</em>, <strong>8</strong>, e70356 (2025)
+</div>
+<div class="pub-actions">
+<a href="https://doi.org/10.1002/hsr2.70356" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
+</div>
+</div>
+<div class="pub-item pub-peer" data-type="peer-reviewed" data-cats="Global Health">
+<div class="pub-badges">
+<span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-cat">Global Health</span>
+</div>
+<div class="pub-title">
+<a href="https://doi.org/10.1016/S1474-4422(25)00402-8" target="_blank" rel="noopener">Global, regional, and national burden of headache disorders, 1990–2023: a systematic analysis for the Global Burden of Disease Study 2023</a>
+</div>
+<div class="pub-authors">
+GBD 2023 Headache Collaborators
+</div>
+<div class="pub-source">
+<em>The Lancet Neurology</em> (2025)
+</div>
+<div class="pub-actions">
+<a href="https://doi.org/10.1016/S1474-4422(25)00402-8" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
+</div>
+</div>
+<div class="pub-item pub-peer" data-type="peer-reviewed" data-cats="Global Health">
+<div class="pub-badges">
+<span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-cat">Global Health</span>
+</div>
+<div class="pub-title">
+<a href="https://doi.org/10.1016/S0140-6736(25)01037-2" target="_blank" rel="noopener">Global, regional, and national trends in routine childhood vaccination coverage from 1980 to 2023 with forecasts to 2030: A systematic analysis for the Global Burden of Disease Study 2023</a>
+</div>
+<div class="pub-authors">
+GBD 2023 Vaccine Coverage Collaborators
+</div>
+<div class="pub-source">
+<em>The Lancet</em> (2025)
+</div>
+<div class="pub-actions">
+<a href="https://doi.org/10.1016/S0140-6736(25)01037-2" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
+</div>
+</div>
+<div class="pub-item pub-under" data-type="under-review" data-cats="Global Health">
+<div class="pub-badges">
+<span class="pbadge pbadge-under">Under Review</span><span class="pbadge pbadge-cat">Global Health</span>
+</div>
+<div class="pub-title">
+Global, regional, and national burden and trend of adult musculoskeletal disorders and discrepancy between pre-pandemic and pandemic of COVID-19
+</div>
+<div class="pub-authors">
+GBD 2021 Musculoskeletal Disorders and COVID-19 Collaborators
+</div>
+<div class="pub-source">
+Submitted to <em>BMC Medicine</em> &nbsp;<span class="pub-status-badge pub-status-under-review">Under Review</span>
+</div>
+</div>
+<div class="pub-item pub-under" data-type="under-review" data-cats="Global Health,Infectious Disease">
+<div class="pub-badges">
+<span class="pbadge pbadge-under">Under Review</span><span class="pbadge pbadge-cat">Global Health</span><span class="pbadge pbadge-cat">Infectious Disease</span>
+</div>
+<div class="pub-title">
+Global, regional, and national burden of tuberculosis and multidrug-resistant tuberculosis by HIV status, 1990–2023: a systematic analysis for the Global Burden of Disease Study 2023
+</div>
+<div class="pub-authors">
+GBD 2023 TB Collaborators
+</div>
+<div class="pub-source">
+Submitted to <em>The Lancet Infectious Diseases</em> &nbsp;<span class="pub-status-badge pub-status-under-review">Under Review</span>
+</div>
+</div>
+<div class="pub-item pub-under" data-type="under-review" data-cats="Global Health">
+<div class="pub-badges">
+<span class="pbadge pbadge-under">Under Review</span><span class="pbadge pbadge-cat">Global Health</span>
+</div>
+<div class="pub-title">
+The global burden of type 1 diabetes: a systematic analysis for the Global Burden of Disease Study 2023
+</div>
+<div class="pub-authors">
+GBD 2023 Type 1 Diabetes Collaborators
+</div>
+<div class="pub-source">
+Submitted to <em>Under Review</em> &nbsp;<span class="pub-status-badge pub-status-under-review">Under Review</span>
+</div>
+</div>
+<div class="pub-item pub-under" data-type="under-review" data-cats="Global Health">
+<div class="pub-badges">
+<span class="pbadge pbadge-under">Under Review</span><span class="pbadge pbadge-cat">Global Health</span>
+</div>
+<div class="pub-title">
+Global, regional and national burden of cervical cancer and associated risk factors from 1990 to 2023 and forecasts to 2050: A systematic analysis for the Global Burden of Disease Study 2023
+</div>
+<div class="pub-authors">
+GBD 2023 Cervical Cancer Collaborators
+</div>
+<div class="pub-source">
+Submitted to <em>Under Review</em> &nbsp;<span class="pub-status-badge pub-status-under-review">Under Review</span>
+</div>
+</div>
 <div class="pub-item pub-under" data-type="under-review" data-cats="Bioinformatics">
 <div class="pub-badges">
 <span class="pbadge pbadge-under">Under Review</span><span class="pbadge pbadge-corr">Corresponding Author</span><span class="pbadge pbadge-cat">Bioinformatics</span>
@@ -548,7 +605,7 @@ Integrative bioinformatics analysis reveals COL13A1 and COL23A1 as potential dia
 Islam, M. W., Rahman, M. M., Naznin, H., Hossain, M. S., Akter, T., Shatabde, Z. A., &amp; <strong>Hossain, M. J.</strong>
 </div>
 <div class="pub-source">
-Submitted to <em>Health Science Reports</em> &nbsp;<span class="pub-status-badge pub-status-submitted">Submitted</span>
+Submitted to <em>Health Science Reports</em> &nbsp;<span class="pub-status-badge pub-status-under-review">Under Review</span>
 </div>
 </div>
 <div class="pub-item pub-under" data-type="under-review" data-cats="Bioinformatics">
@@ -598,7 +655,7 @@ Submitted to <em>BMC Pregnancy and Childbirth</em> &nbsp;<span class="pub-status
 <span class="pbadge pbadge-under">Under Review</span><span class="pbadge pbadge-corr">Corresponding Author</span><span class="pbadge pbadge-cat">Public Health</span>
 </div>
 <div class="pub-title">
-Lack of knowledge and training about antibiotic resistance among community pharmacists in Bangladesh: A cross-sectional study
+Lack of knowledge and training about antibiotic resistance among community pharmacists in Bangladesh: a cross-sectional study
 </div>
 <div class="pub-authors">
 <strong>Hossain, M. J.</strong>, Shahariar, M., Barsha, L. H. J., Shahjahan, M., Towhid, S. T., Sheikh, M. K., Hasan, M. M., Rahman, M. H., &amp; Sazid, M. S.
@@ -714,34 +771,31 @@ Tabassum, R., Fuad, M., Shahjahan, M., &amp; <strong>Hossain, M. J.</strong>
 <em>9th BSM Annual Conference</em> · University of Dhaka, Bangladesh · 2025
 </div>
 </div>
+<div class="pub-item pub-conf" data-type="conference" data-cats="General">
+<div class="pub-badges">
+<span class="pbadge pbadge-conf">Conference</span><span class="pbadge pbadge-cat">General</span>
+</div>
+<div class="pub-title">
+To be added
+</div>
+<div class="pub-authors">
+
+</div>
+<div class="pub-source">
+<em></em> · 2025
+</div>
+</div>
 </div>
 <div id="pub-yr-2024" class="pub-year-section">
 <div class="pub-year-header">
 <span class="pub-yr-title">2024</span><span class="pub-yr-count">13 publications</span>
-</div>
-<div class="pub-item pub-peer" data-type="peer-reviewed" data-cats="Infectious Disease">
-<div class="pub-badges">
-<span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-cat">Infectious Disease</span>
-</div>
-<div class="pub-title">
-<a href="https://doi.org/10.3390/microorganisms12081589" target="_blank" rel="noopener">Resistance and co-resistance of metallo-beta-lactamase genes in diarrheal and urinary-tract pathogens in Bangladesh</a>
-</div>
-<div class="pub-authors">
-Shanta, A. S., Islam, N., Al Asad, M., Akter, K., Habib, M. B., <strong>Hossain, M. J.</strong>, Nahar, S., Godman, B., &amp; Islam, S.
-</div>
-<div class="pub-source">
-<em>Microorganisms</em>, <strong>12</strong>(8), 1589 (2024)
-</div>
-<div class="pub-actions">
-<a href="https://doi.org/10.3390/microorganisms12081589" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
-</div>
 </div>
 <div class="pub-item pub-peer" data-type="peer-reviewed" data-cats="Global Health">
 <div class="pub-badges">
 <span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-corr">Corresponding Author</span><span class="pbadge pbadge-cat">Global Health</span>
 </div>
 <div class="pub-title">
-<a href="https://doi.org/10.1186/s13023-024-03344-1" target="_blank" rel="noopener">Urgent call for compulsory premarital screening: A crucial step towards thalassemia prevention in Bangladesh</a>
+<a href="https://doi.org/10.1186/s13023-024-03344-1" target="_blank" rel="noopener">Urgent call for compulsory premarital screening for thalassemia prevention in Bangladesh</a>
 </div>
 <div class="pub-authors">
 <strong>Hossain, M. J.</strong>, Das, M., &amp; Munni, U. R.
@@ -753,38 +807,21 @@ Shanta, A. S., Islam, N., Al Asad, M., Akter, K., Habib, M. B., <strong>Hossain,
 <a href="https://doi.org/10.1186/s13023-024-03344-1" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
 </div>
 </div>
-<div class="pub-item pub-peer" data-type="peer-reviewed" data-cats="Public Health">
+<div class="pub-item pub-peer" data-type="peer-reviewed" data-cats="Infectious Disease">
 <div class="pub-badges">
-<span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-corr">Corresponding Author</span><span class="pbadge pbadge-cat">Public Health</span>
+<span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-cat">Infectious Disease</span>
 </div>
 <div class="pub-title">
-<a href="https://doi.org/10.1038/s41598-024-52313-y" target="_blank" rel="noopener">Factors contributing to antibiotic misuse among parents of school-going children in Dhaka City, Bangladesh</a>
+<a href="https://doi.org/10.3390/microorganisms12081589" target="_blank" rel="noopener">Resistance and co-resistance of metallo-beta-lactamase genes in diarrheal and urinary-tract pathogens</a>
 </div>
 <div class="pub-authors">
-Islam, M. W., Shahjahan, M., Azad, A. K., &amp; <strong>Hossain, M. J.</strong>
+Shanta, A. S., Islam, N., Al Asad, M., Akter, K., Habib, M. B., <strong>Hossain, M. J.</strong>, Nahar, S., Godman, B., &amp; Islam, S.
 </div>
 <div class="pub-source">
-<em>Scientific Reports</em>, <strong>14</strong>, 2318 (2024)
+<em>Microorganisms</em>, <strong>12</strong>(8), 1589 (2024)
 </div>
 <div class="pub-actions">
-<a href="https://doi.org/10.1038/s41598-024-52313-y" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
-</div>
-</div>
-<div class="pub-item pub-peer" data-type="peer-reviewed" data-cats="Global Health,Infectious Disease">
-<div class="pub-badges">
-<span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-corr">Corresponding Author</span><span class="pbadge pbadge-cat">Global Health</span><span class="pbadge pbadge-cat">Infectious Disease</span>
-</div>
-<div class="pub-title">
-<a href="https://doi.org/10.1002/hsr2.2022" target="_blank" rel="noopener">Community engagement and social participation in dengue prevention: A cross-sectional study in Dhaka City</a>
-</div>
-<div class="pub-authors">
-<strong>Hossain, M. J.</strong>, Das, M., Islam, M. W., Shahjahan, M., &amp; Ferdous, J.
-</div>
-<div class="pub-source">
-<em>Health Science Reports</em>, <strong>7</strong>, e2022 (2024)
-</div>
-<div class="pub-actions">
-<a href="https://doi.org/10.1002/hsr2.2022" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
+<a href="https://doi.org/10.3390/microorganisms12081589" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
 </div>
 </div>
 <div class="pub-item pub-peer" data-type="peer-reviewed" data-cats="Infectious Disease">
@@ -792,7 +829,7 @@ Islam, M. W., Shahjahan, M., Azad, A. K., &amp; <strong>Hossain, M. J.</strong>
 <span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-corr">Corresponding Author</span><span class="pbadge pbadge-cat">Infectious Disease</span>
 </div>
 <div class="pub-title">
-<a href="https://doi.org/10.1002/hsr2.2039" target="_blank" rel="noopener">Prevalence, antibiotic resistance pattern for bacteriuria from patients with urinary tract infections</a>
+<a href="https://doi.org/10.1002/hsr2.2039" target="_blank" rel="noopener">Prevalence, antibiotic resistance pattern for bacteriuria from patients with UTIs</a>
 </div>
 <div class="pub-authors">
 <strong>Hossain, M. J.</strong>, Azad, A. K., Shahid, M. S. B., Shahjahan, M., &amp; Ferdous, J.
@@ -809,7 +846,7 @@ Islam, M. W., Shahjahan, M., Azad, A. K., &amp; <strong>Hossain, M. J.</strong>
 <span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-corr">Corresponding Author</span><span class="pbadge pbadge-cat">Public Health</span>
 </div>
 <div class="pub-title">
-<a href="https://doi.org/10.1002/hsr2.70259" target="_blank" rel="noopener">Food consumption patterns and sedentary behaviors among the university students: A cross-sectional study</a>
+<a href="https://doi.org/10.1002/hsr2.70259" target="_blank" rel="noopener">Food consumption patterns and sedentary behaviors among university students</a>
 </div>
 <div class="pub-authors">
 Akter, M. M., &amp; <strong>Hossain, M. J.</strong>
@@ -819,6 +856,68 @@ Akter, M. M., &amp; <strong>Hossain, M. J.</strong>
 </div>
 <div class="pub-actions">
 <a href="https://doi.org/10.1002/hsr2.70259" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
+</div>
+</div>
+<div class="pub-item pub-peer" data-type="peer-reviewed" data-cats="Public Health">
+<div class="pub-badges">
+<span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-corr">Corresponding Author</span><span class="pbadge pbadge-cat">Public Health</span>
+</div>
+<div class="pub-title">
+<a href="https://doi.org/10.1038/s41598-024-52313-y" target="_blank" rel="noopener">Factors contributing to antibiotic misuse among parents in Dhaka City</a>
+</div>
+<div class="pub-authors">
+Islam, M. W., Shahjahan, M., Azad, A. K., &amp; <strong>Hossain, M. J.</strong>
+</div>
+<div class="pub-source">
+<em>Scientific Reports</em>, <strong>14</strong>, 2318 (2024)
+</div>
+<div class="pub-actions">
+<a href="https://doi.org/10.1038/s41598-024-52313-y" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
+</div>
+</div>
+<div class="pub-item pub-peer" data-type="peer-reviewed" data-cats="Global Health,Infectious Disease">
+<div class="pub-badges">
+<span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-corr">Corresponding Author</span><span class="pbadge pbadge-cat">Global Health</span><span class="pbadge pbadge-cat">Infectious Disease</span>
+</div>
+<div class="pub-title">
+<a href="https://doi.org/10.1002/hsr2.2022" target="_blank" rel="noopener">Community engagement and social participation in dengue prevention</a>
+</div>
+<div class="pub-authors">
+<strong>Hossain, M. J.</strong>, Das, M., Islam, M. W., Shahjahan, M., &amp; Ferdous, J.
+</div>
+<div class="pub-source">
+<em>Health Science Reports</em>, <strong>7</strong>, e2022 (2024)
+</div>
+<div class="pub-actions">
+<a href="https://doi.org/10.1002/hsr2.2022" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
+</div>
+</div>
+<div class="pub-item pub-conf" data-type="conference" data-cats="Environmental Health">
+<div class="pub-badges">
+<span class="pbadge pbadge-conf">Oral Presentation</span><span class="pbadge pbadge-corr">Corresponding Author</span><span class="pbadge pbadge-cat">Environmental Health</span>
+</div>
+<div class="pub-title">
+Exploring the Factors Influencing Heat Stress Risks Using the Discomfort Index Method in Bangladesh
+</div>
+<div class="pub-authors">
+Tuhin, M. A. A., Mim, N. A., Akter, N., Jamal, F., Sakib, M. N., Mehjabin, K., &amp; <strong>Hossain, M. J.</strong>
+</div>
+<div class="pub-source">
+<em>International Conference on Environmental Science and Resource Management (ICESRM 2024)</em> · Bangladesh · 2024
+</div>
+</div>
+<div class="pub-item pub-conf" data-type="conference" data-cats="Public Health">
+<div class="pub-badges">
+<span class="pbadge pbadge-conf">Oral Presentation</span><span class="pbadge pbadge-corr">Corresponding Author</span><span class="pbadge pbadge-cat">Public Health</span>
+</div>
+<div class="pub-title">
+Temporal Trends and Factors Influencing Diarrhea Prevalence Among Children in the Rangamati Hill Tract Region: A Time Series Analysis
+</div>
+<div class="pub-authors">
+Mim, N. A., Akter, N., Tuhin, M. A. A., Hossain, S., Alam, K. E., Mouli, N. J., &amp; <strong>Hossain, M. J.</strong>
+</div>
+<div class="pub-source">
+<em>International Conference on Environmental Science and Resource Management (ICESRM 2024)</em> · Bangladesh · 2024
 </div>
 </div>
 <div class="pub-item pub-conf" data-type="conference" data-cats="Global Health">
@@ -891,45 +990,17 @@ Akter, N., Mim, N. A., &amp; <strong>Hossain, M. J.</strong>
 <em>International Conference of Public Health, IEDCR</em> · Dhaka, Bangladesh · 2024
 </div>
 </div>
-<div class="pub-item pub-conf" data-type="conference" data-cats="Environmental Health">
-<div class="pub-badges">
-<span class="pbadge pbadge-conf">Oral Presentation</span><span class="pbadge pbadge-corr">Corresponding Author</span><span class="pbadge pbadge-cat">Environmental Health</span>
-</div>
-<div class="pub-title">
-Exploring the Factors Influencing Heat Stress Risks Using the Discomfort Index Method in Bangladesh
-</div>
-<div class="pub-authors">
-Tuhin, M. A. A., Mim, N. A., Akter, N., Jamal, F., Sakib, M. N., Mehjabin, K., &amp; <strong>Hossain, M. J.</strong>
-</div>
-<div class="pub-source">
-<em>International Conference on Environmental Science and Resource Management (ICESRM 2024)</em> · Bangladesh · 2024
-</div>
-</div>
-<div class="pub-item pub-conf" data-type="conference" data-cats="Public Health">
-<div class="pub-badges">
-<span class="pbadge pbadge-conf">Oral Presentation</span><span class="pbadge pbadge-corr">Corresponding Author</span><span class="pbadge pbadge-cat">Public Health</span>
-</div>
-<div class="pub-title">
-Temporal Trends and Factors Influencing Diarrhea Prevalence Among Children in the Rangamati Hill Tract Region: A Time Series Analysis
-</div>
-<div class="pub-authors">
-Mim, N. A., Akter, N., Tuhin, M. A. A., Hossain, S., Alam, K. E., Mouli, N. J., &amp; <strong>Hossain, M. J.</strong>
-</div>
-<div class="pub-source">
-<em>International Conference on Environmental Science and Resource Management (ICESRM 2024)</em> · Bangladesh · 2024
-</div>
-</div>
 </div>
 <div id="pub-yr-2023" class="pub-year-section">
 <div class="pub-year-header">
-<span class="pub-yr-title">2023</span><span class="pub-yr-count">5 publications</span>
+<span class="pub-yr-title">2023</span><span class="pub-yr-count">4 publications</span>
 </div>
 <div class="pub-item pub-peer" data-type="peer-reviewed" data-cats="Global Health">
 <div class="pub-badges">
 <span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-corr">Corresponding Author</span><span class="pbadge pbadge-cat">Global Health</span>
 </div>
 <div class="pub-title">
-<a href="https://doi.org/10.1038/s41598-023-34205-9" target="_blank" rel="noopener">Health-related quality of life among thalassemia patients in Bangladesh using the SF-36 questionnaire</a>
+<a href="https://doi.org/10.1038/s41598-023-34205-9" target="_blank" rel="noopener">Health-related quality of life among thalassemia patients in Bangladesh (SF-36)</a>
 </div>
 <div class="pub-authors">
 <strong>Hossain, M. J.</strong>, Islam, M. W., Munni, U. R., Gulshan, R., Mukta, S. A., Miah, M. S., Sultana, S., Karmakar, M., Ferdous, J., &amp; Islam, M. A.
@@ -939,23 +1010,6 @@ Mim, N. A., Akter, N., Tuhin, M. A. A., Hossain, S., Alam, K. E., Mouli, N. J., 
 </div>
 <div class="pub-actions">
 <a href="https://doi.org/10.1038/s41598-023-34205-9" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
-</div>
-</div>
-<div class="pub-item pub-peer" data-type="peer-reviewed" data-cats="Public Health">
-<div class="pub-badges">
-<span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-corr">Corresponding Author</span><span class="pbadge pbadge-cat">Public Health</span>
-</div>
-<div class="pub-title">
-<a href="https://doi.org/10.25163/angiotherapy.717340" target="_blank" rel="noopener">Knowledge and Self-Management Practice Among Diabetic Patients from the Urban Areas in Bangladesh</a>
-</div>
-<div class="pub-authors">
-<strong>Hossain, M. J.</strong>, Towhid, S. T., Akter, S., Shahjahan, M., Roy, T., Akter, B., &amp; Nodee, T. A.
-</div>
-<div class="pub-source">
-<em>Journal of Angiotherapy</em>, <strong>7</strong>(1), 1–10 (2023)
-</div>
-<div class="pub-actions">
-<a href="https://doi.org/10.25163/angiotherapy.717340" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
 </div>
 </div>
 <div class="pub-item pub-conf" data-type="conference" data-cats="Infectious Disease">
@@ -1005,29 +1059,12 @@ Monitoring Water-Borne Disease (Vibrio cholerae) Using NASA Earth Observation Da
 <div class="pub-year-header">
 <span class="pub-yr-title">2022</span><span class="pub-yr-count">2 publications</span>
 </div>
-<div class="pub-item pub-peer" data-type="peer-reviewed" data-cats="Public Health">
-<div class="pub-badges">
-<span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-cat">Public Health</span>
-</div>
-<div class="pub-title">
-<a href="https://doi.org/10.24018/ejbio.2022.3.3.341" target="_blank" rel="noopener">Perception of Students on Antibiotic Resistance and Prevention: An Online, Community-Based Case Study from Dhaka, Bangladesh</a>
-</div>
-<div class="pub-authors">
-Towhid, S. T., <strong>Hossain, M. J.</strong>, Sammo, M. A. S., &amp; Akter, S.
-</div>
-<div class="pub-source">
-<em>European Journal of Biology and Biotechnology</em> (2022)
-</div>
-<div class="pub-actions">
-<a href="https://doi.org/10.24018/ejbio.2022.3.3.341" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
-</div>
-</div>
 <div class="pub-item pub-peer" data-type="peer-reviewed" data-cats="Global Health">
 <div class="pub-badges">
 <span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-cat">Global Health</span>
 </div>
 <div class="pub-title">
-<a href="https://doi.org/10.25163/microbbioacts.526325" target="_blank" rel="noopener">Knowledge and Attitudes towards Thalassemia among Public University Students in Bangladesh</a>
+<a href="https://doi.org/10.25163/microbbioacts.526325" target="_blank" rel="noopener">Knowledge and Attitudes towards Thalassemia among Public University Students</a>
 </div>
 <div class="pub-authors">
 <strong>Hossain, M. J.</strong>, Towhid, S. T., Sultana, S., Mukta, S. A., Gulshan, R., &amp; Miah, M. S.
@@ -1037,6 +1074,23 @@ Towhid, S. T., <strong>Hossain, M. J.</strong>, Sammo, M. A. S., &amp; Akter, S.
 </div>
 <div class="pub-actions">
 <a href="https://doi.org/10.25163/microbbioacts.526325" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
+</div>
+</div>
+<div class="pub-item pub-peer" data-type="peer-reviewed" data-cats="Public Health">
+<div class="pub-badges">
+<span class="pbadge pbadge-peer">Peer-Reviewed</span><span class="pbadge pbadge-cat">Public Health</span>
+</div>
+<div class="pub-title">
+<a href="https://doi.org/10.24018/ejbio.2022.3.3.341" target="_blank" rel="noopener">Perception of Students on Antibiotic Resistance and Prevention</a>
+</div>
+<div class="pub-authors">
+Towhid, S. T., <strong>Hossain, M. J.</strong>, Sammo, M. A. S., &amp; Akter, S.
+</div>
+<div class="pub-source">
+<em>European Journal of Biology and Biotechnology</em> (2022)
+</div>
+<div class="pub-actions">
+<a href="https://doi.org/10.24018/ejbio.2022.3.3.341" class="pub-doi-btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Article</a>
 </div>
 </div>
 </div>
@@ -1054,19 +1108,19 @@ Type
 </h5>
 <div class="pub-sidebar-btns">
 <button class="pub-fbtn active" data-ftype="all">
-All <span class="pub-fcount">(44)</span>
+All <span class="pub-fcount">(48)</span>
 </button>
 <button class="pub-fbtn" data-ftype="peer-reviewed">
-Peer-Reviewed <span class="pub-fcount">(19)</span>
+Peer-Reviewed <span class="pub-fcount">(18)</span>
 </button>
 <button class="pub-fbtn" data-ftype="under-review">
-Under Review <span class="pub-fcount">(6)</span>
+Under Review <span class="pub-fcount">(10)</span>
 </button>
 <button class="pub-fbtn" data-ftype="working-paper">
 Working Papers <span class="pub-fcount">(5)</span>
 </button>
 <button class="pub-fbtn" data-ftype="conference">
-Conference <span class="pub-fcount">(14)</span>
+Conference <span class="pub-fcount">(15)</span>
 </button>
 </div>
 <h5 class="pub-sidebar-title anchored" style="margin-top:1.25rem;">
@@ -1081,6 +1135,9 @@ Bioinformatics
 </button>
 <button class="pub-fbtn" data-fcat="Environmental Health">
 Environmental Health
+</button>
+<button class="pub-fbtn" data-fcat="General">
+General
 </button>
 <button class="pub-fbtn" data-fcat="Global Health">
 Global Health
@@ -1135,6 +1192,9 @@ Public Health
 }());
 </script>
 <div class="listing-no-matching d-none">No matching items</div>
+<nav id="publications-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div>
 
 

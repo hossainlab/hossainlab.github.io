@@ -1,0 +1,78 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# GBD Contributions
+# ──────────────────────────────────────────────────────────────────────────────
+# Fields:
+#   title          – Paper title (required)
+#   authors        – Author string
+#   year           – Publication/Submission year (integer)
+#   journal        – Journal name (for published)
+#   target_journal – Target journal (for under-review)
+#   status         – Status (e.g., Under Review)
+#   doi            – Full DOI / URL
+#   type           – peer-reviewed | under-review
+#   categories     – List of research topics
+# ──────────────────────────────────────────────────────────────────────────────
+
+- title: "Global, regional, and national burden of breast cancer among females, 1990–2023, with forecasts to 2050: a systematic analysis for the Global Burden of Disease Study 2023"
+  authors: "GBD 2023 Breast Cancer Collaborators"
+  year: 2026
+  journal: "The Lancet Oncology"
+  doi: "https://doi.org/10.1016/S1470-2045(25)00730-2"
+  type: peer-reviewed
+  categories:
+    - Global Health
+
+- title: "Global, regional, and national burden of headache disorders, 1990–2023: a systematic analysis for the Global Burden of Disease Study 2023"
+  authors: "GBD 2023 Headache Collaborators"
+  year: 2025
+  journal: "The Lancet Neurology"
+  doi: "https://doi.org/10.1016/S1474-4422(25)00402-8"
+  type: peer-reviewed
+  categories:
+    - Global Health
+
+- title: "Global, regional, and national trends in routine childhood vaccination coverage from 1980 to 2023 with forecasts to 2030: A systematic analysis for the Global Burden of Disease Study 2023"
+  authors: "GBD 2023 Vaccine Coverage Collaborators"
+  year: 2025
+  journal: "The Lancet"
+  doi: "https://doi.org/10.1016/S0140-6736(25)01037-2"
+  type: peer-reviewed
+  categories:
+    - Global Health
+
+- title: "Global, regional, and national burden and trend of adult musculoskeletal disorders and discrepancy between pre-pandemic and pandemic of COVID-19"
+  authors: "GBD 2021 Musculoskeletal Disorders and COVID-19 Collaborators"
+  year: 2025
+  target_journal: "BMC Medicine"
+  status: "Under Review"
+  type: under-review
+  categories:
+    - Global Health
+
+- title: "Global, regional, and national burden of tuberculosis and multidrug-resistant tuberculosis by HIV status, 1990–2023: a systematic analysis for the Global Burden of Disease Study 2023"
+  authors: "GBD 2023 TB Collaborators"
+  year: 2025
+  target_journal: "The Lancet Infectious Diseases"
+  status: "Under Review"
+  type: under-review
+  categories:
+    - Global Health
+    - Infectious Disease
+
+- title: "The global burden of type 1 diabetes: a systematic analysis for the Global Burden of Disease Study 2023"
+  authors: "GBD 2023 Type 1 Diabetes Collaborators"
+  year: 2025
+  target_journal: "Under Review"
+  status: "Under Review"
+  type: under-review
+  categories:
+    - Global Health
+
+- title: "Global, regional and national burden of cervical cancer and associated risk factors from 1990 to 2023 and forecasts to 2050: A systematic analysis for the Global Burden of Disease Study 2023"
+  authors: "GBD 2023 Cervical Cancer Collaborators"
+  year: 2025
+  target_journal: "Under Review"
+  status: "Under Review"
+  type: under-review
+  categories:
+    - Global Health

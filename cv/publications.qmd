@@ -1,0 +1,208 @@
+---
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    colorlinks: true
+    documentclass: scrartcl
+    papersize: letter
+    pdf-engine: xelatex
+    fontsize: 10pt
+    geometry:
+      - margin=1in
+      - heightrounded
+    include-in-header:
+      - preamble.tex
+execute:
+  warning: false
+  echo: false
+  message: false
+  eval: true
+---
+
+```{r}
+#| name: setup
+#| include: false
+#| message: false
+#| eval: true
+
+knitr::opts_chunk$set(
+  fig.path = "figs/",
+  fig.width = 7.252,
+  fig.height = 4,
+  comment = "#>",
+  fig.retina = 3
+)
+
+source("functions.R")
+
+# Store IDs
+gscholar_id <- '9_K4ekoAAAAJ'
+gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_id)
+```
+
+\par\centering{\LARGE{Md. Jubayer Hossain}}
+\par\centering{Department of Public Health}
+\vspace{-5pt}
+\par\centering{Daffodil International University}
+\vspace{-5pt}
+\par\centering{Daffodil Smart City}
+\vspace{-5pt}
+\par\centering{Birulia, Savar, Dhaka-1216, Bangladesh}
+\vspace{-5pt}
+\par\centering{{\large\Telefon} +8801662345906}
+\vspace{-5pt}
+\par\centering{{\large\Letter} hossainmj.me@gmail.com}
+\vspace{-5pt}
+\par\centering{\href{http://www.mdjubayerhossain.com}{www.mdjubayerhossain.com}}
+
+# Publications 
+
+  \apptocmd{\tightlist}{\setlength{\itemsep}{4pt}}{}{}
+
+ORCID: \href{https://orcid.org/0000-0001-9323-4997}{0000-0001-9323-4997} | [Google Scholar Profile](https://scholar.google.com/citations?user=9_K4ekoAAAAJ&hl=en&authuser=5)
+
+\underline{Underline} indicates mentee; ** undergraduate student; * corresponding 
+
+## A. Journal Articles
+```{r}
+pubs <- get_cv_sheet('pubs') %>%
+  mutate(
+    journal  = ifelse(is.na(journal), '', paste0('_', journal, '_.')),
+    number   = ifelse(is.na(number), '', paste0(number, '.')),
+    doi      = ifelse(
+               is.na(doi), '',
+               paste0('DOI: [', doi, '](', 'https://doi.org/', doi, ')')),
+    url_repo = ifelse(is.na(url_repo), '', paste0('[', url_repo, '](', url_repo, ')')),
+    year     = paste0("(", year, ")"),
+    title    = enquote(title),
+    citation = paste(author, year, title, journal, number, doi, url_repo)
+  ) %>% 
+  arrange(desc(pub_date))
+```
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(pubs, "peer_reviewed")
+```
+
+## B. GBD Contributions 
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(pubs, "gbd")
+```
+
+
+## C. Papers Under Review
+
+```{r}
+#| results: asis
+ 
+make_ordered_list_filtered(pubs, "under_review")
+```
+
+## D. Working Papers
+
+```{r}
+#| results: asis
+ 
+make_ordered_list_filtered(pubs, "working")
+```
+
+# Presentations
+
+```{r}
+presentations <- get_cv_sheet('presentations') %>%
+  arrange(desc(date)) %>% 
+  mutate(
+    with = ifelse(is.na(with), '', paste0(', with ', with)),
+    title = paste0(enquote(title), with),
+    title = ifelse(is.na(series), title, paste(title, series, sep = '. ')),
+    date = paste0(format(as.Date(date), format = "%b %d, %Y"), '.'),
+    citation = paste(title, host, location, date, sep = '. ')
+  )
+
+presentation_counts <- presentations %>%
+  count(category) %>%
+  left_join(data.frame(
+    category = c(
+      "invited", "panelist", "conference", "poster", "organizer", "discussant"
+    ),
+    order = seq(6)
+  )) %>%
+  mutate(
+    category = str_to_title(category),
+    category = ifelse(category == 'Invited', 'Invited Speaker', category),
+    category = ifelse(category == 'Panelist', 'Invited Panelist', category),
+    category = ifelse(category == 'Conference', 'Conference Presentation', category),
+    category = ifelse(category == 'Poster', '\\newline Poster Presentation', category),
+    cite = paste0(category, ' (', n, ')')
+  ) %>%
+  arrange(order) %>%
+  pull(cite) %>%
+  paste(collapse = ', ')
+```
+
+## A. Invited Speaker
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(presentations, "invited")
+```
+
+## B. Conference Presentations
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(presentations, "conference")
+```
+
+## C. Posters
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(presentations, "poster")
+```
+
+# Media Coverage
+<!-- Set spacing in between list -->
+\apptocmd{\tightlist}{\setlength{\itemsep}{2pt}}{}{}
+
+```{r}
+media <- get_cv_sheet('media') %>%
+  arrange(desc(date)) %>%
+  mutate(
+      date = format(date, format = "%b %d, %Y"),
+      outlet = paste0("**", outlet, "**"),
+      citation = paste0(date, ", ", outlet, ": ", post, '.')
+  )
+
+media_counts <- media %>%
+  count(type) %>% 
+  mutate(
+    type = str_replace_all(type, '_', ' '),
+    type = str_to_title(type), 
+    type = ifelse(type == 'Tv', 'TV', type), 
+    type = ifelse(type == 'Government', 'Federal Government', type), 
+    cite = paste0(type, ' (', n, ')'),
+    has_press = str_detect(type, 'Press')
+  ) %>%
+  arrange(!has_press) %>%
+  pull(cite) %>%
+  paste(collapse = ', ')
+```
+
+
+```{r}
+#| results: asis
+
+media %>%
+  filter(highlight == 1) %>%
+  pull(citation) %>%
+  make_ordered_list()
+```

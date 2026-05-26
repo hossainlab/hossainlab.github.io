@@ -1,0 +1,104 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# Posters
+# ──────────────────────────────────────────────────────────────────────────────
+# Fields: Same as conference-presentations.yml
+# ──────────────────────────────────────────────────────────────────────────────
+
+- title: "Identification of Subtype-Specific Prognostic Biomarkers in Esophageal Carcinoma through Integrated Bioinformatics Analysis"
+  authors: "Ahmad, F., Fuad, M., Shahjahan, M., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2025
+  venue: "9th BSM Annual Conference"
+  location: "University of Dhaka, Bangladesh"
+  subtype: poster
+  type: conference
+  categories:
+    - Bioinformatics
+
+- title: "Network-Driven Bioinformatics Approach Uncovers Prognostic Signatures and Therapeutic Targets in Pancreatic Ductal Adenocarcinoma"
+  authors: "Aditee, L. M., Fuad, M., Shahjahan, M., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2025
+  venue: "9th BSM Annual Conference"
+  location: "University of Dhaka, Bangladesh"
+  subtype: poster
+  type: conference
+  categories:
+    - Bioinformatics
+
+- title: "Bioinformatic Analysis of Transcriptomic Data Reveals Molecular Signatures Driving Colorectal Cancer"
+  authors: "Ahamed, M. S., Fuad, M., Shahjahan, M., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2025
+  venue: "9th BSM Annual Conference"
+  location: "University of Dhaka, Bangladesh"
+  subtype: poster
+  type: conference
+  categories:
+    - Bioinformatics
+
+- title: "Comparative Transcriptomic Meta-Analysis Reveals Shared and Distinct Transcriptional Networks and Pathway Crosstalk in Hepatocellular Carcinoma for Biomarker and Therapeutic Target Identification"
+  authors: "Tabassum, R., Fuad, M., Shahjahan, M., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2025
+  venue: "9th BSM Annual Conference"
+  location: "University of Dhaka, Bangladesh"
+  subtype: poster
+  type: conference
+  categories:
+    - Bioinformatics
+
+- title: "Diagnostic and Electrophysiological Features of Hirayama Disease in Young Adult Male: A Case Report"
+  authors: "**Hossain, M. J.**, & Das, M."
+  corresponding: false
+  year: 2024
+  venue: "International Conference of Public Health, IEDCR"
+  location: "Dhaka, Bangladesh"
+  type: conference
+  subtype: poster
+  categories:
+    - Global Health
+
+- title: "Level of knowledge regarding breast cancer and breast self-examination among school and college-going girls in Bangladesh"
+  authors: "Das, M., Kajol, M. M., Mim, N. A., Maruf, M. F. I., Hirko, K., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2024
+  venue: "International Conference of Public Health, IEDCR"
+  location: "Dhaka, Bangladesh"
+  type: conference
+  subtype: poster
+  categories:
+    - Global Health
+
+- title: "Lack of knowledge and training about antibiotic resistance among community pharmacists in Bangladesh"
+  authors: "Shahariar, M., Joarder Barsha, L. H., Shahjahan, M., Towhid, S. T., Sheikh, M. K., Hasan, M. M., Rahaman, M. H., Sazid, M. S., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2024
+  venue: "International Conference of Public Health, IEDCR"
+  location: "Dhaka, Bangladesh"
+  type: conference
+  subtype: poster
+  categories:
+    - Public Health
+
+- title: "Influence of Meteorological Factors on Dengue Incidence: A 23-Year Retrospective Analysis in Bangladesh"
+  authors: "Afrin, N., Howlader, G., Bhattacharjee, A., Akter, N., Mesu, M. H., Mazumder, E., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2024
+  venue: "International Conference of Public Health, IEDCR"
+  location: "Dhaka, Bangladesh"
+  type: conference
+  subtype: poster
+  categories:
+    - Infectious Disease
+
+- title: "Particulate Matter PM2.5 Pollution and Air Quality Index (AQI) Trends Evaluation with Meteorological Factors in Dhaka City"
+  authors: "Akter, N., Mim, N. A., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2024
+  venue: "International Conference of Public Health, IEDCR"
+  location: "Dhaka, Bangladesh"
+  type: conference
+  subtype: poster
+  categories:
+    - Environmental Health

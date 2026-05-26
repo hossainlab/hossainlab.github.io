@@ -1,19 +1,20 @@
 ---
-title: "Publications"
-subtitle: "Peer-reviewed articles, manuscripts under review, and conference presentations"
+title: "Publications & Presentations"
+subtitle: "Academic contributions, research manuscripts, and conference presentations"
 title-block-banner: true
 page-layout: full
 listing:
   - id: publications
-    contents:
-      - peer-reviewed.yml
+    contents: 
+      - journal-articles.yml
+      - gbd-contributions.yml
       - under-review.yml
       - working-papers.yml
-      - conference.yml
+      - conference-presentations.yml
+      - posters.yml
+      - invited-speaker.yml
     template: ../_templates/publication-card.ejs
-    sort-ui: false
-    filter-ui: false
-    page-size: 200
+    sort: "year desc"
 ---
 
 ::: {#publications}

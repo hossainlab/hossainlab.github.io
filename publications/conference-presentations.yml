@@ -1,0 +1,70 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# Conference Presentations
+# ──────────────────────────────────────────────────────────────────────────────
+# Fields:
+#   title          – Presentation title (required)
+#   authors        – Author string; wrap "**Name**" to bold your name
+#   corresponding  – true if you are the corresponding author
+#   year           – Presentation year (integer)
+#   venue          – Conference name
+#   location       – City, Country
+#   subtype        – poster | oral
+#   type           – Must be: conference
+#   categories     – List of research topics for filtering
+# ──────────────────────────────────────────────────────────────────────────────
+
+- title: "Exploring the Factors Influencing Heat Stress Risks Using the Discomfort Index Method in Bangladesh"
+  authors: "Tuhin, M. A. A., Mim, N. A., Akter, N., Jamal, F., Sakib, M. N., Mehjabin, K., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2024
+  venue: "International Conference on Environmental Science and Resource Management (ICESRM 2024)"
+  location: "Bangladesh"
+  type: conference
+  subtype: oral
+  categories:
+    - Environmental Health
+
+- title: "Temporal Trends and Factors Influencing Diarrhea Prevalence Among Children in the Rangamati Hill Tract Region: A Time Series Analysis"
+  authors: "Mim, N. A., Akter, N., Tuhin, M. A. A., Hossain, S., Alam, K. E., Mouli, N. J., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2024
+  venue: "International Conference on Environmental Science and Resource Management (ICESRM 2024)"
+  location: "Bangladesh"
+  type: conference
+  subtype: oral
+  categories:
+    - Public Health
+
+- title: "Quantitative Microbial Risk Assessment from Vancomycin-Resistant Enterococcus faecalis and Enterococcus faecium from a Specific Neighborhood in Dhaka City, Bangladesh"
+  authors: "Nayeem, M. U., Mrittika, M. A., **Hossain, M. J.**, Azad, A. K., Ferdous, J., Ahmed, S., Sanyal, S. K., & Towhid, S. T."
+  corresponding: false
+  year: 2023
+  venue: "36th Bangladesh Society of Microbiologists Annual Conference"
+  location: "Shahjalal University of Science and Technology, Sylhet, Bangladesh"
+  type: conference
+  subtype: oral
+  categories:
+    - Infectious Disease
+
+- title: "Factors Influencing Heat Stress Risk in Bangladesh"
+  authors: "**Hossain, M. J.**, Habiba, U., Rozario, C., Tuhin, M. L. A., Mabsurah, K., & Uddin, N. F."
+  corresponding: false
+  year: 2023
+  venue: "9th International Public Health Conference, Public Health Foundation at BMRC"
+  location: "Bangladesh"
+  type: conference
+  subtype: oral
+  categories:
+    - Environmental Health
+
+- title: "Monitoring Water-Borne Disease (Vibrio cholerae) Using NASA Earth Observation Data"
+  authors: "**Hossain, M. J.**, Nowshin, N., Momtaj, Yeana, I. Y., & Nohor, N."
+  corresponding: false
+  year: 2023
+  venue: "9th International Public Health Conference, Public Health Foundation at BMRC"
+  location: "Bangladesh"
+  type: conference
+  subtype: oral
+  categories:
+    - Environmental Health
+    - Infectious Disease

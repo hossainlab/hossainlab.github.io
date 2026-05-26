@@ -1,6 +1,0 @@
-_quarto.yml
-docs/
-*.Rproj
-renv.lock
-renv/
-assets/img/
