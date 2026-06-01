@@ -178,14 +178,14 @@ pubs <- get_cv_sheet('pubs') %>%
     number   = ifelse(is.na(number), '', paste0(number, '.')),
     doi      = ifelse(
                is.na(doi), '',
-               paste0('DOI: [', doi, '](', 'https://doi.org/', doi, ')')),
+               paste0('[', doi, '](', 'https://doi.org/', doi, ')')),
+    url_repo = ifelse(is.na(url_repo), '', paste0('[', url_repo, '](', url_repo, ')')),
     year     = paste0("(", year, ")"),
     title    = enquote(title),
-    citation = paste(author, year, title, journal, number, doi)
+    citation = paste(author, year, title, journal, number, doi, url_repo)
   ) %>% 
-  arrange(desc(year))
+  arrange(desc(pub_date))
 ```
-
 
 ```{r}
 #| results: asis
@@ -199,6 +199,7 @@ make_ordered_list_filtered(pubs, "peer_reviewed")
 
 make_ordered_list_filtered(pubs, "gbd")
 ```
+
 
 ## C. Papers Under Review
 
@@ -297,11 +298,9 @@ df <- get_cv_sheet('classes') %>%
     )
 
 df %>%
-    kbl(format = "latex", booktabs = TRUE, escape = FALSE, linesep = "", align = "llccc") %>%
-    kable_styling(latex_options = c("hold_position", "scale_down"), full_width = TRUE) %>%
-    column_spec(1, width = "1.5cm") %>%
-    column_spec(2, width = "6cm") %>%
-    column_spec(4, width = "2cm") %>%
+    kbl(format = "latex", booktabs = TRUE, escape = FALSE, linesep = "") %>%
+    kable_styling(latex_options = "hold_position") %>%
+    column_spec(4, width = "1.8cm") %>%
     column_spec(5, width = "2cm") %>%
     footnote(
         symbol = c(

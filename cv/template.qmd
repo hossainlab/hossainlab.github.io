@@ -1,26 +1,26 @@
 ---
-    format:
-    pdf:
+format:
+  pdf:
     toc: false
-number-sections: false
-colorlinks: true
-documentclass: scrartcl
-papersize: letter
-pdf-engine: xelatex
-fontsize: 10pt
-geometry:
-    - margin=1in
-- heightrounded
-include-in-header:
-    - preamble.tex
+    number-sections: false
+    colorlinks: true
+    documentclass: scrartcl
+    papersize: letter
+    pdf-engine: xelatex
+    fontsize: 10pt
+    geometry:
+      - margin=1in
+      - heightrounded
+    include-in-header:
+      - preamble.tex
 execute:
-    warning: false
-echo: false
-message: false
-eval: true
+  warning: false
+  echo: false
+  message: false
+  eval: true
 ---
 
-    ```{r}
+```{r}
 #| name: setup
 #| include: false
 #| message: false
@@ -226,7 +226,7 @@ pubs <- get_cv_sheet('pubs') %>%
         number   = ifelse(is.na(number), '', paste0(number, '.')),
         doi      = ifelse(
             is.na(doi), '',
-            paste0('DOI: [', doi, '](', 'https://doi.org/', doi, ')')),
+            paste0('[', doi, '](', 'https://doi.org/', doi, ')')),
         url_repo = ifelse(is.na(url_repo), '', paste0('[', url_repo, '](', url_repo, ')')),
         year     = paste0("(", year, ")"),
         title    = enquote(title),
@@ -460,6 +460,8 @@ media %>%
 ## A. Courses Taught at George Washington University
 
 ```{r}
+#| results: asis
+
 df <- get_cv_sheet('classes') %>%
     mutate(
         course = paste0(number, ": ", name),
@@ -476,7 +478,8 @@ df <- get_cv_sheet('classes') %>%
     )
 
 df %>%
-    kbl(booktabs = TRUE, escape = FALSE, linesep = "") %>%
+    kbl(format = "latex", booktabs = TRUE, escape = FALSE, linesep = "") %>%
+    kable_styling(latex_options = "hold_position") %>%
     column_spec(4, width = "1.8cm") %>%
     column_spec(5, width = "2cm") %>%
     footnote(

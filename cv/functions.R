@@ -43,13 +43,13 @@ make_bullet_list <- function(x) {
 make_ordered_list_filtered <- function(df, cat) {
   return(df %>%
     filter(category == {{cat}}) %>%
-        mutate(
-            citation = str_replace_all(
-                citation,
-                "\\\\\\*(\\w+),",
-                "\\\\*\\\\underline{\\1},"
-            )
-        ) %>%
+    mutate(
+      citation = str_replace_all(
+        citation,
+        "\\\\\\*(\\w+),",
+        "\\\\*\\\\underline{\\1},"
+      )
+    ) %>%
     pull(citation) %>%
     make_ordered_list()
   )
@@ -80,7 +80,8 @@ make_cv_entries <- function(df, date_col, role_col, inst_col, where_col, details
     # Convert empty strings and "NULL" (list-column artifact) to NA so fill() works
     df <- df %>%
         mutate(across(everything(), ~na_if(., ""))) %>%
-        mutate(across(everything(), ~na_if(., "NULL")))
+        mutate(across(everything(), ~na_if(., "NULL"))) %>%
+        mutate(.row_id = row_number())
 
     # Fill in missing values for grouping
     df_filled <- df %>%
@@ -94,10 +95,11 @@ make_cv_entries <- function(df, date_col, role_col, inst_col, where_col, details
         as_label(enquo(where_col))
     )
 
-    # Group and nest details
+    # Group and nest details, preserving original sheet order
     df_nested <- df_filled %>%
         group_by(across(all_of(group_cols))) %>%
-        summarize(bullets = list({{details_col}}), .groups = "drop")
+        summarize(bullets = list({{details_col}}), .row_id = min(.row_id), .groups = "drop") %>%
+        arrange(.row_id)
 
     # Generate LaTeX code
     entries <- df_nested %>%

@@ -72,7 +72,7 @@ pubs <- get_cv_sheet('pubs') %>%
     number   = ifelse(is.na(number), '', paste0(number, '.')),
     doi      = ifelse(
                is.na(doi), '',
-               paste0('DOI: [', doi, '](', 'https://doi.org/', doi, ')')),
+               paste0('[', doi, '](', 'https://doi.org/', doi, ')')),
     url_repo = ifelse(is.na(url_repo), '', paste0('[', url_repo, '](', url_repo, ')')),
     year     = paste0("(", year, ")"),
     title    = enquote(title),
