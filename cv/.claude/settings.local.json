@@ -4,7 +4,8 @@
       "Bash(quarto render:*)",
       "Bash(ls:*)",
       "Bash(python:*)",
-      "Bash(pip install:*)"
+      "Bash(pip install:*)",
+      "Bash(Get-Content *)"
     ]
   }
 }

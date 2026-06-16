@@ -1,9 +1,35 @@
-# ──────────────────────────────────────────────────────────────────────────────
-# Invited Speaker
-# ──────────────────────────────────────────────────────────────────────────────
-
-- title: "To be added"
-  year: 2025
+- title: "Undergraduate Research - Importance, Benefits, and Challenges"
+  year: 2019
+  venue: "CHIRAL Bangladesh"
+  location: "Dhaka, Bangladesh"
   type: conference
+  subtype: invited
+  categories:
+    - General
+
+- title: "State the Art of Microbial Genome Analysis"
+  year: 2018
+  venue: "Jagannath University"
+  location: "Dhaka, Bangladesh"
+  type: conference
+  subtype: invited
+  categories:
+    - Bioinformatics
+
+- title: "Computational Biology and Bioinformatics Research in Resource-Limited Settings: Strategies, Tools and Opportunities"
+  year: 2015
+  venue: "Jagannath University Higher Study and Research Society"
+  location: "Dhaka, Bangladesh"
+  type: conference
+  subtype: invited
+  categories:
+    - Bioinformatics
+
+- title: "Mastering Biomedical Data Management"
+  year: 2014
+  venue: "IFMSA Bangladesh"
+  location: "Dhaka, Bangladesh"
+  type: conference
+  subtype: invited
   categories:
     - General

@@ -11,7 +11,12 @@
       "Bash(pip install:*)",
       "Bash(pip:*)",
       "WebFetch(domain:deepbioltd.com)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(Start-Sleep -Seconds 2)",
+      "Bash(Invoke-WebRequest http://localhost:8765/publications/ -UseBasicParsing)",
+      "Bash(Select-Object -ExpandProperty StatusCode)",
+      "PowerShell(Start-Process python -ArgumentList \"-m\",\"http.server\",\"8765\",\"--directory\",\"E:\\\\hossainlab.github.io\\\\docs\" -WindowStyle Hidden; Start-Sleep -Seconds 2; \\(Invoke-WebRequest http://localhost:8765/publications/ -UseBasicParsing\\).StatusCode)",
+      "mcp__playwright__browser_snapshot"
     ]
   }
 }

@@ -1,24 +1,10 @@
-# ──────────────────────────────────────────────────────────────────────────────
-# GBD Contributions
-# ──────────────────────────────────────────────────────────────────────────────
-# Fields:
-#   title          – Paper title (required)
-#   authors        – Author string
-#   year           – Publication/Submission year (integer)
-#   journal        – Journal name (for published)
-#   target_journal – Target journal (for under-review)
-#   status         – Status (e.g., Under Review)
-#   doi            – Full DOI / URL
-#   type           – peer-reviewed | under-review
-#   categories     – List of research topics
-# ──────────────────────────────────────────────────────────────────────────────
-
 - title: "Global, regional, and national burden of breast cancer among females, 1990–2023, with forecasts to 2050: a systematic analysis for the Global Burden of Disease Study 2023"
   authors: "GBD 2023 Breast Cancer Collaborators"
   year: 2026
   journal: "The Lancet Oncology"
   doi: "https://doi.org/10.1016/S1470-2045(25)00730-2"
   type: peer-reviewed
+  subtype: gbd
   categories:
     - Global Health
 
@@ -28,6 +14,7 @@
   journal: "The Lancet Neurology"
   doi: "https://doi.org/10.1016/S1474-4422(25)00402-8"
   type: peer-reviewed
+  subtype: gbd
   categories:
     - Global Health
 
@@ -37,6 +24,7 @@
   journal: "The Lancet"
   doi: "https://doi.org/10.1016/S0140-6736(25)01037-2"
   type: peer-reviewed
+  subtype: gbd
   categories:
     - Global Health
 
@@ -46,6 +34,7 @@
   target_journal: "BMC Medicine"
   status: "Under Review"
   type: under-review
+  subtype: gbd
   categories:
     - Global Health
 
@@ -55,6 +44,7 @@
   target_journal: "The Lancet Infectious Diseases"
   status: "Under Review"
   type: under-review
+  subtype: gbd
   categories:
     - Global Health
     - Infectious Disease
@@ -65,6 +55,7 @@
   target_journal: "Under Review"
   status: "Under Review"
   type: under-review
+  subtype: gbd
   categories:
     - Global Health
 
@@ -74,5 +65,6 @@
   target_journal: "Under Review"
   status: "Under Review"
   type: under-review
+  subtype: gbd
   categories:
     - Global Health

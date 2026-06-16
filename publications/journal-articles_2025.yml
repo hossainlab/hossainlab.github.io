@@ -1,0 +1,71 @@
+- title: "A meta-analysis of public RNA-Seq data identifies conserved stress responses in rainbow trout"
+  authors: "Bari, S. M., Fuad, M., **Hossain, M. J.**, Ahammad, I., Begum, M., & Helal, M. M. U."
+  corresponding: false
+  year: 2025
+  journal: "BMC Genomics"
+  volume: "26"
+  article: "999"
+  doi: "https://doi.org/10.1186/s12864-025-12127-2"
+  type: peer-reviewed
+  categories:
+    - Bioinformatics
+
+- title: "Comprehensive bioinformatics analysis reveals prognostic significance and immunological roles of WNT gene family in breast cancer"
+  authors: "Fariha, F. T. J., Fuad, M., Saha, C. S., Hossen, S., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2025
+  journal: "Scientific Reports"
+  volume: "15"
+  article: "34490"
+  doi: "https://doi.org/10.1038/s41598-025-13315-6"
+  type: peer-reviewed
+  categories:
+    - Bioinformatics
+
+- title: "Preventing the silent threat: A perspective on preparing Bangladesh for Human Metapneumovirus (HMPV)"
+  authors: "**Hossain, M. J.**, Sony, S. A., Fariha, F. T. J., & Hossen, S."
+  corresponding: true
+  year: 2025
+  journal: "Health Science Reports"
+  volume: "8"
+  article: "e71101"
+  doi: "https://doi.org/10.1002/hsr2.71101"
+  type: peer-reviewed
+  categories:
+    - Infectious Disease
+
+- title: "Pan-cancer analysis reveals immunological and prognostic significance of CCT5 in human tumors"
+  authors: "Ahmed, M. Z., Billah, M. M., Ferdous, J., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2025
+  journal: "Scientific Reports"
+  volume: "15"
+  article: "14405"
+  doi: "https://doi.org/10.1038/s41598-025-88339-z"
+  type: peer-reviewed
+  categories:
+    - Bioinformatics
+
+- title: "Young stroke in Bangladesh: Addressing rare cases with diagnostic challenges"
+  authors: "Das, M., & **Hossain, M. J.**"
+  corresponding: false
+  year: 2025
+  journal: "Stroke and Vascular Neurology"
+  article: "svn-2025-004178"
+  doi: "https://doi.org/10.1136/svn-2025-004178"
+  type: peer-reviewed
+  categories:
+    - Global Health
+
+- title: "Clinical and hematological manifestation of dengue patients in 2022 outbreak"
+  authors: "**Hossain, M. J.**, Das, M., Shahjahan, M., Islam, M. W., & Towhid, S. T."
+  corresponding: true
+  year: 2025
+  journal: "Health Science Reports"
+  volume: "8"
+  article: "e70356"
+  doi: "https://doi.org/10.1002/hsr2.70356"
+  type: peer-reviewed
+  categories:
+    - Global Health
+    - Infectious Disease

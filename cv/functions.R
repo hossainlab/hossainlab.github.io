@@ -128,10 +128,10 @@ make_cv_entries <- function(df, date_col, role_col, inst_col, where_col, details
             date_text <- if (!is.na({{date_col}})) {{date_col}} else ""
 
             paste0(
-                "\\noindent\\begin{tabular*}{\\linewidth}{@{}l@{\\extracolsep{\\fill}}r@{}}\n",
-                role_text, " & ", where_text, " \\\\\n",
-                inst_text, " & ", date_text, " \\\\\n",
-                "\\end{tabular*}\n",
+                "\\noindent\\begin{minipage}{\\linewidth}\n",
+                role_text, "\\hfill ", where_text, "\\\\\n",
+                inst_text, "\\hfill ", date_text, "\n",
+                "\\end{minipage}\n",
                 if (bullet_latex != "") paste0(bullet_latex, "\n") else "",
                 "\\vspace{5pt}\n"
             )

@@ -5,8 +5,12 @@ title-block-banner: true
 page-layout: full
 listing:
   - id: publications
-    contents: 
-      - journal-articles.yml
+    contents:
+      - journal-articles_2026.yml
+      - journal-articles_2025.yml
+      - journal-articles_2024.yml
+      - journal-articles_2023.yml
+      - journal-articles_2022.yml
       - gbd-contributions.yml
       - under-review.yml
       - working-papers.yml

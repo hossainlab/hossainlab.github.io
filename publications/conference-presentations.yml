@@ -1,17 +1,14 @@
-# ──────────────────────────────────────────────────────────────────────────────
-# Conference Presentations
-# ──────────────────────────────────────────────────────────────────────────────
-# Fields:
-#   title          – Presentation title (required)
-#   authors        – Author string; wrap "**Name**" to bold your name
-#   corresponding  – true if you are the corresponding author
-#   year           – Presentation year (integer)
-#   venue          – Conference name
-#   location       – City, Country
-#   subtype        – poster | oral
-#   type           – Must be: conference
-#   categories     – List of research topics for filtering
-# ──────────────────────────────────────────────────────────────────────────────
+- title: "Fezf2-Mediated Cortical Development: Multi-Omics Single-Cell Analysis"
+  authors: "**Hossain, M. J.** & Islam, M. M."
+  corresponding: true
+  year: 2026
+  venue: "Network of Young Biotechnologists Bangladesh"
+  location: "Dhaka, Bangladesh"
+  type: conference
+  subtype: oral
+  categories:
+    - Bioinformatics
+    - Neuroscience
 
 - title: "Exploring the Factors Influencing Heat Stress Risks Using the Discomfort Index Method in Bangladesh"
   authors: "Tuhin, M. A. A., Mim, N. A., Akter, N., Jamal, F., Sakib, M. N., Mehjabin, K., & **Hossain, M. J.**"
@@ -35,17 +32,6 @@
   categories:
     - Public Health
 
-- title: "Quantitative Microbial Risk Assessment from Vancomycin-Resistant Enterococcus faecalis and Enterococcus faecium from a Specific Neighborhood in Dhaka City, Bangladesh"
-  authors: "Nayeem, M. U., Mrittika, M. A., **Hossain, M. J.**, Azad, A. K., Ferdous, J., Ahmed, S., Sanyal, S. K., & Towhid, S. T."
-  corresponding: false
-  year: 2023
-  venue: "36th Bangladesh Society of Microbiologists Annual Conference"
-  location: "Shahjalal University of Science and Technology, Sylhet, Bangladesh"
-  type: conference
-  subtype: oral
-  categories:
-    - Infectious Disease
-
 - title: "Factors Influencing Heat Stress Risk in Bangladesh"
   authors: "**Hossain, M. J.**, Habiba, U., Rozario, C., Tuhin, M. L. A., Mabsurah, K., & Uddin, N. F."
   corresponding: false
@@ -68,3 +54,25 @@
   categories:
     - Environmental Health
     - Infectious Disease
+
+- title: "Quantitative Microbial Risk Assessment from Vancomycin-Resistant Enterococcus faecalis and Enterococcus faecium from a Specific Neighborhood in Dhaka City, Bangladesh"
+  authors: "Nayeem, M. U., Mrittika, M. A., **Hossain, M. J.**, Azad, A. K., Ferdous, J., Ahmed, S., Sanyal, S. K., & Towhid, S. T."
+  corresponding: false
+  year: 2019
+  venue: "Bangladesh Society of Microbiologists Annual Conference"
+  location: "Dhaka, Bangladesh"
+  type: conference
+  subtype: oral
+  categories:
+    - Infectious Disease
+
+- title: "Diagnostic and Electrophysiological Features of Hirayama Disease in Young Adult Male: A Case Report"
+  authors: "**Hossain, M. J.** & Das, M."
+  corresponding: true
+  year: 2020
+  venue: "Institute of Epidemiology, Disease Control and Research (IEDCR)"
+  location: "Dhaka, Bangladesh"
+  type: conference
+  subtype: oral
+  categories:
+    - Global Health

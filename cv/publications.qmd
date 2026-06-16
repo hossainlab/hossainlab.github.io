@@ -78,7 +78,7 @@ pubs <- get_cv_sheet('pubs') %>%
     title    = enquote(title),
     citation = paste(author, year, title, journal, number, doi, url_repo)
   ) %>% 
-  arrange(desc(pub_date))
+  arrange(desc(year))
 ```
 
 ```{r}
