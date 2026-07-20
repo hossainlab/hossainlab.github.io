@@ -6,7 +6,7 @@ format:
     colorlinks: true
     documentclass: scrartcl
     papersize: letter
-    pdf-engine: xelatex
+    pdf-engine: lualatex
     fontsize: 11pt
     geometry:
       - margin=1in
@@ -142,11 +142,12 @@ get_cv_sheet('education') %>%
 ```
 
 # Technical Skills 
-- **Programming Languages**: Python, R, Julia, SQL, Bash, JavaScript
-- **Bioinformatics**: Bulk RNA-Seq, Single-Cell RNA-Seq, Spatial Transcriptomics, Multi-omics
-- **Workflow Management & Reproducibility**: Nextflow (DSL2), nf-core, Docker, Singularity, Git, GitHub
-- **AI in Biology**: Scikit-learn, PyTorch, RDkit, DeepChem
-- **HPC & Cluster Computing**: SLURM (sbatch, sarray), Nextflow DSL2 with SLURM executor for scalable reusable pipelines
+- **Programming Languages**: Python, R, Rust, Julia, SQL, Bash, JavaScript
+- **Single-Cell**: Scanpy, scVI-tools, CellHint, CellRank, scVelo, Squidpy, Seurat, scran, scater, monocle3, Slingshot, Harmony, SCTransform, SoupX, DoubletFinder, Scrublet, CellBender, SCENIC, pySCENIC, CellChat, NicheNet, CellPhoneDB, ImmGen, Tabula Muris, Human Cell Atlas, scArches
+- **Bulk RNA-Seq**: Salmon, tximport, Rsubread, Rfastp, DESeq2, edgeR, limma, biomaRt, EnhancedVolcano, ComplexHeatmap, clusterProfiler
+- **Workflow Management & Reproducibility**: Nextflow, nf-core, Docker, Git, GitHub
+- **AI in Biology**: Scikit-learn, PyTorch, RDKit, DeepChem
+- **HPC & Cluster Computing**: SLURM (sbatch, sarray)
 - **Cloud**: AWS S3, Google Cloud Storage for large genomic datasets
 
 
@@ -161,6 +162,23 @@ get_cv_sheet('education') %>%
 - **Programming \& Data Analytics**: Programming in R and Python; exploratory data analysis; data visualization; reproducibility.
 - **Bioinformatics**: Scalable, reproducible computational pipelines for single-cell, spatial, and bulk transcriptomics to elucidate complex disease biology (Bash, Nextflow, Docker).  
 - **AI in Biology**: Applying deep learning frameworks to single-cell genomics data for high-accuracy predictive modeling. 
+
+# Awards
+
+```{r}
+awards <- get_cv_sheet('awards') %>%
+    arrange(desc(date)) %>%
+    mutate(citation = paste0(date, ": ", description, '.'))
+```
+
+```{r}
+#| results: asis
+
+awards %>%
+    filter(category != 'student') %>%
+    pull(citation) %>%
+    make_bullet_list()
+```
 
 # Publications 
 
@@ -208,7 +226,7 @@ make_ordered_list_filtered(pubs, "gbd")
 make_ordered_list_filtered(pubs, "under_review")
 ```
 
-## D. Working Papers
+## D. Manuscript in Preparation 
 
 ```{r}
 #| results: asis
@@ -283,6 +301,8 @@ make_ordered_list_filtered(presentations, "poster")
 
 df <- get_cv_sheet('classes') %>%
     mutate(
+        # escape=FALSE below (needed for $^†$), so escape LaTeX specials here
+        across(c(number, name, level), ~str_replace_all(as.character(.x), "([&%#_])", "\\\\\\1")),
         course = paste0(number, ": ", name),
         num = paste(responses, '/', enrolled),
         score = paste(inst_mean, '/', dept_mean),
@@ -328,6 +348,27 @@ teaching <- get_cv_sheet('teaching') %>%
 #| results: asis
 
 make_ordered_list_filtered(teaching, "workshop")
+```
+
+# Mentoring
+
+```{r}
+#| results: asis
+
+get_cv_sheet('advising') %>%
+  mutate(
+    across(
+      c(name, institution, title),
+      ~str_replace_all(na_if(as.character(.x), "NULL"), "([&%#_])", "\\\\\\1")
+    ),
+    complete = suppressWarnings(as.numeric(as.character(complete))),
+    status  = ifelse(complete %in% 1, 'Completed', 'Ongoing'),
+    project = ifelse(is.na(title), '', paste0(' ', enquote(title), '.')),
+    citation = paste0('**', name, '**, ', institution, '.', project, ' (', status, ')')
+  ) %>%
+  arrange(complete, name) %>%
+  pull(citation) %>%
+  make_ordered_list()
 ```
 
 # Media Coverage

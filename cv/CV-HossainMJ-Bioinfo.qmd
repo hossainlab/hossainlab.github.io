@@ -6,7 +6,7 @@ format:
     colorlinks: true
     documentclass: scrartcl
     papersize: letter
-    pdf-engine: xelatex
+    pdf-engine: lualatex
     fontsize: 11pt
     geometry:
       - margin=1in
@@ -142,11 +142,12 @@ get_cv_sheet('education') %>%
 ```
 
 # Technical Skills 
-- **Programming Languages**: Python, R, Julia, SQL, Bash, JavaScript
-- **Bioinformatics**: Bulk RNA-Seq, Single-Cell RNA-Seq, Spatial Transcriptomics, Multi-omics
-- **Workflow Management & Reproducibility**: Nextflow (DSL2), nf-core, Docker, Singularity, Git, GitHub
-- **AI in Biology**: Scikit-learn, PyTorch, RDkit, DeepChem
-- **HPC & Cluster Computing**: SLURM (sbatch, sarray), Nextflow DSL2 with SLURM executor for scalable reusable pipelines
+- **Programming Languages**: Python, R, Rust, Julia, SQL, Bash, JavaScript
+- **Single-Cell**: Scanpy, scVI-tools, CellHint, CellRank, scVelo, Squidpy, Seurat, scran, scater, monocle3, Slingshot, Harmony, SCTransform, SoupX, DoubletFinder, Scrublet, CellBender, SCENIC, pySCENIC, CellChat, NicheNet, CellPhoneDB, ImmGen, Tabula Muris, Human Cell Atlas, scArches
+- **Bulk RNA-Seq**: Salmon, tximport, Rsubread, Rfastp, DESeq2, edgeR, limma, biomaRt, EnhancedVolcano, ComplexHeatmap, clusterProfiler
+- **Workflow Management & Reproducibility**: Nextflow, nf-core, Docker, Git, GitHub
+- **AI in Biology**: Scikit-learn, PyTorch, RDKit, DeepChem
+- **HPC & Cluster Computing**: SLURM (sbatch, sarray)
 - **Cloud**: AWS S3, Google Cloud Storage for large genomic datasets
 
 
@@ -298,6 +299,7 @@ df <- get_cv_sheet('classes') %>%
     )
 
 df %>%
+    escape_latex_cells() %>%
     kbl(format = "latex", booktabs = TRUE, escape = FALSE, linesep = "") %>%
     kable_styling(latex_options = "hold_position") %>%
     column_spec(4, width = "1.8cm") %>%

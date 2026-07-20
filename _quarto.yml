@@ -25,8 +25,6 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: about/index.qmd
-        text: About
       - text: Research
         menu:
           - href: research/index.qmd
@@ -43,8 +41,6 @@ website:
             text: Videos
       - href: tutorials/index.qmd
         text: Tutorials
-      - href: blog/index.qmd
-        text: Blog
       - href: publications/index.qmd
         text: Publications
       - text: CV

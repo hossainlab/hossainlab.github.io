@@ -16,7 +16,17 @@
       "Bash(Invoke-WebRequest http://localhost:8765/publications/ -UseBasicParsing)",
       "Bash(Select-Object -ExpandProperty StatusCode)",
       "PowerShell(Start-Process python -ArgumentList \"-m\",\"http.server\",\"8765\",\"--directory\",\"E:\\\\hossainlab.github.io\\\\docs\" -WindowStyle Hidden; Start-Sleep -Seconds 2; \\(Invoke-WebRequest http://localhost:8765/publications/ -UseBasicParsing\\).StatusCode)",
-      "mcp__playwright__browser_snapshot"
+      "mcp__playwright__browser_snapshot",
+      "Skill(claude-in-chrome)",
+      "WebFetch(domain:srijitseal.com)",
+      "Bash(quarto --version)",
+      "Bash(python -m http.server 8765)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8765/media-kit/index.html)",
+      "Bash(curl -s -o /dev/null -w \"jpg:%{http_code} \" http://localhost:8765/files/profiles/jubayer.jpg)",
+      "Bash(curl -s -o /dev/null -w \"png:%{http_code}\\\\n\" http://localhost:8765/files/profiles/jubayer.png)",
+      "Bash(pkill -f \"http.server 8765\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8765/media-kit/index.html)",
+      "mcp__playwright__browser_close"
     ]
   }
 }

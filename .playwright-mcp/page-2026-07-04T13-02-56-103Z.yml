@@ -1,0 +1,75 @@
+- generic [active] [ref=e1]:
+  - navigation "main navigation" [ref=e2]:
+    - generic [ref=e5]:
+      - link "Home" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - link "Talks" [ref=e7] [cursor=pointer]:
+        - /url: /#talks
+      - link "Publications" [ref=e8] [cursor=pointer]:
+        - /url: /#publications
+      - link "CV" [ref=e9] [cursor=pointer]:
+        - /url: https://docs.google.com/document/d/e/2PACX-1vS7Iq7mcvPcIWXAFD2nKtHC6ZFMMkOAHUWeYIsdAABvkDMUD-K4NQvUib0o4xc5gAT9qCiO1Q_a7Cqu/pub
+  - main [ref=e10]:
+    - generic [ref=e12]:
+      - complementary [ref=e13]:
+        - img "A portrait of Srijit Seal" [ref=e14]
+        - generic [ref=e15]:
+          - link " Scholar" [ref=e16] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=0WxbtaAAAAAJ
+            - generic [ref=e18]: 
+            - generic [ref=e19]: Scholar
+          - link " GitHub" [ref=e20] [cursor=pointer]:
+            - /url: https://github.com/srijitseal
+            - generic [ref=e22]: 
+            - generic [ref=e23]: GitHub
+          - link " LinkedIn" [ref=e24] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/srijitseal
+            - generic [ref=e26]: 
+            - generic [ref=e27]: LinkedIn
+          - link " Email" [ref=e28] [cursor=pointer]:
+            - /url: mailto:srijit.seal@uu.se
+            - generic [ref=e30]: 
+            - generic [ref=e31]: Email
+      - article [ref=e32]:
+        - paragraph [ref=e33]: Conference organizer resources
+        - heading "Media Kit" [level=1] [ref=e34]
+        - paragraph [ref=e35]: Srijit Seal is Principal Scientist at Human Chemical Company and Visiting Researcher at Uppsala University, working at the interface of machine learning, cheminformatics, Cell Painting, and drug discovery.
+        - generic [ref=e36]:
+          - heading "Short Bio" [level=2] [ref=e37]
+          - paragraph [ref=e38]: Srijit Seal develops machine learning and cheminformatics approaches for small-molecule bioactivity, cellular morphology profiling, and computational toxicology. His research focuses on practical, reproducible modeling workflows that connect chemical structure, image-based profiles, and biological activity.
+        - generic [ref=e39]:
+          - heading "Affiliations" [level=2] [ref=e40]
+          - paragraph [ref=e41]: Principal Scientist, Human Chemical Company
+          - paragraph [ref=e42]: Visiting Researcher, Uppsala University
+        - generic [ref=e43]:
+          - heading "Speaking Topics" [level=2] [ref=e44]
+          - list [ref=e45]:
+            - listitem [ref=e46]: AI/ML for drug discovery and chemical biology
+            - listitem [ref=e47]: Cell Painting and morphology-based profiling
+            - listitem [ref=e48]: Cheminformatics and bioactivity prediction
+            - listitem [ref=e49]: Machine learning for computational toxicology
+            - listitem [ref=e50]: Responsible and reproducible use of AI in scientific workflows
+        - generic [ref=e51]:
+          - heading "Suggested Talk" [level=2] [ref=e52]
+          - paragraph [ref=e53]:
+            - strong [ref=e54]: AI/ML for Drug Discovery and Cellular Profiling
+          - paragraph [ref=e55]: This talk covers practical machine learning workflows for chemistry and cell morphology data, with emphasis on reproducible modeling, bioactivity prediction, and responsible use of AI in early discovery research.
+        - generic [ref=e56]:
+          - heading "Contact" [level=2] [ref=e57]
+          - paragraph [ref=e58]:
+            - link "srijit.seal@uu.se" [ref=e59] [cursor=pointer]:
+              - /url: mailto:srijit.seal@uu.se
+  - contentinfo [ref=e60]:
+    - generic [ref=e62]:
+      - link "" [ref=e63] [cursor=pointer]:
+        - /url: mailto:srijit.seal@uu.se
+        - generic [ref=e64]: 
+      - link "" [ref=e65] [cursor=pointer]:
+        - /url: https://github.com/srijitseal
+        - generic [ref=e66]: 
+      - link "" [ref=e67] [cursor=pointer]:
+        - /url: https://www.linkedin.com/in/srijitseal
+        - generic [ref=e68]: 
+      - link "" [ref=e69] [cursor=pointer]:
+        - /url: https://scholar.google.com/citations?user=0WxbtaAAAAAJ
+        - generic [ref=e70]: 

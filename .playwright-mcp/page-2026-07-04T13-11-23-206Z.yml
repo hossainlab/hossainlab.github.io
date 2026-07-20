@@ -1,0 +1,194 @@
+- generic [active] [ref=f2e1]:
+  - banner [ref=f2e2]:
+    - navigation [ref=f2e3]:
+      - generic [ref=f2e4]:
+        - link "Jubayer Hossain" [ref=f2e6] [cursor=pointer]:
+          - /url: http://localhost:8765/
+        - generic "Search" [ref=f2e7]:
+          - combobox "Search" [ref=f2e8]:
+            - button "Search" [ref=f2e9] [cursor=pointer]:
+              - img [ref=f2e11]
+        - menu "Toggle navigation" [ref=f2e13] [cursor=pointer]
+        - text:        
+  - main [ref=f2e16]:
+    - generic [ref=f2e18]:
+      - complementary [ref=f2e19]:
+        - img "Jubayer Hossain" [ref=f2e20]
+        - generic [ref=f2e21]:
+          - link "⬇ Download headshot" [ref=f2e22] [cursor=pointer]:
+            - /url: http://localhost:8765/files/profiles/jubayer.jpg
+          - link "Full CV (PDF)" [ref=f2e23] [cursor=pointer]:
+            - /url: http://localhost:8765/cv/CV-HossainMJ.pdf
+          - link "Scholar" [ref=f2e24] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=9_K4ekoAAAAJ&hl=en
+          - link "GitHub" [ref=f2e25] [cursor=pointer]:
+            - /url: https://github.com/hossainlab
+          - link "LinkedIn" [ref=f2e26] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/hossainmj
+          - link "Email" [ref=f2e27] [cursor=pointer]:
+            - /url: mailto:contact.jubayerhossain@gmail.com
+      - main [ref=f2e28]:
+        - generic [ref=f2e29]: Conference Organizer & Press Resources
+        - heading "Media Kit" [level=1] [ref=f2e30]
+        - paragraph [ref=f2e31]: Jubayer Hossain is a bioinformatician and founder of DeepBio Limited, working at the interface of machine learning, single-cell genomics, and public-health informatics — building AI-driven workflows for cancer genomics and training researchers across South Asia.
+        - generic [ref=f2e32]:
+          - heading "At a GlanceAnchor" [level=2] [ref=f2e34]:
+            - text: At a Glance
+            - link "Anchor" [ref=f2e35] [cursor=pointer]:
+              - /url: "#at-a-glance"
+              - text: 
+          - generic [ref=f2e36]:
+            - generic [ref=f2e37]:
+              - generic [ref=f2e38]: 3,000+
+              - generic [ref=f2e39]: Researchers Trained
+            - generic [ref=f2e40]:
+              - generic [ref=f2e41]: 20+
+              - generic [ref=f2e42]: Peer-Reviewed Papers
+            - generic [ref=f2e43]:
+              - generic [ref=f2e44]: 40+
+              - generic [ref=f2e45]: Conference Papers
+            - generic [ref=f2e46]:
+              - generic [ref=f2e47]: 500+
+              - generic [ref=f2e48]: Academy Students
+            - generic [ref=f2e49]:
+              - generic [ref=f2e50]: 250+
+              - generic [ref=f2e51]: Genomes Analyzed
+            - generic [ref=f2e52]:
+              - generic [ref=f2e53]: "3"
+              - generic [ref=f2e54]: Ventures Founded
+        - generic [ref=f2e55]:
+          - heading "BiographiesAnchor" [level=2] [ref=f2e57]:
+            - text: Biographies
+            - link "Anchor" [ref=f2e58] [cursor=pointer]:
+              - /url: "#biographies"
+              - text: 
+          - paragraph [ref=f2e59]:
+            - text: Ready-to-use bios in three lengths. Click
+            - emphasis [ref=f2e60]: Copy
+            - text: and paste directly into event pages or introductions.
+          - generic [ref=f2e61]:
+            - generic [ref=f2e62]:
+              - generic [ref=f2e63]: Short · ~50 words
+              - button "Copy" [ref=f2e64] [cursor=pointer]
+            - paragraph [ref=f2e65]: Jubayer Hossain is a bioinformatician and founder of DeepBio Limited, working at the intersection of AI, single-cell genomics, and public-health informatics. His research integrates diverse single-cell datasets into harmonized cell atlases to understand cellular heterogeneity in cancer and disease.
+          - generic [ref=f2e66]:
+            - generic [ref=f2e67]:
+              - generic [ref=f2e68]: Medium · ~100 words
+              - button "Copy" [ref=f2e69] [cursor=pointer]
+            - paragraph [ref=f2e70]: Jubayer Hossain is a bioinformatician, educator, and founder of DeepBio Limited, DeepBio Academy, and CHIRAL Bangladesh. His research applies deep generative modeling (scVI) to integrate publicly available single-cell datasets into harmonized cell atlases, building comprehensive references for cellular heterogeneity in cancer and neurodegenerative disease. Alongside his research, he leads bioinformatics workflows for biomarker discovery and AI-integrated multi-omics infrastructure. As an educator, he has trained more than 3,000 early-career researchers across South Asia in data science and computational biology, and has published 20+ peer-reviewed articles in Q1/Q2 journals.
+          - generic [ref=f2e71]:
+            - generic [ref=f2e72]:
+              - generic [ref=f2e73]: Long · ~180 words
+              - button "Copy" [ref=f2e74] [cursor=pointer]
+            - paragraph [ref=f2e75]: Jubayer Hossain is a bioinformatician, researcher, educator, and entrepreneur working at the interface of machine learning, single-cell genomics, and public-health informatics. He is the Founder and CEO of DeepBio Limited, a Bangladesh-based research startup transforming biological data into solutions for global health, where he leads a team executing scRNA-seq and bulk RNA-seq pipelines for cancer genomics and biomarker discovery. His current research integrates diverse single-cell datasets into a harmonized cell atlas — leveraging publicly available data and deep generative modeling (scVI) to build a comprehensive reference for cellular heterogeneity in health and disease. He is also the founder of DeepBio Academy, an EdTech platform democratizing computational-biology training, and CHIRAL Bangladesh, a non-profit research institute spanning bioinformatics, public health, geospatial health, and AI-healthcare. He has published 20+ peer-reviewed articles and 40+ conference papers, supervised 15+ manuscripts, and trained over 3,000 early-career researchers across South Asia — collaborating with institutions including Michigan State University on biomedical research capacity-building.
+        - generic [ref=f2e76]:
+          - heading "Name & TitleAnchor" [level=2] [ref=f2e78]:
+            - text: Name & Title
+            - link "Anchor" [ref=f2e79] [cursor=pointer]:
+              - /url: "#name-title"
+              - text: 
+          - generic [ref=f2e80]:
+            - generic [ref=f2e81]:
+              - generic [ref=f2e82]: Full name
+              - generic [ref=f2e83]: Jubayer Hossain
+            - generic [ref=f2e84]:
+              - generic [ref=f2e85]: Also known as
+              - generic [ref=f2e86]: Md. Jubayer Hossain
+            - generic [ref=f2e87]:
+              - generic [ref=f2e88]: Preferred title
+              - generic [ref=f2e89]: Bioinformatician & Founder
+            - generic [ref=f2e90]:
+              - generic [ref=f2e91]: Pronouns
+              - generic [ref=f2e92]: He / Him
+            - generic [ref=f2e93]:
+              - generic [ref=f2e94]: Location
+              - generic [ref=f2e95]: Dhaka, Bangladesh
+            - generic [ref=f2e96]:
+              - generic [ref=f2e97]: Website
+              - generic [ref=f2e98]: hossainlab.github.io
+        - generic [ref=f2e99]:
+          - heading "AffiliationsAnchor" [level=2] [ref=f2e101]:
+            - text: Affiliations
+            - link "Anchor" [ref=f2e102] [cursor=pointer]:
+              - /url: "#affiliations"
+              - text: 
+          - list [ref=f2e103]:
+            - listitem [ref=f2e104]:
+              - strong [ref=f2e105]: Founder, CEO & Bioinformatics Scientist
+              - text: ", DeepBio Limited"
+            - listitem [ref=f2e106]:
+              - strong [ref=f2e107]: Founder & Lead Instructor
+              - text: ", DeepBio Academy"
+            - listitem [ref=f2e108]:
+              - strong [ref=f2e109]: Founder & Capacity Building Director
+              - text: ", CHIRAL Bangladesh"
+        - generic [ref=f2e110]:
+          - heading "Speaking TopicsAnchor" [level=2] [ref=f2e112]:
+            - text: Speaking Topics
+            - link "Anchor" [ref=f2e113] [cursor=pointer]:
+              - /url: "#speaking-topics"
+              - text: 
+          - list [ref=f2e114]:
+            - listitem [ref=f2e115]: Single-cell genomics and harmonized cell atlases (scVI, scRNA-seq)
+            - listitem [ref=f2e116]: AI and machine learning for drug discovery and biomarker analysis
+            - listitem [ref=f2e117]: Reproducible bioinformatics workflows for cancer genomics
+            - listitem [ref=f2e118]: Building research capacity and computational-biology education in South Asia
+            - listitem [ref=f2e119]: No-code and agentic AI for life-sciences research
+        - generic [ref=f2e120]:
+          - heading "Suggested TalkAnchor" [level=2] [ref=f2e122]:
+            - text: Suggested Talk
+            - link "Anchor" [ref=f2e123] [cursor=pointer]:
+              - /url: "#suggested-talk"
+              - text: 
+          - paragraph [ref=f2e124]:
+            - strong [ref=f2e125]: "From Single Cells to a Harmonized Atlas: AI-Driven Cancer Genomics."
+            - text: This talk covers practical, reproducible workflows for integrating public single-cell datasets with deep generative modeling — mapping cellular heterogeneity in cancer and disease, and the infrastructure needed to scale multi-omics analysis in resource-limited settings.
+        - generic [ref=f2e126]:
+          - heading "HeadshotsAnchor" [level=2] [ref=f2e128]:
+            - text: Headshots
+            - link "Anchor" [ref=f2e129] [cursor=pointer]:
+              - /url: "#headshots"
+              - text: 
+          - paragraph [ref=f2e130]: Free to use for press, event, and promotional purposes with attribution.
+          - generic [ref=f2e131]:
+            - figure "Primary · JPG Download" [ref=f2e132]:
+              - img "Colour headshot" [ref=f2e133]
+              - generic [ref=f2e134]:
+                - generic [ref=f2e135]: Primary · JPG
+                - link "Download" [ref=f2e136] [cursor=pointer]:
+                  - /url: http://localhost:8765/files/profiles/jubayer.jpg
+            - figure "Alternate · PNG Download" [ref=f2e137]:
+              - img "Alternate PNG" [ref=f2e138]
+              - generic [ref=f2e139]:
+                - generic [ref=f2e140]: Alternate · PNG
+                - link "Download" [ref=f2e141] [cursor=pointer]:
+                  - /url: http://localhost:8765/files/profiles/jubayer.png
+        - generic [ref=f2e142]:
+          - heading "ContactAnchor" [level=2] [ref=f2e144]:
+            - text: Contact
+            - link "Anchor" [ref=f2e145] [cursor=pointer]:
+              - /url: "#contact"
+              - text: 
+          - list [ref=f2e146]:
+            - listitem [ref=f2e147]:
+              - generic [ref=f2e148]: Email
+              - link "contact.jubayerhossain@gmail.com" [ref=f2e149] [cursor=pointer]:
+                - /url: mailto:contact.jubayerhossain@gmail.com
+            - listitem [ref=f2e150]:
+              - generic [ref=f2e151]: LinkedIn
+              - link "/in/hossainmj" [ref=f2e152] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/hossainmj
+            - listitem [ref=f2e153]:
+              - generic [ref=f2e154]: GitHub
+              - link "@hossainlab" [ref=f2e155] [cursor=pointer]:
+                - /url: https://github.com/hossainlab
+            - listitem [ref=f2e156]:
+              - generic [ref=f2e157]: X / Twitter
+              - link "@hossain_lab" [ref=f2e158] [cursor=pointer]:
+                - /url: https://twitter.com/hossain_lab
+            - listitem [ref=f2e159]:
+              - generic [ref=f2e160]: YouTube
+              - link "@hossainlab" [ref=f2e161] [cursor=pointer]:
+                - /url: https://www.youtube.com/@hossainlab
+  - contentinfo [ref=f2e162]:
+    - paragraph [ref=f2e166]: © Copyright 2026, Jubayer Hossain

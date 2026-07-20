@@ -210,6 +210,23 @@
     - RDKit
 
 - path:
+  title: "NextGen Drug Discovery with AI"
+  image: "../files/courses/nextgen-drug-discovery.svg"
+  image-alt: "NextGen Drug Discovery with AI"
+  description: "A program on AI-driven drug discovery, covering how machine learning and generative AI accelerate target identification, molecule design, and virtual screening in modern pharmaceutical research."
+  categories:
+    - Machine Learning
+    - Drug Discovery
+  tags:
+    - AI
+    - Drug Discovery
+    - Cheminformatics
+  links:
+    - label: "Program Website"
+      url: "https://deepbioacademy.github.io/"
+      icon: "fa-solid fa-arrow-up-right-from-square"
+
+- path:
   title: "Data Science and Machine Learning for Biologists"
   image: "../files/courses/ml-ds-biologists.svg"
   image-alt: "Data Science and Machine Learning for Biologists"

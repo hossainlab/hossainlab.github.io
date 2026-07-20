@@ -59,8 +59,40 @@ na_to_space <- function(x) {
   return(ifelse(is.na(x), '', x))
 }
 
+# Sheet date cells come back as a list-column of mixed types: real dates, bare
+# years, text like "Present" or "December, 2025", empty cells (NULL), and
+# occasionally an epoch-seconds serial. Normalize all of those to "Mon YYYY"
+# (bare years and free text pass through unchanged), or NA.
+fmt_when <- function(x) {
+  sapply(x, function(v) {
+    if (is.null(v) || length(v) == 0) return(NA_character_)
+    v <- v[[1]]
+    if (inherits(v, c('Date', 'POSIXct'))) return(format(as.Date(v), '%b %Y'))
+    s <- as.character(v)
+    if (is.na(s) || s %in% c('', 'NULL', 'NA')) return(NA_character_)
+    n <- suppressWarnings(as.numeric(s))
+    if (!is.na(n) && n > 10000) {
+      return(format(as.Date(as.POSIXct(n, origin = '1970-01-01', tz = 'UTC')), '%b %Y'))
+    }
+    if (!is.na(n)) return(format(round(n)))
+    p <- suppressWarnings(lubridate::my(s, quiet = TRUE))
+    if (!is.na(p)) return(format(p, '%b %Y'))
+    return(s)
+  }, USE.NAMES = FALSE)
+}
+
 enquote <- function(x) {
   return(paste0('"', x, '"'))
+}
+
+# Tables are rendered with kbl(escape = FALSE) so the $^†$ superscript survives,
+# which means LaTeX specials arriving from the sheet must be escaped by hand.
+escape_latex_cells <- function(df) {
+  df %>%
+    mutate(across(everything(), as.character)) %>%
+    mutate(across(everything(), ~str_replace_all(., "&", "\\\\&"))) %>%
+    mutate(across(everything(), ~str_replace_all(., "%", "\\\\%"))) %>%
+    mutate(across(everything(), ~str_replace_all(., "#", "\\\\#")))
 }
 
 library(tidyr)

@@ -6,7 +6,7 @@ format:
     colorlinks: true
     documentclass: scrartcl
     papersize: letter
-    pdf-engine: xelatex
+    pdf-engine: lualatex
     fontsize: 10pt
     geometry:
       - margin=1in
@@ -103,7 +103,7 @@ make_ordered_list_filtered(pubs, "gbd")
 make_ordered_list_filtered(pubs, "under_review")
 ```
 
-## D. Working Papers
+## D. Manuscript in Preparation
 
 ```{r}
 #| results: asis

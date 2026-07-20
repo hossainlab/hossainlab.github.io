@@ -47,6 +47,7 @@ about:
   <div class="program-tabs">
     <button class="tab-btn active" data-id="bmp" onclick="showProgram('bmp')">Research (BMP)</button>
     <button class="tab-btn" data-id="nocode" onclick="showProgram('nocode')">AI (No-Code)</button>
+    <button class="tab-btn" data-id="drugai" onclick="showProgram('drugai')">Drug Discovery AI</button>
   </div>
 
   <div id="bmp-content" class="program-content active">
@@ -67,6 +68,16 @@ about:
       <span>🤖 LLMs & Agents</span>
     </div>
     <a href="https://mdjubayerhossain.com/NoCodeAI4LS/" target="_blank" class="program-link">Join the Revolution &rarr;</a>
+  </div>
+
+  <div id="drugai-content" class="program-content">
+    <h4>NextGen Drug Discovery with AI</h4>
+    <p>Learn how <strong>AI and machine learning</strong> accelerate target ID, molecule design, and virtual screening.</p>
+    <div class="program-meta">
+      <span>🧬 Drug Discovery</span>
+      <span>🤖 AI/ML</span>
+    </div>
+    <a href="https://deepbioacademy.github.io/" target="_blank" class="program-link">Explore Program &rarr;</a>
   </div>
 </div>
 

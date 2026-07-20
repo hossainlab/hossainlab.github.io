@@ -116,6 +116,27 @@
 \usepackage{parskip} % Spacing adjustments
 \usepackage{enumitem} % List customization (nosep, topsep, leftmargin)
 
+% Justified text, no hyphenation, no loose word spacing.
+% Requires LuaLaTeX: microtype font expansion (unavailable in XeTeX) micro-scales
+% glyphs so lines justify without stretching the interword spaces.
+
+% (Quarto's default template already loads microtype, so configure it here
+% rather than re-loading it with options, which would be an option clash.)
+\microtypesetup{
+  protrusion = true,
+  expansion  = true,
+  tracking   = true,
+  factor     = 1100,  % protrusion strength
+  stretch    = 25,    % max glyph expansion (per mille)
+  shrink     = 25     % max glyph shrink
+}
+
+\hyphenpenalty=10000  % No hyphenation
+\exhyphenpenalty=10000
+\tolerance=3000       % Accept slightly looser lines rather than overfull boxes
+\emergencystretch=1em % Last-resort stretch on the final pass only
+\hbadness=10000       % Silence badness warnings
+
 
 % Main font
 
@@ -137,15 +158,6 @@
   BoldItalicFont = Inter_18pt-BoldItalic
 ]
 
-% Chinese font
-
-\usepackage{xeCJK} % For Chinese text
-\setCJKmainfont[Path = ./fonts/]{kaiti.ttf}
-
-% Numbers - different font for digits because Raleway is bad. From here:
-% https://tex.stackexchange.com/a/440174
-
-
 % Header and footer
 
 \usepackage{fancyhdr}
@@ -153,7 +165,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot[L]{\textcolor{gray}{\footnotesize\emph{Updated \today}}}
-\fancyfoot[R]{\textcolor{gray}{\footnotesize\emph{Available at \href{https://mdjubayerhossain.com/}{https://mdjubayerhossain.com/}}}}
+\fancyfoot[R]{\textcolor{gray}{\footnotesize\emph{\href{https://mdjubayerhossain.com/}{https://mdjubayerhossain.com/}}}}
 \fancyfoot[C]{\textcolor{gray}{\footnotesize\emph{Page \thepage\ of \pageref{LastPage}}}}
 \renewcommand{\headrulewidth}{0pt} % Removes the header line
 \renewcommand{\footrulewidth}{0pt} % Removes the footer line
@@ -165,6 +177,13 @@
 \usepackage{color}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+% Long URLs / DOIs must break anywhere: hyphenation is off, so an unbreakable
+% URL would otherwise force a badly-spaced line or an overfull box.
+\makeatletter
+\g@addto@macro\UrlBreaks{\UrlOrds}
+\makeatother
+\Urlmuskip=0mu plus 1mu
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{array}
@@ -173,7 +192,8 @@
 \usepackage{float}
 \usepackage{colortbl}
 \usepackage{pdflscape}
-\usepackage{tabu}
+\usepackage{tabularx}
+\usepackage{xltabular}
 \usepackage{threeparttable}
 \usepackage{threeparttablex}
 \usepackage[normalem]{ulem}
@@ -455,19 +475,25 @@ Child Health Research Foundation (CHRF)\hfill 2023
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Programming Languages}: Python, R, Julia, SQL, Bash,
+  \textbf{Programming Languages}: Python, R, Rust, Julia, SQL, Bash,
   JavaScript
 \item
-  \textbf{Bioinformatics}: Bulk RNA-Seq, Single-Cell RNA-Seq, Spatial
-  Transcriptomics, Multi-omics
+  \textbf{Single-Cell}: Scanpy, scVI-tools, CellHint, CellRank, scVelo,
+  Squidpy, Seurat, scran, scater, monocle3, Slingshot, Harmony,
+  SCTransform, SoupX, DoubletFinder, Scrublet, CellBender, SCENIC,
+  pySCENIC, CellChat, NicheNet, CellPhoneDB, ImmGen, Tabula Muris, Human
+  Cell Atlas, scArches
 \item
-  \textbf{Workflow Management \& Reproducibility}: Nextflow (DSL2),
-  nf-core, Docker, Singularity, Git, GitHub
+  \textbf{Bulk RNA-Seq}: Salmon, tximport, Rsubread, Rfastp, DESeq2,
+  edgeR, limma, biomaRt, EnhancedVolcano, ComplexHeatmap,
+  clusterProfiler
 \item
-  \textbf{AI in Biology}: Scikit-learn, PyTorch, RDkit, DeepChem
+  \textbf{Workflow Management \& Reproducibility}: Nextflow, nf-core,
+  Docker, Git, GitHub
 \item
-  \textbf{HPC \& Cluster Computing}: SLURM (sbatch, sarray), Nextflow
-  DSL2 with SLURM executor for scalable reusable pipelines
+  \textbf{AI in Biology}: Scikit-learn, PyTorch, RDKit, DeepChem
+\item
+  \textbf{HPC \& Cluster Computing}: SLURM (sbatch, sarray)
 \item
   \textbf{Cloud}: AWS S3, Google Cloud Storage for large genomic
   datasets
@@ -522,99 +548,107 @@ corresponding
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
+  *\textbf{Hossain, M. J.}, Afrin Mim, N., Akter, N., Akter Sony, S.,
+  Haque Saikat, E., Al-Amin Hossain, M., Parvin, N., Evan, M. R., Jannat
+  Juma, J., Parmita Roy, P., Islam Maruf, M. F., Islam, R., Labib, A.,
+  Akter Shatabde, Z., Das, M., \& Amanulla, M. (2026) ``Epidemiological
+  Trends, Public Health Challenges, and Strategic Control Priorities of
+  Dengue in Bangladesh (2000---2024): A Narrative Review'' \emph{Health
+  Science Reports}.
+  \href{https://doi.org/http://dx.doi.org/10.1002/hsr2.72747}{http://dx.doi.org/10.1002/hsr2.72747}\\
+\item
   Islam, M. W., Rahman, M. M., Naznin, H., Hossain, M. S., Akter, T.,
   Shatabde, Z. A., \& *\textbf{Hossain, M. J.} (2026) ``Integrative
   Bioinformatics Analysis Reveals COL13A1 and COL23A1 as Potential
   Diagnostic and Prognostic Biomarkers in Thyroid Cancer'' \emph{Health
-  Science Reports}. DOI:
-  \href{https://doi.org/http://dx.doi.org/10.1002/hsr2.72617}{http://dx.doi.org/10.1002/hsr2.72617}
+  Science Reports}.
+  \href{https://doi.org/http://dx.doi.org/10.1002/hsr2.72617}{http://dx.doi.org/10.1002/hsr2.72617}\\
 \item
-  Fariha, F. T. J., Fuad, M., Saha, C. S., Hossen, S., \&
-  *\textbf{Hossain, M. J.} (2025) ``Comprehensive bioinformatics
-  analysis reveals prognostic significance and immunological roles of
-  WNT gene family in breast cancer'' \emph{Scientific Reports}. 15,
-  34490. DOI:
-  \href{https://doi.org/10.1038/s41598-025-13315-6}{10.1038/s41598-025-13315-6}
+  \textbf{Hossain, M. J.}, Towhid, S.T., Sultana, S., Mukta, S.A.,
+  Gulshan, R., Miah, M.S. (2022) ``Knowledge and Attitudes towards
+  Thalassemia among Public University Students'' \emph{Microbial
+  Bioactives}. 5(2).
+  \href{https://doi.org/10.25163/microbbioacts.526325}{10.25163/microbbioacts.526325}\\
 \item
-  Ahmed, M. Z., Billah, M. M., Ferdous, J., \& *\textbf{Hossain, M. J.}
-  (2025) ``Pan-cancer analysis reveals immunological and prognostic
-  significance of CCT5 in human tumors'' \emph{Scientific Reports}. 15,
-  14405. DOI:
-  \href{https://doi.org/10.1038/s41598-025-88339-z}{10.1038/s41598-025-88339-z}
-\item
-  Bari, S. M., Fuad, M., \textbf{Hossain, M. J.}, Ahammad, I., Begum,
-  M., \& Helal, M. M. U. (2025) ``A meta-analysis of public RNA-Seq data
-  identifies conserved stress responses in rainbow trout'' \emph{BMC
-  Genomics}. 26, 999. DOI:
-  \href{https://doi.org/10.1186/s12864-025-12127-2}{10.1186/s12864-025-12127-2}
-\item
-  *\textbf{Hossain, M. J.}, Das, M., Shahjahan, M., Islam, M. W., \&
-  Towhid, S. T. (2025) ``Clinical and hematological manifestation of
-  dengue patients in 2022 outbreak'' \emph{Health Science Reports}. 8,
-  e70356. DOI:
-  \href{https://doi.org/10.1002/hsr2.70356}{10.1002/hsr2.70356}
-\item
-  Das, M., \& \textbf{Hossain, M. J.} (2025) ``Young stroke in
-  Bangladesh: Addressing rare cases with diagnostic challenges''
-  \emph{Stroke and Vascular Neurology}. svn-2025-004178. DOI:
-  \href{https://doi.org/10.1136/svn-2025-004178}{10.1136/svn-2025-004178}
-\item
-  *\textbf{Hossain, M. J.}, Sony, S. A., Fariha, F. T. J., \& Hossen, S.
-  (2025) ``Preventing the silent threat: A perspective on preparing
-  Bangladesh for Human Metapneumovirus'' \emph{Health Science Reports}.
-  8, e71101. DOI:
-  \href{https://doi.org/10.1002/hsr2.71101}{10.1002/hsr2.71101}
-\item
-  Shanta, A. S., Islam, N., Al Asad, M., Akter, K., Habib, M. B.,
-  \textbf{Hossain, M. J.}, Nahar, S., Godman, B., \& Islam, S. (2024)
-  ``Resistance and co-resistance of metallo-beta-lactamase genes in
-  diarrheal and urinary-tract pathogens'' \emph{Microorganisms}. 12(8),
-  1589. DOI:
-  \href{https://doi.org/10.3390/microorganisms12081589}{10.3390/microorganisms12081589}
-\item
-  *\textbf{Hossain, M. J.}, Das, M., \& Munni, U. R. (2024) ``Urgent
-  call for compulsory premarital screening for thalassemia prevention in
-  Bangladesh'' \emph{Orphanet Journal of Rare Diseases}. 19, 326. DOI:
-  \href{https://doi.org/10.1186/s13023-024-03344-1}{10.1186/s13023-024-03344-1}
-\item
-  Islam, M. W., Shahjahan, M., Azad, A. K., \& *\textbf{Hossain, M. J.}
-  (2024) ``Factors contributing to antibiotic misuse among parents in
-  Dhaka City'' \emph{Scientific Reports}. 14, 2318. DOI:
-  \href{https://doi.org/10.1038/s41598-024-52313-y}{10.1038/s41598-024-52313-y}
-\item
-  *\textbf{Hossain, M. J.}, Das, M., Islam, M. W., Shahjahan, M., \&
-  Ferdous, J. (2024) ``Community engagement and social participation in
-  dengue prevention'' \emph{Health Science Reports}. 7, e2022. DOI:
-  \href{https://doi.org/10.1002/hsr2.2022}{10.1002/hsr2.2022}
-\item
-  *\textbf{Hossain, M. J.}, Azad, A. K., Shahid, M. S. B., Shahjahan,
-  M., \& Ferdous, J. (2024) ``Prevalence, antibiotic resistance pattern
-  for bacteriuria from patients with UTIs'' \emph{Health Science
-  Reports}. 7, e2039. DOI:
-  \href{https://doi.org/10.1002/hsr2.2039}{10.1002/hsr2.2039}
-\item
-  Akter, M. M., \& *\textbf{Hossain, M. J.} (2024) ``Food consumption
-  patterns and sedentary behaviors among university students''
-  \emph{Health Science Reports}. 7, e70259. DOI:
-  \href{https://doi.org/10.1002/hsr2.70259}{10.1002/hsr2.70259}
+  Towhid, S.T., \textbf{Hossain, M. J.}, Sammo, M.A.S., \& Akter, S.
+  (2022) ``Perception of Students on Antibiotic Resistance and
+  Prevention'' \emph{Eur. J. Bio. Biotech}. 3(3).
+  \href{https://doi.org/10.24018/ejbio.2022.3.3.341}{10.24018/ejbio.2022.3.3.341}\\
 \item
   *\textbf{Hossain, M. J.}, Islam, M. W., Munni, U. R., Gulshan, R.,
   Mukta, S. A., Miah, M. S., Sultana, S., Karmakar, M., Ferdous, J., \&
   Islam, M. A. (2023) ``Health-related quality of life among thalassemia
   patients in Bangladesh (SF-36)'' \emph{Scientific Reports}. 13(1).
-  DOI:
-  \href{https://doi.org/10.1038/s41598-023-34205-9}{10.1038/s41598-023-34205-9}
+  \href{https://doi.org/10.1038/s41598-023-34205-9}{10.1038/s41598-023-34205-9}\\
 \item
-  Towhid, S.T., \textbf{Hossain, M. J.}, Sammo, M.A.S., \& Akter, S.
-  (2022) ``Perception of Students on Antibiotic Resistance and
-  Prevention'' \emph{Eur. J. Bio. Biotech}. 3(3). DOI:
-  \href{https://doi.org/10.24018/ejbio.2022.3.3.341}{10.24018/ejbio.2022.3.3.341}
+  Akter, M. M., \& *\textbf{Hossain, M. J.} (2024) ``Food consumption
+  patterns and sedentary behaviors among university students''
+  \emph{Health Science Reports}. 7, e70259.
+  \href{https://doi.org/10.1002/hsr2.70259}{10.1002/hsr2.70259}\\
 \item
-  \textbf{Hossain, M. J.}, Towhid, S.T., Sultana, S., Mukta, S.A.,
-  Gulshan, R., Miah, M.S. (2022) ``Knowledge and Attitudes towards
-  Thalassemia among Public University Students'' \emph{Microbial
-  Bioactives}. 5(2). DOI:
-  \href{https://doi.org/10.25163/microbbioacts.526325}{10.25163/microbbioacts.526325}
+  *\textbf{Hossain, M. J.}, Azad, A. K., Shahid, M. S. B., Shahjahan,
+  M., \& Ferdous, J. (2024) ``Prevalence, antibiotic resistance pattern
+  for bacteriuria from patients with UTIs'' \emph{Health Science
+  Reports}. 7, e2039.
+  \href{https://doi.org/10.1002/hsr2.2039}{10.1002/hsr2.2039}\\
+\item
+  *\textbf{Hossain, M. J.}, Das, M., Islam, M. W., Shahjahan, M., \&
+  Ferdous, J. (2024) ``Community engagement and social participation in
+  dengue prevention'' \emph{Health Science Reports}. 7, e2022.
+  \href{https://doi.org/10.1002/hsr2.2022}{10.1002/hsr2.2022}\\
+\item
+  Islam, M. W., Shahjahan, M., Azad, A. K., \& *\textbf{Hossain, M. J.}
+  (2024) ``Factors contributing to antibiotic misuse among parents in
+  Dhaka City'' \emph{Scientific Reports}. 14, 2318.
+  \href{https://doi.org/10.1038/s41598-024-52313-y}{10.1038/s41598-024-52313-y}\\
+\item
+  *\textbf{Hossain, M. J.}, Das, M., \& Munni, U. R. (2024) ``Urgent
+  call for compulsory premarital screening for thalassemia prevention in
+  Bangladesh'' \emph{Orphanet Journal of Rare Diseases}. 19, 326.
+  \href{https://doi.org/10.1186/s13023-024-03344-1}{10.1186/s13023-024-03344-1}\\
+\item
+  *\textbf{Hossain, M. J.}, Sony, S. A., Fariha, F. T. J., \& Hossen, S.
+  (2025) ``Preventing the silent threat: A perspective on preparing
+  Bangladesh for Human Metapneumovirus'' \emph{Health Science Reports}.
+  8, e71101.
+  \href{https://doi.org/10.1002/hsr2.71101}{10.1002/hsr2.71101}\\
+\item
+  Das, M., \& \textbf{Hossain, M. J.} (2025) ``Young stroke in
+  Bangladesh: Addressing rare cases with diagnostic challenges''
+  \emph{Stroke and Vascular Neurology}. svn-2025-004178.
+  \href{https://doi.org/10.1136/svn-2025-004178}{10.1136/svn-2025-004178}\\
+\item
+  *\textbf{Hossain, M. J.}, Das, M., Shahjahan, M., Islam, M. W., \&
+  Towhid, S. T. (2025) ``Clinical and hematological manifestation of
+  dengue patients in 2022 outbreak'' \emph{Health Science Reports}. 8,
+  e70356.
+  \href{https://doi.org/10.1002/hsr2.70356}{10.1002/hsr2.70356}\\
+\item
+  Shanta, A. S., Islam, N., Al Asad, M., Akter, K., Habib, M. B.,
+  \textbf{Hossain, M. J.}, Nahar, S., Godman, B., \& Islam, S. (2024)
+  ``Resistance and co-resistance of metallo-beta-lactamase genes in
+  diarrheal and urinary-tract pathogens'' \emph{Microorganisms}. 12(8),
+  1589.
+  \href{https://doi.org/10.3390/microorganisms12081589}{10.3390/microorganisms12081589}\\
+\item
+  Bari, S. M., Fuad, M., \textbf{Hossain, M. J.}, Ahammad, I., Begum,
+  M., \& Helal, M. M. U. (2025) ``A meta-analysis of public RNA-Seq data
+  identifies conserved stress responses in rainbow trout'' \emph{BMC
+  Genomics}. 26, 999.
+  \href{https://doi.org/10.1186/s12864-025-12127-2}{10.1186/s12864-025-12127-2}\\
+\item
+  Ahmed, M. Z., Billah, M. M., Ferdous, J., \& *\textbf{Hossain, M. J.}
+  (2025) ``Pan-cancer analysis reveals immunological and prognostic
+  significance of CCT5 in human tumors'' \emph{Scientific Reports}. 15,
+  14405.
+  \href{https://doi.org/10.1038/s41598-025-88339-z}{10.1038/s41598-025-88339-z}\\
+\item
+  Fariha, F. T. J., Fuad, M., Saha, C. S., Hossen, S., \&
+  *\textbf{Hossain, M. J.} (2025) ``Comprehensive bioinformatics
+  analysis reveals prognostic significance and immunological roles of
+  WNT gene family in breast cancer'' \emph{Scientific Reports}. 15,
+  34490.
+  \href{https://doi.org/10.1038/s41598-025-13315-6}{10.1038/s41598-025-13315-6}
 \end{enumerate}
 
 \subsection{B. GBD Contributions}\label{b.-gbd-contributions}
@@ -623,40 +657,40 @@ corresponding
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  GBD 2023 Breast Cancer Collaborators (2026) ``Global, regional, and
-  national burden of breast cancer among females, 1990--2023, with
-  forecasts to 2050: a systematic analysis for the Global Burden of
-  Disease Study 2023'' \emph{The Lancet Oncology}. DOI:
-  \href{https://doi.org/https://doi.org/10.1016/S1470-2045(25)00730-2}{https://doi.org/10.1016/S1470-2045(25)00730-2}
+  GBD 2023 TB HIV Collaborators (2026) ``Global, regional, and national
+  burden of tuberculosis and multidrug-resistant tuberculosis by HIV
+  status, 1990--2023: a systematic analysis for the Global Burden of
+  Disease Study 2023'' \emph{The Lancet Infectious Diseases}.
+  \href{https://doi.org/https://doi.org/10.1016/S1473-3099(26)00295-1}{https://doi.org/10.1016/S1473-3099(26)00295-1}\\
 \item
   GBD 2023 Mental Disorder Collaborators (2026) ``Updated trends in the
   global prevalence and burden of mental disorders, 1990--2023: a
   systematic analysis for the Global Burden of Disease Study 2023''
-  \emph{The Lancet}. DOI:
-  \href{https://doi.org/https://doi.org/10.1016/S0140-6736(26)00519-2}{https://doi.org/10.1016/S0140-6736(26)00519-2}
+  \emph{The Lancet}.
+  \href{https://doi.org/https://doi.org/10.1016/S0140-6736(26)00519-2}{https://doi.org/10.1016/S0140-6736(26)00519-2}\\
 \item
-  GBD 2023 Vaccine Coverage Collaborators (2025) ``Global, regional, and
-  national trends in routine childhood vaccination coverage from 1980 to
-  2023 with forecasts to 2030: A systematic analysis for the Global
-  Burden of Disease Study 2023'' \emph{The Lancet}. DOI:
-  \href{https://doi.org/https://doi.org/10.1016/S0140-6736(25)01037-2}{https://doi.org/10.1016/S0140-6736(25)01037-2}
+  GBD 2023 Breast Cancer Collaborators (2026) ``Global, regional, and
+  national burden of breast cancer among females, 1990--2023, with
+  forecasts to 2050: a systematic analysis for the Global Burden of
+  Disease Study 2023'' \emph{The Lancet Oncology}.
+  \href{https://doi.org/https://doi.org/10.1016/S1470-2045(25)00730-2}{https://doi.org/10.1016/S1470-2045(25)00730-2}\\
 \item
   GBD 2023 Headache Collaborators (2025) ``Global, regional, and
   national burden of headache disorders, 1990--2023: a systematic
   analysis for the Global Burden of Disease Study 2023'' \emph{The
-  Lancet Neurology}. DOI:
-  \href{https://doi.org/https://doi.org/10.1016/S1474-4422(25)00402-8}{https://doi.org/10.1016/S1474-4422(25)00402-8}
+  Lancet Neurology}.
+  \href{https://doi.org/https://doi.org/10.1016/S1474-4422(25)00402-8}{https://doi.org/10.1016/S1474-4422(25)00402-8}\\
+\item
+  GBD 2023 Vaccine Coverage Collaborators (2025) ``Global, regional, and
+  national trends in routine childhood vaccination coverage from 1980 to
+  2023 with forecasts to 2030: A systematic analysis for the Global
+  Burden of Disease Study 2023'' \emph{The Lancet}.
+  \href{https://doi.org/https://doi.org/10.1016/S0140-6736(25)01037-2}{https://doi.org/10.1016/S0140-6736(25)01037-2}\\
 \item
   GBD 2021 Musculoskeletal Disorders and COVID-19 Collaborators (2025)
   ``Global, regional, and national burden and trend of adult
   musculoskeletal disorders and discrepancy between pre-pandemic and
   pandemic of COVID-19'' \emph{BMC Medicine (Under Review)}.\\
-\item
-  GBD 2023 TB Collaborators (2025) ``Global, regional, and national
-  burden of tuberculosis and multidrug-resistant tuberculosis by HIV
-  status, 1990--2023: a systematic analysis for the Global Burden of
-  Disease Study 2023'' \emph{The Lancet Infectious Diseases (Under
-  Review)}.\\
 \item
   GBD 2023 Type 1 Diabetes Collaborators (2025) ``The global burden of
   type 1 diabetes: a systematic analysis for the Global Burden of
@@ -679,8 +713,8 @@ corresponding
   S., Sraboni, S. A., \& *\textbf{Hossain, M. J.} (2026) ``Computational
   identification of Taxus baccata-derived phytochemicals targeting EZH2
   to overcome therapeutic resistance in melanoma'' \emph{Scientific
-  Reports}. DOI:
-  \href{https://doi.org/https://doi.org/10.21203/rs.3.rs-8494315/v1}{https://doi.org/10.21203/rs.3.rs-8494315/v1}
+  Reports}.
+  \href{https://doi.org/https://doi.org/10.21203/rs.3.rs-8494315/v1}{https://doi.org/10.21203/rs.3.rs-8494315/v1}\\
 \item
   Islam, M. W., Fariha, F. T. J., Ahmed, M. Z., Ferdous, J., Lota, H.
   B., Hossain, M. S., Kundu, P., Shahjahan, M., \& *\textbf{Hossain, M.
@@ -691,7 +725,7 @@ corresponding
   Billah, M. M., Mabsurah, K., Ahammad, K., Yeana, I. J., Sumaiya, M.,
   Islam, T., Bhattacharjee, A., Ferdous, J., \& *\textbf{Hossain, M. J.}
   (2025) ``Multi-omics pan-cancer analysis reveals an immunological role
-  and prognostic potential of WDR76'' \emph{Discover Oncology}.\\
+  and prognostic potential of WDR76'' \emph{BMC Genomics}.\\
 \item
   Sony, S. A., Kundu, L. R., Limon, M. H., Chowdhury, T. B. K., \& \&
   *\textbf{Hossain, M. J.} (2025) ``Predicting early antenatal care
@@ -703,18 +737,7 @@ corresponding
   Towhid, ST., Sheikh, MK., Hasan, MM., Rahman, MH., Sazid, MS. (2025)
   ``Lack of knowledge and training about antibiotic resistance among
   community pharmacists in Bangladesh: a cross-sectional study''
-  \emph{Health Science Reports}.\\
-\item
-  Billah, M. M., Mabsurah, K., Ahammad, K., Yeana, I. J., Sumaiya, M.,
-  Islam, T., Bhattacharjee, A., Ferdous, J., \& *\textbf{Hossain, M. J.}
-  (2025) ``Multi-omics pan-cancer analysis reveals an immunological role
-  and prognostic potential of WDR76''\\
-\item
-  *\textbf{Hossain, M. J.}, Shahariar, M., Barsha, L. H. J., Shahjahan,
-  M., Towhid, S. T., Sheikh, M. K., Hasan, M. M., Rahman, M. H., \&
-  Sazid, M. S. (2024) ``Lack of knowledge and training about antibiotic
-  resistance among community pharmacists in Bangladesh: A
-  cross-sectional study'' \emph{Health Science Reports}.
+  \emph{Health Science Reports}.
 \end{enumerate}
 
 \subsection{D. Working Papers}\label{d.-working-papers}
@@ -723,27 +746,40 @@ corresponding
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  \textbf{Hossain, M. J.}, Dev, P.C. (NA) ``EWSAtlas: A Harmonized
-  Single-Cell Transcriptomics Atlas of Human Ewing sarcoma''\\
-\item
   \textbf{Hossain, M. J.}, Dev, P.C. (2026) ``Fezf2-mediated cortical
-  development: Multi-omics analysis'' \emph{Working Paper}.\\
+  development: Multi-omics analysis'' \emph{Working Paper}.
+  \url{https://github.com/hossainlab/fezf2-multiomics}
 \item
   \textbf{Hossain, M. J.}, Dev, P.C. (2026) ``Sex as a Biological
-  Variable in the Human PBMC Immune Landscape'' \emph{Working Paper}.\\
+  Variable in the Human PBMC Immune Landscape'' \emph{Working Paper}.
+  \url{https://github.com/hossainlab/pmc_immune_landscape}
+\item
+  \textbf{Hossain, M. J.}, Dev, P.C. (2026) ``EWSAtlas: A Harmonized
+  Single-Cell Transcriptomics Atlas of Human Ewing sarcoma''
+  \emph{Working Paper}. \url{https://github.com/hossainlab/EWSAtlas}
 \item
   \textbf{Hossain, M. J.}, Dev, P.C., \& Shahariar, M. (2026) ``Deep
-  Learning-Driven AMR Drug Repurposing'' \emph{Working Paper}.\\
+  Learning-Driven AMR Drug Repurposing'' \emph{Working Paper}.
+  \url{https://github.com/hossainlab/amr_drug_repurposing}
 \item
   \textbf{Hossain, M. J.} (2026) ``DeepAMR: AI-powered antimicrobial
-  resistance prediction from genomic data'' \emph{Working Paper}.\\
+  resistance prediction from genomic data'' \emph{Working Paper}.
+  \url{https://github.com/hossainlab/DeepAMR}
 \item
   \textbf{Hossain, M. J.}, **\underline{Tabassum}, R.,
   **\underline{Ahmad}, F., **\underline{Ahamed}, M. S.,
-  **\underline{Aditee}, L. M., Fuad, M., Shahjahan, M. (2025) ``The
-  Pan-Cancer Consensus Transcriptome (PCCT): A Multi-Layered
-  Meta-Analysis and Machine Learning Framework for Cross-Platform
-  Biomarker Discovery'' \emph{Working Paper}.
+  **\underline{Aditee}, L. M., Fuad, M., Shahjahan, M. (2025)
+  ``Conserved transcriptional dysregulation with divergent prognostic
+  consequence across five gastrointestinal and genitourinary cancers''
+  \emph{Working Paper}.
+  \url{https://github.com/gsabioinfointernship/Pancreatic_Cancer_Meta_Analysis/}
+\item
+  \textbf{Hossain, M. J.}, Ahmed, E., Shafin, R. H., Islam, J.,
+  Chowdhury, M. H., Ali, M. L., Dewanjee, S., \& Hosain, M. M. (2026)
+  ``Multi-Cohort Transcriptomic Meta-Analysis of Glioblastoma Reveals a
+  Convergent Immune-Myeloid Hub Network Associated with Adverse
+  Prognosis and Druggable Targets'' \emph{Working Paper}.
+  \url{https://github.com/hossainlab/GBM-Transcriptomic-MetaAnalysis}
 \end{enumerate}
 
 \section{Presentations}\label{presentations}
@@ -829,8 +865,9 @@ Presentations}\label{b.-conference-presentations}
 
 \subsection{A. Courses Taught}\label{a.-courses-taught}
 
-\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
-\begin{tabu} to \linewidth {>{\raggedright\arraybackslash}p{1.5cm}>{\raggedright\arraybackslash}p{6cm}>{\centering}X>{\centering\arraybackslash}p{2cm}>{\centering\arraybackslash}p{2cm}}
+\begin{table}[!h]
+\centering
+\begin{tabular}[t]{lll>{\raggedright\arraybackslash}p{1.8cm}>{\raggedright\arraybackslash}p{2cm}}
 \toprule
 Cohort. & Course & Level & N. Resp. / N. Enrolled & Instr. FCE* / Dept Mean\\
 \midrule
@@ -841,15 +878,26 @@ C03 & scRNASeq101: Single-Cell for Absolute Beginners & Ugrad & 15 / 21 & 4.9 / 
 C01 & CCG101: Computational Cancer Genomics & Ugrad & 13 / 22 & 5 / 4.4\\
 C01 & NGS101: NGS Data Analysis for Absolute Beginners & Mixed & 18 / 21 & 4.9 / 4.4\\
 C01 & CN101: Computational Neurogenomics & Mixed & 24 / 32 & 4.9 / 4.4\\
+C01 & NA: No-Code & Agentic AI for Life Sciences & Mixed & 23 / 20 & 4.9 / 4.4\\
+C01 & NA: No Code AI for Computational Biology & NA & NA / NA & NA / NA\\
 \bottomrule
 \multicolumn{5}{l}{\rule{0pt}{1em}\textsuperscript{*} Faculty Course Evaluations (FCE) are scored by students (1 = worst, 5 = best).}\\
-\end{tabu}}
+\end{tabular}
+\end{table}
 
 \subsection{B. Workshops}\label{b.-workshops}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
+\item
+  \href{https://github.com/hossainlab/bioinfo_workflow}{``Reproducible
+  Bioinformatics Workflows: Ideation to Execution''}. DeepBio Academy.
+  Dhaka, Bangladesh. May 01, 2026.
+\item
+  \href{https://mdjubayerhossain.com/SAR/}{``Statistical Analysis with R
+  for Research''}. Research Help Bangladesh. Dhaka, Bangladesh. May 01,
+  2026.
 \item
   \href{https://deepbioacademy.github.io/gtsummary/}{``Publication-ready
   Tables with R''}. CHIRAL Bangladesh. Dhaka, Bangladesh. Apr 07, 2025.

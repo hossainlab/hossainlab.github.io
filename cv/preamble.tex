@@ -5,6 +5,27 @@
 \usepackage{parskip} % Spacing adjustments
 \usepackage{enumitem} % List customization (nosep, topsep, leftmargin)
 
+% Justified text, no hyphenation, no loose word spacing.
+% Requires LuaLaTeX: microtype font expansion (unavailable in XeTeX) micro-scales
+% glyphs so lines justify without stretching the interword spaces.
+
+% (Quarto's default template already loads microtype, so configure it here
+% rather than re-loading it with options, which would be an option clash.)
+\microtypesetup{
+  protrusion = true,
+  expansion  = true,
+  tracking   = true,
+  factor     = 1100,  % protrusion strength
+  stretch    = 25,    % max glyph expansion (per mille)
+  shrink     = 25     % max glyph shrink
+}
+
+\hyphenpenalty=10000  % No hyphenation
+\exhyphenpenalty=10000
+\tolerance=3000       % Accept slightly looser lines rather than overfull boxes
+\emergencystretch=1em % Last-resort stretch on the final pass only
+\hbadness=10000       % Silence badness warnings
+
 
 % Main font
 
@@ -26,15 +47,6 @@
   BoldItalicFont = Inter_18pt-BoldItalic
 ]
 
-% Chinese font
-
-\usepackage{xeCJK} % For Chinese text
-\setCJKmainfont[Path = ./fonts/]{kaiti.ttf}
-
-% Numbers - different font for digits because Raleway is bad. From here:
-% https://tex.stackexchange.com/a/440174
-
-
 % Header and footer
 
 \usepackage{fancyhdr}
@@ -42,7 +54,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot[L]{\textcolor{gray}{\footnotesize\emph{Updated \today}}}
-\fancyfoot[R]{\textcolor{gray}{\footnotesize\emph{Available at \href{https://mdjubayerhossain.com/}{https://mdjubayerhossain.com/}}}}
+\fancyfoot[R]{\textcolor{gray}{\footnotesize\emph{\href{https://mdjubayerhossain.com/}{https://mdjubayerhossain.com/}}}}
 \fancyfoot[C]{\textcolor{gray}{\footnotesize\emph{Page \thepage\ of \pageref{LastPage}}}}
 \renewcommand{\headrulewidth}{0pt} % Removes the header line
 \renewcommand{\footrulewidth}{0pt} % Removes the footer line
@@ -54,3 +66,10 @@
 \usepackage{color}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+% Long URLs / DOIs must break anywhere: hyphenation is off, so an unbreakable
+% URL would otherwise force a badly-spaced line or an overfull box.
+\makeatletter
+\g@addto@macro\UrlBreaks{\UrlOrds}
+\makeatother
+\Urlmuskip=0mu plus 1mu
