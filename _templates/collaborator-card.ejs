@@ -1,0 +1,32 @@
+<div class="ro-collab-grid">
+<% for (const item of items) { %>
+<div class="ro-collab-card">
+<div class="ro-collab-top">
+<% if (item.photo) { %>
+<img class="ro-collab-photo" src="<%= item.photo %>" alt="<%= item.name %>">
+<% } else { %>
+<span class="ro-collab-avatar"><%= item.initial %></span>
+<% } %>
+<div class="ro-collab-id">
+<strong class="ro-collab-name"><%= item.name %></strong>
+<span class="ro-collab-title"><%= item.title %></span>
+<span class="ro-collab-affil"><%= item.affiliation %><% if (item.country) { %>, <%= item.country %><% } %></span>
+</div>
+</div>
+<div class="ro-collab-meta">
+<% if (item.role) { %><span class="ro-collab-role"><%= item.role %></span><% } %>
+<% if (item.focus) { %><span class="ro-collab-focus"><%= item.focus %></span><% } %>
+</div>
+<% if (item.projects && item.projects.length > 0) { %>
+<div class="ro-collab-projects">
+<% for (const p of item.projects) { %>
+<span class="ro-collab-project-tag"><%= p %></span>
+<% } %>
+</div>
+<% } %>
+<% if (item.url) { %>
+<a class="ro-collab-link" href="<%= item.url %>" target="_blank">View Profile →</a>
+<% } %>
+</div>
+<% } %>
+</div>

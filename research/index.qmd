@@ -4,6 +4,11 @@ subtitle: "Computational approaches to decode complex biological systems using p
 title-block-banner: true
 page-layout: full
 toc: false
+# Collaborators listing disabled for now — re-enable when ready to publish
+# listing:
+#   - id: ro-collaborators
+#     contents: collaborators.yml
+#     template: ../_templates/collaborator-card.ejs
 ---
 
 ```{=html}
@@ -268,4 +273,17 @@ High-dimensional omics data (10,000+ features per sample) exceeds the capacity o
 </div>
 
 </div>
+
+
+<!-- COLLABORATORS section disabled for now — markup lives below, ready to re-enable
+<div class="ro-collab-section">
+<h2 class="ro-collab-heading">Research Collaborators</h2>
+<p class="ro-collab-sub">Working with clinicians, computational biologists, and domain experts across institutions</p>
+</div>
+-->
 ```
+
+<!--
+::: {#ro-collaborators}
+:::
+-->

@@ -1,0 +1,37 @@
+# Research Collaborators
+# Add/remove entries below. Leave `photo: ""` for initials-avatar fallback.
+- name: "Dr. [Name]"
+  photo: ""
+  initial: "D"
+  title: "Associate Professor"
+  affiliation: "[Department, University]"
+  country: "[Country]"
+  role: "Co-Investigator"
+  focus: "Single-cell Genomics"
+  url: ""
+  projects:
+    - "Single-Cell Harmonised Framework"
+
+- name: "Dr. [Name]"
+  photo: ""
+  initial: "D"
+  title: "Senior Bioinformatics Scientist"
+  affiliation: "[Institution]"
+  country: "[Country]"
+  role: "External Collaborator"
+  focus: "ML/DL in Genomics"
+  url: ""
+  projects:
+    - "ML / DL in Genomics"
+
+- name: "Dr. [Name]"
+  photo: ""
+  initial: "D"
+  title: "Principal Investigator"
+  affiliation: "[Research Institute]"
+  country: "[Country]"
+  role: "Collaborator"
+  focus: "Cancer Genomics"
+  url: ""
+  projects:
+    - "Bulk RNA-Seq Meta-Analysis"
