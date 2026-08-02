@@ -3,52 +3,167 @@ title: "Research Overview"
 subtitle: "Computational approaches to decode complex biological systems using public omics data"
 title-block-banner: true
 page-layout: full
-toc: false
-# Collaborators listing disabled for now — re-enable when ready to publish
-# listing:
-#   - id: ro-collaborators
-#     contents: collaborators.yml
-#     template: ../_templates/collaborator-card.ejs
+toc: true
+toc-title: "On This Page"
+toc-location: right
+toc-depth: 2
+listing:
+  - id: ro-mentees
+    contents: mentorship.yml
+    template: ../_templates/mentee-card.ejs
+  - id: ro-collaborators
+    contents: collaborators.yml
+    template: ../_templates/collaborator-card.ejs
 ---
 
+## Utilizing Public Data {#sec-why .ro-h2 data-eyebrow="Foundations"}
+
 ```{=html}
-<!-- ══════════════════════════════════════════════
-     WHY PUBLIC DATA — rationale strip
-═══════════════════════════════════════════════ -->
-<div class="ro-why-strip">
-<div class="ro-why-inner">
+<div class="ro-why-grid">
+
 <div class="ro-why-item">
-<span class="ro-why-icon">🔬</span>
-<div>
+<span class="ro-why-icon ro-why-icon-repro">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M20.5 12a8.5 8.5 0 0 1-14.6 5.9"/><path d="M3.5 12A8.5 8.5 0 0 1 18.1 6.1"/>
+<polyline points="18.4 2.6 18.4 6.6 14.4 6.6"/><polyline points="5.6 21.4 5.6 17.4 9.6 17.4"/>
+</svg>
+</span>
+<div class="ro-why-body">
 <strong>Reproducibility</strong>
 <p>All datasets are publicly archived — every analysis can be independently verified and extended.</p>
 </div>
 </div>
+
 <div class="ro-why-item">
-<span class="ro-why-icon">📊</span>
-<div>
+<span class="ro-why-icon ro-why-icon-scale">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<line x1="3" y1="21" x2="21" y2="21"/><rect x="4.5" y="12" width="3.6" height="7"/>
+<rect x="10.2" y="7.5" width="3.6" height="11.5"/><rect x="15.9" y="3.5" width="3.6" height="15.5"/>
+</svg>
+</span>
+<div class="ro-why-body">
 <strong>Scale</strong>
 <p>Thousands of samples across tissues, diseases, and cohorts — far beyond single-lab capacity.</p>
 </div>
 </div>
+
 <div class="ro-why-item">
-<span class="ro-why-icon">💡</span>
-<div>
+<span class="ro-why-icon ro-why-icon-open">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<circle cx="12" cy="12" r="9"/><path d="M3 12h18"/>
+<path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"/>
+</svg>
+</span>
+<div class="ro-why-body">
 <strong>Open Science</strong>
 <p>FAIR data principles enable cross-study meta-analyses and collaborative discovery.</p>
 </div>
 </div>
+
 <div class="ro-why-item">
-<span class="ro-why-icon">⚙️</span>
-<div>
+<span class="ro-why-icon ro-why-icon-general">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<polyline points="3 16.5 9 10.5 13 14.5 21 6.5"/><polyline points="15.5 6.5 21 6.5 21 12"/>
+<path d="M3 21h18"/>
+</svg>
+</span>
+<div class="ro-why-body">
 <strong>Generalisability</strong>
 <p>Multi-cohort validation increases confidence that findings are not dataset-specific artefacts.</p>
 </div>
 </div>
-</div>
-</div>
 
+</div>
+```
 
+## Three Data Modalities {#sec-modalities .ro-h2 data-eyebrow="Research Areas"}
+
+```{=html}
+<div class="expertise-grid">
+
+<a class="expertise-card" href="../projects/index.html">
+<span class="expertise-fig">
+<svg viewBox="0 0 160 90" role="img" aria-label="Bulk RNA-Seq: sequencing reads stacked over an exon model with a coverage profile">
+<rect x="0" y="0" width="160" height="90" fill="none"/>
+<path d="M8 34 C 28 4, 48 4, 62 24 C 74 42, 92 12, 106 22 C 120 32, 134 26, 152 34 L152 40 L8 40 Z" fill="#dbeafe"/>
+<path d="M8 34 C 28 4, 48 4, 62 24 C 74 42, 92 12, 106 22 C 120 32, 134 26, 152 34" fill="none" stroke="#2b6cb0" stroke-width="2" stroke-linecap="round"/>
+<line x1="8" y1="52" x2="152" y2="52" stroke="#94a3b8" stroke-width="1.5"/>
+<rect x="14" y="46" width="26" height="12" rx="2" fill="#2b6cb0"/>
+<rect x="58" y="46" width="20" height="12" rx="2" fill="#2b6cb0"/>
+<rect x="96" y="46" width="30" height="12" rx="2" fill="#2b6cb0"/>
+<rect x="138" y="46" width="14" height="12" rx="2" fill="#2b6cb0"/>
+<rect x="16" y="66" width="30" height="4" rx="2" fill="#60a5fa"/>
+<rect x="52" y="66" width="30" height="4" rx="2" fill="#60a5fa"/>
+<rect x="98" y="66" width="30" height="4" rx="2" fill="#60a5fa"/>
+<rect x="30" y="74" width="30" height="4" rx="2" fill="#93c5fd"/>
+<rect x="72" y="74" width="30" height="4" rx="2" fill="#93c5fd"/>
+<rect x="114" y="74" width="30" height="4" rx="2" fill="#93c5fd"/>
+<rect x="10" y="82" width="30" height="4" rx="2" fill="#bfdbfe"/>
+<rect x="86" y="82" width="30" height="4" rx="2" fill="#bfdbfe"/>
+</svg>
+</span>
+<span class="expertise-title">Bulk RNA-Seq</span>
+<span class="expertise-desc">Differential expression, pathway &amp; signature analysis across patient cohorts.</span>
+</a>
+
+<a class="expertise-card" href="../projects/index.html">
+<span class="expertise-fig">
+<svg viewBox="0 0 160 90" role="img" aria-label="Single-cell: UMAP embedding with distinct coloured cell clusters">
+<rect x="0" y="0" width="160" height="90" fill="none"/>
+<ellipse cx="40" cy="28" rx="26" ry="19" fill="#e0e7ff"/>
+<ellipse cx="112" cy="34" rx="24" ry="17" fill="#dcfce7"/>
+<ellipse cx="72" cy="68" rx="27" ry="16" fill="#fee2e2"/>
+<g fill="#4f46e5">
+<circle cx="30" cy="22" r="3"/><circle cx="42" cy="18" r="3"/><circle cx="52" cy="27" r="3"/>
+<circle cx="34" cy="34" r="3"/><circle cx="46" cy="31" r="3"/><circle cx="24" cy="30" r="3"/>
+<circle cx="40" cy="41" r="3"/><circle cx="55" cy="37" r="2.5"/>
+</g>
+<g fill="#16a34a">
+<circle cx="104" cy="27" r="3"/><circle cx="116" cy="24" r="3"/><circle cx="124" cy="34" r="3"/>
+<circle cx="108" cy="38" r="3"/><circle cx="120" cy="42" r="3"/><circle cx="98" cy="35" r="3"/>
+<circle cx="130" cy="27" r="2.5"/>
+</g>
+<g fill="#dc2626">
+<circle cx="60" cy="64" r="3"/><circle cx="72" cy="60" r="3"/><circle cx="84" cy="65" r="3"/>
+<circle cx="66" cy="73" r="3"/><circle cx="79" cy="74" r="3"/><circle cx="92" cy="70" r="2.5"/>
+<circle cx="52" cy="71" r="2.5"/>
+</g>
+<path d="M12 84 L12 60" stroke="#cbd5e1" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M12 84 L36 84" stroke="#cbd5e1" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
+</span>
+<span class="expertise-title">Single-Cell</span>
+<span class="expertise-desc">Cell-state atlases, trajectory &amp; cell–cell communication from scRNA-seq.</span>
+</a>
+
+<a class="expertise-card" href="../projects/index.html">
+<span class="expertise-fig">
+<svg viewBox="0 0 160 90" role="img" aria-label="Spatial transcriptomics: tissue section overlaid with a grid of expression-coloured capture spots">
+<rect x="0" y="0" width="160" height="90" fill="none"/>
+<path d="M20 62 C 10 34, 34 10, 66 12 C 104 14, 140 22, 146 46 C 151 68, 120 82, 88 80 C 54 78, 28 80, 20 62 Z" fill="#faf5ff" stroke="#a855f7" stroke-width="2"/>
+<g>
+<circle cx="44" cy="30" r="5" fill="#c4b5fd"/><circle cx="60" cy="26" r="5" fill="#a78bfa"/>
+<circle cx="76" cy="28" r="5" fill="#7c3aed"/><circle cx="92" cy="30" r="5" fill="#a78bfa"/>
+<circle cx="108" cy="34" r="5" fill="#ddd6fe"/>
+<circle cx="36" cy="46" r="5" fill="#ddd6fe"/><circle cx="52" cy="43" r="5" fill="#a78bfa"/>
+<circle cx="68" cy="44" r="5" fill="#7c3aed"/><circle cx="84" cy="45" r="5" fill="#7c3aed"/>
+<circle cx="100" cy="47" r="5" fill="#a78bfa"/><circle cx="116" cy="49" r="5" fill="#ddd6fe"/>
+<circle cx="44" cy="62" r="5" fill="#ddd6fe"/><circle cx="60" cy="61" r="5" fill="#c4b5fd"/>
+<circle cx="76" cy="62" r="5" fill="#a78bfa"/><circle cx="92" cy="63" r="5" fill="#c4b5fd"/>
+<circle cx="108" cy="64" r="5" fill="#ede9fe"/>
+</g>
+</svg>
+</span>
+<span class="expertise-title">Spatial Transcriptomics</span>
+<span class="expertise-desc">Tissue architecture, niche deconvolution &amp; spatially resolved gene programmes.</span>
+</a>
+
+</div>
+```
+
+## Research Workflows {#sec-workflows .ro-h2 data-eyebrow="Methods"}
+
+```{=html}
 <!-- ══════════════════════════════════════════════
      WORKFLOW 1 — Bulk RNA-Seq Meta-Analysis
 ═══════════════════════════════════════════════ -->
@@ -56,13 +171,8 @@ toc: false
 
 <div class="ro-wf-header">
 <div class="ro-wf-badge">Workflow 01</div>
-<h2 class="ro-wf-title">Bulk RNA-Seq Meta-Analysis</h2>
+<h3 class="ro-wf-title">Bulk RNA-Seq Meta-Analysis</h3>
 <p class="ro-wf-subtitle">Large-scale transcriptomic discovery using harmonised public datasets from NCBI GEO & SRA</p>
-</div>
-
-<div class="ro-why-box">
-<span class="ro-why-label">Why public bulk RNA-seq data?</span>
-Public repositories (GEO, SRA, ArrayExpress) host <strong>100,000+ RNA-seq samples</strong> across diseases, tissues, and treatment conditions. Meta-analysing these datasets reveals robust, cross-cohort differential expression signals that no single study can provide — dramatically increasing statistical power and biological generalisability.
 </div>
 
 <div class="ro-steps">
@@ -132,13 +242,8 @@ Public repositories (GEO, SRA, ArrayExpress) host <strong>100,000+ RNA-seq sampl
 
 <div class="ro-wf-header">
 <div class="ro-wf-badge ro-wf-badge-sc">Workflow 02</div>
-<h2 class="ro-wf-title">Single-Cell Harmonised Framework</h2>
+<h3 class="ro-wf-title">Single-Cell Harmonised Framework</h3>
 <p class="ro-wf-subtitle">Cross-cohort single-cell atlas construction and comparative cell-state analysis</p>
-</div>
-
-<div class="ro-why-box ro-why-box-sc">
-<span class="ro-why-label">Why public scRNA-seq data?</span>
-Public single-cell datasets from <strong>CellxGene, GEO, and the Human Cell Atlas</strong> allow cross-cohort atlas construction at a scale impossible for a single lab. Integrating multiple studies removes batch-specific noise, reveals conserved cell states across diseases, and enables discovery of rare populations with unprecedented statistical confidence.
 </div>
 
 <div class="ro-steps">
@@ -208,13 +313,8 @@ Public single-cell datasets from <strong>CellxGene, GEO, and the Human Cell Atla
 
 <div class="ro-wf-header">
 <div class="ro-wf-badge ro-wf-badge-ml">Workflow 03</div>
-<h2 class="ro-wf-title">ML / DL in Genomics</h2>
+<h3 class="ro-wf-title">ML / DL in Genomics</h3>
 <p class="ro-wf-subtitle">Machine and deep learning for biomarker discovery, disease classification, and precision medicine</p>
-</div>
-
-<div class="ro-why-box ro-why-box-ml">
-<span class="ro-why-label">Why ML/DL on public omics data?</span>
-High-dimensional omics data (10,000+ features per sample) exceeds the capacity of classical statistics. Machine learning extracts <strong>non-linear, multi-feature patterns</strong> that predict disease status, prognosis, and drug response. Public datasets provide the large, diverse sample sizes required to train generalisable models — with SHAP enabling biological interpretability.
 </div>
 
 <div class="ro-steps">
@@ -273,17 +373,22 @@ High-dimensional omics data (10,000+ features per sample) exceeds the capacity o
 </div>
 
 </div>
-
-
-<!-- COLLABORATORS section disabled for now — markup lives below, ready to re-enable
-<div class="ro-collab-section">
-<h2 class="ro-collab-heading">Research Collaborators</h2>
-<p class="ro-collab-sub">Working with clinicians, computational biologists, and domain experts across institutions</p>
-</div>
--->
 ```
 
-<!--
+## Mentoring {#sec-mentoring .ro-h2 data-eyebrow="People"}
+
+::: {#ro-mentees}
+:::
+
+## Collaborators {#sec-collaborators .ro-h2 data-eyebrow="Network"}
+
 ::: {#ro-collaborators}
 :::
--->
+
+```{=html}
+<div class="ro-collab-open">
+<strong>Open to new collaborations.</strong>
+<p>If you have a dataset, a clinical question, or a study that would benefit from bulk / single-cell / spatial re-analysis or ML modelling, get in touch.</p>
+<a class="ro-cta-btn" href="mailto:contact.jubayerhossain@gmail.com">Start a conversation &rarr;</a>
+</div>
+```

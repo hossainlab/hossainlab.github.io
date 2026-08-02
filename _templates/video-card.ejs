@@ -1,10 +1,3 @@
-<%
-  const allCategories = [...new Set(items.flatMap(item => item.categories || []))].sort();
-%>
-<% if (allCategories.length > 0) { %>
-<div class="category-filters"><button class="category-btn active" data-category="all">All</button> <% for (const cat of allCategories) { %><button class="category-btn" data-category="<%= cat %>"><%= cat %></button> <% } %></div>
-<% } %>
-
 <div class="playlist-grid">
 <% for (const item of items) { %>
 <div class="playlist-card" data-categories="<%= (item.categories || []).join(',') %>">
@@ -21,22 +14,3 @@
 </div>
 <% } %>
 </div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".category-filters").forEach(function (filterBar) {
-    var grid = filterBar.nextElementSibling;
-    filterBar.addEventListener("click", function (e) {
-      var btn = e.target.closest(".category-btn");
-      if (!btn) return;
-      filterBar.querySelectorAll(".category-btn").forEach(function (b) { b.classList.remove("active"); });
-      btn.classList.add("active");
-      var cat = btn.getAttribute("data-category");
-      grid.querySelectorAll(".playlist-card").forEach(function (card) {
-        var cats = card.getAttribute("data-categories");
-        card.style.display = (cat === "all" || cats.split(",").indexOf(cat) !== -1) ? "" : "none";
-      });
-    });
-  });
-});
-</script>

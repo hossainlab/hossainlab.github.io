@@ -1,0 +1,158 @@
+- generic [active] [ref=f1e1]:
+  - banner [ref=f1e2]:
+    - navigation [ref=f1e3]:
+      - generic [ref=f1e4]:
+        - link "Jubayer Hossain" [ref=f1e6] [cursor=pointer]:
+          - /url: http://localhost:8899/
+        - generic "Search" [ref=f1e7]:
+          - combobox "Search" [ref=f1e8]:
+            - button "Search" [ref=f1e9] [cursor=pointer]
+        - generic [ref=f1e13]:
+          - list [ref=f1e14]:
+            - listitem [ref=f1e15]:
+              - link "Home" [ref=f1e16] [cursor=pointer]:
+                - /url: http://localhost:8899/
+            - listitem [ref=f1e17]:
+              - link "Research" [ref=f1e18] [cursor=pointer]:
+                - /url: http://localhost:8899/mentorship/?v=2#
+            - listitem [ref=f1e19]:
+              - link "Teaching" [ref=f1e20] [cursor=pointer]:
+                - /url: http://localhost:8899/mentorship/?v=2#
+            - listitem [ref=f1e21]:
+              - link "Tutorials" [ref=f1e22] [cursor=pointer]:
+                - /url: http://localhost:8899/tutorials/
+            - listitem [ref=f1e23]:
+              - link "Publications" [ref=f1e24] [cursor=pointer]:
+                - /url: http://localhost:8899/publications/
+            - listitem [ref=f1e25]:
+              - link "CV" [ref=f1e26] [cursor=pointer]:
+                - /url: http://localhost:8899/cv/CV-HossainMJ.pdf
+          - list [ref=f1e27]:
+            - listitem [ref=f1e28]:
+              - link [ref=f1e29] [cursor=pointer]:
+                - /url: mailto:hossainmj@gmail.com
+                - img "email" [ref=f1e30]: 
+            - listitem [ref=f1e31]:
+              - link "orcid" [ref=f1e32] [cursor=pointer]:
+                - /url: https://orcid.org/0000-0001-9323-4997
+                - generic "orcid" [ref=f1e34]: 
+            - listitem [ref=f1e35]:
+              - link "google-scholar" [ref=f1e36] [cursor=pointer]:
+                - /url: https://scholar.google.com/citations?user=9_K4ekoAAAAJ&hl=en&authuser=5
+                - generic "google-scholar" [ref=f1e38]: 
+            - listitem [ref=f1e39]:
+              - link "researchgate" [ref=f1e40] [cursor=pointer]:
+                - /url: https://scholar.google.com/citations?user=9_K4ekoAAAAJ&hl=en&authuser=5
+                - generic "researchgate" [ref=f1e42]: 
+            - listitem [ref=f1e43]:
+              - link [ref=f1e44] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/hossainmj
+                - img "linkedin" [ref=f1e45]: 
+            - listitem [ref=f1e46]:
+              - link [ref=f1e47] [cursor=pointer]:
+                - /url: https://twitter.com/hossain_lab
+                - img "twitter" [ref=f1e48]: 
+            - listitem [ref=f1e49]:
+              - link [ref=f1e50] [cursor=pointer]:
+                - /url: https://github.com/hossainlab
+                - img "github" [ref=f1e51]: 
+            - listitem [ref=f1e52]:
+              - link [ref=f1e53] [cursor=pointer]:
+                - /url: https://www.youtube.com/@hossainlab
+                - img "youtube" [ref=f1e54]: 
+  - banner [ref=f1e55]:
+    - generic [ref=f1e57]:
+      - heading "Mentorship" [level=1] [ref=f1e58]
+      - paragraph [ref=f1e59]: Students and early-career researchers I have mentored in bioinformatics and computational biology
+  - main [ref=f1e61]:
+    - generic [ref=f1e62]:
+      - generic [ref=f1e63]: Currently Mentoring
+      - heading [level=2] [ref=f1e64]:
+        - text: Current Mentees
+        - link "Anchor" [ref=f1e65] [cursor=pointer]:
+          - /url: "#current-mentees"
+          - text: 
+      - paragraph [ref=f1e66]: Researchers presently working with me on active projects and internships.
+    - generic [ref=f1e68]:
+      - generic [ref=f1e69]:
+        - img "Dhruba Chowdhury" [ref=f1e71]
+        - generic [ref=f1e72]: Dhruba Chowdhury
+        - generic [ref=f1e73]: University of Dhaka
+        - generic [ref=f1e74]:
+          - generic [ref=f1e75]: GSA Bioinformatics Internship
+          - generic [ref=f1e76]: Cohort 02 · 6 months
+      - generic [ref=f1e77]:
+        - img "Md. Aftabur Rahman" [ref=f1e79]
+        - generic [ref=f1e80]: Md. Aftabur Rahman
+        - generic [ref=f1e81]: Jahangirnagar University
+        - generic [ref=f1e82]:
+          - generic [ref=f1e83]: GSA Bioinformatics Internship
+          - generic [ref=f1e84]: Cohort 02 · 6 months
+      - generic [ref=f1e85]:
+        - img "Tahia Aswad Arony" [ref=f1e87]
+        - generic [ref=f1e88]: Tahia Aswad Arony
+        - generic [ref=f1e89]: North South University
+        - generic [ref=f1e90]:
+          - generic [ref=f1e91]: GSA Bioinformatics Internship
+          - generic [ref=f1e92]: Cohort 02 · 6 months
+      - generic [ref=f1e93]:
+        - img "Mahmuda Hoque" [ref=f1e95]
+        - generic [ref=f1e96]: Mahmuda Hoque
+        - generic [ref=f1e97]: BRAC University
+        - generic [ref=f1e98]:
+          - generic [ref=f1e99]: GSA Bioinformatics Internship
+          - generic [ref=f1e100]: Cohort 02 · 6 months
+      - generic [ref=f1e101]:
+        - img "Tasfia Nawar" [ref=f1e103]
+        - generic [ref=f1e104]: Tasfia Nawar
+        - generic [ref=f1e105]: North South University
+        - generic [ref=f1e106]:
+          - generic [ref=f1e107]: GSA Bioinformatics Internship
+          - generic [ref=f1e108]: Cohort 02 · 6 months
+    - generic [ref=f1e109]:
+      - generic [ref=f1e110]: Alumni
+      - heading [level=2] [ref=f1e111]:
+        - text: Past Mentees
+        - link "Anchor" [ref=f1e112] [cursor=pointer]:
+          - /url: "#past-mentees"
+          - text: 
+      - paragraph [ref=f1e113]: Mentees who have completed their training and moved on to graduate study, research, and industry roles.
+    - generic [ref=f1e115]:
+      - generic [ref=f1e116]:
+        - img "Md. Shakil Ahamed" [ref=f1e118]
+        - generic [ref=f1e119]: Md. Shakil Ahamed
+        - generic [ref=f1e120]: Mawlana Bhashani Science and Technology University
+        - generic [ref=f1e121]:
+          - generic [ref=f1e122]: GSA Bioinformatics Internship
+          - generic [ref=f1e123]: Cohort 01 · 6 months
+      - generic [ref=f1e124]:
+        - img "Rahnuma Tabassum" [ref=f1e126]
+        - generic [ref=f1e127]: Rahnuma Tabassum
+        - generic [ref=f1e128]: Biochemistry & Molecular Biology
+        - generic [ref=f1e129]: Jagannath University
+        - generic [ref=f1e130]:
+          - generic [ref=f1e131]: GSA Bioinformatics Internship
+          - generic [ref=f1e132]: Cohort 01 · 6 months
+      - generic [ref=f1e133]:
+        - img "Fayez Ahmad" [ref=f1e135]
+        - generic [ref=f1e136]: Fayez Ahmad
+        - generic [ref=f1e137]: Notre Dame College, Dhaka
+        - generic [ref=f1e138]:
+          - generic [ref=f1e139]: GSA Bioinformatics Internship
+          - generic [ref=f1e140]: Cohort 01 · 6 months
+      - generic [ref=f1e141]:
+        - img "Sabbir Khan" [ref=f1e143]
+        - generic [ref=f1e144]: Sabbir Khan
+        - generic [ref=f1e145]: Gazipur Agricultural University
+        - generic [ref=f1e146]:
+          - generic [ref=f1e147]: GSA Bioinformatics Internship
+          - generic [ref=f1e148]: Cohort 01 · 6 months
+      - generic [ref=f1e149]:
+        - img "Lamisa Manha Aditee" [ref=f1e151]
+        - generic [ref=f1e152]: Lamisa Manha Aditee
+        - generic [ref=f1e153]: BRAC University
+        - generic [ref=f1e154]:
+          - generic [ref=f1e155]: GSA Bioinformatics Internship
+          - generic [ref=f1e156]: Cohort 01 · 6 months
+  - contentinfo [ref=f1e157]:
+    - paragraph [ref=f1e161]: © Copyright 2026, Jubayer Hossain

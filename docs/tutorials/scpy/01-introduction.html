@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,6 +12,9 @@
 
 <title>Introduction to Single-Cell RNA-seq – Jubayer Hossain</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -89,15 +92,14 @@ div.csl-indent {
 <link href="../..//files/profiles/icon.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -139,8 +141,6 @@ div.csl-indent {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Jubayer Hossain</span>
     </a>
@@ -155,50 +155,20 @@ div.csl-indent {
     <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Projects</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
-        <li>
-    <a class="dropdown-item" href="../../projects/index.html">
- <span class="dropdown-text">Research Projects</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../projects/pipelines.html">
- <span class="dropdown-text">Pipelines</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-teaching" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Teaching</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-teaching">    
-        <li>
-    <a class="dropdown-item" href="../../teaching/index.html">
- <span class="dropdown-text">Courses</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../teaching/videos.html">
- <span class="dropdown-text">Videos</span></a>
-  </li>  
-    </ul>
-  </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../tutorials/index.html"> 
-<span class="menu-text">Tutorials</span></a>
+    <a class="nav-link" href="../../research/index.html"> 
+<span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../blog/index.html"> 
-<span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="../../teaching/index.html"> 
+<span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../publications/index.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../cv/professional-cv/CV-HossainMJ.pdf"> 
+    <a class="nav-link" href="../../cv/CV-HossainMJ.pdf"> 
 <span class="menu-text">CV</span></a>
   </li>  
 </ul>
@@ -589,7 +559,7 @@ div.csl-indent {
 <p>The journey from a raw count matrix to biological insight spans several well-defined steps. The figure below shows the <strong>complete modern analysis pipeline</strong> as described by Luecken &amp; Theis in their landmark methods review <span class="citation" data-cites="LueckenTheis2019">[@LueckenTheis2019]</span>:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/scRNA-seq_steps_image.jpg" class="img-fluid figure-img" style="width:90.0%"></p>
+<p><img src="img/intro/scRNA-seq_steps_image.jpg" class="img-fluid figure-img" style="width:90.0%"></p>
 <figcaption>The complete scRNA-seq computational pipeline. Pre-processing (left column) converts raw data into analysis-ready format. Downstream analysis (right) extracts biological insight. Every step in this figure corresponds to one or more tutorials in this series. <em>Source: Luecken &amp; Theis, Mol Sys Biol, 2019.</em></figcaption>
 </figure>
 </div>
@@ -658,7 +628,7 @@ div.csl-indent {
 <p>A simplified view of the core pipeline:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/sc_workflow_2022.jpg" class="img-fluid figure-img" style="width:60.0%"></p>
+<p><img src="img/intro/sc_workflow_2022.jpg" class="img-fluid figure-img" style="width:60.0%"></p>
 <figcaption>The minimal computational workflow from sequence reads to biological interpretation. Each arrow in this diagram represents a tutorial in this series. <em>Adapted from HBC Training Materials.</em></figcaption>
 </figure>
 </div>
@@ -669,7 +639,7 @@ div.csl-indent {
 <p>The reason scRNA-seq has become ubiquitous is not just technical capability — it is because the biology being revealed was <strong>genuinely not accessible before</strong>. There are at least five categories of biological variation that only single-cell resolution can capture:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/sc_biol_variability.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<p><img src="img/intro/sc_biol_variability.png" class="img-fluid figure-img" style="width:75.0%"></p>
 <figcaption>Five types of biological information accessible only at single-cell resolution. Discrete cell types and continuous phenotypes are the most commonly analysed, but rare subtype discovery, spatial mapping, and temporal dynamics represent some of the most biologically impactful applications. <em>Adapted from Luecken &amp; Theis, 2019.</em></figcaption>
 </figure>
 </div>
@@ -687,7 +657,7 @@ div.csl-indent {
 <p>A practical landmark: Kang et al.&nbsp;(2018) introduced <strong>cell multiplexing</strong> using natural genetic variation. By pooling PBMCs from multiple donors into a single 10x run and then demultiplexing computationally by SNP profile (using the <em>demuxlet</em> tool), they could capture multiple samples simultaneously — <strong>halving costs</strong> and <strong>eliminating batch effects</strong> between samples within the same study <span class="citation" data-cites="Kang2018NatBiotech">[@Kang2018NatBiotech]</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="img/kangetal_image.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<p><img src="img/intro/kangetal_image.png" class="img-fluid figure-img" style="width:70.0%"></p>
 <figcaption>Multiplexing: cells from multiple genetically distinct donors are encapsulated together, labelled by their donor SNP profile, then computationally demultiplexed. Doublets (two cells from different donors in one droplet) are simultaneously identified and removed. <em>Source: Kang et al., Nat Biotechnol, 2018.</em></figcaption>
 </figure>
 </div>
@@ -1254,7 +1224,7 @@ div.csl-indent {
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>© Copyright 2025, Jubayer Hossain</p>
+<p>© Copyright 2026, Jubayer Hossain</p>
 </div>
     <div class="nav-footer-right">
       &nbsp;

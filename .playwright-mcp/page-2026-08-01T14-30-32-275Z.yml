@@ -1,0 +1,333 @@
+- generic [active] [ref=f2e1]:
+  - banner [ref=f2e2]:
+    - navigation [ref=f2e3]:
+      - generic [ref=f2e4]:
+        - link "Jubayer Hossain" [ref=f2e6] [cursor=pointer]:
+          - /url: http://localhost:8899/
+        - generic "Search" [ref=f2e7]:
+          - combobox "Search" [ref=f2e8]:
+            - button "Search" [ref=f2e9] [cursor=pointer]
+        - menu "Toggle navigation" [ref=f2e13] [cursor=pointer]
+        - text:        
+  - banner [ref=f2e15]:
+    - generic [ref=f2e17]:
+      - heading "Tutorials" [level=1] [ref=f2e18]
+      - paragraph [ref=f2e19]: Step-by-step tutorial series and hands-on pipeline notebooks on computational biology, bioinformatics, and data science
+  - main [ref=f2e21]:
+    - generic [ref=f2e22]:
+      - generic [ref=f2e23]: Structured Courses
+      - heading [level=2] [ref=f2e24]:
+        - text: Tutorial Series
+        - link "Anchor" [ref=f2e25] [cursor=pointer]:
+          - /url: "#tutorial-series"
+          - text: 
+      - paragraph [ref=f2e26]: Multi-lesson series that build a full skill set from the ground up, each lesson stacking on the previous one.
+    - generic [ref=f2e27]:
+      - link "🧬 Single-Cell Analysis with Python A step-by-step guide to analysing scRNA-seq data using scanpy and the scverse ecosystem — from raw counts to biological insight. 20+ Lessons 6 Modules Python Active" [ref=f2e28] [cursor=pointer]:
+        - /url: http://localhost:8899/tutorials/scpy/
+        - generic [ref=f2e29]: 🧬
+        - generic [ref=f2e31]:
+          - generic [ref=f2e32]: Single-Cell Analysis with Python
+          - paragraph [ref=f2e33]: A step-by-step guide to analysing scRNA-seq data using scanpy and the scverse ecosystem — from raw counts to biological insight.
+          - generic [ref=f2e34]:
+            - generic [ref=f2e35]: 20+ Lessons
+            - generic [ref=f2e36]: 6 Modules
+            - generic [ref=f2e37]: Python
+            - generic [ref=f2e38]: Active
+      - link "Nextflow nf-core Nextflow and nf-core Build scalable, reproducible bioinformatics pipelines with Nextflow DSL2, run nf-core community pipelines, and contribute your own. 15 Lessons 5 Modules DSL2 Active" [ref=f2e39] [cursor=pointer]:
+        - /url: http://localhost:8899/tutorials/nextflow/
+        - generic [ref=f2e40]:
+          - img "Nextflow"
+          - img "nf-core"
+        - generic [ref=f2e41]:
+          - generic [ref=f2e42]: Nextflow and nf-core
+          - paragraph [ref=f2e43]: Build scalable, reproducible bioinformatics pipelines with Nextflow DSL2, run nf-core community pipelines, and contribute your own.
+          - generic [ref=f2e44]:
+            - generic [ref=f2e45]: 15 Lessons
+            - generic [ref=f2e46]: 5 Modules
+            - generic [ref=f2e47]: DSL2
+            - generic [ref=f2e48]: Active
+      - generic [ref=f2e49]:
+        - generic [ref=f2e50]: 🔬
+        - generic [ref=f2e52]:
+          - generic [ref=f2e53]: Bulk RNA-seq Analysis with Python
+          - paragraph [ref=f2e54]: End-to-end differential expression analysis, pathway enrichment, and visualisation using PyDESeq2 and related tools.
+          - generic [ref=f2e55]:
+            - generic [ref=f2e56]: Python
+            - generic [ref=f2e57]: Coming Soon
+      - generic [ref=f2e58]:
+        - generic [ref=f2e59]: 🤖
+        - generic [ref=f2e61]:
+          - generic [ref=f2e62]: Machine Learning for Genomics
+          - paragraph [ref=f2e63]: Apply supervised and unsupervised machine learning to genomic data using scikit-learn and PyTorch.
+          - generic [ref=f2e64]:
+            - generic [ref=f2e65]: Python
+            - generic [ref=f2e66]: Coming Soon
+    - generic [ref=f2e67]:
+      - generic [ref=f2e68]: Hands-On Notebooks
+      - heading [level=2] [ref=f2e69]:
+        - text: Pipeline Tutorials
+        - link "Anchor" [ref=f2e70] [cursor=pointer]:
+          - /url: "#pipeline-tutorials"
+          - text: 
+      - paragraph [ref=f2e71]: Self-contained, runnable analysis workflows on Google Colab and GitHub — each one takes raw data through to a finished result. Filter by analysis type.
+    - generic [ref=f2e72]:
+      - generic [ref=f2e73]:
+        - button "All" [ref=f2e74] [cursor=pointer]
+        - button "Drug Discovery" [ref=f2e75] [cursor=pointer]
+        - button "Protein Structure Prediction" [ref=f2e76] [cursor=pointer]
+        - button "RNA-Seq" [ref=f2e77] [cursor=pointer]
+        - button "Single-Cell" [ref=f2e78] [cursor=pointer]
+      - generic [ref=f2e79]:
+        - paragraph [ref=f2e80]:
+          - link [ref=f2e81] [cursor=pointer]:
+            - /url: https://github.com/hossainlab/salmon-rnaseq
+        - link "RNA-Seq End-to-end bulk RNA-seq Quantification Pipeline using Salmon A complete pipeline for pseudo-alignment and quantification of bulk RNA-seq data using Salmon — from raw sequencing reads to transcript-level abundance estimates ready for downstream differential expression analysis. In Raw FASTQ files, reference transcriptome Out Transcript/gene-level count matrix, quantification summary Python Salmon tximeta DESeq2 View on GitHub →" [ref=f2e84] [cursor=pointer]:
+          - /url: https://github.com/hossainlab/salmon-rnaseq
+          - paragraph [ref=f2e85]:
+            - generic [ref=f2e86]: RNA-Seq
+          - paragraph [ref=f2e87]:
+            - generic [ref=f2e88]: End-to-end bulk RNA-seq Quantification Pipeline using Salmon
+            - generic [ref=f2e89]: A complete pipeline for pseudo-alignment and quantification of bulk RNA-seq data using Salmon — from raw sequencing reads to transcript-level abundance estimates ready for downstream differential expression analysis.
+          - paragraph [ref=f2e90]
+          - paragraph [ref=f2e92]:
+            - generic [ref=f2e93]:
+              - generic [ref=f2e94]: In
+              - generic [ref=f2e95]: Raw FASTQ files, reference transcriptome
+          - paragraph [ref=f2e96]:
+            - generic [ref=f2e97]:
+              - generic [ref=f2e98]: Out
+              - generic [ref=f2e99]: Transcript/gene-level count matrix, quantification summary
+          - paragraph
+          - paragraph [ref=f2e100]:
+            - generic [ref=f2e101]:
+              - generic [ref=f2e102]: Python
+              - generic [ref=f2e103]: Salmon
+              - generic [ref=f2e104]: tximeta
+              - generic [ref=f2e105]: DESeq2
+          - paragraph [ref=f2e106]:
+            - generic [ref=f2e107]: View on GitHub →
+        - paragraph [ref=f2e108]:
+          - link [ref=f2e109] [cursor=pointer]:
+            - /url: https://github.com/hossainlab/salmon-rnaseq
+        - paragraph [ref=f2e110]:
+          - link [ref=f2e111] [cursor=pointer]:
+            - /url: https://github.com/hossainlab/nf-core-rnaseqmeta
+        - 'link "RNA-Seq nf-core/rnaseqmeta: A Nextflow Pipeline for Meta-Analysis of RNA-seq Datasets A Nextflow-based pipeline for reproducible meta-analysis of multiple RNA-seq datasets — automating sample retrieval, quality control, quantification, batch correction, and integrated differential expression analysis across studies. In Multiple RNA-seq datasets (FASTQ or SRA accessions), sample sheets Out Integrated count matrix, cross-study DE results, batch-corrected expression profiles Nextflow nf-core Salmon DESeq2 View on GitHub →" [ref=f2e114] [cursor=pointer]':
+          - /url: https://github.com/hossainlab/nf-core-rnaseqmeta
+          - paragraph [ref=f2e115]:
+            - generic [ref=f2e116]: RNA-Seq
+          - paragraph [ref=f2e117]:
+            - generic [ref=f2e118]: "nf-core/rnaseqmeta: A Nextflow Pipeline for Meta-Analysis of RNA-seq Datasets"
+            - generic [ref=f2e119]: A Nextflow-based pipeline for reproducible meta-analysis of multiple RNA-seq datasets — automating sample retrieval, quality control, quantification, batch correction, and integrated differential expression analysis across studies.
+          - paragraph [ref=f2e120]
+          - paragraph [ref=f2e122]:
+            - generic [ref=f2e123]:
+              - generic [ref=f2e124]: In
+              - generic [ref=f2e125]: Multiple RNA-seq datasets (FASTQ or SRA accessions), sample sheets
+          - paragraph [ref=f2e126]:
+            - generic [ref=f2e127]:
+              - generic [ref=f2e128]: Out
+              - generic [ref=f2e129]: Integrated count matrix, cross-study DE results, batch-corrected expression profiles
+          - paragraph
+          - paragraph [ref=f2e130]:
+            - generic [ref=f2e131]:
+              - generic [ref=f2e132]: Nextflow
+              - generic [ref=f2e133]: nf-core
+              - generic [ref=f2e134]: Salmon
+              - generic [ref=f2e135]: DESeq2
+          - paragraph [ref=f2e136]:
+            - generic [ref=f2e137]: View on GitHub →
+        - paragraph [ref=f2e138]:
+          - link [ref=f2e139] [cursor=pointer]:
+            - /url: https://github.com/hossainlab/nf-core-rnaseqmeta
+        - paragraph [ref=f2e140]:
+          - link [ref=f2e141] [cursor=pointer]:
+            - /url: https://colab.research.google.com/drive/1i9WxmUjSq3mNoPostbJLSu6eeNi8vqgE?usp=sharing
+        - link "Single-Cell Fast and efficient preprocessing of scRNA-seq with kallisto | bustools | kb-python End-to-end pipeline for scRNA-seq preprocessing using kallisto, bustools, and kb-python — from raw FASTQ files to filtered count matrices ready for downstream analysis with scanpy. In Raw FASTQ files (10x Chromium or similar) Out Filtered cell × gene count matrix, QC metrics Python kallisto bustools kb-python scanpy Open in Colab →" [ref=f2e144] [cursor=pointer]:
+          - /url: https://colab.research.google.com/drive/1i9WxmUjSq3mNoPostbJLSu6eeNi8vqgE?usp=sharing
+          - paragraph [ref=f2e145]:
+            - generic [ref=f2e146]: Single-Cell
+          - paragraph [ref=f2e147]:
+            - generic [ref=f2e148]: Fast and efficient preprocessing of scRNA-seq with kallisto | bustools | kb-python
+            - generic [ref=f2e149]: End-to-end pipeline for scRNA-seq preprocessing using kallisto, bustools, and kb-python — from raw FASTQ files to filtered count matrices ready for downstream analysis with scanpy.
+          - paragraph [ref=f2e150]
+          - paragraph [ref=f2e152]:
+            - generic [ref=f2e153]:
+              - generic [ref=f2e154]: In
+              - generic [ref=f2e155]: Raw FASTQ files (10x Chromium or similar)
+          - paragraph [ref=f2e156]:
+            - generic [ref=f2e157]:
+              - generic [ref=f2e158]: Out
+              - generic [ref=f2e159]: Filtered cell × gene count matrix, QC metrics
+          - paragraph
+          - paragraph [ref=f2e160]:
+            - generic [ref=f2e161]:
+              - generic [ref=f2e162]: Python
+              - generic [ref=f2e163]: kallisto
+              - generic [ref=f2e164]: bustools
+              - generic [ref=f2e165]: kb-python
+              - generic [ref=f2e166]: scanpy
+          - paragraph [ref=f2e167]:
+            - generic [ref=f2e168]: Open in Colab →
+        - paragraph [ref=f2e169]:
+          - link [ref=f2e170] [cursor=pointer]:
+            - /url: https://colab.research.google.com/drive/1i9WxmUjSq3mNoPostbJLSu6eeNi8vqgE?usp=sharing
+        - paragraph [ref=f2e171]:
+          - link [ref=f2e172] [cursor=pointer]:
+            - /url: https://colab.research.google.com/drive/1MyBbAQvTKGLFOpPAP-w3hedyXs-l0Vff?usp=sharing
+        - link "Single-Cell A Practical Guide for Single-Cell Data Analysis with scverse Ecosystem Comprehensive walkthrough of the scverse single-cell analysis workflow — covering quality control, normalization, dimensionality reduction, clustering, marker gene identification, and cell type annotation using scanpy and related tools. In Count matrix (AnnData .h5ad or 10x format) Out Annotated cell clusters, UMAP embeddings, marker genes, cell type labels Python scanpy scvi-tools AnnData Open in Colab →" [ref=f2e175] [cursor=pointer]:
+          - /url: https://colab.research.google.com/drive/1MyBbAQvTKGLFOpPAP-w3hedyXs-l0Vff?usp=sharing
+          - paragraph [ref=f2e176]:
+            - generic [ref=f2e177]: Single-Cell
+          - paragraph [ref=f2e178]:
+            - generic [ref=f2e179]: A Practical Guide for Single-Cell Data Analysis with scverse Ecosystem
+            - generic [ref=f2e180]: Comprehensive walkthrough of the scverse single-cell analysis workflow — covering quality control, normalization, dimensionality reduction, clustering, marker gene identification, and cell type annotation using scanpy and related tools.
+          - paragraph [ref=f2e181]
+          - paragraph [ref=f2e183]:
+            - generic [ref=f2e184]:
+              - generic [ref=f2e185]: In
+              - generic [ref=f2e186]: Count matrix (AnnData .h5ad or 10x format)
+          - paragraph [ref=f2e187]:
+            - generic [ref=f2e188]:
+              - generic [ref=f2e189]: Out
+              - generic [ref=f2e190]: Annotated cell clusters, UMAP embeddings, marker genes, cell type labels
+          - paragraph
+          - paragraph [ref=f2e191]:
+            - generic [ref=f2e192]:
+              - generic [ref=f2e193]: Python
+              - generic [ref=f2e194]: scanpy
+              - generic [ref=f2e195]: scvi-tools
+              - generic [ref=f2e196]: AnnData
+          - paragraph [ref=f2e197]:
+            - generic [ref=f2e198]: Open in Colab →
+        - paragraph [ref=f2e199]:
+          - link [ref=f2e200] [cursor=pointer]:
+            - /url: https://colab.research.google.com/drive/1MyBbAQvTKGLFOpPAP-w3hedyXs-l0Vff?usp=sharing
+        - paragraph [ref=f2e201]:
+          - link [ref=f2e202] [cursor=pointer]:
+            - /url: https://colab.research.google.com/drive/1PQS5EWpGP5aWJ4KtrGlKetCidA44RySx?usp=sharing
+        - link "Protein Structure Prediction Predicting Protein Structures with ColabFold and AlphaFold2 in Google Colab Predict 3D protein structures from amino acid sequences using ColabFold’s accelerated AlphaFold2 pipeline — with MSA generation via MMseqs2 and interactive structure visualization directly in the browser. In Amino acid sequence (FASTA format) Out Predicted 3D structures (PDB), confidence scores (pLDDT), PAE plots Python ColabFold AlphaFold2 MMseqs2 py3Dmol Open in Colab →" [ref=f2e205] [cursor=pointer]:
+          - /url: https://colab.research.google.com/drive/1PQS5EWpGP5aWJ4KtrGlKetCidA44RySx?usp=sharing
+          - paragraph [ref=f2e206]:
+            - generic [ref=f2e207]: Protein Structure Prediction
+          - paragraph [ref=f2e208]:
+            - generic [ref=f2e209]: Predicting Protein Structures with ColabFold and AlphaFold2 in Google Colab
+            - generic [ref=f2e210]: Predict 3D protein structures from amino acid sequences using ColabFold’s accelerated AlphaFold2 pipeline — with MSA generation via MMseqs2 and interactive structure visualization directly in the browser.
+          - paragraph [ref=f2e211]
+          - paragraph [ref=f2e213]:
+            - generic [ref=f2e214]:
+              - generic [ref=f2e215]: In
+              - generic [ref=f2e216]: Amino acid sequence (FASTA format)
+          - paragraph [ref=f2e217]:
+            - generic [ref=f2e218]:
+              - generic [ref=f2e219]: Out
+              - generic [ref=f2e220]: Predicted 3D structures (PDB), confidence scores (pLDDT), PAE plots
+          - paragraph
+          - paragraph [ref=f2e221]:
+            - generic [ref=f2e222]:
+              - generic [ref=f2e223]: Python
+              - generic [ref=f2e224]: ColabFold
+              - generic [ref=f2e225]: AlphaFold2
+              - generic [ref=f2e226]: MMseqs2
+              - generic [ref=f2e227]: py3Dmol
+          - paragraph [ref=f2e228]:
+            - generic [ref=f2e229]: Open in Colab →
+        - paragraph [ref=f2e230]:
+          - link [ref=f2e231] [cursor=pointer]:
+            - /url: https://colab.research.google.com/drive/1PQS5EWpGP5aWJ4KtrGlKetCidA44RySx?usp=sharing
+        - paragraph [ref=f2e232]:
+          - link [ref=f2e233] [cursor=pointer]:
+            - /url: https://colab.research.google.com/drive/1MzmcvZTvpvGEyTQdJIt5DCVn9mJOZS1J?usp=sharing
+        - 'link "Protein Structure Prediction Boltz2-Notebook: Diffusion-Based Protein–Ligand Structure Prediction & Affinity Analysis Predict protein–ligand complex structures and binding affinities using the Boltz2 diffusion model — enabling rapid in silico docking and interaction analysis without traditional molecular dynamics simulations. In Protein sequence and ligand SMILES/SDF Out Predicted complex structures (PDB), binding affinity scores, interaction maps Python Boltz2 RDKit py3Dmol Open in Colab →" [ref=f2e236] [cursor=pointer]':
+          - /url: https://colab.research.google.com/drive/1MzmcvZTvpvGEyTQdJIt5DCVn9mJOZS1J?usp=sharing
+          - paragraph [ref=f2e237]:
+            - generic [ref=f2e238]: Protein Structure Prediction
+          - paragraph [ref=f2e239]:
+            - generic [ref=f2e240]: "Boltz2-Notebook: Diffusion-Based Protein–Ligand Structure Prediction & Affinity Analysis"
+            - generic [ref=f2e241]: Predict protein–ligand complex structures and binding affinities using the Boltz2 diffusion model — enabling rapid in silico docking and interaction analysis without traditional molecular dynamics simulations.
+          - paragraph [ref=f2e242]
+          - paragraph [ref=f2e244]:
+            - generic [ref=f2e245]:
+              - generic [ref=f2e246]: In
+              - generic [ref=f2e247]: Protein sequence and ligand SMILES/SDF
+          - paragraph [ref=f2e248]:
+            - generic [ref=f2e249]:
+              - generic [ref=f2e250]: Out
+              - generic [ref=f2e251]: Predicted complex structures (PDB), binding affinity scores, interaction maps
+          - paragraph
+          - paragraph [ref=f2e252]:
+            - generic [ref=f2e253]:
+              - generic [ref=f2e254]: Python
+              - generic [ref=f2e255]: Boltz2
+              - generic [ref=f2e256]: RDKit
+              - generic [ref=f2e257]: py3Dmol
+          - paragraph [ref=f2e258]:
+            - generic [ref=f2e259]: Open in Colab →
+        - paragraph [ref=f2e260]:
+          - link [ref=f2e261] [cursor=pointer]:
+            - /url: https://colab.research.google.com/drive/1MzmcvZTvpvGEyTQdJIt5DCVn9mJOZS1J?usp=sharing
+        - paragraph [ref=f2e262]:
+          - link [ref=f2e263] [cursor=pointer]:
+            - /url: https://colab.research.google.com/drive/124b2zhlFujYBk2cGoT64DWPTwr0SB-Ph?usp=sharing
+        - 'link "Drug Discovery AI in Drug Discovery: Molecular Property Prediction and Virtual Screening End-to-end pipeline for AI-driven drug discovery — covering molecular featurization, toxicity prediction, ADMET property modeling, and virtual screening of compound libraries using machine learning and cheminformatics tools. In Compound libraries (SMILES), molecular descriptors Out Toxicity predictions, ADMET profiles, ranked hit compounds Python RDKit DeepChem scikit-learn Open in Colab →" [ref=f2e266] [cursor=pointer]':
+          - /url: https://colab.research.google.com/drive/124b2zhlFujYBk2cGoT64DWPTwr0SB-Ph?usp=sharing
+          - paragraph [ref=f2e267]:
+            - generic [ref=f2e268]: Drug Discovery
+          - paragraph [ref=f2e269]:
+            - generic [ref=f2e270]: "AI in Drug Discovery: Molecular Property Prediction and Virtual Screening"
+            - generic [ref=f2e271]: End-to-end pipeline for AI-driven drug discovery — covering molecular featurization, toxicity prediction, ADMET property modeling, and virtual screening of compound libraries using machine learning and cheminformatics tools.
+          - paragraph [ref=f2e272]
+          - paragraph [ref=f2e274]:
+            - generic [ref=f2e275]:
+              - generic [ref=f2e276]: In
+              - generic [ref=f2e277]: Compound libraries (SMILES), molecular descriptors
+          - paragraph [ref=f2e278]:
+            - generic [ref=f2e279]:
+              - generic [ref=f2e280]: Out
+              - generic [ref=f2e281]: Toxicity predictions, ADMET profiles, ranked hit compounds
+          - paragraph
+          - paragraph [ref=f2e282]:
+            - generic [ref=f2e283]:
+              - generic [ref=f2e284]: Python
+              - generic [ref=f2e285]: RDKit
+              - generic [ref=f2e286]: DeepChem
+              - generic [ref=f2e287]: scikit-learn
+          - paragraph [ref=f2e288]:
+            - generic [ref=f2e289]: Open in Colab →
+        - paragraph [ref=f2e290]:
+          - link [ref=f2e291] [cursor=pointer]:
+            - /url: https://colab.research.google.com/drive/124b2zhlFujYBk2cGoT64DWPTwr0SB-Ph?usp=sharing
+        - paragraph [ref=f2e292]:
+          - link [ref=f2e293] [cursor=pointer]:
+            - /url: https://colab.research.google.com/drive/1ths5Mb1sHos6y5qcnodcWOnw-XR-Mw8w?usp=sharing
+        - 'link "Drug Discovery AI in Drug Discovery: In Silico Toxicology Modeling Build machine learning models to predict compound toxicity from molecular structure — covering molecular fingerprint generation, toxicity endpoint classification, structure–activity relationship analysis, and model interpretation for safety assessment in early-stage drug discovery. In Chemical compounds (SMILES), toxicity endpoint labels Out Toxicity classification models, SAR insights, safety predictions Python RDKit scikit-learn Mordred Open in Colab →" [ref=f2e296] [cursor=pointer]':
+          - /url: https://colab.research.google.com/drive/1ths5Mb1sHos6y5qcnodcWOnw-XR-Mw8w?usp=sharing
+          - paragraph [ref=f2e297]:
+            - generic [ref=f2e298]: Drug Discovery
+          - paragraph [ref=f2e299]:
+            - generic [ref=f2e300]: "AI in Drug Discovery: In Silico Toxicology Modeling"
+            - generic [ref=f2e301]: Build machine learning models to predict compound toxicity from molecular structure — covering molecular fingerprint generation, toxicity endpoint classification, structure–activity relationship analysis, and model interpretation for safety assessment in early-stage drug discovery.
+          - paragraph [ref=f2e302]
+          - paragraph [ref=f2e304]:
+            - generic [ref=f2e305]:
+              - generic [ref=f2e306]: In
+              - generic [ref=f2e307]: Chemical compounds (SMILES), toxicity endpoint labels
+          - paragraph [ref=f2e308]:
+            - generic [ref=f2e309]:
+              - generic [ref=f2e310]: Out
+              - generic [ref=f2e311]: Toxicity classification models, SAR insights, safety predictions
+          - paragraph
+          - paragraph [ref=f2e312]:
+            - generic [ref=f2e313]:
+              - generic [ref=f2e314]: Python
+              - generic [ref=f2e315]: RDKit
+              - generic [ref=f2e316]: scikit-learn
+              - generic [ref=f2e317]: Mordred
+          - paragraph [ref=f2e318]:
+            - generic [ref=f2e319]: Open in Colab →
+        - paragraph [ref=f2e320]:
+          - link [ref=f2e321] [cursor=pointer]:
+            - /url: https://colab.research.google.com/drive/1ths5Mb1sHos6y5qcnodcWOnw-XR-Mw8w?usp=sharing
+  - contentinfo [ref=f2e322]:
+    - paragraph [ref=f2e326]: © Copyright 2026, Jubayer Hossain

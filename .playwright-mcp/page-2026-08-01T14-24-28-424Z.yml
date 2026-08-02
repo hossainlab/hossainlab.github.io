@@ -1,0 +1,107 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "Jubayer Hossain" [ref=e6] [cursor=pointer]:
+          - /url: http://localhost:8899/
+        - generic "Search" [ref=e7]:
+          - combobox "Search" [ref=e8]:
+            - button "Search" [ref=e9] [cursor=pointer]
+        - menu "Toggle navigation" [ref=e13] [cursor=pointer]
+        - text:        
+  - banner [ref=e15]:
+    - generic [ref=e17]:
+      - heading "Mentorship" [level=1] [ref=e18]
+      - paragraph [ref=e19]: Students and early-career researchers I have mentored in bioinformatics and computational biology
+  - main [ref=e21]:
+    - generic [ref=e22]:
+      - generic [ref=e23]: Currently Mentoring
+      - heading [level=2] [ref=e24]:
+        - text: Current Mentees
+        - link "Anchor" [ref=e25] [cursor=pointer]:
+          - /url: "#current-mentees"
+          - text: 
+      - paragraph [ref=e26]: Researchers presently working with me on active projects and internships.
+    - generic [ref=e28]:
+      - generic [ref=e29]:
+        - img "Dhruba Chowdhury" [ref=e31]
+        - generic [ref=e32]: Dhruba Chowdhury
+        - generic [ref=e33]: University of Dhaka
+        - generic [ref=e34]:
+          - generic [ref=e35]: GSA Bioinformatics Internship
+          - generic [ref=e36]: Cohort 02 · 6 months
+      - generic [ref=e37]:
+        - img "Md. Aftabur Rahman" [ref=e39]
+        - generic [ref=e40]: Md. Aftabur Rahman
+        - generic [ref=e41]: Jahangirnagar University
+        - generic [ref=e42]:
+          - generic [ref=e43]: GSA Bioinformatics Internship
+          - generic [ref=e44]: Cohort 02 · 6 months
+      - generic [ref=e45]:
+        - img "Tahia Aswad Arony" [ref=e47]
+        - generic [ref=e48]: Tahia Aswad Arony
+        - generic [ref=e49]: North South University
+        - generic [ref=e50]:
+          - generic [ref=e51]: GSA Bioinformatics Internship
+          - generic [ref=e52]: Cohort 02 · 6 months
+      - generic [ref=e53]:
+        - img "Mahmuda Hoque" [ref=e55]
+        - generic [ref=e56]: Mahmuda Hoque
+        - generic [ref=e57]: BRAC University
+        - generic [ref=e58]:
+          - generic [ref=e59]: GSA Bioinformatics Internship
+          - generic [ref=e60]: Cohort 02 · 6 months
+      - generic [ref=e61]:
+        - img "Tasfia Nawar" [ref=e63]
+        - generic [ref=e64]: Tasfia Nawar
+        - generic [ref=e65]: North South University
+        - generic [ref=e66]:
+          - generic [ref=e67]: GSA Bioinformatics Internship
+          - generic [ref=e68]: Cohort 02 · 6 months
+    - generic [ref=e69]:
+      - generic [ref=e70]: Alumni
+      - heading [level=2] [ref=e71]:
+        - text: Past Mentees
+        - link "Anchor" [ref=e72] [cursor=pointer]:
+          - /url: "#past-mentees"
+          - text: 
+      - paragraph [ref=e73]: Mentees who have completed their training and moved on to graduate study, research, and industry roles.
+    - generic [ref=e75]:
+      - generic [ref=e76]:
+        - img "Md. Shakil Ahamed" [ref=e78]
+        - generic [ref=e79]: Md. Shakil Ahamed
+        - generic [ref=e80]: Mawlana Bhashani Science and Technology University
+        - generic [ref=e81]:
+          - generic [ref=e82]: GSA Bioinformatics Internship
+          - generic [ref=e83]: Cohort 01 · 6 months
+      - generic [ref=e84]:
+        - img "Rahnuma Tabassum" [ref=e86]
+        - generic [ref=e87]: Rahnuma Tabassum
+        - generic [ref=e88]: Biochemistry & Molecular Biology
+        - generic [ref=e89]: Jagannath University
+        - generic [ref=e90]:
+          - generic [ref=e91]: GSA Bioinformatics Internship
+          - generic [ref=e92]: Cohort 01 · 6 months
+      - generic [ref=e93]:
+        - img "Fayez Ahmad" [ref=e95]
+        - generic [ref=e96]: Fayez Ahmad
+        - generic [ref=e97]: Notre Dame College, Dhaka
+        - generic [ref=e98]:
+          - generic [ref=e99]: GSA Bioinformatics Internship
+          - generic [ref=e100]: Cohort 01 · 6 months
+      - generic [ref=e101]:
+        - img "Sabbir Khan" [ref=e103]
+        - generic [ref=e104]: Sabbir Khan
+        - generic [ref=e105]: Gazipur Agricultural University
+        - generic [ref=e106]:
+          - generic [ref=e107]: GSA Bioinformatics Internship
+          - generic [ref=e108]: Cohort 01 · 6 months
+      - generic [ref=e109]:
+        - img "Lamisa Manha Aditee" [ref=e111]
+        - generic [ref=e112]: Lamisa Manha Aditee
+        - generic [ref=e113]: BRAC University
+        - generic [ref=e114]:
+          - generic [ref=e115]: GSA Bioinformatics Internship
+          - generic [ref=e116]: Cohort 01 · 6 months
+  - contentinfo [ref=e117]:
+    - paragraph [ref=e121]: © Copyright 2026, Jubayer Hossain

@@ -1,0 +1,26 @@
+<div class="mentee-grid">
+<% for (const item of items) { %>
+<div class="mentee-card">
+<% if (item.photo) { %>
+<div class="mentee-photo-wrap"><img class="mentee-photo" src="<%= item.photo %>" alt="<%= item.title %>"></div>
+<% } else { %>
+<div class="mentee-avatar"><%= item.initial %></div>
+<% } %>
+<div class="mentee-name"><%= item.title %></div>
+<% if (item.department) { %>
+<div class="mentee-dept"><%= item.department %></div>
+<% } %>
+<% if (item.university) { %>
+<div class="mentee-univ"><%= item.university %></div>
+<% } %>
+<div class="mentee-meta">
+<% if (item.track) { %>
+<div class="mentee-track"><%= item.track %></div>
+<% } %>
+<% if (item.period) { %>
+<div class="mentee-period"><%= item.period %></div>
+<% } %>
+</div>
+</div>
+<% } %>
+</div>

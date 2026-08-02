@@ -104,6 +104,62 @@ ul.task-list li input[type="checkbox"] {
       window['quarto-listing-loaded']();
     }
   })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-pipelines .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-description','listing-category','listing-tools','listing-input','listing-output','listing-links',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-description","listing-category","listing-tools","listing-input","listing-output","listing-links"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-pipelines'] = new List('listing-pipelines', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-videos .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-course','listing-description','listing-playlist','listing-categories',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-course","listing-description","listing-playlist","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-videos'] = new List('listing-videos', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
   </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
@@ -160,43 +216,13 @@ window.Quarto = {
     <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-research" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Research</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-research">    
-        <li>
-    <a class="dropdown-item" href="../research/index.html">
- <span class="dropdown-text">Overview</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../projects/index.html">
- <span class="dropdown-text">Projects</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../projects/pipelines.html">
- <span class="dropdown-text">Pipelines</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-teaching" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Teaching</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-teaching">    
-        <li>
-    <a class="dropdown-item" href="../teaching/index.html">
- <span class="dropdown-text">Courses</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../teaching/videos.html">
- <span class="dropdown-text">Videos</span></a>
-  </li>  
-    </ul>
-  </li>
   <li class="nav-item">
-    <a class="nav-link" href="../tutorials/index.html"> 
-<span class="menu-text">Tutorials</span></a>
+    <a class="nav-link" href="../research/index.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../teaching/index.html" aria-current="page"> 
+<span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../publications/index.html"> 
@@ -255,14 +281,14 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page">
+    <div class="quarto-title column-page-left">
       <h1 class="title">Teaching</h1>
-            <p class="subtitle lead">Courses and workshops in bioinformatics, computational biology, and data science</p>
+            <p class="subtitle lead">Courses, hands-on analysis pipelines, and video lectures in bioinformatics, computational biology, and data science</p>
                       </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page">
+  <div class="quarto-title-meta column-page-left">
 
       
     
@@ -273,35 +299,30 @@ window.Quarto = {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
+    <h2 id="toc-title">On This Page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#sec-courses" id="toc-sec-courses" class="nav-link active" data-scroll-target="#sec-courses">Courses</a></li>
+  <li><a href="#sec-pipelines" id="toc-sec-pipelines" class="nav-link" data-scroll-target="#sec-pipelines">Pipelines</a></li>
+  <li><a href="#sec-videos" id="toc-sec-videos" class="nav-link" data-scroll-target="#sec-videos">Videos</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
 
 
 
 
+<div class="tut-section-head">
+<span class="tut-eyebrow">Courses &amp; Workshops</span>
+<section id="sec-courses" class="level2 tut-section-title">
+<h2 class="tut-section-title anchored" data-anchor-id="sec-courses">Courses</h2>
+</section></div>
 <div id="listing-courses" class="quarto-listing quarto-listing-container-custom">
-<div class="category-filters">
-<p><button class="category-btn active" data-category="all">All</button></p>
-<p><button class="category-btn" data-category="AI">AI</button></p>
-<p><button class="category-btn" data-category="Bioinformatics">Bioinformatics</button></p>
-<p><button class="category-btn" data-category="Cancer Genomics">Cancer Genomics</button></p>
-<p><button class="category-btn" data-category="Data Science">Data Science</button></p>
-<p><button class="category-btn" data-category="Drug Discovery">Drug Discovery</button></p>
-<p><button class="category-btn" data-category="Genomics">Genomics</button></p>
-<p><button class="category-btn" data-category="Global South">Global South</button></p>
-<p><button class="category-btn" data-category="Life Sciences">Life Sciences</button></p>
-<p><button class="category-btn" data-category="Machine Learning">Machine Learning</button></p>
-<p><button class="category-btn" data-category="Mentorship">Mentorship</button></p>
-<p><button class="category-btn" data-category="NGS">NGS</button></p>
-<p><button class="category-btn" data-category="Reproducible Research">Reproducible Research</button></p>
-<p><button class="category-btn" data-category="Research">Research</button></p>
-<p><button class="category-btn" data-category="Single-Cell">Single-Cell</button></p>
-<p><button class="category-btn" data-category="Statistics">Statistics</button></p>
-<p><button class="category-btn" data-category="Transcriptomics">Transcriptomics</button></p>
-<p><button class="category-btn" data-category="Workflows">Workflows</button></p>
-</div>
 <div class="project-grid">
 <div class="project-card" data-categories="Mentorship,Bioinformatics,Global South">
 <div class="project-image">
@@ -607,26 +628,362 @@ Taught at CBLAST, University of Dhaka, this course introduces biologists to data
 </div>
 </div>
 </div>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".category-filters").forEach(function (filterBar) {
-    var grid = filterBar.nextElementSibling;
-    filterBar.addEventListener("click", function (e) {
-      var btn = e.target.closest(".category-btn");
-      if (!btn) return;
-      filterBar.querySelectorAll(".category-btn").forEach(function (b) { b.classList.remove("active"); });
-      btn.classList.add("active");
-      var cat = btn.getAttribute("data-category");
-      grid.querySelectorAll(".project-card").forEach(function (card) {
-        var cats = card.getAttribute("data-categories");
-        card.style.display = (cat === "all" || cats.split(",").indexOf(cat) !== -1) ? "" : "none";
-      });
-    });
-  });
-});
-</script>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
+<div class="tut-section-head tut-section-head-alt">
+<span class="tut-eyebrow">Hands-On Notebooks</span>
+
+<section id="sec-pipelines" class="level2 tut-section-title">
+<h2 class="tut-section-title anchored" data-anchor-id="sec-pipelines">Pipelines</h2>
+</section></div>
+<div id="listing-pipelines" class="quarto-listing quarto-listing-container-custom">
+<div class="pipe-grid">
+<a class="pipe-card" data-categories="RNA-Seq" href="https://github.com/hossainlab/salmon-rnaseq" target="_blank" rel="noopener">
+<div class="pipe-banner pipe-banner-rna-seq">
+<img class="pipe-svg" src="../files/tutorials/rna-seq.svg" alt="Sequencing reads aligned to a transcript, quantified into an expression bar chart">
+</div>
+<div class="pipe-body">
+<div class="pipe-cat">
+RNA-Seq
+</div>
+<div class="pipe-title">
+End-to-end bulk RNA-seq Quantification Pipeline using Salmon
+</div>
+<div class="pipe-desc">
+A complete pipeline for pseudo-alignment and quantification of bulk RNA-seq data using Salmon — from raw sequencing reads to transcript-level abundance estimates ready for downstream differential expression analysis.
+</div>
+<div class="pipe-io">
+<div class="pipe-io-row">
+<span class="pipe-io-key">In</span><span class="pipe-io-val">Raw FASTQ files, reference transcriptome</span>
+</div>
+<div class="pipe-io-row">
+<span class="pipe-io-key">Out</span><span class="pipe-io-val">Transcript/gene-level count matrix, quantification summary</span>
+</div>
+</div>
+<div class="pipe-tags">
+<span class="pipe-tag">Python</span> <span class="pipe-tag">Salmon</span> <span class="pipe-tag">tximeta</span> <span class="pipe-tag">DESeq2</span>
+</div>
+<div class="pipe-cta pipe-cta-github">
+View on GitHub →
+</div>
+</div>
+</a><a class="pipe-card" data-categories="RNA-Seq" href="https://github.com/hossainlab/nf-core-rnaseqmeta" target="_blank" rel="noopener">
+<div class="pipe-banner pipe-banner-rna-seq">
+<img class="pipe-svg" src="../files/tutorials/rna-seq.svg" alt="Sequencing reads aligned to a transcript, quantified into an expression bar chart">
+</div>
+<div class="pipe-body">
+<div class="pipe-cat">
+RNA-Seq
+</div>
+<div class="pipe-title">
+nf-core/rnaseqmeta: A Nextflow Pipeline for Meta-Analysis of RNA-seq Datasets
+</div>
+<div class="pipe-desc">
+A Nextflow-based pipeline for reproducible meta-analysis of multiple RNA-seq datasets — automating sample retrieval, quality control, quantification, batch correction, and integrated differential expression analysis across studies.
+</div>
+<div class="pipe-io">
+<div class="pipe-io-row">
+<span class="pipe-io-key">In</span><span class="pipe-io-val">Multiple RNA-seq datasets (FASTQ or SRA accessions), sample sheets</span>
+</div>
+<div class="pipe-io-row">
+<span class="pipe-io-key">Out</span><span class="pipe-io-val">Integrated count matrix, cross-study DE results, batch-corrected expression profiles</span>
+</div>
+</div>
+<div class="pipe-tags">
+<span class="pipe-tag">Nextflow</span> <span class="pipe-tag">nf-core</span> <span class="pipe-tag">Salmon</span> <span class="pipe-tag">DESeq2</span>
+</div>
+<div class="pipe-cta pipe-cta-github">
+View on GitHub →
+</div>
+</div>
+</a><a class="pipe-card" data-categories="Single-Cell" href="https://colab.research.google.com/drive/1i9WxmUjSq3mNoPostbJLSu6eeNi8vqgE?usp=sharing" target="_blank" rel="noopener">
+<div class="pipe-banner pipe-banner-single-cell">
+<img class="pipe-svg" src="../files/tutorials/single-cell.svg" alt="Single cells encapsulated in droplets resolving into UMAP clusters">
+</div>
+<div class="pipe-body">
+<div class="pipe-cat">
+Single-Cell
+</div>
+<div class="pipe-title">
+Fast and efficient preprocessing of scRNA-seq with kallisto | bustools | kb-python
+</div>
+<div class="pipe-desc">
+End-to-end pipeline for scRNA-seq preprocessing using kallisto, bustools, and kb-python — from raw FASTQ files to filtered count matrices ready for downstream analysis with scanpy.
+</div>
+<div class="pipe-io">
+<div class="pipe-io-row">
+<span class="pipe-io-key">In</span><span class="pipe-io-val">Raw FASTQ files (10x Chromium or similar)</span>
+</div>
+<div class="pipe-io-row">
+<span class="pipe-io-key">Out</span><span class="pipe-io-val">Filtered cell × gene count matrix, QC metrics</span>
+</div>
+</div>
+<div class="pipe-tags">
+<span class="pipe-tag">Python</span> <span class="pipe-tag">kallisto</span> <span class="pipe-tag">bustools</span> <span class="pipe-tag">kb-python</span> <span class="pipe-tag">scanpy</span>
+</div>
+<div class="pipe-cta pipe-cta-colab">
+Open in Colab →
+</div>
+</div>
+</a><a class="pipe-card" data-categories="Single-Cell" href="https://colab.research.google.com/drive/1MyBbAQvTKGLFOpPAP-w3hedyXs-l0Vff?usp=sharing" target="_blank" rel="noopener">
+<div class="pipe-banner pipe-banner-single-cell">
+<img class="pipe-svg" src="../files/tutorials/single-cell.svg" alt="Single cells encapsulated in droplets resolving into UMAP clusters">
+</div>
+<div class="pipe-body">
+<div class="pipe-cat">
+Single-Cell
+</div>
+<div class="pipe-title">
+A Practical Guide for Single-Cell Data Analysis with scverse Ecosystem
+</div>
+<div class="pipe-desc">
+Comprehensive walkthrough of the scverse single-cell analysis workflow — covering quality control, normalization, dimensionality reduction, clustering, marker gene identification, and cell type annotation using scanpy and related tools.
+</div>
+<div class="pipe-io">
+<div class="pipe-io-row">
+<span class="pipe-io-key">In</span><span class="pipe-io-val">Count matrix (AnnData .h5ad or 10x format)</span>
+</div>
+<div class="pipe-io-row">
+<span class="pipe-io-key">Out</span><span class="pipe-io-val">Annotated cell clusters, UMAP embeddings, marker genes, cell type labels</span>
+</div>
+</div>
+<div class="pipe-tags">
+<span class="pipe-tag">Python</span> <span class="pipe-tag">scanpy</span> <span class="pipe-tag">scvi-tools</span> <span class="pipe-tag">AnnData</span>
+</div>
+<div class="pipe-cta pipe-cta-colab">
+Open in Colab →
+</div>
+</div>
+</a><a class="pipe-card" data-categories="Protein Structure Prediction" href="https://colab.research.google.com/drive/1PQS5EWpGP5aWJ4KtrGlKetCidA44RySx?usp=sharing" target="_blank" rel="noopener">
+<div class="pipe-banner pipe-banner-protein-structure-prediction">
+<img class="pipe-svg" src="../files/tutorials/protein-structure-prediction.svg" alt="Amino acid sequence folding into a predicted three-dimensional protein structure">
+</div>
+<div class="pipe-body">
+<div class="pipe-cat">
+Protein Structure Prediction
+</div>
+<div class="pipe-title">
+Predicting Protein Structures with ColabFold and AlphaFold2 in Google Colab
+</div>
+<div class="pipe-desc">
+Predict 3D protein structures from amino acid sequences using ColabFold’s accelerated AlphaFold2 pipeline — with MSA generation via MMseqs2 and interactive structure visualization directly in the browser.
+</div>
+<div class="pipe-io">
+<div class="pipe-io-row">
+<span class="pipe-io-key">In</span><span class="pipe-io-val">Amino acid sequence (FASTA format)</span>
+</div>
+<div class="pipe-io-row">
+<span class="pipe-io-key">Out</span><span class="pipe-io-val">Predicted 3D structures (PDB), confidence scores (pLDDT), PAE plots</span>
+</div>
+</div>
+<div class="pipe-tags">
+<span class="pipe-tag">Python</span> <span class="pipe-tag">ColabFold</span> <span class="pipe-tag">AlphaFold2</span> <span class="pipe-tag">MMseqs2</span> <span class="pipe-tag">py3Dmol</span>
+</div>
+<div class="pipe-cta pipe-cta-colab">
+Open in Colab →
+</div>
+</div>
+</a><a class="pipe-card" data-categories="Protein Structure Prediction" href="https://colab.research.google.com/drive/1MzmcvZTvpvGEyTQdJIt5DCVn9mJOZS1J?usp=sharing" target="_blank" rel="noopener">
+<div class="pipe-banner pipe-banner-protein-structure-prediction">
+<img class="pipe-svg" src="../files/tutorials/protein-structure-prediction.svg" alt="Amino acid sequence folding into a predicted three-dimensional protein structure">
+</div>
+<div class="pipe-body">
+<div class="pipe-cat">
+Protein Structure Prediction
+</div>
+<div class="pipe-title">
+Boltz2-Notebook: Diffusion-Based Protein–Ligand Structure Prediction &amp; Affinity Analysis
+</div>
+<div class="pipe-desc">
+Predict protein–ligand complex structures and binding affinities using the Boltz2 diffusion model — enabling rapid in silico docking and interaction analysis without traditional molecular dynamics simulations.
+</div>
+<div class="pipe-io">
+<div class="pipe-io-row">
+<span class="pipe-io-key">In</span><span class="pipe-io-val">Protein sequence and ligand SMILES/SDF</span>
+</div>
+<div class="pipe-io-row">
+<span class="pipe-io-key">Out</span><span class="pipe-io-val">Predicted complex structures (PDB), binding affinity scores, interaction maps</span>
+</div>
+</div>
+<div class="pipe-tags">
+<span class="pipe-tag">Python</span> <span class="pipe-tag">Boltz2</span> <span class="pipe-tag">RDKit</span> <span class="pipe-tag">py3Dmol</span>
+</div>
+<div class="pipe-cta pipe-cta-colab">
+Open in Colab →
+</div>
+</div>
+</a><a class="pipe-card" data-categories="Drug Discovery" href="https://colab.research.google.com/drive/124b2zhlFujYBk2cGoT64DWPTwr0SB-Ph?usp=sharing" target="_blank" rel="noopener">
+<div class="pipe-banner pipe-banner-drug-discovery">
+<img class="pipe-svg" src="../files/tutorials/drug-discovery.svg" alt="Compound library screened through a machine learning funnel down to ranked hit molecules">
+</div>
+<div class="pipe-body">
+<div class="pipe-cat">
+Drug Discovery
+</div>
+<div class="pipe-title">
+AI in Drug Discovery: Molecular Property Prediction and Virtual Screening
+</div>
+<div class="pipe-desc">
+End-to-end pipeline for AI-driven drug discovery — covering molecular featurization, toxicity prediction, ADMET property modeling, and virtual screening of compound libraries using machine learning and cheminformatics tools.
+</div>
+<div class="pipe-io">
+<div class="pipe-io-row">
+<span class="pipe-io-key">In</span><span class="pipe-io-val">Compound libraries (SMILES), molecular descriptors</span>
+</div>
+<div class="pipe-io-row">
+<span class="pipe-io-key">Out</span><span class="pipe-io-val">Toxicity predictions, ADMET profiles, ranked hit compounds</span>
+</div>
+</div>
+<div class="pipe-tags">
+<span class="pipe-tag">Python</span> <span class="pipe-tag">RDKit</span> <span class="pipe-tag">DeepChem</span> <span class="pipe-tag">scikit-learn</span>
+</div>
+<div class="pipe-cta pipe-cta-colab">
+Open in Colab →
+</div>
+</div>
+</a><a class="pipe-card" data-categories="Drug Discovery" href="https://colab.research.google.com/drive/1ths5Mb1sHos6y5qcnodcWOnw-XR-Mw8w?usp=sharing" target="_blank" rel="noopener">
+<div class="pipe-banner pipe-banner-drug-discovery">
+<img class="pipe-svg" src="../files/tutorials/drug-discovery.svg" alt="Compound library screened through a machine learning funnel down to ranked hit molecules">
+</div>
+<div class="pipe-body">
+<div class="pipe-cat">
+Drug Discovery
+</div>
+<div class="pipe-title">
+AI in Drug Discovery: In Silico Toxicology Modeling
+</div>
+<div class="pipe-desc">
+Build machine learning models to predict compound toxicity from molecular structure — covering molecular fingerprint generation, toxicity endpoint classification, structure–activity relationship analysis, and model interpretation for safety assessment in early-stage drug discovery.
+</div>
+<div class="pipe-io">
+<div class="pipe-io-row">
+<span class="pipe-io-key">In</span><span class="pipe-io-val">Chemical compounds (SMILES), toxicity endpoint labels</span>
+</div>
+<div class="pipe-io-row">
+<span class="pipe-io-key">Out</span><span class="pipe-io-val">Toxicity classification models, SAR insights, safety predictions</span>
+</div>
+</div>
+<div class="pipe-tags">
+<span class="pipe-tag">Python</span> <span class="pipe-tag">RDKit</span> <span class="pipe-tag">scikit-learn</span> <span class="pipe-tag">Mordred</span>
+</div>
+<div class="pipe-cta pipe-cta-colab">
+Open in Colab →
+</div>
+</div>
+</a>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+<div class="tut-section-head tut-section-head-alt">
+<span class="tut-eyebrow">Video Lectures</span>
+
+<section id="sec-videos" class="level2 tut-section-title">
+<h2 class="tut-section-title anchored" data-anchor-id="sec-videos">Videos</h2>
+</section></div>
+<div id="listing-videos" class="quarto-listing quarto-listing-container-custom">
+<div class="playlist-grid">
+<div class="playlist-card" data-categories="Statistics,R">
+<div class="playlist-body">
+<h3 class="playlist-title anchored">
+R for Research
+</h3>
+<p class="playlist-desc">
+Video lectures covering R programming fundamentals, data manipulation, statistical testing, and visualization for researchers.
+</p>
+<div class="project-tags">
+<span class="tag">Statistics</span> <span class="tag">R</span>
+</div>
+<p><a href="https://www.youtube.com/playlist?list=PLQtDkvtE4BUa05wsFn5OWHEapIiSEYp7T" class="project-btn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 461.001 461.001" style="vertical-align:-2px;margin-right:4px;"><path d="M365.257 67.393H95.744C42.866 67.393 0 110.259 0 163.137v134.728c0 52.878 42.866 95.744 95.744 95.744h269.513c52.878 0 95.744-42.866 95.744-95.744V163.137c0-52.878-42.866-95.744-95.744-95.744zm-134.952 224.69V169.919l127.468 61.082-127.468 61.082z" fill="#FF0000"></path></svg> Watch Playlist</a></p>
+</div>
+</div>
+<div class="playlist-card" data-categories="Machine Learning,Bioinformatics">
+<div class="playlist-body">
+<h3 class="playlist-title anchored">
+Machine Learning for Bioinformatics
+</h3>
+<p class="playlist-desc">
+Hands-on video tutorials applying machine learning techniques to biological and genomic datasets.
+</p>
+<div class="project-tags">
+<span class="tag">Machine Learning</span> <span class="tag">Bioinformatics</span>
+</div>
+<p><a href="https://www.youtube.com/playlist?list=PLQtDkvtE4BUaCZuWpLiM5bV5--gjuY5ZI" class="project-btn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 461.001 461.001" style="vertical-align:-2px;margin-right:4px;"><path d="M365.257 67.393H95.744C42.866 67.393 0 110.259 0 163.137v134.728c0 52.878 42.866 95.744 95.744 95.744h269.513c52.878 0 95.744-42.866 95.744-95.744V163.137c0-52.878-42.866-95.744-95.744-95.744zm-134.952 224.69V169.919l127.468 61.082-127.468 61.082z" fill="#FF0000"></path></svg> Watch Playlist</a></p>
+</div>
+</div>
+<div class="playlist-card" data-categories="Genomics,R">
+<div class="playlist-body">
+<h3 class="playlist-title anchored">
+RNA-Seq Analysis with R
+</h3>
+<p class="playlist-desc">
+Step-by-step video tutorials on bulk RNA-seq analysis using R and Bioconductor, from raw counts to biological interpretation.
+</p>
+<div class="project-tags">
+<span class="tag">Genomics</span> <span class="tag">R</span>
+</div>
+<p><a href="https://www.youtube.com/playlist?list=PLQtDkvtE4BUZUHltq6DJ5KGrncv0gn_Zj" class="project-btn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 461.001 461.001" style="vertical-align:-2px;margin-right:4px;"><path d="M365.257 67.393H95.744C42.866 67.393 0 110.259 0 163.137v134.728c0 52.878 42.866 95.744 95.744 95.744h269.513c52.878 0 95.744-42.866 95.744-95.744V163.137c0-52.878-42.866-95.744-95.744-95.744zm-134.952 224.69V169.919l127.468 61.082-127.468 61.082z" fill="#FF0000"></path></svg> Watch Playlist</a></p>
+</div>
+</div>
+<div class="playlist-card" data-categories="Machine Learning,Drug Discovery">
+<div class="playlist-body">
+<h3 class="playlist-title anchored">
+AI for Drug Discovery
+</h3>
+<p class="playlist-desc">
+Video series introducing AI-powered approaches to drug discovery, including toxicology modeling and structure-activity analysis.
+</p>
+<div class="project-tags">
+<span class="tag">Machine Learning</span> <span class="tag">Drug Discovery</span>
+</div>
+<p><a href="https://www.youtube.com/playlist?list=PLQtDkvtE4BUYu0_nHZ4m9JcSHtLbJ_HUM" class="project-btn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 461.001 461.001" style="vertical-align:-2px;margin-right:4px;"><path d="M365.257 67.393H95.744C42.866 67.393 0 110.259 0 163.137v134.728c0 52.878 42.866 95.744 95.744 95.744h269.513c52.878 0 95.744-42.866 95.744-95.744V163.137c0-52.878-42.866-95.744-95.744-95.744zm-134.952 224.69V169.919l127.468 61.082-127.468 61.082z" fill="#FF0000"></path></svg> Watch Playlist</a></p>
+</div>
+</div>
+<div class="playlist-card" data-categories="Cancer Genomics,Bioinformatics">
+<div class="playlist-body">
+<h3 class="playlist-title anchored">
+Cancer Bioinformatics
+</h3>
+<p class="playlist-desc">
+Video tutorials on cancer genomics analysis, covering TCGA data access, mutation analysis, survival modeling, and multi-omics integration.
+</p>
+<div class="project-tags">
+<span class="tag">Cancer Genomics</span> <span class="tag">Bioinformatics</span>
+</div>
+<p><a href="https://www.youtube.com/playlist?list=PLQtDkvtE4BUazUbCqCGNrsziV2heHcR2V" class="project-btn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 461.001 461.001" style="vertical-align:-2px;margin-right:4px;"><path d="M365.257 67.393H95.744C42.866 67.393 0 110.259 0 163.137v134.728c0 52.878 42.866 95.744 95.744 95.744h269.513c52.878 0 95.744-42.866 95.744-95.744V163.137c0-52.878-42.866-95.744-95.744-95.744zm-134.952 224.69V169.919l127.468 61.082-127.468 61.082z" fill="#FF0000"></path></svg> Watch Playlist</a></p>
+</div>
+</div>
+<div class="playlist-card" data-categories="Academic Writing">
+<div class="playlist-body">
+<h3 class="playlist-title anchored">
+Academic Writing
+</h3>
+<p class="playlist-desc">
+Video lectures on scientific writing, manuscript preparation, and publishing in peer-reviewed journals.
+</p>
+<div class="project-tags">
+<span class="tag">Academic Writing</span>
+</div>
+<p><a href="https://www.youtube.com/playlist?list=PLQtDkvtE4BUba95QvQBoaKEALyRO-VBoS" class="project-btn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 461.001 461.001" style="vertical-align:-2px;margin-right:4px;"><path d="M365.257 67.393H95.744C42.866 67.393 0 110.259 0 163.137v134.728c0 52.878 42.866 95.744 95.744 95.744h269.513c52.878 0 95.744-42.866 95.744-95.744V163.137c0-52.878-42.866-95.744-95.744-95.744zm-134.952 224.69V169.919l127.468 61.082-127.468 61.082z" fill="#FF0000"></path></svg> Watch Playlist</a></p>
+</div>
+</div>
+<div class="playlist-card" data-categories="Python,Data Science">
+<div class="playlist-body">
+<h3 class="playlist-title anchored">
+Python for Health Data Analytics
+</h3>
+<p class="playlist-desc">
+Video tutorials on using Python for health data analysis, covering data wrangling, visualization, and statistical methods for public health and clinical datasets.
+</p>
+<div class="project-tags">
+<span class="tag">Python</span> <span class="tag">Data Science</span>
+</div>
+<p><a href="https://www.youtube.com/playlist?list=PLQtDkvtE4BUYqRQa6Lev4NFg5MJ4fuKsw" class="project-btn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 461.001 461.001" style="vertical-align:-2px;margin-right:4px;"><path d="M365.257 67.393H95.744C42.866 67.393 0 110.259 0 163.137v134.728c0 52.878 42.866 95.744 95.744 95.744h269.513c52.878 0 95.744-42.866 95.744-95.744V163.137c0-52.878-42.866-95.744-95.744-95.744zm-134.952 224.69V169.919l127.468 61.082-127.468 61.082z" fill="#FF0000"></path></svg> Watch Playlist</a></p>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+
 
 
 

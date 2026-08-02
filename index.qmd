@@ -1,6 +1,6 @@
 ---
 title: "Jubayer Hossain"
-subtitle: "Researcher, Educator & Entrepreneur"
+subtitle: "Multiomics Scientist"
 description-meta: "Quarto Academic Website for Jubayer"
 image: files/profiles/jubayer.jpg
 page-layout: full
@@ -25,14 +25,94 @@ about:
 
 ::: {#hero-heading}
 
-<div class="research-svg-container">
-![](files/research/harmonized-atlas.svg){width=100% style="display:block; margin:0 auto;" loading="lazy"}
-</div>
+Multiomics scientist decoding cancer biology by integrating bulk, single-cell, and spatial transcriptomics with multi-omics data.
 
-<div class="ro-why-box ro-why-box-sc" style="margin-top: 1.5rem; text-align: left;">
-<span class="ro-why-label">Current Research Focus</span>
-**Harmonized Cell Atlas:** Individual single-cell studies often involve a small number of tumors and cells, which can limit the generalizability of findings. To overcome this, I am integrating diverse single-cell datasets into a **harmonized cell atlas** covering thousands of cells across patients. By leveraging publicly available data and deep generative modeling (scVI), this framework builds a comprehensive reference for understanding cellular heterogeneity in health and disease. [Explore my research projects &rarr;](projects/index.qmd)
+I build reproducible computational workflows on public omics data — meta-analysing bulk RNA-seq cohorts, constructing harmonised single-cell atlases, and applying machine learning to high-dimensional data for biomarker discovery.
+
+Alongside research, I founded [DeepBio Limited](https://deepbioltd.com), a Dhaka-based AI and bioinformatics startup, and [CHIRAL Bangladesh](https://chiralbd.org), a non-profit research institute that has trained 3,000+ early-career researchers across Bangladesh. I teach bioinformatics through [DeepBio Academy](https://deepbioacademy.com) and mentor students moving from raw sequencing data to published analysis.
+
+```{=html}
+<div class="expertise-grid">
+
+<a class="expertise-card" href="projects/index.html">
+<span class="expertise-fig">
+<svg viewBox="0 0 160 90" role="img" aria-label="Bulk RNA-Seq: sequencing reads stacked over an exon model with a coverage profile">
+<rect x="0" y="0" width="160" height="90" fill="none"/>
+<path d="M8 34 C 28 4, 48 4, 62 24 C 74 42, 92 12, 106 22 C 120 32, 134 26, 152 34 L152 40 L8 40 Z" fill="#dbeafe"/>
+<path d="M8 34 C 28 4, 48 4, 62 24 C 74 42, 92 12, 106 22 C 120 32, 134 26, 152 34" fill="none" stroke="#2b6cb0" stroke-width="2" stroke-linecap="round"/>
+<line x1="8" y1="52" x2="152" y2="52" stroke="#94a3b8" stroke-width="1.5"/>
+<rect x="14" y="46" width="26" height="12" rx="2" fill="#2b6cb0"/>
+<rect x="58" y="46" width="20" height="12" rx="2" fill="#2b6cb0"/>
+<rect x="96" y="46" width="30" height="12" rx="2" fill="#2b6cb0"/>
+<rect x="138" y="46" width="14" height="12" rx="2" fill="#2b6cb0"/>
+<rect x="16" y="66" width="30" height="4" rx="2" fill="#60a5fa"/>
+<rect x="52" y="66" width="30" height="4" rx="2" fill="#60a5fa"/>
+<rect x="98" y="66" width="30" height="4" rx="2" fill="#60a5fa"/>
+<rect x="30" y="74" width="30" height="4" rx="2" fill="#93c5fd"/>
+<rect x="72" y="74" width="30" height="4" rx="2" fill="#93c5fd"/>
+<rect x="114" y="74" width="30" height="4" rx="2" fill="#93c5fd"/>
+<rect x="10" y="82" width="30" height="4" rx="2" fill="#bfdbfe"/>
+<rect x="86" y="82" width="30" height="4" rx="2" fill="#bfdbfe"/>
+</svg>
+</span>
+<span class="expertise-title">Bulk RNA-Seq</span>
+<span class="expertise-desc">Differential expression, pathway &amp; signature analysis across patient cohorts.</span>
+</a>
+
+<a class="expertise-card" href="projects/index.html">
+<span class="expertise-fig">
+<svg viewBox="0 0 160 90" role="img" aria-label="Single-cell: UMAP embedding with distinct coloured cell clusters">
+<rect x="0" y="0" width="160" height="90" fill="none"/>
+<ellipse cx="40" cy="28" rx="26" ry="19" fill="#e0e7ff"/>
+<ellipse cx="112" cy="34" rx="24" ry="17" fill="#dcfce7"/>
+<ellipse cx="72" cy="68" rx="27" ry="16" fill="#fee2e2"/>
+<g fill="#4f46e5">
+<circle cx="30" cy="22" r="3"/><circle cx="42" cy="18" r="3"/><circle cx="52" cy="27" r="3"/>
+<circle cx="34" cy="34" r="3"/><circle cx="46" cy="31" r="3"/><circle cx="24" cy="30" r="3"/>
+<circle cx="40" cy="41" r="3"/><circle cx="55" cy="37" r="2.5"/>
+</g>
+<g fill="#16a34a">
+<circle cx="104" cy="27" r="3"/><circle cx="116" cy="24" r="3"/><circle cx="124" cy="34" r="3"/>
+<circle cx="108" cy="38" r="3"/><circle cx="120" cy="42" r="3"/><circle cx="98" cy="35" r="3"/>
+<circle cx="130" cy="27" r="2.5"/>
+</g>
+<g fill="#dc2626">
+<circle cx="60" cy="64" r="3"/><circle cx="72" cy="60" r="3"/><circle cx="84" cy="65" r="3"/>
+<circle cx="66" cy="73" r="3"/><circle cx="79" cy="74" r="3"/><circle cx="92" cy="70" r="2.5"/>
+<circle cx="52" cy="71" r="2.5"/>
+</g>
+<path d="M12 84 L12 60" stroke="#cbd5e1" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M12 84 L36 84" stroke="#cbd5e1" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
+</span>
+<span class="expertise-title">Single-Cell</span>
+<span class="expertise-desc">Cell-state atlases, trajectory &amp; cell–cell communication from scRNA-seq.</span>
+</a>
+
+<a class="expertise-card" href="projects/index.html">
+<span class="expertise-fig">
+<svg viewBox="0 0 160 90" role="img" aria-label="Spatial transcriptomics: tissue section overlaid with a grid of expression-coloured capture spots">
+<rect x="0" y="0" width="160" height="90" fill="none"/>
+<path d="M20 62 C 10 34, 34 10, 66 12 C 104 14, 140 22, 146 46 C 151 68, 120 82, 88 80 C 54 78, 28 80, 20 62 Z" fill="#faf5ff" stroke="#a855f7" stroke-width="2"/>
+<g>
+<circle cx="44" cy="30" r="5" fill="#c4b5fd"/><circle cx="60" cy="26" r="5" fill="#a78bfa"/>
+<circle cx="76" cy="28" r="5" fill="#7c3aed"/><circle cx="92" cy="30" r="5" fill="#a78bfa"/>
+<circle cx="108" cy="34" r="5" fill="#ddd6fe"/>
+<circle cx="36" cy="46" r="5" fill="#ddd6fe"/><circle cx="52" cy="43" r="5" fill="#a78bfa"/>
+<circle cx="68" cy="44" r="5" fill="#7c3aed"/><circle cx="84" cy="45" r="5" fill="#7c3aed"/>
+<circle cx="100" cy="47" r="5" fill="#a78bfa"/><circle cx="116" cy="49" r="5" fill="#ddd6fe"/>
+<circle cx="44" cy="62" r="5" fill="#ddd6fe"/><circle cx="60" cy="61" r="5" fill="#c4b5fd"/>
+<circle cx="76" cy="62" r="5" fill="#a78bfa"/><circle cx="92" cy="63" r="5" fill="#c4b5fd"/>
+<circle cx="108" cy="64" r="5" fill="#ede9fe"/>
+</g>
+</svg>
+</span>
+<span class="expertise-title">Spatial Transcriptomics</span>
+<span class="expertise-desc">Tissue architecture, niche deconvolution &amp; spatially resolved gene programmes.</span>
+</a>
+
 </div>
+```
 
 :::
 

@@ -1,10 +1,18 @@
 [
   {
-    "listing": "/teaching/index.html",
+    "listing": "/tutorials/scpy/index.html",
     "items": []
   },
   {
-    "listing": "/mentoring/index.html",
+    "listing": "/tutorials/nextflow/index.html",
+    "items": []
+  },
+  {
+    "listing": "/research/index.html",
+    "items": []
+  },
+  {
+    "listing": "/projects/index.html",
     "items": []
   },
   {
@@ -17,15 +25,7 @@
     ]
   },
   {
-    "listing": "/projects/index.html",
-    "items": []
-  },
-  {
-    "listing": "/teaching/videos.html",
-    "items": []
-  },
-  {
-    "listing": "/projects/pipelines.html",
+    "listing": "/about/index.html",
     "items": []
   },
   {
@@ -33,27 +33,7 @@
     "items": []
   },
   {
-    "listing": "/mentorship/index.html",
-    "items": []
-  },
-  {
-    "listing": "/teaching-portfolio/index.html",
-    "items": []
-  },
-  {
-    "listing": "/tutorials/scpy/index.html",
-    "items": []
-  },
-  {
-    "listing": "/about/index.html",
-    "items": []
-  },
-  {
-    "listing": "/tutorials/nextflow/index.html",
-    "items": []
-  },
-  {
-    "listing": "/research/index.html",
+    "listing": "/teaching/index.html",
     "items": []
   }
 ]

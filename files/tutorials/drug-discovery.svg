@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 110" width="220" height="110" role="img" aria-label="Compound library screened through a machine learning funnel down to ranked hit molecules">
+  <g stroke="#ffffff" stroke-width="2.2" fill="none" opacity=".9">
+    <path d="M28 34 l12 -7 l12 7 l0 14 l-12 7 l-12 -7 z"/>
+    <path d="M52 48 l12 -7 l12 7 l0 14 l-12 7 l-12 -7 z" opacity=".7"/>
+    <path d="M28 62 l12 -7 l12 7 l0 14 l-12 7 l-12 -7 z" opacity=".5"/>
+  </g>
+  <path d="M96 55 L116 55 M109 48 L116 55 L109 62" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/>
+  <path d="M130 24 L206 24 L176 60 L176 82 L160 92 L160 60 Z" fill="#ffffff" opacity=".16"/>
+  <path d="M130 24 L206 24 L176 60 L176 82 L160 92 L160 60 Z" fill="none" stroke="#ffffff" stroke-width="2.2" opacity=".8" stroke-linejoin="round"/>
+  <g fill="#ffffff">
+    <circle cx="146" cy="33" r="3.4" opacity=".9"/>
+    <circle cx="160" cy="31" r="3.4" opacity=".7"/>
+    <circle cx="174" cy="34" r="3.4" opacity=".9"/>
+    <circle cx="188" cy="31" r="3.4" opacity=".6"/>
+    <circle cx="168" cy="48" r="3.4" opacity=".85"/>
+  </g>
+</svg>

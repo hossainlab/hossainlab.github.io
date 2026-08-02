@@ -35,6 +35,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="..//files/profiles/icon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -74,7 +76,93 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-ro-mentees .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-initial','listing-photo','listing-university','listing-department','listing-track','listing-period','listing-status',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-initial","listing-photo","listing-university","listing-department","listing-track","listing-period","listing-status"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-ro-mentees'] = new List('listing-ro-mentees', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-ro-collaborators .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-name','listing-photo','listing-initial','listing-title','listing-affiliation','listing-country','listing-url',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-name","listing-photo","listing-initial","listing-title","listing-affiliation","listing-country","listing-url"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-ro-collaborators'] = new List('listing-ro-collaborators', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -100,43 +188,13 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-research" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Research</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-research">    
-        <li>
-    <a class="dropdown-item" href="../research/index.html">
- <span class="dropdown-text">Overview</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../projects/index.html">
- <span class="dropdown-text">Projects</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../projects/pipelines.html">
- <span class="dropdown-text">Pipelines</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-teaching" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Teaching</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-teaching">    
-        <li>
-    <a class="dropdown-item" href="../teaching/index.html">
- <span class="dropdown-text">Courses</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../teaching/videos.html">
- <span class="dropdown-text">Videos</span></a>
-  </li>  
-    </ul>
-  </li>
   <li class="nav-item">
-    <a class="nav-link" href="../tutorials/index.html"> 
-<span class="menu-text">Tutorials</span></a>
+    <a class="nav-link active" href="../research/index.html" aria-current="page"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../teaching/index.html"> 
+<span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../publications/index.html"> 
@@ -195,14 +253,14 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page">
+    <div class="quarto-title column-page-left">
       <h1 class="title">Research Overview</h1>
             <p class="subtitle lead">Computational approaches to decode complex biological systems using public omics data</p>
                       </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page">
+  <div class="quarto-title-meta column-page-left">
 
       
     
@@ -213,51 +271,169 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
+    <h2 id="toc-title">On This Page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#sec-why" id="toc-sec-why" class="nav-link active" data-scroll-target="#sec-why">Utilizing Public Data</a></li>
+  <li><a href="#sec-modalities" id="toc-sec-modalities" class="nav-link" data-scroll-target="#sec-modalities">Three Data Modalities</a></li>
+  <li><a href="#sec-workflows" id="toc-sec-workflows" class="nav-link" data-scroll-target="#sec-workflows">Research Workflows</a></li>
+  <li><a href="#sec-mentoring" id="toc-sec-mentoring" class="nav-link" data-scroll-target="#sec-mentoring">Mentoring</a></li>
+  <li><a href="#sec-collaborators" id="toc-sec-collaborators" class="nav-link" data-scroll-target="#sec-collaborators">Collaborators</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
 
 
 
 
-<!-- ══════════════════════════════════════════════
-     WHY PUBLIC DATA — rationale strip
-═══════════════════════════════════════════════ -->
-<div class="ro-why-strip">
-<div class="ro-why-inner">
+<section id="sec-why" class="level2 ro-h2" data-eyebrow="Foundations">
+<h2 class="ro-h2 anchored" data-eyebrow="Foundations" data-anchor-id="sec-why">Utilizing Public Data</h2>
+<div class="ro-why-grid">
+
 <div class="ro-why-item">
-<span class="ro-why-icon">🔬</span>
-<div>
+<span class="ro-why-icon ro-why-icon-repro">
+<svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<path d="M20.5 12a8.5 8.5 0 0 1-14.6 5.9"></path><path d="M3.5 12A8.5 8.5 0 0 1 18.1 6.1"></path>
+<polyline points="18.4 2.6 18.4 6.6 14.4 6.6"></polyline><polyline points="5.6 21.4 5.6 17.4 9.6 17.4"></polyline>
+</svg>
+</span>
+<div class="ro-why-body">
 <strong>Reproducibility</strong>
 <p>All datasets are publicly archived — every analysis can be independently verified and extended.</p>
 </div>
 </div>
+
 <div class="ro-why-item">
-<span class="ro-why-icon">📊</span>
-<div>
+<span class="ro-why-icon ro-why-icon-scale">
+<svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<line x1="3" y1="21" x2="21" y2="21"></line><rect x="4.5" y="12" width="3.6" height="7"></rect>
+<rect x="10.2" y="7.5" width="3.6" height="11.5"></rect><rect x="15.9" y="3.5" width="3.6" height="15.5"></rect>
+</svg>
+</span>
+<div class="ro-why-body">
 <strong>Scale</strong>
 <p>Thousands of samples across tissues, diseases, and cohorts — far beyond single-lab capacity.</p>
 </div>
 </div>
+
 <div class="ro-why-item">
-<span class="ro-why-icon">💡</span>
-<div>
+<span class="ro-why-icon ro-why-icon-open">
+<svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path>
+<path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"></path>
+</svg>
+</span>
+<div class="ro-why-body">
 <strong>Open Science</strong>
 <p>FAIR data principles enable cross-study meta-analyses and collaborative discovery.</p>
 </div>
 </div>
+
 <div class="ro-why-item">
-<span class="ro-why-icon">⚙️</span>
-<div>
+<span class="ro-why-icon ro-why-icon-general">
+<svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+<polyline points="3 16.5 9 10.5 13 14.5 21 6.5"></polyline><polyline points="15.5 6.5 21 6.5 21 12"></polyline>
+<path d="M3 21h18"></path>
+</svg>
+</span>
+<div class="ro-why-body">
 <strong>Generalisability</strong>
 <p>Multi-cohort validation increases confidence that findings are not dataset-specific artefacts.</p>
 </div>
 </div>
-</div>
-</div>
 
+</div>
+</section>
+<section id="sec-modalities" class="level2 ro-h2" data-eyebrow="Research Areas">
+<h2 class="ro-h2 anchored" data-eyebrow="Research Areas" data-anchor-id="sec-modalities">Three Data Modalities</h2>
+<div class="expertise-grid">
 
+<a class="expertise-card" href="../projects/index.html">
+<span class="expertise-fig">
+<svg viewbox="0 0 160 90" role="img" aria-label="Bulk RNA-Seq: sequencing reads stacked over an exon model with a coverage profile">
+<rect x="0" y="0" width="160" height="90" fill="none"></rect>
+<path d="M8 34 C 28 4, 48 4, 62 24 C 74 42, 92 12, 106 22 C 120 32, 134 26, 152 34 L152 40 L8 40 Z" fill="#dbeafe"></path>
+<path d="M8 34 C 28 4, 48 4, 62 24 C 74 42, 92 12, 106 22 C 120 32, 134 26, 152 34" fill="none" stroke="#2b6cb0" stroke-width="2" stroke-linecap="round"></path>
+<line x1="8" y1="52" x2="152" y2="52" stroke="#94a3b8" stroke-width="1.5"></line>
+<rect x="14" y="46" width="26" height="12" rx="2" fill="#2b6cb0"></rect>
+<rect x="58" y="46" width="20" height="12" rx="2" fill="#2b6cb0"></rect>
+<rect x="96" y="46" width="30" height="12" rx="2" fill="#2b6cb0"></rect>
+<rect x="138" y="46" width="14" height="12" rx="2" fill="#2b6cb0"></rect>
+<rect x="16" y="66" width="30" height="4" rx="2" fill="#60a5fa"></rect>
+<rect x="52" y="66" width="30" height="4" rx="2" fill="#60a5fa"></rect>
+<rect x="98" y="66" width="30" height="4" rx="2" fill="#60a5fa"></rect>
+<rect x="30" y="74" width="30" height="4" rx="2" fill="#93c5fd"></rect>
+<rect x="72" y="74" width="30" height="4" rx="2" fill="#93c5fd"></rect>
+<rect x="114" y="74" width="30" height="4" rx="2" fill="#93c5fd"></rect>
+<rect x="10" y="82" width="30" height="4" rx="2" fill="#bfdbfe"></rect>
+<rect x="86" y="82" width="30" height="4" rx="2" fill="#bfdbfe"></rect>
+</svg>
+</span>
+<span class="expertise-title">Bulk RNA-Seq</span>
+<span class="expertise-desc">Differential expression, pathway &amp; signature analysis across patient cohorts.</span>
+</a>
+
+<a class="expertise-card" href="../projects/index.html">
+<span class="expertise-fig">
+<svg viewbox="0 0 160 90" role="img" aria-label="Single-cell: UMAP embedding with distinct coloured cell clusters">
+<rect x="0" y="0" width="160" height="90" fill="none"></rect>
+<ellipse cx="40" cy="28" rx="26" ry="19" fill="#e0e7ff"></ellipse>
+<ellipse cx="112" cy="34" rx="24" ry="17" fill="#dcfce7"></ellipse>
+<ellipse cx="72" cy="68" rx="27" ry="16" fill="#fee2e2"></ellipse>
+<g fill="#4f46e5">
+<circle cx="30" cy="22" r="3"></circle><circle cx="42" cy="18" r="3"></circle><circle cx="52" cy="27" r="3"></circle>
+<circle cx="34" cy="34" r="3"></circle><circle cx="46" cy="31" r="3"></circle><circle cx="24" cy="30" r="3"></circle>
+<circle cx="40" cy="41" r="3"></circle><circle cx="55" cy="37" r="2.5"></circle>
+</g>
+<g fill="#16a34a">
+<circle cx="104" cy="27" r="3"></circle><circle cx="116" cy="24" r="3"></circle><circle cx="124" cy="34" r="3"></circle>
+<circle cx="108" cy="38" r="3"></circle><circle cx="120" cy="42" r="3"></circle><circle cx="98" cy="35" r="3"></circle>
+<circle cx="130" cy="27" r="2.5"></circle>
+</g>
+<g fill="#dc2626">
+<circle cx="60" cy="64" r="3"></circle><circle cx="72" cy="60" r="3"></circle><circle cx="84" cy="65" r="3"></circle>
+<circle cx="66" cy="73" r="3"></circle><circle cx="79" cy="74" r="3"></circle><circle cx="92" cy="70" r="2.5"></circle>
+<circle cx="52" cy="71" r="2.5"></circle>
+</g>
+<path d="M12 84 L12 60" stroke="#cbd5e1" stroke-width="1.5" stroke-linecap="round"></path>
+<path d="M12 84 L36 84" stroke="#cbd5e1" stroke-width="1.5" stroke-linecap="round"></path>
+</svg>
+</span>
+<span class="expertise-title">Single-Cell</span>
+<span class="expertise-desc">Cell-state atlases, trajectory &amp; cell–cell communication from scRNA-seq.</span>
+</a>
+
+<a class="expertise-card" href="../projects/index.html">
+<span class="expertise-fig">
+<svg viewbox="0 0 160 90" role="img" aria-label="Spatial transcriptomics: tissue section overlaid with a grid of expression-coloured capture spots">
+<rect x="0" y="0" width="160" height="90" fill="none"></rect>
+<path d="M20 62 C 10 34, 34 10, 66 12 C 104 14, 140 22, 146 46 C 151 68, 120 82, 88 80 C 54 78, 28 80, 20 62 Z" fill="#faf5ff" stroke="#a855f7" stroke-width="2"></path>
+<g>
+<circle cx="44" cy="30" r="5" fill="#c4b5fd"></circle><circle cx="60" cy="26" r="5" fill="#a78bfa"></circle>
+<circle cx="76" cy="28" r="5" fill="#7c3aed"></circle><circle cx="92" cy="30" r="5" fill="#a78bfa"></circle>
+<circle cx="108" cy="34" r="5" fill="#ddd6fe"></circle>
+<circle cx="36" cy="46" r="5" fill="#ddd6fe"></circle><circle cx="52" cy="43" r="5" fill="#a78bfa"></circle>
+<circle cx="68" cy="44" r="5" fill="#7c3aed"></circle><circle cx="84" cy="45" r="5" fill="#7c3aed"></circle>
+<circle cx="100" cy="47" r="5" fill="#a78bfa"></circle><circle cx="116" cy="49" r="5" fill="#ddd6fe"></circle>
+<circle cx="44" cy="62" r="5" fill="#ddd6fe"></circle><circle cx="60" cy="61" r="5" fill="#c4b5fd"></circle>
+<circle cx="76" cy="62" r="5" fill="#a78bfa"></circle><circle cx="92" cy="63" r="5" fill="#c4b5fd"></circle>
+<circle cx="108" cy="64" r="5" fill="#ede9fe"></circle>
+</g>
+</svg>
+</span>
+<span class="expertise-title">Spatial Transcriptomics</span>
+<span class="expertise-desc">Tissue architecture, niche deconvolution &amp; spatially resolved gene programmes.</span>
+</a>
+
+</div>
+</section>
+<section id="sec-workflows" class="level2 ro-h2" data-eyebrow="Methods">
+<h2 class="ro-h2 anchored" data-eyebrow="Methods" data-anchor-id="sec-workflows">Research Workflows</h2>
 <!-- ══════════════════════════════════════════════
      WORKFLOW 1 — Bulk RNA-Seq Meta-Analysis
 ═══════════════════════════════════════════════ -->
@@ -265,13 +441,8 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="ro-wf-header">
 <div class="ro-wf-badge">Workflow 01</div>
-<h2 class="ro-wf-title anchored">Bulk RNA-Seq Meta-Analysis</h2>
+<h3 class="ro-wf-title anchored">Bulk RNA-Seq Meta-Analysis</h3>
 <p class="ro-wf-subtitle">Large-scale transcriptomic discovery using harmonised public datasets from NCBI GEO &amp; SRA</p>
-</div>
-
-<div class="ro-why-box">
-<span class="ro-why-label">Why public bulk RNA-seq data?</span>
-Public repositories (GEO, SRA, ArrayExpress) host <strong>100,000+ RNA-seq samples</strong> across diseases, tissues, and treatment conditions. Meta-analysing these datasets reveals robust, cross-cohort differential expression signals that no single study can provide — dramatically increasing statistical power and biological generalisability.
 </div>
 
 <div class="ro-steps">
@@ -341,13 +512,8 @@ Public repositories (GEO, SRA, ArrayExpress) host <strong>100,000+ RNA-seq sampl
 
 <div class="ro-wf-header">
 <div class="ro-wf-badge ro-wf-badge-sc">Workflow 02</div>
-<h2 class="ro-wf-title anchored">Single-Cell Harmonised Framework</h2>
+<h3 class="ro-wf-title anchored">Single-Cell Harmonised Framework</h3>
 <p class="ro-wf-subtitle">Cross-cohort single-cell atlas construction and comparative cell-state analysis</p>
-</div>
-
-<div class="ro-why-box ro-why-box-sc">
-<span class="ro-why-label">Why public scRNA-seq data?</span>
-Public single-cell datasets from <strong>CellxGene, GEO, and the Human Cell Atlas</strong> allow cross-cohort atlas construction at a scale impossible for a single lab. Integrating multiple studies removes batch-specific noise, reveals conserved cell states across diseases, and enables discovery of rare populations with unprecedented statistical confidence.
 </div>
 
 <div class="ro-steps">
@@ -417,13 +583,8 @@ Public single-cell datasets from <strong>CellxGene, GEO, and the Human Cell Atla
 
 <div class="ro-wf-header">
 <div class="ro-wf-badge ro-wf-badge-ml">Workflow 03</div>
-<h2 class="ro-wf-title anchored">ML / DL in Genomics</h2>
+<h3 class="ro-wf-title anchored">ML / DL in Genomics</h3>
 <p class="ro-wf-subtitle">Machine and deep learning for biomarker discovery, disease classification, and precision medicine</p>
-</div>
-
-<div class="ro-why-box ro-why-box-ml">
-<span class="ro-why-label">Why ML/DL on public omics data?</span>
-High-dimensional omics data (10,000+ features per sample) exceeds the capacity of classical statistics. Machine learning extracts <strong>non-linear, multi-feature patterns</strong> that predict disease status, prognosis, and drug response. Public datasets provide the large, diverse sample sizes required to train generalisable models — with SHAP enabling biological interpretability.
 </div>
 
 <div class="ro-steps">
@@ -482,20 +643,414 @@ High-dimensional omics data (10,000+ features per sample) exceeds the capacity o
 </div>
 
 </div>
-
-
-<!-- COLLABORATORS section disabled for now — markup lives below, ready to re-enable
-<div class="ro-collab-section">
-<h2 class="ro-collab-heading">Research Collaborators</h2>
-<p class="ro-collab-sub">Working with clinicians, computational biologists, and domain experts across institutions</p>
+</section>
+<section id="sec-mentoring" class="level2 ro-h2" data-eyebrow="People">
+<h2 class="ro-h2 anchored" data-eyebrow="People" data-anchor-id="sec-mentoring">Mentoring</h2>
+<div id="listing-ro-mentees" class="quarto-listing quarto-listing-container-custom">
+<div class="mentee-grid">
+<div class="mentee-card">
+<div class="mentee-photo-wrap">
+<img class="mentee-photo" src="../files/mentoring/GSA01/Shakil_Ahamed.png" alt="Md. Shakil Ahamed">
 </div>
--->
-<!--
-::: {#ro-collaborators}
-:::
--->
+<div class="mentee-name">
+Md. Shakil Ahamed
+</div>
+<div class="mentee-univ">
+Mawlana Bhashani Science and Technology University
+</div>
+<div class="mentee-meta">
+<div class="mentee-track">
+GSA Bioinformatics Internship
+</div>
+<div class="mentee-period">
+Cohort 01 · 6 months
+</div>
+</div>
+</div>
+<div class="mentee-card">
+<div class="mentee-photo-wrap">
+<img class="mentee-photo" src="../files/mentoring/GSA01/Rahnuma_Tabassum.jpg" alt="Rahnuma Tabassum">
+</div>
+<div class="mentee-name">
+Rahnuma Tabassum
+</div>
+<div class="mentee-dept">
+Biochemistry &amp; Molecular Biology
+</div>
+<div class="mentee-univ">
+Jagannath University
+</div>
+<div class="mentee-meta">
+<div class="mentee-track">
+GSA Bioinformatics Internship
+</div>
+<div class="mentee-period">
+Cohort 01 · 6 months
+</div>
+</div>
+</div>
+<div class="mentee-card">
+<div class="mentee-photo-wrap">
+<img class="mentee-photo" src="../files/mentoring/GSA01/Fayez_Ahmad.png" alt="Fayez Ahmad">
+</div>
+<div class="mentee-name">
+Fayez Ahmad
+</div>
+<div class="mentee-univ">
+Notre Dame College, Dhaka
+</div>
+<div class="mentee-meta">
+<div class="mentee-track">
+GSA Bioinformatics Internship
+</div>
+<div class="mentee-period">
+Cohort 01 · 6 months
+</div>
+</div>
+</div>
+<div class="mentee-card">
+<div class="mentee-photo-wrap">
+<img class="mentee-photo" src="../files/mentoring/GSA01/Sabbir_Khan.png" alt="Sabbir Khan">
+</div>
+<div class="mentee-name">
+Sabbir Khan
+</div>
+<div class="mentee-univ">
+Gazipur Agricultural University
+</div>
+<div class="mentee-meta">
+<div class="mentee-track">
+GSA Bioinformatics Internship
+</div>
+<div class="mentee-period">
+Cohort 01 · 6 months
+</div>
+</div>
+</div>
+<div class="mentee-card">
+<div class="mentee-photo-wrap">
+<img class="mentee-photo" src="../files/mentoring/GSA01/lamisamanhaaditee.jpg" alt="Lamisa Manha Aditee">
+</div>
+<div class="mentee-name">
+Lamisa Manha Aditee
+</div>
+<div class="mentee-univ">
+BRAC University
+</div>
+<div class="mentee-meta">
+<div class="mentee-track">
+GSA Bioinformatics Internship
+</div>
+<div class="mentee-period">
+Cohort 01 · 6 months
+</div>
+</div>
+</div>
+<div class="mentee-card">
+<div class="mentee-photo-wrap">
+<img class="mentee-photo" src="../files/mentoring/GSA02/Dhruba_Chowdhury.png" alt="Dhruba Chowdhury">
+</div>
+<div class="mentee-name">
+Dhruba Chowdhury
+</div>
+<div class="mentee-univ">
+University of Dhaka
+</div>
+<div class="mentee-meta">
+<div class="mentee-track">
+GSA Bioinformatics Internship
+</div>
+<div class="mentee-period">
+Cohort 02 · 6 months
+</div>
+</div>
+</div>
+<div class="mentee-card">
+<div class="mentee-photo-wrap">
+<img class="mentee-photo" src="../files/mentoring/GSA02/Md_Aftabur_Rahman.jpg" alt="Md. Aftabur Rahman">
+</div>
+<div class="mentee-name">
+Md. Aftabur Rahman
+</div>
+<div class="mentee-univ">
+Jahangirnagar University
+</div>
+<div class="mentee-meta">
+<div class="mentee-track">
+GSA Bioinformatics Internship
+</div>
+<div class="mentee-period">
+Cohort 02 · 6 months
+</div>
+</div>
+</div>
+<div class="mentee-card">
+<div class="mentee-photo-wrap">
+<img class="mentee-photo" src="../files/mentoring/GSA02/Arony_Aswad.jpeg" alt="Tahia Aswad Arony">
+</div>
+<div class="mentee-name">
+Tahia Aswad Arony
+</div>
+<div class="mentee-univ">
+North South University
+</div>
+<div class="mentee-meta">
+<div class="mentee-track">
+GSA Bioinformatics Internship
+</div>
+<div class="mentee-period">
+Cohort 02 · 6 months
+</div>
+</div>
+</div>
+<div class="mentee-card">
+<div class="mentee-photo-wrap">
+<img class="mentee-photo" src="../files/mentoring/GSA02/Mahmuda_Hoque.jpg" alt="Mahmuda Hoque">
+</div>
+<div class="mentee-name">
+Mahmuda Hoque
+</div>
+<div class="mentee-univ">
+BRAC University
+</div>
+<div class="mentee-meta">
+<div class="mentee-track">
+GSA Bioinformatics Internship
+</div>
+<div class="mentee-period">
+Cohort 02 · 6 months
+</div>
+</div>
+</div>
+<div class="mentee-card">
+<div class="mentee-photo-wrap">
+<img class="mentee-photo" src="../files/mentoring/GSA02/Tasfia_Nawar.jpg" alt="Tasfia Nawar">
+</div>
+<div class="mentee-name">
+Tasfia Nawar
+</div>
+<div class="mentee-univ">
+North South University
+</div>
+<div class="mentee-meta">
+<div class="mentee-track">
+GSA Bioinformatics Internship
+</div>
+<div class="mentee-period">
+Cohort 02 · 6 months
+</div>
+</div>
+</div>
+<div class="mentee-card">
+<div class="mentee-photo-wrap">
+<img class="mentee-photo" src="../files/mentoring/BMP01/Enam_Ahmed.jpg" alt="Enam Ahmed">
+</div>
+<div class="mentee-name">
+Enam Ahmed
+</div>
+<div class="mentee-dept">
+Health and Exercise Science
+</div>
+<div class="mentee-univ">
+Inha University
+</div>
+<div class="mentee-meta">
+<div class="mentee-track">
+Bioinformatics Mentorship Program
+</div>
+<div class="mentee-period">
+Cohort 01 · 12 weeks
+</div>
+</div>
+</div>
+<div class="mentee-card">
+<div class="mentee-photo-wrap">
+<img class="mentee-photo" src="../files/mentoring/BMP01/Ridika_Haque_Shafin.jpg" alt="Ridika Haque Shafin">
+</div>
+<div class="mentee-name">
+Ridika Haque Shafin
+</div>
+<div class="mentee-dept">
+Botany
+</div>
+<div class="mentee-univ">
+University of Dhaka
+</div>
+<div class="mentee-meta">
+<div class="mentee-track">
+Bioinformatics Mentorship Program
+</div>
+<div class="mentee-period">
+Cohort 01 · 12 weeks
+</div>
+</div>
+</div>
+<div class="mentee-card">
+<div class="mentee-photo-wrap">
+<img class="mentee-photo" src="../files/mentoring/BMP01/Jonaitul_Islam.jpg" alt="Jonaitul Islam">
+</div>
+<div class="mentee-name">
+Jonaitul Islam
+</div>
+<div class="mentee-dept">
+Microbiology
+</div>
+<div class="mentee-univ">
+Jahangirnagar University
+</div>
+<div class="mentee-meta">
+<div class="mentee-track">
+Bioinformatics Mentorship Program
+</div>
+<div class="mentee-period">
+Cohort 01 · 12 weeks
+</div>
+</div>
+</div>
+<div class="mentee-card">
+<div class="mentee-photo-wrap">
+<img class="mentee-photo" src="../files/mentoring/BMP01/Mahim_Hassan_Chowdhury.jpg" alt="Mahim Hassan Chowdhury">
+</div>
+<div class="mentee-name">
+Mahim Hassan Chowdhury
+</div>
+<div class="mentee-dept">
+School of Pharmacy
+</div>
+<div class="mentee-univ">
+BRAC University
+</div>
+<div class="mentee-meta">
+<div class="mentee-track">
+Bioinformatics Mentorship Program
+</div>
+<div class="mentee-period">
+Cohort 01 · 12 weeks
+</div>
+</div>
+</div>
+<div class="mentee-card">
+<div class="mentee-photo-wrap">
+<img class="mentee-photo" src="../files/mentoring/BMP01/Md_Liakot_Ali.png" alt="Md. Liakot Ali">
+</div>
+<div class="mentee-name">
+Md. Liakot Ali
+</div>
+<div class="mentee-dept">
+Pharmacy
+</div>
+<div class="mentee-univ">
+University of Chittagong
+</div>
+<div class="mentee-meta">
+<div class="mentee-track">
+Bioinformatics Mentorship Program
+</div>
+<div class="mentee-period">
+Cohort 01 · 12 weeks
+</div>
+</div>
+</div>
+<div class="mentee-card">
+<div class="mentee-photo-wrap">
+<img class="mentee-photo" src="../files/mentoring/BMP01/Supriya_Dewanjee.jpeg" alt="Supriya Dewanjee">
+</div>
+<div class="mentee-name">
+Supriya Dewanjee
+</div>
+<div class="mentee-dept">
+Bioinformatics
+</div>
+<div class="mentee-univ">
+Asian University for Women
+</div>
+<div class="mentee-meta">
+<div class="mentee-track">
+Bioinformatics Mentorship Program
+</div>
+<div class="mentee-period">
+Cohort 01 · 12 weeks
+</div>
+</div>
+</div>
+<div class="mentee-card">
+<div class="mentee-photo-wrap">
+<img class="mentee-photo" src="../files/mentoring/BMP01/Md_Mobasser_Hosain.jpg" alt="Md. Mobasser Hosain">
+</div>
+<div class="mentee-name">
+Md. Mobasser Hosain
+</div>
+<div class="mentee-dept">
+Molecular Medicine and Bioinformatics
+</div>
+<div class="mentee-univ">
+University of Development Alternative
+</div>
+<div class="mentee-meta">
+<div class="mentee-track">
+Bioinformatics Mentorship Program
+</div>
+<div class="mentee-period">
+Cohort 01 · 12 weeks
+</div>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+</section>
+<section id="sec-collaborators" class="level2 ro-h2" data-eyebrow="Network">
+<h2 class="ro-h2 anchored" data-eyebrow="Network" data-anchor-id="sec-collaborators">Collaborators</h2>
+<div id="listing-ro-collaborators" class="quarto-listing quarto-listing-container-custom">
+<div class="ro-collab-grid">
+<div class="ro-collab-card">
+<div class="ro-collab-top">
+<p><img class="ro-collab-photo" src="../files/collaborators/tasneem.jpg" alt="Dr. Syeda Tasneem Towhid"></p>
+<div class="ro-collab-id">
+<p><strong class="ro-collab-name">Dr.&nbsp;Syeda Tasneem Towhid</strong> <span class="ro-collab-title">Associate Professor</span> <span class="ro-collab-affil">Department of Microbiology, Jagannath University, Bangladesh</span></p>
+</div>
+</div>
+<p><a class="ro-collab-link" href="https://scholar.google.com/citations?user=zy-f6I8AAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar →</a></p>
+</div>
+<div class="ro-collab-card">
+<div class="ro-collab-top">
+<p><img class="ro-collab-photo" src="../files/collaborators/Zeba-I-Seraj-Ph-D.jpg" alt="Dr. Zeba Islam Seraj"></p>
+<div class="ro-collab-id">
+<p><strong class="ro-collab-name">Dr.&nbsp;Zeba Islam Seraj</strong> <span class="ro-collab-title">Director</span> <span class="ro-collab-affil">cBLAST, University of Dhaka, Bangladesh</span></p>
+</div>
+</div>
+<p><a class="ro-collab-link" href="https://scholar.google.com/citations?user=Gt6T1jwAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar →</a></p>
+</div>
+<div class="ro-collab-card">
+<div class="ro-collab-top">
+<p><img class="ro-collab-photo" src="../files/collaborators/salequl_islam.jpg" alt="Dr. Md. Salequl Islam"></p>
+<div class="ro-collab-id">
+<p><strong class="ro-collab-name">Dr.&nbsp;Md. Salequl Islam</strong> <span class="ro-collab-title">Professor</span> <span class="ro-collab-affil">Department of Microbiology, Jahangirnagar University, Bangladesh</span></p>
+</div>
+</div>
+<p><a class="ro-collab-link" href="https://scholar.google.com/citations?user=b8tVpt8AAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar →</a></p>
+</div>
+<div class="ro-collab-card">
+<div class="ro-collab-top">
+<p><img class="ro-collab-photo" src="../files/collaborators/iqbal_mahmud.jpg" alt="Dr. Iqbal Mahmud"></p>
+<div class="ro-collab-id">
+<p><strong class="ro-collab-name">Dr.&nbsp;Iqbal Mahmud</strong> <span class="ro-collab-title">Senior Research Scientist</span> <span class="ro-collab-affil">Department of Bioinformatics and Computational Biology, MD Anderson, USA</span></p>
+</div>
+</div>
+<p><a class="ro-collab-link" href="https://scholar.google.com/citations?user=-NKhd0oAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar →</a></p>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+<div class="ro-collab-open">
+<strong>Open to new collaborations.</strong>
+<p>If you have a dataset, a clinical question, or a study that would benefit from bulk / single-cell / spatial re-analysis or ML modelling, get in touch.</p>
+<a class="ro-cta-btn" href="mailto:contact.jubayerhossain@gmail.com">Start a conversation →</a>
+</div>
 
 
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

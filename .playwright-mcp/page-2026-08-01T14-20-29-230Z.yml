@@ -1,0 +1,76 @@
+- generic [active] [ref=f2e1]:
+  - banner [ref=f2e2]:
+    - navigation [ref=f2e3]:
+      - generic [ref=f2e4]:
+        - link "Jubayer Hossain" [ref=f2e6] [cursor=pointer]:
+          - /url: http://localhost:8899/
+        - generic "Search" [ref=f2e7]:
+          - combobox "Search" [ref=f2e8]:
+            - button "Search" [ref=f2e9] [cursor=pointer]
+        - menu "Toggle navigation" [ref=f2e13] [cursor=pointer]
+        - text:        
+  - main [ref=f2e16]:
+    - generic [ref=f2e17]:
+      - generic [ref=f2e18]:
+        - generic [ref=f2e21]:
+          - heading "Jubayer Hossain" [level=1] [ref=f2e22]
+          - paragraph [ref=f2e23]: Researcher, Educator & Entrepreneur
+        - generic [ref=f2e24]:
+          - link "" [ref=f2e25] [cursor=pointer]:
+            - /url: mailto:contact.jubayerhossain@gmail.com
+          - link "" [ref=f2e27] [cursor=pointer]:
+            - /url: https://linkedin.com/hossainmj
+          - link "orcid" [ref=f2e29] [cursor=pointer]:
+            - /url: https://orcid.org/0000-0001-9323-4997
+            - generic "orcid" [ref=f2e31]: 
+          - link "google-scholar" [ref=f2e32] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=9_K4ekoAAAAJ&hl=en&authuser=5
+            - generic "google-scholar" [ref=f2e34]: 
+      - generic [ref=f2e36]:
+        - paragraph [ref=f2e37]: Computational biologist specialising in the analysis of cancer genomics data through multi-omics, including single-cell, spatial, and bulk transcriptomics.
+        - paragraph [ref=f2e38]:
+          - link "Research →" [ref=f2e39] [cursor=pointer]:
+            - /url: http://localhost:8899/projects/
+          - text: ·
+          - link "Publications →" [ref=f2e40] [cursor=pointer]:
+            - /url: http://localhost:8899/publications/
+          - text: ·
+          - link "CV →" [ref=f2e41] [cursor=pointer]:
+            - /url: http://localhost:8899/cv/CV-HossainMJ.pdf
+        - generic [ref=f2e42]:
+          - 'link "Bulk RNA-Seq: sequencing reads stacked over an exon model with a coverage profile Bulk RNA-Seq Differential expression, pathway & signature analysis across patient cohorts." [ref=f2e43] [cursor=pointer]':
+            - /url: http://localhost:8899/projects/
+            - 'img "Bulk RNA-Seq: sequencing reads stacked over an exon model with a coverage profile" [ref=f2e45]'
+            - generic [ref=f2e61]: Bulk RNA-Seq
+            - generic [ref=f2e62]: Differential expression, pathway & signature analysis across patient cohorts.
+          - 'link "Single-cell: UMAP embedding with distinct coloured cell clusters Single-Cell Cell-state atlases, trajectory & cell–cell communication from scRNA-seq." [ref=f2e63] [cursor=pointer]':
+            - /url: http://localhost:8899/projects/
+            - 'img "Single-cell: UMAP embedding with distinct coloured cell clusters" [ref=f2e65]'
+            - generic [ref=f2e95]: Single-Cell
+            - generic [ref=f2e96]: Cell-state atlases, trajectory & cell–cell communication from scRNA-seq.
+          - 'link "Spatial transcriptomics: tissue section overlaid with a grid of expression-coloured capture spots Spatial Transcriptomics Tissue architecture, niche deconvolution & spatially resolved gene programmes." [ref=f2e97] [cursor=pointer]':
+            - /url: http://localhost:8899/projects/
+            - 'img "Spatial transcriptomics: tissue section overlaid with a grid of expression-coloured capture spots" [ref=f2e99]'
+            - generic [ref=f2e119]: Spatial Transcriptomics
+            - generic [ref=f2e120]: Tissue architecture, niche deconvolution & spatially resolved gene programmes.
+    - generic [ref=f2e121]:
+      - generic [ref=f2e122]:
+        - generic [ref=f2e123]: 🚀 Upcoming Programs
+        - button "Close" [ref=f2e124] [cursor=pointer]: ✕
+      - generic [ref=f2e125]:
+        - button "Research (BMP)" [ref=f2e126] [cursor=pointer]
+        - button "AI (No-Code)" [ref=f2e127] [cursor=pointer]
+        - button "Drug Discovery AI" [ref=f2e128] [cursor=pointer]
+      - generic [ref=f2e129]:
+        - heading "Bioinformatics Mentorship Program" [level=4] [ref=f2e130]
+        - paragraph [ref=f2e131]:
+          - text: Go from raw sequencing data to a
+          - strong [ref=f2e132]: publication-ready manuscript
+          - text: in 12 weeks.
+        - generic [ref=f2e133]:
+          - generic [ref=f2e134]: 📅 12 Weeks
+          - generic [ref=f2e135]: 🔬 NGS & Genomics
+        - link "Learn More & Apply →" [ref=f2e136] [cursor=pointer]:
+          - /url: https://mdjubayerhossain.com/bmp/
+  - contentinfo [ref=f2e137]:
+    - paragraph [ref=f2e141]: © Copyright 2026, Jubayer Hossain

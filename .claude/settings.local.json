@@ -26,7 +26,20 @@
       "Bash(curl -s -o /dev/null -w \"png:%{http_code}\\\\n\" http://localhost:8765/files/profiles/jubayer.png)",
       "Bash(pkill -f \"http.server 8765\")",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8765/media-kit/index.html)",
-      "mcp__playwright__browser_close"
+      "mcp__playwright__browser_close",
+      "Bash(mv \"Md. Aftabur_Rahman.jpg\" \"Md_Aftabur_Rahman.jpg\")",
+      "Bash(mv \"Tasfia Nawar.jpg\" \"Tasfia_Nawar.jpg\")",
+      "PowerShell(Get-Process *)",
+      "Bash(git mv *)",
+      "Bash(git rm *)",
+      "Bash(git checkout *)",
+      "Bash(awk '{print $2}')",
+      "PowerShell(quarto render *)",
+      "PowerShell(Start-Process -FilePath \"python\" -ArgumentList \"-m\",\"http.server\",\"8899\",\"--directory\",\"E:\\\\hossainlab.github.io\\\\docs\" -WindowStyle Hidden -PassThru | Select-Object Id)",
+      "PowerShell(Stop-Process *)",
+      "Bash(Select-Object -Last 2)",
+      "Bash(Start-Process -FilePath \"python\" -ArgumentList \"-m\",\"http.server\",\"8899\",\"--directory\",\"E:\\\\hossainlab.github.io\\\\docs\" -WindowStyle Hidden -PassThru)",
+      "Bash(Select-Object Id)"
     ]
   }
 }

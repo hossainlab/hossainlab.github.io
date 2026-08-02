@@ -3065,39 +3065,94 @@ img {
 
 /* Why-public-data strip */
 .ro-why-strip {
-  background: #ebf4ff;
-  border-top: 3px solid #2b6cb0;
-  padding: 1.5rem;
+  background: none;
+  border: none;
+  padding: 0;
 }
+/* Same column as .ro-areas-section / .ro-workflow-section */
 .ro-why-inner {
   max-width: 960px;
-  margin: 0 auto;
+  margin: 2.5rem auto 0;
+  padding: 0 1.5rem;
+}
+.ro-why-header { margin-bottom: 1.35rem; }
+.ro-why-eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #2b6cb0;
+  margin-bottom: 0.45rem;
+}
+.ro-why-heading {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1a202c;
+  letter-spacing: -0.015em;
+  margin: 0;
+  border-bottom: none;
+}
+.ro-why-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+@media (max-width: 900px) {
+  .ro-why-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  .ro-why-grid { grid-template-columns: 1fr; }
 }
 .ro-why-item {
   display: flex;
-  gap: 0.75rem;
+  gap: 0.8rem;
   align-items: flex-start;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.05rem 1rem;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.ro-why-item:hover {
+  transform: translateY(-3px);
+  border-color: #cbd9ea;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
 }
 .ro-why-icon {
-  font-size: 1.5rem;
   flex-shrink: 0;
-  margin-top: 0.1rem;
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background: #ebf4ff;
+  color: #2b6cb0;
 }
+.ro-why-icon svg { width: 20px; height: 20px; display: block; }
+.ro-why-icon-repro   { background: #ebf4ff; color: #2b6cb0; }
+.ro-why-icon-scale   { background: #e8f6ef; color: #15803d; }
+.ro-why-icon-open    { background: #f5edff; color: #7c3aed; }
+.ro-why-icon-general { background: #fff2e5; color: #c2410c; }
+.ro-why-body { min-width: 0; }
 .ro-why-item strong {
   display: block;
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: #1a202c;
-  margin-bottom: 0.2rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.28rem;
 }
 .ro-why-item p {
-  font-size: 0.8rem;
-  color: #4a5568;
+  font-size: 0.82rem;
+  color: #55637a;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.55;
+}
+@media (max-width: 560px) {
+  .ro-why-inner { padding: 0 1rem; }
+  .ro-why-heading { font-size: 1.25rem; }
 }
 
 /* Workflow section */
@@ -3768,3 +3823,882 @@ img {
   .mk-facts, .mk-photos { grid-template-columns: 1fr; }
   .mk-stats { grid-template-columns: 1fr; }
 }
+
+/* ═══════════════════════════════════════════
+   MENTEE SHOWCASE (mentees/index.qmd)
+   ═══════════════════════════════════════════ */
+
+.mentee-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin: 2rem 0 3rem;
+}
+
+.mentee-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.6rem 1.1rem 1.2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.mentee-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+  border-color: #cbd5e0;
+}
+
+.mentee-badge {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border-radius: 20px;
+}
+
+.mentee-badge-current {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+.mentee-badge-alumni {
+  background: #ebf4ff;
+  color: #2b6cb0;
+}
+
+.mentee-photo,
+.mentee-avatar {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.mentee-photo-wrap {
+  margin-bottom: 0.9rem;
+  line-height: 0;
+}
+
+.mentee-photo {
+  object-fit: cover;
+  border: 3px solid #ebf4ff;
+}
+
+.mentee-avatar {
+  background: #ebf4ff;
+  color: #2b6cb0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+}
+
+.mentee-name {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0 0 0.3rem;
+}
+
+.mentee-dept {
+  font-size: 0.78rem;
+  color: #4a5568;
+  margin: 0 0 0.15rem;
+  line-height: 1.4;
+}
+
+.mentee-univ {
+  font-size: 0.78rem;
+  color: #718096;
+  margin: 0 0 0.15rem;
+  line-height: 1.4;
+}
+
+.mentee-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 0.9rem;
+  width: 100%;
+}
+
+.mentee-track {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #2b6cb0;
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 0.25rem 0.6rem;
+  line-height: 1.35;
+}
+
+.mentee-period {
+  font-size: 0.72rem;
+  color: #a0aec0;
+}
+
+.mentee-cta {
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.mentee-cta-text {
+  font-size: 0.9rem;
+  color: #4a5568;
+  max-width: 620px;
+  margin: 0.5rem auto 1.4rem;
+}
+
+.mentee-cta .mentor-cta-row {
+  justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .mentee-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .mentee-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .mentee-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   HOME EXPERTISE CARDS (expertise-*) — hero right column
+   Three equal-size cards: Bulk RNA-Seq / Single-Cell / Spatial
+   ============================================================ */
+.expertise-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin: 1.6rem 0 0.5rem;
+  width: 100%;
+}
+
+.expertise-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding: 1rem 0.8rem 1.1rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  text-decoration: none !important;
+  color: inherit;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.expertise-card:hover {
+  transform: translateY(-4px);
+  border-color: #2b6cb0;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.10);
+}
+
+.expertise-fig {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.65rem;
+}
+
+.expertise-fig svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.expertise-title {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #1a202c;
+  line-height: 1.25;
+  margin-bottom: 0.35rem;
+}
+
+.expertise-card:hover .expertise-title { color: #2b6cb0; }
+
+.expertise-desc {
+  display: block;
+  font-size: 0.76rem;
+  line-height: 1.45;
+  color: #64748b;
+}
+
+@media (max-width: 991px) {
+  .expertise-grid { gap: 0.7rem; }
+  .expertise-desc { font-size: 0.72rem; }
+}
+
+@media (max-width: 575px) {
+  /* Single column, but each card becomes figure | (title over description).
+     grid-auto-rows: 1fr keeps every card the same height despite uneven text. */
+  .expertise-grid { grid-template-columns: 1fr; grid-auto-rows: 1fr; }
+  .expertise-card {
+    display: grid;
+    grid-template-columns: 92px minmax(0, 1fr);
+    column-gap: 0.9rem;
+    row-gap: 0.25rem;
+    align-content: center;
+    text-align: left;
+    padding: 0.9rem 1rem;
+  }
+  .expertise-fig { grid-column: 1; grid-row: 1 / span 2; align-self: center; width: 100%; margin-bottom: 0; }
+  .expertise-title { grid-column: 2; grid-row: 1; align-self: end; margin-bottom: 0; font-size: 0.95rem; }
+  .expertise-desc { grid-column: 2; grid-row: 2; align-self: start; font-size: 0.78rem; }
+}
+
+
+/* ============================================================
+   MENTORSHIP SECTIONS (mentee-section-*) — Current / Alumni
+   Replaces the old stats strip + per-card status badge.
+   ============================================================ */
+.mentee-section-head {
+  max-width: 1200px;
+  margin: 2.6rem auto 0;
+  padding: 0 1rem;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1.8rem;
+}
+
+.mentee-section-head:first-of-type {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 1.5rem;
+}
+
+.mentee-eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #2b6cb0;
+  margin-bottom: 0.45rem;
+}
+
+.mentee-section-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1a202c;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.4rem;
+  border-bottom: none;
+}
+
+.mentee-section-note {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #64748b;
+  max-width: 68ch;
+  margin: 0;
+}
+
+/* Grid sits under its own section header */
+.mentee-grid {
+  max-width: 1200px;
+  margin: 1.4rem auto 0;
+  padding: 0 1rem;
+}
+
+/* Softer, flatter card — no badge slot needed any more */
+.mentee-card {
+  padding: 1.5rem 1.1rem 1.1rem;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid #e6e9ef;
+}
+
+.mentee-card:hover {
+  border-color: #2b6cb0;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+.mentee-photo,
+.mentee-avatar {
+  width: 84px;
+  height: 84px;
+}
+
+.mentee-photo { border: 2px solid #e2e8f0; }
+.mentee-card:hover .mentee-photo { border-color: #bfdbfe; }
+
+/* margin-top:auto (set in the base rule) keeps the track/period block
+   pinned to the card bottom so pills line up across a row. */
+.mentee-meta {
+  border-top: 1px solid #edf2f7;
+  padding-top: 0.85rem;
+}
+
+@media (max-width: 560px) {
+  .mentee-section-title { font-size: 1.25rem; }
+}
+
+
+/* ============================================================
+   TUTORIALS PAGE — section headers (tut-section-*) and
+   pipeline notebook cards (pipe-*) moved from projects/pipelines
+   ============================================================ */
+.tut-section-head {
+  max-width: 960px;
+  margin: 0 auto 1.4rem;
+  padding: 0 1rem;
+}
+
+.tut-section-head-alt {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.tut-eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #2b6cb0;
+  margin-bottom: 0.45rem;
+}
+
+/* Scoped to h2 on purpose: Quarto copies heading classes onto the wrapping
+   <section>, and an unscoped rule cascades into every card in the section. */
+h2.tut-section-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1a202c;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.4rem;
+  border-bottom: none;
+}
+
+.tut-section-note {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #64748b;
+  max-width: 70ch;
+  margin: 0;
+}
+
+/* ---------- Category filter bar ---------- */
+.pipe-filters {
+  max-width: 960px;
+  margin: 0 auto 1.4rem;
+}
+
+/* ---------- Pipeline card grid ---------- */
+.pipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 960px;
+  margin: 0 auto 2.5rem;
+  padding: 0 1rem;
+}
+
+.pipe-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none !important;
+  color: inherit;
+  transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+
+a.pipe-card:hover {
+  transform: translateY(-3px);
+  border-color: #2b6cb0;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.10);
+}
+
+/* ---------- SVG banner, one gradient per analysis type ---------- */
+.pipe-banner {
+  display: block;
+  height: 120px;
+  background: linear-gradient(135deg, #1e3a5f 0%, #2b6cb0 100%);
+}
+
+.pipe-banner-rna-seq { background: linear-gradient(135deg, #1e3a5f 0%, #2b6cb0 100%); }
+.pipe-banner-single-cell { background: linear-gradient(135deg, #312e81 0%, #6366f1 100%); }
+.pipe-banner-protein-structure-prediction { background: linear-gradient(135deg, #134e4a 0%, #0d9488 100%); }
+.pipe-banner-drug-discovery { background: linear-gradient(135deg, #581c87 0%, #a855f7 100%); }
+
+.pipe-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+a.pipe-card:hover .pipe-svg { transform: scale(1.03); }
+.pipe-svg { transition: transform 0.25s ease; }
+
+/* ---------- Card body ---------- */
+.pipe-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.15rem 1.25rem 1.25rem;
+}
+
+.pipe-cat {
+  display: block;
+  align-self: flex-start;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #2b6cb0;
+  background: #ebf4ff;
+  border-radius: 20px;
+  padding: 0.2rem 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.pipe-title {
+  display: block;
+  font-size: 0.98rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #1e293b;
+  margin-bottom: 0.45rem;
+}
+
+a.pipe-card:hover .pipe-title { color: #2b6cb0; }
+
+.pipe-desc {
+  display: block;
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: #475569;
+  margin-bottom: 0.85rem;
+}
+
+/* ---------- Input / output summary ---------- */
+.pipe-io {
+  display: block;
+  border-top: 1px solid #edf2f7;
+  border-bottom: 1px solid #edf2f7;
+  padding: 0.6rem 0;
+  margin-bottom: 0.8rem;
+}
+
+.pipe-io-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+  font-size: 0.76rem;
+  line-height: 1.45;
+  margin-bottom: 0.25rem;
+}
+
+.pipe-io-row:last-child { margin-bottom: 0; }
+
+.pipe-io-key {
+  flex: 0 0 2.1rem;
+  font-weight: 800;
+  font-size: 0.64rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.pipe-io-val { color: #64748b; }
+
+/* ---------- Tools + call to action ---------- */
+.pipe-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.9rem;
+}
+
+.pipe-tag {
+  background: #f1f5f9;
+  color: #475569;
+  border-radius: 20px;
+  padding: 0.16rem 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.pipe-cta {
+  display: block;
+  margin-top: auto;
+  align-self: flex-start;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #2b6cb0;
+}
+
+.pipe-cta-colab { color: #b45309; }
+
+a.pipe-card:hover .pipe-cta { text-decoration: underline; }
+
+@media (max-width: 560px) {
+  .pipe-grid { grid-template-columns: 1fr; }
+  h2.tut-section-title { font-size: 1.25rem; }
+}
+
+
+/* ============================================================
+   RESEARCH OVERVIEW — Research Areas band (ro-areas-*)
+   Reuses the homepage .expertise-* cards inside a page section
+   ============================================================ */
+.ro-areas-section {
+  max-width: 960px;
+  margin: 2.5rem auto 0;
+  padding: 0 1.5rem;
+}
+
+.ro-areas-header { margin-bottom: 0.2rem; }
+
+.ro-areas-eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #2b6cb0;
+  margin-bottom: 0.45rem;
+}
+
+.ro-areas-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1a202c;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.4rem;
+  border-bottom: none;
+}
+
+.ro-areas-sub {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #64748b;
+  max-width: 70ch;
+  margin: 0;
+}
+
+.ro-areas-section .expertise-grid { margin: 1.1rem 0 0; }
+
+@media (max-width: 560px) {
+  .ro-areas-title { font-size: 1.25rem; }
+}
+
+
+/* ============================================================
+   RESEARCH OVERVIEW — page sections driven by markdown headings
+   Each <h2> becomes <section id="sec-*">, which is what the TOC
+   links to. Column geometry lives on the section ids so nothing
+   leaks onto other pages.
+   ============================================================ */
+#sec-why,
+#sec-modalities,
+#sec-workflows,
+#sec-mentoring,
+#sec-collaborators {
+  max-width: 960px;
+  margin: 2.75rem auto 0;
+  padding: 0 1.5rem;
+}
+
+/* Section heading + eyebrow (eyebrow comes from data-eyebrow so it
+   never lands in the TOC text). Scoped to h2 on purpose: Quarto
+   copies heading classes onto the wrapping <section>. */
+h2.ro-h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1a202c;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.4rem;
+  border-bottom: none;
+}
+h2.ro-h2[data-eyebrow]::before {
+  content: attr(data-eyebrow);
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #2b6cb0;
+  margin-bottom: 0.45rem;
+}
+
+.ro-section-sub {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #64748b;
+  max-width: 70ch;
+  margin: 0 0 1.35rem;
+}
+
+/* Inner blocks already centre themselves on the standalone page —
+   inside a section column they must simply fill it. */
+#sec-workflows .ro-workflow-section {
+  max-width: none;
+  margin: 2rem 0 0;
+  padding: 0;
+}
+#sec-modalities .expertise-grid { margin: 0; }
+
+/* ---------- Mentoring stats ---------- */
+.ro-people-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+.ro-people-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.15rem 1.1rem;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.ro-people-card:hover {
+  transform: translateY(-3px);
+  border-color: #cbd9ea;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+.ro-people-num {
+  display: block;
+  font-size: 1.9rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #2b6cb0;
+  letter-spacing: -0.02em;
+}
+.ro-people-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-top: 0.3rem;
+}
+.ro-people-sub {
+  display: block;
+  font-size: 0.8rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin-top: 0.2rem;
+}
+
+/* ---------- Section CTAs ---------- */
+.ro-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
+}
+.ro-cta-btn {
+  display: inline-block;
+  background: #2b6cb0;
+  color: #ffffff !important;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #2b6cb0;
+  text-decoration: none !important;
+  transition: background .18s ease, color .18s ease;
+}
+.ro-cta-btn:hover { background: #1e4e8c; border-color: #1e4e8c; }
+.ro-cta-btn-ghost {
+  background: #ffffff;
+  color: #2b6cb0 !important;
+  border-color: #cbd9ea;
+}
+.ro-cta-btn-ghost:hover { background: #f1f6fc; border-color: #2b6cb0; }
+
+/* ---------- Collaboration invite ---------- */
+.ro-collab-open {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #2b6cb0;
+  border-radius: 0 12px 12px 0;
+  padding: 1.15rem 1.25rem;
+}
+.ro-collab-open strong {
+  display: block;
+  font-size: 0.95rem;
+  color: #1a202c;
+  margin-bottom: 0.3rem;
+}
+.ro-collab-open p {
+  font-size: 0.85rem;
+  color: #55637a;
+  line-height: 1.6;
+  margin: 0 0 0.9rem;
+  max-width: 70ch;
+}
+
+@media (max-width: 760px) {
+  .ro-people-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  #sec-why, #sec-modalities, #sec-workflows,
+  #sec-mentoring, #sec-collaborators { padding: 0 1rem; }
+  h2.ro-h2 { font-size: 1.25rem; }
+}
+
+/* ============================================================
+   COLLABORATOR CARDS (#sec-collaborators)
+   Portrait-style card: framed avatar, name, role, institution,
+   Scholar link pinned to the bottom edge.
+   ============================================================ */
+#sec-collaborators .ro-collab-grid {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+#sec-collaborators .ro-collab-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding: 1.6rem 1.15rem 1.35rem;
+  background: #ffffff;
+  border: 1px solid #e6ebf2;
+  border-radius: 16px;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+#sec-collaborators .ro-collab-card:hover {
+  transform: translateY(-3px);
+  border-color: #cbd9ea;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.09);
+}
+
+/* Quarto's global `img { height: auto }` squashes fixed widths, and pandoc
+   wraps the avatar in a <p> that becomes the layout child — pin both. */
+#sec-collaborators .ro-collab-card p { margin: 0; }
+#sec-collaborators .ro-collab-top { display: block; margin-bottom: 0.85rem; }
+#sec-collaborators .ro-collab-top p { line-height: 0; }
+#sec-collaborators .ro-collab-photo,
+#sec-collaborators .ro-collab-avatar {
+  width: 84px;
+  min-width: 84px;
+  height: 84px;
+  max-width: none;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #e2e8f0, 0 0 0 6px #f4f7fb;
+}
+#sec-collaborators .ro-collab-photo { object-fit: cover; object-position: center top; }
+#sec-collaborators .ro-collab-avatar {
+  font-size: 1.6rem;
+  background: linear-gradient(140deg, #2b6cb0 0%, #1e4e8c 100%);
+}
+
+#sec-collaborators .ro-collab-id { display: block; }
+#sec-collaborators .ro-collab-name {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #10192b;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+}
+#sec-collaborators .ro-collab-title {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #2b6cb0;
+  margin-top: 0.2rem;
+  line-height: 1.4;
+}
+#sec-collaborators .ro-collab-affil {
+  display: block;
+  font-size: 0.8rem;
+  color: #708096;
+  line-height: 1.5;
+  margin-top: 0.35rem;
+  text-wrap: balance;
+}
+
+#sec-collaborators .ro-collab-meta {
+  font-size: 0.78rem;
+  color: #64748b;
+  margin-top: 0.5rem;
+}
+
+#sec-collaborators .ro-collab-link {
+  display: inline-block;
+  margin-top: auto;
+  padding-top: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #2b6cb0;
+  text-decoration: none;
+}
+#sec-collaborators .ro-collab-link:hover { text-decoration: underline; }
+
+@media (max-width: 620px) {
+  #sec-collaborators .ro-collab-grid { grid-template-columns: 1fr; }
+}
+/* Grid sits directly under the heading now that the intro line is gone. */
+#sec-collaborators #listing-ro-collaborators { margin-top: 0.4rem; }
+#sec-collaborators .ro-collab-open { margin-top: 1.6rem; }
+
+/* ---------- Mentee grid inside #sec-mentoring ---------- */
+#sec-mentoring #listing-ro-mentees { margin-top: 1.4rem; }
+#sec-mentoring .mentee-grid {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+#sec-mentoring .mentee-card { padding: 1.3rem 1rem 1rem; }
+#sec-mentoring .mentee-card p { margin: 0; }
+@media (max-width: 760px) {
+  #sec-mentoring .mentee-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+  #sec-mentoring .mentee-grid { grid-template-columns: 1fr; }
+}
+
+/* First section sits flush with the TOC heading — the 2.75rem top margin
+   that separates later sections would push it below the sidebar. */
+#sec-why { margin-top: 0; }
+/* Quarto gives .content a 17px top margin the margin-sidebar doesn't get,
+   so the first eyebrow sat ~12px below "On This Page". Nudge only where the
+   sidebar TOC is actually visible. */
+@media (min-width: 992px) {
+  #sec-why { margin-top: -12px; }
+}
+
+/* Stats bar used to occupy this space; without it the first group header's
+   top margin pushed "Publications" below the summary sidebar. */
+.pub-main-col > .pub-group-hdr:first-child { margin-top: 0; }
+/* Align the header text with "SUMMARY" in the sidebar card, which sits
+   18px down because of the card's inner padding. */
+.pub-main-col > .pub-group-hdr:first-child { margin-top: 18px; }

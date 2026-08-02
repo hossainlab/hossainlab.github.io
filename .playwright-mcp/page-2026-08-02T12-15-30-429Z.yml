@@ -1,0 +1,127 @@
+- generic [active] [ref=f10e1]:
+  - banner [ref=f10e2]:
+    - navigation [ref=f10e3]:
+      - generic [ref=f10e4]:
+        - link "Jubayer Hossain" [ref=f10e6] [cursor=pointer]:
+          - /url: http://localhost:8899/
+        - generic "Search" [ref=f10e7]:
+          - combobox "Search" [ref=f10e8]:
+            - button "Search" [ref=f10e9] [cursor=pointer]
+        - generic [ref=f10e13]:
+          - list [ref=f10e14]:
+            - listitem [ref=f10e15]:
+              - link "Home" [ref=f10e16] [cursor=pointer]:
+                - /url: http://localhost:8899/
+            - listitem [ref=f10e17]:
+              - link "Research" [ref=f10e18] [cursor=pointer]:
+                - /url: http://localhost:8899/research/
+            - listitem [ref=f10e19]:
+              - link "Teaching" [ref=f10e20] [cursor=pointer]:
+                - /url: http://localhost:8899/teaching/
+            - listitem [ref=f10e21]:
+              - link "Publications" [ref=f10e22] [cursor=pointer]:
+                - /url: http://localhost:8899/publications/
+            - listitem [ref=f10e23]:
+              - link "CV" [ref=f10e24] [cursor=pointer]:
+                - /url: http://localhost:8899/cv/CV-HossainMJ.pdf
+          - list [ref=f10e25]:
+            - listitem [ref=f10e26]:
+              - link [ref=f10e27] [cursor=pointer]:
+                - /url: mailto:hossainmj@gmail.com
+                - img "email" [ref=f10e28]: 
+            - listitem [ref=f10e29]:
+              - link "orcid" [ref=f10e30] [cursor=pointer]:
+                - /url: https://orcid.org/0000-0001-9323-4997
+                - generic "orcid" [ref=f10e32]: 
+            - listitem [ref=f10e33]:
+              - link "google-scholar" [ref=f10e34] [cursor=pointer]:
+                - /url: https://scholar.google.com/citations?user=9_K4ekoAAAAJ&hl=en&authuser=5
+                - generic "google-scholar" [ref=f10e36]: 
+            - listitem [ref=f10e37]:
+              - link "researchgate" [ref=f10e38] [cursor=pointer]:
+                - /url: https://scholar.google.com/citations?user=9_K4ekoAAAAJ&hl=en&authuser=5
+                - generic "researchgate" [ref=f10e40]: 
+            - listitem [ref=f10e41]:
+              - link [ref=f10e42] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/hossainmj
+                - img "linkedin" [ref=f10e43]: 
+            - listitem [ref=f10e44]:
+              - link [ref=f10e45] [cursor=pointer]:
+                - /url: https://twitter.com/hossain_lab
+                - img "twitter" [ref=f10e46]: 
+            - listitem [ref=f10e47]:
+              - link [ref=f10e48] [cursor=pointer]:
+                - /url: https://github.com/hossainlab
+                - img "github" [ref=f10e49]: 
+            - listitem [ref=f10e50]:
+              - link [ref=f10e51] [cursor=pointer]:
+                - /url: https://www.youtube.com/@hossainlab
+                - img "youtube" [ref=f10e52]: 
+  - main [ref=f10e54]:
+    - generic [ref=f10e55]:
+      - generic [ref=f10e56]:
+        - generic [ref=f10e59]:
+          - heading "Jubayer Hossain" [level=1] [ref=f10e60]
+          - paragraph [ref=f10e61]: Multiomics Scientist · Educator & Entrepreneur
+        - generic [ref=f10e62]:
+          - link "" [ref=f10e63] [cursor=pointer]:
+            - /url: mailto:contact.jubayerhossain@gmail.com
+          - link "" [ref=f10e65] [cursor=pointer]:
+            - /url: https://linkedin.com/hossainmj
+          - link "orcid" [ref=f10e67] [cursor=pointer]:
+            - /url: https://orcid.org/0000-0001-9323-4997
+            - generic "orcid" [ref=f10e69]: 
+          - link "google-scholar" [ref=f10e70] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=9_K4ekoAAAAJ&hl=en&authuser=5
+            - generic "google-scholar" [ref=f10e72]: 
+      - generic [ref=f10e74]:
+        - paragraph [ref=f10e75]: Multiomics scientist decoding cancer biology by integrating bulk, single-cell, and spatial transcriptomics with multi-omics data.
+        - paragraph [ref=f10e76]: I build reproducible computational workflows on public omics data — meta-analysing bulk RNA-seq cohorts, constructing harmonised single-cell atlases, and applying machine learning to high-dimensional data for biomarker discovery.
+        - paragraph [ref=f10e77]:
+          - text: Alongside research, I founded
+          - link "DeepBio Limited" [ref=f10e78] [cursor=pointer]:
+            - /url: https://deepbioltd.com/
+          - text: ", a Dhaka-based AI and bioinformatics startup, and"
+          - link "CHIRAL Bangladesh" [ref=f10e79] [cursor=pointer]:
+            - /url: https://chiralbd.org/
+          - text: ", a non-profit research institute that has trained 3,000+ early-career researchers across South Asia. I teach bioinformatics through"
+          - link "DeepBio Academy" [ref=f10e80] [cursor=pointer]:
+            - /url: https://deepbioacademy.com/
+          - text: and mentor students moving from raw sequencing data to published analysis.
+        - generic [ref=f10e81]:
+          - 'link "Bulk RNA-Seq: sequencing reads stacked over an exon model with a coverage profile Bulk RNA-Seq Differential expression, pathway & signature analysis across patient cohorts." [ref=f10e82] [cursor=pointer]':
+            - /url: http://localhost:8899/projects/
+            - 'img "Bulk RNA-Seq: sequencing reads stacked over an exon model with a coverage profile" [ref=f10e84]'
+            - generic [ref=f10e100]: Bulk RNA-Seq
+            - generic [ref=f10e101]: Differential expression, pathway & signature analysis across patient cohorts.
+          - 'link "Single-cell: UMAP embedding with distinct coloured cell clusters Single-Cell Cell-state atlases, trajectory & cell–cell communication from scRNA-seq." [ref=f10e102] [cursor=pointer]':
+            - /url: http://localhost:8899/projects/
+            - 'img "Single-cell: UMAP embedding with distinct coloured cell clusters" [ref=f10e104]'
+            - generic [ref=f10e134]: Single-Cell
+            - generic [ref=f10e135]: Cell-state atlases, trajectory & cell–cell communication from scRNA-seq.
+          - 'link "Spatial transcriptomics: tissue section overlaid with a grid of expression-coloured capture spots Spatial Transcriptomics Tissue architecture, niche deconvolution & spatially resolved gene programmes." [ref=f10e136] [cursor=pointer]':
+            - /url: http://localhost:8899/projects/
+            - 'img "Spatial transcriptomics: tissue section overlaid with a grid of expression-coloured capture spots" [ref=f10e138]'
+            - generic [ref=f10e158]: Spatial Transcriptomics
+            - generic [ref=f10e159]: Tissue architecture, niche deconvolution & spatially resolved gene programmes.
+    - generic [ref=f10e160]:
+      - generic [ref=f10e161]:
+        - generic [ref=f10e162]: 🚀 Upcoming Programs
+        - button "Close" [ref=f10e163] [cursor=pointer]: ✕
+      - generic [ref=f10e164]:
+        - button "Research (BMP)" [ref=f10e165] [cursor=pointer]
+        - button "AI (No-Code)" [ref=f10e166] [cursor=pointer]
+        - button "Drug Discovery AI" [ref=f10e167] [cursor=pointer]
+      - generic [ref=f10e168]:
+        - heading "Bioinformatics Mentorship Program" [level=4] [ref=f10e169]
+        - paragraph [ref=f10e170]:
+          - text: Go from raw sequencing data to a
+          - strong [ref=f10e171]: publication-ready manuscript
+          - text: in 12 weeks.
+        - generic [ref=f10e172]:
+          - generic [ref=f10e173]: 📅 12 Weeks
+          - generic [ref=f10e174]: 🔬 NGS & Genomics
+        - link "Learn More & Apply →" [ref=f10e175] [cursor=pointer]:
+          - /url: https://mdjubayerhossain.com/bmp/
+  - contentinfo [ref=f10e176]:
+    - paragraph [ref=f10e180]: © Copyright 2026, Jubayer Hossain

@@ -1,14 +1,65 @@
 ---
 title: "Teaching"
-subtitle: "Courses and workshops in bioinformatics, computational biology, and data science"
+subtitle: "Courses, hands-on analysis pipelines, and video lectures in bioinformatics, computational biology, and data science"
 page-layout: full
-toc: false
+toc: true
+toc-title: "On This Page"
+toc-location: right
+toc-depth: 2
 title-block-banner: true
+aliases:
+  - /teaching/videos.html
+  - /projects/pipelines.html
 listing:
   - id: courses
     contents: courses.yml
-    template: ../_templates/project-card.ejs
+    template: ../_templates/course-card.ejs
+  - id: pipelines
+    contents: pipelines.yml
+    template: ../_templates/pipeline-tutorial-card.ejs
+  - id: videos
+    contents: videos.yml
+    template: ../_templates/video-card.ejs
 ---
 
+```{=html}
+<div class="tut-section-head">
+<span class="tut-eyebrow">Courses &amp; Workshops</span>
+```
+
+## Courses {#sec-courses .tut-section-title}
+
+```{=html}
+</div>
+```
+
 :::{#courses}
+:::
+
+```{=html}
+<div class="tut-section-head tut-section-head-alt">
+<span class="tut-eyebrow">Hands-On Notebooks</span>
+```
+
+## Pipelines {#sec-pipelines .tut-section-title}
+
+```{=html}
+</div>
+```
+
+:::{#pipelines}
+:::
+
+```{=html}
+<div class="tut-section-head tut-section-head-alt">
+<span class="tut-eyebrow">Video Lectures</span>
+```
+
+## Videos {#sec-videos .tut-section-title}
+
+```{=html}
+</div>
+```
+
+:::{#videos}
 :::

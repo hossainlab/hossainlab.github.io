@@ -1,0 +1,24 @@
+<%
+// ── Category → banner artwork ─────────────────────────────────────
+// Art lives in /files/tutorials/*.svg rather than inline, because Quarto
+// parses these template divs as native Divs, which escapes inline SVG markup.
+//
+// Each card is emitted on ONE physical line on purpose. Quarto's EJS has no
+// newline-trimming tag, so a control-flow tag sitting on a line of its own
+// leaves a blank line that pandoc turns into an empty paragraph - those stray
+// paragraphs land in the grid as items and wreck the card layout.
+//
+// Do not write a percent-greater-than sequence anywhere in these comments:
+// it closes the code block early and breaks every later variable.
+const slug = (s) => (s || 'general').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+const art = {
+  "RNA-Seq": { file: "rna-seq", alt: "Sequencing reads aligned to a transcript, quantified into an expression bar chart" },
+  "Single-Cell": { file: "single-cell", alt: "Single cells encapsulated in droplets resolving into UMAP clusters" },
+  "Protein Structure Prediction": { file: "protein-structure-prediction", alt: "Amino acid sequence folding into a predicted three-dimensional protein structure" },
+  "Drug Discovery": { file: "drug-discovery", alt: "Compound library screened through a machine learning funnel down to ranked hit molecules" }
+};
+const fallbackArt = { file: "workflow", alt: "Analysis workflow of connected processing steps" };
+%>
+<div class="pipe-grid">
+<% for (const item of items) { %><% const primary = (item.links && item.links.length > 0) ? item.links[0] : null; %><% const tag = primary ? 'a' : 'div'; %><% const banner = art[item.category] || fallbackArt; %><<%= tag %> class="pipe-card" data-categories="<%= item.category || '' %>"<% if (primary) { %> href="<%= primary.url %>" target="_blank" rel="noopener"<% } %>><div class="pipe-banner pipe-banner-<%= slug(item.category) %>"><img class="pipe-svg" src="/files/tutorials/<%= banner.file %>.svg" alt="<%= banner.alt %>"></div><div class="pipe-body"><% if (item.category) { %><div class="pipe-cat"><%= item.category %></div><% } %><div class="pipe-title"><%= item.title %></div><div class="pipe-desc"><%= item.description %></div><% if (item.input || item.output) { %><div class="pipe-io"><% if (item.input) { %><div class="pipe-io-row"><span class="pipe-io-key">In</span><span class="pipe-io-val"><%= item.input %></span></div><% } %><% if (item.output) { %><div class="pipe-io-row"><span class="pipe-io-key">Out</span><span class="pipe-io-val"><%= item.output %></span></div><% } %></div><% } %><% if (item.tools && item.tools.length > 0) { %><div class="pipe-tags"><% for (const tool of item.tools) { %><span class="pipe-tag"><%= tool %></span> <% } %></div><% } %><% if (primary) { %><div class="pipe-cta pipe-cta-<%= primary.icon || 'link' %>"><% if (primary.icon === 'colab') { %>Open in Colab<% } else if (primary.icon === 'github') { %>View on GitHub<% } else { %><%= primary.label %><% } %> &rarr;</div><% } %></div></<%= tag %>><% } %></div>

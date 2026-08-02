@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 110" width="220" height="110" role="img" aria-label="Amino acid sequence folding into a predicted three-dimensional protein structure">
+  <g fill="#ffffff">
+    <circle cx="20" cy="55" r="6" opacity=".95"/>
+    <circle cx="38" cy="55" r="6" opacity=".8"/>
+    <circle cx="56" cy="55" r="6" opacity=".65"/>
+    <circle cx="74" cy="55" r="6" opacity=".5"/>
+  </g>
+  <line x1="20" y1="55" x2="74" y2="55" stroke="#ffffff" stroke-width="2" opacity=".45"/>
+  <path d="M96 55 L116 55 M109 48 L116 55 L109 62" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/>
+  <path d="M134 84 C 128 62, 150 60, 144 40 C 140 26, 160 20, 168 30" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity=".95"/>
+  <path d="M168 30 C 178 42, 160 52, 172 64 C 182 74, 170 86, 158 84" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity=".6"/>
+  <path d="M186 44 L200 44 M186 56 L200 56 M186 68 L200 68" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity=".35"/>
+</svg>

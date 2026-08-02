@@ -25,22 +25,10 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - text: Research
-        menu:
-          - href: research/index.qmd
-            text: Overview
-          - href: projects/index.qmd
-            text: Projects
-          - href: projects/pipelines.qmd
-            text: Pipelines
-      - text: Teaching
-        menu:
-          - href: teaching/index.qmd
-            text: Courses
-          - href: teaching/videos.qmd
-            text: Videos
-      - href: tutorials/index.qmd
-        text: Tutorials
+      - href: research/index.qmd
+        text: Research
+      - href: teaching/index.qmd
+        text: Teaching
       - href: publications/index.qmd
         text: Publications
       - text: CV

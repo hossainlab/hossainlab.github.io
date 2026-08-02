@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 110" width="220" height="110" role="img" aria-label="Generic analysis workflow of connected processing steps">
+  <g fill="none" stroke="#ffffff" stroke-width="2.4" opacity=".9">
+    <rect x="22" y="40" width="42" height="30" rx="7"/>
+    <rect x="89" y="40" width="42" height="30" rx="7"/>
+    <rect x="156" y="40" width="42" height="30" rx="7"/>
+  </g>
+  <path d="M64 55 L89 55 M82 48 L89 55 L82 62 M131 55 L156 55 M149 48 L156 55 L149 62" stroke="#ffffff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+</svg>

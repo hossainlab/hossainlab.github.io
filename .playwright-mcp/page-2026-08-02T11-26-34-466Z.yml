@@ -1,0 +1,299 @@
+- generic [active] [ref=f1e1]:
+  - banner [ref=f1e2]:
+    - navigation [ref=f1e3]:
+      - generic [ref=f1e4]:
+        - link "Jubayer Hossain" [ref=f1e6] [cursor=pointer]:
+          - /url: http://localhost:8899/
+        - generic "Search" [ref=f1e7]:
+          - combobox "Search" [ref=f1e8]:
+            - button "Search" [ref=f1e9] [cursor=pointer]
+        - generic [ref=f1e13]:
+          - list [ref=f1e14]:
+            - listitem [ref=f1e15]:
+              - link "Home" [ref=f1e16] [cursor=pointer]:
+                - /url: http://localhost:8899/
+            - listitem [ref=f1e17]:
+              - link "Research" [ref=f1e18] [cursor=pointer]:
+                - /url: http://localhost:8899/research/
+            - listitem [ref=f1e19]:
+              - link "Projects" [ref=f1e20] [cursor=pointer]:
+                - /url: http://localhost:8899/projects/
+            - listitem [ref=f1e21]:
+              - link "Teaching" [ref=f1e22] [cursor=pointer]:
+                - /url: http://localhost:8899/teaching/
+            - listitem [ref=f1e23]:
+              - link "Mentorship" [ref=f1e24] [cursor=pointer]:
+                - /url: http://localhost:8899/mentorship/
+            - listitem [ref=f1e25]:
+              - link "Publications" [ref=f1e26] [cursor=pointer]:
+                - /url: http://localhost:8899/publications/
+            - listitem [ref=f1e27]:
+              - link "CV" [ref=f1e28] [cursor=pointer]:
+                - /url: http://localhost:8899/cv/CV-HossainMJ.pdf
+          - list [ref=f1e29]:
+            - listitem [ref=f1e30]:
+              - link [ref=f1e31] [cursor=pointer]:
+                - /url: mailto:hossainmj@gmail.com
+                - img "email" [ref=f1e32]: 
+            - listitem [ref=f1e33]:
+              - link "orcid" [ref=f1e34] [cursor=pointer]:
+                - /url: https://orcid.org/0000-0001-9323-4997
+                - generic "orcid" [ref=f1e36]: 
+            - listitem [ref=f1e37]:
+              - link "google-scholar" [ref=f1e38] [cursor=pointer]:
+                - /url: https://scholar.google.com/citations?user=9_K4ekoAAAAJ&hl=en&authuser=5
+                - generic "google-scholar" [ref=f1e40]: 
+            - listitem [ref=f1e41]:
+              - link "researchgate" [ref=f1e42] [cursor=pointer]:
+                - /url: https://scholar.google.com/citations?user=9_K4ekoAAAAJ&hl=en&authuser=5
+                - generic "researchgate" [ref=f1e44]: 
+            - listitem [ref=f1e45]:
+              - link [ref=f1e46] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/hossainmj
+                - img "linkedin" [ref=f1e47]: 
+            - listitem [ref=f1e48]:
+              - link [ref=f1e49] [cursor=pointer]:
+                - /url: https://twitter.com/hossain_lab
+                - img "twitter" [ref=f1e50]: 
+            - listitem [ref=f1e51]:
+              - link [ref=f1e52] [cursor=pointer]:
+                - /url: https://github.com/hossainlab
+                - img "github" [ref=f1e53]: 
+            - listitem [ref=f1e54]:
+              - link [ref=f1e55] [cursor=pointer]:
+                - /url: https://www.youtube.com/@hossainlab
+                - img "youtube" [ref=f1e56]: 
+  - banner [ref=f1e57]:
+    - generic [ref=f1e59]:
+      - heading "Research Overview" [level=1] [ref=f1e60]
+      - paragraph [ref=f1e61]: Computational approaches to decode complex biological systems using public omics data
+  - main [ref=f1e63]:
+    - generic [ref=f1e65]:
+      - generic [ref=f1e66]:
+        - generic [ref=f1e67]: Why Public Data
+        - heading [level=2] [ref=f1e68]:
+          - text: Open Datasets as a Research Platform
+          - link "Anchor" [ref=f1e69] [cursor=pointer]:
+            - /url: "#open-datasets-as-a-research-platform"
+            - text: 
+      - generic [ref=f1e70]:
+        - generic [ref=f1e78]:
+          - strong [ref=f1e79]: Reproducibility
+          - paragraph [ref=f1e80]: All datasets are publicly archived — every analysis can be independently verified and extended.
+        - generic [ref=f1e87]:
+          - strong [ref=f1e88]: Scale
+          - paragraph [ref=f1e89]: Thousands of samples across tissues, diseases, and cohorts — far beyond single-lab capacity.
+        - generic [ref=f1e95]:
+          - strong [ref=f1e96]: Open Science
+          - paragraph [ref=f1e97]: FAIR data principles enable cross-study meta-analyses and collaborative discovery.
+        - generic [ref=f1e103]:
+          - strong [ref=f1e104]: Generalisability
+          - paragraph [ref=f1e105]: Multi-cohort validation increases confidence that findings are not dataset-specific artefacts.
+    - generic [ref=f1e106]:
+      - generic [ref=f1e107]:
+        - generic [ref=f1e108]: Research Areas
+        - heading [level=2] [ref=f1e109]:
+          - text: Three Data Modalities
+          - link "Anchor" [ref=f1e110] [cursor=pointer]:
+            - /url: "#three-data-modalities"
+            - text: 
+        - paragraph [ref=f1e111]: Bulk, single-cell, and spatial transcriptomics — combined to resolve disease biology from cohort-level signal down to tissue architecture.
+      - generic [ref=f1e112]:
+        - 'link "Bulk RNA-Seq: sequencing reads stacked over an exon model with a coverage profile Bulk RNA-Seq Differential expression, pathway & signature analysis across patient cohorts." [ref=f1e113] [cursor=pointer]':
+          - /url: http://localhost:8899/projects/
+          - 'img "Bulk RNA-Seq: sequencing reads stacked over an exon model with a coverage profile" [ref=f1e115]'
+          - generic [ref=f1e131]: Bulk RNA-Seq
+          - generic [ref=f1e132]: Differential expression, pathway & signature analysis across patient cohorts.
+        - 'link "Single-cell: UMAP embedding with distinct coloured cell clusters Single-Cell Cell-state atlases, trajectory & cell–cell communication from scRNA-seq." [ref=f1e133] [cursor=pointer]':
+          - /url: http://localhost:8899/projects/
+          - 'img "Single-cell: UMAP embedding with distinct coloured cell clusters" [ref=f1e135]'
+          - generic [ref=f1e165]: Single-Cell
+          - generic [ref=f1e166]: Cell-state atlases, trajectory & cell–cell communication from scRNA-seq.
+        - 'link "Spatial transcriptomics: tissue section overlaid with a grid of expression-coloured capture spots Spatial Transcriptomics Tissue architecture, niche deconvolution & spatially resolved gene programmes." [ref=f1e167] [cursor=pointer]':
+          - /url: http://localhost:8899/projects/
+          - 'img "Spatial transcriptomics: tissue section overlaid with a grid of expression-coloured capture spots" [ref=f1e169]'
+          - generic [ref=f1e189]: Spatial Transcriptomics
+          - generic [ref=f1e190]: Tissue architecture, niche deconvolution & spatially resolved gene programmes.
+    - generic [ref=f1e191]:
+      - generic [ref=f1e192]:
+        - generic [ref=f1e193]: Workflow 01
+        - heading [level=2] [ref=f1e194]:
+          - text: Bulk RNA-Seq Meta-Analysis
+          - link "Anchor" [ref=f1e195] [cursor=pointer]:
+            - /url: "#bulk-rna-seq-meta-analysis"
+            - text: 
+        - paragraph [ref=f1e196]: Large-scale transcriptomic discovery using harmonised public datasets from NCBI GEO & SRA
+      - generic [ref=f1e197]:
+        - generic [ref=f1e198]: Why public bulk RNA-seq data?
+        - text: Public repositories (GEO, SRA, ArrayExpress) host
+        - strong [ref=f1e199]: 100,000+ RNA-seq samples
+        - text: across diseases, tissues, and treatment conditions. Meta-analysing these datasets reveals robust, cross-cohort differential expression signals that no single study can provide — dramatically increasing statistical power and biological generalisability.
+      - generic [ref=f1e200]:
+        - generic [ref=f1e201]:
+          - generic [ref=f1e202]: "1"
+          - generic [ref=f1e203]: 🗄️
+          - generic [ref=f1e204]: Data Discovery
+          - generic [ref=f1e205]: GEO · SRA · ArrayExpress
+        - generic [ref=f1e206]: →
+        - generic [ref=f1e207]:
+          - generic [ref=f1e208]: "2"
+          - generic [ref=f1e209]: 🧹
+          - generic [ref=f1e210]: Quality Control
+          - generic [ref=f1e211]: FastQC · MultiQC · Trimmomatic
+        - generic [ref=f1e212]: →
+        - generic [ref=f1e213]:
+          - generic [ref=f1e214]: "3"
+          - generic [ref=f1e215]: 📐
+          - generic [ref=f1e216]: Quantification
+          - generic [ref=f1e217]: STAR · Salmon · featureCounts
+        - generic [ref=f1e218]: →
+        - generic [ref=f1e219]:
+          - generic [ref=f1e220]: "4"
+          - generic [ref=f1e221]: ⚖️
+          - generic [ref=f1e222]: Normalisation
+          - generic [ref=f1e223]: DESeq2 · edgeR · limma-voom
+        - generic [ref=f1e224]: →
+        - generic [ref=f1e225]:
+          - generic [ref=f1e226]: "5"
+          - generic [ref=f1e227]: 📊
+          - generic [ref=f1e228]: Meta-Analysis
+          - generic [ref=f1e229]: MetaVolcanoR · RankProd
+        - generic [ref=f1e230]: →
+        - generic [ref=f1e231]:
+          - generic [ref=f1e232]: "6"
+          - generic [ref=f1e233]: 🎯
+          - generic [ref=f1e234]: Biomarker Panel
+          - generic [ref=f1e235]: DEGs · Pathway Enrichment
+      - generic [ref=f1e236]:
+        - generic [ref=f1e237]: GEO
+        - generic [ref=f1e238]: SRA
+        - generic [ref=f1e239]: ArrayExpress
+        - generic [ref=f1e240]: DESeq2
+        - generic [ref=f1e241]: edgeR
+        - generic [ref=f1e242]: limma
+        - generic [ref=f1e243]: MetaVolcanoR
+        - generic [ref=f1e244]: GSEA
+        - generic [ref=f1e245]: R
+        - generic [ref=f1e246]: Python
+    - generic [ref=f1e247]:
+      - generic [ref=f1e248]:
+        - generic [ref=f1e249]: Workflow 02
+        - heading [level=2] [ref=f1e250]:
+          - text: Single-Cell Harmonised Framework
+          - link "Anchor" [ref=f1e251] [cursor=pointer]:
+            - /url: "#single-cell-harmonised-framework"
+            - text: 
+        - paragraph [ref=f1e252]: Cross-cohort single-cell atlas construction and comparative cell-state analysis
+      - generic [ref=f1e253]:
+        - generic [ref=f1e254]: Why public scRNA-seq data?
+        - text: Public single-cell datasets from
+        - strong [ref=f1e255]: CellxGene, GEO, and the Human Cell Atlas
+        - text: allow cross-cohort atlas construction at a scale impossible for a single lab. Integrating multiple studies removes batch-specific noise, reveals conserved cell states across diseases, and enables discovery of rare populations with unprecedented statistical confidence.
+      - generic [ref=f1e256]:
+        - generic [ref=f1e257]:
+          - generic [ref=f1e258]: "1"
+          - generic [ref=f1e259]: 🗄️
+          - generic [ref=f1e260]: Data Retrieval
+          - generic [ref=f1e261]: CellxGene · GEO · HCA
+        - generic [ref=f1e262]: →
+        - generic [ref=f1e263]:
+          - generic [ref=f1e264]: "2"
+          - generic [ref=f1e265]: 🧹
+          - generic [ref=f1e266]: QC & Filtering
+          - generic [ref=f1e267]: Scrublet · DoubletFinder
+        - generic [ref=f1e268]: →
+        - generic [ref=f1e269]:
+          - generic [ref=f1e270]: "3"
+          - generic [ref=f1e271]: 🔗
+          - generic [ref=f1e272]: Batch Integration
+          - generic [ref=f1e273]: Harmony · scVI · BBKNN
+        - generic [ref=f1e274]: →
+        - generic [ref=f1e275]:
+          - generic [ref=f1e276]: "4"
+          - generic [ref=f1e277]: 🗺️
+          - generic [ref=f1e278]: Clustering & UMAP
+          - generic [ref=f1e279]: Leiden · UMAP · t-SNE
+        - generic [ref=f1e280]: →
+        - generic [ref=f1e281]:
+          - generic [ref=f1e282]: "5"
+          - generic [ref=f1e283]: 🏷️
+          - generic [ref=f1e284]: Cell Annotation
+          - generic [ref=f1e285]: CellTypist · ScType · Manual
+        - generic [ref=f1e286]: →
+        - generic [ref=f1e287]:
+          - generic [ref=f1e288]: "6"
+          - generic [ref=f1e289]: 🎯
+          - generic [ref=f1e290]: Comparative Analysis
+          - generic [ref=f1e291]: DEGs · Trajectory · Regulons
+      - generic [ref=f1e292]:
+        - generic [ref=f1e293]: CellxGene
+        - generic [ref=f1e294]: HCA
+        - generic [ref=f1e295]: GEO
+        - generic [ref=f1e296]: Seurat
+        - generic [ref=f1e297]: Scanpy
+        - generic [ref=f1e298]: Harmony
+        - generic [ref=f1e299]: scVI
+        - generic [ref=f1e300]: PYSCENIC
+        - generic [ref=f1e301]: Python
+        - generic [ref=f1e302]: R
+    - generic [ref=f1e303]:
+      - generic [ref=f1e304]:
+        - generic [ref=f1e305]: Workflow 03
+        - heading [level=2] [ref=f1e306]:
+          - text: ML / DL in Genomics
+          - link "Anchor" [ref=f1e307] [cursor=pointer]:
+            - /url: "#ml-dl-in-genomics"
+            - text: 
+        - paragraph [ref=f1e308]: Machine and deep learning for biomarker discovery, disease classification, and precision medicine
+      - generic [ref=f1e309]:
+        - generic [ref=f1e310]: Why ML/DL on public omics data?
+        - text: High-dimensional omics data (10,000+ features per sample) exceeds the capacity of classical statistics. Machine learning extracts
+        - strong [ref=f1e311]: non-linear, multi-feature patterns
+        - text: that predict disease status, prognosis, and drug response. Public datasets provide the large, diverse sample sizes required to train generalisable models — with SHAP enabling biological interpretability.
+      - generic [ref=f1e312]:
+        - generic [ref=f1e313]:
+          - generic [ref=f1e314]: "1"
+          - generic [ref=f1e315]: 🗄️
+          - generic [ref=f1e316]: Multi-omics Input
+          - generic [ref=f1e317]: TCGA · GTEx · GEO
+        - generic [ref=f1e318]: →
+        - generic [ref=f1e319]:
+          - generic [ref=f1e320]: "2"
+          - generic [ref=f1e321]: ⚙️
+          - generic [ref=f1e322]: Feature Engineering
+          - generic [ref=f1e323]: Selection · Scaling · PCA
+        - generic [ref=f1e324]: →
+        - generic [ref=f1e325]:
+          - generic [ref=f1e326]: "3"
+          - generic [ref=f1e327]: 🤖
+          - generic [ref=f1e328]: Model Training
+          - generic [ref=f1e329]: XGBoost · RF · DNN · CNN
+        - generic [ref=f1e330]: →
+        - generic [ref=f1e331]:
+          - generic [ref=f1e332]: "4"
+          - generic [ref=f1e333]: ✅
+          - generic [ref=f1e334]: Validation
+          - generic [ref=f1e335]: Cross-validation · Hold-out
+        - generic [ref=f1e336]: →
+        - generic [ref=f1e337]:
+          - generic [ref=f1e338]: "5"
+          - generic [ref=f1e339]: 🔍
+          - generic [ref=f1e340]: Interpretability
+          - generic [ref=f1e341]: SHAP · LIME · Attention
+        - generic [ref=f1e342]: →
+        - generic [ref=f1e343]:
+          - generic [ref=f1e344]: "6"
+          - generic [ref=f1e345]: 🎯
+          - generic [ref=f1e346]: Biomarker Panel
+          - generic [ref=f1e347]: Diagnosis · Prognosis · Targets
+      - generic [ref=f1e348]:
+        - generic [ref=f1e349]: TCGA
+        - generic [ref=f1e350]: GTEx
+        - generic [ref=f1e351]: GEO
+        - generic [ref=f1e352]: scikit-learn
+        - generic [ref=f1e353]: XGBoost
+        - generic [ref=f1e354]: PyTorch
+        - generic [ref=f1e355]: SHAP
+        - generic [ref=f1e356]: Python
+  - contentinfo [ref=f1e357]:
+    - paragraph [ref=f1e361]: © Copyright 2026, Jubayer Hossain

@@ -1,6 +1,6 @@
 ---
 title: "About"
-subtitle: "Bioinformatician, Researcher, Educator & Entrepreneur"
+subtitle: "Multiomics Scientist, Educator & Entrepreneur"
 title-block-banner: true
 page-layout: full
 toc: false
