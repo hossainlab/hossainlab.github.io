@@ -41,3 +41,11 @@
   affiliation: "Department of Bioinformatics and Computational Biology, MD Anderson"
   country: "USA"
   url: "https://scholar.google.com/citations?user=-NKhd0oAAAAJ&hl=en"
+
+- name: "Yeon Ju Kim"
+  photo: "/files/collaborators/DrKim.jpg"
+  initial: "K"
+  title: "Associate Professor"
+  affiliation: "Department of Convergent Biotechnology & Advanced Materials Science, Kyung Hee University, South Korea"
+  country: "USA"
+  url: "https://scholar.google.com/citations?user=JjTQEaoAAAAJ&hl=ko"
