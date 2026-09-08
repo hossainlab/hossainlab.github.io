@@ -176,6 +176,34 @@ ul.task-list li input[type="checkbox"] {
       window['quarto-listing-loaded']();
     }
   })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-programmes-list .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-url','listing-kicker','listing-description','listing-external',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-title","listing-url","listing-kicker","listing-description","listing-external"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-programmes-list'] = new List('listing-programmes-list', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
   </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KLN6W9N3N"></script>
 
@@ -1204,29 +1232,70 @@ WNT gene family in breast cancer published in Scientific Reports — Prognostic 
 <p class="eyebrow">Training &amp; mentorship</p>
 <h2 class="title is-3">Open Programmes</h2>
 </div>
-<div class="tutorial-grid" style="grid-template-columns: repeat(3, minmax(0, 1fr));">
-
+<div id="listing-programmes-list" class="quarto-listing quarto-listing-container-custom">
+<div class="tutorial-grid programme-grid">
 <article class="resource-card">
 <span class="resource-kicker">12 weeks · NGS &amp; genomics</span>
-<h3><a href="https://deepbioacademy.com/programs/bioinformatics-mentorship" target="_blank" rel="noopener">Bioinformatics Mentorship Program</a></h3>
-<p>Raw sequencing data to a publication-ready manuscript, with one-to-one supervision.</p>
+<h3>
+<a href="https://deepbioacademy.com/programs/bioinformatics-mentorship" target="_blank" rel="noopener">Bioinformatics Mentorship Program</a>
+</h3>
+<p>
+Raw sequencing data to a publication-ready manuscript, with one-to-one supervision.
+</p>
 <a class="external-link" href="https://deepbioacademy.com/programs/bioinformatics-mentorship" target="_blank" rel="noopener">Learn more →</a>
 </article>
-
 <article class="resource-card">
 <span class="resource-kicker">4 weeks · LLMs &amp; agents</span>
-<h3><a href="https://deepbioacademy.com/programs/nocode-ai" target="_blank" rel="noopener">No-Code &amp; Agentic AI</a></h3>
-<p>Automating literature review and omics analysis with agentic AI, without writing code.</p>
+<h3>
+<a href="https://deepbioacademy.com/programs/nocode-ai" target="_blank" rel="noopener">No-Code &amp; Agentic AI</a>
+</h3>
+<p>
+Automating literature review and omics analysis with agentic AI, without writing code.
+</p>
 <a class="external-link" href="https://deepbioacademy.com/programs/nocode-ai" target="_blank" rel="noopener">Learn more →</a>
 </article>
-
 <article class="resource-card">
 <span class="resource-kicker">Drug discovery · AI/ML</span>
-<h3><a href="https://deepbioacademy.com/programs/drug-discovery" target="_blank" rel="noopener">NextGen Drug Discovery with AI</a></h3>
-<p>How machine learning accelerates target identification, molecule design and virtual screening.</p>
+<h3>
+<a href="https://deepbioacademy.com/programs/drug-discovery" target="_blank" rel="noopener">NextGen Drug Discovery with AI</a>
+</h3>
+<p>
+How machine learning accelerates target identification, molecule design and virtual screening.
+</p>
 <a class="external-link" href="https://deepbioacademy.com/programs/drug-discovery" target="_blank" rel="noopener">Learn more →</a>
 </article>
-
+<article class="resource-card">
+<span class="resource-kicker">6 months · Bioinformatics</span>
+<h3>
+<a href="https://gsabioinfointernship.github.io/" target="_blank" rel="noopener">GSA Bioinformatics Internship</a>
+</h3>
+<p>
+Gain hands-on experience in bioinformatics with real-world projects and mentorship.
+</p>
+<a class="external-link" href="https://gsabioinfointernship.github.io/" target="_blank" rel="noopener">Learn more →</a>
+</article>
+<article class="resource-card">
+<span class="resource-kicker">4 weeks · AI literacy</span>
+<h3>
+<a href="https://deepbioacademy.com/programs/agami-ai" target="_blank" rel="noopener">AgamiAI - National AI Literacy Initiative</a>
+</h3>
+<p>
+A national initiative to promote AI literacy and empower school and college students to leverage AI in their research and studies.
+</p>
+<a class="external-link" href="https://deepbioacademy.com/programs/agami-ai" target="_blank" rel="noopener">Learn more →</a>
+</article>
+<article class="resource-card">
+<span class="resource-kicker">4 weeks · Bioinformatics</span>
+<h3>
+<a href="#" target="_blank" rel="noopener">School of Bioinformatics</a>
+</h3>
+<p>
+Designed for school and college students, this program introduces bioinformatics concepts and practical skills.
+</p>
+<a class="external-link" href="#" target="_blank" rel="noopener">Learn more →</a>
+</article>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
 </div>
 </div>
 </section>

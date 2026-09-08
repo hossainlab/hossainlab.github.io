@@ -5843,6 +5843,11 @@ html {
   gap: 1.25rem;
 }
 
+/* Open Programmes runs three across, not four. */
+.tutorial-grid.programme-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .featured-card {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -6254,7 +6259,8 @@ html {
 @media screen and (max-width: 1023px) {
   .profile-hero .hero-layout,
   .featured-grid,
-  .tutorial-grid {
+  .tutorial-grid,
+  .tutorial-grid.programme-grid {
     grid-template-columns: 1fr 1fr;
   }
   .hero-title {
@@ -6271,7 +6277,8 @@ html {
   }
   .profile-hero .hero-layout,
   .featured-grid,
-  .tutorial-grid {
+  .tutorial-grid,
+  .tutorial-grid.programme-grid {
     grid-template-columns: 1fr;
   }
   .hero-title {

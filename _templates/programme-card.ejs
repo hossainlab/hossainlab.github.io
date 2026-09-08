@@ -1,0 +1,32 @@
+<%
+/* Lodash template for the homepage "Open Programmes" cards.
+   Markup is built as JS strings and emitted in a single interpolation at the
+   end: pandoc wraps indented HTML in code blocks, so no literal indented tags.
+   Never write a template delimiter inside a comment - lodash scans for them
+   textually and it breaks the compiled function. */
+var esc = function (s) {
+return String(s == null ? '' : s)
+.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+};
+
+var lines = [];
+lines.push('<div class="tutorial-grid programme-grid">');
+for (var i = 0; i < items.length; i++) {
+var it = items[i];
+if (!it.title) { continue; }
+var href = esc(it.url || '#');
+/* Off-site by default; an entry can opt out with external: false. */
+var target = (it.external === false) ? '' : ' target="_blank" rel="noopener"';
+var cta = esc(it.cta || 'Learn more');
+var card = [];
+card.push('<article class="resource-card">');
+if (it.kicker) { card.push('<span class="resource-kicker">' + esc(it.kicker) + '</span>'); }
+card.push('<h3><a href="' + href + '"' + target + '>' + esc(it.title) + '</a></h3>');
+if (it.description) { card.push('<p>' + esc(it.description) + '</p>'); }
+card.push('<a class="external-link" href="' + href + '"' + target + '>' + cta + ' &rarr;</a>');
+card.push('</article>');
+lines.push(card.join(''));
+}
+lines.push('</div>');
+%>
+<%= lines.join('\n') %>

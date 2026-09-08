@@ -1,0 +1,48 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# Homepage "Open Programmes" cards (Training & mentorship section)
+# ──────────────────────────────────────────────────────────────────────────────
+# Fields:
+#   title        – Programme name (required)
+#   url          – Where "Learn more" and the title point (required)
+#   kicker       – Small pill above the title, e.g. duration and topic
+#   description  – One or two sentences
+#   cta          – Link label; defaults to "Learn more" when omitted
+#   external     – true opens in a new tab; default true for off-site links
+# Order in this file is the order on the page.
+# ──────────────────────────────────────────────────────────────────────────────
+
+- title: "Bioinformatics Mentorship Program"
+  url: "https://deepbioacademy.com/programs/bioinformatics-mentorship"
+  kicker: "12 weeks · Bioinformatics & AI"
+  description: "Raw sequencing data to a publication-ready manuscript, with one-to-one supervision."
+  external: true
+
+- title: "No-Code & Agentic AI"
+  url: "https://deepbioacademy.com/programs/nocode-ai"
+  kicker: "4 weeks · LLMs & agents"
+  description: "Automating literature review and omics analysis with agentic AI, without writing code."
+  external: true
+
+- title: "NextGen Drug Discovery with AI"
+  url: "https://deepbioacademy.com/programs/drug-discovery"
+  kicker: "Drug discovery · AI/ML"
+  description: "How machine learning accelerates target identification, molecule design and virtual screening."
+  external: true
+
+- title: "GSA Bioinformatics Internship"
+  url: "https://gsabioinfointernship.github.io/"
+  kicker: "6 months · Bioinformatics"
+  description: "Gain hands-on experience in bioinformatics with real-world projects and mentorship."
+  external: true
+
+- title: "AgamiAI - National AI Literacy Initiative"
+  url: "https://deepbioacademy.com/programs/agami-ai"
+  kicker: "4 weeks · AI literacy"
+  description: "A national initiative to promote AI literacy and empower school and college students to leverage AI in their research and studies."
+  external: true
+
+- title: "School of Bioinformatics"
+  url: "#"
+  kicker: "4 weeks · Bioinformatics"
+  description: "Designed for school and college students, this program introduces bioinformatics concepts and practical skills."
+  external: true

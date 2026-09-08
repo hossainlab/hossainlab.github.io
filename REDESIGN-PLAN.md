@@ -49,7 +49,12 @@ Structure adapted from srijitseal.com at the user's request. Sections, in order:
 6. **UPDATES / News** — timeline from `news.yml`.
 7. **TRAINING / Open programmes** — DeepBio Academy cohorts.
 
-New data files: `featured.yml`, `news.yml`.
+New data files: `data/featured.yml`, `data/news.yml`.
+
+> Note: a listing `contents:` path cannot live under an underscore-prefixed
+> directory - Quarto skips those when globbing, and the listing silently
+> renders empty. `_templates/` works only because it is read as a template,
+> not globbed as content. Hence `data/`, not `_data/`.
 New templates: `featured-card.ejs`, `news-item.ejs`, `talk-item.ejs`.
 
 - [x] **Navbar is homepage section anchors**, as in the reference: Home / Work

@@ -11,7 +11,7 @@ title-block-banner: false
 anchor-sections: false
 listing:
   - id: featured-list
-    contents: featured.yml
+    contents: data/featured.yml
     template: _templates/featured-card.ejs
   - id: talks-list
     contents:
@@ -23,8 +23,11 @@ listing:
     contents: publications/journal-articles.yml
     template: _templates/home-publication.ejs
   - id: news-list
-    contents: news.yml
+    contents: data/news.yml
     template: _templates/news-item.ejs
+  - id: programmes-list
+    contents: data/programmes.yml
+    template: _templates/programme-card.ejs
 ---
 
 ```{=html}
@@ -200,30 +203,12 @@ listing:
 <p class="eyebrow">Training &amp; mentorship</p>
 <h2 class="title is-3">Open Programmes</h2>
 </div>
-<div class="tutorial-grid" style="grid-template-columns: repeat(3, minmax(0, 1fr));">
+```
 
-<article class="resource-card">
-<span class="resource-kicker">12 weeks &middot; NGS &amp; genomics</span>
-<h3><a href="https://deepbioacademy.com/programs/bioinformatics-mentorship" target="_blank" rel="noopener">Bioinformatics Mentorship Program</a></h3>
-<p>Raw sequencing data to a publication-ready manuscript, with one-to-one supervision.</p>
-<a class="external-link" href="https://deepbioacademy.com/programs/bioinformatics-mentorship" target="_blank" rel="noopener">Learn more &rarr;</a>
-</article>
+::: {#programmes-list}
+:::
 
-<article class="resource-card">
-<span class="resource-kicker">4 weeks &middot; LLMs &amp; agents</span>
-<h3><a href="https://deepbioacademy.com/programs/nocode-ai" target="_blank" rel="noopener">No-Code &amp; Agentic AI</a></h3>
-<p>Automating literature review and omics analysis with agentic AI, without writing code.</p>
-<a class="external-link" href="https://deepbioacademy.com/programs/nocode-ai" target="_blank" rel="noopener">Learn more &rarr;</a>
-</article>
-
-<article class="resource-card">
-<span class="resource-kicker">Drug discovery &middot; AI/ML</span>
-<h3><a href="https://deepbioacademy.com/programs/drug-discovery" target="_blank" rel="noopener">NextGen Drug Discovery with AI</a></h3>
-<p>How machine learning accelerates target identification, molecule design and virtual screening.</p>
-<a class="external-link" href="https://deepbioacademy.com/programs/drug-discovery" target="_blank" rel="noopener">Learn more &rarr;</a>
-</article>
-
-</div>
+```{=html}
 </div>
 </section>
 ```
