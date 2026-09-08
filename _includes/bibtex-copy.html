@@ -1,0 +1,17 @@
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('.bibtex-copy');
+  if (!btn) return;
+  var src = document.getElementById(btn.dataset.target);
+  if (!src) return;
+  navigator.clipboard.writeText(src.textContent).then(function () {
+    var prev = btn.textContent;
+    btn.textContent = 'Copied';
+    btn.classList.add('is-copied');
+    setTimeout(function () {
+      btn.textContent = prev;
+      btn.classList.remove('is-copied');
+    }, 1600);
+  });
+});
+</script>

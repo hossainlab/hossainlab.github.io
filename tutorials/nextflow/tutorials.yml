@@ -14,7 +14,7 @@
   links:
     - label: "Read Tutorial"
       url: "01-introduction.html"
-      icon: "fa-solid fa-book-open"
+      icon: "bi bi-book"
 
 - title: "Installing Nextflow and Java"
   module: "Module 1: Introduction & Setup"
@@ -30,7 +30,7 @@
   links:
     - label: "Read Tutorial"
       url: "02-installation.html"
-      icon: "fa-solid fa-book-open"
+      icon: "bi bi-book"
 
 - title: "Hello World: Your First Nextflow Pipeline"
   module: "Module 1: Introduction & Setup"
@@ -46,7 +46,7 @@
   links:
     - label: "Read Tutorial"
       url: "03-hello-world.html"
-      icon: "fa-solid fa-book-open"
+      icon: "bi bi-book"
 
 # ── Module 2: Nextflow Language Fundamentals ──────────────────────────────────
 

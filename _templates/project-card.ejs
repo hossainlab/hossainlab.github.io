@@ -32,7 +32,7 @@
 <% if (item.links && item.links.length > 0) { %>
 <div class="project-links">
 <% for (const link of item.links) { %>
-<a href="<%= link.url %>" class="project-btn" target="_blank"><% if (link.icon) { %><i class="<%= link.icon %>"></i><% } else { %><i class="fa-brands fa-github"></i><% } %> <%= link.label %></a>
+<a href="<%= link.url %>" class="project-btn" target="_blank"><% if (link.icon) { %><i class="<%= link.icon %>"></i><% } else { %><i class="bi bi-github"></i><% } %> <%= link.label %></a>
 <% } %>
 </div>
 <% } %>

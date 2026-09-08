@@ -377,10 +377,25 @@ listing:
 
 ## Mentoring {#sec-mentoring .ro-h2 data-eyebrow="People"}
 
+```{=html}
+<p class="ro-section-sub">I supervise students in reproducible bioinformatics — each mentee works through a full analysis, from public data retrieval to interpretation, with weekly one-to-one review.</p>
+```
+
 ::: {#ro-mentees}
 :::
 
+```{=html}
+<div class="ro-cta-row">
+<a class="ro-cta-btn" href="mailto:contact.jubayerhossain@gmail.com?subject=Bioinformatics%20mentorship%20enquiry">Apply for mentorship &rarr;</a>
+<a class="ro-cta-btn ro-cta-btn-ghost" href="../teaching/index.html">Courses &amp; training</a>
+</div>
+```
+
 ## Collaborators {#sec-collaborators .ro-h2 data-eyebrow="Network"}
+
+```{=html}
+<p class="ro-section-sub">Ongoing research partnerships across microbiology, plant biotechnology, and computational oncology.</p>
+```
 
 ::: {#ro-collaborators}
 :::

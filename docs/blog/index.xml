@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Jubayer Hossain - Multiomics and Machine Learning</title>
+<link>https://mdjubayerhossain.com/blog/</link>
+<atom:link href="https://mdjubayerhossain.com/blog/index.xml" rel="self" type="application/rss+xml"/>
+<description>Academic Website for Jubayer Hossain</description>
+<image>
+<url>https://mdjubayerhossain.com/files/profiles/jubayer.jpg</url>
+<title>Jubayer Hossain - Multiomics and Machine Learning</title>
+<link>https://mdjubayerhossain.com/blog/</link>
+</image>
+<generator>quarto-1.10.18</generator>
+<lastBuildDate>Thu, 19 Feb 2026 18:00:00 GMT</lastBuildDate>
+<item>
+  <title>Introduction to Single-Cell RNA Sequencing</title>
+  <dc:creator>Jubayer Hossain</dc:creator>
+  <link>https://mdjubayerhossain.com/blog/posts/intro-scrna-seq/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="why-single-cell" class="level2">
+<h2 class="anchored" data-anchor-id="why-single-cell">Why Single-Cell?</h2>
+<p>Bulk RNA sequencing measures gene expression averaged across thousands of cells, masking the diversity within complex tissues. Single-cell RNA sequencing (scRNA-seq) overcomes this limitation by profiling transcriptomes at individual-cell resolution, enabling the discovery of rare cell types, transitional states, and cell-type-specific responses to perturbation.</p>
+</section>
+<section id="key-steps-in-a-typical-scrna-seq-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="key-steps-in-a-typical-scrna-seq-workflow">Key Steps in a Typical scRNA-seq Workflow</h2>
+<ol type="1">
+<li><strong>Tissue dissociation &amp; cell capture</strong> — Droplet-based platforms (10x Genomics Chromium) or plate-based methods (Smart-seq2/3).</li>
+<li><strong>Library preparation &amp; sequencing</strong> — cDNA synthesis, amplification, and Illumina sequencing.</li>
+<li><strong>Raw data processing</strong> — Demultiplexing, alignment (STARsolo, Cell Ranger), and count matrix generation.</li>
+<li><strong>Quality control</strong> — Filtering low-quality cells based on mitochondrial content, gene counts, and doublet detection.</li>
+<li><strong>Downstream analysis</strong> — Normalization, dimensionality reduction (PCA, UMAP), clustering, differential expression, and trajectory inference.</li>
+</ol>
+</section>
+<section id="tools-of-the-trade" class="level2">
+<h2 class="anchored" data-anchor-id="tools-of-the-trade">Tools of the Trade</h2>
+<p>The <strong>scverse</strong> ecosystem — including <strong>Scanpy</strong>, <strong>AnnData</strong>, <strong>scvi-tools</strong>, and <strong>Muon</strong> — provides a comprehensive Python framework for single-cell analysis. R users often rely on <strong>Seurat</strong> and <strong>Bioconductor</strong> packages.</p>
+</section>
+<section id="looking-ahead" class="level2">
+<h2 class="anchored" data-anchor-id="looking-ahead">Looking Ahead</h2>
+<p>Stay tuned for deeper dives into specific applications: microglial profiling in neurodegeneration, spatial transcriptomics in the tumor microenvironment, and multi-modal single-cell approaches.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>Single-Cell</category>
+  <category>scRNA-seq</category>
+  <category>Methods</category>
+  <guid>https://mdjubayerhossain.com/blog/posts/intro-scrna-seq/</guid>
+  <pubDate>Thu, 19 Feb 2026 18:00:00 GMT</pubDate>
+  <media:content url="https://mdjubayerhossain.com/blog/posts/intro-scrna-seq/thumbnail.svg" medium="image" type="image/svg+xml"/>
+</item>
+<item>
+  <title>Microglial Activation States in Alzheimer’s Disease</title>
+  <dc:creator>Jubayer Hossain</dc:creator>
+  <link>https://mdjubayerhossain.com/blog/posts/microglial-states-alzheimers/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="microglia-the-brains-immune-sentinels" class="level2">
+<h2 class="anchored" data-anchor-id="microglia-the-brains-immune-sentinels">Microglia: The Brain’s Immune Sentinels</h2>
+<p>Microglia are the resident macrophages of the central nervous system, constantly surveying the brain parenchyma for damage and pathogens. In Alzheimer’s disease (AD), microglia adopt a range of activation states that can be both neuroprotective and neurotoxic.</p>
+</section>
+<section id="disease-associated-microglia-dam" class="level2">
+<h2 class="anchored" data-anchor-id="disease-associated-microglia-dam">Disease-Associated Microglia (DAM)</h2>
+<p>Single-cell RNA-seq studies in AD mouse models and human post-mortem tissue have identified a conserved transcriptional program termed <strong>disease-associated microglia (DAM)</strong>. Key features include:</p>
+<ul>
+<li>Downregulation of homeostatic genes (<em>P2ry12</em>, <em>Cx3cr1</em>, <em>Tmem119</em>)</li>
+<li>Upregulation of lipid metabolism and phagocytosis genes (<em>Apoe</em>, <em>Lpl</em>, <em>Trem2</em>)</li>
+<li>A TREM2-dependent transition from stage 1 to stage 2 DAM</li>
+</ul>
+</section>
+<section id="beyond-the-dam-binary" class="level2">
+<h2 class="anchored" data-anchor-id="beyond-the-dam-binary">Beyond the DAM Binary</h2>
+<p>Recent high-resolution atlases have expanded the picture beyond a simple homeostatic-vs-DAM dichotomy, revealing:</p>
+<ul>
+<li><strong>Interferon-responsive microglia</strong> enriched near amyloid plaques</li>
+<li><strong>Proliferating microglia</strong> associated with disease progression</li>
+<li><strong>Lipid-droplet-accumulating microglia (LDAM)</strong> linked to aging</li>
+</ul>
+</section>
+<section id="implications-for-therapeutics" class="level2">
+<h2 class="anchored" data-anchor-id="implications-for-therapeutics">Implications for Therapeutics</h2>
+<p>Understanding microglial heterogeneity is critical for designing targeted therapies. TREM2 agonists, for example, aim to enhance protective DAM responses while minimizing pro-inflammatory signaling.</p>
+</section>
+<section id="further-reading" class="level2">
+<h2 class="anchored" data-anchor-id="further-reading">Further Reading</h2>
+<ul>
+<li>Keren-Shaul et al.&nbsp;(2017). <em>Cell</em>. DOI: 10.1016/j.cell.2017.05.018</li>
+<li>Mathys et al.&nbsp;(2019). <em>Nature</em>. DOI: 10.1038/s41586-019-1195-2</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>Neurogenomics</category>
+  <category>Microglia</category>
+  <category>Alzheimer&#39;s Disease</category>
+  <category>Single-Cell</category>
+  <guid>https://mdjubayerhossain.com/blog/posts/microglial-states-alzheimers/</guid>
+  <pubDate>Sat, 14 Feb 2026 18:00:00 GMT</pubDate>
+  <media:content url="https://mdjubayerhossain.com/blog/posts/microglial-states-alzheimers/thumbnail.svg" medium="image" type="image/svg+xml"/>
+</item>
+<item>
+  <title>Spatial Transcriptomics in Cancer Research</title>
+  <dc:creator>Jubayer Hossain</dc:creator>
+  <link>https://mdjubayerhossain.com/blog/posts/spatial-transcriptomics-cancer/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="why-space-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-space-matters">Why Space Matters</h2>
+<p>Standard scRNA-seq dissociates tissues, losing spatial context. Spatial transcriptomics technologies preserve the physical location of gene expression, revealing how cells communicate within their native tissue architecture.</p>
+</section>
+<section id="technology-landscape" class="level2">
+<h2 class="anchored" data-anchor-id="technology-landscape">Technology Landscape</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Platform</th>
+<th>Resolution</th>
+<th>Approach</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10x Visium</td>
+<td>~55 µm spots</td>
+<td>Capture-based</td>
+</tr>
+<tr class="even">
+<td>MERFISH</td>
+<td>Subcellular</td>
+<td>Imaging-based</td>
+</tr>
+<tr class="odd">
+<td>Slide-seq</td>
+<td>~10 µm beads</td>
+<td>Capture-based</td>
+</tr>
+<tr class="even">
+<td>CODEX</td>
+<td>Single-cell (protein)</td>
+<td>Imaging-based</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="applications-in-cancer" class="level2">
+<h2 class="anchored" data-anchor-id="applications-in-cancer">Applications in Cancer</h2>
+<ul>
+<li><strong>Tumor-immune interface mapping</strong> — Identifying spatial patterns of immune infiltration and exclusion</li>
+<li><strong>Tertiary lymphoid structures</strong> — Characterizing organized immune aggregates associated with immunotherapy response</li>
+<li><strong>Invasion fronts</strong> — Transcriptional programs at the leading edge of tumor expansion</li>
+<li><strong>Cell-cell communication</strong> — Ligand-receptor analysis with spatial constraints</li>
+</ul>
+</section>
+<section id="computational-challenges" class="level2">
+<h2 class="anchored" data-anchor-id="computational-challenges">Computational Challenges</h2>
+<p>Spatial data require specialized tools: <strong>Squidpy</strong> for spatial statistics, <strong>cell2location</strong> and <strong>DestVI</strong> for deconvolution, and <strong>NICHE-NET</strong> for spatially-aware cell communication inference.</p>
+</section>
+<section id="outlook" class="level2">
+<h2 class="anchored" data-anchor-id="outlook">Outlook</h2>
+<p>As spatial technologies achieve higher resolution and multiplexing, they will become essential for understanding treatment resistance and designing combination therapies.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>Spatial Transcriptomics</category>
+  <category>Cancer Genomics</category>
+  <category>Methods</category>
+  <guid>https://mdjubayerhossain.com/blog/posts/spatial-transcriptomics-cancer/</guid>
+  <pubDate>Mon, 09 Feb 2026 18:00:00 GMT</pubDate>
+  <media:content url="https://mdjubayerhossain.com/blog/posts/spatial-transcriptomics-cancer/thumbnail.svg" medium="image" type="image/svg+xml"/>
+</item>
+<item>
+  <title>Single-Cell Dissection of the Tumor Microenvironment</title>
+  <dc:creator>Jubayer Hossain</dc:creator>
+  <link>https://mdjubayerhossain.com/blog/posts/scrna-tumor-microenvironment/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="the-tumor-microenvironment-tme" class="level2">
+<h2 class="anchored" data-anchor-id="the-tumor-microenvironment-tme">The Tumor Microenvironment (TME)</h2>
+<p>Tumors are not just masses of malignant cells — they are complex ecosystems comprising cancer cells, immune cells, fibroblasts, endothelial cells, and extracellular matrix. The composition and state of this <strong>tumor microenvironment (TME)</strong> profoundly influences disease progression and treatment response.</p>
+</section>
+<section id="what-scrna-seq-reveals" class="level2">
+<h2 class="anchored" data-anchor-id="what-scrna-seq-reveals">What scRNA-seq Reveals</h2>
+<p>Single-cell profiling of the TME has uncovered:</p>
+<section id="immune-compartment" class="level3">
+<h3 class="anchored" data-anchor-id="immune-compartment">Immune Compartment</h3>
+<ul>
+<li><strong>CD8+ T cell exhaustion gradients</strong> — Progressive loss of effector function marked by <em>TOX</em>, <em>LAG3</em>, and <em>PDCD1</em> expression</li>
+<li><strong>Regulatory T cells (Tregs)</strong> — Immunosuppressive populations enriched in the tumor core</li>
+<li><strong>Tumor-associated macrophages (TAMs)</strong> — Polarization along a spectrum from M1-like (anti-tumor) to M2-like (pro-tumor)</li>
+</ul>
+</section>
+<section id="stromal-compartment" class="level3">
+<h3 class="anchored" data-anchor-id="stromal-compartment">Stromal Compartment</h3>
+<ul>
+<li><strong>Cancer-associated fibroblasts (CAFs)</strong> — Multiple subtypes with distinct roles in immune exclusion, matrix remodeling, and angiogenesis</li>
+<li><strong>Endothelial heterogeneity</strong> — Tumor vasculature with abnormal transcriptional programs</li>
+</ul>
+</section>
+</section>
+<section id="clinical-implications" class="level2">
+<h2 class="anchored" data-anchor-id="clinical-implications">Clinical Implications</h2>
+<p>Understanding TME composition at single-cell resolution enables:</p>
+<ul>
+<li><strong>Biomarker discovery</strong> for immunotherapy response prediction</li>
+<li><strong>Rational combination therapy</strong> design targeting multiple TME components</li>
+<li><strong>Patient stratification</strong> based on immune cell states rather than bulk signatures</li>
+</ul>
+</section>
+<section id="key-resources" class="level2">
+<h2 class="anchored" data-anchor-id="key-resources">Key Resources</h2>
+<ul>
+<li>Comprehensive human tumor atlases (e.g., HTAN, Tabula Sapiens)</li>
+<li>Pan-cancer single-cell studies providing cross-tumor-type insights</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>Cancer Genomics</category>
+  <category>Single-Cell</category>
+  <category>Tumor Microenvironment</category>
+  <guid>https://mdjubayerhossain.com/blog/posts/scrna-tumor-microenvironment/</guid>
+  <pubDate>Wed, 04 Feb 2026 18:00:00 GMT</pubDate>
+  <media:content url="https://mdjubayerhossain.com/blog/posts/scrna-tumor-microenvironment/thumbnail.svg" medium="image" type="image/svg+xml"/>
+</item>
+</channel>
+</rss>

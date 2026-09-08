@@ -1,0 +1,149 @@
+/*-- scss:defaults --*/
+
+// Editorial-scientific type pairing.
+// Serif for display/headings, humanist sans for body, mono for code.
+$web-font-path: "https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap";
+
+$font-family-sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif:      "Source Serif 4", Georgia, "Times New Roman", serif !default;
+$font-family-monospace:  "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace !default;
+
+$headings-font-family:   $font-family-serif;
+$headings-font-weight:   600;
+$headings-line-height:   1.22;
+
+$font-size-root:         17px;
+$body-color:             #1f2430;
+$body-bg:                #ffffff;
+$link-color:             #1c5d99;
+$link-decoration:        none;
+$link-hover-decoration:  underline;
+
+$primary:                #1c5d99;
+$border-color:           #e3e6ea;
+$border-radius:          4px;
+
+// Navbar: quiet, hairline-separated, not a coloured slab.
+$navbar-bg:              #ffffff;
+$navbar-fg:              #1f2430;
+$navbar-hl:              #1c5d99;
+
+$toc-color:              #6b7280;
+$toc-font-size:          0.82rem;
+
+/*-- scss:rules --*/
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.003em;
+}
+
+h1, h2, h3, h4, h5, h6,
+.title, .quarto-title .title {
+  font-family: $font-family-serif;
+  letter-spacing: -0.014em;
+}
+
+// Navbar brand reads as a wordmark, not a heading.
+.navbar-brand {
+  font-family: $font-family-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.navbar {
+  border-bottom: 1px solid #e3e6ea;
+  box-shadow: none;
+}
+
+.navbar > .container-fluid,
+.navbar > .navbar-container {
+  max-width: 1200px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .navbar > .container-fluid,
+  .navbar > .navbar-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .navbar-collapse {
+    display: flex !important;
+    justify-content: center;
+    flex-grow: 0;
+  }
+
+  .navbar-nav.me-auto {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    gap: 0.15rem;
+  }
+
+  .navbar-nav.ms-auto {
+    margin-left: 1rem !important;
+  }
+
+  .quarto-navbar-tools {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+  }
+}
+
+// Below the expand breakpoint the bar collapses to a hamburger and the items
+// stack; centre them there too so the nav reads the same at every width.
+@media (max-width: 991.98px) {
+  .navbar-collapse .navbar-nav {
+    align-items: center;
+    text-align: center;
+  }
+
+  .navbar-collapse .navbar-nav .dropdown-menu {
+    text-align: center;
+  }
+}
+
+.navbar-nav .nav-link {
+  font-family: $font-family-sans-serif;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+// Title blocks: hairline rule instead of a filled banner.
+.quarto-title-block .quarto-title-banner {
+  background: #ffffff !important;
+  color: #1f2430 !important;
+  border-bottom: 1px solid #e3e6ea;
+  padding-block: 3.25rem 2.5rem;
+}
+
+.quarto-title-block .quarto-title-banner .title {
+  color: #1f2430 !important;
+  font-size: clamp(2rem, 1.4rem + 1.9vw, 2.9rem);
+}
+
+.quarto-title-block .quarto-title-banner .subtitle {
+  color: #6b7280 !important;
+  font-family: $font-family-sans-serif;
+  font-size: 1.02rem;
+  font-weight: 400;
+}
+
+// Measure control: long-form prose should not run to 1200px.
+main.content > p,
+main.content > ul,
+main.content > ol,
+main.content > blockquote {
+  max-width: 72ch;
+}
+
+code, pre, kbd, samp { font-family: $font-family-monospace; }

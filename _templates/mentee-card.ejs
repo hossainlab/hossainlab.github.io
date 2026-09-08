@@ -1,26 +1,79 @@
-<div class="mentee-grid">
-<% for (const item of items) { %>
-<div class="mentee-card">
-<% if (item.photo) { %>
-<div class="mentee-photo-wrap"><img class="mentee-photo" src="<%= item.photo %>" alt="<%= item.title %>"></div>
-<% } else { %>
-<div class="mentee-avatar"><%= item.initial %></div>
-<% } %>
-<div class="mentee-name"><%= item.title %></div>
-<% if (item.department) { %>
-<div class="mentee-dept"><%= item.department %></div>
-<% } %>
-<% if (item.university) { %>
-<div class="mentee-univ"><%= item.university %></div>
-<% } %>
-<div class="mentee-meta">
-<% if (item.track) { %>
-<div class="mentee-track"><%= item.track %></div>
-<% } %>
-<% if (item.period) { %>
-<div class="mentee-period"><%= item.period %></div>
-<% } %>
-</div>
-</div>
-<% } %>
-</div>
+<%
+/* Mentee roster — grouped by status (Currently mentoring / Alumni).
+   Programme names and cohort labels are deliberately NOT rendered: this
+   block presents mentoring experience, not the branded programmes the
+   mentees came through. `track` and `period` stay in mentorship.yml as
+   record-keeping fields only.
+
+   IMPORTANT: the markup is assembled in JS and emitted as whole lines,
+   one block-level element per line at column 0. Interleaving template
+   tags with indented HTML makes pandoc insert paragraph breaks *inside*
+   a card, which splits the flex container. Building strings avoids that.
+
+   Quarto renders these with lodash templates, not EJS: the raw-output
+   delimiter is <%= and <%- is the HTML-escaping one. Never write a
+   closing template delimiter inside a comment — it ends the block. */
+
+const esc = function (v) {
+return String(v == null ? '' : v)
+.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+};
+const statusOf = function (it) { return String(it.status || '').trim().toLowerCase(); };
+
+/* Research mentees only. Training-programme mentees stay in mentorship.yml
+   as a record but are not part of research supervision, so they are
+   filtered out here. Records with no category default to research. */
+const roster = items.filter(function (i) {
+return String(i.category || 'research').trim().toLowerCase() !== 'training';
+});
+
+const current = roster.filter(function (i) { return statusOf(i) === 'current'; });
+const alumni = roster.filter(function (i) { return statusOf(i) === 'alumni'; });
+const other = roster.filter(function (i) { return statusOf(i) !== 'current' && statusOf(i) !== 'alumni'; });
+
+const groups = [];
+if (current.length) groups.push({ key: 'current', title: 'Currently Mentoring', items: current });
+if (alumni.length) groups.push({ key: 'alumni', title: 'Alumni', items: alumni });
+if (other.length) groups.push({ key: '', title: 'Mentees', items: other });
+
+const universities = new Set(
+roster.map(function (i) { return String(i.university || '').trim(); }).filter(Boolean)
+).size;
+
+const stat = function (num, label, mod) {
+return '<span class="ro-ps-item"><span class="ro-ps-num' + (mod ? ' ro-ps-num-' + mod : '') + '">' + num + '</span>'
++ '<span class="ro-ps-label">' + esc(label) + '</span></span>';
+};
+
+const menteeCard = function (item) {
+const avatar = item.photo
+? '<img class="ro-mentee-photo" src="' + esc(item.photo) + '" alt="' + esc(item.title) + '" loading="lazy">'
+: '<span class="ro-mentee-avatar">' + esc(item.initial) + '</span>';
+let body = '<span class="ro-mentee-name">' + esc(item.title) + '</span>';
+if (item.department) body += '<span class="ro-mentee-dept">' + esc(item.department) + '</span>';
+if (item.university) body += '<span class="ro-mentee-univ">' + esc(item.university) + '</span>';
+return '<div class="ro-mentee-card">' + avatar + '<span class="ro-mentee-body">' + body + '</span></div>';
+};
+
+const groupBlock = function (g) {
+const count = g.items.length + (g.items.length === 1 ? ' mentee' : ' mentees');
+const pill = g.key
+? '<span class="ro-cohort-pill ro-cohort-pill-' + esc(g.key) + '">' + count + '</span>'
+: '';
+const head = '<div class="ro-cohort-head ro-cohort-head-plain">'
++ '<span class="ro-cohort-id"><span class="ro-cohort-title">' + esc(g.title) + '</span></span>'
++ pill + '</div>';
+const cards = g.items.map(menteeCard).join('');
+return '<div class="ro-cohort">' + head + '<div class="ro-mentee-grid">' + cards + '</div></div>';
+};
+
+const lines = [];
+lines.push('<div class="ro-people-stats ro-people-stats-3">'
++ stat(roster.length, 'Mentees supervised')
++ stat(current.length, 'Currently mentoring', 'current')
++ stat(alumni.length, 'Completed', 'alumni')
++ stat(universities, universities === 1 ? 'Institution' : 'Institutions')
++ '</div>');
+for (const g of groups) lines.push(groupBlock(g));
+%>
+<%= lines.join('\n') %>

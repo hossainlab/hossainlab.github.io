@@ -1,0 +1,43 @@
+---
+title: "Perception of Students on Antibiotic Resistance and Prevention"
+subtitle: "European Journal of Biology and Biotechnology, 2022"
+description-meta: "Perception of Students on Antibiotic Resistance and..."
+page-layout: article
+toc: false
+include-in-header: head.html
+---
+
+```{=html}
+<div class="paper-meta">
+<p class="paper-authors">Towhid, S. T., Hossain, M. J., Sammo, M. A. S., Akter, S.</p>
+<p class="paper-venue"><em>European Journal of Biology and Biotechnology</em>, <strong>3</strong> (2022)</p>
+<p class="paper-links">
+<a class="paper-link" href="https://doi.org/10.24018/ejbio.2022.3.3.341" target="_blank" rel="noopener">DOI</a>
+</p>
+</div>
+```
+
+## Abstract
+
+*Not indexed in PubMed, so no abstract is reproduced here. Read the article at the [publisher](https://doi.org/10.24018/ejbio.2022.3.3.341).*
+
+## Cite this
+
+Towhid, S. T., Hossain, M. J., Sammo, M. A. S., Akter, S. (2022). Perception of Students on Antibiotic Resistance and Prevention. *European Journal of Biology and Biotechnology*, **3**.
+
+```{=html}
+<details class="bibtex-block">
+<summary>BibTeX</summary>
+<pre><code id="bib-perception-of-students-on-antibiotic-resistance-and-prevention">@article{towhid2022perception,
+  title   = {Perception of Students on Antibiotic Resistance and Prevention},
+  author  = {Towhid, S. T. and Hossain, M. J. and Sammo, M. A. S. and Akter, S.},
+  journal = {European Journal of Biology and Biotechnology},
+  year    = {2022},
+  volume  = {3},
+  doi     = {10.24018/ejbio.2022.3.3.341},
+}</code></pre>
+<button class="bibtex-copy" type="button" data-target="bib-perception-of-students-on-antibiotic-resistance-and-prevention">Copy BibTeX</button>
+</details>
+```
+
+[&larr; All publications](../../index.qmd)

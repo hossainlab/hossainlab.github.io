@@ -1,0 +1,50 @@
+---
+title: "Integrative bioinformatics analysis reveals COL13A1 and COL23A1 as potential diagnostic and prognostic biomarkers in thyroid cancer"
+subtitle: "Health Science Reports, 2026"
+description-meta: "Thyroid cancer, the most prevalent endocrine malignancy globally, poses challenges owing to the limited understanding of its molecular drivers. Previous research has..."
+page-layout: article
+toc: false
+include-in-header: head.html
+---
+
+```{=html}
+<div class="paper-meta">
+<p class="paper-authors">Islam, M. W., Rahman, M. M., Naznin, H., Hossain, M. S., Akter, T., Shatabde, Z. A., Hossain, M. J.</p>
+<p class="paper-venue"><em>Health Science Reports</em> (2026)</p>
+<p class="paper-links">
+<a class="paper-link" href="https://doi.org/10.1002/hsr2.72617" target="_blank" rel="noopener">DOI</a>
+<a class="paper-link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13266370/" target="_blank" rel="noopener">Full text (PMC)</a>
+<a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/42306204/" target="_blank" rel="noopener">PubMed</a>
+</p>
+</div>
+```
+
+## Abstract
+
+Thyroid cancer, the most prevalent endocrine malignancy globally, poses challenges owing to the limited understanding of its molecular drivers. Previous research has highlighted collagen genes, such as COL13A1 and COL23A1, as key players in thyroid cancer. This study aimed to comprehensively investigate gene expression, genetic alterations, DNA methylation, and the prognostic significance of COL13A1 and COL23A1.
+
+This study employed a multi-omics strategy leveraging the TCGA database and the following resources: TIMER2.0, GEPIA2, UALCAN, HPA, cBioPortal, STRING, Enrichr, Kaplan-Meier Plotter, and R programming.
+
+We observed distinct expression patterns for COL13A1 and COL23A1. COL13A1 was significantly upregulated, while COL23A1 was downregulated in tumor tissues compared to normal tissues. Expression levels vary by sample type, tumor stage, and histology, with higher COL13A1 staining intensity and moderate COL23A1 staining observed in tumors. Both decreased COL13A1 and increased COL23A1 expression have been linked to poor prognosis. Promoter methylation levels also differ, showing higher COL23A1 methylation in tumors. SGIP1 and SLC26A4 were identified as the most co-expressed genes. Functional validation using GEO datasets further supported the potential of COL13A1 and COL23A1 as prognostic markers in thyroid cancer.
+
+In thyroid cancer, COL13A1 and COL23A1 have emerged as diagnostic and prognostic markers. Co-expression analysis suggests interactions between SGIP1 and SLC26A4, implicating diverse pathways in thyroid carcinogenesis and informing precision medicine strategies.
+
+## Cite this
+
+Islam, M. W., Rahman, M. M., Naznin, H., Hossain, M. S., Akter, T., Shatabde, Z. A., Hossain, M. J. (2026). Integrative bioinformatics analysis reveals COL13A1 and COL23A1 as potential diagnostic and prognostic biomarkers in thyroid cancer. *Health Science Reports*.
+
+```{=html}
+<details class="bibtex-block">
+<summary>BibTeX</summary>
+<pre><code id="bib-integrative-bioinformatics-analysis-reveals-col13a1-and-col23a1-as">@article{islam2026integrative,
+  title   = {Integrative bioinformatics analysis reveals COL13A1 and COL23A1 as potential diagnostic and prognostic biomarkers in thyroid cancer},
+  author  = {Islam, M. W. and Rahman, M. M. and Naznin, H. and Hossain, M. S. and Akter, T. and Shatabde, Z. A. and Hossain, M. J.},
+  journal = {Health Science Reports},
+  year    = {2026},
+  doi     = {10.1002/hsr2.72617},
+}</code></pre>
+<button class="bibtex-copy" type="button" data-target="bib-integrative-bioinformatics-analysis-reveals-col13a1-and-col23a1-as">Copy BibTeX</button>
+</details>
+```
+
+[&larr; All publications](../../index.qmd)

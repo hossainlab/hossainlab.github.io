@@ -1,0 +1,45 @@
+---
+title: "Young stroke in Bangladesh: Addressing rare cases with diagnostic challenges"
+subtitle: "Stroke and Vascular Neurology, 2025"
+description-meta: "Stroke is a leading cause of mortality and morbidity in Bangladesh, and young adults are increasingly affected. Common risk factors include hypertension, diabetes,..."
+page-layout: article
+toc: false
+include-in-header: head.html
+---
+
+```{=html}
+<div class="paper-meta">
+<p class="paper-authors">Das, M., Hossain, M. J.</p>
+<p class="paper-venue"><em>Stroke and Vascular Neurology</em>, svn-2025-004178 (2025)</p>
+<p class="paper-links">
+<a class="paper-link" href="https://doi.org/10.1136/svn-2025-004178" target="_blank" rel="noopener">DOI</a>
+<a class="paper-link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12772966/" target="_blank" rel="noopener">Full text (PMC)</a>
+<a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/40194845/" target="_blank" rel="noopener">PubMed</a>
+</p>
+</div>
+```
+
+## Abstract
+
+Stroke is a leading cause of mortality and morbidity in Bangladesh, and young adults are increasingly affected. Common risk factors include hypertension, diabetes, dyslipidaemia, obesity and smoking, whereas rare causes include haematologic disorders, premature atherosclerosis, vasculopathy and arteritis. Treatment barriers include inadequate infrastructure, a lack of trained staff and high intervention costs. Bangladesh faces a scarcity of neurologists and well-equipped hospitals, necessitating strategies to mitigate the burden of stroke among young people. This editorial summarises the current knowledge regarding the aetiology, pathophysiology and challenges in diagnosing and treating stroke in young people in Bangladesh, while addressing rare vasculopathy. Initiatives to support young stroke survivors and their families were also discussed. Prospective cohort studies, such as the Norwegian Stroke in the Young Study, provide insights into optimising prevention and early intervention by assessing family history and subclinical vascular diseases, which have also been highlighted. Recommendations include advanced neuroimaging for risk assessment, incorporating patient care and rehabilitation into medical education, conducting relevant research and promoting healthy lifestyles through campaigns and training of the healthcare staff.
+
+## Cite this
+
+Das, M., Hossain, M. J. (2025). Young stroke in Bangladesh: Addressing rare cases with diagnostic challenges. *Stroke and Vascular Neurology*, svn-2025-004178.
+
+```{=html}
+<details class="bibtex-block">
+<summary>BibTeX</summary>
+<pre><code id="bib-young-stroke-in-bangladesh-addressing-rare-cases-with">@article{das2025young,
+  title   = {Young stroke in Bangladesh: Addressing rare cases with diagnostic challenges},
+  author  = {Das, M. and Hossain, M. J.},
+  journal = {Stroke and Vascular Neurology},
+  year    = {2025},
+  pages   = {svn-2025-004178},
+  doi     = {10.1136/svn-2025-004178},
+}</code></pre>
+<button class="bibtex-copy" type="button" data-target="bib-young-stroke-in-bangladesh-addressing-rare-cases-with">Copy BibTeX</button>
+</details>
+```
+
+[&larr; All publications](../../index.qmd)

@@ -6,6 +6,7 @@
   volume: "19"
   article: "326"
   doi: "https://doi.org/10.1186/s13023-024-03344-1"
+  page: "papers/urgent-call-for-compulsory-premarital-screening-for-thalassemia/"
   type: peer-reviewed
   categories:
     - Global Health
@@ -19,6 +20,7 @@
   issue: "8"
   article: "1589"
   doi: "https://doi.org/10.3390/microorganisms12081589"
+  page: "papers/resistance-and-co-resistance-of-metallo-beta-lactamase/"
   type: peer-reviewed
   categories:
     - Infectious Disease
@@ -31,6 +33,7 @@
   volume: "7"
   article: "e2039"
   doi: "https://doi.org/10.1002/hsr2.2039"
+  page: "papers/prevalence-antibiotic-resistance-pattern-for-bacteriuria-from-patients/"
   type: peer-reviewed
   categories:
     - Infectious Disease
@@ -43,6 +46,7 @@
   volume: "7"
   article: "e70259"
   doi: "https://doi.org/10.1002/hsr2.70259"
+  page: "papers/food-consumption-patterns-and-sedentary-behaviors-among-university/"
   type: peer-reviewed
   categories:
     - Public Health
@@ -55,6 +59,7 @@
   volume: "14"
   article: "2318"
   doi: "https://doi.org/10.1038/s41598-024-52313-y"
+  page: "papers/factors-contributing-to-antibiotic-misuse-among-parents-in/"
   type: peer-reviewed
   categories:
     - Public Health
@@ -67,6 +72,7 @@
   volume: "7"
   article: "e2022"
   doi: "https://doi.org/10.1002/hsr2.2022"
+  page: "papers/community-engagement-and-social-participation-in-dengue-prevention/"
   type: peer-reviewed
   categories:
     - Global Health

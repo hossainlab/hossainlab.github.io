@@ -51,7 +51,7 @@
       url: "https://github.com/hossainlab/COVID-19-Lung-Atlas"
     - label: "Shiny App"
       url: "https://hossainlab.shinyapps.io/covid19-lung-atlas/"
-      icon: "fa-solid fa-arrow-up-right-from-square"
+      icon: "bi bi-box-arrow-up-right"
 
 - path: ""
   title: "DeepAMR: AI-Powered Antimicrobial Resistance Prediction"
@@ -69,7 +69,7 @@
   links:
     - label: "Live Demo"
       url: "https://deep-amr.vercel.app/"
-      icon: "fa-solid fa-arrow-up-right-from-square"
+      icon: "bi bi-box-arrow-up-right"
 
 - path: ""
   title: "Fezf2-Mediated Cortical Development: Multi-Omics Analysis"

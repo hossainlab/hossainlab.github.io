@@ -1,0 +1,46 @@
+---
+title: "Comprehensive bioinformatics analysis reveals prognostic significance and immunological roles of WNT gene family in breast cancer"
+subtitle: "Scientific Reports, 2025"
+description-meta: "Breast cancer (BRCA) is one of the most commonly diagnosed cancers and the leading cause of cancer-related deaths among women worldwide. Previous studies have shown that..."
+page-layout: article
+toc: false
+include-in-header: head.html
+---
+
+```{=html}
+<div class="paper-meta">
+<p class="paper-authors">Fariha, F. T. J., Fuad, M., Saha, C. S., Hossen, S., Hossain, M. J.</p>
+<p class="paper-venue"><em>Scientific Reports</em>, <strong>15</strong>, 34490 (2025)</p>
+<p class="paper-links">
+<a class="paper-link" href="https://doi.org/10.1038/s41598-025-13315-6" target="_blank" rel="noopener">DOI</a>
+<a class="paper-link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12494856/" target="_blank" rel="noopener">Full text (PMC)</a>
+<a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/41044153/" target="_blank" rel="noopener">PubMed</a>
+</p>
+</div>
+```
+
+## Abstract
+
+Breast cancer (BRCA) is one of the most commonly diagnosed cancers and the leading cause of cancer-related deaths among women worldwide. Previous studies have shown that the WNT (wingless type) gene family plays a role in the development of various cancers. However, comprehensive analysis of WNTs in BRCA remains largely unexplored. In this study, we examined the expression patterns, clinical relevance, and survival outcomes associated with the WNT family and identified key prognostic WNTs. We further investigated genetic alterations, DNA methylation, and drug sensitivity using cBioPortal, SMART, and GSCA databases. Data from GEO and DepMap were used for validation. Our findings revealed that while WNT2 and WNT7B were significantly upregulated and WNT11 was downregulated, WNT2 paradoxically correlated with favorable prognosis despite its oncogenic overexpression. Amplification was the most common type of alteration among the key WNTs selected for analysis and was correlated with immune infiltration and immunotherapy-related biomarkers. Functional enrichment analysis uncovered a novel connection between WNT signaling and neurodegenerative pathways. Furthermore, co-expression and drug sensitivity analyses revealed that WNTs influence the efficacy of multiple anti-cancer agents, offering potential targets for precision oncology. This study provides novel insights into the multifaceted role of WNT genes in BRCA, identifying them as promising prognostic indicators and immunotherapeutic targets that warrant further clinical exploration.
+
+## Cite this
+
+Fariha, F. T. J., Fuad, M., Saha, C. S., Hossen, S., Hossain, M. J. (2025). Comprehensive bioinformatics analysis reveals prognostic significance and immunological roles of WNT gene family in breast cancer. *Scientific Reports*, **15**, 34490.
+
+```{=html}
+<details class="bibtex-block">
+<summary>BibTeX</summary>
+<pre><code id="bib-comprehensive-bioinformatics-analysis-reveals-prognostic-significance-and-immunological">@article{fariha2025comprehensive,
+  title   = {Comprehensive bioinformatics analysis reveals prognostic significance and immunological roles of WNT gene family in breast cancer},
+  author  = {Fariha, F. T. J. and Fuad, M. and Saha, C. S. and Hossen, S. and Hossain, M. J.},
+  journal = {Scientific Reports},
+  year    = {2025},
+  volume  = {15},
+  pages   = {34490},
+  doi     = {10.1038/s41598-025-13315-6},
+}</code></pre>
+<button class="bibtex-copy" type="button" data-target="bib-comprehensive-bioinformatics-analysis-reveals-prognostic-significance-and-immunological">Copy BibTeX</button>
+</details>
+```
+
+[&larr; All publications](../../index.qmd)

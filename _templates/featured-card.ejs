@@ -1,0 +1,32 @@
+<%
+/* Lodash template for Featured Research cards in Srijit style */
+var esc = function (s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+};
+var lines = [];
+lines.push('<div class="featured-grid">');
+for (var i = 0; i < items.length; i++) {
+  var it = items[i];
+  var href = esc(it.doi || it.page || '#');
+  var mono = esc((it.venue || '?').replace(/[^A-Za-z ]/g, '').split(/\s+/).map(function (w) {
+    return w.charAt(0);
+  }).join('').slice(0, 3).toUpperCase());
+  var card = [];
+  card.push('<article class="featured-card">');
+  if (it.image) {
+    card.push('<div class="featured-image"><img src="' + esc(it.image) + '" alt="' + esc(it.title) + '" loading="lazy"></div>');
+  } else {
+    card.push('<div class="featured-image feat-fig-mono" aria-hidden="true"><span>' + mono + '</span></div>');
+  }
+  card.push('<div class="featured-content">');
+  card.push('<span class="venue-badge">' + esc(it.venue || '') + (it.year ? ', ' + esc(it.year) : '') + '</span>');
+  card.push('<h3>' + esc(it.title || '') + '</h3>');
+  card.push('<a href="' + href + '" target="_blank" rel="noopener">Read paper</a>');
+  card.push('</div>');
+  card.push('</article>');
+  lines.push(card.join(''));
+}
+lines.push('</div>');
+%>
+<%= lines.join('\n') %>

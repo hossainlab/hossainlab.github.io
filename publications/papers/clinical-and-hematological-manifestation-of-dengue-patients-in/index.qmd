@@ -1,0 +1,52 @@
+---
+title: "Clinical and hematological manifestation of dengue patients in 2022 outbreak"
+subtitle: "Health Science Reports, 2025"
+description-meta: "Dengue is a mosquito-borne viral disease that frequently causes seasonal outbreaks in Bangladesh, particularly during the monsoon months from June to September. Recent..."
+page-layout: article
+toc: false
+include-in-header: head.html
+---
+
+```{=html}
+<div class="paper-meta">
+<p class="paper-authors">Hossain, M. J., Das, M., Shahjahan, M., Islam, M. W., Towhid, S. T.</p>
+<p class="paper-venue"><em>Health Science Reports</em>, <strong>8</strong>, e70356 (2025)</p>
+<p class="paper-links">
+<a class="paper-link" href="https://doi.org/10.1002/hsr2.70356" target="_blank" rel="noopener">DOI</a>
+<a class="paper-link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11739715/" target="_blank" rel="noopener">Full text (PMC)</a>
+<a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/39831075/" target="_blank" rel="noopener">PubMed</a>
+</p>
+</div>
+```
+
+## Abstract
+
+Dengue is a mosquito-borne viral disease that frequently causes seasonal outbreaks in Bangladesh, particularly during the monsoon months from June to September. Recent outbreaks have shown significant shifts in clinical manifestations, including changes in the timeframe and serotype mixing. This study focused on the clinical and hematological profiles of patients during the 2022 outbreak, which was notably severe.
+
+This quantitative cross-sectional study at Dhaka Medical College and Hospital classified 67 dengue-positive patients as having dengue fever (DF), dengue fever with warning signs (DFWS), and severe dengue (SD). Fisher's exact test, Pearson's chi-squared test, and Wilcoxon rank-sum test were conducted for statistical analysis using the R software (version 4.2), with significance established at < 0.05.
+
+Predominantly male patients (76%) aged 21-40 (63%) and middle-class patients from Dhaka (57%) formed the majority. Most patients (45%) lacked a regular drainage system. Laboratory tests showed 63% NS1 antigen (nonspecific antigen 1) positivity, and 16% tested positive for both NS1 and IgM (Immunoglobulin M). Symptoms included headache (84%), retroorbital pain (51%), joint pain (75%), myalgia (72%), vomiting (75%), abdominal pain (69%), diarrhea (39%), and shock (48%). Thrombocytopenia was present in 61% of patients, with 79% showing elevated hematocrit (HCT) levels. Pedal edema, pleural effusion, and ascites were observed in DF and DFWS cases, while SD cases exhibited distinct HCT level variations.
+
+Accurate clinical and laboratory assessments are vital for the treatment and prediction of dengue outcomes in Bangladesh, given the severe manifestations of dengue shock syndrome (DSS). It is characterized by headache, muscle pain, thrombocytopenia, anemia, leukopenia, and potential neurological complications or mortality. Severe cases involve critical plasma leakage, leading to DSS with fluid accumulation, respiratory distress, and potential multiorgan involvement. Enhancing physician awareness regarding dengue case detection and management, along with routine dengue testing, are recommended for early diagnosis and improved patient outcomes.
+
+## Cite this
+
+Hossain, M. J., Das, M., Shahjahan, M., Islam, M. W., Towhid, S. T. (2025). Clinical and hematological manifestation of dengue patients in 2022 outbreak. *Health Science Reports*, **8**, e70356.
+
+```{=html}
+<details class="bibtex-block">
+<summary>BibTeX</summary>
+<pre><code id="bib-clinical-and-hematological-manifestation-of-dengue-patients-in">@article{hossain2025clinical,
+  title   = {Clinical and hematological manifestation of dengue patients in 2022 outbreak},
+  author  = {Hossain, M. J. and Das, M. and Shahjahan, M. and Islam, M. W. and Towhid, S. T.},
+  journal = {Health Science Reports},
+  year    = {2025},
+  volume  = {8},
+  pages   = {e70356},
+  doi     = {10.1002/hsr2.70356},
+}</code></pre>
+<button class="bibtex-copy" type="button" data-target="bib-clinical-and-hematological-manifestation-of-dengue-patients-in">Copy BibTeX</button>
+</details>
+```
+
+[&larr; All publications](../../index.qmd)

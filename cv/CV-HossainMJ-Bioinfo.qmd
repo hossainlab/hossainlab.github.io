@@ -65,7 +65,7 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 
 ```{r}
 #| results: asis
-get_cv_sheet('academics') %>%
+get_cv_sheet('research') %>%
   fill(start_date, end_date, role, institution, where) %>%
   mutate(
     end_date = as.character(end_date),
@@ -314,7 +314,7 @@ df %>%
 ## B. Workshops
 
 ```{r}
-teaching <- get_cv_sheet('teaching') %>%
+teaching <- get_cv_sheet('workshops') %>%
     arrange(desc(date)) %>%
     mutate(
         with = ifelse(is.na(with), '', paste0(', with ', with)),

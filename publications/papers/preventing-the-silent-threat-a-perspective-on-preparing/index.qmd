@@ -1,0 +1,52 @@
+---
+title: "Preventing the silent threat: A perspective on preparing Bangladesh for Human Metapneumovirus (HMPV)"
+subtitle: "Health Science Reports, 2025"
+description-meta: "Human metapneumovirus (HMPV) is a significant respiratory pathogen with a global presence that disproportionately affects young children and the elderly. In Bangladesh,..."
+page-layout: article
+toc: false
+include-in-header: head.html
+---
+
+```{=html}
+<div class="paper-meta">
+<p class="paper-authors">Hossain, M. J., Sony, S. A., Fariha, F. T. J., Hossen, S.</p>
+<p class="paper-venue"><em>Health Science Reports</em>, <strong>8</strong>, e71101 (2025)</p>
+<p class="paper-links">
+<a class="paper-link" href="https://doi.org/10.1002/hsr2.71101" target="_blank" rel="noopener">DOI</a>
+<a class="paper-link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12390622/" target="_blank" rel="noopener">Full text (PMC)</a>
+<a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/40881022/" target="_blank" rel="noopener">PubMed</a>
+</p>
+</div>
+```
+
+## Abstract
+
+Human metapneumovirus (HMPV) is a significant respiratory pathogen with a global presence that disproportionately affects young children and the elderly. In Bangladesh, HMPV remains under-recognized, despite its contribution to respiratory morbidity among children. This Perspective underscores the importance of HMPV as an emerging public health concern in Bangladesh, and advocates for the enhancement of national preparedness and response strategies.
+
+This article synthesizes existing evidence from the published literature and surveillance reports to evaluate the epidemiological profile of HMPV, its public health implications, and the capacity of the Bangladeshi health system to respond. The focus is on identifying systemic challenges and potential policy responses.
+
+The analysis suggests that the actual burden of HMPV in Bangladesh is likely underestimated owing to limited surveillance, inadequate diagnostic infrastructure, and low public awareness. The country's health system encounters challenges including insufficient funding for research, scarcity of laboratory resources, and competing health priorities. Despite these obstacles, there are opportunities to enhance HMPV preparedness through the development of national surveillance systems, capacity building, and strategic partnerships with global health organizations.
+
+A comprehensive strategy is essential to effectively address the threats posed by HMPV in Bangladesh. This strategy should encompass the development of targeted surveillance systems, implementation of public awareness initiatives, enhancement of diagnostic capabilities, and fostering of international collaboration. By investing in these areas, Bangladesh can improve its ability to detect, prevent, and manage HMPV outbreaks, thereby reducing the overall burden of respiratory disease.
+
+## Cite this
+
+Hossain, M. J., Sony, S. A., Fariha, F. T. J., Hossen, S. (2025). Preventing the silent threat: A perspective on preparing Bangladesh for Human Metapneumovirus (HMPV). *Health Science Reports*, **8**, e71101.
+
+```{=html}
+<details class="bibtex-block">
+<summary>BibTeX</summary>
+<pre><code id="bib-preventing-the-silent-threat-a-perspective-on-preparing">@article{hossain2025preventing,
+  title   = {Preventing the silent threat: A perspective on preparing Bangladesh for Human Metapneumovirus (HMPV)},
+  author  = {Hossain, M. J. and Sony, S. A. and Fariha, F. T. J. and Hossen, S.},
+  journal = {Health Science Reports},
+  year    = {2025},
+  volume  = {8},
+  pages   = {e71101},
+  doi     = {10.1002/hsr2.71101},
+}</code></pre>
+<button class="bibtex-copy" type="button" data-target="bib-preventing-the-silent-threat-a-perspective-on-preparing">Copy BibTeX</button>
+</details>
+```
+
+[&larr; All publications](../../index.qmd)

@@ -1,0 +1,579 @@
+- generic [active] [ref=f1e1]:
+  - banner [ref=f1e2]:
+    - navigation [ref=f1e3]:
+      - generic [ref=f1e4]:
+        - generic [ref=f1e5]:
+          - list [ref=f1e6]:
+            - listitem [ref=f1e7]:
+              - link "Home" [ref=f1e8] [cursor=pointer]:
+                - /url: http://localhost:8899/
+            - listitem [ref=f1e9]:
+              - link "Research" [ref=f1e10] [cursor=pointer]:
+                - /url: http://localhost:8899/?s=1#
+            - listitem [ref=f1e11]:
+              - link "Publications" [ref=f1e12] [cursor=pointer]:
+                - /url: http://localhost:8899/publications/
+            - listitem [ref=f1e13]:
+              - link "Teaching" [ref=f1e14] [cursor=pointer]:
+                - /url: http://localhost:8899/?s=1#
+            - listitem [ref=f1e15]:
+              - link "Blog" [ref=f1e16] [cursor=pointer]:
+                - /url: http://localhost:8899/blog/
+            - listitem [ref=f1e17]:
+              - link "About" [ref=f1e18] [cursor=pointer]:
+                - /url: http://localhost:8899/about/
+            - listitem [ref=f1e19]:
+              - link "CV" [ref=f1e20] [cursor=pointer]:
+                - /url: http://localhost:8899/cv/CV-HossainMJ.pdf
+          - list [ref=f1e21]:
+            - listitem [ref=f1e22]:
+              - link [ref=f1e23] [cursor=pointer]:
+                - /url: mailto:contact.jubayerhossain@gmail.com
+                - img "Email" [ref=f1e24]: 
+            - listitem [ref=f1e25]:
+              - link "orcid" [ref=f1e26] [cursor=pointer]:
+                - /url: https://orcid.org/0000-0001-9323-4997
+                - generic "orcid" [ref=f1e28]: 
+            - listitem [ref=f1e29]:
+              - link "google-scholar" [ref=f1e30] [cursor=pointer]:
+                - /url: https://scholar.google.com/citations?user=9_K4ekoAAAAJ&hl=en
+                - generic "google-scholar" [ref=f1e32]: 
+            - listitem [ref=f1e33]:
+              - link [ref=f1e34] [cursor=pointer]:
+                - /url: https://github.com/hossainlab
+                - img "GitHub" [ref=f1e35]: 
+            - listitem [ref=f1e36]:
+              - link [ref=f1e37] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/hossainmj
+                - img "LinkedIn" [ref=f1e38]: 
+        - link "Toggle dark mode" [ref=f1e40] [cursor=pointer]:
+          - /url: http://localhost:8899/?s=1
+  - main [ref=f1e43]:
+    - generic [ref=f1e46]:
+      - generic [ref=f1e47]:
+        - paragraph [ref=f1e48]: Multiomics · Cancer Genomics · Machine Learning
+        - heading "Jubayer Hossain" [level=1] [ref=f1e49]
+        - paragraph [ref=f1e50]: Multiomics scientist decoding cancer biology from public transcriptomic data.
+        - generic [ref=f1e51]:
+          - paragraph [ref=f1e52]: I build reproducible computational workflows on public omics data — meta-analysing bulk RNA-Seq cohorts, constructing harmonised single-cell atlases, and applying machine learning to high-dimensional data for biomarker discovery.
+          - paragraph [ref=f1e53]:
+            - text: I founded
+            - link "DeepBio Limited" [ref=f1e54] [cursor=pointer]:
+              - /url: https://deepbioltd.com/
+            - text: ", a Dhaka-based AI and bioinformatics company, and"
+            - link "CHIRAL Bangladesh" [ref=f1e55] [cursor=pointer]:
+              - /url: https://chiralbd.org/
+            - text: ", a non-profit research institute that has trained 3,000+ early-career researchers. I teach through"
+            - link "DeepBio Academy" [ref=f1e56] [cursor=pointer]:
+              - /url: https://deepbioacademy.com/
+            - text: and mentor students from raw sequencing data to published analysis.
+        - generic "Research focus areas" [ref=f1e57]:
+          - generic [ref=f1e58]: Bulk RNA-Seq
+          - generic [ref=f1e59]: Single-Cell
+          - generic [ref=f1e60]: Spatial Transcriptomics
+          - generic [ref=f1e61]: Cancer Genomics
+          - generic [ref=f1e62]: Machine Learning
+        - generic "Live research snapshot" [ref=f1e63]:
+          - generic [ref=f1e64]:
+            - strong [ref=f1e65]: "16"
+            - text: Publications
+          - generic [ref=f1e66]:
+            - strong [ref=f1e67]: "19"
+            - text: Talks
+          - generic [ref=f1e68]:
+            - strong [ref=f1e69]: 3,000+
+            - text: Researchers trained
+        - generic [ref=f1e70]:
+          - link " Publications" [ref=f1e71] [cursor=pointer]:
+            - /url: http://localhost:8899/?s=1#publications
+            - generic [ref=f1e72]: 
+            - generic [ref=f1e74]: Publications
+          - link " Talks" [ref=f1e75] [cursor=pointer]:
+            - /url: http://localhost:8899/?s=1#talks
+            - generic [ref=f1e76]: 
+            - generic [ref=f1e78]: Talks
+          - link " Tutorials" [ref=f1e79] [cursor=pointer]:
+            - /url: http://localhost:8899/?s=1#tutorials
+            - generic [ref=f1e80]: 
+            - generic [ref=f1e82]: Tutorials
+          - link " CV" [ref=f1e83] [cursor=pointer]:
+            - /url: http://localhost:8899/cv/CV-HossainMJ.pdf
+            - generic [ref=f1e84]: 
+            - generic [ref=f1e86]: CV
+          - link " Follow on LinkedIn" [ref=f1e87] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/hossainmj
+            - generic [ref=f1e88]: 
+            - generic [ref=f1e90]: Follow on LinkedIn
+      - complementary "Profile information" [ref=f1e91]:
+        - generic [ref=f1e92]:
+          - img "Jubayer Hossain" [ref=f1e94]
+          - generic [ref=f1e95]:
+            - paragraph [ref=f1e96]: Dhaka, Bangladesh
+            - paragraph [ref=f1e97]: Founder, DeepBio Limited · CHIRAL Bangladesh
+            - paragraph [ref=f1e98]: contact.jubayerhossain [at] gmail [dot] com
+        - generic [ref=f1e99]:
+          - link " Scholar" [ref=f1e100] [cursor=pointer]:
+            - /url: https://scholar.google.com/citations?user=9_K4ekoAAAAJ&hl=en
+            - generic [ref=f1e101]: 
+            - generic [ref=f1e103]: Scholar
+          - link " GitHub" [ref=f1e104] [cursor=pointer]:
+            - /url: https://github.com/hossainlab
+            - generic [ref=f1e105]: 
+            - generic [ref=f1e107]: GitHub
+          - link " ORCID" [ref=f1e108] [cursor=pointer]:
+            - /url: https://orcid.org/0000-0001-9323-4997
+            - generic [ref=f1e109]: 
+            - generic [ref=f1e111]: ORCID
+          - link " LinkedIn" [ref=f1e112] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/hossainmj
+            - generic [ref=f1e113]: 
+            - generic [ref=f1e115]: LinkedIn
+    - generic [ref=f1e117]:
+      - generic [ref=f1e118]:
+        - paragraph [ref=f1e119]: Selected work
+        - heading "Featured Research" [level=2] [ref=f1e120]
+      - generic [ref=f1e122]:
+        - article [ref=f1e123]:
+          - img "Integrative bioinformatics analysis reveals COL13A1 and COL23A1 as diagnostic and prognostic biomarkers in thyroid cancer" [ref=f1e125]
+          - generic [ref=f1e126]:
+            - generic [ref=f1e127]: Health Science Reports, 2026
+            - heading "Integrative bioinformatics analysis reveals COL13A1 and COL23A1 as diagnostic and prognostic biomarkers in thyroid cancer" [level=3] [ref=f1e128]
+            - link "Read paper" [ref=f1e129] [cursor=pointer]:
+              - /url: https://doi.org/10.1002/hsr2.70295
+        - article [ref=f1e130]:
+          - img "A meta-analysis of public RNA-Seq data identifies conserved stress responses in rainbow trout" [ref=f1e132]
+          - generic [ref=f1e133]:
+            - generic [ref=f1e134]: BMC Genomics, 2025
+            - heading "A meta-analysis of public RNA-Seq data identifies conserved stress responses in rainbow trout" [level=3] [ref=f1e135]
+            - link "Read paper" [ref=f1e136] [cursor=pointer]:
+              - /url: https://doi.org/10.1186/s12864-025-12127-2
+        - article [ref=f1e137]:
+          - img "Comprehensive bioinformatics analysis reveals prognostic significance and immunological roles of WNT gene family in breast cancer" [ref=f1e139]
+          - generic [ref=f1e140]:
+            - generic [ref=f1e141]: Scientific Reports, 2025
+            - heading "Comprehensive bioinformatics analysis reveals prognostic significance and immunological roles of WNT gene family in breast cancer" [level=3] [ref=f1e142]
+            - link "Read paper" [ref=f1e143] [cursor=pointer]:
+              - /url: https://doi.org/10.1038/s41598-025-13315-6
+        - article [ref=f1e144]:
+          - img "Pan-cancer analysis reveals immunological and prognostic significance of CCT5 in human tumors" [ref=f1e146]
+          - generic [ref=f1e147]:
+            - generic [ref=f1e148]: Scientific Reports, 2025
+            - heading "Pan-cancer analysis reveals immunological and prognostic significance of CCT5 in human tumors" [level=3] [ref=f1e149]
+            - link "Read paper" [ref=f1e150] [cursor=pointer]:
+              - /url: https://doi.org/10.1038/s41598-025-88339-z
+    - generic [ref=f1e152]:
+      - generic [ref=f1e153]:
+        - paragraph [ref=f1e154]: Speaking
+        - heading "Talks & Presentations" [level=2] [ref=f1e155]
+      - generic [ref=f1e156]:
+        - group "Filter talks by category" [ref=f1e157]:
+          - button "All (19)" [ref=f1e158] [cursor=pointer]
+          - button "Oral (7)" [ref=f1e159] [cursor=pointer]
+          - button "Poster (8)" [ref=f1e160] [cursor=pointer]
+          - button "Invited (4)" [ref=f1e161] [cursor=pointer]
+        - generic [ref=f1e162]:
+          - generic [ref=f1e163]:
+            - generic [ref=f1e164]: "2026"
+            - generic [ref=f1e165]:
+              - 'heading "Fezf2-Mediated Cortical Development: Multi-Omics Single-Cell Analysis Oral" [level=3] [ref=f1e166]':
+                - text: "Fezf2-Mediated Cortical Development: Multi-Omics Single-Cell Analysis"
+                - generic [ref=f1e167]: Oral
+              - paragraph [ref=f1e168]: Network of Young Biotechnologists Bangladesh · Dhaka, Bangladesh
+          - generic [ref=f1e169]:
+            - generic [ref=f1e170]: "2025"
+            - generic [ref=f1e171]:
+              - heading "Identification of Subtype-Specific Prognostic Biomarkers in Esophageal Carcinoma through Integrated Bioinformatics Analysis Poster" [level=3] [ref=f1e172]:
+                - text: Identification of Subtype-Specific Prognostic Biomarkers in Esophageal Carcinoma through Integrated Bioinformatics Analysis
+                - generic [ref=f1e173]: Poster
+              - paragraph [ref=f1e174]: 9th BSM Annual Conference · University of Dhaka, Bangladesh
+          - generic [ref=f1e175]:
+            - generic [ref=f1e176]: "2025"
+            - generic [ref=f1e177]:
+              - heading "Network-Driven Bioinformatics Approach Uncovers Prognostic Signatures and Therapeutic Targets in Pancreatic Ductal Adenocarcinoma Poster" [level=3] [ref=f1e178]:
+                - text: Network-Driven Bioinformatics Approach Uncovers Prognostic Signatures and Therapeutic Targets in Pancreatic Ductal Adenocarcinoma
+                - generic [ref=f1e179]: Poster
+              - paragraph [ref=f1e180]: 9th BSM Annual Conference · University of Dhaka, Bangladesh
+          - generic [ref=f1e181]:
+            - generic [ref=f1e182]: "2025"
+            - generic [ref=f1e183]:
+              - heading "Bioinformatic Analysis of Transcriptomic Data Reveals Molecular Signatures Driving Colorectal Cancer Poster" [level=3] [ref=f1e184]:
+                - text: Bioinformatic Analysis of Transcriptomic Data Reveals Molecular Signatures Driving Colorectal Cancer
+                - generic [ref=f1e185]: Poster
+              - paragraph [ref=f1e186]: 9th BSM Annual Conference · University of Dhaka, Bangladesh
+          - generic [ref=f1e187]:
+            - generic [ref=f1e188]: "2025"
+            - generic [ref=f1e189]:
+              - heading "Comparative Transcriptomic Meta-Analysis Reveals Shared and Distinct Transcriptional Networks and Pathway Crosstalk in Hepatocellular Carcinoma for Biomarker and Therapeutic Target Identification Poster" [level=3] [ref=f1e190]:
+                - text: Comparative Transcriptomic Meta-Analysis Reveals Shared and Distinct Transcriptional Networks and Pathway Crosstalk in Hepatocellular Carcinoma for Biomarker and Therapeutic Target Identification
+                - generic [ref=f1e191]: Poster
+              - paragraph [ref=f1e192]: 9th BSM Annual Conference · University of Dhaka, Bangladesh
+          - generic [ref=f1e193]:
+            - generic [ref=f1e194]: "2024"
+            - generic [ref=f1e195]:
+              - heading "Exploring the Factors Influencing Heat Stress Risks Using the Discomfort Index Method in Bangladesh Oral" [level=3] [ref=f1e196]:
+                - text: Exploring the Factors Influencing Heat Stress Risks Using the Discomfort Index Method in Bangladesh
+                - generic [ref=f1e197]: Oral
+              - paragraph [ref=f1e198]: International Conference on Environmental Science and Resource Management (ICESRM 2024) · Bangladesh
+          - generic [ref=f1e199]:
+            - generic [ref=f1e200]: "2024"
+            - generic [ref=f1e201]:
+              - 'heading "Temporal Trends and Factors Influencing Diarrhea Prevalence Among Children in the Rangamati Hill Tract Region: A Time Series Analysis Oral" [level=3] [ref=f1e202]':
+                - text: "Temporal Trends and Factors Influencing Diarrhea Prevalence Among Children in the Rangamati Hill Tract Region: A Time Series Analysis"
+                - generic [ref=f1e203]: Oral
+              - paragraph [ref=f1e204]: International Conference on Environmental Science and Resource Management (ICESRM 2024) · Bangladesh
+          - generic [ref=f1e205]:
+            - generic [ref=f1e206]: "2024"
+            - generic [ref=f1e207]:
+              - heading "Level of knowledge regarding breast cancer and breast self-examination among school and college-going girls in Bangladesh Poster" [level=3] [ref=f1e208]:
+                - text: Level of knowledge regarding breast cancer and breast self-examination among school and college-going girls in Bangladesh
+                - generic [ref=f1e209]: Poster
+              - paragraph [ref=f1e210]: International Conference of Public Health, IEDCR · Dhaka, Bangladesh
+          - generic [ref=f1e211]:
+            - generic [ref=f1e212]: "2024"
+            - generic [ref=f1e213]:
+              - heading "Lack of knowledge and training about antibiotic resistance among community pharmacists in Bangladesh Poster" [level=3] [ref=f1e214]:
+                - text: Lack of knowledge and training about antibiotic resistance among community pharmacists in Bangladesh
+                - generic [ref=f1e215]: Poster
+              - paragraph [ref=f1e216]: International Conference of Public Health, IEDCR · Dhaka, Bangladesh
+          - generic [ref=f1e217]:
+            - generic [ref=f1e218]: "2024"
+            - generic [ref=f1e219]:
+              - 'heading "Influence of Meteorological Factors on Dengue Incidence: A 23-Year Retrospective Analysis in Bangladesh Poster" [level=3] [ref=f1e220]':
+                - text: "Influence of Meteorological Factors on Dengue Incidence: A 23-Year Retrospective Analysis in Bangladesh"
+                - generic [ref=f1e221]: Poster
+              - paragraph [ref=f1e222]: International Conference of Public Health, IEDCR · Dhaka, Bangladesh
+          - generic [ref=f1e223]:
+            - generic [ref=f1e224]: "2024"
+            - generic [ref=f1e225]:
+              - heading "Particulate Matter PM2.5 Pollution and Air Quality Index (AQI) Trends Evaluation with Meteorological Factors in Dhaka City Poster" [level=3] [ref=f1e226]:
+                - text: Particulate Matter PM2.5 Pollution and Air Quality Index (AQI) Trends Evaluation with Meteorological Factors in Dhaka City
+                - generic [ref=f1e227]: Poster
+              - paragraph [ref=f1e228]: International Conference of Public Health, IEDCR · Dhaka, Bangladesh
+          - generic [ref=f1e229]:
+            - generic [ref=f1e230]: "2023"
+            - generic [ref=f1e231]:
+              - heading "Factors Influencing Heat Stress Risk in Bangladesh Oral" [level=3] [ref=f1e232]:
+                - text: Factors Influencing Heat Stress Risk in Bangladesh
+                - generic [ref=f1e233]: Oral
+              - paragraph [ref=f1e234]: 9th International Public Health Conference, Public Health Foundation at BMRC · Bangladesh
+          - generic [ref=f1e235]:
+            - generic [ref=f1e236]: "2023"
+            - generic [ref=f1e237]:
+              - heading "Monitoring Water-Borne Disease (Vibrio cholerae) Using NASA Earth Observation Data Oral" [level=3] [ref=f1e238]:
+                - text: Monitoring Water-Borne Disease (Vibrio cholerae) Using NASA Earth Observation Data
+                - generic [ref=f1e239]: Oral
+              - paragraph [ref=f1e240]: 9th International Public Health Conference, Public Health Foundation at BMRC · Bangladesh
+          - generic [ref=f1e241]:
+            - generic [ref=f1e242]: "2020"
+            - generic [ref=f1e243]:
+              - 'heading "Diagnostic and Electrophysiological Features of Hirayama Disease in Young Adult Male: A Case Report Oral" [level=3] [ref=f1e244]':
+                - text: "Diagnostic and Electrophysiological Features of Hirayama Disease in Young Adult Male: A Case Report"
+                - generic [ref=f1e245]: Oral
+              - paragraph [ref=f1e246]: Institute of Epidemiology, Disease Control and Research (IEDCR) · Dhaka, Bangladesh
+          - generic [ref=f1e247]:
+            - generic [ref=f1e248]: "2019"
+            - generic [ref=f1e249]:
+              - heading "Quantitative Microbial Risk Assessment from Vancomycin-Resistant Enterococcus faecalis and Enterococcus faecium from a Specific Neighborhood in Dhaka City, Bangladesh Oral" [level=3] [ref=f1e250]:
+                - text: Quantitative Microbial Risk Assessment from Vancomycin-Resistant Enterococcus faecalis and Enterococcus faecium from a Specific Neighborhood in Dhaka City, Bangladesh
+                - generic [ref=f1e251]: Oral
+              - paragraph [ref=f1e252]: Bangladesh Society of Microbiologists Annual Conference · Dhaka, Bangladesh
+          - generic [ref=f1e253]:
+            - generic [ref=f1e254]: "2019"
+            - generic [ref=f1e255]:
+              - heading "Undergraduate Research - Importance, Benefits, and Challenges Invited" [level=3] [ref=f1e256]:
+                - text: Undergraduate Research - Importance, Benefits, and Challenges
+                - generic [ref=f1e257]: Invited
+              - paragraph [ref=f1e258]: CHIRAL Bangladesh · Dhaka, Bangladesh
+          - generic [ref=f1e259]:
+            - generic [ref=f1e260]: "2018"
+            - generic [ref=f1e261]:
+              - heading "State the Art of Microbial Genome Analysis Invited" [level=3] [ref=f1e262]:
+                - text: State the Art of Microbial Genome Analysis
+                - generic [ref=f1e263]: Invited
+              - paragraph [ref=f1e264]: Jagannath University · Dhaka, Bangladesh
+          - generic [ref=f1e265]:
+            - generic [ref=f1e266]: "2015"
+            - generic [ref=f1e267]:
+              - 'heading "Computational Biology and Bioinformatics Research in Resource-Limited Settings: Strategies, Tools and Opportunities Invited" [level=3] [ref=f1e268]':
+                - text: "Computational Biology and Bioinformatics Research in Resource-Limited Settings: Strategies, Tools and Opportunities"
+                - generic [ref=f1e269]: Invited
+              - paragraph [ref=f1e270]: Jagannath University Higher Study and Research Society · Dhaka, Bangladesh
+          - generic [ref=f1e271]:
+            - generic [ref=f1e272]: "2014"
+            - generic [ref=f1e273]:
+              - heading "Mastering Biomedical Data Management Invited" [level=3] [ref=f1e274]:
+                - text: Mastering Biomedical Data Management
+                - generic [ref=f1e275]: Invited
+              - paragraph [ref=f1e276]: IFMSA Bangladesh · Dhaka, Bangladesh
+    - generic [ref=f1e278]:
+      - generic [ref=f1e279]:
+        - paragraph [ref=f1e280]: Tools & Tutorials
+        - heading "Featured Tools & Tutorials" [level=2] [ref=f1e281]
+      - generic [ref=f1e282]:
+        - article [ref=f1e283]:
+          - generic [ref=f1e284]: Tutorial series
+          - heading [level=3] [ref=f1e285]:
+            - link "Single-Cell Analysis with Python" [ref=f1e286] [cursor=pointer]:
+              - /url: http://localhost:8899/tutorials/scpy/
+          - paragraph [ref=f1e287]: Raw counts to biological insight with scanpy and the scverse ecosystem.
+          - link "20+ lessons · 6 modules · Python →" [ref=f1e288] [cursor=pointer]:
+            - /url: http://localhost:8899/tutorials/scpy/
+        - article [ref=f1e289]:
+          - generic [ref=f1e290]: Tutorial series
+          - heading [level=3] [ref=f1e291]:
+            - link "Nextflow and nf-core" [ref=f1e292] [cursor=pointer]:
+              - /url: http://localhost:8899/tutorials/nextflow/
+          - paragraph [ref=f1e293]: Scalable, reproducible pipelines with DSL2, and how to contribute to nf-core.
+          - link "15 lessons · 5 modules · DSL2 →" [ref=f1e294] [cursor=pointer]:
+            - /url: http://localhost:8899/tutorials/nextflow/
+        - article [ref=f1e295]:
+          - generic [ref=f1e296]: Research code
+          - heading [level=3] [ref=f1e297]:
+            - link "TAM-Atlas" [ref=f1e298] [cursor=pointer]:
+              - /url: http://localhost:8899/projects/
+          - paragraph [ref=f1e299]: Tumour-associated macrophage heterogeneity across 8 cancers, ~640,000 cells, scVI-based.
+          - link "Python · Scanpy · scVI-tools →" [ref=f1e300] [cursor=pointer]:
+            - /url: http://localhost:8899/projects/
+        - article [ref=f1e301]:
+          - generic [ref=f1e302]: Research code
+          - heading [level=3] [ref=f1e303]:
+            - link "AMR Drug Repurposing" [ref=f1e304] [cursor=pointer]:
+              - /url: http://localhost:8899/projects/
+          - paragraph [ref=f1e305]: Deep learning over ChEMBL bioactivity to find non-antibiotic drugs active against ESKAPE pathogens.
+          - link "PyTorch · RDKit · SHAP →" [ref=f1e306] [cursor=pointer]:
+            - /url: http://localhost:8899/projects/
+    - generic [ref=f1e308]:
+      - generic [ref=f1e309]:
+        - paragraph [ref=f1e310]: Publications
+        - heading "Recent Publications" [level=2] [ref=f1e311]
+      - generic [ref=f1e312]:
+        - group "Filter publications by topic" [ref=f1e313]:
+          - button "All (16)" [ref=f1e314] [cursor=pointer]
+          - button "Bioinformatics (4)" [ref=f1e315] [cursor=pointer]
+          - button "Infectious Disease (5)" [ref=f1e316] [cursor=pointer]
+          - button "Global Health (6)" [ref=f1e317] [cursor=pointer]
+          - button "Public Health (3)" [ref=f1e318] [cursor=pointer]
+        - generic [ref=f1e319]:
+          - article [ref=f1e320]:
+            - generic [ref=f1e321]: HSR
+            - generic [ref=f1e324]:
+              - heading [level=3] [ref=f1e325]:
+                - link "Integrative bioinformatics analysis reveals COL13A1 and COL23A1 as potential diagnostic and prognostic biomarkers in thyroid cancer" [ref=f1e326] [cursor=pointer]:
+                  - /url: http://localhost:8899/publications/papers/integrative-bioinformatics-analysis-reveals-col13a1-and-col23a1-as/
+              - generic [ref=f1e327]:
+                - text: Islam, M. W., Rahman, M. M., Naznin, H., Hossain, M. S., Akter, T., Shatabde, Z. A., &
+                - strong [ref=f1e329]: Hossain, M. J.
+              - generic [ref=f1e330]: Health Science Reports, 2026
+              - generic [ref=f1e332]:
+                - link " Paper" [ref=f1e333] [cursor=pointer]:
+                  - /url: http://localhost:8899/publications/papers/integrative-bioinformatics-analysis-reveals-col13a1-and-col23a1-as/
+                  - generic [ref=f1e334]: 
+                  - generic [ref=f1e336]: Paper
+                - link " DOI" [ref=f1e337] [cursor=pointer]:
+                  - /url: https://doi.org/10.1002/hsr2.72617
+                  - generic [ref=f1e338]: 
+                  - generic [ref=f1e340]: DOI
+          - article [ref=f1e341]:
+            - generic [ref=f1e342]: BG
+            - generic [ref=f1e345]:
+              - heading [level=3] [ref=f1e346]:
+                - link "A meta-analysis of public RNA-Seq data identifies conserved stress responses in rainbow trout" [ref=f1e347] [cursor=pointer]:
+                  - /url: http://localhost:8899/publications/papers/a-meta-analysis-of-public-rna-seq-data/
+              - generic [ref=f1e348]:
+                - text: Bari, S. M., Fuad, M.,
+                - strong [ref=f1e350]: Hossain, M. J.
+                - text: ", Ahammad, I., Begum, M., & Helal, M. M. U."
+              - generic [ref=f1e351]: BMC Genomics, 2025
+              - generic [ref=f1e353]:
+                - link " Paper" [ref=f1e354] [cursor=pointer]:
+                  - /url: http://localhost:8899/publications/papers/a-meta-analysis-of-public-rna-seq-data/
+                  - generic [ref=f1e355]: 
+                  - generic [ref=f1e357]: Paper
+                - link " Full text" [ref=f1e358] [cursor=pointer]:
+                  - /url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12590911/
+                  - generic [ref=f1e359]: 
+                  - generic [ref=f1e361]: Full text
+                - link " DOI" [ref=f1e362] [cursor=pointer]:
+                  - /url: https://doi.org/10.1186/s12864-025-12127-2
+                  - generic [ref=f1e363]: 
+                  - generic [ref=f1e365]: DOI
+          - article [ref=f1e366]:
+            - generic [ref=f1e367]: SR
+            - generic [ref=f1e370]:
+              - heading [level=3] [ref=f1e371]:
+                - link "Comprehensive bioinformatics analysis reveals prognostic significance and immunological roles of WNT gene family in breast cancer" [ref=f1e372] [cursor=pointer]:
+                  - /url: http://localhost:8899/publications/papers/comprehensive-bioinformatics-analysis-reveals-prognostic-significance-and-immunological/
+              - generic [ref=f1e373]:
+                - text: Fariha, F. T. J., Fuad, M., Saha, C. S., Hossen, S., &
+                - strong [ref=f1e375]: Hossain, M. J.
+              - generic [ref=f1e376]: Scientific Reports, 2025
+              - generic [ref=f1e378]:
+                - link " Paper" [ref=f1e379] [cursor=pointer]:
+                  - /url: http://localhost:8899/publications/papers/comprehensive-bioinformatics-analysis-reveals-prognostic-significance-and-immunological/
+                  - generic [ref=f1e380]: 
+                  - generic [ref=f1e382]: Paper
+                - link " Full text" [ref=f1e383] [cursor=pointer]:
+                  - /url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12494856/
+                  - generic [ref=f1e384]: 
+                  - generic [ref=f1e386]: Full text
+                - link " DOI" [ref=f1e387] [cursor=pointer]:
+                  - /url: https://doi.org/10.1038/s41598-025-13315-6
+                  - generic [ref=f1e388]: 
+                  - generic [ref=f1e390]: DOI
+          - article [ref=f1e391]:
+            - generic [ref=f1e392]: HSR
+            - generic [ref=f1e395]:
+              - heading [level=3] [ref=f1e396]:
+                - 'link "Preventing the silent threat: A perspective on preparing Bangladesh for Human Metapneumovirus (HMPV)" [ref=f1e397] [cursor=pointer]':
+                  - /url: http://localhost:8899/publications/papers/preventing-the-silent-threat-a-perspective-on-preparing/
+              - generic [ref=f1e398]:
+                - strong [ref=f1e400]: Hossain, M. J.
+                - text: ", Sony, S. A., Fariha, F. T. J., & Hossen, S."
+              - generic [ref=f1e401]: Health Science Reports, 2025
+              - generic [ref=f1e403]:
+                - link " Paper" [ref=f1e404] [cursor=pointer]:
+                  - /url: http://localhost:8899/publications/papers/preventing-the-silent-threat-a-perspective-on-preparing/
+                  - generic [ref=f1e405]: 
+                  - generic [ref=f1e407]: Paper
+                - link " Full text" [ref=f1e408] [cursor=pointer]:
+                  - /url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12390622/
+                  - generic [ref=f1e409]: 
+                  - generic [ref=f1e411]: Full text
+                - link " DOI" [ref=f1e412] [cursor=pointer]:
+                  - /url: https://doi.org/10.1002/hsr2.71101
+                  - generic [ref=f1e413]: 
+                  - generic [ref=f1e415]: DOI
+          - article [ref=f1e416]:
+            - generic [ref=f1e417]: SR
+            - generic [ref=f1e420]:
+              - heading [level=3] [ref=f1e421]:
+                - link "Pan-cancer analysis reveals immunological and prognostic significance of CCT5 in human tumors" [ref=f1e422] [cursor=pointer]:
+                  - /url: http://localhost:8899/publications/papers/pan-cancer-analysis-reveals-immunological-and-prognostic-significance/
+              - generic [ref=f1e423]:
+                - text: Ahmed, M. Z., Billah, M. M., Ferdous, J., &
+                - strong [ref=f1e425]: Hossain, M. J.
+              - generic [ref=f1e426]: Scientific Reports, 2025
+              - generic [ref=f1e428]:
+                - link " Paper" [ref=f1e429] [cursor=pointer]:
+                  - /url: http://localhost:8899/publications/papers/pan-cancer-analysis-reveals-immunological-and-prognostic-significance/
+                  - generic [ref=f1e430]: 
+                  - generic [ref=f1e432]: Paper
+                - link " Full text" [ref=f1e433] [cursor=pointer]:
+                  - /url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12022336/
+                  - generic [ref=f1e434]: 
+                  - generic [ref=f1e436]: Full text
+                - link " DOI" [ref=f1e437] [cursor=pointer]:
+                  - /url: https://doi.org/10.1038/s41598-025-88339-z
+                  - generic [ref=f1e438]: 
+                  - generic [ref=f1e440]: DOI
+          - article [ref=f1e441]:
+            - generic [ref=f1e442]: SAV
+            - generic [ref=f1e445]:
+              - heading [level=3] [ref=f1e446]:
+                - 'link "Young stroke in Bangladesh: Addressing rare cases with diagnostic challenges" [ref=f1e447] [cursor=pointer]':
+                  - /url: http://localhost:8899/publications/papers/young-stroke-in-bangladesh-addressing-rare-cases-with/
+              - generic [ref=f1e448]:
+                - text: Das, M., &
+                - strong [ref=f1e450]: Hossain, M. J.
+              - generic [ref=f1e451]: Stroke and Vascular Neurology, 2025
+              - generic [ref=f1e453]:
+                - link " Paper" [ref=f1e454] [cursor=pointer]:
+                  - /url: http://localhost:8899/publications/papers/young-stroke-in-bangladesh-addressing-rare-cases-with/
+                  - generic [ref=f1e455]: 
+                  - generic [ref=f1e457]: Paper
+                - link " Full text" [ref=f1e458] [cursor=pointer]:
+                  - /url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12772966/
+                  - generic [ref=f1e459]: 
+                  - generic [ref=f1e461]: Full text
+                - link " DOI" [ref=f1e462] [cursor=pointer]:
+                  - /url: https://doi.org/10.1136/svn-2025-004178
+                  - generic [ref=f1e463]: 
+                  - generic [ref=f1e465]: DOI
+          - group [ref=f1e466]:
+            - generic "Earlier Publications (10 more)" [ref=f1e467] [cursor=pointer]
+            - text:                            
+    - generic [ref=f1e469]:
+      - generic [ref=f1e470]:
+        - paragraph [ref=f1e471]: Updates
+        - heading "News" [level=2] [ref=f1e472]
+      - generic [ref=f1e474]:
+        - article [ref=f1e475]:
+          - time [ref=f1e476]: Jan 2026
+          - paragraph [ref=f1e477]:
+            - text: COL13A1 and COL23A1 identified as thyroid cancer biomarkers — Published in Health Science Reports.
+            - link "Read →" [ref=f1e478] [cursor=pointer]:
+              - /url: http://localhost:8899/publications/papers/integrative-bioinformatics-analysis-reveals-col13a1-and-col23a1-as/
+        - article [ref=f1e479]:
+          - time [ref=f1e480]: Nov 2025
+          - paragraph [ref=f1e481]:
+            - text: Rainbow trout RNA-Seq meta-analysis out in BMC Genomics — Conserved stress responses across four public datasets.
+            - link "Read →" [ref=f1e482] [cursor=pointer]:
+              - /url: http://localhost:8899/publications/papers/a-meta-analysis-of-public-rna-seq-data/
+        - article [ref=f1e483]:
+          - time [ref=f1e484]: Oct 2025
+          - paragraph [ref=f1e485]:
+            - text: WNT gene family in breast cancer published in Scientific Reports — Prognostic significance and immunological roles.
+            - link "Read →" [ref=f1e486] [cursor=pointer]:
+              - /url: http://localhost:8899/publications/papers/comprehensive-bioinformatics-analysis-reveals-prognostic-significance-and-immunological/
+    - generic [ref=f1e488]:
+      - generic [ref=f1e489]:
+        - paragraph [ref=f1e490]: Training & mentorship
+        - heading "Open Programmes" [level=2] [ref=f1e491]
+      - generic [ref=f1e492]:
+        - article [ref=f1e493]:
+          - generic [ref=f1e494]: 12 weeks · NGS & genomics
+          - heading [level=3] [ref=f1e495]:
+            - link "Bioinformatics Mentorship Program" [ref=f1e496] [cursor=pointer]:
+              - /url: https://deepbioacademy.com/programs/bioinformatics-mentorship
+          - paragraph [ref=f1e497]: Raw sequencing data to a publication-ready manuscript, with one-to-one supervision.
+          - link "Learn more →" [ref=f1e498] [cursor=pointer]:
+            - /url: https://deepbioacademy.com/programs/bioinformatics-mentorship
+        - article [ref=f1e499]:
+          - generic [ref=f1e500]: 4 weeks · LLMs & agents
+          - heading [level=3] [ref=f1e501]:
+            - link "No-Code & Agentic AI" [ref=f1e502] [cursor=pointer]:
+              - /url: https://deepbioacademy.com/programs/nocode-ai
+          - paragraph [ref=f1e503]: Automating literature review and omics analysis with agentic AI, without writing code.
+          - link "Learn more →" [ref=f1e504] [cursor=pointer]:
+            - /url: https://deepbioacademy.com/programs/nocode-ai
+        - article [ref=f1e505]:
+          - generic [ref=f1e506]: Drug discovery · AI/ML
+          - heading [level=3] [ref=f1e507]:
+            - link "NextGen Drug Discovery with AI" [ref=f1e508] [cursor=pointer]:
+              - /url: https://deepbioacademy.com/programs/drug-discovery
+          - paragraph [ref=f1e509]: How machine learning accelerates target identification, molecule design and virtual screening.
+          - link "Learn more →" [ref=f1e510] [cursor=pointer]:
+            - /url: https://deepbioacademy.com/programs/drug-discovery
+  - contentinfo [ref=f1e511]:
+    - generic [ref=f1e512]:
+      - paragraph [ref=f1e514]: © 2026 Jubayer Hossain
+      - list [ref=f1e516]:
+        - listitem [ref=f1e517]:
+          - link [ref=f1e518] [cursor=pointer]:
+            - /url: http://localhost:8899/research/
+            - paragraph [ref=f1e519]: Research
+        - listitem [ref=f1e520]:
+          - link [ref=f1e521] [cursor=pointer]:
+            - /url: http://localhost:8899/publications/
+            - paragraph [ref=f1e522]: Publications
+        - listitem [ref=f1e523]:
+          - link [ref=f1e524] [cursor=pointer]:
+            - /url: http://localhost:8899/teaching/
+            - paragraph [ref=f1e525]: Teaching
+        - listitem [ref=f1e526]:
+          - link [ref=f1e527] [cursor=pointer]:
+            - /url: http://localhost:8899/about/
+            - paragraph [ref=f1e528]: About
+      - list [ref=f1e530]:
+        - listitem [ref=f1e531]:
+          - link [ref=f1e532] [cursor=pointer]:
+            - /url: https://twitter.com/hossain_lab
+            - img "Twitter" [ref=f1e533]: 
+        - listitem [ref=f1e534]:
+          - link [ref=f1e535] [cursor=pointer]:
+            - /url: https://www.youtube.com/@hossainlab
+            - img "YouTube" [ref=f1e536]: 
+        - listitem [ref=f1e537]:
+          - link [ref=f1e538] [cursor=pointer]:
+            - /url: http://localhost:8899/blog/index.xml
+            - img "Blog RSS feed" [ref=f1e539]: 

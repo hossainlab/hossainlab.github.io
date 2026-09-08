@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <filter id="soft-shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.1"/>
+    </filter>
+
+    <linearGradient id="matrix-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#bae6fd" />
+      <stop offset="100%" stop-color="#0ea5e9" />
+    </linearGradient>
+
+    <!-- Bulk expression matrix icon: genes x samples heatmap -->
+    <g id="matrix-icon">
+      <rect x="-19" y="-15" width="38" height="30" rx="3" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+      <rect x="-15" y="-11" width="7" height="6" fill="#0ea5e9"/>
+      <rect x="-7"  y="-11" width="7" height="6" fill="#bae6fd"/>
+      <rect x="1"   y="-11" width="7" height="6" fill="#f59e0b"/>
+      <rect x="9"   y="-11" width="6" height="6" fill="#0284c7"/>
+      <rect x="-15" y="-3"  width="7" height="6" fill="#fef3c7"/>
+      <rect x="-7"  y="-3"  width="7" height="6" fill="#0ea5e9"/>
+      <rect x="1"   y="-3"  width="7" height="6" fill="#bae6fd"/>
+      <rect x="9"   y="-3"  width="6" height="6" fill="#f59e0b"/>
+      <rect x="-15" y="5"   width="7" height="6" fill="#0284c7"/>
+      <rect x="-7"  y="5"   width="7" height="6" fill="#fef3c7"/>
+      <rect x="1"   y="5"   width="7" height="6" fill="#0ea5e9"/>
+      <rect x="9"   y="5"   width="6" height="6" fill="#bae6fd"/>
+    </g>
+  </defs>
+
+  <rect width="900" height="450" fill="#ffffff" />
+
+  <!-- STEP 1: PUBLIC BULK RNA-SEQ STUDIES -->
+  <g transform="translate(40, 60)">
+    <text x="160" y="20" font-size="20" font-weight="800" fill="#334155" text-anchor="middle">1. Public Bulk Studies</text>
+    <rect x="0" y="40" width="320" height="320" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" filter="url(#soft-shadow)"/>
+
+    <g transform="translate(25, 75)">
+      <!-- GEO -->
+      <rect x="0" y="0" width="125" height="110" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" />
+      <text x="62" y="30" font-size="16" font-weight="700" fill="#0f172a" text-anchor="middle">GEO</text>
+      <use href="#matrix-icon" x="62" y="65" />
+      <text x="62" y="100" font-size="12" font-weight="600" fill="#64748b" text-anchor="middle">Mixed platforms</text>
+
+      <!-- TCGA -->
+      <rect x="145" y="0" width="125" height="110" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" />
+      <text x="207" y="30" font-size="16" font-weight="700" fill="#0f172a" text-anchor="middle">TCGA</text>
+      <use href="#matrix-icon" x="207" y="65" />
+      <text x="207" y="100" font-size="12" font-weight="600" fill="#64748b" text-anchor="middle">Bulk tumours</text>
+
+      <!-- SRA -->
+      <rect x="0" y="130" width="125" height="110" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" />
+      <text x="62" y="160" font-size="16" font-weight="700" fill="#0f172a" text-anchor="middle">SRA</text>
+      <use href="#matrix-icon" x="62" y="195" />
+      <text x="62" y="230" font-size="12" font-weight="600" fill="#64748b" text-anchor="middle">Raw FASTQ</text>
+
+      <!-- Study n -->
+      <rect x="145" y="130" width="125" height="110" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5" />
+      <text x="207" y="160" font-size="16" font-weight="700" fill="#0f172a" text-anchor="middle">Study n</text>
+      <use href="#matrix-icon" x="207" y="195" />
+      <text x="207" y="230" font-size="12" font-weight="600" fill="#64748b" text-anchor="middle">Batch effects</text>
+    </g>
+  </g>
+
+  <!-- ARROW 1 -->
+  <g transform="translate(375, 220)">
+    <path d="M 0,0 L 45,0" stroke="#94a3b8" stroke-width="4" stroke-dasharray="8,5" />
+    <polygon points="45,-8 60,0 45,8" fill="#94a3b8"/>
+  </g>
+
+  <!-- STEP 2: UNIFORM REPROCESSING + EFFECT-SIZE POOLING -->
+  <g transform="translate(450, 60)">
+    <text x="80" y="20" font-size="20" font-weight="800" fill="#334155" text-anchor="middle">2. Meta-Analysis</text>
+    <rect x="0" y="40" width="160" height="320" rx="16" fill="#eff6ff" stroke="#3b82f6" stroke-width="2.5" filter="url(#soft-shadow)"/>
+
+    <g transform="translate(80, 160)">
+      <circle r="55" fill="#ffffff" stroke="#2563eb" stroke-width="4" />
+      <text y="-6" font-size="20" font-weight="900" fill="#1e40af" text-anchor="middle">REM</text>
+      <text y="16" font-size="11" font-weight="700" fill="#3b82f6" text-anchor="middle">Random-Effects</text>
+      <text y="32" font-size="11" font-weight="700" fill="#3b82f6" text-anchor="middle">Pooling</text>
+
+      <circle r="65" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="2,12" stroke-linecap="round"/>
+    </g>
+
+    <text x="80" y="272" font-size="13" font-weight="800" fill="#1e40af" text-anchor="middle">Uniform Reprocessing</text>
+    <text x="80" y="295" font-size="13" font-weight="700" fill="#60a5fa" text-anchor="middle">Batch Correction</text>
+    <text x="80" y="318" font-size="13" font-weight="700" fill="#60a5fa" text-anchor="middle">Per-Study log2FC</text>
+  </g>
+
+  <!-- ARROW 2 -->
+  <g transform="translate(625, 220)">
+    <path d="M 0,0 L 45,0" stroke="#3b82f6" stroke-width="4" />
+    <polygon points="45,-8 60,0 45,8" fill="#3b82f6"/>
+  </g>
+
+  <!-- STEP 3: POOLED META-SIGNATURE (FOREST PLOT) -->
+  <g transform="translate(700, 60)">
+    <text x="100" y="20" font-size="20" font-weight="800" fill="#334155" text-anchor="middle">3. Meta-Signature</text>
+    <rect x="0" y="40" width="200" height="320" rx="16" fill="#f0fdf4" stroke="#10b981" stroke-width="2.5" filter="url(#soft-shadow)"/>
+
+    <g transform="translate(20, 90)">
+      <rect x="-4" y="0" width="168" height="140" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" />
+
+      <!-- null line -->
+      <line x1="60" y1="12" x2="60" y2="128" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4" />
+
+      <!-- study effect sizes: CI whisker + point estimate -->
+      <g stroke-width="2.5" stroke-linecap="round">
+        <line x1="62"  y1="26" x2="122" y2="26" stroke="#0ea5e9" />
+        <line x1="82"  y1="52" x2="138" y2="52" stroke="#f59e0b" />
+        <line x1="44"  y1="78" x2="112" y2="78" stroke="#10b981" />
+        <line x1="70"  y1="104" x2="126" y2="104" stroke="#ec4899" />
+      </g>
+      <rect x="86"  y="21" width="10" height="10" fill="#0ea5e9" opacity="0.9"/>
+      <rect x="104" y="47" width="10" height="10" fill="#f59e0b" opacity="0.9"/>
+      <rect x="73"  y="73" width="10" height="10" fill="#10b981" opacity="0.9"/>
+      <rect x="93"  y="99" width="10" height="10" fill="#ec4899" opacity="0.9"/>
+
+      <!-- pooled estimate diamond -->
+      <polygon points="72,122 96,114 120,122 96,130" fill="#065f46" stroke="#065f46" stroke-width="1.5"/>
+
+      <text x="80" y="168" font-size="14" font-weight="800" fill="#065f46" text-anchor="middle">Pooled Effect Size</text>
+    </g>
+
+    <g transform="translate(100, 300)">
+      <text font-size="13" font-weight="700" fill="#166534" text-anchor="middle">Cross-Cohort Replication</text>
+      <text y="22" font-size="13" font-weight="700" fill="#166534" text-anchor="middle">Robust DE Genes</text>
+    </g>
+  </g>
+</svg>

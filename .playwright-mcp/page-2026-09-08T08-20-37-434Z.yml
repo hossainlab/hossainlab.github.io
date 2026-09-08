@@ -1,0 +1,858 @@
+- generic [active] [ref=f1e1]:
+  - banner [ref=f1e2]:
+    - navigation [ref=f1e3]:
+      - generic [ref=f1e4]:
+        - generic [ref=f1e5]:
+          - list [ref=f1e6]:
+            - listitem [ref=f1e7]:
+              - link "Home" [ref=f1e8] [cursor=pointer]:
+                - /url: http://localhost:8899/
+            - listitem [ref=f1e9]:
+              - link "Research" [ref=f1e10] [cursor=pointer]:
+                - /url: http://localhost:8899/publications/?c=1#
+            - listitem [ref=f1e11]:
+              - link "Publications" [ref=f1e12] [cursor=pointer]:
+                - /url: http://localhost:8899/publications/
+            - listitem [ref=f1e13]:
+              - link "Teaching" [ref=f1e14] [cursor=pointer]:
+                - /url: http://localhost:8899/publications/?c=1#
+            - listitem [ref=f1e15]:
+              - link "Blog" [ref=f1e16] [cursor=pointer]:
+                - /url: http://localhost:8899/blog/
+            - listitem [ref=f1e17]:
+              - link "About" [ref=f1e18] [cursor=pointer]:
+                - /url: http://localhost:8899/about/
+            - listitem [ref=f1e19]:
+              - link "CV" [ref=f1e20] [cursor=pointer]:
+                - /url: http://localhost:8899/cv/CV-HossainMJ.pdf
+          - list [ref=f1e21]:
+            - listitem [ref=f1e22]:
+              - link [ref=f1e23] [cursor=pointer]:
+                - /url: mailto:contact.jubayerhossain@gmail.com
+                - img "Email" [ref=f1e24]: 
+            - listitem [ref=f1e25]:
+              - link "orcid" [ref=f1e26] [cursor=pointer]:
+                - /url: https://orcid.org/0000-0001-9323-4997
+                - generic "orcid" [ref=f1e28]: 
+            - listitem [ref=f1e29]:
+              - link "google-scholar" [ref=f1e30] [cursor=pointer]:
+                - /url: https://scholar.google.com/citations?user=9_K4ekoAAAAJ&hl=en
+                - generic "google-scholar" [ref=f1e32]: 
+            - listitem [ref=f1e33]:
+              - link [ref=f1e34] [cursor=pointer]:
+                - /url: https://github.com/hossainlab
+                - img "GitHub" [ref=f1e35]: 
+            - listitem [ref=f1e36]:
+              - link [ref=f1e37] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/hossainmj
+                - img "LinkedIn" [ref=f1e38]: 
+        - link "Toggle dark mode" [ref=f1e40] [cursor=pointer]:
+          - /url: http://localhost:8899/publications/?c=1
+  - banner [ref=f1e42]:
+    - generic [ref=f1e44]:
+      - heading "Publications & Presentations" [level=1] [ref=f1e45]
+      - paragraph [ref=f1e46]: Academic contributions, research manuscripts, and conference presentations
+  - main [ref=f1e49]:
+    - generic [ref=f1e50]:
+      - generic [ref=f1e51]:
+        - generic [ref=f1e52]:
+          - generic [ref=f1e53]: Publications
+          - generic [ref=f1e54]:
+            - generic [ref=f1e55]:
+              - generic [ref=f1e56]: A.
+              - text: Journal Articles
+              - generic [ref=f1e57]: (16)
+            - group "Filter journal articles by topic" [ref=f1e58]:
+              - button "All 16" [pressed] [ref=f1e59] [cursor=pointer]:
+                - text: All
+                - generic [ref=f1e60]: "16"
+              - button "Bioinformatics 4" [ref=f1e61] [cursor=pointer]:
+                - text: Bioinformatics
+                - generic [ref=f1e62]: "4"
+              - button "Global Health 6" [ref=f1e63] [cursor=pointer]:
+                - text: Global Health
+                - generic [ref=f1e64]: "6"
+              - button "Infectious Disease 5" [ref=f1e65] [cursor=pointer]:
+                - text: Infectious Disease
+                - generic [ref=f1e66]: "5"
+              - button "Public Health 3" [ref=f1e67] [cursor=pointer]:
+                - text: Public Health
+                - generic [ref=f1e68]: "3"
+              - paragraph
+            - generic [ref=f1e69]:
+              - generic [ref=f1e70]:
+                - generic [ref=f1e71]:
+                  - generic [ref=f1e72]: Peer-Reviewed
+                  - generic [ref=f1e73]: Bioinformatics
+                - link "Integrative bioinformatics analysis reveals COL13A1 and COL23A1 as potential diagnostic and prognostic biomarkers in thyroid cancer" [ref=f1e75] [cursor=pointer]:
+                  - /url: http://localhost:8899/publications/papers/integrative-bioinformatics-analysis-reveals-col13a1-and-col23a1-as/
+                - generic [ref=f1e76]:
+                  - text: Islam, M. W., Rahman, M. M., Naznin, H., Hossain, M. S., Akter, T., Shatabde, Z. A., &
+                  - strong [ref=f1e77]: Hossain, M. J.
+                - generic [ref=f1e78]:
+                  - emphasis [ref=f1e79]: Health Science Reports
+                  - text: (2026)
+                - generic [ref=f1e80]:
+                  - link "Abstract & citation" [ref=f1e81] [cursor=pointer]:
+                    - /url: http://localhost:8899/publications/papers/integrative-bioinformatics-analysis-reveals-col13a1-and-col23a1-as/
+                  - link " View Article" [ref=f1e82] [cursor=pointer]:
+                    - /url: https://doi.org/10.1002/hsr2.72617
+                    - generic [ref=f1e83]: 
+                    - text: View Article
+              - generic [ref=f1e84]:
+                - generic [ref=f1e85]:
+                  - generic [ref=f1e86]: Peer-Reviewed
+                  - generic [ref=f1e87]: Bioinformatics
+                - link "A meta-analysis of public RNA-Seq data identifies conserved stress responses in rainbow trout" [ref=f1e89] [cursor=pointer]:
+                  - /url: http://localhost:8899/publications/papers/a-meta-analysis-of-public-rna-seq-data/
+                - generic [ref=f1e90]:
+                  - text: Bari, S. M., Fuad, M.,
+                  - strong [ref=f1e91]: Hossain, M. J.
+                  - text: ", Ahammad, I., Begum, M., & Helal, M. M. U."
+                - generic [ref=f1e92]:
+                  - emphasis [ref=f1e93]: BMC Genomics
+                  - text: ","
+                  - strong [ref=f1e94]: "26"
+                  - text: ", 999 (2025)"
+                - generic [ref=f1e95]:
+                  - link "Abstract & citation" [ref=f1e96] [cursor=pointer]:
+                    - /url: http://localhost:8899/publications/papers/a-meta-analysis-of-public-rna-seq-data/
+                  - link " View Article" [ref=f1e97] [cursor=pointer]:
+                    - /url: https://doi.org/10.1186/s12864-025-12127-2
+                    - generic [ref=f1e98]: 
+                    - text: View Article
+              - generic [ref=f1e99]:
+                - generic [ref=f1e100]:
+                  - generic [ref=f1e101]: Peer-Reviewed
+                  - generic [ref=f1e102]: Bioinformatics
+                - link "Comprehensive bioinformatics analysis reveals prognostic significance and immunological roles of WNT gene family in breast cancer" [ref=f1e104] [cursor=pointer]:
+                  - /url: http://localhost:8899/publications/papers/comprehensive-bioinformatics-analysis-reveals-prognostic-significance-and-immunological/
+                - generic [ref=f1e105]:
+                  - text: Fariha, F. T. J., Fuad, M., Saha, C. S., Hossen, S., &
+                  - strong [ref=f1e106]: Hossain, M. J.
+                - generic [ref=f1e107]:
+                  - emphasis [ref=f1e108]: Scientific Reports
+                  - text: ","
+                  - strong [ref=f1e109]: "15"
+                  - text: ", 34490 (2025)"
+                - generic [ref=f1e110]:
+                  - link "Abstract & citation" [ref=f1e111] [cursor=pointer]:
+                    - /url: http://localhost:8899/publications/papers/comprehensive-bioinformatics-analysis-reveals-prognostic-significance-and-immunological/
+                  - link " View Article" [ref=f1e112] [cursor=pointer]:
+                    - /url: https://doi.org/10.1038/s41598-025-13315-6
+                    - generic [ref=f1e113]: 
+                    - text: View Article
+              - generic [ref=f1e114]:
+                - generic [ref=f1e115]:
+                  - generic [ref=f1e116]: Peer-Reviewed
+                  - generic [ref=f1e117]: Infectious Disease
+                - 'link "Preventing the silent threat: A perspective on preparing Bangladesh for Human Metapneumovirus (HMPV)" [ref=f1e119] [cursor=pointer]':
+                  - /url: http://localhost:8899/publications/papers/preventing-the-silent-threat-a-perspective-on-preparing/
+                - generic [ref=f1e120]:
+                  - strong [ref=f1e121]: Hossain, M. J.
+                  - text: ", Sony, S. A., Fariha, F. T. J., & Hossen, S."
+                - generic [ref=f1e122]:
+                  - emphasis [ref=f1e123]: Health Science Reports
+                  - text: ","
+                  - strong [ref=f1e124]: "8"
+                  - text: ", e71101 (2025)"
+                - generic [ref=f1e125]:
+                  - link "Abstract & citation" [ref=f1e126] [cursor=pointer]:
+                    - /url: http://localhost:8899/publications/papers/preventing-the-silent-threat-a-perspective-on-preparing/
+                  - link " View Article" [ref=f1e127] [cursor=pointer]:
+                    - /url: https://doi.org/10.1002/hsr2.71101
+                    - generic [ref=f1e128]: 
+                    - text: View Article
+              - generic [ref=f1e129]:
+                - generic [ref=f1e130]:
+                  - generic [ref=f1e131]: Peer-Reviewed
+                  - generic [ref=f1e132]: Bioinformatics
+                - link "Pan-cancer analysis reveals immunological and prognostic significance of CCT5 in human tumors" [ref=f1e134] [cursor=pointer]:
+                  - /url: http://localhost:8899/publications/papers/pan-cancer-analysis-reveals-immunological-and-prognostic-significance/
+                - generic [ref=f1e135]:
+                  - text: Ahmed, M. Z., Billah, M. M., Ferdous, J., &
+                  - strong [ref=f1e136]: Hossain, M. J.
+                - generic [ref=f1e137]:
+                  - emphasis [ref=f1e138]: Scientific Reports
+                  - text: ","
+                  - strong [ref=f1e139]: "15"
+                  - text: ", 14405 (2025)"
+                - generic [ref=f1e140]:
+                  - link "Abstract & citation" [ref=f1e141] [cursor=pointer]:
+                    - /url: http://localhost:8899/publications/papers/pan-cancer-analysis-reveals-immunological-and-prognostic-significance/
+                  - link " View Article" [ref=f1e142] [cursor=pointer]:
+                    - /url: https://doi.org/10.1038/s41598-025-88339-z
+                    - generic [ref=f1e143]: 
+                    - text: View Article
+              - generic [ref=f1e144]:
+                - generic [ref=f1e145]:
+                  - generic [ref=f1e146]: Peer-Reviewed
+                  - generic [ref=f1e147]: Global Health
+                - 'link "Young stroke in Bangladesh: Addressing rare cases with diagnostic challenges" [ref=f1e149] [cursor=pointer]':
+                  - /url: http://localhost:8899/publications/papers/young-stroke-in-bangladesh-addressing-rare-cases-with/
+                - generic [ref=f1e150]:
+                  - text: Das, M., &
+                  - strong [ref=f1e151]: Hossain, M. J.
+                - generic [ref=f1e152]:
+                  - emphasis [ref=f1e153]: Stroke and Vascular Neurology
+                  - text: ", svn-2025-004178 (2025)"
+                - generic [ref=f1e154]:
+                  - link "Abstract & citation" [ref=f1e155] [cursor=pointer]:
+                    - /url: http://localhost:8899/publications/papers/young-stroke-in-bangladesh-addressing-rare-cases-with/
+                  - link " View Article" [ref=f1e156] [cursor=pointer]:
+                    - /url: https://doi.org/10.1136/svn-2025-004178
+                    - generic [ref=f1e157]: 
+                    - text: View Article
+              - generic [ref=f1e158]:
+                - generic [ref=f1e159]:
+                  - generic [ref=f1e160]: Peer-Reviewed
+                  - generic [ref=f1e161]: Global Health
+                  - generic [ref=f1e162]: Infectious Disease
+                - link "Clinical and hematological manifestation of dengue patients in 2022 outbreak" [ref=f1e164] [cursor=pointer]:
+                  - /url: http://localhost:8899/publications/papers/clinical-and-hematological-manifestation-of-dengue-patients-in/
+                - generic [ref=f1e165]:
+                  - strong [ref=f1e166]: Hossain, M. J.
+                  - text: ", Das, M., Shahjahan, M., Islam, M. W., & Towhid, S. T."
+                - generic [ref=f1e167]:
+                  - emphasis [ref=f1e168]: Health Science Reports
+                  - text: ","
+                  - strong [ref=f1e169]: "8"
+                  - text: ", e70356 (2025)"
+                - generic [ref=f1e170]:
+                  - link "Abstract & citation" [ref=f1e171] [cursor=pointer]:
+                    - /url: http://localhost:8899/publications/papers/clinical-and-hematological-manifestation-of-dengue-patients-in/
+                  - link " View Article" [ref=f1e172] [cursor=pointer]:
+                    - /url: https://doi.org/10.1002/hsr2.70356
+                    - generic [ref=f1e173]: 
+                    - text: View Article
+              - generic [ref=f1e174]:
+                - generic [ref=f1e175]:
+                  - generic [ref=f1e176]: Peer-Reviewed
+                  - generic [ref=f1e177]: Global Health
+                - link "Urgent call for compulsory premarital screening for thalassemia prevention in Bangladesh" [ref=f1e179] [cursor=pointer]:
+                  - /url: http://localhost:8899/publications/papers/urgent-call-for-compulsory-premarital-screening-for-thalassemia/
+                - generic [ref=f1e180]:
+                  - strong [ref=f1e181]: Hossain, M. J.
+                  - text: ", Das, M., & Munni, U. R."
+                - generic [ref=f1e182]:
+                  - emphasis [ref=f1e183]: Orphanet Journal of Rare Diseases
+                  - text: ","
+                  - strong [ref=f1e184]: "19"
+                  - text: ", 326 (2024)"
+                - generic [ref=f1e185]:
+                  - link "Abstract & citation" [ref=f1e186] [cursor=pointer]:
+                    - /url: http://localhost:8899/publications/papers/urgent-call-for-compulsory-premarital-screening-for-thalassemia/
+                  - link " View Article" [ref=f1e187] [cursor=pointer]:
+                    - /url: https://doi.org/10.1186/s13023-024-03344-1
+                    - generic [ref=f1e188]: 
+                    - text: View Article
+              - generic [ref=f1e189]:
+                - generic [ref=f1e190]:
+                  - generic [ref=f1e191]: Peer-Reviewed
+                  - generic [ref=f1e192]: Infectious Disease
+                - link "Resistance and co-resistance of metallo-beta-lactamase genes in diarrheal and urinary-tract pathogens" [ref=f1e194] [cursor=pointer]:
+                  - /url: http://localhost:8899/publications/papers/resistance-and-co-resistance-of-metallo-beta-lactamase/
+                - generic [ref=f1e195]:
+                  - text: Shanta, A. S., Islam, N., Al Asad, M., Akter, K., Habib, M. B.,
+                  - strong [ref=f1e196]: Hossain, M. J.
+                  - text: ", Nahar, S., Godman, B., & Islam, S."
+                - generic [ref=f1e197]:
+                  - emphasis [ref=f1e198]: Microorganisms
+                  - text: ","
+                  - strong [ref=f1e199]: "12"
+                  - text: (8), 1589 (2024)
+                - generic [ref=f1e200]:
+                  - link "Abstract & citation" [ref=f1e201] [cursor=pointer]:
+                    - /url: http://localhost:8899/publications/papers/resistance-and-co-resistance-of-metallo-beta-lactamase/
+                  - link " View Article" [ref=f1e202] [cursor=pointer]:
+                    - /url: https://doi.org/10.3390/microorganisms12081589
+                    - generic [ref=f1e203]: 
+                    - text: View Article
+              - generic [ref=f1e204]:
+                - generic [ref=f1e205]:
+                  - generic [ref=f1e206]: Peer-Reviewed
+                  - generic [ref=f1e207]: Infectious Disease
+                - link "Prevalence, antibiotic resistance pattern for bacteriuria from patients with UTIs" [ref=f1e209] [cursor=pointer]:
+                  - /url: http://localhost:8899/publications/papers/prevalence-antibiotic-resistance-pattern-for-bacteriuria-from-patients/
+                - generic [ref=f1e210]:
+                  - strong [ref=f1e211]: Hossain, M. J.
+                  - text: ", Azad, A. K., Shahid, M. S. B., Shahjahan, M., & Ferdous, J."
+                - generic [ref=f1e212]:
+                  - emphasis [ref=f1e213]: Health Science Reports
+                  - text: ","
+                  - strong [ref=f1e214]: "7"
+                  - text: ", e2039 (2024)"
+                - generic [ref=f1e215]:
+                  - link "Abstract & citation" [ref=f1e216] [cursor=pointer]:
+                    - /url: http://localhost:8899/publications/papers/prevalence-antibiotic-resistance-pattern-for-bacteriuria-from-patients/
+                  - link " View Article" [ref=f1e217] [cursor=pointer]:
+                    - /url: https://doi.org/10.1002/hsr2.2039
+                    - generic [ref=f1e218]: 
+                    - text: View Article
+              - generic [ref=f1e219]:
+                - generic [ref=f1e220]:
+                  - generic [ref=f1e221]: Peer-Reviewed
+                  - generic [ref=f1e222]: Public Health
+                - link "Food consumption patterns and sedentary behaviors among university students" [ref=f1e224] [cursor=pointer]:
+                  - /url: http://localhost:8899/publications/papers/food-consumption-patterns-and-sedentary-behaviors-among-university/
+                - generic [ref=f1e225]:
+                  - text: Akter, M. M., &
+                  - strong [ref=f1e226]: Hossain, M. J.
+                - generic [ref=f1e227]:
+                  - emphasis [ref=f1e228]: Health Science Reports
+                  - text: ","
+                  - strong [ref=f1e229]: "7"
+                  - text: ", e70259 (2024)"
+                - generic [ref=f1e230]:
+                  - link "Abstract & citation" [ref=f1e231] [cursor=pointer]:
+                    - /url: http://localhost:8899/publications/papers/food-consumption-patterns-and-sedentary-behaviors-among-university/
+                  - link " View Article" [ref=f1e232] [cursor=pointer]:
+                    - /url: https://doi.org/10.1002/hsr2.70259
+                    - generic [ref=f1e233]: 
+                    - text: View Article
+              - generic [ref=f1e234]:
+                - generic [ref=f1e235]:
+                  - generic [ref=f1e236]: Peer-Reviewed
+                  - generic [ref=f1e237]: Public Health
+                - link "Factors contributing to antibiotic misuse among parents in Dhaka City" [ref=f1e239] [cursor=pointer]:
+                  - /url: http://localhost:8899/publications/papers/factors-contributing-to-antibiotic-misuse-among-parents-in/
+                - generic [ref=f1e240]:
+                  - text: Islam, M. W., Shahjahan, M., Azad, A. K., &
+                  - strong [ref=f1e241]: Hossain, M. J.
+                - generic [ref=f1e242]:
+                  - emphasis [ref=f1e243]: Scientific Reports
+                  - text: ","
+                  - strong [ref=f1e244]: "14"
+                  - text: ", 2318 (2024)"
+                - generic [ref=f1e245]:
+                  - link "Abstract & citation" [ref=f1e246] [cursor=pointer]:
+                    - /url: http://localhost:8899/publications/papers/factors-contributing-to-antibiotic-misuse-among-parents-in/
+                  - link " View Article" [ref=f1e247] [cursor=pointer]:
+                    - /url: https://doi.org/10.1038/s41598-024-52313-y
+                    - generic [ref=f1e248]: 
+                    - text: View Article
+              - generic [ref=f1e249]:
+                - generic [ref=f1e250]:
+                  - generic [ref=f1e251]: Peer-Reviewed
+                  - generic [ref=f1e252]: Global Health
+                  - generic [ref=f1e253]: Infectious Disease
+                - link "Community engagement and social participation in dengue prevention" [ref=f1e255] [cursor=pointer]:
+                  - /url: http://localhost:8899/publications/papers/community-engagement-and-social-participation-in-dengue-prevention/
+                - generic [ref=f1e256]:
+                  - strong [ref=f1e257]: Hossain, M. J.
+                  - text: ", Das, M., Islam, M. W., Shahjahan, M., & Ferdous, J."
+                - generic [ref=f1e258]:
+                  - emphasis [ref=f1e259]: Health Science Reports
+                  - text: ","
+                  - strong [ref=f1e260]: "7"
+                  - text: ", e2022 (2024)"
+                - generic [ref=f1e261]:
+                  - link "Abstract & citation" [ref=f1e262] [cursor=pointer]:
+                    - /url: http://localhost:8899/publications/papers/community-engagement-and-social-participation-in-dengue-prevention/
+                  - link " View Article" [ref=f1e263] [cursor=pointer]:
+                    - /url: https://doi.org/10.1002/hsr2.2022
+                    - generic [ref=f1e264]: 
+                    - text: View Article
+              - generic [ref=f1e265]:
+                - generic [ref=f1e266]:
+                  - generic [ref=f1e267]: Peer-Reviewed
+                  - generic [ref=f1e268]: Global Health
+                - link "Health-related quality of life among thalassemia patients in Bangladesh (SF-36)" [ref=f1e270] [cursor=pointer]:
+                  - /url: http://localhost:8899/publications/papers/health-related-quality-of-life-among-thalassemia-patients/
+                - generic [ref=f1e271]:
+                  - strong [ref=f1e272]: Hossain, M. J.
+                  - text: ", Islam, M. W., Munni, U. R., Gulshan, R., Mukta, S. A., Miah, M. S., Sultana, S., Karmakar, M., Ferdous, J., & Islam, M. A."
+                - generic [ref=f1e273]:
+                  - emphasis [ref=f1e274]: Scientific Reports
+                  - text: ","
+                  - strong [ref=f1e275]: "13"
+                  - text: (1) (2023)
+                - generic [ref=f1e276]:
+                  - link "Abstract & citation" [ref=f1e277] [cursor=pointer]:
+                    - /url: http://localhost:8899/publications/papers/health-related-quality-of-life-among-thalassemia-patients/
+                  - link " View Article" [ref=f1e278] [cursor=pointer]:
+                    - /url: https://doi.org/10.1038/s41598-023-34205-9
+                    - generic [ref=f1e279]: 
+                    - text: View Article
+              - generic [ref=f1e280]:
+                - generic [ref=f1e281]:
+                  - generic [ref=f1e282]: Peer-Reviewed
+                  - generic [ref=f1e283]: Global Health
+                - link "Knowledge and Attitudes towards Thalassemia among Public University Students" [ref=f1e285] [cursor=pointer]:
+                  - /url: http://localhost:8899/publications/papers/knowledge-and-attitudes-towards-thalassemia-among-public-university/
+                - generic [ref=f1e286]:
+                  - strong [ref=f1e287]: Hossain, M. J.
+                  - text: ", Towhid, S. T., Sultana, S., Mukta, S. A., Gulshan, R., & Miah, M. S."
+                - generic [ref=f1e288]:
+                  - emphasis [ref=f1e289]: Microbial Bioactives
+                  - text: ","
+                  - strong [ref=f1e290]: "5"
+                  - text: (2) (2022)
+                - generic [ref=f1e291]:
+                  - link "Abstract & citation" [ref=f1e292] [cursor=pointer]:
+                    - /url: http://localhost:8899/publications/papers/knowledge-and-attitudes-towards-thalassemia-among-public-university/
+                  - link " View Article" [ref=f1e293] [cursor=pointer]:
+                    - /url: https://doi.org/10.25163/microbbioacts.526325
+                    - generic [ref=f1e294]: 
+                    - text: View Article
+              - generic [ref=f1e295]:
+                - generic [ref=f1e296]:
+                  - generic [ref=f1e297]: Peer-Reviewed
+                  - generic [ref=f1e298]: Public Health
+                - link "Perception of Students on Antibiotic Resistance and Prevention" [ref=f1e300] [cursor=pointer]:
+                  - /url: http://localhost:8899/publications/papers/perception-of-students-on-antibiotic-resistance-and-prevention/
+                - generic [ref=f1e301]:
+                  - text: Towhid, S. T.,
+                  - strong [ref=f1e302]: Hossain, M. J.
+                  - text: ", Sammo, M. A. S., & Akter, S."
+                - generic [ref=f1e303]:
+                  - emphasis [ref=f1e304]: European Journal of Biology and Biotechnology
+                  - text: ","
+                  - strong [ref=f1e305]: "3"
+                  - text: (3) (2022)
+                - generic [ref=f1e306]:
+                  - link "Abstract & citation" [ref=f1e307] [cursor=pointer]:
+                    - /url: http://localhost:8899/publications/papers/perception-of-students-on-antibiotic-resistance-and-prevention/
+                  - link " View Article" [ref=f1e308] [cursor=pointer]:
+                    - /url: https://doi.org/10.24018/ejbio.2022.3.3.341
+                    - generic [ref=f1e309]: 
+                    - text: View Article
+            - text: 
+          - generic [ref=f1e310]:
+            - generic [ref=f1e311]:
+              - generic [ref=f1e312]: B.
+              - text: GBD Contributions
+              - generic [ref=f1e313]: (7)
+            - generic [ref=f1e314]:
+              - generic [ref=f1e315]: GBD Published
+              - 'link "Global, regional, and national burden of breast cancer among females, 1990–2023, with forecasts to 2050: a systematic analysis for the Global Burden of Disease Study 2023" [ref=f1e318] [cursor=pointer]':
+                - /url: https://doi.org/10.1016/S1470-2045(25)00730-2
+              - generic [ref=f1e319]: GBD 2023 Breast Cancer Collaborators
+              - generic [ref=f1e320]:
+                - emphasis [ref=f1e321]: The Lancet Oncology
+                - text: (2026)
+              - link " View Article" [ref=f1e323] [cursor=pointer]:
+                - /url: https://doi.org/10.1016/S1470-2045(25)00730-2
+                - generic [ref=f1e324]: 
+                - text: View Article
+            - generic [ref=f1e325]:
+              - generic [ref=f1e326]: GBD Published
+              - 'link "Global, regional, and national burden of headache disorders, 1990–2023: a systematic analysis for the Global Burden of Disease Study 2023" [ref=f1e329] [cursor=pointer]':
+                - /url: https://doi.org/10.1016/S1474-4422(25)00402-8
+              - generic [ref=f1e330]: GBD 2023 Headache Collaborators
+              - generic [ref=f1e331]:
+                - emphasis [ref=f1e332]: The Lancet Neurology
+                - text: (2025)
+              - link " View Article" [ref=f1e334] [cursor=pointer]:
+                - /url: https://doi.org/10.1016/S1474-4422(25)00402-8
+                - generic [ref=f1e335]: 
+                - text: View Article
+            - generic [ref=f1e336]:
+              - generic [ref=f1e337]: GBD Published
+              - 'link "Global, regional, and national trends in routine childhood vaccination coverage from 1980 to 2023 with forecasts to 2030: A systematic analysis for the Global Burden of Disease Study 2023" [ref=f1e340] [cursor=pointer]':
+                - /url: https://doi.org/10.1016/S0140-6736(25)01037-2
+              - generic [ref=f1e341]: GBD 2023 Vaccine Coverage Collaborators
+              - generic [ref=f1e342]:
+                - emphasis [ref=f1e343]: The Lancet
+                - text: (2025)
+              - link " View Article" [ref=f1e345] [cursor=pointer]:
+                - /url: https://doi.org/10.1016/S0140-6736(25)01037-2
+                - generic [ref=f1e346]: 
+                - text: View Article
+            - generic [ref=f1e347]:
+              - generic [ref=f1e348]: Under Review
+              - generic [ref=f1e350]: Global, regional, and national burden and trend of adult musculoskeletal disorders and discrepancy between pre-pandemic and pandemic of COVID-19
+              - generic [ref=f1e351]: GBD 2021 Musculoskeletal Disorders and COVID-19 Collaborators
+              - generic [ref=f1e352]:
+                - text: Submitted to
+                - emphasis [ref=f1e353]: BMC Medicine
+                - generic [ref=f1e354]: Under Review
+            - generic [ref=f1e355]:
+              - generic [ref=f1e356]: Under Review
+              - generic [ref=f1e358]: "Global, regional, and national burden of tuberculosis and multidrug-resistant tuberculosis by HIV status, 1990–2023: a systematic analysis for the Global Burden of Disease Study 2023"
+              - generic [ref=f1e359]: GBD 2023 TB Collaborators
+              - generic [ref=f1e360]:
+                - text: Submitted to
+                - emphasis [ref=f1e361]: The Lancet Infectious Diseases
+                - generic [ref=f1e362]: Under Review
+            - generic [ref=f1e363]:
+              - generic [ref=f1e364]: Under Review
+              - generic [ref=f1e366]: "The global burden of type 1 diabetes: a systematic analysis for the Global Burden of Disease Study 2023"
+              - generic [ref=f1e367]: GBD 2023 Type 1 Diabetes Collaborators
+              - generic [ref=f1e368]:
+                - text: Submitted to
+                - emphasis [ref=f1e369]: Under Review
+                - generic [ref=f1e370]: Under Review
+            - generic [ref=f1e371]:
+              - generic [ref=f1e372]: Under Review
+              - generic [ref=f1e374]: "Global, regional and national burden of cervical cancer and associated risk factors from 1990 to 2023 and forecasts to 2050: A systematic analysis for the Global Burden of Disease Study 2023"
+              - generic [ref=f1e375]: GBD 2023 Cervical Cancer Collaborators
+              - generic [ref=f1e376]:
+                - text: Submitted to
+                - emphasis [ref=f1e377]: Under Review
+                - generic [ref=f1e378]: Under Review
+          - generic [ref=f1e379]:
+            - generic [ref=f1e380]:
+              - generic [ref=f1e381]: C.
+              - text: Papers Under Review
+              - generic [ref=f1e382]: (5)
+            - generic [ref=f1e383]:
+              - generic [ref=f1e384]: Under Review
+              - link "Computational identification of Taxus baccata-derived phytochemicals targeting EZH2 to overcome therapeutic resistance in melanoma" [ref=f1e387] [cursor=pointer]:
+                - /url: https://doi.org/10.21203/rs.3.rs-8494315/v1
+              - generic [ref=f1e388]:
+                - text: Kundu, P., Shahariar, M., Munny, F. A., Riya, A. T., Lota, H. B., Ahmed, M. Z., Meme, M. A., Kona, U. M. P., Mahmuda, F., Chowdhury, S. S., Sraboni, S. A., &
+                - strong [ref=f1e389]: Hossain, M. J.
+              - generic [ref=f1e390]:
+                - text: Submitted to
+                - emphasis [ref=f1e391]: Scientific Reports
+                - generic [ref=f1e392]: Under Review
+            - generic [ref=f1e393]:
+              - generic [ref=f1e394]: Under Review
+              - generic [ref=f1e396]: Bioinformatics-driven multi-omics profiling of CDK1 and CDK6 identifies prognostic and therapeutic roles in breast cancer
+              - generic [ref=f1e397]:
+                - text: Islam, M. W., Fariha, F. T. J., Ahmed, M. Z., Ferdous, J., Lota, H. B., Hossain, M. S., Kundu, P., Shahjahan, M., &
+                - strong [ref=f1e398]: Hossain, M. J.
+              - generic [ref=f1e399]:
+                - text: Submitted to
+                - emphasis [ref=f1e400]: Health Science Reports
+                - generic [ref=f1e401]: Under Review
+            - generic [ref=f1e402]:
+              - generic [ref=f1e403]: Under Review
+              - generic [ref=f1e405]: Multi-omics pan-cancer analysis reveals an immunological role and prognostic potential of WDR76
+              - generic [ref=f1e406]:
+                - text: Billah, M. M., Mabsurah, K., Ahammad, K., Yeana, I. J., Sumaiya, M., Islam, T., Bhattacharjee, A., Ferdous, J., &
+                - strong [ref=f1e407]: Hossain, M. J.
+              - generic [ref=f1e408]:
+                - text: Submitted to
+                - emphasis [ref=f1e409]: Discover Oncology
+                - generic [ref=f1e410]: Under Review
+            - generic [ref=f1e411]:
+              - generic [ref=f1e412]: Under Review
+              - generic [ref=f1e414]: Predicting early antenatal care initiation at the first trimester among reproductive women in Bangladesh using machine learning
+              - generic [ref=f1e415]:
+                - text: Sony, S. A., Kundu, L. R., Limon, M. H., Chowdhury, T. B. K., &
+                - strong [ref=f1e416]: Hossain, M. J.
+              - generic [ref=f1e417]:
+                - text: Submitted to
+                - emphasis [ref=f1e418]: BMC Pregnancy and Childbirth
+                - generic [ref=f1e419]: Under Review
+            - generic [ref=f1e420]:
+              - generic [ref=f1e421]: Under Review
+              - generic [ref=f1e423]: "Lack of knowledge and training about antibiotic resistance among community pharmacists in Bangladesh: a cross-sectional study"
+              - generic [ref=f1e424]:
+                - strong [ref=f1e425]: Hossain, M. J.
+                - text: ", Shahariar, M., Barsha, L. H. J., Shahjahan, M., Towhid, S. T., Sheikh, M. K., Hasan, M. M., Rahman, M. H., & Sazid, M. S."
+              - generic [ref=f1e426]:
+                - text: Submitted to
+                - emphasis [ref=f1e427]: Health Science Reports
+                - generic [ref=f1e428]: Under Review
+          - generic [ref=f1e429]:
+            - generic [ref=f1e430]:
+              - generic [ref=f1e431]: D.
+              - text: Working Papers
+              - generic [ref=f1e432]: (5)
+            - generic [ref=f1e433]:
+              - generic [ref=f1e434]: Working Paper
+              - link "Pan-Cancer Tumor-Associated Macrophage Reprogramming Atlas and Immunotherapy Response Prediction" [ref=f1e437] [cursor=pointer]:
+                - /url: https://github.com/hossainlab/TAM-Atlas
+              - generic [ref=f1e438]:
+                - strong [ref=f1e439]: Hossain, M. J.
+                - text: ", Shahjahan, M., & Fuad, M."
+              - generic [ref=f1e440]:
+                - emphasis [ref=f1e441]: Working Paper
+                - text: (2026)
+              - link " View" [ref=f1e443] [cursor=pointer]:
+                - /url: https://github.com/hossainlab/TAM-Atlas
+                - generic [ref=f1e444]: 
+                - text: View
+            - generic [ref=f1e445]:
+              - generic [ref=f1e446]: Working Paper
+              - 'link "DeepAMR: AI-powered antimicrobial resistance prediction from genomic data" [ref=f1e449] [cursor=pointer]':
+                - /url: https://github.com/hossainlab/DeepAMR
+              - strong [ref=f1e451]: Hossain, M. J.
+              - generic [ref=f1e452]:
+                - emphasis [ref=f1e453]: Working Paper
+                - text: (2026)
+              - link " View" [ref=f1e455] [cursor=pointer]:
+                - /url: https://github.com/hossainlab/DeepAMR
+                - generic [ref=f1e456]: 
+                - text: View
+            - generic [ref=f1e457]:
+              - generic [ref=f1e458]: Working Paper
+              - 'link "Fezf2-mediated cortical development: Multi-omics analysis" [ref=f1e461] [cursor=pointer]':
+                - /url: https://github.com/hossainlab/fezf2-multiomics
+              - generic [ref=f1e462]:
+                - strong [ref=f1e463]: Hossain, M. J.
+                - text: ", Shahjahan, M., & Fuad, M."
+              - generic [ref=f1e464]:
+                - emphasis [ref=f1e465]: Working Paper
+                - text: (2025)
+              - link " View" [ref=f1e467] [cursor=pointer]:
+                - /url: https://github.com/hossainlab/fezf2-multiomics
+                - generic [ref=f1e468]: 
+                - text: View
+            - generic [ref=f1e469]:
+              - generic [ref=f1e470]: Working Paper
+              - link "Single-cell meta-analysis of microglial activation in Alzheimer’s disease" [ref=f1e473] [cursor=pointer]:
+                - /url: https://github.com/hossainlab/alzheimers-microglia-meta-analysis
+              - generic [ref=f1e474]:
+                - strong [ref=f1e475]: Hossain, M. J.
+                - text: ", Shahjahan, M., & Fuad, M."
+              - generic [ref=f1e476]:
+                - emphasis [ref=f1e477]: Working Paper
+                - text: (2025)
+              - link " View" [ref=f1e479] [cursor=pointer]:
+                - /url: https://github.com/hossainlab/alzheimers-microglia-meta-analysis
+                - generic [ref=f1e480]: 
+                - text: View
+            - generic [ref=f1e481]:
+              - generic [ref=f1e482]: Working Paper
+              - link "Integrative spatial-scRNA-seq atlas of immunotherapy resistance mechanisms across cancer types" [ref=f1e485] [cursor=pointer]:
+                - /url: https://github.com/hossainlab/spatial-scRNA-immune-resistance
+              - generic [ref=f1e486]:
+                - strong [ref=f1e487]: Hossain, M. J.
+                - text: ", Shahjahan, M., & Fuad, M."
+              - generic [ref=f1e488]:
+                - emphasis [ref=f1e489]: Working Paper
+                - text: (2025)
+              - link " View" [ref=f1e491] [cursor=pointer]:
+                - /url: https://github.com/hossainlab/spatial-scRNA-immune-resistance
+                - generic [ref=f1e492]: 
+                - text: View
+          - generic [ref=f1e493]: Presentations
+          - generic [ref=f1e494]:
+            - generic [ref=f1e495]:
+              - generic [ref=f1e496]: A.
+              - text: Invited Speaker
+              - generic [ref=f1e497]: (4)
+            - generic [ref=f1e498]:
+              - generic [ref=f1e499]: Invited Speaker
+              - generic [ref=f1e501]: Undergraduate Research - Importance, Benefits, and Challenges
+              - generic [ref=f1e502]:
+                - emphasis [ref=f1e503]: CHIRAL Bangladesh
+                - text: · Dhaka, Bangladesh · 2019
+            - generic [ref=f1e504]:
+              - generic [ref=f1e505]: Invited Speaker
+              - generic [ref=f1e507]: State the Art of Microbial Genome Analysis
+              - generic [ref=f1e508]:
+                - emphasis [ref=f1e509]: Jagannath University
+                - text: · Dhaka, Bangladesh · 2018
+            - generic [ref=f1e510]:
+              - generic [ref=f1e511]: Invited Speaker
+              - generic [ref=f1e513]: "Computational Biology and Bioinformatics Research in Resource-Limited Settings: Strategies, Tools and Opportunities"
+              - generic [ref=f1e514]:
+                - emphasis [ref=f1e515]: Jagannath University Higher Study and Research Society
+                - text: · Dhaka, Bangladesh · 2015
+            - generic [ref=f1e516]:
+              - generic [ref=f1e517]: Invited Speaker
+              - generic [ref=f1e519]: Mastering Biomedical Data Management
+              - generic [ref=f1e520]:
+                - emphasis [ref=f1e521]: IFMSA Bangladesh
+                - text: · Dhaka, Bangladesh · 2014
+          - generic [ref=f1e522]:
+            - generic [ref=f1e523]:
+              - generic [ref=f1e524]: B.
+              - text: Conference Presentations
+              - generic [ref=f1e525]: (7)
+            - generic [ref=f1e526]:
+              - generic [ref=f1e527]: Oral Presentation
+              - generic [ref=f1e529]: "Fezf2-Mediated Cortical Development: Multi-Omics Single-Cell Analysis"
+              - generic [ref=f1e530]:
+                - strong [ref=f1e531]: Hossain, M. J.
+                - text: "& Islam, M. M."
+              - generic [ref=f1e532]:
+                - emphasis [ref=f1e533]: Network of Young Biotechnologists Bangladesh
+                - text: · Dhaka, Bangladesh · 2026
+            - generic [ref=f1e534]:
+              - generic [ref=f1e535]: Oral Presentation
+              - generic [ref=f1e537]: Exploring the Factors Influencing Heat Stress Risks Using the Discomfort Index Method in Bangladesh
+              - generic [ref=f1e538]:
+                - text: Tuhin, M. A. A., Mim, N. A., Akter, N., Jamal, F., Sakib, M. N., Mehjabin, K., &
+                - strong [ref=f1e539]: Hossain, M. J.
+              - generic [ref=f1e540]:
+                - emphasis [ref=f1e541]: International Conference on Environmental Science and Resource Management (ICESRM 2024)
+                - text: · Bangladesh · 2024
+            - generic [ref=f1e542]:
+              - generic [ref=f1e543]: Oral Presentation
+              - generic [ref=f1e545]: "Temporal Trends and Factors Influencing Diarrhea Prevalence Among Children in the Rangamati Hill Tract Region: A Time Series Analysis"
+              - generic [ref=f1e546]:
+                - text: Mim, N. A., Akter, N., Tuhin, M. A. A., Hossain, S., Alam, K. E., Mouli, N. J., &
+                - strong [ref=f1e547]: Hossain, M. J.
+              - generic [ref=f1e548]:
+                - emphasis [ref=f1e549]: International Conference on Environmental Science and Resource Management (ICESRM 2024)
+                - text: · Bangladesh · 2024
+            - generic [ref=f1e550]:
+              - generic [ref=f1e551]: Oral Presentation
+              - generic [ref=f1e553]: Factors Influencing Heat Stress Risk in Bangladesh
+              - generic [ref=f1e554]:
+                - strong [ref=f1e555]: Hossain, M. J.
+                - text: ", Habiba, U., Rozario, C., Tuhin, M. L. A., Mabsurah, K., & Uddin, N. F."
+              - generic [ref=f1e556]:
+                - emphasis [ref=f1e557]: 9th International Public Health Conference, Public Health Foundation at BMRC
+                - text: · Bangladesh · 2023
+            - generic [ref=f1e558]:
+              - generic [ref=f1e559]: Oral Presentation
+              - generic [ref=f1e561]: Monitoring Water-Borne Disease (Vibrio cholerae) Using NASA Earth Observation Data
+              - generic [ref=f1e562]:
+                - strong [ref=f1e563]: Hossain, M. J.
+                - text: ", Nowshin, N., Momtaj, Yeana, I. Y., & Nohor, N."
+              - generic [ref=f1e564]:
+                - emphasis [ref=f1e565]: 9th International Public Health Conference, Public Health Foundation at BMRC
+                - text: · Bangladesh · 2023
+            - generic [ref=f1e566]:
+              - generic [ref=f1e567]: Oral Presentation
+              - generic [ref=f1e569]: "Diagnostic and Electrophysiological Features of Hirayama Disease in Young Adult Male: A Case Report"
+              - generic [ref=f1e570]:
+                - strong [ref=f1e571]: Hossain, M. J.
+                - text: "& Das, M."
+              - generic [ref=f1e572]:
+                - emphasis [ref=f1e573]: Institute of Epidemiology, Disease Control and Research (IEDCR)
+                - text: · Dhaka, Bangladesh · 2020
+            - generic [ref=f1e574]:
+              - generic [ref=f1e575]: Oral Presentation
+              - generic [ref=f1e577]: Quantitative Microbial Risk Assessment from Vancomycin-Resistant Enterococcus faecalis and Enterococcus faecium from a Specific Neighborhood in Dhaka City, Bangladesh
+              - generic [ref=f1e578]:
+                - text: Nayeem, M. U., Mrittika, M. A.,
+                - strong [ref=f1e579]: Hossain, M. J.
+                - text: ", Azad, A. K., Ferdous, J., Ahmed, S., Sanyal, S. K., & Towhid, S. T."
+              - generic [ref=f1e580]:
+                - emphasis [ref=f1e581]: Bangladesh Society of Microbiologists Annual Conference
+                - text: · Dhaka, Bangladesh · 2019
+          - generic [ref=f1e582]:
+            - generic [ref=f1e583]:
+              - generic [ref=f1e584]: C.
+              - text: Posters
+              - generic [ref=f1e585]: (8)
+            - generic [ref=f1e586]:
+              - generic [ref=f1e587]: Poster
+              - generic [ref=f1e589]: Identification of Subtype-Specific Prognostic Biomarkers in Esophageal Carcinoma through Integrated Bioinformatics Analysis
+              - generic [ref=f1e590]:
+                - text: Ahmad, F., Fuad, M., Shahjahan, M., &
+                - strong [ref=f1e591]: Hossain, M. J.
+              - generic [ref=f1e592]:
+                - emphasis [ref=f1e593]: 9th BSM Annual Conference
+                - text: · University of Dhaka, Bangladesh · 2025
+            - generic [ref=f1e594]:
+              - generic [ref=f1e595]: Poster
+              - generic [ref=f1e597]: Network-Driven Bioinformatics Approach Uncovers Prognostic Signatures and Therapeutic Targets in Pancreatic Ductal Adenocarcinoma
+              - generic [ref=f1e598]:
+                - text: Aditee, L. M., Fuad, M., Shahjahan, M., &
+                - strong [ref=f1e599]: Hossain, M. J.
+              - generic [ref=f1e600]:
+                - emphasis [ref=f1e601]: 9th BSM Annual Conference
+                - text: · University of Dhaka, Bangladesh · 2025
+            - generic [ref=f1e602]:
+              - generic [ref=f1e603]: Poster
+              - generic [ref=f1e605]: Bioinformatic Analysis of Transcriptomic Data Reveals Molecular Signatures Driving Colorectal Cancer
+              - generic [ref=f1e606]:
+                - text: Ahamed, M. S., Fuad, M., Shahjahan, M., &
+                - strong [ref=f1e607]: Hossain, M. J.
+              - generic [ref=f1e608]:
+                - emphasis [ref=f1e609]: 9th BSM Annual Conference
+                - text: · University of Dhaka, Bangladesh · 2025
+            - generic [ref=f1e610]:
+              - generic [ref=f1e611]: Poster
+              - generic [ref=f1e613]: Comparative Transcriptomic Meta-Analysis Reveals Shared and Distinct Transcriptional Networks and Pathway Crosstalk in Hepatocellular Carcinoma for Biomarker and Therapeutic Target Identification
+              - generic [ref=f1e614]:
+                - text: Tabassum, R., Fuad, M., Shahjahan, M., &
+                - strong [ref=f1e615]: Hossain, M. J.
+              - generic [ref=f1e616]:
+                - emphasis [ref=f1e617]: 9th BSM Annual Conference
+                - text: · University of Dhaka, Bangladesh · 2025
+            - generic [ref=f1e618]:
+              - generic [ref=f1e619]: Poster
+              - generic [ref=f1e621]: Level of knowledge regarding breast cancer and breast self-examination among school and college-going girls in Bangladesh
+              - generic [ref=f1e622]:
+                - text: Das, M., Kajol, M. M., Mim, N. A., Maruf, M. F. I., Hirko, K., &
+                - strong [ref=f1e623]: Hossain, M. J.
+              - generic [ref=f1e624]:
+                - emphasis [ref=f1e625]: International Conference of Public Health, IEDCR
+                - text: · Dhaka, Bangladesh · 2024
+            - generic [ref=f1e626]:
+              - generic [ref=f1e627]: Poster
+              - generic [ref=f1e629]: Lack of knowledge and training about antibiotic resistance among community pharmacists in Bangladesh
+              - generic [ref=f1e630]:
+                - text: Shahariar, M., Joarder Barsha, L. H., Shahjahan, M., Towhid, S. T., Sheikh, M. K., Hasan, M. M., Rahaman, M. H., Sazid, M. S., &
+                - strong [ref=f1e631]: Hossain, M. J.
+              - generic [ref=f1e632]:
+                - emphasis [ref=f1e633]: International Conference of Public Health, IEDCR
+                - text: · Dhaka, Bangladesh · 2024
+            - generic [ref=f1e634]:
+              - generic [ref=f1e635]: Poster
+              - generic [ref=f1e637]: "Influence of Meteorological Factors on Dengue Incidence: A 23-Year Retrospective Analysis in Bangladesh"
+              - generic [ref=f1e638]:
+                - text: Afrin, N., Howlader, G., Bhattacharjee, A., Akter, N., Mesu, M. H., Mazumder, E., &
+                - strong [ref=f1e639]: Hossain, M. J.
+              - generic [ref=f1e640]:
+                - emphasis [ref=f1e641]: International Conference of Public Health, IEDCR
+                - text: · Dhaka, Bangladesh · 2024
+            - generic [ref=f1e642]:
+              - generic [ref=f1e643]: Poster
+              - generic [ref=f1e645]: Particulate Matter PM2.5 Pollution and Air Quality Index (AQI) Trends Evaluation with Meteorological Factors in Dhaka City
+              - generic [ref=f1e646]:
+                - text: Akter, N., Mim, N. A., &
+                - strong [ref=f1e647]: Hossain, M. J.
+              - generic [ref=f1e648]:
+                - emphasis [ref=f1e649]: International Conference of Public Health, IEDCR
+                - text: · Dhaka, Bangladesh · 2024
+        - complementary [ref=f1e650]:
+          - heading [level=5] [ref=f1e651]:
+            - text: Summary
+            - link "Anchor" [ref=f1e652] [cursor=pointer]:
+              - /url: "#summary"
+              - text: 
+          - generic [ref=f1e653]:
+            - generic [ref=f1e654]:
+              - generic [ref=f1e655]: Journal Articles
+              - generic [ref=f1e656]: "16"
+            - generic [ref=f1e657]:
+              - generic [ref=f1e658]: GBD Contributions
+              - generic [ref=f1e659]: "7"
+            - generic [ref=f1e660]:
+              - generic [ref=f1e661]: Under Review
+              - generic [ref=f1e662]: "5"
+            - generic [ref=f1e663]:
+              - generic [ref=f1e664]: Working Papers
+              - generic [ref=f1e665]: "5"
+            - generic [ref=f1e666]:
+              - generic [ref=f1e667]: Conf. Presentations
+              - generic [ref=f1e668]: "7"
+            - generic [ref=f1e669]:
+              - generic [ref=f1e670]: Posters
+              - generic [ref=f1e671]: "8"
+      - navigation "Page Navigation" [ref=f1e672]:
+        - list [ref=f1e673]
+  - contentinfo [ref=f1e674]:
+    - generic [ref=f1e675]:
+      - paragraph [ref=f1e677]: © 2026 Jubayer Hossain
+      - list [ref=f1e679]:
+        - listitem [ref=f1e680]:
+          - link [ref=f1e681] [cursor=pointer]:
+            - /url: http://localhost:8899/research/
+            - paragraph [ref=f1e682]: Research
+        - listitem [ref=f1e683]:
+          - link [ref=f1e684] [cursor=pointer]:
+            - /url: http://localhost:8899/publications/
+            - paragraph [ref=f1e685]: Publications
+        - listitem [ref=f1e686]:
+          - link [ref=f1e687] [cursor=pointer]:
+            - /url: http://localhost:8899/teaching/
+            - paragraph [ref=f1e688]: Teaching
+        - listitem [ref=f1e689]:
+          - link [ref=f1e690] [cursor=pointer]:
+            - /url: http://localhost:8899/about/
+            - paragraph [ref=f1e691]: About
+      - list [ref=f1e693]:
+        - listitem [ref=f1e694]:
+          - link [ref=f1e695] [cursor=pointer]:
+            - /url: https://twitter.com/hossain_lab
+            - img "Twitter" [ref=f1e696]: 
+        - listitem [ref=f1e697]:
+          - link [ref=f1e698] [cursor=pointer]:
+            - /url: https://www.youtube.com/@hossainlab
+            - img "YouTube" [ref=f1e699]: 
+        - listitem [ref=f1e700]:
+          - link [ref=f1e701] [cursor=pointer]:
+            - /url: http://localhost:8899/blog/index.xml
+            - img "Blog RSS feed" [ref=f1e702]: 

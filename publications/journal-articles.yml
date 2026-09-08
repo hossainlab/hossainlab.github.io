@@ -11,9 +11,28 @@
 #   issue          – Issue number
 #   article        – Article number or page range
 #   doi            – Full DOI / URL
+#   page           – Local paper page, site-root relative (optional)
+#   pmc            – PMC full-text URL (optional)
+#   pubmed         – PubMed record URL (optional)
+#   pdf            – Direct PDF URL (optional)
+#   code           – Analysis code repository (optional)
+#   preprint       – bioRxiv / medRxiv / arXiv URL (optional)
+#   data           – Data or accession URL (optional)
+#   slides         – Talk slides URL (optional)
 #   type           – Must be: peer-reviewed
 #   categories     – List of research topics for filtering
 # ──────────────────────────────────────────────────────────────────────────────
+
+- title: "Integrative bioinformatics analysis reveals COL13A1 and COL23A1 as potential diagnostic and prognostic biomarkers in thyroid cancer"
+  authors: "Islam, M. W., Rahman, M. M., Naznin, H., Hossain, M. S., Akter, T., Shatabde, Z. A., & **Hossain, M. J.**"
+  corresponding: true
+  year: 2026
+  journal: "Health Science Reports"
+  doi: "https://doi.org/10.1002/hsr2.72617"
+  page: "publications/papers/integrative-bioinformatics-analysis-reveals-col13a1-and-col23a1-as/"
+  type: peer-reviewed
+  categories:
+    - Bioinformatics
 
 - title: "A meta-analysis of public RNA-Seq data identifies conserved stress responses in rainbow trout"
   authors: "Bari, S. M., Fuad, M., **Hossain, M. J.**, Ahammad, I., Begum, M., & Helal, M. M. U."
@@ -23,6 +42,9 @@
   volume: "26"
   article: "999"
   doi: "https://doi.org/10.1186/s12864-025-12127-2"
+  page: "publications/papers/a-meta-analysis-of-public-rna-seq-data/"
+  pmc: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12590911/"
+  pubmed: "https://pubmed.ncbi.nlm.nih.gov/41193950/"
   type: peer-reviewed
   categories:
     - Bioinformatics
@@ -35,6 +57,9 @@
   volume: "15"
   article: "34490"
   doi: "https://doi.org/10.1038/s41598-025-13315-6"
+  page: "publications/papers/comprehensive-bioinformatics-analysis-reveals-prognostic-significance-and-immunological/"
+  pmc: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12494856/"
+  pubmed: "https://pubmed.ncbi.nlm.nih.gov/41044153/"
   type: peer-reviewed
   categories:
     - Bioinformatics
@@ -47,6 +72,9 @@
   volume: "8"
   article: "e71101"
   doi: "https://doi.org/10.1002/hsr2.71101"
+  page: "publications/papers/preventing-the-silent-threat-a-perspective-on-preparing/"
+  pmc: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12390622/"
+  pubmed: "https://pubmed.ncbi.nlm.nih.gov/40881022/"
   type: peer-reviewed
   categories:
     - Infectious Disease
@@ -59,6 +87,9 @@
   volume: "15"
   article: "14405"
   doi: "https://doi.org/10.1038/s41598-025-88339-z"
+  page: "publications/papers/pan-cancer-analysis-reveals-immunological-and-prognostic-significance/"
+  pmc: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12022336/"
+  pubmed: "https://pubmed.ncbi.nlm.nih.gov/40274875/"
   type: peer-reviewed
   categories:
     - Bioinformatics
@@ -70,6 +101,9 @@
   journal: "Stroke and Vascular Neurology"
   article: "svn-2025-004178"
   doi: "https://doi.org/10.1136/svn-2025-004178"
+  page: "publications/papers/young-stroke-in-bangladesh-addressing-rare-cases-with/"
+  pmc: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12772966/"
+  pubmed: "https://pubmed.ncbi.nlm.nih.gov/40194845/"
   type: peer-reviewed
   categories:
     - Global Health
@@ -82,6 +116,9 @@
   volume: "8"
   article: "e70356"
   doi: "https://doi.org/10.1002/hsr2.70356"
+  page: "publications/papers/clinical-and-hematological-manifestation-of-dengue-patients-in/"
+  pmc: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11739715/"
+  pubmed: "https://pubmed.ncbi.nlm.nih.gov/39831075/"
   type: peer-reviewed
   categories:
     - Global Health
@@ -95,6 +132,9 @@
   volume: "19"
   article: "326"
   doi: "https://doi.org/10.1186/s13023-024-03344-1"
+  page: "publications/papers/urgent-call-for-compulsory-premarital-screening-for-thalassemia/"
+  pmc: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11380423/"
+  pubmed: "https://pubmed.ncbi.nlm.nih.gov/39242521/"
   type: peer-reviewed
   categories:
     - Global Health
@@ -108,6 +148,9 @@
   issue: "8"
   article: "1589"
   doi: "https://doi.org/10.3390/microorganisms12081589"
+  page: "publications/papers/resistance-and-co-resistance-of-metallo-beta-lactamase/"
+  pmc: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11356267/"
+  pubmed: "https://pubmed.ncbi.nlm.nih.gov/39203431/"
   type: peer-reviewed
   categories:
     - Infectious Disease
@@ -120,6 +163,9 @@
   volume: "7"
   article: "e2039"
   doi: "https://doi.org/10.1002/hsr2.2039"
+  page: "publications/papers/prevalence-antibiotic-resistance-pattern-for-bacteriuria-from-patients/"
+  pmc: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11009458/"
+  pubmed: "https://pubmed.ncbi.nlm.nih.gov/38617042/"
   type: peer-reviewed
   categories:
     - Infectious Disease
@@ -132,6 +178,9 @@
   volume: "7"
   article: "e70259"
   doi: "https://doi.org/10.1002/hsr2.70259"
+  page: "publications/papers/food-consumption-patterns-and-sedentary-behaviors-among-university/"
+  pmc: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11652388/"
+  pubmed: "https://pubmed.ncbi.nlm.nih.gov/39698520/"
   type: peer-reviewed
   categories:
     - Public Health
@@ -144,6 +193,9 @@
   volume: "14"
   article: "2318"
   doi: "https://doi.org/10.1038/s41598-024-52313-y"
+  page: "publications/papers/factors-contributing-to-antibiotic-misuse-among-parents-in/"
+  pmc: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10822859/"
+  pubmed: "https://pubmed.ncbi.nlm.nih.gov/38282010/"
   type: peer-reviewed
   categories:
     - Public Health
@@ -156,6 +208,9 @@
   volume: "7"
   article: "e2022"
   doi: "https://doi.org/10.1002/hsr2.2022"
+  page: "publications/papers/community-engagement-and-social-participation-in-dengue-prevention/"
+  pmc: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10987789/"
+  pubmed: "https://pubmed.ncbi.nlm.nih.gov/38572117/"
   type: peer-reviewed
   categories:
     - Global Health
@@ -169,6 +224,9 @@
   volume: "13"
   issue: "1"
   doi: "https://doi.org/10.1038/s41598-023-34205-9"
+  page: "publications/papers/health-related-quality-of-life-among-thalassemia-patients/"
+  pmc: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10182078/"
+  pubmed: "https://pubmed.ncbi.nlm.nih.gov/37173392/"
   type: peer-reviewed
   categories:
     - Global Health
@@ -181,6 +239,7 @@
   volume: "5"
   issue: "2"
   doi: "https://doi.org/10.25163/microbbioacts.526325"
+  page: "publications/papers/knowledge-and-attitudes-towards-thalassemia-among-public-university/"
   type: peer-reviewed
   categories:
     - Global Health
@@ -191,6 +250,7 @@
   year: 2022
   journal: "European Journal of Biology and Biotechnology"
   doi: "https://doi.org/10.24018/ejbio.2022.3.3.341"
+  page: "publications/papers/perception-of-students-on-antibiotic-resistance-and-prevention/"
   type: peer-reviewed
   categories:
     - Public Health

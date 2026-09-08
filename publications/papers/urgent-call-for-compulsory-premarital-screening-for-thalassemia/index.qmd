@@ -1,0 +1,46 @@
+---
+title: "Urgent call for compulsory premarital screening for thalassemia prevention in Bangladesh"
+subtitle: "Orphanet Journal of Rare Diseases, 2024"
+description-meta: "Thalassemia poses a major public health concern in Bangladesh with a high prevalence of carriers. However, there is a substantial knowledge gap regarding its..."
+page-layout: article
+toc: false
+include-in-header: head.html
+---
+
+```{=html}
+<div class="paper-meta">
+<p class="paper-authors">Hossain, M. J., Das, M., Munni, U. R.</p>
+<p class="paper-venue"><em>Orphanet Journal of Rare Diseases</em>, <strong>19</strong>, 326 (2024)</p>
+<p class="paper-links">
+<a class="paper-link" href="https://doi.org/10.1186/s13023-024-03344-1" target="_blank" rel="noopener">DOI</a>
+<a class="paper-link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11380423/" target="_blank" rel="noopener">Full text (PMC)</a>
+<a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/39242521/" target="_blank" rel="noopener">PubMed</a>
+</p>
+</div>
+```
+
+## Abstract
+
+Thalassemia poses a major public health concern in Bangladesh with a high prevalence of carriers. However, there is a substantial knowledge gap regarding its epidemiology, clinical aspects, and treatment outcomes. Despite its high prevalence, there is a notable lack of awareness regarding thalassemia in the Bangladeshi population. The absence of precisely validated data impedes a comprehensive understanding of this disease.Premarital thalassemia screening is reportedly a successful strategy for countries such as Saudi Arabia and Iran and has also been proposed for Bangladesh. Mandatory screening coupled with genetic counseling is promising for reducing the prevalence of thalassemia by identifying carriers and providing relevant health education. However, sociocultural barriers, challenges, financial constraints, and health risks associated with prenatal diagnosis and abortion could hinder the success of such programs.Positive outcomes from other countries underscore the effectiveness of such programs in reducing thalassemia incidence. The early identification of carriers and genetic counseling can significantly reduce the burden of thalassemia. Additionally, the strain on the healthcare system would be eased, and the quality of life of thalassemia patients would be improved.In conclusion, based on evidence mandatory premarital screening with genetic counseling could be an effective measure to reduce the prevalence of thalassemia in Bangladesh. Leveraging positive attitudes, adopting successful international models, and addressing existing challenges are crucial for the successful implementation of programs that contribute to the overall health and well-being of the country's population.
+
+## Cite this
+
+Hossain, M. J., Das, M., Munni, U. R. (2024). Urgent call for compulsory premarital screening for thalassemia prevention in Bangladesh. *Orphanet Journal of Rare Diseases*, **19**, 326.
+
+```{=html}
+<details class="bibtex-block">
+<summary>BibTeX</summary>
+<pre><code id="bib-urgent-call-for-compulsory-premarital-screening-for-thalassemia">@article{hossain2024urgent,
+  title   = {Urgent call for compulsory premarital screening for thalassemia prevention in Bangladesh},
+  author  = {Hossain, M. J. and Das, M. and Munni, U. R.},
+  journal = {Orphanet Journal of Rare Diseases},
+  year    = {2024},
+  volume  = {19},
+  pages   = {326},
+  doi     = {10.1186/s13023-024-03344-1},
+}</code></pre>
+<button class="bibtex-copy" type="button" data-target="bib-urgent-call-for-compulsory-premarital-screening-for-thalassemia">Copy BibTeX</button>
+</details>
+```
+
+[&larr; All publications](../../index.qmd)

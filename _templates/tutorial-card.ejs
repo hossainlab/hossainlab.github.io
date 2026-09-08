@@ -38,9 +38,9 @@ const totalLessons = items.length;
 <div class="tut-lesson<%= isAvailable ? '' : ' coming-soon' %>">
 <div class="tut-lesson-icon<%= isAvailable ? ' available' : '' %>">
 <% if (isAvailable) { %>
-<i class="fa-solid fa-circle-play"></i>
+<i class="bi bi-play-circle"></i>
 <% } else { %>
-<i class="fa-solid fa-lock"></i>
+<i class="bi bi-lock"></i>
 <% } %>
 </div>
 <div class="tut-lesson-num">#<%= lesson.number || '' %></div>
@@ -55,7 +55,7 @@ const totalLessons = items.length;
 <% } %>
 <div class="tut-lesson-meta">
 <% if (lesson.duration) { %>
-<span class="tut-duration"><i class="fa-regular fa-clock"></i> <%= lesson.duration %></span>
+<span class="tut-duration"><i class="bi bi-clock"></i> <%= lesson.duration %></span>
 <% } %>
 <% if (lesson.tags && lesson.tags.length > 0) { %>
 <div class="tut-tags">

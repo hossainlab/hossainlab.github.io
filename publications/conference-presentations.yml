@@ -1,3 +1,14 @@
+- title: "Single-Cell Transcriptomic and Network Pharmacology Insights into the Therapeutic Potential of Withania somnifera-Derived Phytochemicals Against Cisplatin-Resistant Ovarian Cancer"
+  authors: "Abhi, S. N. I., Shahriar, M., Barsha, L. H. J., Meme, M. A., & **Hossain, M. J.**"
+  presenter: "Musab Shahriar"
+  corresponding: false
+  year: 2026
+  venue: "IEEE BECITHCON 2026"
+  type: conference
+  subtype: oral
+  categories:
+    - Bioinformatics
+
 - title: "Fezf2-Mediated Cortical Development: Multi-Omics Single-Cell Analysis"
   authors: "**Hossain, M. J.** & Islam, M. M."
   corresponding: true

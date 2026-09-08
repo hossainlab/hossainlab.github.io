@@ -15,7 +15,7 @@
   links:
     - label: "Read Tutorial"
       url: "01-introduction.html"
-      icon: "fa-solid fa-book-open"
+      icon: "bi bi-book"
 
 - title: "Setting Up Your Python Environment"
   module: "Module 1: Getting Started"
@@ -33,10 +33,10 @@
   links:
     - label: "Read Tutorial"
       url: "02-setup.html"
-      icon: "fa-solid fa-book-open"
+      icon: "bi bi-book"
     - label: "environment.yml"
       url: "environment.yml"
-      icon: "fa-solid fa-download"
+      icon: "bi bi-download"
 
 - title: "The AnnData Object Explained"
   module: "Module 1: Getting Started"
@@ -53,7 +53,7 @@
   links:
     - label: "Read Tutorial"
       url: "03-anndata.html"
-      icon: "fa-solid fa-book-open"
+      icon: "bi bi-book"
 
 # ── Module 2: Preprocessing & Quality Control ─────────────────────────────────
 

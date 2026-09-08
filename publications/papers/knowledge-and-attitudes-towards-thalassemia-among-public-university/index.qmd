@@ -1,0 +1,43 @@
+---
+title: "Knowledge and Attitudes towards Thalassemia among Public University Students"
+subtitle: "Microbial Bioactives, 2022"
+description-meta: "Knowledge and Attitudes towards Thalassemia among Public University..."
+page-layout: article
+toc: false
+include-in-header: head.html
+---
+
+```{=html}
+<div class="paper-meta">
+<p class="paper-authors">Hossain, M. J., Towhid, S. T., Sultana, S., Mukta, S. A., Gulshan, R., Miah, M. S.</p>
+<p class="paper-venue"><em>Microbial Bioactives</em>, <strong>5</strong> (2022)</p>
+<p class="paper-links">
+<a class="paper-link" href="https://doi.org/10.25163/microbbioacts.526325" target="_blank" rel="noopener">DOI</a>
+</p>
+</div>
+```
+
+## Abstract
+
+*Not indexed in PubMed, so no abstract is reproduced here. Read the article at the [publisher](https://doi.org/10.25163/microbbioacts.526325).*
+
+## Cite this
+
+Hossain, M. J., Towhid, S. T., Sultana, S., Mukta, S. A., Gulshan, R., Miah, M. S. (2022). Knowledge and Attitudes towards Thalassemia among Public University Students. *Microbial Bioactives*, **5**.
+
+```{=html}
+<details class="bibtex-block">
+<summary>BibTeX</summary>
+<pre><code id="bib-knowledge-and-attitudes-towards-thalassemia-among-public-university">@article{hossain2022knowledge,
+  title   = {Knowledge and Attitudes towards Thalassemia among Public University Students},
+  author  = {Hossain, M. J. and Towhid, S. T. and Sultana, S. and Mukta, S. A. and Gulshan, R. and Miah, M. S.},
+  journal = {Microbial Bioactives},
+  year    = {2022},
+  volume  = {5},
+  doi     = {10.25163/microbbioacts.526325},
+}</code></pre>
+<button class="bibtex-copy" type="button" data-target="bib-knowledge-and-attitudes-towards-thalassemia-among-public-university">Copy BibTeX</button>
+</details>
+```
+
+[&larr; All publications](../../index.qmd)

@@ -5,6 +5,11 @@ project:
     - "**/*.qmd"
     - "!academic-cv/"
     - "!cv/"
+  resources:
+    - robots.txt
+    # cv/ is excluded from render; the navbar links straight at this PDF, so it
+    # must be copied as a resource or a full render drops it from docs/.
+    - cv/CV-HossainMJ.pdf
 
 # Meta
 description-meta: "Academic Website for Jubayer Hossain"
@@ -12,82 +17,89 @@ author-meta: "Jubayer Hossain"
 
 website:
   page-navigation: true
-  title: "Jubayer Hossain"
+  title: "Jubayer Hossain - Multiomics and Machine Learning"
   image: "files/profiles/jubayer.jpg"
   favicon: "/files/profiles/icon.png"
   description: "Academic Website for Jubayer Hossain"
 
   page-footer:
-    center: "&copy; Copyright 2026, Jubayer Hossain"
-    
+    left: "&copy; 2026 Jubayer Hossain"
+    # The navbar is anchors-only, so every full page is reachable from here.
+    center:
+      - text: "Research"
+        href: research/index.qmd
+      - text: "Projects"
+        href: projects/index.qmd
+      - text: "Publications"
+        href: publications/index.qmd
+      - text: "Teaching"
+        href: teaching/index.qmd
+      - text: "Tutorials"
+        href: tutorials/index.qmd
+      - text: "Blog"
+        href: blog/index.qmd
+      - text: "About"
+        href: about/index.qmd
+    right:
+      - icon: twitter
+        aria-label: Twitter
+        href: https://twitter.com/hossain_lab
+        target: _blank
+      - icon: youtube
+        aria-label: YouTube
+        href: https://www.youtube.com/@hossainlab
+        target: _blank
+      - icon: rss
+        aria-label: Blog RSS feed
+        href: blog/index.xml
+
+  site-url: "https://mdjubayerhossain.com/"
+  repo-url: https://github.com/hossainlab/hossainlab.github.io
+  reader-mode: false
+  draft-mode: unlinked
+
+  open-graph: true
+  twitter-card:
+    creator: "@hossain_lab"
+    card-style: summary_large_image
+
+  search: false
+
+  google-analytics:
+    tracking-id: "G-4KLN6W9N3N"
+    anonymize-ip: true
+
   navbar:
+    title: false
     pinned: true
+    # Section anchors on the homepage, root-absolute so they also work from
+    # an inner page. The full pages live in the footer.
     left:
       - href: index.qmd
         text: Home
-      - href: research/index.qmd
-        text: Research
-      - href: teaching/index.qmd
-        text: Teaching
-      - href: publications/index.qmd
+      - href: "/#featured"
+        text: Work
+      - href: "/#talks"
+        text: Talks
+      - href: "/#tutorials"
+        text: Tutorials
+      - href: "/#publications"
         text: Publications
-      - text: CV
-        href: cv/CV-HossainMJ.pdf
-
-    right:
-      - icon: envelope
-        aria-label: email
-        href: "mailto:hossainmj@gmail.com"
-      - text: "{{< ai orcid >}}"
-        aria-label: orcid
-        href: https://orcid.org/0000-0001-9323-4997
-        target: _blank
-      - text: "{{< ai google-scholar >}}"
-        aria-label: google-scholar
-        href: https://scholar.google.com/citations?user=9_K4ekoAAAAJ&hl=en&authuser=5
-        target: _blank
-      - text: "{{< ai researchgate >}}"
-        aria-label: researchgate
-        href: https://scholar.google.com/citations?user=9_K4ekoAAAAJ&hl=en&authuser=5
-        target: _blank
-      - icon: linkedin
-        aria-label: linkedin
-        href: https://www.linkedin.com/in/hossainmj
-        target: _blank
-      - icon: twitter
-        aria-label: twitter
-        href: https://twitter.com/hossain_lab
-        target: _blank
-      - icon: github
-        aria-label: github
-        href: https://github.com/hossainlab
-        target: _blank
-      - icon: youtube
-        aria-label: youtube
-        href: https://www.youtube.com/@hossainlab
-        target: _blank
-
-
-# some important configs 
-site-url: "https://hossainlab.github.io/"
-search: false
-reader-mode: true
-draft-mode: unlinked
-  
-# google analytics 
-google-analytics:
-    tracking-id: "G-4KLN6W9N3N"
-    anonymize-ip: true
-    
-    
+      - href: "/#news"
+        text: News
 format:
   html:
-    theme: cosmo
+    theme:
+      light: [cosmo, _theme/custom-light.scss]
+      dark: [cosmo, _theme/custom-dark.scss]
     css: styles.css
     toc: true
     toc-expand: 1
     mermaid:
       theme: neutral
+    include-in-header:
+      - _includes/schema-person.html
+      - _includes/bibtex-copy.html
 
 
 

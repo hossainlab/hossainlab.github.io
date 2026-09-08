@@ -1,0 +1,52 @@
+---
+title: "Community engagement and social participation in dengue prevention"
+subtitle: "Health Science Reports, 2024"
+description-meta: "Dengue is a major public health concern in Bangladesh. This study aimed to assess the perceptions and practices of community members in Dhaka regarding community..."
+page-layout: article
+toc: false
+include-in-header: head.html
+---
+
+```{=html}
+<div class="paper-meta">
+<p class="paper-authors">Hossain, M. J., Das, M., Islam, M. W., Shahjahan, M., Ferdous, J.</p>
+<p class="paper-venue"><em>Health Science Reports</em>, <strong>7</strong>, e2022 (2024)</p>
+<p class="paper-links">
+<a class="paper-link" href="https://doi.org/10.1002/hsr2.2022" target="_blank" rel="noopener">DOI</a>
+<a class="paper-link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10987789/" target="_blank" rel="noopener">Full text (PMC)</a>
+<a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/38572117/" target="_blank" rel="noopener">PubMed</a>
+</p>
+</div>
+```
+
+## Abstract
+
+Dengue is a major public health concern in Bangladesh. This study aimed to assess the perceptions and practices of community members in Dhaka regarding community engagement and social participation for dengue prevention.
+
+A cross-sectional online survey was conducted in Dhaka City from May 2022 to December 2022. The respondents were randomly selected. The association between community participation and prevention practices was tested using thetest.
+
+The findings of this study indicate that the majority of participants (92%) believed that community effort would be relied upon in the event of a dengue outbreak. Environmental cleaning campaigns were the preferred approach, and religious leaders viewed them positively. This study also revealed significant variations in knowledge levels, with those involved in community efforts and mass gatherings demonstrating greater knowledge. This study sheds light on the demographic factors that influence dengue knowledge and provides valuable insights into the development of targeted public health interventions.
+
+The study revealed negative perceptions and limited participation in dengue prevention among participants, with the majority demonstrating a poor understanding of preventive measures. While some showed positive attitudes towards community engagement, significant disparities existed in participation, highlighting the need for targeted educational campaigns and enhanced community mobilization efforts. Moreover, the importance of multisectoral collaboration is emphasized, underscoring the need for coordinated efforts among health departments, NGOs, religious institutions, and community leaders to effectively combat dengue transmission. Recommendations include ongoing educational initiatives, targeted interventions to promote community involvement, and fostering collaboration across sectors to strengthen dengue prevention efforts and to safeguard public health.
+
+## Cite this
+
+Hossain, M. J., Das, M., Islam, M. W., Shahjahan, M., Ferdous, J. (2024). Community engagement and social participation in dengue prevention. *Health Science Reports*, **7**, e2022.
+
+```{=html}
+<details class="bibtex-block">
+<summary>BibTeX</summary>
+<pre><code id="bib-community-engagement-and-social-participation-in-dengue-prevention">@article{hossain2024community,
+  title   = {Community engagement and social participation in dengue prevention},
+  author  = {Hossain, M. J. and Das, M. and Islam, M. W. and Shahjahan, M. and Ferdous, J.},
+  journal = {Health Science Reports},
+  year    = {2024},
+  volume  = {7},
+  pages   = {e2022},
+  doi     = {10.1002/hsr2.2022},
+}</code></pre>
+<button class="bibtex-copy" type="button" data-target="bib-community-engagement-and-social-participation-in-dengue-prevention">Copy BibTeX</button>
+</details>
+```
+
+[&larr; All publications](../../index.qmd)

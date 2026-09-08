@@ -1,0 +1,45 @@
+<%
+/* Lodash template for News in Srijit style */
+var esc = function (s) {
+return String(s == null ? '' : s)
+.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+};
+var MON = ['Jan','Feb','Mar','Apr','May','Jun',
+'Jul','Aug','Sep','Oct','Nov','Dec'];
+var fmt = function (d) {
+if (!d) { return ''; }
+var iso = String(d).match(/^(\d{4})-(\d{2})/);
+if (iso) { return MON[parseInt(iso[2], 10) - 1] + ' ' + iso[1]; }
+var t = Date.parse(String(d));
+if (!isNaN(t)) {
+var dt = new Date(t);
+return MON[dt.getMonth()] + ' ' + dt.getFullYear();
+}
+return String(d);
+};
+var ts = function (d) {
+var t = Date.parse(String(d || ''));
+return isNaN(t) ? 0 : t;
+};
+var sorted = items.slice().sort(function (a, b) {
+return ts(b.date) - ts(a.date);
+});
+var lines = [];
+lines.push('<div class="news-list">');
+for (var i = 0; i < sorted.length; i++) {
+var it = sorted[i];
+var row = [];
+row.push('<article class="news-item">');
+row.push('<time>' + esc(fmt(it.date)) + '</time>');
+var text = esc(it.title || '');
+if (it.detail) { text += ' &mdash; ' + esc(it.detail); }
+if (it.link) {
+text += ' <a href="' + esc(it.link) + '" target="_blank" rel="noopener">' + esc(it['link-text'] || 'Read') + ' &rarr;</a>';
+}
+row.push('<p>' + text + '</p>');
+row.push('</article>');
+lines.push(row.join(''));
+}
+lines.push('</div>');
+%>
+<%= lines.join('\n') %>

@@ -1,0 +1,59 @@
+<%
+/* Lodash template for Talks & Presentations timeline in Srijit style */
+var esc = function (s) {
+return String(s == null ? '' : s)
+.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+};
+var label = function (it) {
+if (it.subtype === 'invited') { return 'Invited'; }
+if (it.subtype === 'poster') { return 'Poster'; }
+return 'Oral';
+};
+var isBioinformatics = function (i) {
+var cats = i.categories || [];
+for (var c = 0; c < cats.length; c++) {
+if (String(cats[c]).toLowerCase() === 'bioinformatics') { return true; }
+}
+return false;
+};
+/* Homepage keeps the bioinformatics talks only; publications/index.qmd still
+   lists every talk from these same YAML files. */
+var sorted = items.filter(function (i) {
+return i.title && i.title !== 'To be added' && isBioinformatics(i);
+}).sort(function (a, b) { return (b.year || 0) - (a.year || 0); });
+
+var kinds = [];
+sorted.forEach(function (i) {
+var k = label(i);
+if (kinds.indexOf(k) === -1) { kinds.push(k); }
+});
+
+var lines = [];
+lines.push('<div class="filter-bar" role="group" aria-label="Filter talks by category">');
+lines.push('<button class="filter-button is-active" data-filter="all">All (' + sorted.length + ')</button>');
+for (var c = 0; c < kinds.length; c++) {
+var n = sorted.filter(function (i) { return label(i) === kinds[c]; }).length;
+lines.push('<button class="filter-button" data-filter="' + esc(kinds[c].toLowerCase()) + '">' + esc(kinds[c]) + ' (' + n + ')</button>');
+}
+lines.push('</div>');
+
+lines.push('<div class="talk-timeline" id="talks-timeline">');
+for (var i = 0; i < sorted.length; i++) {
+var it = sorted[i];
+var k = label(it);
+var row = [];
+row.push('<div class="talk-item" data-category="' + esc(k.toLowerCase()) + '">');
+row.push('<div class="talk-date">' + esc(it.year || '') + '</div>');
+row.push('<div class="talk-content">');
+row.push('<h3>' + esc(it.title) + '</h3>');
+var meta = [];
+if (it.venue) { meta.push(esc(it.venue)); }
+if (it.location) { meta.push(esc(it.location)); }
+if (meta.length) { row.push('<p class="talk-venue">' + meta.join(' &middot; ') + '</p>'); }
+row.push('</div>');
+row.push('</div>');
+lines.push(row.join(''));
+}
+lines.push('</div>');
+%>
+<%= lines.join('\n') %>

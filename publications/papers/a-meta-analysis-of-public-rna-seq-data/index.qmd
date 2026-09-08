@@ -1,0 +1,50 @@
+---
+title: "A meta-analysis of public RNA-Seq data identifies conserved stress responses in rainbow trout"
+subtitle: "BMC Genomics, 2025"
+description-meta: "BACKGROUND: Rainbow trout (Oncorhynchus mykiss), a commercial aquaculture species, experiences physiological stress under environmental challenges. While several bulk..."
+page-layout: article
+toc: false
+include-in-header: head.html
+---
+
+```{=html}
+<div class="paper-meta">
+<p class="paper-authors">Bari, S. M., Fuad, M., Hossain, M. J., Ahammad, I., Begum, M., Helal, M. M. U.</p>
+<p class="paper-venue"><em>BMC Genomics</em>, <strong>26</strong>, 999 (2025)</p>
+<p class="paper-links">
+<a class="paper-link" href="https://doi.org/10.1186/s12864-025-12127-2" target="_blank" rel="noopener">DOI</a>
+<a class="paper-link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12590911/" target="_blank" rel="noopener">Full text (PMC)</a>
+<a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/41193950/" target="_blank" rel="noopener">PubMed</a>
+</p>
+</div>
+```
+
+## Abstract
+
+**Background.** Rainbow trout (Oncorhynchus mykiss), a commercial aquaculture species, experiences physiological stress under environmental challenges. While several bulk RNA-Seq studies have investigated heat and hypoxic stress responses in rainbow trout, a comprehensive analysis identifying common genes and pathways is still lacking. This study addresses this need by analyzing four public RNA-Seq datasets from O. mykiss to identify conserved molecular responses to these stress.
+
+**Result.** The meta-analysis identified 1,006 (555 upregulated and 451 downregulated) protein-coding differentially expressed genes (DEGs). Among them, five genes, cdkn1ba, znf395a, klf9, irs2b, and tsc22d3, were commonly regulated under both stress conditions, indicating their shared roles in cellular homeostasis. The meta-analysis revealed highly regulated heat shock protein (hsp) family genes and hypoxia-inducible factor (HIF) genes. Gene ontology (GO) enrichment analysis revealed that DEGs under heat and hypoxia stress were associated primarily with the cell cycle, DNA metabolic processes, catalytic activity, and membrane components. Pathway enrichment of these genes revealed coordinated activation of protein processing in the endoplasmic reticulum, p53-mediated cell-cycle arrest, FoxO signaling and oxidative stress responses, indicating a shared core program for proteostasis and damage control.
+
+**Conclusion.** This meta-analysis revealed conserved gene expression patterns and key regulatory pathways driving rainbow trout adaptation to heat and hypoxia, providing valuable insights for enhancing stress resistance in aquaculture.
+
+## Cite this
+
+Bari, S. M., Fuad, M., Hossain, M. J., Ahammad, I., Begum, M., Helal, M. M. U. (2025). A meta-analysis of public RNA-Seq data identifies conserved stress responses in rainbow trout. *BMC Genomics*, **26**, 999.
+
+```{=html}
+<details class="bibtex-block">
+<summary>BibTeX</summary>
+<pre><code id="bib-a-meta-analysis-of-public-rna-seq-data">@article{bari2025a,
+  title   = {A meta-analysis of public RNA-Seq data identifies conserved stress responses in rainbow trout},
+  author  = {Bari, S. M. and Fuad, M. and Hossain, M. J. and Ahammad, I. and Begum, M. and Helal, M. M. U.},
+  journal = {BMC Genomics},
+  year    = {2025},
+  volume  = {26},
+  pages   = {999},
+  doi     = {10.1186/s12864-025-12127-2},
+}</code></pre>
+<button class="bibtex-copy" type="button" data-target="bib-a-meta-analysis-of-public-rna-seq-data">Copy BibTeX</button>
+</details>
+```
+
+[&larr; All publications](../../index.qmd)

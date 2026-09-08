@@ -1,0 +1,54 @@
+---
+title: "Food consumption patterns and sedentary behaviors among university students"
+subtitle: "Health Science Reports, 2024"
+description-meta: "University is a critical period regarding unhealthy changes in eating behaviors in students. University students often face significant changes in their eating habits..."
+page-layout: article
+toc: false
+include-in-header: head.html
+---
+
+```{=html}
+<div class="paper-meta">
+<p class="paper-authors">Akter, M. M., Hossain, M. J.</p>
+<p class="paper-venue"><em>Health Science Reports</em>, <strong>7</strong>, e70259 (2024)</p>
+<p class="paper-links">
+<a class="paper-link" href="https://doi.org/10.1002/hsr2.70259" target="_blank" rel="noopener">DOI</a>
+<a class="paper-link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11652388/" target="_blank" rel="noopener">Full text (PMC)</a>
+<a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/39698520/" target="_blank" rel="noopener">PubMed</a>
+</p>
+</div>
+```
+
+## Abstract
+
+University is a critical period regarding unhealthy changes in eating behaviors in students. University students often face significant changes in their eating habits and physical activity levels, which can impact their overall health.
+
+To investigate the eating habits and sedentary behavior of university students in Dhaka.
+
+This research was based on a cross-sectional study. The snowball sampling technique was applied to survey university students in Dhaka city. Structured questionnaires were used for data collection through an online survey. Data collection was done from November 2022 to April 2023. Descriptive statistics, including frequency, percentage, mean, and standard deviation (SD), were computed for the variables of interest. Chi-squared test was performed to estimate the association between the participants' eating habits, sedentary behaviors, and BMI and eating habits. In all analyses, a-value of < 0.05 was considered statistically significant.
+
+A total of 444 students participated in this study; 44% of them consumed breakfast irregularly. Only 25% of students favored vegetables. About 55% of students preferred junk food. Furthermore, only 19% of students consumed fruits daily. This study also found that a substantial proportion of students used the internet and mobile phones for long periods and didn't practice physical activity. According to the Chi-squared test, dinner habits ( < 0.001), smoking status ( < 0.001), alcohol consumption ( = 0.014), watching television ( = 0.023), and practicing physical activity ( = 0.023) had a significant association with eating habits and sedentary behaviors amongst the participants.
+
+Overall, most participants in this study exhibited commendable dietary patterns, except for meal frequency, fruit intake, consumption of junk food, and fried food. However, their physical activity levels were notably inadequate, largely characterized by a sedentary lifestyle involving substantial internet and mobile phone usage.
+
+## Cite this
+
+Akter, M. M., Hossain, M. J. (2024). Food consumption patterns and sedentary behaviors among university students. *Health Science Reports*, **7**, e70259.
+
+```{=html}
+<details class="bibtex-block">
+<summary>BibTeX</summary>
+<pre><code id="bib-food-consumption-patterns-and-sedentary-behaviors-among-university">@article{akter2024food,
+  title   = {Food consumption patterns and sedentary behaviors among university students},
+  author  = {Akter, M. M. and Hossain, M. J.},
+  journal = {Health Science Reports},
+  year    = {2024},
+  volume  = {7},
+  pages   = {e70259},
+  doi     = {10.1002/hsr2.70259},
+}</code></pre>
+<button class="bibtex-copy" type="button" data-target="bib-food-consumption-patterns-and-sedentary-behaviors-among-university">Copy BibTeX</button>
+</details>
+```
+
+[&larr; All publications](../../index.qmd)

@@ -1,0 +1,46 @@
+---
+title: "Factors contributing to antibiotic misuse among parents in Dhaka City"
+subtitle: "Scientific Reports, 2024"
+description-meta: "Antimicrobial resistance (AMR) is a pressing global health concern, especially in resource-constrained countries, such as Bangladesh. This study aimed to identify the..."
+page-layout: article
+toc: false
+include-in-header: head.html
+---
+
+```{=html}
+<div class="paper-meta">
+<p class="paper-authors">Islam, M. W., Shahjahan, M., Azad, A. K., Hossain, M. J.</p>
+<p class="paper-venue"><em>Scientific Reports</em>, <strong>14</strong>, 2318 (2024)</p>
+<p class="paper-links">
+<a class="paper-link" href="https://doi.org/10.1038/s41598-024-52313-y" target="_blank" rel="noopener">DOI</a>
+<a class="paper-link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10822859/" target="_blank" rel="noopener">Full text (PMC)</a>
+<a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/38282010/" target="_blank" rel="noopener">PubMed</a>
+</p>
+</div>
+```
+
+## Abstract
+
+Antimicrobial resistance (AMR) is a pressing global health concern, especially in resource-constrained countries, such as Bangladesh. This study aimed to identify the factors contributing to antibiotic misuse by assessing knowledge, attitude, and practice (KAP). A cross-sectional study was conducted from August 20 to August 30, 2022, among 704 parents of school-going children in Dhaka South City. Descriptive statistics were used to analyze the KAP, and multivariate models, including linear and ordinal logistic regression, were used to explore the associations between these factors. The findings revealed that approximately 22% of the participants were male and 78% were female. Most parents (58%) had completed higher secondary education. Approximately 45% of the respondents demonstrated moderate knowledge, 53% had uncertain attitudes, and 64% exhibited antibiotic misuse. Factors such as parental age, education level, employment status, income, child's age, and family type significantly influenced KAP. These findings emphasize the importance of targeted education and awareness initiatives to enhance knowledge and responsible antibiotic use among parents, contributing to global efforts against antibiotic resistance. The government should enforce laws and regulations regarding the misuse of antibiotics.
+
+## Cite this
+
+Islam, M. W., Shahjahan, M., Azad, A. K., Hossain, M. J. (2024). Factors contributing to antibiotic misuse among parents in Dhaka City. *Scientific Reports*, **14**, 2318.
+
+```{=html}
+<details class="bibtex-block">
+<summary>BibTeX</summary>
+<pre><code id="bib-factors-contributing-to-antibiotic-misuse-among-parents-in">@article{islam2024factors,
+  title   = {Factors contributing to antibiotic misuse among parents in Dhaka City},
+  author  = {Islam, M. W. and Shahjahan, M. and Azad, A. K. and Hossain, M. J.},
+  journal = {Scientific Reports},
+  year    = {2024},
+  volume  = {14},
+  pages   = {2318},
+  doi     = {10.1038/s41598-024-52313-y},
+}</code></pre>
+<button class="bibtex-copy" type="button" data-target="bib-factors-contributing-to-antibiotic-misuse-among-parents-in">Copy BibTeX</button>
+</details>
+```
+
+[&larr; All publications](../../index.qmd)

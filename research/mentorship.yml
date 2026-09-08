@@ -8,98 +8,111 @@
 #   track      – mentorship track or programme
 #   period     – cohort / duration
 #   status     – "Current" or "Alumni" (drives the badge colour)
+#   category   – "research" or "training". The research page renders ONLY
+#                category: research. Training-programme mentees are kept
+#                here as a record but are filtered out of that listing.
 
 # ── GSA Cohort 01 ──────────────────────────────────────────
 - title: "Md. Shakil Ahamed"
   initial: "S"
-  photo: "/files/mentoring/GSA01/Shakil_Ahamed.png"
+  photo: "/files/mentoring/GSA01/thumbs/Shakil_Ahamed.jpg"
   university: "Mawlana Bhashani Science and Technology University"
   department: ""
   track: "GSA Bioinformatics Internship"
   period: "Cohort 01 · 6 months"
   status: "Alumni"
+  category: "research"
 
 - title: "Rahnuma Tabassum"
   initial: "R"
-  photo: "/files/mentoring/GSA01/Rahnuma_Tabassum.jpg"
+  photo: "/files/mentoring/GSA01/thumbs/Rahnuma_Tabassum.jpg"
   university: "Jagannath University"
   department: "Biochemistry & Molecular Biology"
   track: "GSA Bioinformatics Internship"
   period: "Cohort 01 · 6 months"
   status: "Alumni"
+  category: "research"
 
 - title: "Fayez Ahmad"
   initial: "F"
-  photo: "/files/mentoring/GSA01/Fayez_Ahmad.png"
+  photo: "/files/mentoring/GSA01/thumbs/Fayez_Ahmad.jpg"
   university: "Notre Dame College, Dhaka"
   department: ""
   track: "GSA Bioinformatics Internship"
   period: "Cohort 01 · 6 months"
   status: "Alumni"
+  category: "research"
 
 - title: "Sabbir Khan"
   initial: "S"
-  photo: "/files/mentoring/GSA01/Sabbir_Khan.png"
+  photo: "/files/mentoring/GSA01/thumbs/Sabbir_Khan.jpg"
   university: "Gazipur Agricultural University"
   department: ""
   track: "GSA Bioinformatics Internship"
   period: "Cohort 01 · 6 months"
   status: "Alumni"
+  category: "research"
 
 - title: "Lamisa Manha Aditee"
   initial: "L"
-  photo: "/files/mentoring/GSA01/lamisamanhaaditee.jpg"
+  photo: "/files/mentoring/GSA01/thumbs/lamisamanhaaditee.jpg"
   university: "BRAC University"
   department: ""
   track: "GSA Bioinformatics Internship"
   period: "Cohort 01 · 6 months"
   status: "Alumni"
+  category: "research"
 
 # ── GSA Cohort 02 ──────────────────────────────────────────
 - title: "Dhruba Chowdhury"
   initial: "D"
-  photo: "/files/mentoring/GSA02/Dhruba_Chowdhury.png"
+  photo: "/files/mentoring/GSA02/thumbs/Dhruba_Chowdhury.jpg"
   university: "University of Dhaka"
   department: ""
   track: "GSA Bioinformatics Internship"
   period: "Cohort 02 · 6 months"
   status: "Current"
+  category: "research"
 
 - title: "Md. Aftabur Rahman"
   initial: "A"
-  photo: "/files/mentoring/GSA02/Md_Aftabur_Rahman.jpg"
+  photo: "/files/mentoring/GSA02/thumbs/Md_Aftabur_Rahman.jpg"
   university: "Jahangirnagar University"
   department: ""
   track: "GSA Bioinformatics Internship"
   period: "Cohort 02 · 6 months"
   status: "Current"
+  category: "research"
 
 - title: "Tahia Aswad Arony"
   initial: "T"
-  photo: "/files/mentoring/GSA02/Arony_Aswad.jpeg"
+  photo: "/files/mentoring/GSA02/thumbs/Arony_Aswad.jpg"
   university: "North South University"
   department: ""
   track: "GSA Bioinformatics Internship"
   period: "Cohort 02 · 6 months"
   status: "Current"
+  category: "research"
 
 - title: "Mahmuda Hoque"
   initial: "M"
-  photo: "/files/mentoring/GSA02/Mahmuda_Hoque.jpg"
+  photo: "/files/mentoring/GSA02/thumbs/Mahmuda_Hoque.jpg"
   university: "BRAC University"
   department: ""
   track: "GSA Bioinformatics Internship"
   period: "Cohort 02 · 6 months"
   status: "Current"
+  category: "research"
 
 - title: "Tasfia Nawar"
   initial: "T"
-  photo: "/files/mentoring/GSA02/Tasfia_Nawar.jpg"
+  photo: "/files/mentoring/GSA02/thumbs/Tasfia_Nawar.jpg"
   university: "North South University"
   department: ""
   track: "GSA Bioinformatics Internship"
   period: "Cohort 02 · 6 months"
   status: "Current"
+  category: "research"
 
 # ── BMP Cohort 01 ──────────────────────────────────────────
 # Source: files/mentoring/BMP01/BMP01_Mentees.csv
@@ -111,6 +124,7 @@
   track: "Bioinformatics Mentorship Program"
   period: "Cohort 01 · 12 weeks"
   status: "Current"
+  category: "training"
 
 - title: "Ridika Haque Shafin"
   initial: "R"
@@ -120,6 +134,7 @@
   track: "Bioinformatics Mentorship Program"
   period: "Cohort 01 · 12 weeks"
   status: "Current"
+  category: "training"
 
 - title: "Jonaitul Islam"
   initial: "J"
@@ -129,6 +144,7 @@
   track: "Bioinformatics Mentorship Program"
   period: "Cohort 01 · 12 weeks"
   status: "Current"
+  category: "training"
 
 - title: "Mahim Hassan Chowdhury"
   initial: "M"
@@ -138,6 +154,7 @@
   track: "Bioinformatics Mentorship Program"
   period: "Cohort 01 · 12 weeks"
   status: "Current"
+  category: "training"
 
 - title: "Md. Liakot Ali"
   initial: "L"
@@ -147,6 +164,7 @@
   track: "Bioinformatics Mentorship Program"
   period: "Cohort 01 · 12 weeks"
   status: "Current"
+  category: "training"
 
 - title: "Supriya Dewanjee"
   initial: "S"
@@ -156,6 +174,7 @@
   track: "Bioinformatics Mentorship Program"
   period: "Cohort 01 · 12 weeks"
   status: "Current"
+  category: "training"
 
 - title: "Md. Mobasser Hosain"
   initial: "M"
@@ -165,3 +184,4 @@
   track: "Bioinformatics Mentorship Program"
   period: "Cohort 01 · 12 weeks"
   status: "Current"
+  category: "training"

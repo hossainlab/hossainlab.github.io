@@ -1,0 +1,20 @@
+# Homepage "Featured Research" cards. Pick 4; order is respected.
+- title: "Integrative bioinformatics analysis reveals COL13A1 and COL23A1 as diagnostic and prognostic biomarkers in thyroid cancer"
+  venue: "Health Science Reports"
+  year: 2026
+  doi: "https://doi.org/10.1002/hsr2.70295"
+
+- title: "A meta-analysis of public RNA-Seq data identifies conserved stress responses in rainbow trout"
+  venue: "BMC Genomics"
+  year: 2025
+  doi: "https://doi.org/10.1186/s12864-025-12127-2"
+
+- title: "Comprehensive bioinformatics analysis reveals prognostic significance and immunological roles of WNT gene family in breast cancer"
+  venue: "Scientific Reports"
+  year: 2025
+  doi: "https://doi.org/10.1038/s41598-025-13315-6"
+
+- title: "Pan-cancer analysis reveals immunological and prognostic significance of CCT5 in human tumors"
+  venue: "Scientific Reports"
+  year: 2025
+  doi: "https://doi.org/10.1038/s41598-025-88339-z"

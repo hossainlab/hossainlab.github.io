@@ -1,0 +1,101 @@
+<%
+/* Lodash template for Recent Publications on homepage in Srijit style */
+var esc = function(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+};
+
+var jItems = items.filter(function(i){ return i.title && i.title !== 'To be added'; }).sort(function(a,b){ return (b.year || 0) - (a.year || 0); });
+
+var cats = [];
+jItems.forEach(function(i){
+  (i.categories || []).forEach(function(c){
+    if (cats.indexOf(c) === -1) cats.push(c);
+  });
+});
+
+var lines = [];
+lines.push('<div class="filter-bar" role="group" aria-label="Filter publications by topic">');
+lines.push('<button class="filter-button is-active" type="button" data-pub-filter="all">All (' + jItems.length + ')</button>');
+for (var c = 0; c < cats.length; c++) {
+  var n = jItems.filter(function(i){ return (i.categories || []).indexOf(cats[c]) !== -1; }).length;
+  lines.push('<button class="filter-button" type="button" data-pub-filter="' + esc(cats[c].toLowerCase().replace(/[^a-z0-9]+/g, '-')) + '">' + esc(cats[c]) + ' (' + n + ')</button>');
+}
+lines.push('</div>');
+
+var renderBlock = function(it) {
+  var href = esc(it.page || it.doi || '#');
+  var tags = (it.categories || []).map(function(c){ return c.toLowerCase().replace(/[^a-z0-9]+/g, '-'); }).join(' ');
+  var mono = esc((it.journal || it.venue || '?').replace(/[^A-Za-z ]/g, '').split(/\s+/).map(function(w){ return w.charAt(0); }).join('').slice(0, 3).toUpperCase());
+  var authHtml = esc(it.authors || '').replace(/\*\*(.*?)\*\*/g, '<span class="author-me"><strong>$1</strong></span>');
+  
+  var blk = [];
+  blk.push('<article class="publication-block" data-pub-item data-pub-tags="' + esc(tags) + '">');
+  blk.push('<div class="publication-image-col">');
+  if (it.image) {
+    blk.push('<div class="publication-image"><img src="' + esc(it.image) + '" alt="' + esc(it.title) + '" loading="lazy" /></div>');
+  } else {
+    blk.push('<div class="publication-image feat-fig-mono" aria-hidden="true"><span>' + mono + '</span></div>');
+  }
+  blk.push('</div>');
+  
+  blk.push('<div class="publication-content-col">');
+  blk.push('<h3 class="publication-title"><a href="' + href + '">' + esc(it.title || '') + '</a></h3>');
+  blk.push('<div class="publication-authors">' + authHtml + '</div>');
+  
+  var venueText = esc(it.journal || it.venue || '');
+  if (it.year) venueText += ', ' + esc(it.year);
+  
+  blk.push('<div class="publication-venue">');
+  blk.push('<span>' + venueText + '</span>');
+  blk.push('</div>');
+  
+  /* Action row. Every entry is optional in the YAML, so a paper only shows the
+     buttons it actually has: nothing here is fabricated when a field is absent. */
+  var actions = [
+    { url: it.page,     label: 'Paper',     icon: 'bi-file-earmark-text',   local: true },
+    { url: it.code,     label: 'Code',      icon: 'bi-github' },
+    { url: it.preprint, label: 'Preprint',  icon: 'bi-file-earmark-richtext' },
+    { url: it.pdf,      label: 'PDF',       icon: 'bi-file-earmark-pdf' },
+    { url: it.pmc,      label: 'Full text', icon: 'bi-journal-text' },
+    { url: it.data,     label: 'Data',      icon: 'bi-database' },
+    { url: it.slides,   label: 'Slides',    icon: 'bi-easel' },
+    { url: it.doi,      label: 'DOI',       icon: 'bi-box-arrow-up-right' }
+  ].filter(function (a) { return a.url; });
+
+  if (actions.length) {
+    blk.push('<div class="publication-links buttons">');
+    for (var ai = 0; ai < actions.length; ai++) {
+      var a = actions[ai];
+      var target = a.local ? '' : ' target="_blank" rel="noopener"';
+      blk.push('<a class="button is-small is-light" href="' + esc(a.url) + '"' + target +
+        '><span class="icon"><i class="bi ' + a.icon + '"></i></span><span>' + a.label + '</span></a>');
+    }
+    blk.push('</div>');
+  }
+  
+  blk.push('</div>');
+  blk.push('</article>');
+  return blk.join('');
+};
+
+var primaryCount = 6;
+var topItems = jItems.slice(0, primaryCount);
+var earlierItems = jItems.slice(primaryCount);
+
+lines.push('<div class="publications-list" id="home-publications-list">');
+for (var i = 0; i < topItems.length; i++) {
+  lines.push(renderBlock(topItems[i]));
+}
+
+if (earlierItems.length > 0) {
+  lines.push('<details class="earlier-publications">');
+  lines.push('<summary>Earlier Publications (' + earlierItems.length + ' more)</summary>');
+  for (var j = 0; j < earlierItems.length; j++) {
+    lines.push(renderBlock(earlierItems[j]));
+  }
+  lines.push('</details>');
+}
+lines.push('</div>');
+%>
+<%= lines.join('\n') %>

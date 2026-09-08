@@ -11,7 +11,7 @@
 #   url         – profile link (Google Scholar)
 
 - name: "Dr. Syeda Tasneem Towhid"
-  photo: "/files/collaborators/tasneem.jpg"
+  photo: "/files/collaborators/thumbs/tasneem.jpg"
   initial: "T"
   title: "Associate Professor"
   affiliation: "Department of Microbiology, Jagannath University"
@@ -19,7 +19,7 @@
   url: "https://scholar.google.com/citations?user=zy-f6I8AAAAJ&hl=en"
 
 - name: "Dr. Zeba Islam Seraj"
-  photo: "/files/collaborators/Zeba-I-Seraj-Ph-D.jpg"
+  photo: "/files/collaborators/thumbs/Zeba-I-Seraj-Ph-D.jpg"
   initial: "Z"
   title: "Director"
   affiliation: "cBLAST, University of Dhaka"
@@ -42,10 +42,10 @@
   country: "USA"
   url: "https://scholar.google.com/citations?user=-NKhd0oAAAAJ&hl=en"
 
-- name: "Yeon Ju Kim"
+- name: "Dr. Yeon Ju Kim"
   photo: "/files/collaborators/DrKim.jpg"
   initial: "K"
   title: "Associate Professor"
-  affiliation: "Department of Convergent Biotechnology & Advanced Materials Science, Kyung Hee University, South Korea"
-  country: "USA"
+  affiliation: "Department of Convergent Biotechnology & Advanced Materials Science, Kyung Hee University"
+  country: "South Korea"
   url: "https://scholar.google.com/citations?user=JjTQEaoAAAAJ&hl=ko"

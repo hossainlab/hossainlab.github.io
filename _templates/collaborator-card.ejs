@@ -1,24 +1,47 @@
-<div class="ro-collab-grid">
-<% for (const item of items) { %>
-<div class="ro-collab-card">
-<div class="ro-collab-top">
-<% if (item.photo) { %>
-<img class="ro-collab-photo" src="<%= item.photo %>" alt="<%= item.name %>">
-<% } else { %>
-<span class="ro-collab-avatar"><%= item.initial %></span>
-<% } %>
-<div class="ro-collab-id">
-<strong class="ro-collab-name"><%= item.name %></strong>
-<span class="ro-collab-title"><%= item.title %></span>
-<span class="ro-collab-affil"><%= item.affiliation %><% if (item.country) { %>, <%= item.country %><% } %></span>
-</div>
-</div>
-<% if (item.role || item.focus) { %>
-<div class="ro-collab-meta"><%= [item.role, item.focus].filter(Boolean).join(' · ') %></div>
-<% } %>
-<% if (item.url) { %>
-<a class="ro-collab-link" href="<%= item.url %>" target="_blank" rel="noopener">Google Scholar →</a>
-<% } %>
-</div>
-<% } %>
-</div>
+<%
+/* Collaborator portrait cards.
+
+   `country` is dropped when the affiliation string already names it,
+   so entries carrying the country inline don't render it twice.
+
+   IMPORTANT: markup is assembled in JS and emitted on one line at
+   column 0 — interleaving template tags with indented HTML makes pandoc
+   insert paragraph breaks inside a card.
+
+   Quarto renders these with lodash templates, not EJS: the raw-output
+   delimiter is <%= and <%- is the HTML-escaping one. Never write a
+   closing template delimiter inside a comment — it ends the block. */
+
+const esc = function (v) {
+return String(v == null ? '' : v)
+.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+};
+const countryOf = function (it) {
+const c = String(it.country || '').trim();
+if (!c) return '';
+return String(it.affiliation || '').toLowerCase().includes(c.toLowerCase()) ? '' : c;
+};
+
+const personCard = function (item) {
+const avatar = item.photo
+? '<img class="ro-person-photo" src="' + esc(item.photo) + '" alt="' + esc(item.name) + '" loading="lazy">'
+: '<span class="ro-person-avatar">' + esc(item.initial) + '</span>';
+let html = '<span class="ro-person-photo-wrap">' + avatar + '</span>'
++ '<span class="ro-person-name">' + esc(item.name) + '</span>';
+if (item.title) html += '<span class="ro-person-title">' + esc(item.title) + '</span>';
+if (item.affiliation) html += '<span class="ro-person-affil">' + esc(item.affiliation) + '</span>';
+const focus = [item.role, item.focus].filter(Boolean).join(' · ');
+if (focus) html += '<span class="ro-person-focus">' + esc(focus) + '</span>';
+let foot = '';
+const country = countryOf(item);
+if (country) foot += '<span class="ro-person-country">' + esc(country) + '</span>';
+if (item.url) {
+foot += '<a class="ro-person-link" href="' + esc(item.url) + '" target="_blank" rel="noopener">Scholar &rarr;</a>';
+}
+if (foot) html += '<span class="ro-person-foot">' + foot + '</span>';
+return '<div class="ro-person-card">' + html + '</div>';
+};
+
+const cards = items.map(personCard).join('');
+%>
+<%= '<div class="ro-person-grid">' + cards + '</div>' %>

@@ -1,0 +1,52 @@
+---
+title: "Prevalence, antibiotic resistance pattern for bacteriuria from patients with UTIs"
+subtitle: "Health Science Reports, 2024"
+description-meta: "Antibiotic resistance presents a significant global public health challenge, particularly for urinary tract infections (UTIs), and is notably severe in developing..."
+page-layout: article
+toc: false
+include-in-header: head.html
+---
+
+```{=html}
+<div class="paper-meta">
+<p class="paper-authors">Hossain, M. J., Azad, A. K., Shahid, M. S. B., Shahjahan, M., Ferdous, J.</p>
+<p class="paper-venue"><em>Health Science Reports</em>, <strong>7</strong>, e2039 (2024)</p>
+<p class="paper-links">
+<a class="paper-link" href="https://doi.org/10.1002/hsr2.2039" target="_blank" rel="noopener">DOI</a>
+<a class="paper-link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11009458/" target="_blank" rel="noopener">Full text (PMC)</a>
+<a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/38617042/" target="_blank" rel="noopener">PubMed</a>
+</p>
+</div>
+```
+
+## Abstract
+
+Antibiotic resistance presents a significant global public health challenge, particularly for urinary tract infections (UTIs), and is notably severe in developing countries. Surveillance of the antimicrobial susceptibility patterns of UTI-causing bacteria is crucial for effective treatment selection. This study aimed to analyze these patterns in bacteria isolated from the urine samples of patients at Mughda Medical College Hospital, Dhaka, Bangladesh.
+
+A retrospective study (January 2019 to December 2020) at Mugdha Medical College and Hospital, Dhaka, examined clinical and laboratory data from patients with positive urine cultures (≥10CFU/mL). The study classified patients into four age groups: children (1-<18 years), young adults (18-<33 years), middle-aged adults (33-50 years), and old adults (>50 years). The standard Kirby-Bauer method was used to assess antibiotic sensitivity to 28 common antibiotics.
+
+Among 243 positive urine cultures in both community- and hospital-acquired UTIs,was the most common uropathogen (65.84%), followed byspp. (12.34%),spp. (8.23%), and other types of bacteria.
+
+Old adults are particularly vulnerable to UTIs, withbeing the predominant causative agent in the study region. The observed antimicrobial resistance patterns underscore the necessity of judicious antibiotic selection to effectively treat UTIs across different age groups.
+
+## Cite this
+
+Hossain, M. J., Azad, A. K., Shahid, M. S. B., Shahjahan, M., Ferdous, J. (2024). Prevalence, antibiotic resistance pattern for bacteriuria from patients with UTIs. *Health Science Reports*, **7**, e2039.
+
+```{=html}
+<details class="bibtex-block">
+<summary>BibTeX</summary>
+<pre><code id="bib-prevalence-antibiotic-resistance-pattern-for-bacteriuria-from-patients">@article{hossain2024prevalence,
+  title   = {Prevalence, antibiotic resistance pattern for bacteriuria from patients with UTIs},
+  author  = {Hossain, M. J. and Azad, A. K. and Shahid, M. S. B. and Shahjahan, M. and Ferdous, J.},
+  journal = {Health Science Reports},
+  year    = {2024},
+  volume  = {7},
+  pages   = {e2039},
+  doi     = {10.1002/hsr2.2039},
+}</code></pre>
+<button class="bibtex-copy" type="button" data-target="bib-prevalence-antibiotic-resistance-pattern-for-bacteriuria-from-patients">Copy BibTeX</button>
+</details>
+```
+
+[&larr; All publications](../../index.qmd)

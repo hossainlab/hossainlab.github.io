@@ -39,7 +39,18 @@
       "PowerShell(Stop-Process *)",
       "Bash(Select-Object -Last 2)",
       "Bash(Start-Process -FilePath \"python\" -ArgumentList \"-m\",\"http.server\",\"8899\",\"--directory\",\"E:\\\\hossainlab.github.io\\\\docs\" -WindowStyle Hidden -PassThru)",
-      "Bash(Select-Object Id)"
+      "Bash(Select-Object Id)",
+      "Bash(nohup python -m http.server 8899)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8899/research/index.html)",
+      "Bash(taskkill //FI \"WINDOWTITLE eq *http.server*\" //F)",
+      "Bash(netstat -ano)",
+      "Bash(taskkill //PID 928 //F)",
+      "Bash(taskkill //PID 23752 //F)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8899/index.html)",
+      "mcp__playwright__browser_click",
+      "mcp__playwright__browser_tabs",
+      "WebFetch(domain:github.com)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8899/publications/index.html)"
     ]
   }
 }

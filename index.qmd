@@ -1,196 +1,295 @@
 ---
-title: "Jubayer Hossain"
-subtitle: "Multiomics Scientist"
-description-meta: "Quarto Academic Website for Jubayer"
+# Must match website.title in _quarto.yml: Quarto only skips the
+# "{title} – {site}" suffix when the two are identical. The title block
+# itself is hidden on this page by CSS; the visible H1 is in the hero.
+title: "Jubayer Hossain - Multiomics and Machine Learning"
+description-meta: "Multiomics scientist integrating bulk, single-cell and spatial transcriptomics to decode cancer biology from public omics data."
 image: files/profiles/jubayer.jpg
 page-layout: full
 toc: false
-about:
-  id: hero-heading
-  template: trestles
-  image-shape: round
-  links:
-    - icon: envelope
-      href: mailto:contact.jubayerhossain@gmail.com
-    - icon: linkedin
-      href: https://linkedin.com/hossainmj
-      target: _blank
-    - text: "{{< ai orcid >}}"
-      href: https://orcid.org/0000-0001-9323-4997
-      target: _blank
-    - text: "{{< ai google-scholar >}}"
-      href: https://scholar.google.com/citations?user=9_K4ekoAAAAJ&hl=en&authuser=5
-      target: _blank
+title-block-banner: false
+anchor-sections: false
+listing:
+  - id: featured-list
+    contents: featured.yml
+    template: _templates/featured-card.ejs
+  - id: talks-list
+    contents:
+      - publications/conference-presentations.yml
+      - publications/invited-speaker.yml
+      - publications/posters.yml
+    template: _templates/talk-item.ejs
+  - id: publications-list
+    contents: publications/journal-articles.yml
+    template: _templates/home-publication.ejs
+  - id: news-list
+    contents: news.yml
+    template: _templates/news-item.ejs
 ---
 
-::: {#hero-heading}
-
-Multiomics scientist decoding cancer biology by integrating bulk, single-cell, and spatial transcriptomics with multi-omics data.
-
-I build reproducible computational workflows on public omics data — meta-analysing bulk RNA-seq cohorts, constructing harmonised single-cell atlases, and applying machine learning to high-dimensional data for biomarker discovery.
-
-Alongside research, I founded [DeepBio Limited](https://deepbioltd.com), a Dhaka-based AI and bioinformatics startup, and [CHIRAL Bangladesh](https://chiralbd.org), a non-profit research institute that has trained 3,000+ early-career researchers across Bangladesh. I teach bioinformatics through [DeepBio Academy](https://deepbioacademy.com) and mentor students moving from raw sequencing data to published analysis.
+```{=html}
+<style>#title-block-header { display: none; }</style>
+```
 
 ```{=html}
-<div class="expertise-grid">
+<section class="profile-hero hero page-full">
+<div class="hero-body container is-max-widescreen">
+<div class="hero-layout">
+<div class="hero-copy">
+<p class="eyebrow">Multiomics &middot; Cancer Genomics &middot; Machine Learning</p>
+<h1 class="title hero-title">Jubayer Hossain</h1>
+<p class="hero-subtitle">Multiomics scientist decoding cancer biology from public transcriptomic data.</p>
+<div class="hero-description">
+<p>I build reproducible computational workflows on public omics data &mdash; meta-analysing bulk RNA-Seq cohorts, constructing harmonised single-cell atlases, and applying machine learning to high-dimensional data for biomarker discovery.</p>
+<p>I founded <a href="https://deepbioltd.com" target="_blank" rel="noopener">DeepBio Limited</a>, a Dhaka-based AI and bioinformatics company, and <a href="https://chiralbd.org" target="_blank" rel="noopener">CHIRAL Bangladesh</a>, a non-profit research institute that has trained 3,000+ early-career researchers. I teach through <a href="https://deepbioacademy.com" target="_blank" rel="noopener">DeepBio Academy</a> and mentor students from raw sequencing data to published analysis.</p>
+</div>
+<div class="research-chips" aria-label="Research focus areas">
+<span>Single-Cell</span>
+<span>Spatial Transcriptomics</span>
+<span>Cancer Genomics</span>
+<span>Machine Learning</span>
+</div>
+<div class="live-snapshot" aria-label="Live research snapshot">
+<span class="live-stat"><strong>16</strong> Publications</span>
+<span class="live-stat"><strong>19</strong> Talks</span>
+<span class="live-stat"><strong>3,000+</strong> Researchers trained</span>
+</div>
+<div class="buttons hero-actions">
+<a class="button is-primary" href="#publications"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Publications</span></a>
+<a class="button is-light" href="#talks"><span class="icon"><i class="bi bi-mic"></i></span><span>Talks</span></a>
+<a class="button is-light" href="#tutorials"><span class="icon"><i class="bi bi-easel"></i></span><span>Tutorials</span></a>
+<a class="button is-light" href="../cv/CV-HossainMJ.pdf" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-file-earmark-pdf"></i></span><span>CV</span></a>
+<a class="button is-linkedin" href="https://www.linkedin.com/in/hossainmj" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-linkedin"></i></span><span>Follow on LinkedIn</span></a>
+</div>
+</div>
+<aside class="profile-panel" aria-label="Profile information">
+<div class="profile-card">
+<div class="portrait"><img src="files/profiles/jubayer.jpg" alt="Jubayer Hossain" /></div>
+<div class="profile-details">
+<p>Dhaka, Bangladesh</p>
+<p>Founder, DeepBio Limited &middot; CHIRAL Bangladesh</p>
+<p>contact.jubayerhossain [at] gmail [dot] com</p>
+</div>
+</div>
+<div class="profile-links">
+<a href="https://scholar.google.com/citations?user=9_K4ekoAAAAJ&amp;hl=en" target="_blank" rel="noopener"><span class="icon"><i class="ai ai-google-scholar"></i></span><span>Scholar</span></a>
+<a href="https://github.com/hossainlab" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-github"></i></span><span>GitHub</span></a>
+<a href="https://orcid.org/0000-0001-9323-4997" target="_blank" rel="noopener"><span class="icon"><i class="ai ai-orcid"></i></span><span>ORCID</span></a>
+<a href="https://www.linkedin.com/in/hossainmj" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-linkedin"></i></span><span>LinkedIn</span></a>
+</div>
+</aside>
+</div>
+</div>
+</section>
+```
 
-<a class="expertise-card" href="projects/index.html">
-<span class="expertise-fig">
-<svg viewBox="0 0 160 90" role="img" aria-label="Bulk RNA-Seq: sequencing reads stacked over an exon model with a coverage profile">
-<rect x="0" y="0" width="160" height="90" fill="none"/>
-<path d="M8 34 C 28 4, 48 4, 62 24 C 74 42, 92 12, 106 22 C 120 32, 134 26, 152 34 L152 40 L8 40 Z" fill="#dbeafe"/>
-<path d="M8 34 C 28 4, 48 4, 62 24 C 74 42, 92 12, 106 22 C 120 32, 134 26, 152 34" fill="none" stroke="#2b6cb0" stroke-width="2" stroke-linecap="round"/>
-<line x1="8" y1="52" x2="152" y2="52" stroke="#94a3b8" stroke-width="1.5"/>
-<rect x="14" y="46" width="26" height="12" rx="2" fill="#2b6cb0"/>
-<rect x="58" y="46" width="20" height="12" rx="2" fill="#2b6cb0"/>
-<rect x="96" y="46" width="30" height="12" rx="2" fill="#2b6cb0"/>
-<rect x="138" y="46" width="14" height="12" rx="2" fill="#2b6cb0"/>
-<rect x="16" y="66" width="30" height="4" rx="2" fill="#60a5fa"/>
-<rect x="52" y="66" width="30" height="4" rx="2" fill="#60a5fa"/>
-<rect x="98" y="66" width="30" height="4" rx="2" fill="#60a5fa"/>
-<rect x="30" y="74" width="30" height="4" rx="2" fill="#93c5fd"/>
-<rect x="72" y="74" width="30" height="4" rx="2" fill="#93c5fd"/>
-<rect x="114" y="74" width="30" height="4" rx="2" fill="#93c5fd"/>
-<rect x="10" y="82" width="30" height="4" rx="2" fill="#bfdbfe"/>
-<rect x="86" y="82" width="30" height="4" rx="2" fill="#bfdbfe"/>
-</svg>
-</span>
-<span class="expertise-title">Bulk RNA-Seq</span>
-<span class="expertise-desc">Differential expression, pathway &amp; signature analysis across patient cohorts.</span>
-</a>
-
-<a class="expertise-card" href="projects/index.html">
-<span class="expertise-fig">
-<svg viewBox="0 0 160 90" role="img" aria-label="Single-cell: UMAP embedding with distinct coloured cell clusters">
-<rect x="0" y="0" width="160" height="90" fill="none"/>
-<ellipse cx="40" cy="28" rx="26" ry="19" fill="#e0e7ff"/>
-<ellipse cx="112" cy="34" rx="24" ry="17" fill="#dcfce7"/>
-<ellipse cx="72" cy="68" rx="27" ry="16" fill="#fee2e2"/>
-<g fill="#4f46e5">
-<circle cx="30" cy="22" r="3"/><circle cx="42" cy="18" r="3"/><circle cx="52" cy="27" r="3"/>
-<circle cx="34" cy="34" r="3"/><circle cx="46" cy="31" r="3"/><circle cx="24" cy="30" r="3"/>
-<circle cx="40" cy="41" r="3"/><circle cx="55" cy="37" r="2.5"/>
-</g>
-<g fill="#16a34a">
-<circle cx="104" cy="27" r="3"/><circle cx="116" cy="24" r="3"/><circle cx="124" cy="34" r="3"/>
-<circle cx="108" cy="38" r="3"/><circle cx="120" cy="42" r="3"/><circle cx="98" cy="35" r="3"/>
-<circle cx="130" cy="27" r="2.5"/>
-</g>
-<g fill="#dc2626">
-<circle cx="60" cy="64" r="3"/><circle cx="72" cy="60" r="3"/><circle cx="84" cy="65" r="3"/>
-<circle cx="66" cy="73" r="3"/><circle cx="79" cy="74" r="3"/><circle cx="92" cy="70" r="2.5"/>
-<circle cx="52" cy="71" r="2.5"/>
-</g>
-<path d="M12 84 L12 60" stroke="#cbd5e1" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M12 84 L36 84" stroke="#cbd5e1" stroke-width="1.5" stroke-linecap="round"/>
-</svg>
-</span>
-<span class="expertise-title">Single-Cell</span>
-<span class="expertise-desc">Cell-state atlases, trajectory &amp; cell–cell communication from scRNA-seq.</span>
-</a>
-
-<a class="expertise-card" href="projects/index.html">
-<span class="expertise-fig">
-<svg viewBox="0 0 160 90" role="img" aria-label="Spatial transcriptomics: tissue section overlaid with a grid of expression-coloured capture spots">
-<rect x="0" y="0" width="160" height="90" fill="none"/>
-<path d="M20 62 C 10 34, 34 10, 66 12 C 104 14, 140 22, 146 46 C 151 68, 120 82, 88 80 C 54 78, 28 80, 20 62 Z" fill="#faf5ff" stroke="#a855f7" stroke-width="2"/>
-<g>
-<circle cx="44" cy="30" r="5" fill="#c4b5fd"/><circle cx="60" cy="26" r="5" fill="#a78bfa"/>
-<circle cx="76" cy="28" r="5" fill="#7c3aed"/><circle cx="92" cy="30" r="5" fill="#a78bfa"/>
-<circle cx="108" cy="34" r="5" fill="#ddd6fe"/>
-<circle cx="36" cy="46" r="5" fill="#ddd6fe"/><circle cx="52" cy="43" r="5" fill="#a78bfa"/>
-<circle cx="68" cy="44" r="5" fill="#7c3aed"/><circle cx="84" cy="45" r="5" fill="#7c3aed"/>
-<circle cx="100" cy="47" r="5" fill="#a78bfa"/><circle cx="116" cy="49" r="5" fill="#ddd6fe"/>
-<circle cx="44" cy="62" r="5" fill="#ddd6fe"/><circle cx="60" cy="61" r="5" fill="#c4b5fd"/>
-<circle cx="76" cy="62" r="5" fill="#a78bfa"/><circle cx="92" cy="63" r="5" fill="#c4b5fd"/>
-<circle cx="108" cy="64" r="5" fill="#ede9fe"/>
-</g>
-</svg>
-</span>
-<span class="expertise-title">Spatial Transcriptomics</span>
-<span class="expertise-desc">Tissue architecture, niche deconvolution &amp; spatially resolved gene programmes.</span>
-</a>
-
+```{=html}
+<section class="section" id="featured">
+<div class="container is-max-widescreen">
+<div class="section-heading">
+<p class="eyebrow">Selected work</p>
+<h2 class="title is-3">Featured Research</h2>
 </div>
 ```
 
+::: {#featured-list}
 :::
 
 ```{=html}
-<!-- Program Spotlight Notification -->
-<div id="program-toast" class="program-toast no-print">
-  <div class="program-toast-header">
-    <span class="program-toast-title">🚀 Upcoming Programs</span>
-    <button class="program-toast-close" onclick="dismissProgramToast()" aria-label="Close">&#x2715;</button>
-  </div>
-  
-  <div class="program-tabs">
-    <button class="tab-btn active" data-id="bmp" onclick="showProgram('bmp')">Research (BMP)</button>
-    <button class="tab-btn" data-id="nocode" onclick="showProgram('nocode')">AI (No-Code)</button>
-    <button class="tab-btn" data-id="drugai" onclick="showProgram('drugai')">Drug Discovery AI</button>
-  </div>
-
-  <div id="bmp-content" class="program-content active">
-    <h4>Bioinformatics Mentorship Program</h4>
-    <p>Go from raw sequencing data to a <strong>publication-ready manuscript</strong> in 12 weeks.</p>
-    <div class="program-meta">
-      <span>📅 12 Weeks</span>
-      <span>🔬 NGS & Genomics</span>
-    </div>
-    <a href="https://mdjubayerhossain.com/bmp/" target="_blank" class="program-link">Learn More & Apply &rarr;</a>
-  </div>
-
-  <div id="nocode-content" class="program-content">
-    <h4>No-Code & Agentic AI</h4>
-    <p>Automate literature reviews and Omics analysis using <strong>Agentic AI</strong>—no coding required.</p>
-    <div class="program-meta">
-      <span>📅 4 Weeks</span>
-      <span>🤖 LLMs & Agents</span>
-    </div>
-    <a href="https://mdjubayerhossain.com/NoCodeAI4LS/" target="_blank" class="program-link">Join the Revolution &rarr;</a>
-  </div>
-
-  <div id="drugai-content" class="program-content">
-    <h4>NextGen Drug Discovery with AI</h4>
-    <p>Learn how <strong>AI and machine learning</strong> accelerate target ID, molecule design, and virtual screening.</p>
-    <div class="program-meta">
-      <span>🧬 Drug Discovery</span>
-      <span>🤖 AI/ML</span>
-    </div>
-    <a href="https://deepbioacademy.github.io/" target="_blank" class="program-link">Explore Program &rarr;</a>
-  </div>
 </div>
+</section>
+```
 
+```{=html}
+<section class="section section-band" id="talks">
+<div class="container is-max-widescreen">
+<div class="section-heading">
+<p class="eyebrow">Speaking</p>
+<h2 class="title is-3">Talks &amp; Presentations</h2>
+</div>
+```
+
+::: {#talks-list}
+:::
+
+```{=html}
+</div>
+</section>
+```
+
+```{=html}
+<section class="section" id="tutorials">
+<div class="container is-max-widescreen">
+<div class="section-heading">
+<p class="eyebrow">Tools &amp; Tutorials</p>
+<h2 class="title is-3">Featured Tools &amp; Tutorials</h2>
+</div>
+<div class="tutorial-grid">
+
+<article class="resource-card">
+<span class="resource-kicker">Tutorial series</span>
+<h3><a href="tutorials/scpy/">Single-Cell Analysis with Python</a></h3>
+<p>Raw counts to biological insight with scanpy and the scverse ecosystem.</p>
+<a class="external-link" href="tutorials/scpy/">20+ lessons &middot; 6 modules &middot; Python &rarr;</a>
+</article>
+
+<article class="resource-card">
+<span class="resource-kicker">Tutorial series</span>
+<h3><a href="tutorials/nextflow/">Nextflow and nf-core</a></h3>
+<p>Scalable, reproducible pipelines with DSL2, and how to contribute to nf-core.</p>
+<a class="external-link" href="tutorials/nextflow/">15 lessons &middot; 5 modules &middot; DSL2 &rarr;</a>
+</article>
+
+<article class="resource-card">
+<span class="resource-kicker">Research code</span>
+<h3><a href="projects/">TAM-Atlas</a></h3>
+<p>Tumour-associated macrophage heterogeneity across 8 cancers, ~640,000 cells, scVI-based.</p>
+<a class="external-link" href="projects/">Python &middot; Scanpy &middot; scVI-tools &rarr;</a>
+</article>
+
+<article class="resource-card">
+<span class="resource-kicker">Research code</span>
+<h3><a href="projects/">AMR Drug Repurposing</a></h3>
+<p>Deep learning over ChEMBL bioactivity to find non-antibiotic drugs active against ESKAPE pathogens.</p>
+<a class="external-link" href="projects/">PyTorch &middot; RDKit &middot; SHAP &rarr;</a>
+</article>
+
+</div>
+</div>
+</section>
+```
+
+```{=html}
+<section class="section section-band" id="publications">
+<div class="container is-max-widescreen">
+<div class="section-heading">
+<p class="eyebrow">Publications</p>
+<h2 class="title is-3">Recent Publications</h2>
+</div>
+```
+
+::: {#publications-list}
+:::
+
+```{=html}
+</div>
+</section>
+```
+
+```{=html}
+<section class="section" id="news">
+<div class="container is-max-widescreen">
+<div class="section-heading">
+<p class="eyebrow">Updates</p>
+<h2 class="title is-3">News</h2>
+</div>
+```
+
+::: {#news-list}
+:::
+
+```{=html}
+</div>
+</section>
+```
+
+```{=html}
+<section class="section section-band" id="programmes">
+<div class="container is-max-widescreen">
+<div class="section-heading">
+<p class="eyebrow">Training &amp; mentorship</p>
+<h2 class="title is-3">Open Programmes</h2>
+</div>
+<div class="tutorial-grid" style="grid-template-columns: repeat(3, minmax(0, 1fr));">
+
+<article class="resource-card">
+<span class="resource-kicker">12 weeks &middot; NGS &amp; genomics</span>
+<h3><a href="https://deepbioacademy.com/programs/bioinformatics-mentorship" target="_blank" rel="noopener">Bioinformatics Mentorship Program</a></h3>
+<p>Raw sequencing data to a publication-ready manuscript, with one-to-one supervision.</p>
+<a class="external-link" href="https://deepbioacademy.com/programs/bioinformatics-mentorship" target="_blank" rel="noopener">Learn more &rarr;</a>
+</article>
+
+<article class="resource-card">
+<span class="resource-kicker">4 weeks &middot; LLMs &amp; agents</span>
+<h3><a href="https://deepbioacademy.com/programs/nocode-ai" target="_blank" rel="noopener">No-Code &amp; Agentic AI</a></h3>
+<p>Automating literature review and omics analysis with agentic AI, without writing code.</p>
+<a class="external-link" href="https://deepbioacademy.com/programs/nocode-ai" target="_blank" rel="noopener">Learn more &rarr;</a>
+</article>
+
+<article class="resource-card">
+<span class="resource-kicker">Drug discovery &middot; AI/ML</span>
+<h3><a href="https://deepbioacademy.com/programs/drug-discovery" target="_blank" rel="noopener">NextGen Drug Discovery with AI</a></h3>
+<p>How machine learning accelerates target identification, molecule design and virtual screening.</p>
+<a class="external-link" href="https://deepbioacademy.com/programs/drug-discovery" target="_blank" rel="noopener">Learn more &rarr;</a>
+</article>
+
+</div>
+</div>
+</section>
+```
+
+```{=html}
 <script>
-function showProgram(id) {
-  // Update buttons
-  document.querySelectorAll('.tab-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.getAttribute('data-id') === id);
+(function () {
+  // The navbar section links are resolved by Quarto to "./#talks", and Quarto's
+  // own nav script then rewrites them to absolute URLs, so on the homepage a
+  // click would reload the page instead of scrolling. Intercept at click time,
+  // which is after any of that rewriting has happened.
+  document.addEventListener('click', function (ev) {
+    var a = ev.target.closest && ev.target.closest('.navbar a[href]');
+    if (!a || !a.hash || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.button !== 0) return;
+    var here = location.pathname.replace(/index\.html$/, '');
+    var there = a.pathname.replace(/index\.html$/, '');
+    if (there !== here) return;
+    var el = document.querySelector(a.hash);
+    if (!el) return;
+    ev.preventDefault();
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    history.replaceState(null, '', a.hash);
   });
-  
-  // Update content
-  document.querySelectorAll('.program-content').forEach(content => {
-    content.classList.toggle('active', content.id === id + '-content');
+
+  // Talks category filter
+  var talkItems = document.querySelectorAll('#talks-timeline .talk-item');
+  document.querySelectorAll('#talks .filter-bar .filter-button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var filter = this.getAttribute('data-filter');
+      document.querySelectorAll('#talks .filter-bar .filter-button').forEach(function (b) {
+        b.classList.remove('is-active');
+      });
+      this.classList.add('is-active');
+      talkItems.forEach(function (item) {
+        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+          item.style.display = 'grid';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
   });
-}
 
-function dismissProgramToast() {
-  const el = document.getElementById('program-toast');
-  if (el) el.classList.remove('program-toast-show');
-  localStorage.setItem('program-toast-dismissed', Date.now());
-}
-
-window.addEventListener('load', function() {
-  // If not dismissed in the last 24 hours, show it
-  const lastDismissed = localStorage.getItem('program-toast-dismissed');
-  const shouldShow = !lastDismissed || (Date.now() - lastDismissed > 24 * 60 * 60 * 1000);
-  
-  if (shouldShow) {
-    setTimeout(function() {
-      const el = document.getElementById('program-toast');
-      if (el) el.classList.add('program-toast-show');
-    }, 2000);
-  }
-});
+  // Publications topic filter
+  var pubItems = document.querySelectorAll('#publications [data-pub-item]');
+  document.querySelectorAll('#publications .filter-bar .filter-button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var filter = this.getAttribute('data-pub-filter');
+      document.querySelectorAll('#publications .filter-bar .filter-button').forEach(function (b) {
+        b.classList.remove('is-active');
+      });
+      this.classList.add('is-active');
+      var detailsDrawer = document.querySelector('#publications .earlier-publications');
+      if (detailsDrawer && filter !== 'all') {
+        detailsDrawer.open = true;
+      }
+      pubItems.forEach(function (item) {
+        var tags = (item.getAttribute('data-pub-tags') || '').split(' ');
+        if (filter === 'all' || tags.indexOf(filter) !== -1) {
+          item.style.display = 'grid';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+})();
 </script>
 ```

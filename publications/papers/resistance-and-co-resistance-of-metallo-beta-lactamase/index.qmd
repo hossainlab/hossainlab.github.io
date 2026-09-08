@@ -1,0 +1,46 @@
+---
+title: "Resistance and co-resistance of metallo-beta-lactamase genes in diarrheal and urinary-tract pathogens"
+subtitle: "Microorganisms, 2024"
+description-meta: "Carbapenems are the antibiotics of choice for treating multidrug-resistant bacterial infections. Metallo-β-lactamases (MBLs) are carbapenemases capable of hydrolyzing..."
+page-layout: article
+toc: false
+include-in-header: head.html
+---
+
+```{=html}
+<div class="paper-meta">
+<p class="paper-authors">Shanta, A. S., Islam, N., Al Asad, M., Akter, K., Habib, M. B., Hossain, M. J., Nahar, S., Godman, B., Islam, S.</p>
+<p class="paper-venue"><em>Microorganisms</em>, <strong>12</strong>, 1589 (2024)</p>
+<p class="paper-links">
+<a class="paper-link" href="https://doi.org/10.3390/microorganisms12081589" target="_blank" rel="noopener">DOI</a>
+<a class="paper-link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11356267/" target="_blank" rel="noopener">Full text (PMC)</a>
+<a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/39203431/" target="_blank" rel="noopener">PubMed</a>
+</p>
+</div>
+```
+
+## Abstract
+
+Carbapenems are the antibiotics of choice for treating multidrug-resistant bacterial infections. Metallo-β-lactamases (MBLs) are carbapenemases capable of hydrolyzing nearly all therapeutically available beta-lactam antibiotics. Consequently, this research assessed the distribution of two MBL genes and three β-lactamases and their associated phenotypic resistance in diarrheal and urinary-tract infections (UTIs) to guide future policies. Samples were collected through a cross-sectional study, and β-lactamase genes were detected via PCR. A total of 228 diarrheal bacteria were isolated from 240 samples. The most predominant pathogens were(32%) andspp. (7%). Phenotypic resistance to amoxicillin-clavulanic acid, aztreonam, cefuroxime, cefixime, cefepime, imipenem, meropenem, gentamicin, netilmicin, and amikacin was 50.4%, 65.6%, 66.8%, 80.5%, 54.4%, 41.6%, 25.7%, 41.2%, 37.2%, and 42.9%, respectively. A total of 142 UTI pathogens were identified from 150 urine samples.spp. (39%) and(24%) were the major pathogens isolated. Phenotypic resistance to amoxicillin-clavulanic acid, aztreonam, cefuroxime, cefixime, cefepime, imipenem, meropenem, gentamicin, netilmicin, and amikacin was 93.7%, 75.0%, 91.5%, 93.7%, 88.0%, 72.5%, 13.6%, 44.4%, 71.1%, and 43%, respectively. Twenty-four diarrheal isolates carriedNDM-1 orVIM genes. The overall MBL gene prevalence was 10.5%. Thirty-six UTI pathogens carried eitherNDM-1 orVIM genes (25.4%). Seven isolates carried bothNDM-1 andVIM genes. MBL genes were strongly associated with phenotypic carbapenem and other β-lactam antibiotic resistance.OXA imparted significantly higher phenotypic resistance to β-lactam antibiotics. Active surveillance and stewardship programs are urgently needed to reduce carbapenem resistance in Bangladesh.
+
+## Cite this
+
+Shanta, A. S., Islam, N., Al Asad, M., Akter, K., Habib, M. B., Hossain, M. J., Nahar, S., Godman, B., Islam, S. (2024). Resistance and co-resistance of metallo-beta-lactamase genes in diarrheal and urinary-tract pathogens. *Microorganisms*, **12**, 1589.
+
+```{=html}
+<details class="bibtex-block">
+<summary>BibTeX</summary>
+<pre><code id="bib-resistance-and-co-resistance-of-metallo-beta-lactamase">@article{shanta2024resistance,
+  title   = {Resistance and co-resistance of metallo-beta-lactamase genes in diarrheal and urinary-tract pathogens},
+  author  = {Shanta, A. S. and Islam, N. and Al Asad, M. and Akter, K. and Habib, M. B. and Hossain, M. J. and Nahar, S. and Godman, B. and Islam, S.},
+  journal = {Microorganisms},
+  year    = {2024},
+  volume  = {12},
+  pages   = {1589},
+  doi     = {10.3390/microorganisms12081589},
+}</code></pre>
+<button class="bibtex-copy" type="button" data-target="bib-resistance-and-co-resistance-of-metallo-beta-lactamase">Copy BibTeX</button>
+</details>
+```
+
+[&larr; All publications](../../index.qmd)

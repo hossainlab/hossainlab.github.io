@@ -61,11 +61,11 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 
 \vspace{-10pt}
 
-# Academic Appointments
+# Research & Work Experience
 
 ```{r}
 #| results: asis
-get_cv_sheet('academics') %>%
+get_cv_sheet('research') %>%
   fill(start_date, end_date, role, institution, where) %>%
   mutate(
     end_date = as.character(end_date),
@@ -84,6 +84,32 @@ get_cv_sheet('academics') %>%
   ) %>%
   make_cv_entries(date, role, institution, where, details)
 ```
+
+
+# Teaching Experience
+
+```{r}
+#| results: asis
+get_cv_sheet('teaching') %>%
+  fill(start_date, end_date, role, institution, where) %>%
+  mutate(
+    end_date = as.character(end_date),
+    date = paste0(
+      format(start_date, "%b %Y"), " - ",
+      sapply(end_date, function(x) {
+        if (is.na(x) || x == "Present") return("Present")
+        x_num <- suppressWarnings(as.numeric(x))
+        if (!is.na(x_num)) {
+          d <- as.Date(as.POSIXct(x_num, origin = "1970-01-01", tz = "UTC"))
+          return(format(d, "%b %Y"))
+        }
+        tryCatch(format(as.Date(x), "%b %Y"), error = function(e) x)
+      }, USE.NAMES = FALSE)
+    )
+  ) %>%
+  make_cv_entries(date, role, institution, where, details)
+```
+
 
 # Leadership Experience
 
@@ -131,6 +157,30 @@ get_cv_sheet('community') %>%
     )
   ) %>%
   make_cv_entries(date, role, institution, where, details)
+```
+
+## Research Collaborations
+
+```{r}
+#| results: asis
+get_cv_sheet('collaborations') %>%
+  fill(start_date, end_date, name, institution, where) %>%
+  mutate(
+    end_date = as.character(end_date),
+    date = paste0(
+      format(start_date, "%b %Y"), " - ",
+      sapply(end_date, function(x) {
+        if (is.na(x) || x == "Present") return("Present")
+        x_num <- suppressWarnings(as.numeric(x))
+        if (!is.na(x_num)) {
+          d <- as.Date(as.POSIXct(x_num, origin = "1970-01-01", tz = "UTC"))
+          return(format(d, "%b %Y"))
+        }
+        tryCatch(format(as.Date(x), "%b %Y"), error = function(e) x)
+      }, USE.NAMES = FALSE)
+    )
+  ) %>%
+  make_cv_entries(date, name, institution, where, details)
 ```
 
 # Education & Training
@@ -333,7 +383,7 @@ df %>%
 ## B. Workshops
 
 ```{r}
-teaching <- get_cv_sheet('teaching') %>%
+teaching <- get_cv_sheet('workshops') %>%
     arrange(desc(date)) %>%
     mutate(
         with = ifelse(is.na(with), '', paste0(', with ', with)),

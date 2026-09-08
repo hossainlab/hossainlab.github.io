@@ -15,7 +15,7 @@
   links:
     - label: "Program Website"
       url: "https://gsabioinfointernship.github.io/"
-      icon: "fa-solid fa-arrow-up-right-from-square"
+      icon: "bi bi-box-arrow-up-right"
 
 - path:
   title: "Bioinformatics Mentorship Program (BMP)"
@@ -34,7 +34,7 @@
   links:
     - label: "Program Website"
       url: "https://mdjubayerhossain.com/bmp/"
-      icon: "fa-solid fa-arrow-up-right-from-square"
+      icon: "bi bi-box-arrow-up-right"
 
 - path:
   title: "No-Code & Agentic AI for Life Sciences"
@@ -53,7 +53,7 @@
   links:
     - label: "Program Website"
       url: "https://mdjubayerhossain.com/NoCodeAI4LS/"
-      icon: "fa-solid fa-arrow-up-right-from-square"
+      icon: "bi bi-box-arrow-up-right"
 
 - path:
   title: "Bulk RNA-Seq Analysis for Absolute Beginners"
@@ -142,7 +142,7 @@
   links:
     - label: "Course Website"
       url: "https://rforresearch.netlify.app/"
-      icon: "fa-solid fa-arrow-up-right-from-square"
+      icon: "bi bi-box-arrow-up-right"
 
 - path:
   title: "Transcriptomics Data Analysis (Bulk + Single Cell)"
@@ -224,7 +224,7 @@
   links:
     - label: "Program Website"
       url: "https://deepbioacademy.github.io/"
-      icon: "fa-solid fa-arrow-up-right-from-square"
+      icon: "bi bi-box-arrow-up-right"
 
 - path:
   title: "Data Science and Machine Learning for Biologists"

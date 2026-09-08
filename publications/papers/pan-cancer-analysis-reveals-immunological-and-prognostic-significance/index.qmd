@@ -1,0 +1,46 @@
+---
+title: "Pan-cancer analysis reveals immunological and prognostic significance of CCT5 in human tumors"
+subtitle: "Scientific Reports, 2025"
+description-meta: "The chaperonin containing TCP1 subunit 5 (CCT5) is believed to function as a tumor driver. However, a systematic pan-cancer analysis of CCT5 is still lacking. Therefore,..."
+page-layout: article
+toc: false
+include-in-header: head.html
+---
+
+```{=html}
+<div class="paper-meta">
+<p class="paper-authors">Ahmed, M. Z., Billah, M. M., Ferdous, J., Hossain, M. J.</p>
+<p class="paper-venue"><em>Scientific Reports</em>, <strong>15</strong>, 14405 (2025)</p>
+<p class="paper-links">
+<a class="paper-link" href="https://doi.org/10.1038/s41598-025-88339-z" target="_blank" rel="noopener">DOI</a>
+<a class="paper-link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12022336/" target="_blank" rel="noopener">Full text (PMC)</a>
+<a class="paper-link" href="https://pubmed.ncbi.nlm.nih.gov/40274875/" target="_blank" rel="noopener">PubMed</a>
+</p>
+</div>
+```
+
+## Abstract
+
+The chaperonin containing TCP1 subunit 5 (CCT5) is believed to function as a tumor driver. However, a systematic pan-cancer analysis of CCT5 is still lacking. Therefore, this study aimed to identify the potential role of CCT5 in different types of tumors. This study comprehensively investigated the gene expression, proteomic expression, immune infiltration, DNA methylation, genetic alterations, correlation with TMB and MSI, drug sensitivity, enrichment analysis, and prognostic significance of CCT5 in 33 different tumors based on the TIMER2.0, GEPIA2, UALCAN, SMART, cBioPortal, GSCA databases, and TCGAplot R package. The results revealed significant CCT5 overexpression in most tumors and was significantly associated with poor OS and DFS in different tumor types. Reduced promoter and N-shore methylation of CCT5, indicating its potential oncogenic and epigenetic roles. Amplification was the most common type of CCT5 alterations. Immune infiltration analysis revealed a strong correlation between CCT5 and different immune cells. CCT5 exhibited a significant correlation with TMB and MSI in KIRC and STAD. Furthermore, enrichment analysis revealed associations between CCT5 and cell cycle pathway and various cellular functions. These findings suggested that CCT5 might serve as a potential prognostic biomarker and target for immunotherapy in various cancers.
+
+## Cite this
+
+Ahmed, M. Z., Billah, M. M., Ferdous, J., Hossain, M. J. (2025). Pan-cancer analysis reveals immunological and prognostic significance of CCT5 in human tumors. *Scientific Reports*, **15**, 14405.
+
+```{=html}
+<details class="bibtex-block">
+<summary>BibTeX</summary>
+<pre><code id="bib-pan-cancer-analysis-reveals-immunological-and-prognostic-significance">@article{ahmed2025pancancer,
+  title   = {Pan-cancer analysis reveals immunological and prognostic significance of CCT5 in human tumors},
+  author  = {Ahmed, M. Z. and Billah, M. M. and Ferdous, J. and Hossain, M. J.},
+  journal = {Scientific Reports},
+  year    = {2025},
+  volume  = {15},
+  pages   = {14405},
+  doi     = {10.1038/s41598-025-88339-z},
+}</code></pre>
+<button class="bibtex-copy" type="button" data-target="bib-pan-cancer-analysis-reveals-immunological-and-prognostic-significance">Copy BibTeX</button>
+</details>
+```
+
+[&larr; All publications](../../index.qmd)

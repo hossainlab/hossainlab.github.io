@@ -1,0 +1,23 @@
+# Homepage "Updates / News" feed. Newest first.
+# date: YYYY-MM-DD  ·  kind: paper | talk | teaching | award | venture
+# link/link-text are optional.
+- date: 2026-01-15
+  kind: paper
+  title: "COL13A1 and COL23A1 identified as thyroid cancer biomarkers"
+  detail: "Published in Health Science Reports."
+  link: "publications/papers/integrative-bioinformatics-analysis-reveals-col13a1-and-col23a1-as/"
+  link-text: "Read"
+
+- date: 2025-11-01
+  kind: paper
+  title: "Rainbow trout RNA-Seq meta-analysis out in BMC Genomics"
+  detail: "Conserved stress responses across four public datasets."
+  link: "publications/papers/a-meta-analysis-of-public-rna-seq-data/"
+  link-text: "Read"
+
+- date: 2025-10-01
+  kind: paper
+  title: "WNT gene family in breast cancer published in Scientific Reports"
+  detail: "Prognostic significance and immunological roles."
+  link: "publications/papers/comprehensive-bioinformatics-analysis-reveals-prognostic-significance-and-immunological/"
+  link-text: "Read"

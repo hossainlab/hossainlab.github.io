@@ -2,22 +2,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jubayer Hossain">
 <meta name="description" content="Academic Website for Jubayer Hossain">
 
-<title>Single-Cell Analysis with Python – Jubayer Hossain</title>
+<title>Single-Cell Analysis with Python – Jubayer Hossain - Multiomics and Machine Learning</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -29,39 +32,25 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
 <link href="../..//files/profiles/icon.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-listing/list.min.js"></script>
 <script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-5db7610fca3ea74ceab0226f71e3f166.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b72d44010710761ef2be279569eaa82e.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-5db7610fca3ea74ceab0226f71e3f166.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-aa467c2150277c18ab161072f23da43c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-02e89343ec9dfba94570c887052cca89.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-aa467c2150277c18ab161072f23da43c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -105,9 +94,73 @@ ul.task-list li input[type="checkbox"] {
     }
   })
   </script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4KLN6W9N3N"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-4KLN6W9N3N', { 'anonymize_ip': true});
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Md. Jubayer Hossain",
+  "alternateName": "Jubayer Hossain",
+  "url": "https://mdjubayerhossain.com/",
+  "image": "https://mdjubayerhossain.com/files/profiles/jubayer.jpg",
+  "jobTitle": "Multiomics Scientist",
+  "description": "Multiomics scientist integrating bulk, single-cell and spatial transcriptomics to decode cancer biology from public omics data.",
+  "email": "mailto:contact.jubayerhossain@gmail.com",
+  "knowsAbout": [
+    "Bioinformatics",
+    "Bulk RNA-Seq",
+    "Single-cell RNA-Seq",
+    "Spatial transcriptomics",
+    "Cancer genomics",
+    "Machine learning for omics"
+  ],
+  "affiliation": [
+    { "@type": "Organization", "name": "DeepBio Limited", "url": "https://deepbioltd.com" },
+    { "@type": "Organization", "name": "CHIRAL Bangladesh", "url": "https://chiralbd.org" }
+  ],
+  "sameAs": [
+    "https://orcid.org/0000-0001-9323-4997",
+    "https://scholar.google.com/citations?user=9_K4ekoAAAAJ&hl=en",
+    "https://github.com/hossainlab",
+    "https://www.linkedin.com/in/hossainmj",
+    "https://twitter.com/hossain_lab",
+    "https://www.youtube.com/@hossainlab"
+  ],
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "ORCID",
+    "value": "0000-0001-9323-4997"
+  }
+}
+</script>
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('.bibtex-copy');
+  if (!btn) return;
+  var src = document.getElementById(btn.dataset.target);
+  if (!src) return;
+  navigator.clipboard.writeText(src.textContent).then(function () {
+    var prev = btn.textContent;
+    btn.textContent = 'Copied';
+    btn.classList.add('is-copied');
+    setTimeout(function () {
+      btn.textContent = prev;
+      btn.classList.remove('is-copied');
+    }, 1600);
+  });
+});
+</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -137,20 +190,185 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Single-Cell Analysis with Python – Jubayer Hossain - Multiomics and Machine Learning">
+<meta property="og:description" content="A practical, hands-on guide from raw data to biological insight using scanpy &amp; the scverse ecosystem">
+<meta property="og:image" content="https://mdjubayerhossain.com/tutorials/scpy/files/profiles/jubayer.jpg">
+<meta property="og:site_name" content="Jubayer Hossain - Multiomics and Machine Learning">
+<meta name="twitter:title" content="Single-Cell Analysis with Python – Jubayer Hossain - Multiomics and Machine Learning">
+<meta name="twitter:description" content="A practical, hands-on guide from raw data to biological insight using scanpy &amp; the scverse ecosystem">
+<meta name="twitter:image" content="https://mdjubayerhossain.com/tutorials/scpy/files/profiles/jubayer.jpg">
+<meta name="twitter:creator" content="@hossain_lab">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Jubayer Hossain</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -161,63 +379,33 @@ window.Quarto = {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../research/index.html"> 
-<span class="menu-text">Research</span></a>
+    <a class="nav-link" href="../../#featured"> 
+<span class="menu-text">Work</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../teaching/index.html"> 
-<span class="menu-text">Teaching</span></a>
+    <a class="nav-link" href="../../#talks"> 
+<span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../publications/index.html"> 
+    <a class="nav-link" href="../../#tutorials"> 
+<span class="menu-text">Tutorials</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../#publications"> 
 <span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../#news"> 
+<span class="menu-text">News</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../cv/CV-HossainMJ.pdf"> 
 <span class="menu-text">CV</span></a>
   </li>  
 </ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
-    <a class="nav-link" href="mailto:hossainmj@gmail.com"> <i class="bi bi-envelope" role="img" aria-label="email">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="https://orcid.org/0000-0001-9323-4997" target="_blank"> 
-<span class="menu-text"><i class="ai  ai-orcid" aria-label="orcid"></i></span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="https://scholar.google.com/citations?user=9_K4ekoAAAAJ&amp;hl=en&amp;authuser=5" target="_blank"> 
-<span class="menu-text"><i class="ai  ai-google-scholar" aria-label="google-scholar"></i></span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="https://scholar.google.com/citations?user=9_K4ekoAAAAJ&amp;hl=en&amp;authuser=5" target="_blank"> 
-<span class="menu-text"><i class="ai  ai-researchgate" aria-label="researchgate"></i></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/hossainmj" target="_blank"> <i class="bi bi-linkedin" role="img" aria-label="linkedin">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/hossain_lab" target="_blank"> <i class="bi bi-twitter" role="img" aria-label="twitter">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/hossainlab" target="_blank"> <i class="bi bi-github" role="img" aria-label="github">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://www.youtube.com/@hossainlab" target="_blank"> <i class="bi bi-youtube" role="img" aria-label="youtube">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-</ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -246,6 +434,7 @@ window.Quarto = {
     
 <!-- main -->
 <main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+
 
 
 
@@ -299,7 +488,7 @@ Module 1: Getting Started
 <div class="tut-lessons">
 <div class="tut-lesson">
 <div class="tut-lesson-icon available">
-<p><i class="fa-solid fa-circle-play"></i></p>
+<p><i class="bi bi-play-circle"></i></p>
 </div>
 <div class="tut-lesson-num">
 #1
@@ -312,7 +501,7 @@ Module 1: Getting Started
 The biological motivation for scRNA-seq, how droplet microfluidics works, barcodes and UMIs explained, the count matrix structure, and a tour of the scverse ecosystem.
 </p>
 <div class="tut-lesson-meta">
-<p><span class="tut-duration"><i class="fa-regular fa-clock"></i> ~25 min</span></p>
+<p><span class="tut-duration"><i class="bi bi-clock"></i> ~25 min</span></p>
 <div class="tut-tags">
 <p><span class="tut-tag">scRNA-seq</span></p>
 <p><span class="tut-tag">Overview</span></p>
@@ -321,13 +510,13 @@ The biological motivation for scRNA-seq, how droplet microfluidics works, barcod
 </div>
 </div>
 <div class="tut-links">
-<p><a href="01-introduction.html" class="tut-btn" target="_blank"><i class="fa-solid fa-book-open"></i> Read Tutorial</a></p>
+<p><a href="01-introduction.html" class="tut-btn" target="_blank"><i class="bi bi-book"></i> Read Tutorial</a></p>
 </div>
 </div>
 </div>
 <div class="tut-lesson">
 <div class="tut-lesson-icon available">
-<p><i class="fa-solid fa-circle-play"></i></p>
+<p><i class="bi bi-play-circle"></i></p>
 </div>
 <div class="tut-lesson-num">
 #2
@@ -340,7 +529,7 @@ The biological motivation for scRNA-seq, how droplet microfluidics works, barcod
 Three setup paths — local conda/mamba, Google Colab, and VS Code. Install the complete scverse stack, run the verification script, and apply the seven best practices that keep your project reproducible.
 </p>
 <div class="tut-lesson-meta">
-<p><span class="tut-duration"><i class="fa-regular fa-clock"></i> ~20 min</span></p>
+<p><span class="tut-duration"><i class="bi bi-clock"></i> ~20 min</span></p>
 <div class="tut-tags">
 <p><span class="tut-tag">Python</span></p>
 <p><span class="tut-tag">conda</span></p>
@@ -350,14 +539,14 @@ Three setup paths — local conda/mamba, Google Colab, and VS Code. Install the 
 </div>
 </div>
 <div class="tut-links">
-<p><a href="02-setup.html" class="tut-btn" target="_blank"><i class="fa-solid fa-book-open"></i> Read Tutorial</a></p>
-<p><a href="environment.yml" class="tut-btn" target="_blank"><i class="fa-solid fa-download"></i> environment.yml</a></p>
+<p><a href="02-setup.html" class="tut-btn" target="_blank"><i class="bi bi-book"></i> Read Tutorial</a></p>
+<p><a href="environment.yml" class="tut-btn" target="_blank"><i class="bi bi-download"></i> environment.yml</a></p>
 </div>
 </div>
 </div>
 <div class="tut-lesson">
 <div class="tut-lesson-icon available">
-<p><i class="fa-solid fa-circle-play"></i></p>
+<p><i class="bi bi-play-circle"></i></p>
 </div>
 <div class="tut-lesson-num">
 #3
@@ -370,7 +559,7 @@ Three setup paths — local conda/mamba, Google Colab, and VS Code. Install the 
 Build AnnData from scratch, load all 12 real PBMC samples from CSV.gz files, concatenate them into one 107k-cell object, master indexing and slicing, understand layers and embeddings, and save your first checkpoint.
 </p>
 <div class="tut-lesson-meta">
-<p><span class="tut-duration"><i class="fa-regular fa-clock"></i> ~35 min</span></p>
+<p><span class="tut-duration"><i class="bi bi-clock"></i> ~35 min</span></p>
 <div class="tut-tags">
 <p><span class="tut-tag">anndata</span></p>
 <p><span class="tut-tag">Python</span></p>
@@ -379,7 +568,7 @@ Build AnnData from scratch, load all 12 real PBMC samples from CSV.gz files, con
 </div>
 </div>
 <div class="tut-links">
-<p><a href="03-anndata.html" class="tut-btn" target="_blank"><i class="fa-solid fa-book-open"></i> Read Tutorial</a></p>
+<p><a href="03-anndata.html" class="tut-btn" target="_blank"><i class="bi bi-book"></i> Read Tutorial</a></p>
 </div>
 </div>
 </div>
@@ -413,7 +602,7 @@ Module 2: Preprocessing &amp; QC
 <div class="tut-lessons">
 <div class="tut-lesson coming-soon">
 <div class="tut-lesson-icon">
-<p><i class="fa-solid fa-lock"></i></p>
+<p><i class="bi bi-lock"></i></p>
 </div>
 <div class="tut-lesson-num">
 #4
@@ -426,7 +615,7 @@ Module 2: Preprocessing &amp; QC
 Read 10x Genomics data into AnnData, compute QC metrics (total counts, n_genes, mitochondrial fraction), and visualise distributions.
 </p>
 <div class="tut-lesson-meta">
-<p><span class="tut-duration"><i class="fa-regular fa-clock"></i> ~45 min</span></p>
+<p><span class="tut-duration"><i class="bi bi-clock"></i> ~45 min</span></p>
 <div class="tut-tags">
 <p><span class="tut-tag">scanpy</span></p>
 <p><span class="tut-tag">QC</span></p>
@@ -437,7 +626,7 @@ Read 10x Genomics data into AnnData, compute QC metrics (total counts, n_genes, 
 </div>
 <div class="tut-lesson coming-soon">
 <div class="tut-lesson-icon">
-<p><i class="fa-solid fa-lock"></i></p>
+<p><i class="bi bi-lock"></i></p>
 </div>
 <div class="tut-lesson-num">
 #5
@@ -450,7 +639,7 @@ Read 10x Genomics data into AnnData, compute QC metrics (total counts, n_genes, 
 Apply QC thresholds to remove low-quality cells, doublets, and uninformative genes. Best practices for threshold selection.
 </p>
 <div class="tut-lesson-meta">
-<p><span class="tut-duration"><i class="fa-regular fa-clock"></i> ~30 min</span></p>
+<p><span class="tut-duration"><i class="bi bi-clock"></i> ~30 min</span></p>
 <div class="tut-tags">
 <p><span class="tut-tag">scanpy</span></p>
 <p><span class="tut-tag">filtering</span></p>
@@ -461,7 +650,7 @@ Apply QC thresholds to remove low-quality cells, doublets, and uninformative gen
 </div>
 <div class="tut-lesson coming-soon">
 <div class="tut-lesson-icon">
-<p><i class="fa-solid fa-lock"></i></p>
+<p><i class="bi bi-lock"></i></p>
 </div>
 <div class="tut-lesson-num">
 #6
@@ -474,7 +663,7 @@ Apply QC thresholds to remove low-quality cells, doublets, and uninformative gen
 Library-size normalisation, log1p transformation, and highly variable gene selection to prepare data for dimensionality reduction.
 </p>
 <div class="tut-lesson-meta">
-<p><span class="tut-duration"><i class="fa-regular fa-clock"></i> ~35 min</span></p>
+<p><span class="tut-duration"><i class="bi bi-clock"></i> ~35 min</span></p>
 <div class="tut-tags">
 <p><span class="tut-tag">normalization</span></p>
 <p><span class="tut-tag">HVGs</span></p>
@@ -513,7 +702,7 @@ Module 3: Dimensionality Reduction &amp; Clustering
 <div class="tut-lessons">
 <div class="tut-lesson coming-soon">
 <div class="tut-lesson-icon">
-<p><i class="fa-solid fa-lock"></i></p>
+<p><i class="bi bi-lock"></i></p>
 </div>
 <div class="tut-lesson-num">
 #7
@@ -526,7 +715,7 @@ Module 3: Dimensionality Reduction &amp; Clustering
 Run PCA on highly variable genes, choose the number of components, and build a k-nearest-neighbor graph for downstream analyses.
 </p>
 <div class="tut-lesson-meta">
-<p><span class="tut-duration"><i class="fa-regular fa-clock"></i> ~40 min</span></p>
+<p><span class="tut-duration"><i class="bi bi-clock"></i> ~40 min</span></p>
 <div class="tut-tags">
 <p><span class="tut-tag">PCA</span></p>
 <p><span class="tut-tag">kNN</span></p>
@@ -537,7 +726,7 @@ Run PCA on highly variable genes, choose the number of components, and build a k
 </div>
 <div class="tut-lesson coming-soon">
 <div class="tut-lesson-icon">
-<p><i class="fa-solid fa-lock"></i></p>
+<p><i class="bi bi-lock"></i></p>
 </div>
 <div class="tut-lesson-num">
 #8
@@ -550,7 +739,7 @@ Run PCA on highly variable genes, choose the number of components, and build a k
 Generate UMAP and t-SNE embeddings, interpret scatter plots, and understand the strengths and limitations of each method.
 </p>
 <div class="tut-lesson-meta">
-<p><span class="tut-duration"><i class="fa-regular fa-clock"></i> ~35 min</span></p>
+<p><span class="tut-duration"><i class="bi bi-clock"></i> ~35 min</span></p>
 <div class="tut-tags">
 <p><span class="tut-tag">UMAP</span></p>
 <p><span class="tut-tag">t-SNE</span></p>
@@ -561,7 +750,7 @@ Generate UMAP and t-SNE embeddings, interpret scatter plots, and understand the 
 </div>
 <div class="tut-lesson coming-soon">
 <div class="tut-lesson-icon">
-<p><i class="fa-solid fa-lock"></i></p>
+<p><i class="bi bi-lock"></i></p>
 </div>
 <div class="tut-lesson-num">
 #9
@@ -574,7 +763,7 @@ Generate UMAP and t-SNE embeddings, interpret scatter plots, and understand the 
 Apply community-detection algorithms to identify cell clusters, tune resolution, and evaluate clustering stability.
 </p>
 <div class="tut-lesson-meta">
-<p><span class="tut-duration"><i class="fa-regular fa-clock"></i> ~40 min</span></p>
+<p><span class="tut-duration"><i class="bi bi-clock"></i> ~40 min</span></p>
 <div class="tut-tags">
 <p><span class="tut-tag">Leiden</span></p>
 <p><span class="tut-tag">Louvain</span></p>
@@ -595,6 +784,19 @@ Apply community-detection algorithms to identify cell clusters, tune resolution,
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -666,7 +868,7 @@ Apply community-detection algorithms to identify cell clusters, tune resolution,
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/mdjubayerhossain\.com\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -997,13 +1199,68 @@ Apply community-detection algorithms to identify cell clusters, tune resolution,
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-      &nbsp;
-    </div>   
+<p>© 2026 Jubayer Hossain</p>
+</div>   
     <div class="nav-footer-center">
-<p>© Copyright 2026, Jubayer Hossain</p>
-</div>
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../research/index.html">
+<p>Research</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../projects/index.html">
+<p>Projects</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../publications/index.html">
+<p>Publications</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../teaching/index.html">
+<p>Teaching</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../tutorials/index.html">
+<p>Tutorials</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../blog/index.html">
+<p>Blog</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../about/index.html">
+<p>About</p>
+</a>
+  </li>  
+</ul>
+    </div>
     <div class="nav-footer-right">
-      &nbsp;
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/hossain_lab" target="_blank">
+      <i class="bi bi-twitter" role="img" aria-label="Twitter">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/@hossainlab" target="_blank">
+      <i class="bi bi-youtube" role="img" aria-label="YouTube">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="../../blog/index.xml">
+      <i class="bi bi-rss" role="img" aria-label="Blog RSS feed">
+</i> 
+    </a>
+  </li>  
+</ul>
     </div>
   </div>
 </footer>

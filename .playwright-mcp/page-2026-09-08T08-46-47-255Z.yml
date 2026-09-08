@@ -1,0 +1,427 @@
+- generic [active] [ref=f8e1]:
+  - banner [ref=f8e2]:
+    - navigation [ref=f8e3]:
+      - generic [ref=f8e4]:
+        - list [ref=f8e6]:
+          - listitem [ref=f8e7]:
+            - link "Home" [ref=f8e8] [cursor=pointer]:
+              - /url: http://localhost:8899/
+          - listitem [ref=f8e9]:
+            - link "Work" [ref=f8e10] [cursor=pointer]:
+              - /url: http://localhost:8899/#featured
+          - listitem [ref=f8e11]:
+            - link "Talks" [ref=f8e12] [cursor=pointer]:
+              - /url: http://localhost:8899/#talks
+          - listitem [ref=f8e13]:
+            - link "Tutorials" [ref=f8e14] [cursor=pointer]:
+              - /url: http://localhost:8899/#tutorials
+          - listitem [ref=f8e15]:
+            - link "Publications" [ref=f8e16] [cursor=pointer]:
+              - /url: http://localhost:8899/#publications
+          - listitem [ref=f8e17]:
+            - link "News" [ref=f8e18] [cursor=pointer]:
+              - /url: http://localhost:8899/#news
+          - listitem [ref=f8e19]:
+            - link "About" [ref=f8e20] [cursor=pointer]:
+              - /url: http://localhost:8899/about/
+          - listitem [ref=f8e21]:
+            - link "CV" [ref=f8e22] [cursor=pointer]:
+              - /url: http://localhost:8899/cv/CV-HossainMJ.pdf
+        - link "Toggle dark mode" [ref=f8e24] [cursor=pointer]:
+          - /url: http://localhost:8899/about/
+  - banner [ref=f8e26]:
+    - generic [ref=f8e28]:
+      - heading "About" [level=1] [ref=f8e29]
+      - paragraph [ref=f8e30]: Multiomics Scientist, Educator & Entrepreneur
+  - main [ref=f8e32]:
+    - generic [ref=f8e33]:
+      - heading [level=2] [ref=f8e34]:
+        - text: Entrepreneurial Journey
+        - link "Anchor" [ref=f8e35] [cursor=pointer]:
+          - /url: "#entrepreneurial-journey"
+          - text: 
+      - paragraph [ref=f8e36]: Ventures founded and led in bioinformatics, research, and education
+    - generic [ref=f8e38]:
+      - generic [ref=f8e39]:
+        - paragraph [ref=f8e41]:
+          - generic [ref=f8e42]: Research Startup
+          - text: 📅 Jan 2025 – Present · 📍 Dhaka, Bangladesh
+        - link [ref=f8e43] [cursor=pointer]:
+          - /url: https://deepbioltd.com/
+          - heading [level=3] [ref=f8e44]:
+            - text: DeepBio Limited ↗
+            - link "Anchor" [ref=f8e45]:
+              - /url: "#deepbio-limited-↗"
+              - text: 
+        - paragraph [ref=f8e46]: Founder, CEO & Bioinformatics Scientist
+        - paragraph [ref=f8e47]: “Data-Driven Life Science”
+        - paragraph [ref=f8e48]: A Bangladesh-based research startup at the intersection of AI, bioinformatics, and public health informatics — transforming biological data into actionable solutions for global health.
+        - list [ref=f8e49]:
+          - listitem [ref=f8e50]: Lead a team of 13 researchers executing scRNA-seq and bulk RNA-seq analysis pipelines for cancer genomics
+          - listitem [ref=f8e51]: Develop scalable bioinformatics workflows for biomarker discovery in cancer and neurodegenerative diseases
+          - listitem [ref=f8e52]: Build AI-integrated computational infrastructure for multi-omics data processing
+          - listitem [ref=f8e53]: 250+ genomes analyzed · 99% model precision · 12+ specialized services
+        - generic [ref=f8e54]:
+          - paragraph [ref=f8e56]: 13+ Team
+          - paragraph [ref=f8e58]: 250+ Genomes
+          - paragraph [ref=f8e60]: 12+ Services
+      - generic [ref=f8e61]:
+        - paragraph [ref=f8e63]:
+          - generic [ref=f8e64]: EdTech Platform
+          - text: 📅 2025 – Present · 📍 Dhaka, Bangladesh
+        - link [ref=f8e65] [cursor=pointer]:
+          - /url: https://deepbioacademy.com/
+          - heading [level=3] [ref=f8e66]:
+            - text: DeepBio Academy ↗
+            - link "Anchor" [ref=f8e67]:
+              - /url: "#deepbio-academy-↗"
+              - text: 
+        - paragraph [ref=f8e68]: Founder & Lead Instructor
+        - paragraph [ref=f8e69]: “Master the Future of Bioinformatics & Computational Biology”
+        - paragraph [ref=f8e70]: Online learning platform specializing in bioinformatics and computational biology education — democratizing access to advanced computational training for researchers across South Asia.
+        - list [ref=f8e71]:
+          - listitem [ref=f8e72]: Deliver expert-led courses in bioinformatics, computational biology, and AI in life sciences
+          - listitem [ref=f8e73]: Tiered membership programs covering beginner-to-advanced progression
+          - listitem [ref=f8e74]: Hands-on projects with mentorship and GitHub-based portfolio development
+          - listitem [ref=f8e75]: Verified digital certificates · 4.9/5 rating from 500+ student reviews
+        - generic [ref=f8e76]:
+          - paragraph [ref=f8e78]: 500+ Students
+          - paragraph [ref=f8e80]: 6+ Courses
+          - paragraph [ref=f8e82]: 4.9/5 Rating
+      - generic [ref=f8e83]:
+        - paragraph [ref=f8e85]:
+          - generic [ref=f8e86]: Non-profit
+          - text: 📅 June 2020 – Present · 📍 Dhaka, Bangladesh
+        - link [ref=f8e87] [cursor=pointer]:
+          - /url: https://chiralbd.org/
+          - heading [level=3] [ref=f8e88]:
+            - text: CHIRAL Bangladesh ↗
+            - link "Anchor" [ref=f8e89]:
+              - /url: "#chiral-bangladesh-↗"
+              - text: 
+        - paragraph [ref=f8e90]: Founder & Capacity Building Director
+        - paragraph [ref=f8e91]: “Non-profit Research Institute”
+        - paragraph [ref=f8e92]: A non-profit research institute with dedicated divisions in Bioinformatics, Public Health, Geospatial Health, and AI-Healthcare — building research capacity across Bangladesh and South Asia.
+        - list [ref=f8e93]:
+          - listitem [ref=f8e94]: Published 20+ peer-reviewed articles in Q1/Q2 journals and 40+ conference papers
+          - listitem [ref=f8e95]: Supervised 15+ manuscripts through analytical development and peer-review preparation
+          - listitem [ref=f8e96]: Collaborated with Michigan State University on biomedical research capacity-building in South Asia
+          - listitem [ref=f8e97]: Trained 3,000+ early-career researchers in data science and computational biology
+        - generic [ref=f8e98]:
+          - paragraph [ref=f8e100]: 3,000+ Researchers Trained
+          - paragraph [ref=f8e102]: 20+ Publications
+          - paragraph [ref=f8e104]: 40+ Conference Papers
+    - generic [ref=f8e105]:
+      - heading [level=2] [ref=f8e106]:
+        - text: Education and Training
+        - link "Anchor" [ref=f8e107] [cursor=pointer]:
+          - /url: "#education-and-training"
+          - text: 
+      - paragraph [ref=f8e108]: Academic background and formal training
+    - generic [ref=f8e110]:
+      - generic [ref=f8e113]:
+        - generic [ref=f8e114]:
+          - generic [ref=f8e115]: MS
+          - paragraph [ref=f8e116]: 2019 – 2020
+        - heading [level=3] [ref=f8e117]:
+          - text: Master of Science in Microbiology
+          - link "Anchor" [ref=f8e118] [cursor=pointer]:
+            - /url: "#master-of-science-in-microbiology"
+            - text: 
+        - paragraph [ref=f8e119]: 🏛️ Jagannath University · 📍 Dhaka, Bangladesh
+        - paragraph [ref=f8e120]: "Relevant Coursework: Genomics, Proteomics, Bioinformatics, Research Methodology and Scientific Writing."
+      - generic [ref=f8e123]:
+        - generic [ref=f8e124]:
+          - generic [ref=f8e125]: BS
+          - paragraph [ref=f8e126]: 2016 – 2019
+        - heading [level=3] [ref=f8e127]:
+          - text: Bachelor of Science in Microbiology
+          - link "Anchor" [ref=f8e128] [cursor=pointer]:
+            - /url: "#bachelor-of-science-in-microbiology"
+            - text: 
+        - paragraph [ref=f8e129]: 🏛️ Jagannath University · 📍 Dhaka, Bangladesh
+        - paragraph [ref=f8e130]: "Relevant Coursework: Biostatistics, Public Health and Hygiene, Bioinformatics I, Bioinformatics II."
+      - generic [ref=f8e133]:
+        - generic [ref=f8e134]:
+          - generic [ref=f8e135]: Course
+          - paragraph [ref=f8e136]: January 2026
+        - heading [level=3] [ref=f8e137]:
+          - text: Interdisciplinary Computational Biology
+          - link "Anchor" [ref=f8e138] [cursor=pointer]:
+            - /url: "#interdisciplinary-computational-biology"
+            - text: 
+        - paragraph [ref=f8e139]: 🏛️ BRAC University · 📍 Dhaka, Bangladesh
+        - paragraph [ref=f8e140]: Mastered high-resolution protein structure prediction and molecular visualization using AlphaFold2/3 and ChimeraX to investigate complex protein-ligand interactions. Applied AI/ML frameworks and docking protocols to structural data from PDB and UniProt, culminating in an interdisciplinary project on predictive molecular modeling.
+      - generic [ref=f8e143]:
+        - generic [ref=f8e144]:
+          - generic [ref=f8e145]: Training
+          - paragraph [ref=f8e146]: Sep 2023
+        - heading [level=3] [ref=f8e147]:
+          - text: AI in Public Health
+          - link "Anchor" [ref=f8e148] [cursor=pointer]:
+            - /url: "#ai-in-public-health"
+            - text: 
+        - paragraph [ref=f8e149]: 🏛️ Child Health Research Foundation (CHRF) · 📍 Dhaka, Bangladesh
+        - paragraph [ref=f8e150]: Developed predictive models and data pipelines for disease surveillance, focusing on the calculation of typhoid incidence and vaccine impact in Bangladesh. Built LLM-based code generation and computer vision frameworks for medical image analysis while analyzing the ethical implications of algorithmic bias.
+    - generic [ref=f8e151]:
+      - heading [level=2] [ref=f8e152]:
+        - text: Online Certificates
+        - link "Anchor" [ref=f8e153] [cursor=pointer]:
+          - /url: "#online-certificates"
+          - text: 
+      - paragraph [ref=f8e154]: Continuing education and professional development
+    - generic [ref=f8e156]:
+      - generic [ref=f8e157]:
+        - generic [ref=f8e158]: Pluralsight
+        - generic [ref=f8e160]:
+          - heading [level=4] [ref=f8e161]:
+            - text: Harnessing the Power of Data to Improve Public Health
+            - link "Anchor" [ref=f8e162] [cursor=pointer]:
+              - /url: "#harnessing-the-power-of-data-to-improve-public-health"
+              - text: 
+          - paragraph [ref=f8e163]: Pluralsight · 📅 Jan 1, 2020
+          - generic [ref=f8e164]:
+            - paragraph [ref=f8e165]: Public Health
+            - paragraph [ref=f8e166]: Data Analysis
+            - paragraph [ref=f8e167]: Health Informatics
+        - paragraph [ref=f8e168]:
+          - link "View ↗" [ref=f8e169] [cursor=pointer]:
+            - /url: http://localhost:8899/files/certificates/Certificate_PluralSight_Harnessing_the_Power_of_Data_to_Improve_Public_Health.pdf
+      - generic [ref=f8e170]:
+        - generic [ref=f8e171]: Pluralsight
+        - generic [ref=f8e173]:
+          - heading [level=4] [ref=f8e174]:
+            - text: Interpreting Data Using Descriptive Statistics with Python
+            - link "Anchor" [ref=f8e175] [cursor=pointer]:
+              - /url: "#interpreting-data-using-descriptive-statistics-with-python"
+              - text: 
+          - paragraph [ref=f8e176]: Pluralsight · 📅 Jan 1, 2024
+          - generic [ref=f8e177]:
+            - paragraph [ref=f8e178]: Python
+            - paragraph [ref=f8e179]: Descriptive Statistics
+            - paragraph [ref=f8e180]: Data Analysis
+        - paragraph [ref=f8e181]:
+          - link "View ↗" [ref=f8e182] [cursor=pointer]:
+            - /url: http://localhost:8899/files/certificates/Certificate_PluralSight_Interpreting_Data_Using_Descriptive_Statistics_with_Python.pdf
+      - generic [ref=f8e183]:
+        - generic [ref=f8e184]: Pluralsight
+        - generic [ref=f8e186]:
+          - heading [level=4] [ref=f8e187]:
+            - text: Python for Data Analysis
+            - link "Anchor" [ref=f8e188] [cursor=pointer]:
+              - /url: "#python-for-data-analysis"
+              - text: 
+          - paragraph [ref=f8e189]: Pluralsight · 📅 Jan 1, 2024
+          - generic [ref=f8e190]:
+            - paragraph [ref=f8e191]: Python
+            - paragraph [ref=f8e192]: Data Analysis
+            - paragraph [ref=f8e193]: Pandas
+        - paragraph [ref=f8e194]:
+          - link "View ↗" [ref=f8e195] [cursor=pointer]:
+            - /url: http://localhost:8899/files/certificates/Certificate_PluralSight_Python_for_Data_Analysis.pdf
+      - generic [ref=f8e196]:
+        - generic [ref=f8e197]: Pluralsight
+        - generic [ref=f8e199]:
+          - heading [level=4] [ref=f8e200]:
+            - text: Working with Multidimensional Data Using NumPy
+            - link "Anchor" [ref=f8e201] [cursor=pointer]:
+              - /url: "#working-with-multidimensional-data-using-numpy"
+              - text: 
+          - paragraph [ref=f8e202]: Pluralsight · 📅 Jan 1, 2024
+          - generic [ref=f8e203]:
+            - paragraph [ref=f8e204]: Python
+            - paragraph [ref=f8e205]: NumPy
+            - paragraph [ref=f8e206]: Scientific Computing
+        - paragraph [ref=f8e207]:
+          - link "View ↗" [ref=f8e208] [cursor=pointer]:
+            - /url: http://localhost:8899/files/certificates/Certificate_PluralSight_Working_with_Multidimensional_Data_Using_Numpy.pdf
+      - generic [ref=f8e209]:
+        - generic [ref=f8e210]: Coursera
+        - generic [ref=f8e212]:
+          - heading [level=4] [ref=f8e213]:
+            - text: Analyze Box Office Data with Seaborn and Python
+            - link "Anchor" [ref=f8e214] [cursor=pointer]:
+              - /url: "#analyze-box-office-data-with-seaborn-and-python"
+              - text: 
+          - paragraph [ref=f8e215]: Coursera · 📅 Jan 1, 2020
+          - generic [ref=f8e216]:
+            - paragraph [ref=f8e217]: Python
+            - paragraph [ref=f8e218]: Seaborn
+            - paragraph [ref=f8e219]: Data Visualization
+      - generic [ref=f8e220]:
+        - generic [ref=f8e221]: Coursera
+        - generic [ref=f8e223]:
+          - heading [level=4] [ref=f8e224]:
+            - text: Spreadsheets for Beginners using Google Sheets
+            - link "Anchor" [ref=f8e225] [cursor=pointer]:
+              - /url: "#spreadsheets-for-beginners-using-google-sheets"
+              - text: 
+          - paragraph [ref=f8e226]: Coursera · 📅 Jan 1, 2020
+          - generic [ref=f8e227]:
+            - paragraph [ref=f8e228]: Google Sheets
+            - paragraph [ref=f8e229]: Spreadsheets
+            - paragraph [ref=f8e230]: Data Analysis
+      - generic [ref=f8e231]:
+        - generic [ref=f8e232]: Coursera
+        - generic [ref=f8e234]:
+          - heading [level=4] [ref=f8e235]:
+            - text: The Data Scientist’s Toolbox
+            - link "Anchor" [ref=f8e236] [cursor=pointer]:
+              - /url: "#the-data-scientist’s-toolbox"
+              - text: 
+          - paragraph [ref=f8e237]: Coursera / Johns Hopkins University · 📅 Jan 1, 2020
+          - generic [ref=f8e238]:
+            - paragraph [ref=f8e239]: R
+            - paragraph [ref=f8e240]: Data Science
+            - paragraph [ref=f8e241]: Version Control
+      - generic [ref=f8e242]:
+        - generic [ref=f8e243]: Coursera
+        - generic [ref=f8e245]:
+          - heading [level=4] [ref=f8e246]:
+            - text: Essential Epidemiologic Tools for Public Health
+            - link "Anchor" [ref=f8e247] [cursor=pointer]:
+              - /url: "#essential-epidemiologic-tools-for-public-health"
+              - text: 
+          - paragraph [ref=f8e248]: Coursera · 📅 Jan 1, 2020
+          - generic [ref=f8e249]:
+            - paragraph [ref=f8e250]: Epidemiology
+            - paragraph [ref=f8e251]: Public Health
+            - paragraph [ref=f8e252]: Biostatistics
+      - generic [ref=f8e253]:
+        - generic [ref=f8e254]: Coursera
+        - generic [ref=f8e256]:
+          - heading [level=4] [ref=f8e257]:
+            - text: AI and Public Health
+            - link "Anchor" [ref=f8e258] [cursor=pointer]:
+              - /url: "#ai-and-public-health"
+              - text: 
+          - paragraph [ref=f8e259]: Coursera / DeepLearning.AI · 📅 Jan 1, 2020
+          - generic [ref=f8e260]:
+            - paragraph [ref=f8e261]: Artificial Intelligence
+            - paragraph [ref=f8e262]: Public Health
+            - paragraph [ref=f8e263]: Machine Learning
+        - paragraph [ref=f8e264]:
+          - link "View ↗" [ref=f8e265] [cursor=pointer]:
+            - /url: https://coursera.org/share/e33cd4a7b43a0907a3da61df164f9264
+      - generic [ref=f8e266]:
+        - generic [ref=f8e267]: Coursera
+        - generic [ref=f8e269]:
+          - heading [level=4] [ref=f8e270]:
+            - text: Statistical Data Visualization with Seaborn
+            - link "Anchor" [ref=f8e271] [cursor=pointer]:
+              - /url: "#statistical-data-visualization-with-seaborn"
+              - text: 
+          - paragraph [ref=f8e272]: Coursera · 📅 Jan 1, 2020
+          - generic [ref=f8e273]:
+            - paragraph [ref=f8e274]: Python
+            - paragraph [ref=f8e275]: Seaborn
+            - paragraph [ref=f8e276]: Statistical Visualization
+      - generic [ref=f8e277]:
+        - generic [ref=f8e278]: CHRF
+        - generic [ref=f8e280]:
+          - heading [level=4] [ref=f8e281]:
+            - text: AI for Public Health
+            - link "Anchor" [ref=f8e282] [cursor=pointer]:
+              - /url: "#ai-for-public-health"
+              - text: 
+          - paragraph [ref=f8e283]: Child Health Research Foundation · 📅 Jan 1, 2023
+          - generic [ref=f8e284]:
+            - paragraph [ref=f8e285]: Artificial Intelligence
+            - paragraph [ref=f8e286]: Public Health
+            - paragraph [ref=f8e287]: Machine Learning
+      - generic [ref=f8e288]:
+        - generic [ref=f8e289]: Coursera
+        - generic [ref=f8e291]:
+          - heading [level=4] [ref=f8e292]:
+            - text: Programming for Everybody (Getting Started with Python)
+            - link "Anchor" [ref=f8e293] [cursor=pointer]:
+              - /url: "#programming-for-everybody-getting-started-with-python"
+              - text: 
+          - paragraph [ref=f8e294]: Coursera / University of Michigan · 📅 Jan 1, 2020
+          - generic [ref=f8e295]:
+            - paragraph [ref=f8e296]: Python
+            - paragraph [ref=f8e297]: Programming Fundamentals
+      - generic [ref=f8e298]:
+        - generic [ref=f8e299]: Coursera
+        - generic [ref=f8e301]:
+          - heading [level=4] [ref=f8e302]:
+            - text: Create Interactive Dashboards with Streamlit and Python
+            - link "Anchor" [ref=f8e303] [cursor=pointer]:
+              - /url: "#create-interactive-dashboards-with-streamlit-and-python"
+              - text: 
+          - paragraph [ref=f8e304]: Coursera
+          - generic [ref=f8e305]:
+            - paragraph [ref=f8e306]: Python
+            - paragraph [ref=f8e307]: Streamlit
+            - paragraph [ref=f8e308]: Data Visualization
+      - generic [ref=f8e309]:
+        - generic [ref=f8e310]: Coursera
+        - generic [ref=f8e312]:
+          - heading [level=4] [ref=f8e313]:
+            - text: Exploratory Data Analysis with Seaborn
+            - link "Anchor" [ref=f8e314] [cursor=pointer]:
+              - /url: "#exploratory-data-analysis-with-seaborn"
+              - text: 
+          - paragraph [ref=f8e315]: Coursera
+          - generic [ref=f8e316]:
+            - paragraph [ref=f8e317]: Python
+            - paragraph [ref=f8e318]: Seaborn
+            - paragraph [ref=f8e319]: Exploratory Data Analysis
+      - generic [ref=f8e320]:
+        - generic [ref=f8e321]: Coursera
+        - generic [ref=f8e323]:
+          - heading [level=4] [ref=f8e324]:
+            - text: COVID-19 Data Analysis Using Python
+            - link "Anchor" [ref=f8e325] [cursor=pointer]:
+              - /url: "#covid-19-data-analysis-using-python"
+              - text: 
+          - paragraph [ref=f8e326]: Coursera
+          - generic [ref=f8e327]:
+            - paragraph [ref=f8e328]: Python
+            - paragraph [ref=f8e329]: Data Analysis
+            - paragraph [ref=f8e330]: COVID-19
+  - contentinfo [ref=f8e331]:
+    - generic [ref=f8e332]:
+      - paragraph [ref=f8e334]: © 2026 Jubayer Hossain
+      - list [ref=f8e336]:
+        - listitem [ref=f8e337]:
+          - link [ref=f8e338] [cursor=pointer]:
+            - /url: http://localhost:8899/research/
+            - paragraph [ref=f8e339]: Research
+        - listitem [ref=f8e340]:
+          - link [ref=f8e341] [cursor=pointer]:
+            - /url: http://localhost:8899/projects/
+            - paragraph [ref=f8e342]: Projects
+        - listitem [ref=f8e343]:
+          - link [ref=f8e344] [cursor=pointer]:
+            - /url: http://localhost:8899/publications/
+            - paragraph [ref=f8e345]: Publications
+        - listitem [ref=f8e346]:
+          - link [ref=f8e347] [cursor=pointer]:
+            - /url: http://localhost:8899/teaching/
+            - paragraph [ref=f8e348]: Teaching
+        - listitem [ref=f8e349]:
+          - link [ref=f8e350] [cursor=pointer]:
+            - /url: http://localhost:8899/tutorials/
+            - paragraph [ref=f8e351]: Tutorials
+        - listitem [ref=f8e352]:
+          - link [ref=f8e353] [cursor=pointer]:
+            - /url: http://localhost:8899/blog/
+            - paragraph [ref=f8e354]: Blog
+        - listitem [ref=f8e355]:
+          - link [ref=f8e356] [cursor=pointer]:
+            - /url: http://localhost:8899/about/
+            - paragraph [ref=f8e357]: About
+      - list [ref=f8e359]:
+        - listitem [ref=f8e360]:
+          - link [ref=f8e361] [cursor=pointer]:
+            - /url: https://twitter.com/hossain_lab
+            - img "Twitter" [ref=f8e362]: 
+        - listitem [ref=f8e363]:
+          - link [ref=f8e364] [cursor=pointer]:
+            - /url: https://www.youtube.com/@hossainlab
+            - img "YouTube" [ref=f8e365]: 
+        - listitem [ref=f8e366]:
+          - link [ref=f8e367] [cursor=pointer]:
+            - /url: http://localhost:8899/blog/index.xml
+            - img "Blog RSS feed" [ref=f8e368]: 
