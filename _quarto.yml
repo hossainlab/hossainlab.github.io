@@ -4,6 +4,8 @@ project:
   render:
     - "**/*.qmd"
     - "!academic-cv/"
+    # Superseded and unreferenced files, kept for reference, never rendered.
+    - "!archive/"
     - "!cv/"
   resources:
     - robots.txt
@@ -81,10 +83,14 @@ website:
         text: Work
       - href: "/#talks"
         text: Talks
+      - href: "/#projects"
+        text: Projects
       - href: "/#tutorials"
         text: Tutorials
       - href: "/#publications"
         text: Publications
+      - href: "/#initiatives"
+        text: Initiatives
       - href: "/#news"
         text: News
 format:

@@ -1,0 +1,51 @@
+<%
+/* Lodash template (Quarto listings use lodash, not EJS) for the homepage
+   "Selected Projects" section. Reads data/projects.yml and renders only the
+   entries flagged `featured: true`, ordered by `featured-order`.
+
+   Markup is built as JS strings and emitted in one go: HTML written inline
+   here gets indented by the template engine, and pandoc turns indented HTML
+   into <pre><code> blocks. */
+var esc = function (s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+};
+
+var featured = items.filter(function (it) {
+  return it.featured === true || it.featured === 'true';
+});
+featured.sort(function (a, b) {
+  return (a['featured-order'] || 99) - (b['featured-order'] || 99);
+});
+
+var lines = [];
+lines.push('<div class="tutorial-grid project-highlight-grid">');
+for (var i = 0; i < featured.length; i++) {
+  var it = featured[i];
+  var kicker = (it.categories && it.categories.length) ? it.categories[0] : 'Research code';
+  var blurb = it.summary || it.description || '';
+  var links = it.links || [];
+  var primary = links.length ? links[0] : null;
+  var href = primary ? primary.url : 'projects/';
+  var label = primary ? primary.label : 'View project';
+  var tags = (it.tags || []).slice(0, 4);
+
+  var card = [];
+  card.push('<article class="resource-card project-highlight">');
+  card.push('<span class="resource-kicker">' + esc(kicker) + '</span>');
+  card.push('<h3><a href="' + esc(href) + '"' + (primary ? ' target="_blank" rel="noopener"' : '') + '>' + esc(it.title || '') + '</a></h3>');
+  card.push('<p>' + esc(blurb) + '</p>');
+  if (tags.length) {
+    var chips = [];
+    for (var t = 0; t < tags.length; t++) {
+      chips.push('<span class="tag">' + esc(tags[t]) + '</span>');
+    }
+    card.push('<div class="project-highlight-tags">' + chips.join('') + '</div>');
+  }
+  card.push('<a class="external-link" href="' + esc(href) + '"' + (primary ? ' target="_blank" rel="noopener"' : '') + '>' + esc(label) + ' &rarr;</a>');
+  card.push('</article>');
+  lines.push(card.join(''));
+}
+lines.push('</div>');
+%>
+<%= lines.join('\n') %>

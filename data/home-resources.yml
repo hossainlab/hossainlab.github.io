@@ -1,0 +1,12 @@
+# Tutorial series shown in the homepage "Featured Tools & Tutorials" grid.
+#
+# The homepage listing reads this file together with data/teaching/videos.yml
+# and renders both through _templates/home-resource-card.ejs. `home-order`
+# pins these cards ahead of the playlists, which follow in videos.yml order.
+- kind: tutorial
+  home-order: 1
+  kicker: "Tutorial series"
+  title: "Single-Cell Analysis with Python"
+  url: "tutorials/scpy/"
+  description: "Raw counts to biological insight with scanpy and the scverse ecosystem."
+  meta: "20+ lessons &middot; 6 modules &middot; Python"

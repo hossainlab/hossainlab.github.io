@@ -12,13 +12,13 @@ aliases:
   - /projects/pipelines.html
 listing:
   - id: courses
-    contents: courses.yml
+    contents: ../data/teaching/courses.yml
     template: ../_templates/course-card.ejs
   - id: pipelines
-    contents: pipelines.yml
+    contents: ../data/teaching/pipelines.yml
     template: ../_templates/pipeline-tutorial-card.ejs
   - id: videos
-    contents: videos.yml
+    contents: ../data/teaching/videos.yml
     template: ../_templates/video-card.ejs
 ---
 

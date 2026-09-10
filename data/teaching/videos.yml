@@ -1,6 +1,11 @@
 # ─────────────────────────────────────────────────
 # Teaching Videos — YouTube Playlists
 # ─────────────────────────────────────────────────
+#
+# Every playlist here also appears in the homepage
+# "Featured Tools & Tutorials" grid, rendered by
+# _templates/home-resource-card.ejs after the tutorial series in
+# data/home-resources.yml. Adding a playlist here adds it to both pages.
 
 - path:
   course: "R for Research"

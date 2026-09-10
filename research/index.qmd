@@ -9,10 +9,10 @@ toc-location: right
 toc-depth: 2
 listing:
   - id: ro-mentees
-    contents: mentorship.yml
+    contents: ../data/research/mentorship.yml
     template: ../_templates/mentee-card.ejs
   - id: ro-collaborators
-    contents: collaborators.yml
+    contents: ../data/research/collaborators.yml
     template: ../_templates/collaborator-card.ejs
 ---
 

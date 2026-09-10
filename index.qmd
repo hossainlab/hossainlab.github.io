@@ -15,13 +15,24 @@ listing:
     template: _templates/featured-card.ejs
   - id: talks-list
     contents:
-      - publications/conference-presentations.yml
-      - publications/invited-speaker.yml
-      - publications/posters.yml
+      - data/publications/conference-presentations.yml
+      - data/publications/invited-speaker.yml
+      - data/publications/posters.yml
     template: _templates/talk-item.ejs
+  - id: resources-list
+    contents:
+      - data/home-resources.yml
+      - data/teaching/videos.yml
+    template: _templates/home-resource-card.ejs
+  - id: projects-list
+    contents: data/projects.yml
+    template: _templates/home-project-card.ejs
   - id: publications-list
-    contents: publications/journal-articles.yml
+    contents: data/publications/journal-articles.yml
     template: _templates/home-publication.ejs
+  - id: initiatives-list
+    contents: data/about/ventures.yml
+    template: _templates/home-venture-card.ejs
   - id: news-list
     contents: data/news.yml
     template: _templates/news-item.ejs
@@ -44,7 +55,7 @@ listing:
 <p class="hero-subtitle">Multiomics scientist decoding cancer biology from public transcriptomic data.</p>
 <div class="hero-description">
 <p>I build reproducible computational workflows on public omics data &mdash; meta-analysing bulk RNA-Seq cohorts, constructing harmonised single-cell atlases, and applying machine learning to high-dimensional data for biomarker discovery.</p>
-<p>I founded <a href="https://deepbioltd.com" target="_blank" rel="noopener">DeepBio Limited</a>, a Dhaka-based AI and bioinformatics company, and <a href="https://chiralbd.org" target="_blank" rel="noopener">CHIRAL Bangladesh</a>, a non-profit research institute that has trained 3,000+ early-career researchers. I teach through <a href="https://deepbioacademy.com" target="_blank" rel="noopener">DeepBio Academy</a> and mentor students from raw sequencing data to published analysis.</p>
+<p>I founded <a href="https://deepbioltd.com" target="_blank" rel="noopener">DeepBio Limited</a>, a Dhaka-based AI and bioinformatics company, and <a href="https://chiralbd.github.io" target="_blank" rel="noopener">CHIRAL Bangladesh</a>, a non-profit research institute that has trained 3,000+ early-career researchers. I teach through <a href="https://deepbioacademy.com" target="_blank" rel="noopener">DeepBio Academy</a> and mentor students from raw sequencing data to published analysis.</p>
 </div>
 <div class="research-chips" aria-label="Research focus areas">
 <span>Single-Cell</span>
@@ -60,9 +71,8 @@ listing:
 <div class="buttons hero-actions">
 <a class="button is-primary" href="#publications"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Publications</span></a>
 <a class="button is-light" href="#talks"><span class="icon"><i class="bi bi-mic"></i></span><span>Talks</span></a>
-<a class="button is-light" href="#tutorials"><span class="icon"><i class="bi bi-easel"></i></span><span>Tutorials</span></a>
+<a class="button is-light" href="#projects"><span class="icon"><i class="bi bi-code-square"></i></span><span>Projects</span></a>
 <a class="button is-light" href="../cv/CV-HossainMJ.pdf" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-file-earmark-pdf"></i></span><span>CV</span></a>
-<a class="button is-linkedin" href="https://www.linkedin.com/in/hossainmj" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-linkedin"></i></span><span>Follow on LinkedIn</span></a>
 </div>
 </div>
 <aside class="profile-panel" aria-label="Profile information">
@@ -127,43 +137,35 @@ listing:
 <p class="eyebrow">Tools &amp; Tutorials</p>
 <h2 class="title is-3">Featured Tools &amp; Tutorials</h2>
 </div>
-<div class="tutorial-grid">
+```
 
-<article class="resource-card">
-<span class="resource-kicker">Tutorial series</span>
-<h3><a href="tutorials/scpy/">Single-Cell Analysis with Python</a></h3>
-<p>Raw counts to biological insight with scanpy and the scverse ecosystem.</p>
-<a class="external-link" href="tutorials/scpy/">20+ lessons &middot; 6 modules &middot; Python &rarr;</a>
-</article>
+::: {#resources-list}
+:::
 
-<article class="resource-card">
-<span class="resource-kicker">Tutorial series</span>
-<h3><a href="tutorials/nextflow/">Nextflow and nf-core</a></h3>
-<p>Scalable, reproducible pipelines with DSL2, and how to contribute to nf-core.</p>
-<a class="external-link" href="tutorials/nextflow/">15 lessons &middot; 5 modules &middot; DSL2 &rarr;</a>
-</article>
-
-<article class="resource-card">
-<span class="resource-kicker">Research code</span>
-<h3><a href="projects/">TAM-Atlas</a></h3>
-<p>Tumour-associated macrophage heterogeneity across 8 cancers, ~640,000 cells, scVI-based.</p>
-<a class="external-link" href="projects/">Python &middot; Scanpy &middot; scVI-tools &rarr;</a>
-</article>
-
-<article class="resource-card">
-<span class="resource-kicker">Research code</span>
-<h3><a href="projects/">AMR Drug Repurposing</a></h3>
-<p>Deep learning over ChEMBL bioactivity to find non-antibiotic drugs active against ESKAPE pathogens.</p>
-<a class="external-link" href="projects/">PyTorch &middot; RDKit &middot; SHAP &rarr;</a>
-</article>
-
-</div>
+```{=html}
 </div>
 </section>
 ```
 
 ```{=html}
-<section class="section section-band" id="publications">
+<section class="section section-band" id="projects">
+<div class="container is-max-widescreen">
+<div class="section-heading">
+<p class="eyebrow">Code &amp; pipelines</p>
+<h2 class="title is-3">Selected Projects</h2>
+</div>
+```
+
+::: {#projects-list}
+:::
+
+```{=html}
+</div>
+</section>
+```
+
+```{=html}
+<section class="section" id="publications">
 <div class="container is-max-widescreen">
 <div class="section-heading">
 <p class="eyebrow">Publications</p>
@@ -172,6 +174,23 @@ listing:
 ```
 
 ::: {#publications-list}
+:::
+
+```{=html}
+</div>
+</section>
+```
+
+```{=html}
+<section class="section section-band" id="initiatives">
+<div class="container is-max-widescreen">
+<div class="section-heading">
+<p class="eyebrow">Founded &amp; led</p>
+<h2 class="title is-3">Initiatives</h2>
+</div>
+```
+
+::: {#initiatives-list}
 :::
 
 ```{=html}

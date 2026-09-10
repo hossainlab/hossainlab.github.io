@@ -75,9 +75,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-image','listing-image-alt','listing-description','listing-categories','listing-tags','listing-links',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-title','listing-featured','listing-featured-order','listing-summary','listing-description','listing-categories','listing-tags','listing-links','listing-image','listing-image-alt',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-title","listing-image","listing-image-alt","listing-description","listing-categories","listing-tags","listing-links"],
+      searchColumns: ["listing-title","listing-featured","listing-featured-order","listing-summary","listing-description","listing-categories","listing-tags","listing-links","listing-image","listing-image-alt"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -124,7 +124,7 @@ gtag('config', 'G-4KLN6W9N3N', { 'anonymize_ip': true});
   ],
   "affiliation": [
     { "@type": "Organization", "name": "DeepBio Limited", "url": "https://deepbioltd.com" },
-    { "@type": "Organization", "name": "CHIRAL Bangladesh", "url": "https://chiralbd.org" }
+    { "@type": "Organization", "name": "CHIRAL Bangladesh", "url": "https://chiralbd.github.io" }
   ],
   "sameAs": [
     "https://orcid.org/0000-0001-9323-4997",
@@ -389,12 +389,20 @@ window.Quarto = {
 <span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../#projects"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../#tutorials"> 
 <span class="menu-text">Tutorials</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../#publications"> 
 <span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../#initiatives"> 
+<span class="menu-text">Initiatives</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../#news"> 
@@ -445,11 +453,64 @@ window.Quarto = {
 <p><button class="category-btn" data-category="Cancer Genomics">Cancer Genomics</button></p>
 <p><button class="category-btn" data-category="Deep Learning">Deep Learning</button></p>
 <p><button class="category-btn" data-category="Genomics">Genomics</button></p>
+<p><button class="category-btn" data-category="Metabolic Disease">Metabolic Disease</button></p>
 <p><button class="category-btn" data-category="Neurogenomics">Neurogenomics</button></p>
+<p><button class="category-btn" data-category="Neuroscience">Neuroscience</button></p>
 <p><button class="category-btn" data-category="Single-Cell">Single-Cell</button></p>
 <p><button class="category-btn" data-category="Spatial Omics">Spatial Omics</button></p>
 </div>
 <div class="project-grid">
+<div class="project-card" data-categories="Single-Cell,Cancer Genomics">
+<div class="project-content">
+<h3 class="project-title anchored">
+EWSAtlas: A Single-Cell Atlas of Ewing Sarcoma
+</h3>
+<p>
+A harmonised single-cell transcriptomics atlas of human Ewing sarcoma (EWS). Published tumour datasets are integrated into a common reference to chart malignant and microenvironmental cell states, characterise EWS-FLI1-driven transcriptional programmes, and provide a reusable resource for downstream analysis.
+</p>
+<div class="project-tags">
+<p><span class="tag">Python</span></p>
+<p><span class="tag">Scanpy</span></p>
+<p><span class="tag">Atlas</span></p>
+<p><span class="tag">Ewing Sarcoma</span></p>
+</div>
+<div class="project-links">
+<p><a href="https://github.com/hossainlab/EWSAtlas" class="project-btn" target="_blank"><i class="bi bi-github"></i> GitHub</a></p>
+</div>
+</div>
+</div>
+<div class="project-card" data-categories="Single-Cell,Metabolic Disease">
+<div class="project-content">
+<h3 class="project-title anchored">
+Hyperglycemia-Associated Cell-Specific Signatures in Liver and Kidney
+</h3>
+<p>
+Single-cell analysis of hyperglycemia-associated transcriptional change in liver and kidney, resolving which cell types carry the metabolic stress signature in each organ and how those programmes overlap between the two tissues.
+</p>
+<div class="project-tags">
+<p><span class="tag">Python</span></p>
+<p><span class="tag">Scanpy</span></p>
+<p><span class="tag">Liver</span></p>
+<p><span class="tag">Kidney</span></p>
+</div>
+</div>
+</div>
+<div class="project-card" data-categories="Single-Cell,Neuroscience">
+<div class="project-content">
+<h3 class="project-title anchored">
+Cellular and Molecular Mechanisms of Alzheimer’s Disease
+</h3>
+<p>
+Analysis of the cellular and molecular mechanisms underlying Alzheimer’s disease, using single-cell and multi-omic brain data to resolve cell-type-specific transcriptional and regulatory programmes associated with disease progression.
+</p>
+<div class="project-tags">
+<p><span class="tag">Python</span></p>
+<p><span class="tag">Scanpy</span></p>
+<p><span class="tag">Multi-Omics</span></p>
+<p><span class="tag">Neurodegeneration</span></p>
+</div>
+</div>
+</div>
 <div class="project-card" data-categories="Deep Learning,Bioinformatics">
 <div class="project-image">
 <p><img src="../files/projects/amr-drug-repurposing.svg" alt="AMR Drug Repurposing" loading="lazy" decoding="async"></p>
@@ -582,7 +643,7 @@ Meta-analysis of single-cell RNA-Seq datasets to identify microglial states and 
 <p><span class="tag">scVI-tools</span></p>
 </div>
 <div class="project-links">
-<p><a href="https://github.com/hossainlab/alzheimers-microglia-metaanalysis" class="project-btn" target="_blank"><i class="bi bi-github"></i> GitHub</a></p>
+<p><a href="https://github.com/hossainlab/alzheimers-microglia-meta-analysis" class="project-btn" target="_blank"><i class="bi bi-github"></i> GitHub</a></p>
 </div>
 </div>
 </div>

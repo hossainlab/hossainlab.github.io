@@ -1,0 +1,58 @@
+<%
+/* Lodash template (Quarto listings use lodash, not EJS) for the homepage
+   "Featured Tools & Tutorials" grid. Reads data/home-resources.yml (tutorial
+   series) and data/teaching/videos.yml (every YouTube playlist) in one
+   listing, so the homepage grid and the teaching page never drift apart.
+
+   Markup is built as JS strings and emitted in one go: HTML written inline
+   here gets indented by the template engine, and pandoc turns indented HTML
+   into <pre><code> blocks. */
+var esc = function (s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+};
+
+/* Inline YouTube glyph: the homepage does not otherwise load an icon font for
+   brand marks, and this keeps the playlist cards recognisable at a glance. */
+var ytIcon = '<svg class="yt-glyph" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 461.001 461.001" aria-hidden="true" focusable="false">' +
+  '<path d="M365.257 67.393H95.744C42.866 67.393 0 110.259 0 163.137v134.728c0 52.878 42.866 95.744 95.744 95.744h269.513c52.878 0 95.744-42.866 95.744-95.744V163.137c0-52.878-42.866-95.744-95.744-95.744zm-134.952 224.69V169.919l127.468 61.082-127.468 61.082z" fill="currentColor"/></svg>';
+
+/* Everything in both files is shown. `home-order` only pins the tutorial
+   series ahead of the playlists; entries without it keep their file order,
+   so adding a playlist to videos.yml lands it on the homepage too. */
+var shown = items.slice();
+shown.forEach(function (it, i) {
+  it._pos = i;
+});
+shown.sort(function (a, b) {
+  var ao = a['home-order'] == null ? 1000 + a._pos : a['home-order'];
+  var bo = b['home-order'] == null ? 1000 + b._pos : b['home-order'];
+  return ao - bo;
+});
+
+var lines = [];
+lines.push('<div class="tutorial-grid">');
+for (var i = 0; i < shown.length; i++) {
+  var it = shown[i];
+  var isPlaylist = !!it.playlist;
+  var title = it.title || it.course || '';
+  var href = it.playlist || it.url || '#';
+  var kicker = it.kicker || (isPlaylist ? 'Video playlist' : 'Resource');
+  var external = isPlaylist || /^https?:/.test(href);
+
+  var card = [];
+  card.push('<article class="resource-card' + (isPlaylist ? ' playlist-resource' : '') + '">');
+  card.push('<span class="resource-kicker">' + (isPlaylist ? ytIcon + ' ' : '') + esc(kicker) + '</span>');
+  card.push('<h3><a href="' + esc(href) + '"' + (external ? ' target="_blank" rel="noopener"' : '') + '>' + esc(title) + '</a></h3>');
+  card.push('<p>' + esc(it.description || '') + '</p>');
+
+  /* `meta` is authored as HTML (it carries &middot; separators), so it goes in
+     unescaped; it is site-owned data, not user input. */
+  var tail = isPlaylist ? 'Watch playlist' : (it.meta || 'Open');
+  card.push('<a class="external-link" href="' + esc(href) + '"' + (external ? ' target="_blank" rel="noopener"' : '') + '>' + tail + ' &rarr;</a>');
+  card.push('</article>');
+  lines.push(card.join(''));
+}
+lines.push('</div>');
+%>
+<%= lines.join('\n') %>

@@ -6,7 +6,7 @@ toc: false
 title-block-banner: true
 listing:
   - id: projects
-    contents: projects.yml
+    contents: ../data/projects.yml
     template: ../_templates/project-card.ejs
 ---
 

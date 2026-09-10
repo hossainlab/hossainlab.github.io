@@ -6,7 +6,7 @@ toc: false
 title-block-banner: true
 listing:
   - id: tutorials
-    contents: tutorials.yml
+    contents: ../../data/tutorials/scpy.yml
     template: ../../_templates/tutorial-card.ejs
 ---
 

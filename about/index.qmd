@@ -6,13 +6,13 @@ page-layout: full
 toc: false
 listing:
   - id: venture-list
-    contents: ventures.yml
+    contents: ../data/about/ventures.yml
     template: ../_templates/venture-card.ejs
   - id: education-list
-    contents: education.yml
+    contents: ../data/about/education.yml
     template: ../_templates/education-card.ejs
   - id: certificate-list
-    contents: certificates.yml
+    contents: ../data/about/certificates.yml
     template: ../_templates/certificate-card.ejs
 ---
 

@@ -1,0 +1,51 @@
+<%
+/* Lodash template (Quarto listings use lodash, not EJS) for the homepage
+   "Initiatives" section. Reads data/about/ventures.yml; entries without
+   `home-order` are skipped.
+
+   Markup is built as JS strings and emitted in one go: HTML written inline
+   here gets indented by the template engine, and pandoc turns indented HTML
+   into <pre><code> blocks. */
+var esc = function (s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+};
+
+var shown = items.filter(function (it) {
+  return it['home-order'] != null;
+});
+shown.sort(function (a, b) {
+  return a['home-order'] - b['home-order'];
+});
+
+var lines = [];
+lines.push('<div class="initiative-grid">');
+for (var i = 0; i < shown.length; i++) {
+  var it = shown[i];
+  var host = String(it.url || '').replace(/^https?:\/\//, '').replace(/\/$/, '');
+  var stats = (it.stats || []).slice(0, 3);
+
+  var card = [];
+  card.push('<article class="initiative-card">');
+  card.push('<div class="initiative-head">');
+  card.push('<span class="venture-type-badge">' + esc(it.type || '') + '</span>');
+  card.push('<span class="initiative-since">' + esc(it.period || '') + '</span>');
+  card.push('</div>');
+  card.push('<h3><a href="' + esc(it.url) + '" target="_blank" rel="noopener">' + esc(it.name || '') + '</a></h3>');
+  card.push('<p class="initiative-role">' + esc(it.role || '') + '</p>');
+  card.push('<p class="initiative-summary">' + esc(it['home-summary'] || it.description || '') + '</p>');
+  if (stats.length) {
+    var cells = [];
+    for (var s = 0; s < stats.length; s++) {
+      cells.push('<div class="venture-stat"><span class="venture-stat-value">' + esc(stats[s].value) +
+        '</span><span class="venture-stat-label">' + esc(stats[s].label) + '</span></div>');
+    }
+    card.push('<div class="venture-stats initiative-stats">' + cells.join('') + '</div>');
+  }
+  card.push('<a class="external-link" href="' + esc(it.url) + '" target="_blank" rel="noopener">' + esc(host) + ' &rarr;</a>');
+  card.push('</article>');
+  lines.push(card.join(''));
+}
+lines.push('</div>');
+%>
+<%= lines.join('\n') %>

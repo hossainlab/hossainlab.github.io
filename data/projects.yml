@@ -1,3 +1,63 @@
+# Research projects. Rendered in full on projects/index.qmd via
+# _templates/project-card.ejs.
+#
+# Homepage "Selected Projects" section reads the same file through
+# _templates/home-project-card.ejs, which shows only entries with
+# `featured: true`, sorted by `featured-order`, and prefers the short
+# `summary` over the long `description`. To swap a homepage card, move
+# those three keys to another entry -- no template edit needed.
+#
+# An entry with no `links:` renders a card that points at the projects page
+# instead of an external button; add the repo or DOI under `links:` when it
+# is ready.
+- path: ""
+  title: "EWSAtlas: A Single-Cell Atlas of Ewing Sarcoma"
+  featured: true
+  featured-order: 1
+  summary: "Harmonised single-cell transcriptomics atlas of human Ewing sarcoma, integrating published tumour datasets into one reference."
+  description: "A harmonised single-cell transcriptomics atlas of human Ewing sarcoma (EWS). Published tumour datasets are integrated into a common reference to chart malignant and microenvironmental cell states, characterise EWS-FLI1-driven transcriptional programmes, and provide a reusable resource for downstream analysis."
+  categories:
+    - Single-Cell
+    - Cancer Genomics
+  tags:
+    - Python
+    - Scanpy
+    - Atlas
+    - Ewing Sarcoma
+  links:
+    - label: "GitHub"
+      url: "https://github.com/hossainlab/EWSAtlas"
+
+- path: ""
+  title: "Hyperglycemia-Associated Cell-Specific Signatures in Liver and Kidney"
+  featured: true
+  featured-order: 2
+  summary: "Cell-type-resolved transcriptional signatures of hyperglycemic injury across hepatic and renal tissue."
+  description: "Single-cell analysis of hyperglycemia-associated transcriptional change in liver and kidney, resolving which cell types carry the metabolic stress signature in each organ and how those programmes overlap between the two tissues."
+  categories:
+    - Single-Cell
+    - Metabolic Disease
+  tags:
+    - Python
+    - Scanpy
+    - Liver
+    - Kidney
+
+- path: ""
+  title: "Cellular and Molecular Mechanisms of Alzheimer's Disease"
+  featured: true
+  featured-order: 3
+  summary: "Single-cell and multi-omic dissection of the cell-type-specific programmes that drive Alzheimer's disease pathology."
+  description: "Analysis of the cellular and molecular mechanisms underlying Alzheimer's disease, using single-cell and multi-omic brain data to resolve cell-type-specific transcriptional and regulatory programmes associated with disease progression."
+  categories:
+    - Single-Cell
+    - Neuroscience
+  tags:
+    - Python
+    - Scanpy
+    - Multi-Omics
+    - Neurodegeneration
+
 - path: ""
   title: "Deep Learning-Driven AMR Drug Repurposing"
   image: "../files/projects/amr-drug-repurposing.svg"
@@ -104,7 +164,7 @@
     - scVI-tools
   links:
     - label: "GitHub"
-      url: "https://github.com/hossainlab/alzheimers-microglia-metaanalysis"
+      url: "https://github.com/hossainlab/alzheimers-microglia-meta-analysis"
 
 - path: ""
   title: "Integrative Spatial-scRNA-seq Atlas of Immunotherapy Resistance Across Cancer Types"

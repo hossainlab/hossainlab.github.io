@@ -1,4 +1,13 @@
+# Ventures founded and led. Rendered in full on about/index.qmd via
+# _templates/venture-card.ejs.
+#
+# The homepage "Initiatives" section reads the same file through
+# _templates/home-venture-card.ejs, which uses `home-order` for order and
+# the short `home-summary` instead of the long `description`. An entry
+# without `home-order` is left off the homepage.
 - name: "DeepBio Limited"
+  home-order: 3
+  home-summary: "AI and bioinformatics company turning multi-omics data into biomarker discovery and diagnostics for global health."
   role: "Founder, CEO & Bioinformatics Scientist"
   period: "Jan 2025 – Present"
   location: "Dhaka, Bangladesh"
@@ -20,6 +29,8 @@
       value: "12+"
 
 - name: "DeepBio Academy"
+  home-order: 2
+  home-summary: "Online academy teaching bioinformatics and computational biology through expert-led, project-based courses."
   role: "Founder & Lead Instructor"
   period: "2025 – Present"
   location: "Dhaka, Bangladesh"
@@ -41,10 +52,12 @@
       value: "4.9/5"
 
 - name: "CHIRAL Bangladesh"
+  home-order: 1
+  home-summary: "Non-profit research institute building computational research capacity across Bangladesh and South Asia."
   role: "Founder & Capacity Building Director"
   period: "June 2020 – Present"
   location: "Dhaka, Bangladesh"
-  url: "https://chiralbd.org"
+  url: "https://chiralbd.github.io"
   tagline: "Non-profit Research Institute"
   type: "Non-profit"
   description: "A non-profit research institute with dedicated divisions in Bioinformatics, Public Health, Geospatial Health, and AI-Healthcare — building research capacity across Bangladesh and South Asia."

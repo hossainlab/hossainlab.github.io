@@ -6,17 +6,13 @@ page-layout: full
 listing:
   - id: publications
     contents:
-      - journal-articles_2026.yml
-      - journal-articles_2025.yml
-      - journal-articles_2024.yml
-      - journal-articles_2023.yml
-      - journal-articles_2022.yml
-      - gbd-contributions.yml
-      - under-review.yml
-      - working-papers.yml
-      - conference-presentations.yml
-      - posters.yml
-      - invited-speaker.yml
+      - ../data/publications/journal-articles.yml
+      - ../data/publications/gbd-contributions.yml
+      - ../data/publications/under-review.yml
+      - ../data/publications/working-papers.yml
+      - ../data/publications/conference-presentations.yml
+      - ../data/publications/posters.yml
+      - ../data/publications/invited-speaker.yml
     template: ../_templates/publication-card.ejs
     sort: "year desc"
 ---
