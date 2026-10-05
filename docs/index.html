@@ -151,20 +151,20 @@ ul.task-list li input[type="checkbox"] {
   
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-projects-list .list');
+    const listingTargetEl = window.document.querySelector('#listing-preprints-list .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-featured','listing-featured-order','listing-summary','listing-description','listing-categories','listing-tags','listing-links','listing-image','listing-image-alt',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-title','listing-authors','listing-corresponding','listing-year','listing-journal','listing-status','listing-type','listing-categories',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-title","listing-featured","listing-featured-order","listing-summary","listing-description","listing-categories","listing-tags","listing-links","listing-image","listing-image-alt"],
+      searchColumns: ["listing-title","listing-authors","listing-corresponding","listing-year","listing-journal","listing-status","listing-type","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-projects-list'] = new List('listing-projects-list', options);
+    window['quarto-listings']['listing-preprints-list'] = new List('listing-preprints-list', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -186,9 +186,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-authors','listing-corresponding','listing-year','listing-journal','listing-doi','listing-page','listing-type','listing-categories','listing-volume','listing-article','listing-pmc','listing-pubmed','listing-issue',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-title','listing-authors','listing-corresponding','listing-year','listing-journal','listing-doi','listing-pmc','listing-pubmed','listing-page','listing-type','listing-categories','listing-volume','listing-article','listing-issue',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-title","listing-authors","listing-corresponding","listing-year","listing-journal","listing-doi","listing-page","listing-type","listing-categories","listing-volume","listing-article","listing-pmc","listing-pubmed","listing-issue"],
+      searchColumns: ["listing-title","listing-authors","listing-corresponding","listing-year","listing-journal","listing-doi","listing-pmc","listing-pubmed","listing-page","listing-type","listing-categories","listing-volume","listing-article","listing-issue"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -572,6 +572,10 @@ window.Quarto = {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./#focus"> 
+<span class="menu-text">Focus</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./#featured"> 
 <span class="menu-text">Work</span></a>
   </li>  
@@ -580,7 +584,7 @@ window.Quarto = {
 <span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./#projects"> 
+    <a class="nav-link" href="./projects/index.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
@@ -648,10 +652,11 @@ window.Quarto = {
 <p>I founded <a href="https://deepbioltd.com" target="_blank" rel="noopener">DeepBio Limited</a>, a Dhaka-based AI and bioinformatics company, and <a href="https://chiralbd.github.io" target="_blank" rel="noopener">CHIRAL Bangladesh</a>, a non-profit research institute that has trained 3,000+ early-career researchers. I teach through <a href="https://deepbioacademy.com" target="_blank" rel="noopener">DeepBio Academy</a> and mentor students from raw sequencing data to published analysis.</p>
 </div>
 <div class="research-chips" aria-label="Research focus areas">
+<span>Bulk RNA-Seq</span>
 <span>Single-Cell</span>
 <span>Spatial Transcriptomics</span>
+<span>Graph Neural Networks</span>
 <span>Cancer Genomics</span>
-<span>Machine Learning</span>
 </div>
 <div class="live-snapshot" aria-label="Live research snapshot">
 <span class="live-stat"><strong>16</strong> Publications</span>
@@ -661,7 +666,7 @@ window.Quarto = {
 <div class="buttons hero-actions">
 <a class="button is-primary" href="#publications"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Publications</span></a>
 <a class="button is-light" href="#talks"><span class="icon"><i class="bi bi-mic"></i></span><span>Talks</span></a>
-<a class="button is-light" href="#projects"><span class="icon"><i class="bi bi-code-square"></i></span><span>Projects</span></a>
+<a class="button is-light" href="projects/index.html"><span class="icon"><i class="bi bi-code-square"></i></span><span>Projects</span></a>
 <a class="button is-light" href="../cv/CV-HossainMJ.pdf" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-file-earmark-pdf"></i></span><span>CV</span></a>
 </div>
 </div>
@@ -684,6 +689,122 @@ window.Quarto = {
 </div>
 </div>
 </section>
+<section class="section" id="focus">
+<div class="container is-max-widescreen">
+<div class="section-heading">
+<p class="eyebrow">Research focus</p>
+<h2 class="title is-3">Applied Computational Biology</h2>
+</div>
+
+<div class="expertise-grid focus-grid">
+
+<a class="expertise-card" href="research/index.html">
+<span class="expertise-fig">
+<svg viewbox="0 0 160 90" role="img" aria-label="Bulk RNA-Seq: sequencing reads stacked over an exon model with a coverage profile">
+<rect x="0" y="0" width="160" height="90" fill="none"></rect>
+<path d="M8 34 C 28 4, 48 4, 62 24 C 74 42, 92 12, 106 22 C 120 32, 134 26, 152 34 L152 40 L8 40 Z" fill="#dbeafe"></path>
+<path d="M8 34 C 28 4, 48 4, 62 24 C 74 42, 92 12, 106 22 C 120 32, 134 26, 152 34" fill="none" stroke="#2b6cb0" stroke-width="2" stroke-linecap="round"></path>
+<line x1="8" y1="52" x2="152" y2="52" stroke="#94a3b8" stroke-width="1.5"></line>
+<rect x="14" y="46" width="26" height="12" rx="2" fill="#2b6cb0"></rect>
+<rect x="58" y="46" width="20" height="12" rx="2" fill="#2b6cb0"></rect>
+<rect x="96" y="46" width="30" height="12" rx="2" fill="#2b6cb0"></rect>
+<rect x="138" y="46" width="14" height="12" rx="2" fill="#2b6cb0"></rect>
+<rect x="16" y="66" width="30" height="4" rx="2" fill="#60a5fa"></rect>
+<rect x="52" y="66" width="30" height="4" rx="2" fill="#60a5fa"></rect>
+<rect x="98" y="66" width="30" height="4" rx="2" fill="#60a5fa"></rect>
+<rect x="30" y="74" width="30" height="4" rx="2" fill="#93c5fd"></rect>
+<rect x="72" y="74" width="30" height="4" rx="2" fill="#93c5fd"></rect>
+<rect x="114" y="74" width="30" height="4" rx="2" fill="#93c5fd"></rect>
+<rect x="10" y="82" width="30" height="4" rx="2" fill="#bfdbfe"></rect>
+<rect x="86" y="82" width="30" height="4" rx="2" fill="#bfdbfe"></rect>
+</svg>
+</span>
+<span class="expertise-title">Bulk RNA-Seq Analysis</span>
+<span class="expertise-desc">Differential expression, pathway &amp; signature analysis across cancer cohorts.</span>
+</a>
+
+<a class="expertise-card" href="research/index.html">
+<span class="expertise-fig">
+<svg viewbox="0 0 160 90" role="img" aria-label="Single-cell: UMAP embedding with distinct coloured cell clusters">
+<rect x="0" y="0" width="160" height="90" fill="none"></rect>
+<ellipse cx="40" cy="28" rx="26" ry="19" fill="#e0e7ff"></ellipse>
+<ellipse cx="112" cy="34" rx="24" ry="17" fill="#dcfce7"></ellipse>
+<ellipse cx="72" cy="68" rx="27" ry="16" fill="#fee2e2"></ellipse>
+<g fill="#4f46e5">
+<circle cx="30" cy="22" r="3"></circle><circle cx="42" cy="18" r="3"></circle><circle cx="52" cy="27" r="3"></circle>
+<circle cx="34" cy="34" r="3"></circle><circle cx="46" cy="31" r="3"></circle><circle cx="24" cy="30" r="3"></circle>
+<circle cx="40" cy="41" r="3"></circle><circle cx="55" cy="37" r="2.5"></circle>
+</g>
+<g fill="#16a34a">
+<circle cx="104" cy="27" r="3"></circle><circle cx="116" cy="24" r="3"></circle><circle cx="124" cy="34" r="3"></circle>
+<circle cx="108" cy="38" r="3"></circle><circle cx="120" cy="42" r="3"></circle><circle cx="98" cy="35" r="3"></circle>
+<circle cx="130" cy="27" r="2.5"></circle>
+</g>
+<g fill="#dc2626">
+<circle cx="60" cy="64" r="3"></circle><circle cx="72" cy="60" r="3"></circle><circle cx="84" cy="65" r="3"></circle>
+<circle cx="66" cy="73" r="3"></circle><circle cx="79" cy="74" r="3"></circle><circle cx="92" cy="70" r="2.5"></circle>
+<circle cx="52" cy="71" r="2.5"></circle>
+</g>
+<path d="M12 84 L12 60" stroke="#cbd5e1" stroke-width="1.5" stroke-linecap="round"></path>
+<path d="M12 84 L36 84" stroke="#cbd5e1" stroke-width="1.5" stroke-linecap="round"></path>
+</svg>
+</span>
+<span class="expertise-title">Single-Cell Analysis</span>
+<span class="expertise-desc">Cell-state atlases, tumor heterogeneity &amp; cell–cell communication from scRNA-seq.</span>
+</a>
+
+<a class="expertise-card" href="research/index.html">
+<span class="expertise-fig">
+<svg viewbox="0 0 160 90" role="img" aria-label="Spatial transcriptomics: tissue section overlaid with a grid of expression-coloured capture spots">
+<rect x="0" y="0" width="160" height="90" fill="none"></rect>
+<path d="M20 62 C 10 34, 34 10, 66 12 C 104 14, 140 22, 146 46 C 151 68, 120 82, 88 80 C 54 78, 28 80, 20 62 Z" fill="#faf5ff" stroke="#a855f7" stroke-width="2"></path>
+<g>
+<circle cx="44" cy="30" r="5" fill="#c4b5fd"></circle><circle cx="60" cy="26" r="5" fill="#a78bfa"></circle>
+<circle cx="76" cy="28" r="5" fill="#7c3aed"></circle><circle cx="92" cy="30" r="5" fill="#a78bfa"></circle>
+<circle cx="108" cy="34" r="5" fill="#ddd6fe"></circle>
+<circle cx="36" cy="46" r="5" fill="#ddd6fe"></circle><circle cx="52" cy="43" r="5" fill="#a78bfa"></circle>
+<circle cx="68" cy="44" r="5" fill="#7c3aed"></circle><circle cx="84" cy="45" r="5" fill="#7c3aed"></circle>
+<circle cx="100" cy="47" r="5" fill="#a78bfa"></circle><circle cx="116" cy="49" r="5" fill="#ddd6fe"></circle>
+<circle cx="44" cy="62" r="5" fill="#ddd6fe"></circle><circle cx="60" cy="61" r="5" fill="#c4b5fd"></circle>
+<circle cx="76" cy="62" r="5" fill="#a78bfa"></circle><circle cx="92" cy="63" r="5" fill="#c4b5fd"></circle>
+<circle cx="108" cy="64" r="5" fill="#ede9fe"></circle>
+</g>
+</svg>
+</span>
+<span class="expertise-title">Spatial Transcriptomics</span>
+<span class="expertise-desc">Tissue architecture, niche deconvolution &amp; spatially resolved gene programmes.</span>
+</a>
+
+<a class="expertise-card" href="research/index.html">
+<span class="expertise-fig">
+<svg viewbox="0 0 160 90" role="img" aria-label="Graph Neural Networks in computational biology">
+<rect x="0" y="0" width="160" height="90" fill="none"></rect>
+<line x1="28" y1="46" x2="62" y2="22" stroke="#94a3b8" stroke-width="1.5"></line>
+<line x1="28" y1="46" x2="58" y2="68" stroke="#94a3b8" stroke-width="1.5"></line>
+<line x1="62" y1="22" x2="102" y2="28" stroke="#94a3b8" stroke-width="1.5"></line>
+<line x1="62" y1="22" x2="82" y2="48" stroke="#0284c7" stroke-width="2" stroke-dasharray="3 2"></line>
+<line x1="58" y1="68" x2="82" y2="48" stroke="#0284c7" stroke-width="2" stroke-dasharray="3 2"></line>
+<line x1="58" y1="68" x2="106" y2="66" stroke="#94a3b8" stroke-width="1.5"></line>
+<line x1="82" y1="48" x2="134" y2="45" stroke="#0284c7" stroke-width="2"></line>
+<line x1="102" y1="28" x2="134" y2="45" stroke="#94a3b8" stroke-width="1.5"></line>
+<line x1="106" y1="66" x2="134" y2="45" stroke="#94a3b8" stroke-width="1.5"></line>
+<circle cx="28" cy="46" r="7" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"></circle>
+<circle cx="62" cy="22" r="7" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"></circle>
+<circle cx="58" cy="68" r="7" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"></circle>
+<circle cx="102" cy="28" r="6.5" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"></circle>
+<circle cx="106" cy="66" r="6.5" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"></circle>
+<circle cx="82" cy="48" r="8.5" fill="#bae6fd" stroke="#0369a1" stroke-width="2"></circle>
+<circle cx="134" cy="45" r="9.5" fill="#0284c7" stroke="#0369a1" stroke-width="2"></circle>
+<circle cx="134" cy="45" r="3.5" fill="#ffffff"></circle>
+</svg>
+</span>
+<span class="expertise-title">Graph Neural Networks</span>
+<span class="expertise-desc">Modeling gene regulatory networks &amp; spatial cell-graphs in cancer biology.</span>
+</a>
+
+</div>
+</div>
+</section>
 <section class="section" id="featured">
 <div class="container is-max-widescreen">
 <div class="section-heading">
@@ -701,7 +822,7 @@ window.Quarto = {
 <h3>
 Integrative bioinformatics analysis reveals COL13A1 and COL23A1 as diagnostic and prognostic biomarkers in thyroid cancer
 </h3>
-<a href="https://doi.org/10.1002/hsr2.70295" target="_blank" rel="noopener">Read paper</a>
+<a href="https://doi.org/10.1002/hsr2.72617" target="_blank" rel="noopener">Read paper</a>
 </div>
 </article>
 <article class="featured-card">
@@ -969,62 +1090,127 @@ Video tutorials on using Python for health data analysis, covering data wranglin
 </div>
 </div>
 </section>
-<section class="section section-band" id="projects">
-<div class="container is-max-widescreen">
-<div class="section-heading">
-<p class="eyebrow">Code &amp; pipelines</p>
-<h2 class="title is-3">Selected Projects</h2>
-</div>
-<div id="listing-projects-list" class="quarto-listing quarto-listing-container-custom">
-<div class="tutorial-grid project-highlight-grid">
-<article class="resource-card project-highlight">
-<span class="resource-kicker">Single-Cell</span>
-<h3>
-<a href="https://github.com/hossainlab/EWSAtlas" target="_blank" rel="noopener">EWSAtlas: A Single-Cell Atlas of Ewing Sarcoma</a>
-</h3>
-<p>
-Harmonised single-cell transcriptomics atlas of human Ewing sarcoma, integrating published tumour datasets into one reference.
-</p>
-<div class="project-highlight-tags">
-<span class="tag">Python</span><span class="tag">Scanpy</span><span class="tag">Atlas</span><span class="tag">Ewing Sarcoma</span>
-</div>
-<a class="external-link" href="https://github.com/hossainlab/EWSAtlas" target="_blank" rel="noopener">GitHub →</a>
-</article>
-<article class="resource-card project-highlight">
-<span class="resource-kicker">Single-Cell</span>
-<h3>
-<a href="projects/">Hyperglycemia-Associated Cell-Specific Signatures in Liver and Kidney</a>
-</h3>
-<p>
-Cell-type-resolved transcriptional signatures of hyperglycemic injury across hepatic and renal tissue.
-</p>
-<div class="project-highlight-tags">
-<span class="tag">Python</span><span class="tag">Scanpy</span><span class="tag">Liver</span><span class="tag">Kidney</span>
-</div>
-<a class="external-link" href="projects/">View project →</a>
-</article>
-<article class="resource-card project-highlight">
-<span class="resource-kicker">Single-Cell</span>
-<h3>
-<a href="projects/">Cellular and Molecular Mechanisms of Alzheimer’s Disease</a>
-</h3>
-<p>
-Single-cell and multi-omic dissection of the cell-type-specific programmes that drive Alzheimer’s disease pathology.
-</p>
-<div class="project-highlight-tags">
-<span class="tag">Python</span><span class="tag">Scanpy</span><span class="tag">Multi-Omics</span><span class="tag">Neurodegeneration</span>
-</div>
-<a class="external-link" href="projects/">View project →</a>
-</article>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</div>
-</section>
 <section class="section" id="publications">
 <div class="container is-max-widescreen">
 <div class="section-heading">
 <p class="eyebrow">Publications</p>
+<h2 class="title is-3">Preprints</h2>
+</div>
+<div id="listing-preprints-list" class="quarto-listing quarto-listing-container-custom">
+<div id="home-preprints-list" class="publications-list">
+<article class="publication-block" data-preprint-item="" data-pub-tags="bioinformatics neuroscience">
+<div class="publication-image-col">
+<div class="publication-image feat-fig-mono" aria-hidden="true" title="bioRxiv preprint">
+<span>RXV</span>
+</div>
+</div>
+<div class="publication-content-col">
+<h3 class="publication-title">
+Dosage-dependent disruption of corticofugal neuron development by Fezf2 loss
+</h3>
+<div class="publication-authors">
+<span class="author-me"><strong>Hossain, M. J.</strong></span>, Abhi, N. I., Islam, M. M., Das, S., Tasneem, E., &amp; Tasnim, M.
+</div>
+<div class="publication-venue">
+<span>bioRxiv, 2026</span><span class="tag is-info is-light" style="font-size: 0.72rem; font-weight: 600; padding: 0.15rem 0.5rem; height: auto; border-radius: 4px; margin-left: 0.5rem;">Preprint</span>
+</div>
+</div>
+</article>
+<article class="publication-block" data-preprint-item="" data-pub-tags="bioinformatics single-cell cancer-genomics">
+<div class="publication-image-col">
+<div class="publication-image feat-fig-mono" aria-hidden="true" title="bioRxiv preprint">
+<span>RXV</span>
+</div>
+</div>
+<div class="publication-content-col">
+<h3 class="publication-title">
+Evaluating the false-positive rate of single-cell copy-number and malignant-cell classifiers
+</h3>
+<div class="publication-authors">
+<span class="author-me"><strong>Hossain, M. J.</strong></span>, &amp; Dev, P. C.
+</div>
+<div class="publication-venue">
+<span>bioRxiv, 2026</span><span class="tag is-info is-light" style="font-size: 0.72rem; font-weight: 600; padding: 0.15rem 0.5rem; height: auto; border-radius: 4px; margin-left: 0.5rem;">Preprint</span>
+</div>
+</div>
+</article>
+<article class="publication-block" data-preprint-item="" data-pub-tags="bioinformatics immunology">
+<div class="publication-image-col">
+<div class="publication-image feat-fig-mono" aria-hidden="true" title="bioRxiv preprint">
+<span>RXV</span>
+</div>
+</div>
+<div class="publication-content-col">
+<h3 class="publication-title">
+A donor-level map of immune sex differences
+</h3>
+<div class="publication-authors">
+<span class="author-me"><strong>Hossain, M. J.</strong></span>, Dev, P. C., Nawar, T., Arony, T. A., Hoque, M., Chowdhury, D., &amp; Rahma, M. A.
+</div>
+<div class="publication-venue">
+<span>bioRxiv, 2026</span><span class="tag is-info is-light" style="font-size: 0.72rem; font-weight: 600; padding: 0.15rem 0.5rem; height: auto; border-radius: 4px; margin-left: 0.5rem;">Preprint</span>
+</div>
+</div>
+</article>
+<article class="publication-block" data-preprint-item="" data-pub-tags="bioinformatics cancer-genomics">
+<div class="publication-image-col">
+<div class="publication-image feat-fig-mono" aria-hidden="true" title="bioRxiv preprint">
+<span>RXV</span>
+</div>
+</div>
+<div class="publication-content-col">
+<h3 class="publication-title">
+Multi-cohort transcriptomic analysis reveals a convergent immune-myeloid hub associated with poor prognosis in glioblastoma
+</h3>
+<div class="publication-authors">
+<span class="author-me"><strong>Hossain, M. J.</strong></span>, Ahmed, E., Shafin, R. H., Islam, J., Chowdhury, M. H., Ali, M. L., Dewanjee, S., &amp; Hosain, M. M.
+</div>
+<div class="publication-venue">
+<span>bioRxiv, 2026</span><span class="tag is-info is-light" style="font-size: 0.72rem; font-weight: 600; padding: 0.15rem 0.5rem; height: auto; border-radius: 4px; margin-left: 0.5rem;">Preprint</span>
+</div>
+</div>
+</article>
+<article class="publication-block" data-preprint-item="" data-pub-tags="bioinformatics cancer-genomics single-cell">
+<div class="publication-image-col">
+<div class="publication-image feat-fig-mono" aria-hidden="true" title="bioRxiv preprint">
+<span>RXV</span>
+</div>
+</div>
+<div class="publication-content-col">
+<h3 class="publication-title">
+External validation of a single-cell multi-omics target prioritization pipeline in breast cancer
+</h3>
+<div class="publication-authors">
+<span class="author-me"><strong>Hossain, M. J.</strong></span>, &amp; Abhi, N. I.
+</div>
+<div class="publication-venue">
+<span>bioRxiv, 2026</span><span class="tag is-info is-light" style="font-size: 0.72rem; font-weight: 600; padding: 0.15rem 0.5rem; height: auto; border-radius: 4px; margin-left: 0.5rem;">Preprint</span>
+</div>
+</div>
+</article>
+<article class="publication-block" data-preprint-item="" data-pub-tags="bioinformatics spatial-transcriptomics machine-learning">
+<div class="publication-image-col">
+<div class="publication-image feat-fig-mono" aria-hidden="true" title="bioRxiv preprint">
+<span>RXV</span>
+</div>
+</div>
+<div class="publication-content-col">
+<h3 class="publication-title">
+Graph Neural Network for predicting immunosuppressive spatial niches in glioblastoma from 10x Visium spatial transcriptomics
+</h3>
+<div class="publication-authors">
+<span class="author-me"><strong>Hossain, M. J.</strong></span>, &amp; Dev, P. C.
+</div>
+<div class="publication-venue">
+<span>bioRxiv, 2026</span><span class="tag is-info is-light" style="font-size: 0.72rem; font-weight: 600; padding: 0.15rem 0.5rem; height: auto; border-radius: 4px; margin-left: 0.5rem;">Preprint</span>
+</div>
+</div>
+</article>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+<div class="section-heading" style="margin-top: 3.5rem;">
+<p class="eyebrow">Peer-Reviewed</p>
 <h2 class="title is-3">Recent Publications</h2>
 </div>
 <div id="listing-publications-list" class="quarto-listing quarto-listing-container-custom">
@@ -1054,7 +1240,7 @@ Public Health (3)
 </div>
 <div class="publication-content-col">
 <h3 class="publication-title">
-<a href="./publications/papers/integrative-bioinformatics-analysis-reveals-col13a1-and-col23a1-as/">Integrative bioinformatics analysis reveals COL13A1 and COL23A1 as potential diagnostic and prognostic biomarkers in thyroid cancer</a>
+<a href="https://doi.org/10.1002/hsr2.72617" target="_blank" rel="noopener">Integrative bioinformatics analysis reveals COL13A1 and COL23A1 as potential diagnostic and prognostic biomarkers in thyroid cancer</a>
 </h3>
 <div class="publication-authors">
 Islam, M. W., Rahman, M. M., Naznin, H., Hossain, M. S., Akter, T., Shatabde, Z. A., &amp; <span class="author-me"><strong>Hossain, M. J.</strong></span>
@@ -1063,7 +1249,7 @@ Islam, M. W., Rahman, M. M., Naznin, H., Hossain, M. S., Akter, T., Shatabde, Z.
 <span>Health Science Reports, 2026</span>
 </div>
 <div class="publication-links buttons">
-<a class="button is-small is-light" href="./publications/papers/integrative-bioinformatics-analysis-reveals-col13a1-and-col23a1-as/"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Paper</span></a><a class="button is-small is-light" href="https://doi.org/10.1002/hsr2.72617" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
+<a class="button is-small is-light" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13266370/" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Fulltext</span></a><a class="button is-small is-light" href="https://doi.org/10.1002/hsr2.72617" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
 </div>
 </div>
 </article>
@@ -1075,7 +1261,7 @@ Islam, M. W., Rahman, M. M., Naznin, H., Hossain, M. S., Akter, T., Shatabde, Z.
 </div>
 <div class="publication-content-col">
 <h3 class="publication-title">
-<a href="./publications/papers/a-meta-analysis-of-public-rna-seq-data/">A meta-analysis of public RNA-Seq data identifies conserved stress responses in rainbow trout</a>
+<a href="https://doi.org/10.1186/s12864-025-12127-2" target="_blank" rel="noopener">A meta-analysis of public RNA-Seq data identifies conserved stress responses in rainbow trout</a>
 </h3>
 <div class="publication-authors">
 Bari, S. M., Fuad, M., <span class="author-me"><strong>Hossain, M. J.</strong></span>, Ahammad, I., Begum, M., &amp; Helal, M. M. U.
@@ -1084,7 +1270,7 @@ Bari, S. M., Fuad, M., <span class="author-me"><strong>Hossain, M. J.</strong></
 <span>BMC Genomics, 2025</span>
 </div>
 <div class="publication-links buttons">
-<a class="button is-small is-light" href="./publications/papers/a-meta-analysis-of-public-rna-seq-data/"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Paper</span></a><a class="button is-small is-light" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12590911/" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-journal-text"></i></span><span>Full text</span></a><a class="button is-small is-light" href="https://doi.org/10.1186/s12864-025-12127-2" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
+<a class="button is-small is-light" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12590911/" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Fulltext</span></a><a class="button is-small is-light" href="https://doi.org/10.1186/s12864-025-12127-2" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
 </div>
 </div>
 </article>
@@ -1096,7 +1282,7 @@ Bari, S. M., Fuad, M., <span class="author-me"><strong>Hossain, M. J.</strong></
 </div>
 <div class="publication-content-col">
 <h3 class="publication-title">
-<a href="./publications/papers/comprehensive-bioinformatics-analysis-reveals-prognostic-significance-and-immunological/">Comprehensive bioinformatics analysis reveals prognostic significance and immunological roles of WNT gene family in breast cancer</a>
+<a href="https://doi.org/10.1038/s41598-025-13315-6" target="_blank" rel="noopener">Comprehensive bioinformatics analysis reveals prognostic significance and immunological roles of WNT gene family in breast cancer</a>
 </h3>
 <div class="publication-authors">
 Fariha, F. T. J., Fuad, M., Saha, C. S., Hossen, S., &amp; <span class="author-me"><strong>Hossain, M. J.</strong></span>
@@ -1105,7 +1291,7 @@ Fariha, F. T. J., Fuad, M., Saha, C. S., Hossen, S., &amp; <span class="author-m
 <span>Scientific Reports, 2025</span>
 </div>
 <div class="publication-links buttons">
-<a class="button is-small is-light" href="./publications/papers/comprehensive-bioinformatics-analysis-reveals-prognostic-significance-and-immunological/"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Paper</span></a><a class="button is-small is-light" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12494856/" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-journal-text"></i></span><span>Full text</span></a><a class="button is-small is-light" href="https://doi.org/10.1038/s41598-025-13315-6" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
+<a class="button is-small is-light" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12494856/" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Fulltext</span></a><a class="button is-small is-light" href="https://doi.org/10.1038/s41598-025-13315-6" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
 </div>
 </div>
 </article>
@@ -1117,7 +1303,7 @@ Fariha, F. T. J., Fuad, M., Saha, C. S., Hossen, S., &amp; <span class="author-m
 </div>
 <div class="publication-content-col">
 <h3 class="publication-title">
-<a href="./publications/papers/preventing-the-silent-threat-a-perspective-on-preparing/">Preventing the silent threat: A perspective on preparing Bangladesh for Human Metapneumovirus (HMPV)</a>
+<a href="https://doi.org/10.1002/hsr2.71101" target="_blank" rel="noopener">Preventing the silent threat: A perspective on preparing Bangladesh for Human Metapneumovirus (HMPV)</a>
 </h3>
 <div class="publication-authors">
 <span class="author-me"><strong>Hossain, M. J.</strong></span>, Sony, S. A., Fariha, F. T. J., &amp; Hossen, S.
@@ -1126,7 +1312,7 @@ Fariha, F. T. J., Fuad, M., Saha, C. S., Hossen, S., &amp; <span class="author-m
 <span>Health Science Reports, 2025</span>
 </div>
 <div class="publication-links buttons">
-<a class="button is-small is-light" href="./publications/papers/preventing-the-silent-threat-a-perspective-on-preparing/"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Paper</span></a><a class="button is-small is-light" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12390622/" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-journal-text"></i></span><span>Full text</span></a><a class="button is-small is-light" href="https://doi.org/10.1002/hsr2.71101" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
+<a class="button is-small is-light" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12390622/" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Fulltext</span></a><a class="button is-small is-light" href="https://doi.org/10.1002/hsr2.71101" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
 </div>
 </div>
 </article>
@@ -1138,7 +1324,7 @@ Fariha, F. T. J., Fuad, M., Saha, C. S., Hossen, S., &amp; <span class="author-m
 </div>
 <div class="publication-content-col">
 <h3 class="publication-title">
-<a href="./publications/papers/pan-cancer-analysis-reveals-immunological-and-prognostic-significance/">Pan-cancer analysis reveals immunological and prognostic significance of CCT5 in human tumors</a>
+<a href="https://doi.org/10.1038/s41598-025-88339-z" target="_blank" rel="noopener">Pan-cancer analysis reveals immunological and prognostic significance of CCT5 in human tumors</a>
 </h3>
 <div class="publication-authors">
 Ahmed, M. Z., Billah, M. M., Ferdous, J., &amp; <span class="author-me"><strong>Hossain, M. J.</strong></span>
@@ -1147,7 +1333,7 @@ Ahmed, M. Z., Billah, M. M., Ferdous, J., &amp; <span class="author-me"><strong>
 <span>Scientific Reports, 2025</span>
 </div>
 <div class="publication-links buttons">
-<a class="button is-small is-light" href="./publications/papers/pan-cancer-analysis-reveals-immunological-and-prognostic-significance/"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Paper</span></a><a class="button is-small is-light" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12022336/" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-journal-text"></i></span><span>Full text</span></a><a class="button is-small is-light" href="https://doi.org/10.1038/s41598-025-88339-z" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
+<a class="button is-small is-light" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12022336/" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Fulltext</span></a><a class="button is-small is-light" href="https://doi.org/10.1038/s41598-025-88339-z" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
 </div>
 </div>
 </article>
@@ -1159,7 +1345,7 @@ Ahmed, M. Z., Billah, M. M., Ferdous, J., &amp; <span class="author-me"><strong>
 </div>
 <div class="publication-content-col">
 <h3 class="publication-title">
-<a href="./publications/papers/young-stroke-in-bangladesh-addressing-rare-cases-with/">Young stroke in Bangladesh: Addressing rare cases with diagnostic challenges</a>
+<a href="https://doi.org/10.1136/svn-2025-004178" target="_blank" rel="noopener">Young stroke in Bangladesh: Addressing rare cases with diagnostic challenges</a>
 </h3>
 <div class="publication-authors">
 Das, M., &amp; <span class="author-me"><strong>Hossain, M. J.</strong></span>
@@ -1168,7 +1354,7 @@ Das, M., &amp; <span class="author-me"><strong>Hossain, M. J.</strong></span>
 <span>Stroke and Vascular Neurology, 2025</span>
 </div>
 <div class="publication-links buttons">
-<a class="button is-small is-light" href="./publications/papers/young-stroke-in-bangladesh-addressing-rare-cases-with/"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Paper</span></a><a class="button is-small is-light" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12772966/" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-journal-text"></i></span><span>Full text</span></a><a class="button is-small is-light" href="https://doi.org/10.1136/svn-2025-004178" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
+<a class="button is-small is-light" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12772966/" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Fulltext</span></a><a class="button is-small is-light" href="https://doi.org/10.1136/svn-2025-004178" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
 </div>
 </div>
 </article>
@@ -1184,7 +1370,7 @@ Earlier Publications (10 more)
 </div>
 <div class="publication-content-col">
 <h3 class="publication-title">
-<a href="./publications/papers/clinical-and-hematological-manifestation-of-dengue-patients-in/">Clinical and hematological manifestation of dengue patients in 2022 outbreak</a>
+<a href="https://doi.org/10.1002/hsr2.70356" target="_blank" rel="noopener">Clinical and hematological manifestation of dengue patients in 2022 outbreak</a>
 </h3>
 <div class="publication-authors">
 <span class="author-me"><strong>Hossain, M. J.</strong></span>, Das, M., Shahjahan, M., Islam, M. W., &amp; Towhid, S. T.
@@ -1193,7 +1379,7 @@ Earlier Publications (10 more)
 <span>Health Science Reports, 2025</span>
 </div>
 <div class="publication-links buttons">
-<a class="button is-small is-light" href="./publications/papers/clinical-and-hematological-manifestation-of-dengue-patients-in/"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Paper</span></a><a class="button is-small is-light" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11739715/" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-journal-text"></i></span><span>Full text</span></a><a class="button is-small is-light" href="https://doi.org/10.1002/hsr2.70356" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
+<a class="button is-small is-light" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11739715/" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Fulltext</span></a><a class="button is-small is-light" href="https://doi.org/10.1002/hsr2.70356" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
 </div>
 </div>
 </article>
@@ -1205,7 +1391,7 @@ Earlier Publications (10 more)
 </div>
 <div class="publication-content-col">
 <h3 class="publication-title">
-<a href="./publications/papers/urgent-call-for-compulsory-premarital-screening-for-thalassemia/">Urgent call for compulsory premarital screening for thalassemia prevention in Bangladesh</a>
+<a href="https://doi.org/10.1186/s13023-024-03344-1" target="_blank" rel="noopener">Urgent call for compulsory premarital screening for thalassemia prevention in Bangladesh</a>
 </h3>
 <div class="publication-authors">
 <span class="author-me"><strong>Hossain, M. J.</strong></span>, Das, M., &amp; Munni, U. R.
@@ -1214,7 +1400,7 @@ Earlier Publications (10 more)
 <span>Orphanet Journal of Rare Diseases, 2024</span>
 </div>
 <div class="publication-links buttons">
-<a class="button is-small is-light" href="./publications/papers/urgent-call-for-compulsory-premarital-screening-for-thalassemia/"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Paper</span></a><a class="button is-small is-light" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11380423/" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-journal-text"></i></span><span>Full text</span></a><a class="button is-small is-light" href="https://doi.org/10.1186/s13023-024-03344-1" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
+<a class="button is-small is-light" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11380423/" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Fulltext</span></a><a class="button is-small is-light" href="https://doi.org/10.1186/s13023-024-03344-1" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
 </div>
 </div>
 </article>
@@ -1226,7 +1412,7 @@ Earlier Publications (10 more)
 </div>
 <div class="publication-content-col">
 <h3 class="publication-title">
-<a href="./publications/papers/resistance-and-co-resistance-of-metallo-beta-lactamase/">Resistance and co-resistance of metallo-beta-lactamase genes in diarrheal and urinary-tract pathogens</a>
+<a href="https://doi.org/10.3390/microorganisms12081589" target="_blank" rel="noopener">Resistance and co-resistance of metallo-beta-lactamase genes in diarrheal and urinary-tract pathogens</a>
 </h3>
 <div class="publication-authors">
 Shanta, A. S., Islam, N., Al Asad, M., Akter, K., Habib, M. B., <span class="author-me"><strong>Hossain, M. J.</strong></span>, Nahar, S., Godman, B., &amp; Islam, S.
@@ -1235,7 +1421,7 @@ Shanta, A. S., Islam, N., Al Asad, M., Akter, K., Habib, M. B., <span class="aut
 <span>Microorganisms, 2024</span>
 </div>
 <div class="publication-links buttons">
-<a class="button is-small is-light" href="./publications/papers/resistance-and-co-resistance-of-metallo-beta-lactamase/"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Paper</span></a><a class="button is-small is-light" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11356267/" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-journal-text"></i></span><span>Full text</span></a><a class="button is-small is-light" href="https://doi.org/10.3390/microorganisms12081589" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
+<a class="button is-small is-light" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11356267/" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Fulltext</span></a><a class="button is-small is-light" href="https://doi.org/10.3390/microorganisms12081589" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
 </div>
 </div>
 </article>
@@ -1247,7 +1433,7 @@ Shanta, A. S., Islam, N., Al Asad, M., Akter, K., Habib, M. B., <span class="aut
 </div>
 <div class="publication-content-col">
 <h3 class="publication-title">
-<a href="./publications/papers/prevalence-antibiotic-resistance-pattern-for-bacteriuria-from-patients/">Prevalence, antibiotic resistance pattern for bacteriuria from patients with UTIs</a>
+<a href="https://doi.org/10.1002/hsr2.2039" target="_blank" rel="noopener">Prevalence, antibiotic resistance pattern for bacteriuria from patients with UTIs</a>
 </h3>
 <div class="publication-authors">
 <span class="author-me"><strong>Hossain, M. J.</strong></span>, Azad, A. K., Shahid, M. S. B., Shahjahan, M., &amp; Ferdous, J.
@@ -1256,7 +1442,7 @@ Shanta, A. S., Islam, N., Al Asad, M., Akter, K., Habib, M. B., <span class="aut
 <span>Health Science Reports, 2024</span>
 </div>
 <div class="publication-links buttons">
-<a class="button is-small is-light" href="./publications/papers/prevalence-antibiotic-resistance-pattern-for-bacteriuria-from-patients/"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Paper</span></a><a class="button is-small is-light" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11009458/" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-journal-text"></i></span><span>Full text</span></a><a class="button is-small is-light" href="https://doi.org/10.1002/hsr2.2039" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
+<a class="button is-small is-light" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11009458/" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Fulltext</span></a><a class="button is-small is-light" href="https://doi.org/10.1002/hsr2.2039" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
 </div>
 </div>
 </article>
@@ -1268,7 +1454,7 @@ Shanta, A. S., Islam, N., Al Asad, M., Akter, K., Habib, M. B., <span class="aut
 </div>
 <div class="publication-content-col">
 <h3 class="publication-title">
-<a href="./publications/papers/food-consumption-patterns-and-sedentary-behaviors-among-university/">Food consumption patterns and sedentary behaviors among university students</a>
+<a href="https://doi.org/10.1002/hsr2.70259" target="_blank" rel="noopener">Food consumption patterns and sedentary behaviors among university students</a>
 </h3>
 <div class="publication-authors">
 Akter, M. M., &amp; <span class="author-me"><strong>Hossain, M. J.</strong></span>
@@ -1277,7 +1463,7 @@ Akter, M. M., &amp; <span class="author-me"><strong>Hossain, M. J.</strong></spa
 <span>Health Science Reports, 2024</span>
 </div>
 <div class="publication-links buttons">
-<a class="button is-small is-light" href="./publications/papers/food-consumption-patterns-and-sedentary-behaviors-among-university/"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Paper</span></a><a class="button is-small is-light" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11652388/" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-journal-text"></i></span><span>Full text</span></a><a class="button is-small is-light" href="https://doi.org/10.1002/hsr2.70259" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
+<a class="button is-small is-light" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11652388/" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Fulltext</span></a><a class="button is-small is-light" href="https://doi.org/10.1002/hsr2.70259" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
 </div>
 </div>
 </article>
@@ -1289,7 +1475,7 @@ Akter, M. M., &amp; <span class="author-me"><strong>Hossain, M. J.</strong></spa
 </div>
 <div class="publication-content-col">
 <h3 class="publication-title">
-<a href="./publications/papers/factors-contributing-to-antibiotic-misuse-among-parents-in/">Factors contributing to antibiotic misuse among parents in Dhaka City</a>
+<a href="https://doi.org/10.1038/s41598-024-52313-y" target="_blank" rel="noopener">Factors contributing to antibiotic misuse among parents in Dhaka City</a>
 </h3>
 <div class="publication-authors">
 Islam, M. W., Shahjahan, M., Azad, A. K., &amp; <span class="author-me"><strong>Hossain, M. J.</strong></span>
@@ -1298,7 +1484,7 @@ Islam, M. W., Shahjahan, M., Azad, A. K., &amp; <span class="author-me"><strong>
 <span>Scientific Reports, 2024</span>
 </div>
 <div class="publication-links buttons">
-<a class="button is-small is-light" href="./publications/papers/factors-contributing-to-antibiotic-misuse-among-parents-in/"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Paper</span></a><a class="button is-small is-light" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10822859/" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-journal-text"></i></span><span>Full text</span></a><a class="button is-small is-light" href="https://doi.org/10.1038/s41598-024-52313-y" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
+<a class="button is-small is-light" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10822859/" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Fulltext</span></a><a class="button is-small is-light" href="https://doi.org/10.1038/s41598-024-52313-y" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
 </div>
 </div>
 </article>
@@ -1310,7 +1496,7 @@ Islam, M. W., Shahjahan, M., Azad, A. K., &amp; <span class="author-me"><strong>
 </div>
 <div class="publication-content-col">
 <h3 class="publication-title">
-<a href="./publications/papers/community-engagement-and-social-participation-in-dengue-prevention/">Community engagement and social participation in dengue prevention</a>
+<a href="https://doi.org/10.1002/hsr2.2022" target="_blank" rel="noopener">Community engagement and social participation in dengue prevention</a>
 </h3>
 <div class="publication-authors">
 <span class="author-me"><strong>Hossain, M. J.</strong></span>, Das, M., Islam, M. W., Shahjahan, M., &amp; Ferdous, J.
@@ -1319,7 +1505,7 @@ Islam, M. W., Shahjahan, M., Azad, A. K., &amp; <span class="author-me"><strong>
 <span>Health Science Reports, 2024</span>
 </div>
 <div class="publication-links buttons">
-<a class="button is-small is-light" href="./publications/papers/community-engagement-and-social-participation-in-dengue-prevention/"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Paper</span></a><a class="button is-small is-light" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10987789/" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-journal-text"></i></span><span>Full text</span></a><a class="button is-small is-light" href="https://doi.org/10.1002/hsr2.2022" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
+<a class="button is-small is-light" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10987789/" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Fulltext</span></a><a class="button is-small is-light" href="https://doi.org/10.1002/hsr2.2022" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
 </div>
 </div>
 </article>
@@ -1331,7 +1517,7 @@ Islam, M. W., Shahjahan, M., Azad, A. K., &amp; <span class="author-me"><strong>
 </div>
 <div class="publication-content-col">
 <h3 class="publication-title">
-<a href="./publications/papers/health-related-quality-of-life-among-thalassemia-patients/">Health-related quality of life among thalassemia patients in Bangladesh (SF-36)</a>
+<a href="https://doi.org/10.1038/s41598-023-34205-9" target="_blank" rel="noopener">Health-related quality of life among thalassemia patients in Bangladesh (SF-36)</a>
 </h3>
 <div class="publication-authors">
 <span class="author-me"><strong>Hossain, M. J.</strong></span>, Islam, M. W., Munni, U. R., Gulshan, R., Mukta, S. A., Miah, M. S., Sultana, S., Karmakar, M., Ferdous, J., &amp; Islam, M. A.
@@ -1340,7 +1526,7 @@ Islam, M. W., Shahjahan, M., Azad, A. K., &amp; <span class="author-me"><strong>
 <span>Scientific Reports, 2023</span>
 </div>
 <div class="publication-links buttons">
-<a class="button is-small is-light" href="./publications/papers/health-related-quality-of-life-among-thalassemia-patients/"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Paper</span></a><a class="button is-small is-light" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10182078/" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-journal-text"></i></span><span>Full text</span></a><a class="button is-small is-light" href="https://doi.org/10.1038/s41598-023-34205-9" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
+<a class="button is-small is-light" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10182078/" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Fulltext</span></a><a class="button is-small is-light" href="https://doi.org/10.1038/s41598-023-34205-9" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
 </div>
 </div>
 </article>
@@ -1352,7 +1538,7 @@ Islam, M. W., Shahjahan, M., Azad, A. K., &amp; <span class="author-me"><strong>
 </div>
 <div class="publication-content-col">
 <h3 class="publication-title">
-<a href="./publications/papers/knowledge-and-attitudes-towards-thalassemia-among-public-university/">Knowledge and Attitudes towards Thalassemia among Public University Students</a>
+<a href="https://doi.org/10.25163/microbbioacts.526325" target="_blank" rel="noopener">Knowledge and Attitudes towards Thalassemia among Public University Students</a>
 </h3>
 <div class="publication-authors">
 <span class="author-me"><strong>Hossain, M. J.</strong></span>, Towhid, S. T., Sultana, S., Mukta, S. A., Gulshan, R., &amp; Miah, M. S.
@@ -1361,7 +1547,7 @@ Islam, M. W., Shahjahan, M., Azad, A. K., &amp; <span class="author-me"><strong>
 <span>Microbial Bioactives, 2022</span>
 </div>
 <div class="publication-links buttons">
-<a class="button is-small is-light" href="./publications/papers/knowledge-and-attitudes-towards-thalassemia-among-public-university/"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Paper</span></a><a class="button is-small is-light" href="https://doi.org/10.25163/microbbioacts.526325" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
+<a class="button is-small is-light" href="https://doi.org/10.25163/microbbioacts.526325" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
 </div>
 </div>
 </article>
@@ -1373,7 +1559,7 @@ Islam, M. W., Shahjahan, M., Azad, A. K., &amp; <span class="author-me"><strong>
 </div>
 <div class="publication-content-col">
 <h3 class="publication-title">
-<a href="./publications/papers/perception-of-students-on-antibiotic-resistance-and-prevention/">Perception of Students on Antibiotic Resistance and Prevention</a>
+<a href="https://doi.org/10.24018/ejbio.2022.3.3.341" target="_blank" rel="noopener">Perception of Students on Antibiotic Resistance and Prevention</a>
 </h3>
 <div class="publication-authors">
 Towhid, S. T., <span class="author-me"><strong>Hossain, M. J.</strong></span>, Sammo, M. A. S., &amp; Akter, S.
@@ -1382,7 +1568,7 @@ Towhid, S. T., <span class="author-me"><strong>Hossain, M. J.</strong></span>, S
 <span>European Journal of Biology and Biotechnology, 2022</span>
 </div>
 <div class="publication-links buttons">
-<a class="button is-small is-light" href="./publications/papers/perception-of-students-on-antibiotic-resistance-and-prevention/"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Paper</span></a><a class="button is-small is-light" href="https://doi.org/10.24018/ejbio.2022.3.3.341" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
+<a class="button is-small is-light" href="https://doi.org/10.24018/ejbio.2022.3.3.341" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-box-arrow-up-right"></i></span><span>DOI</span></a>
 </div>
 </div>
 </article>
@@ -1626,15 +1812,15 @@ Designed for school and college students, this program introduces bioinformatics
   });
 
   // Publications topic filter
-  var pubItems = document.querySelectorAll('#publications [data-pub-item]');
-  document.querySelectorAll('#publications .filter-bar .filter-button').forEach(function (btn) {
+  var pubItems = document.querySelectorAll('#publications-list [data-pub-item]');
+  document.querySelectorAll('#publications-list .filter-bar .filter-button').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var filter = this.getAttribute('data-pub-filter');
-      document.querySelectorAll('#publications .filter-bar .filter-button').forEach(function (b) {
+      document.querySelectorAll('#publications-list .filter-bar .filter-button').forEach(function (b) {
         b.classList.remove('is-active');
       });
       this.classList.add('is-active');
-      var detailsDrawer = document.querySelector('#publications .earlier-publications');
+      var detailsDrawer = document.querySelector('#publications-list .earlier-publications');
       if (detailsDrawer && filter !== 'all') {
         detailsDrawer.open = true;
       }

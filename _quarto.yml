@@ -79,11 +79,13 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: "/#focus"
+        text: Focus
       - href: "/#featured"
         text: Work
       - href: "/#talks"
         text: Talks
-      - href: "/#projects"
+      - href: projects/index.qmd
         text: Projects
       - href: "/#tutorials"
         text: Tutorials

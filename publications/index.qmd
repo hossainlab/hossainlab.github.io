@@ -6,6 +6,7 @@ page-layout: full
 listing:
   - id: publications
     contents:
+      - ../data/publications/preprints.yml
       - ../data/publications/journal-articles.yml
       - ../data/publications/gbd-contributions.yml
       - ../data/publications/under-review.yml

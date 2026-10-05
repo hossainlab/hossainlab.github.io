@@ -1,4 +1,5 @@
 <%
+var pItems=items.filter(function(i){return i.type==='preprint';}).sort(function(a,b){return(b.year||0)-(a.year||0);});
 var jItems=items.filter(function(i){return i.type==='peer-reviewed'&&i.subtype!=='gbd';});
 var gbdAll=items.filter(function(i){return i.subtype==='gbd';});
 var gbdPub=gbdAll.filter(function(i){return i.type==='peer-reviewed';}).sort(function(a,b){return(b.year||0)-(a.year||0);});
@@ -21,8 +22,24 @@ jItems.forEach(function(i){(i.categories||[]).forEach(function(c){catCount[c]=(c
 <div class="pub-page-wrap">
 <div class="pub-main-col">
 <div class="pub-group-hdr">Publications</div>
+<% if(pItems.length>0){ %>
 <div class="pub-sub-section">
-<div class="pub-sub-hdr"><span class="pub-sub-lbl">A.</span> Journal Articles <span class="pub-sub-count">(<%=jItems.length%>)</span></div>
+<div class="pub-sub-hdr"><span class="pub-sub-lbl">A.</span> Preprints <span class="pub-sub-count">(<%=pItems.length%>)</span></div>
+<div id="pub-preprint-list">
+<% for(var pi=0;pi<pItems.length;pi++){ var item=pItems[pi]; var _ptp=(item.title||'').split(/(\*\*[^*]+\*\*)/); var _pap=(item.authors||'').split(/(\*\*[^*]+\*\*)/); %>
+<div class="pub-item pub-peer">
+<div class="pub-badges"><span class="pbadge pbadge-preprint">Preprint</span><% var _ca=item.categories||[];for(var _ci=0;_ci<_ca.length;_ci++){%><span class="pbadge pbadge-cat"><%=_ca[_ci]%></span><%}%></div>
+<div class="pub-title"><% if(item.doi){%><a href="<%=item.doi%>" target="_blank" rel="noopener"><% for(var _ti=0;_ti<_ptp.length;_ti++){if(_ptp[_ti].charAt(0)==='*'){%><strong><%=_ptp[_ti].slice(2,-2)%></strong><%}else{%><%=_ptp[_ti]%><%}}%></a><%}else{%><% for(var _ti2=0;_ti2<_ptp.length;_ti2++){if(_ptp[_ti2].charAt(0)==='*'){%><strong><%=_ptp[_ti2].slice(2,-2)%></strong><%}else{%><%=_ptp[_ti2]%><%}}%><%}%></div>
+<div class="pub-authors"><% for(var _ai=0;_ai<_pap.length;_ai++){if(_pap[_ai].charAt(0)==='*'){%><strong><%=_pap[_ai].slice(2,-2)%></strong><%}else{%><%=_pap[_ai]%><%}}%></div>
+<div class="pub-source"><em><%=item.journal||'bioRxiv'%></em> (<%=item.year%>)</div>
+<% if(item.doi||item.url){%><div class="pub-actions"><a href="<%=item.doi||item.url%>" class="pub-doi-btn" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> Preprint</a></div><%}%>
+</div>
+<% } %>
+</div>
+</div>
+<% } %>
+<div class="pub-sub-section">
+<div class="pub-sub-hdr"><span class="pub-sub-lbl"><%=pItems.length>0?'B.':'A.'%></span> Journal Articles <span class="pub-sub-count">(<%=jItems.length%>)</span></div>
 <% if(cats.length>0){ %>
 <div class="pub-filterbar" role="group" aria-label="Filter journal articles by topic">
 <button class="pub-chip active" data-fcat="all" aria-pressed="true">All<span class="pub-chip-n"><%=jItems.length%></span></button>
@@ -36,17 +53,17 @@ jItems.forEach(function(i){(i.categories||[]).forEach(function(c){catCount[c]=(c
 <% for(var ji=0;ji<jSorted.length;ji++){ var item=jSorted[ji]; var cs=(item.categories||[]).join(','); var _tp=(item.title||'').split(/(\*\*[^*]+\*\*)/); var _ap=(item.authors||'').split(/(\*\*[^*]+\*\*)/); %>
 <div class="pub-item pub-peer" data-cats="<%=cs%>">
 <div class="pub-badges"><span class="pbadge pbadge-peer">Peer-Reviewed</span><% var _ca=item.categories||[];for(var _ci=0;_ci<_ca.length;_ci++){%><span class="pbadge pbadge-cat"><%=_ca[_ci]%></span><%}%></div>
-<div class="pub-title"><% if(item.page){%><a href="<%=item.page%>"><% for(var _ti=0;_ti<_tp.length;_ti++){if(_tp[_ti].charAt(0)==='*'){%><strong><%=_tp[_ti].slice(2,-2)%></strong><%}else{%><%=_tp[_ti]%><%}}%></a><%}else if(item.doi){%><a href="<%=item.doi%>" target="_blank" rel="noopener"><% for(var _ti=0;_ti<_tp.length;_ti++){if(_tp[_ti].charAt(0)==='*'){%><strong><%=_tp[_ti].slice(2,-2)%></strong><%}else{%><%=_tp[_ti]%><%}}%></a><%}else{%><% for(var _ti2=0;_ti2<_tp.length;_ti2++){if(_tp[_ti2].charAt(0)==='*'){%><strong><%=_tp[_ti2].slice(2,-2)%></strong><%}else{%><%=_tp[_ti2]%><%}}%><%}%></div>
+<div class="pub-title"><% if(item.doi){%><a href="<%=item.doi%>" target="_blank" rel="noopener"><% for(var _ti=0;_ti<_tp.length;_ti++){if(_tp[_ti].charAt(0)==='*'){%><strong><%=_tp[_ti].slice(2,-2)%></strong><%}else{%><%=_tp[_ti]%><%}}%></a><%}else if(item.doi){%><a href="<%=item.doi%>" target="_blank" rel="noopener"><% for(var _ti=0;_ti<_tp.length;_ti++){if(_tp[_ti].charAt(0)==='*'){%><strong><%=_tp[_ti].slice(2,-2)%></strong><%}else{%><%=_tp[_ti]%><%}}%></a><%}else{%><% for(var _ti2=0;_ti2<_tp.length;_ti2++){if(_tp[_ti2].charAt(0)==='*'){%><strong><%=_tp[_ti2].slice(2,-2)%></strong><%}else{%><%=_tp[_ti2]%><%}}%><%}%></div>
 <div class="pub-authors"><% for(var _ai=0;_ai<_ap.length;_ai++){if(_ap[_ai].charAt(0)==='*'){%><strong><%=_ap[_ai].slice(2,-2)%></strong><%}else{%><%=_ap[_ai]%><%}}%></div>
 <div class="pub-source"><em><%=item.journal||''%></em><% if(item.volume){%>, <strong><%=item.volume%></strong><%}%><% if(item.issue){%>(<%=item.issue%>)<%}%><% if(item.article){%>, <%=item.article%><%}%> (<%=item.year%>)</div>
-<div class="pub-actions"><% if(item.page){%><a href="<%=item.page%>" class="pub-doi-btn pub-detail-btn">Abstract &amp; citation</a><%}%><% if(item.doi){%><a href="<%=item.doi%>" class="pub-doi-btn" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> View Article</a><%}%></div>
+<div class="pub-actions"><% if(item.pmc){%><a href="<%=item.pmc%>" class="pub-doi-btn" target="_blank" rel="noopener"><i class="bi bi-file-earmark-text"></i> Fulltext</a><%}%><% if(item.doi){%><a href="<%=item.doi%>" class="pub-doi-btn" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right"></i> DOI</a><%}%></div>
 </div>
 <% } %>
 </div>
 <div class="pub-no-results" id="pub-no-results" style="display:none;"><i class="bi bi-x-circle" style="font-size:2rem;color:#cbd5e1;margin-bottom:.5rem;"></i><p>No publications match the selected filters.</p></div>
 </div>
 <div class="pub-sub-section">
-<div class="pub-sub-hdr"><span class="pub-sub-lbl">B.</span> GBD Contributions <span class="pub-sub-count">(<%=gbdAll.length%>)</span></div>
+<div class="pub-sub-hdr"><span class="pub-sub-lbl"><%=pItems.length>0?'C.':'B.'%></span> GBD Contributions <span class="pub-sub-count">(<%=gbdAll.length%>)</span></div>
 <% for(var gi=0;gi<gbdCombined.length;gi++){ var item=gbdCombined[gi]; var isUnder=item.type==='under-review'; var _gtp=(item.title||'').split(/(\*\*[^*]+\*\*)/); %>
 <div class="pub-item <%=isUnder?'pub-under':'pub-gbd'%>">
 <div class="pub-badges"><span class="pbadge <%=isUnder?'pbadge-under':'pbadge-gbd'%>"><%=isUnder?'Under Review':'GBD Published'%></span></div>
@@ -58,7 +75,7 @@ jItems.forEach(function(i){(i.categories||[]).forEach(function(c){catCount[c]=(c
 <% } %>
 </div>
 <div class="pub-sub-section">
-<div class="pub-sub-hdr"><span class="pub-sub-lbl">C.</span> Papers Under Review <span class="pub-sub-count">(<%=uItems.length%>)</span></div>
+<div class="pub-sub-hdr"><span class="pub-sub-lbl"><%=pItems.length>0?'D.':'C.'%></span> Papers Under Review <span class="pub-sub-count">(<%=uItems.length%>)</span></div>
 <% for(var ui=0;ui<uItems.length;ui++){ var item=uItems[ui]; var _utp=(item.title||'').split(/(\*\*[^*]+\*\*)/); var _uap=(item.authors||'').split(/(\*\*[^*]+\*\*)/); %>
 <div class="pub-item pub-under">
 <div class="pub-badges"><span class="pbadge pbadge-under">Under Review</span></div>
@@ -69,7 +86,7 @@ jItems.forEach(function(i){(i.categories||[]).forEach(function(c){catCount[c]=(c
 <% } %>
 </div>
 <div class="pub-sub-section">
-<div class="pub-sub-hdr"><span class="pub-sub-lbl">D.</span> Working Papers <span class="pub-sub-count">(<%=wItems.length%>)</span></div>
+<div class="pub-sub-hdr"><span class="pub-sub-lbl"><%=pItems.length>0?'E.':'D.'%></span> Working Papers <span class="pub-sub-count">(<%=wItems.length%>)</span></div>
 <% for(var wi=0;wi<wItems.length;wi++){ var item=wItems[wi]; var _wtp=(item.title||'').split(/(\*\*[^*]+\*\*)/); var _wap=(item.authors||'').split(/(\*\*[^*]+\*\*)/); %>
 <div class="pub-item pub-working">
 <div class="pub-badges"><span class="pbadge pbadge-working">Working Paper</span></div>
@@ -120,6 +137,7 @@ jItems.forEach(function(i){(i.categories||[]).forEach(function(c){catCount[c]=(c
 <aside class="pub-sidebar-col">
 <h5 class="pub-sidebar-title">Summary</h5>
 <div class="pub-sidebar-stat-list">
+<% if(pItems.length>0){ %><div class="pub-sidebar-stat-item"><span class="pub-sidebar-stat-label">Preprints</span><span class="pub-sidebar-stat-n"><%=pItems.length%></span></div><% } %>
 <div class="pub-sidebar-stat-item"><span class="pub-sidebar-stat-label">Journal Articles</span><span class="pub-sidebar-stat-n"><%=jItems.length%></span></div>
 <div class="pub-sidebar-stat-item"><span class="pub-sidebar-stat-label">GBD Contributions</span><span class="pub-sidebar-stat-n"><%=gbdAll.length%></span></div>
 <div class="pub-sidebar-stat-item"><span class="pub-sidebar-stat-label">Under Review</span><span class="pub-sidebar-stat-n"><%=uItems.length%></span></div>

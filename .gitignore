@@ -211,3 +211,5 @@ __marimo__/
 
 **/*.quarto_ipynb
 .positai
+
+cv/_cache/

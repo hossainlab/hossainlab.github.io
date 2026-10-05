@@ -1,0 +1,76 @@
+<%
+/* Lodash template for Preprints on homepage */
+var esc = function(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+};
+
+var pItems = items.filter(function(i){ return i.title && i.title !== 'To be added'; }).sort(function(a,b){ return (b.year || 0) - (a.year || 0); });
+
+var renderBlock = function(it) {
+  var href = esc(it.doi || it.pmc || it.url || '');
+  var tags = (it.categories || []).map(function(c){ return c.toLowerCase().replace(/[^a-z0-9]+/g, '-'); }).join(' ');
+  var mono = esc(it.mono || 'RXV');
+  var authHtml = esc(it.authors || '').replace(/\*\*(.*?)\*\*/g, '<span class="author-me"><strong>$1</strong></span>');
+  
+  var blk = [];
+  blk.push('<article class="publication-block" data-preprint-item data-pub-tags="' + esc(tags) + '">');
+  blk.push('<div class="publication-image-col">');
+  if (it.image) {
+    blk.push('<div class="publication-image"><img src="' + esc(it.image) + '" alt="' + esc(it.title) + '" loading="lazy" /></div>');
+  } else {
+    blk.push('<div class="publication-image feat-fig-mono" aria-hidden="true" title="bioRxiv preprint"><span>' + mono + '</span></div>');
+  }
+  blk.push('</div>');
+  
+  blk.push('<div class="publication-content-col">');
+  if (href && href !== '#') {
+    blk.push('<h3 class="publication-title"><a href="' + href + '" target="_blank" rel="noopener">' + esc(it.title || '') + '</a></h3>');
+  } else {
+    blk.push('<h3 class="publication-title">' + esc(it.title || '') + '</h3>');
+  }
+  blk.push('<div class="publication-authors">' + authHtml + '</div>');
+  
+  var venueText = esc(it.journal || it.venue || 'bioRxiv');
+  if (it.year) venueText += ', ' + esc(it.year);
+  
+  blk.push('<div class="publication-venue">');
+  blk.push('<span>' + venueText + '</span>');
+  if (it.status) {
+    blk.push('<span class="tag is-info is-light" style="font-size: 0.72rem; font-weight: 600; padding: 0.15rem 0.5rem; height: auto; border-radius: 4px; margin-left: 0.5rem;">Preprint</span>');
+  }
+  blk.push('</div>');
+  
+  /* Action row: connect only Fulltext and DOI if available */
+  var fulltextUrl = it.pmc || it.pdf || it.url;
+  var actions = [];
+  if (fulltextUrl) {
+    actions.push({ url: fulltextUrl, label: 'Fulltext', icon: 'bi-file-earmark-text' });
+  }
+  if (it.doi) {
+    actions.push({ url: it.doi, label: 'DOI', icon: 'bi-box-arrow-up-right' });
+  }
+
+  if (actions.length) {
+    blk.push('<div class="publication-links buttons">');
+    for (var ai = 0; ai < actions.length; ai++) {
+      var a = actions[ai];
+      blk.push('<a class="button is-small is-light" href="' + esc(a.url) + '" target="_blank" rel="noopener"' +
+        '><span class="icon"><i class="bi ' + a.icon + '"></i></span><span>' + a.label + '</span></a>');
+    }
+    blk.push('</div>');
+  }
+  
+  blk.push('</div>');
+  blk.push('</article>');
+  return blk.join('');
+};
+
+var lines = [];
+lines.push('<div class="publications-list" id="home-preprints-list">');
+for (var i = 0; i < pItems.length; i++) {
+  lines.push(renderBlock(pItems[i]));
+}
+lines.push('</div>');
+%>
+<%= lines.join('\n') %>

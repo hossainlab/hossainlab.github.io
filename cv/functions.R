@@ -25,11 +25,27 @@ get_cites <- function(url) {
   return(cites)
 }
 
+# Sheets are cached as .rds in _cache/ so re-renders skip the network. A cached
+# copy is reused for CV_CACHE_HOURS (default 24); set CV_REFRESH=true to force
+# a fresh download after editing the sheet.
 get_cv_sheet <- function(sheet) {
-    return(read_sheet(
+    cache_dir <- '_cache'
+    cache_file <- file.path(cache_dir, paste0(sheet, '.rds'))
+    max_age <- as.numeric(Sys.getenv('CV_CACHE_HOURS', '24')) * 3600
+    refresh <- tolower(Sys.getenv('CV_REFRESH', 'false')) %in% c('true', '1', 'yes')
+
+    if (!refresh && file.exists(cache_file) &&
+        difftime(Sys.time(), file.mtime(cache_file), units = 'secs') < max_age) {
+        return(readRDS(cache_file))
+    }
+
+    df <- read_sheet(
         ss = 'https://docs.google.com/spreadsheets/d/1uIJiRbVvBDzrB4QnrpHUmUOzB8rAjop5omtZBxVVE4Y/edit?usp=sharing',
         sheet = sheet
-    ))
+    )
+    dir.create(cache_dir, showWarnings = FALSE)
+    saveRDS(df, cache_file)
+    return(df)
 }
 
 make_ordered_list <- function(x) {

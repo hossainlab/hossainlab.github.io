@@ -1,0 +1,5 @@
+# Standalone project so `quarto preview` works here. Without it, the parent
+# website project (which excludes cv/ from its render list) claims this file
+# and preview fails with "No output created".
+project:
+  type: default

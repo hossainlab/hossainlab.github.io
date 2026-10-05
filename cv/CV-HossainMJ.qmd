@@ -45,13 +45,13 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 ```
 
 \par\centering{\LARGE{Md. Jubayer Hossain}}
-\par\centering{Department of Public Health}
+\par\centering{Bioinformatics and Computational Biology}
 \vspace{-5pt}
-\par\centering{Daffodil International University}
+\par\centering{DeepBio, CHIRAL}
 \vspace{-5pt}
-\par\centering{Daffodil Smart City}
-\vspace{-5pt}
-\par\centering{Birulia, Savar, Dhaka-1216, Bangladesh}
+<!-- \par\centering{Daffodil Smart City} -->
+<!-- \vspace{-5pt} -->
+\par\centering{132/3, Azimpur, Dhaka-1205, Bangladesh}
 \vspace{-5pt}
 \par\centering{{\large\Telefon} +8801662345906}
 \vspace{-5pt}

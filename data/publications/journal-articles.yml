@@ -28,7 +28,9 @@
   corresponding: true
   year: 2026
   journal: "Health Science Reports"
-  doi: "https://doi.org/10.1002/hsr2.72617"
+  doi: "https://doi.org/10.1002/hsr2.72617"
+  pmc: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13266370/"
+  pubmed: "https://pubmed.ncbi.nlm.nih.gov/42306204/"
   page: "/publications/papers/integrative-bioinformatics-analysis-reveals-col13a1-and-col23a1-as/"
   type: peer-reviewed
   categories:
@@ -248,7 +250,8 @@
   authors: "Towhid, S. T., **Hossain, M. J.**, Sammo, M. A. S., & Akter, S."
   corresponding: false
   year: 2022
-  journal: "European Journal of Biology and Biotechnology"
+  journal: "European Journal of Biology and Biotechnology"
+
   volume: "3"
   issue: "3"
   doi: "https://doi.org/10.24018/ejbio.2022.3.3.341"

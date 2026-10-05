@@ -1,0 +1,82 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# Preprints
+# ──────────────────────────────────────────────────────────────────────────────
+# Fields:
+#   title          – Paper title (required)
+#   authors        – Author string; wrap "**Name**" to bold your name
+#   corresponding  – true if you are the corresponding author
+#   year           – Year (integer)
+#   journal        – Preprint server name (bioRxiv)
+#   status         – Preprint / Submitted
+#   type           – Must be: preprint
+#   categories     – List of research topics for filtering
+# ──────────────────────────────────────────────────────────────────────────────
+
+- title: "Dosage-dependent disruption of corticofugal neuron development by Fezf2 loss"
+  authors: "**Hossain, M. J.**, Abhi, N. I., Islam, M. M., Das, S., Tasneem, E., & Tasnim, M."
+  corresponding: true
+  year: 2026
+  journal: "bioRxiv"
+  status: "Preprint"
+  type: preprint
+  categories:
+    - Bioinformatics
+    - Neuroscience
+
+- title: "Evaluating the false-positive rate of single-cell copy-number and malignant-cell classifiers"
+  authors: "**Hossain, M. J.**, & Dev, P. C."
+  corresponding: true
+  year: 2026
+  journal: "bioRxiv"
+  status: "Preprint"
+  type: preprint
+  categories:
+    - Bioinformatics
+    - Single-Cell
+    - Cancer Genomics
+
+- title: "A donor-level map of immune sex differences"
+  authors: "**Hossain, M. J.**, Dev, P. C., Nawar, T., Arony, T. A., Hoque, M., Chowdhury, D., & Rahma, M. A."
+  corresponding: true
+  year: 2026
+  journal: "bioRxiv"
+  status: "Preprint"
+  type: preprint
+  categories:
+    - Bioinformatics
+    - Immunology
+
+- title: "Multi-cohort transcriptomic analysis reveals a convergent immune-myeloid hub associated with poor prognosis in glioblastoma"
+  authors: "**Hossain, M. J.**, Ahmed, E., Shafin, R. H., Islam, J., Chowdhury, M. H., Ali, M. L., Dewanjee, S., & Hosain, M. M."
+  corresponding: true
+  year: 2026
+  journal: "bioRxiv"
+  status: "Preprint"
+  type: preprint
+  categories:
+    - Bioinformatics
+    - Cancer Genomics
+
+- title: "External validation of a single-cell multi-omics target prioritization pipeline in breast cancer"
+  authors: "**Hossain, M. J.**, & Abhi, N. I."
+  corresponding: true
+  year: 2026
+  journal: "bioRxiv"
+  status: "Preprint"
+  type: preprint
+  categories:
+    - Bioinformatics
+    - Cancer Genomics
+    - Single-Cell
+
+- title: "Graph Neural Network for predicting immunosuppressive spatial niches in glioblastoma from 10x Visium spatial transcriptomics"
+  authors: "**Hossain, M. J.**, & Dev, P. C."
+  corresponding: true
+  year: 2026
+  journal: "bioRxiv"
+  status: "Preprint"
+  type: preprint
+  categories:
+    - Bioinformatics
+    - Spatial Transcriptomics
+    - Machine Learning
