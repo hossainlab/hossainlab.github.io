@@ -131,9 +131,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-course','listing-description','listing-playlist','listing-categories','listing-home-order',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-course','listing-description','listing-playlist','listing-categories',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-course","listing-description","listing-playlist","listing-categories","listing-home-order"],
+      searchColumns: ["listing-course","listing-description","listing-playlist","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -437,6 +437,10 @@ window.Quarto = {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../#focus"> 
+<span class="menu-text">Focus</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../#featured"> 
 <span class="menu-text">Work</span></a>
   </li>  
@@ -445,7 +449,7 @@ window.Quarto = {
 <span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../#projects"> 
+    <a class="nav-link" href="../projects/index.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">

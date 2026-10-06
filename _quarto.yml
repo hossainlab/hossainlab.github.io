@@ -9,6 +9,8 @@ project:
     - "!cv/"
   resources:
     - robots.txt
+    - .nojekyll
+    - CNAME
     # cv/ is excluded from render; the navbar links straight at this PDF, so it
     # must be copied as a resource or a full render drops it from docs/.
     - cv/CV-HossainMJ.pdf
