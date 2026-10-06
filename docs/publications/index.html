@@ -75,10 +75,10 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-authors','listing-corresponding','listing-year','listing-journal','listing-status','listing-type','listing-categories','listing-doi','listing-pmc','listing-pubmed','listing-page','listing-volume','listing-article','listing-issue','listing-subtype','listing-target_journal','listing-presenter','listing-venue','listing-location',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-title','listing-authors','listing-corresponding','listing-year','listing-journal','listing-status','listing-type','listing-categories','listing-image','listing-doi','listing-pmc','listing-pubmed','listing-page','listing-volume','listing-article','listing-issue','listing-subtype','listing-target_journal','listing-presenter','listing-venue','listing-location',{ data: ['index'] },{ data: ['categories'] }],
       page: 25,
     pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
-      searchColumns: ["listing-title","listing-authors","listing-corresponding","listing-year","listing-journal","listing-status","listing-type","listing-categories","listing-doi","listing-pmc","listing-pubmed","listing-page","listing-volume","listing-article","listing-issue","listing-subtype","listing-target_journal","listing-presenter","listing-venue","listing-location"],
+      searchColumns: ["listing-title","listing-authors","listing-corresponding","listing-year","listing-journal","listing-status","listing-type","listing-categories","listing-image","listing-doi","listing-pmc","listing-pubmed","listing-page","listing-volume","listing-article","listing-issue","listing-subtype","listing-target_journal","listing-presenter","listing-venue","listing-location"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -390,10 +390,6 @@ window.Quarto = {
   <li class="nav-item">
     <a class="nav-link" href="../#talks"> 
 <span class="menu-text">Talks</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../projects/index.html"> 
-<span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../#tutorials"> 

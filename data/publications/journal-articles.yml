@@ -28,6 +28,7 @@
   corresponding: true
   year: 2026
   journal: "Health Science Reports"
+  image: "files/publications/featured-hsr-thyroid.jpg"
   doi: "https://doi.org/10.1002/hsr2.72617"
   pmc: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13266370/"
   pubmed: "https://pubmed.ncbi.nlm.nih.gov/42306204/"
@@ -43,6 +44,7 @@
   journal: "BMC Genomics"
   volume: "26"
   article: "999"
+  image: "files/publications/featured-rainbow-trout.jpg"
   doi: "https://doi.org/10.1186/s12864-025-12127-2"
   page: "/publications/papers/a-meta-analysis-of-public-rna-seq-data/"
   pmc: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12590911/"
@@ -58,6 +60,7 @@
   journal: "Scientific Reports"
   volume: "15"
   article: "34490"
+  image: "files/publications/featured-wnt-brca.jpg"
   doi: "https://doi.org/10.1038/s41598-025-13315-6"
   page: "/publications/papers/comprehensive-bioinformatics-analysis-reveals-prognostic-significance-and-immunological/"
   pmc: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12494856/"
@@ -88,6 +91,7 @@
   journal: "Scientific Reports"
   volume: "15"
   article: "14405"
+  image: "files/publications/featured-cct5-pancancer.jpg"
   doi: "https://doi.org/10.1038/s41598-025-88339-z"
   page: "/publications/papers/pan-cancer-analysis-reveals-immunological-and-prognostic-significance/"
   pmc: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12022336/"

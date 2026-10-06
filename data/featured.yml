@@ -10,13 +10,16 @@
   venue: "BMC Genomics"
   year: 2025
   doi: "https://doi.org/10.1186/s12864-025-12127-2"
+  image: "files/publications/featured-rainbow-trout.jpg"
 
 - title: "Comprehensive bioinformatics analysis reveals prognostic significance and immunological roles of WNT gene family in breast cancer"
   venue: "Scientific Reports"
   year: 2025
   doi: "https://doi.org/10.1038/s41598-025-13315-6"
+  image: "files/publications/featured-wnt-brca.jpg"
 
 - title: "Pan-cancer analysis reveals immunological and prognostic significance of CCT5 in human tumors"
   venue: "Scientific Reports"
   year: 2025
   doi: "https://doi.org/10.1038/s41598-025-88339-z"
+  image: "files/publications/featured-cct5-pancancer.jpg"
