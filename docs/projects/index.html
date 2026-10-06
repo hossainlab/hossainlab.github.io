@@ -75,9 +75,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-featured','listing-featured-order','listing-summary','listing-description','listing-categories','listing-tags','listing-links','listing-image','listing-image-alt',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-title','listing-image','listing-image-alt','listing-featured','listing-featured-order','listing-summary','listing-description','listing-categories','listing-tags','listing-links',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-title","listing-featured","listing-featured-order","listing-summary","listing-description","listing-categories","listing-tags","listing-links","listing-image","listing-image-alt"],
+      searchColumns: ["listing-title","listing-image","listing-image-alt","listing-featured","listing-featured-order","listing-summary","listing-description","listing-categories","listing-tags","listing-links"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -192,15 +192,19 @@ window.Quarto = {
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Research Projects – Jubayer Hossain - Multiomics and Machine Learning">
 <meta property="og:description" content="Ongoing and completed computational biology research projects">
-<meta property="og:image" content="https://mdjubayerhossain.com/files/projects/amr-drug-repurposing.svg">
+<meta property="og:image" content="https://mdjubayerhossain.com/files/metaexpress_logo.png">
 <meta property="og:site_name" content="Jubayer Hossain - Multiomics and Machine Learning">
-<meta property="og:image:alt" content="AMR Drug Repurposing">
+<meta property="og:image:alt" content="metaXpress R Package">
+<meta property="og:image:height" content="600">
+<meta property="og:image:width" content="518">
 <meta name="twitter:title" content="Research Projects – Jubayer Hossain - Multiomics and Machine Learning">
 <meta name="twitter:description" content="Ongoing and completed computational biology research projects">
-<meta name="twitter:image" content="https://mdjubayerhossain.com/files/projects/amr-drug-repurposing.svg">
+<meta name="twitter:image" content="https://mdjubayerhossain.com/files/metaexpress_logo.png">
 <meta name="twitter:creator" content="@hossain_lab">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image:alt" content="AMR Drug Repurposing">
+<meta name="twitter:image:alt" content="metaXpress R Package">
+<meta name="twitter:image-height" content="600">
+<meta name="twitter:image-width" content="518">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -393,10 +397,6 @@ window.Quarto = {
 <span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../projects/index.html" aria-current="page"> 
-<span class="menu-text">Projects</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../#tutorials"> 
 <span class="menu-text">Tutorials</span></a>
   </li>  
@@ -454,6 +454,7 @@ window.Quarto = {
 <div class="category-filters">
 <p><button class="category-btn active" data-category="all">All</button></p>
 <p><button class="category-btn" data-category="Bioinformatics">Bioinformatics</button></p>
+<p><button class="category-btn" data-category="Bulk RNA-Seq">Bulk RNA-Seq</button></p>
 <p><button class="category-btn" data-category="Cancer Genomics">Cancer Genomics</button></p>
 <p><button class="category-btn" data-category="Deep Learning">Deep Learning</button></p>
 <p><button class="category-btn" data-category="Genomics">Genomics</button></p>
@@ -461,9 +462,36 @@ window.Quarto = {
 <p><button class="category-btn" data-category="Neurogenomics">Neurogenomics</button></p>
 <p><button class="category-btn" data-category="Neuroscience">Neuroscience</button></p>
 <p><button class="category-btn" data-category="Single-Cell">Single-Cell</button></p>
+<p><button class="category-btn" data-category="Software">Software</button></p>
 <p><button class="category-btn" data-category="Spatial Omics">Spatial Omics</button></p>
 </div>
 <div class="project-grid">
+<div class="project-card" data-categories="Bulk RNA-Seq,Software,Bioinformatics">
+<div class="project-image">
+<p><img src="../files/metaexpress_logo.png" alt="metaXpress R Package" loading="lazy" decoding="async"></p>
+</div>
+<div class="project-content">
+<h3 class="project-title anchored">
+metaXpress: End-to-End Bulk RNA-seq Multi-Study Meta-Analysis
+</h3>
+<p>
+An end-to-end R package bridging the gap in transcriptomic meta-analysis workflows. It integrates automated NCBI GEO/SRA ingestion, 10-point QC checklists, cross-platform harmonization, per-study differential expression (DESeq2, edgeR, limma-voom), 6 meta-statistical algorithms (RankProd, REM, FEM, Fisher, Stouffer, Min-P), pathway enrichment meta-analysis, and an interactive Shiny explorer.
+</p>
+<div class="project-tags">
+<p><span class="tag">R</span></p>
+<p><span class="tag">Bioconductor</span></p>
+<p><span class="tag">DESeq2</span></p>
+<p><span class="tag">edgeR</span></p>
+<p><span class="tag">Shiny</span></p>
+<p><span class="tag">Meta-Analysis</span></p>
+</div>
+<div class="project-links">
+<p><a href="https://github.com/hossainlab/metaXpress" class="project-btn" target="_blank"><i class="bi bi-github"></i> GitHub</a></p>
+<p><a href="https://mdjubayerhossain.com/metaXpress/" class="project-btn" target="_blank"><i class="bi bi-book"></i> Docs</a></p>
+<p><a href="https://hossainlab.shinyapps.io/metaXpress-demo/" class="project-btn" target="_blank"><i class="bi bi-box-arrow-up-right"></i> Shiny App</a></p>
+</div>
+</div>
+</div>
 <div class="project-card" data-categories="Single-Cell,Cancer Genomics">
 <div class="project-content">
 <h3 class="project-title anchored">
@@ -1128,7 +1156,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../projects/index.html">
+    <a class="nav-link active" href="../projects/index.html" aria-current="page">
 <p>Projects</p>
 </a>
   </li>  

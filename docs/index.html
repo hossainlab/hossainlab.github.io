@@ -74,9 +74,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-venue','listing-year','listing-doi',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-title','listing-venue','listing-year','listing-url','listing-image','listing-link-text','listing-doi',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-title","listing-venue","listing-year","listing-doi"],
+      searchColumns: ["listing-title","listing-venue","listing-year","listing-url","listing-image","listing-link-text","listing-doi"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -584,10 +584,6 @@ window.Quarto = {
 <span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects/index.html"> 
-<span class="menu-text">Projects</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./#tutorials"> 
 <span class="menu-text">Tutorials</span></a>
   </li>  
@@ -814,15 +810,15 @@ window.Quarto = {
 <div id="listing-featured-list" class="quarto-listing quarto-listing-container-custom">
 <div class="featured-grid">
 <article class="featured-card">
-<div class="featured-image feat-fig-mono" aria-hidden="true">
-<span>HSR</span>
+<div class="featured-image">
+<img src="files/metaexpress_logo.png" alt="metaXpress: An end-to-end R package for bulk RNA-seq multi-study meta-analysis" loading="lazy">
 </div>
 <div class="featured-content">
-<span class="venue-badge">Health Science Reports, 2026</span>
+<span class="venue-badge">R Package, 2026</span>
 <h3>
-Integrative bioinformatics analysis reveals COL13A1 and COL23A1 as diagnostic and prognostic biomarkers in thyroid cancer
+metaXpress: An end-to-end R package for bulk RNA-seq multi-study meta-analysis
 </h3>
-<a href="https://doi.org/10.1002/hsr2.72617" target="_blank" rel="noopener">Read paper</a>
+<a href="https://github.com/hossainlab/metaXpress" target="_blank" rel="noopener">View package</a>
 </div>
 </article>
 <article class="featured-card">

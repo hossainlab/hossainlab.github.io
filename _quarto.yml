@@ -87,8 +87,6 @@ website:
         text: Work
       - href: "/#talks"
         text: Talks
-      - href: projects/index.qmd
-        text: Projects
       - href: "/#tutorials"
         text: Tutorials
       - href: "/#publications"

@@ -11,9 +11,38 @@
 # instead of an external button; add the repo or DOI under `links:` when it
 # is ready.
 - path: ""
-  title: "EWSAtlas: A Single-Cell Atlas of Ewing Sarcoma"
+  title: "metaXpress: End-to-End Bulk RNA-seq Multi-Study Meta-Analysis"
+  image: "../files/metaexpress_logo.png"
+  image-alt: "metaXpress R Package"
   featured: true
   featured-order: 1
+  summary: "An end-to-end R package for bulk RNA-seq multi-study meta-analysis with automated GEO retrieval, DE harmonization, missing gene imputation, and interactive reporting."
+  description: "An end-to-end R package bridging the gap in transcriptomic meta-analysis workflows. It integrates automated NCBI GEO/SRA ingestion, 10-point QC checklists, cross-platform harmonization, per-study differential expression (DESeq2, edgeR, limma-voom), 6 meta-statistical algorithms (RankProd, REM, FEM, Fisher, Stouffer, Min-P), pathway enrichment meta-analysis, and an interactive Shiny explorer."
+  categories:
+    - Bulk RNA-Seq
+    - Software
+    - Bioinformatics
+  tags:
+    - R
+    - Bioconductor
+    - DESeq2
+    - edgeR
+    - Shiny
+    - Meta-Analysis
+  links:
+    - label: "GitHub"
+      url: "https://github.com/hossainlab/metaXpress"
+    - label: "Docs"
+      url: "https://mdjubayerhossain.com/metaXpress/"
+      icon: "bi bi-book"
+    - label: "Shiny App"
+      url: "https://hossainlab.shinyapps.io/metaXpress-demo/"
+      icon: "bi bi-box-arrow-up-right"
+
+- path: ""
+  title: "EWSAtlas: A Single-Cell Atlas of Ewing Sarcoma"
+  featured: true
+  featured-order: 2
   summary: "Harmonised single-cell transcriptomics atlas of human Ewing sarcoma, integrating published tumour datasets into one reference."
   description: "A harmonised single-cell transcriptomics atlas of human Ewing sarcoma (EWS). Published tumour datasets are integrated into a common reference to chart malignant and microenvironmental cell states, characterise EWS-FLI1-driven transcriptional programmes, and provide a reusable resource for downstream analysis."
   categories:
@@ -31,7 +60,7 @@
 - path: ""
   title: "Hyperglycemia-Associated Cell-Specific Signatures in Liver and Kidney"
   featured: true
-  featured-order: 2
+  featured-order: 3
   summary: "Cell-type-resolved transcriptional signatures of hyperglycemic injury across hepatic and renal tissue."
   description: "Single-cell analysis of hyperglycemia-associated transcriptional change in liver and kidney, resolving which cell types carry the metabolic stress signature in each organ and how those programmes overlap between the two tissues."
   categories:
@@ -46,7 +75,7 @@
 - path: ""
   title: "Cellular and Molecular Mechanisms of Alzheimer's Disease"
   featured: true
-  featured-order: 3
+  featured-order: 4
   summary: "Single-cell and multi-omic dissection of the cell-type-specific programmes that drive Alzheimer's disease pathology."
   description: "Analysis of the cellular and molecular mechanisms underlying Alzheimer's disease, using single-cell and multi-omic brain data to resolve cell-type-specific transcriptional and regulatory programmes associated with disease progression."
   categories:

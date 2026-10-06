@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250">
+  <defs>
+    <linearGradient id="mx-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0f7ff" />
+      <stop offset="100%" stop-color="#e0e7ff" />
+    </linearGradient>
+    <linearGradient id="volcano-up" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <linearGradient id="volcano-down" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="250" fill="url(#mx-grad)" />
+
+  <!-- Multi-study meta-analysis motif: Volcano & Forest plot elements -->
+  <g transform="translate(200, 105)">
+    <!-- Central Hexagon / Frame -->
+    <polygon points="0,-60 52,-30 52,30 0,60 -52,30 -52,-30" fill="#ffffff" stroke="#3b82f6" stroke-width="2" opacity="0.9" />
+
+    <!-- Meta-Analysis Forest Plot Diamond in center -->
+    <polygon points="0,-16 22,0 0,16 -22,0" fill="#2563eb" opacity="0.85" />
+    <line x1="-36" y1="0" x2="36" y2="0" stroke="#1e40af" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Forest plot study lines (meta-combination) -->
+    <line x1="-28" y1="-26" x2="16" y2="-26" stroke="#64748b" stroke-width="1.5" stroke-linecap="round" />
+    <rect x="-10" y="-29" width="6" height="6" fill="#3b82f6" rx="1"/>
+
+    <line x1="-12" y1="26" x2="30" y2="26" stroke="#64748b" stroke-width="1.5" stroke-linecap="round" />
+    <rect x="5" y="23" width="6" height="6" fill="#3b82f6" rx="1"/>
+
+    <!-- Volcano Wings / DE Expression dots -->
+    <!-- Up-regulated (Right) -->
+    <circle cx="75" cy="-28" r="4.5" fill="#dc2626" />
+    <circle cx="88" cy="-45" r="3.5" fill="#ef4444" />
+    <circle cx="102" cy="-20" r="5" fill="#ef4444" opacity="0.75" />
+    <circle cx="72" cy="15" r="3" fill="#f87171" opacity="0.6" />
+    <path d="M48,-15 Q75,-35 95,-48" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3,2" fill="none" opacity="0.5"/>
+
+    <!-- Down-regulated (Left) -->
+    <circle cx="-75" cy="-28" r="4.5" fill="#2563eb" />
+    <circle cx="-88" cy="-45" r="3.5" fill="#3b82f6" />
+    <circle cx="-102" cy="-20" r="5" fill="#3b82f6" opacity="0.75" />
+    <circle cx="-72" cy="15" r="3" fill="#60a5fa" opacity="0.6" />
+    <path d="M-48,-15 Q-75,-35 -95,-48" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="3,2" fill="none" opacity="0.5"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="200" y="208" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="700" fill="#1e3a8a">metaXpress</text>
+  <text x="200" y="228" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="500" fill="#475569">RNA-seq Multi-Study Meta-Analysis R Package</text>
+</svg>

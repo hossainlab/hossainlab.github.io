@@ -1,8 +1,10 @@
 # Homepage "Featured Research" cards. Pick 4; order is respected.
-- title: "Integrative bioinformatics analysis reveals COL13A1 and COL23A1 as diagnostic and prognostic biomarkers in thyroid cancer"
-  venue: "Health Science Reports"
+- title: "metaXpress: An end-to-end R package for bulk RNA-seq multi-study meta-analysis"
+  venue: "R Package"
   year: 2026
-  doi: "https://doi.org/10.1002/hsr2.72617"
+  url: "https://github.com/hossainlab/metaXpress"
+  image: "files/metaexpress_logo.png"
+  link-text: "View package"
 
 - title: "A meta-analysis of public RNA-Seq data identifies conserved stress responses in rainbow trout"
   venue: "BMC Genomics"
