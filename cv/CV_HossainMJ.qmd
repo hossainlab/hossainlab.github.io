@@ -89,7 +89,7 @@ get_cv_sheet('certifications') %>%
 
 # Technical Skills 
 - **Programming Languages**: Python, R, Julia, SQL, Bash, JavaScript
-- **Bioinformatics**: Bulk RNA-Seq (Salmon, DESeq2), Single-Cell (Seurat, Scanpy, CellChat, NicheNet, scvi-tools, rapids-singlecell), Spatial Transcriptomics (Seurat, Squidpy), Multi-omics (Muon)
+- **Bioinformatics**: Bulk RNA-Seq (Salmon, DESeq2), Single-Cell (Seurat, Scanpy, CellChat, NicheNet, scvi-tools, rapids-singlecell), Spatial Transcriptomics (Squidpy), Multi-omics (Muon)
 - **Workflow Management & Reproducibility**: Nextflow (DSL2), nf-core, Docker, Singularity, Git, GitHub
 - **ML/DL in Biology**: GNN, Scikit-learn, PyTorch, RDkit, DeepChem
 - **HPC & Cluster Computing**: SLURM (sbatch, sarray), Nextflow DSL2 with SLURM executor for scalable reusable pipelines

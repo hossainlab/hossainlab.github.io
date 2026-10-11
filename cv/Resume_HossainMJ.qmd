@@ -39,7 +39,7 @@ options(knitr.table.format = "latex")
 \fancyfoot[C]{\footnotesize\color{cvsub}Md. Jubayer Hossain\enspace\textperiodcentered\enspace Resume\enspace\textperiodcentered\enspace Page \thepage\ of {\color{cvlink}\pageref{LastPage}}}
 \begin{center}
 {\fontsize{24}{28}\selectfont\bfseries\color{cvname} Md. Jubayer Hossain}\\[3pt]
-{\large\color{cvsub} Bioinformatics \& Computational Biology}\\[5pt]
+{\large\color{cvsub} Bioinformatics \& Computational Biology \textperiodcentered{} Prospective Ph.D. Student}\\[6pt]
 \makebox[\linewidth][c]{\footnotesize
 \href{mailto:hossainmj.me@gmail.com}{\color{cvlink}\faEnvelope~hossainmj.me@gmail.com}%
 \cvsep
@@ -49,7 +49,7 @@ options(knitr.table.format = "latex")
 \cvsep
 \href{https://github.com/hossainlab}{\color{cvlink}\faGithub~github.com/hossainlab}}
 \end{center}
-\vspace{-16pt}
+\vspace{-8pt}
 ```
 
 # Education
@@ -65,20 +65,34 @@ get_cv_sheet('education') %>%
   make_resume_entries(keep = "^$")
 ```
 
-# Research Experience
+# Certifications & Hackathons
 
 ```{r}
 #| results: asis
-# Bioinformatics/genomics entries only
-get_cv_sheet('research') %>%
-  mutate(date = resume_dates(start_date, end_date), entry = cumsum(!is.na(role))) %>%
-  group_by(entry) %>%
-  filter(any(is_bioinfo(details), na.rm = TRUE)) %>%
-  ungroup() %>%
-  make_resume_entries()
+get_cv_sheet('certifications') %>%
+  filter(!is.na(program)) %>%
+  mutate(latex = paste0(
+    "\\cvline{\\textbf{", escape_latex(program), "}, ", escape_latex(institution), "}{", year, "}"
+  )) %>%
+  pull(latex) %>%
+  str_replace_all(" [Xx] ", " \\\\texttimes{} ") %>%
+  paste(collapse = "\n") %>%
+  cat("\\begingroup\\setlength{\\parskip}{3pt}\n", ., "\n\\endgroup\n", sep = "")
 ```
 
-# Professional Experience
+# Technical Skills
+
+```{=latex}
+\begingroup\setlength{\parskip}{2pt}
+\noindent\textbf{Programming:} Python, R, Julia, SQL, Bash, JavaScript\par
+\noindent\textbf{Bioinformatics:} RNA-seq (Salmon, DESeq2), scRNA-seq (Seurat, Scanpy, scvi-tools), spatial (Squidpy), multi-omics (Muon)\par
+\noindent\textbf{Workflows \& Reproducibility:} Nextflow (DSL2), nf-core, Docker, Singularity, Git, GitHub\par
+\noindent\textbf{ML/DL in Biology:} PyTorch, scikit-learn, GNNs, RDKit, DeepChem\par
+\noindent\textbf{HPC \& Cloud:} SLURM, Nextflow SLURM executor; AWS S3, Google Cloud Storage\par
+\endgroup
+```
+
+# Research Experience
 
 ```{r}
 #| results: asis
@@ -88,15 +102,27 @@ prep <- function(x) {
     select(role, institution, where, details, date) %>%
     mutate(across(everything(), as.character))
 }
-# One line per role:  **Role**, Institution, Where          Date
+# One line per role:  **Role**, Institution          Date
+resume_lines <- function(x) {
+  x %>%
+    filter(!is.na(role)) %>%
+    mutate(latex = paste0(
+      "\\cvline{\\textbf{", escape_latex(role), "}, ", escape_latex(institution), "}{", date, "}"
+    )) %>%
+    pull(latex) %>%
+    paste(collapse = "\n") %>%
+    cat("\\begingroup\\setlength{\\parskip}{2pt}\n", ., "\n\\endgroup\n", sep = "")
+}
+# All research roles, same as the CV
+resume_lines(prep(get_cv_sheet('research')))
+```
+
+# Professional Experience
+
+```{r}
+#| results: asis
 bind_rows(prep(get_cv_sheet('leadership')), prep(get_cv_sheet('teaching'))) %>%
-  filter(!is.na(role)) %>%
-  mutate(latex = paste0(
-    "\\cvline{\\textbf{", escape_latex(role), "}, ", escape_latex(institution), "}{", date, "}"
-  )) %>%
-  pull(latex) %>%
-  paste(collapse = "\n") %>%
-  cat("\\begingroup\\setlength{\\parskip}{2pt}\n", ., "\n\\endgroup\n", sep = "")
+  resume_lines()
 ```
 
 # Selected Publications
@@ -141,7 +167,7 @@ get_cv_sheet('presentations') %>%
   make_presentation_entries(undergrad_mark = FALSE)
 ```
 
-# Awards & Certifications
+# Awards & Fellowships
 
 ```{r}
 #| results: asis
@@ -149,25 +175,13 @@ get_cv_sheet('awards') %>%
   make_award_entries()
 ```
 
-```{r}
-#| results: asis
-get_cv_sheet('certifications') %>%
-  filter(!is.na(program), !str_detect(program, "Public Health")) %>%
-  mutate(latex = paste0(
-    "\\cvline{\\textbf{", escape_latex(program), "}, ", escape_latex(institution), "}{", year, "}"
-  )) %>%
-  pull(latex) %>%
-  str_replace_all(" [Xx] ", " \\\\texttimes{} ") %>%
-  paste(collapse = "\n") %>%
-  cat("\\begingroup\\setlength{\\parskip}{3pt}\n", ., "\n\\endgroup\n", sep = "")
-```
-
-# Technical Skills
+# References
 
 ```{=latex}
 \begingroup\setlength{\parskip}{2pt}
-\noindent\textbf{Bioinformatics:} Bulk RNA-seq, single-cell RNA-seq, spatial transcriptomics, multi-omics integration, WGS, metagenomics\par
-\noindent\textbf{Programming \& ML:} Python, R, Julia, SQL, Bash, JavaScript; scikit-learn, PyTorch, RDKit, DeepChem\par
-\noindent\textbf{Workflows, HPC \& Cloud:} Nextflow (DSL2), nf-core, Docker, Singularity, Git; SLURM; AWS S3, Google Cloud Storage\par
+\cvline{\textbf{Dr. Syeda Tasneem Towhid}, Associate Professor, Dept. of Microbiology, Jagannath University}{\href{mailto:towhidst@mib.jnu.ac.bd}{\color{cvlink}towhidst@mib.jnu.ac.bd}}
+\cvline{\textbf{Dr. Iqbal Mahmud}, Assistant Professor, Lamar University, TX, USA}{\href{mailto:imahmud1@lamar.edu}{\color{cvlink}imahmud1@lamar.edu}}
+\cvline{\textbf{Dr. Zeba Islam Seraj}, Director, cBLAST, University of Dhaka}{\href{mailto:zebai@du.ac.bd}{\color{cvlink}zebai@du.ac.bd}}
+\cvline{\textbf{Dr. Yeon Ju Kim}, Professor, Convergent Biotechnology, Kyung Hee University, South Korea}{\href{mailto:yeonjukim@khu.ac.kr}{\color{cvlink}yeonjukim@khu.ac.kr}}
 \endgroup
 ```

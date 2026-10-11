@@ -4,12 +4,17 @@ format:
     toc: false
     number-sections: false
     colorlinks: true
+    linkcolor: cvlink
+    urlcolor: cvlink
+    citecolor: cvlink
+    filecolor: cvlink
     documentclass: scrartcl
     papersize: letter
-    pdf-engine: lualatex
+    pdf-engine: xelatex
     fontsize: 10pt
     geometry:
-      - margin=1in
+      - margin=0.65in
+      - bottom=0.8in
       - heightrounded
     include-in-header:
       - preamble.tex
@@ -36,33 +41,32 @@ knitr::opts_chunk$set(
 
 source("functions.R")
 
+# Set global table format for knitr
+options(knitr.table.format = "latex")
+
 # Store IDs
 gscholar_id <- '9_K4ekoAAAAJ'
 gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_id)
 ```
 
-\par\centering{\LARGE{Md. Jubayer Hossain}}
-\par\centering{Department of Public Health}
-\vspace{-5pt}
-\par\centering{Daffodil International University}
-\vspace{-5pt}
-\par\centering{Daffodil Smart City}
-\vspace{-5pt}
-\par\centering{Birulia, Savar, Dhaka-1216, Bangladesh}
-\vspace{-5pt}
-\par\centering{{\large\Telefon} +8801662345906}
-\vspace{-5pt}
-\par\centering{{\large\Letter} hossainmj.me@gmail.com}
-\vspace{-5pt}
-\par\centering{\href{http://www.mdjubayerhossain.com}{www.mdjubayerhossain.com}}
+```{=latex}
+\begin{center}
+{\fontsize{26}{30}\selectfont\bfseries\color{cvname} Md. Jubayer Hossain}\\[4pt]
+{\large\color{cvsub} Bioinformatics \& Computational Biology \textperiodcentered{} Prospective Ph.D. Student}\\[6pt]
+\makebox[\linewidth][c]{\footnotesize
+\href{mailto:hossainmj.me@gmail.com}{\color{cvlink}\faEnvelope~hossainmj.me@gmail.com}%
+\cvsep
+\href{https://mdjubayerhossain.com}{\color{cvlink}\faGlobe~mdjubayerhossain.com}%
+\cvsep
+\href{https://linkedin.com/in/hossainmj}{\color{cvlink}\faLinkedin~linkedin.com/in/hossainmj}%
+\cvsep
+\href{https://github.com/hossainlab}{\color{cvlink}\faGithub~github.com/hossainlab}}
+\end{center}
+\vspace{-4pt}
+```
 
 # Publications 
-
-  \apptocmd{\tightlist}{\setlength{\itemsep}{4pt}}{}{}
-
-ORCID: \href{https://orcid.org/0000-0001-9323-4997}{0000-0001-9323-4997} | [Google Scholar Profile](https://scholar.google.com/citations?user=9_K4ekoAAAAJ&hl=en&authuser=5)
-
-\underline{Underline} indicates mentee; ** undergraduate student; * corresponding 
+\underline{Underline} indicates mentee; *corresponding 
 
 ## A. Journal Articles
 ```{r}

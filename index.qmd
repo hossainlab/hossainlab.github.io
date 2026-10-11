@@ -73,7 +73,7 @@ listing:
 <a class="button is-primary" href="#publications"><span class="icon"><i class="bi bi-file-earmark-text"></i></span><span>Publications</span></a>
 <a class="button is-light" href="#talks"><span class="icon"><i class="bi bi-mic"></i></span><span>Talks</span></a>
 <a class="button is-light" href="projects/index.html"><span class="icon"><i class="bi bi-code-square"></i></span><span>Projects</span></a>
-<a class="button is-light" href="../cv/CV-HossainMJ.pdf" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-file-earmark-pdf"></i></span><span>CV</span></a>
+<a class="button is-light" href="../cv/CV_HossainMJ.pdf" target="_blank" rel="noopener"><span class="icon"><i class="bi bi-file-earmark-pdf"></i></span><span>CV</span></a>
 </div>
 </div>
 <aside class="profile-panel" aria-label="Profile information">
