@@ -214,3 +214,6 @@ __marimo__/
 .positai
 
 cv/_cache/
+
+# Quarto build output; rendered and deployed by .github/workflows/publish.yml
+/docs/
