@@ -231,22 +231,43 @@ make_research_entries <- function(df) {
 
 # Courses: one line each, newest first
 #   **Title**, Host [Materials]                        Oct 2023
+invited_hosts <- c(
+    "Research Help Bangladesh",
+    "Dept. of Pharmacy and CSE, Northern University Bangladesh",
+    "Genetic Engineering Club, JnU",
+    "Public Health Forum, Jahangirnagar University"
+)
+
 make_course_entries <- function(df) {
     df <- df %>%
-        arrange(desc(date)) %>%
         mutate(
-            date  = format(as.Date(date), "%b %Y"),
-            title = escape_latex(title),
-            host  = escape_latex(host),
+            date    = as.Date(date),
+            invited = host %in% invited_hosts,
+            title   = ifelse(invited, paste0(title, ", \\textit{", escape_latex(host), "}"), title),
+            host    = ifelse(invited, "Invited Lectures & Workshops", host)
+        ) %>%
+        group_by(host) %>%
+        mutate(latest = max(date)) %>%
+        ungroup() %>%
+        arrange(desc(latest), host, desc(date)) %>%
+        mutate(
+            title = ifelse(invited, title, escape_latex(title)),
             link  = ifelse(
                 is.na(url), "",
-                paste0(" \\href{", str_replace_all(url, "([%#])", "\\\\\\1"), "}{[Materials]}")
+                paste0("\\enspace\\href{", str_replace_all(url, "([%#])", "\\\\\\1"),
+                       "}{{\\color{cvlink}\\scriptsize\\faExternalLink*}}")
             ),
-            latex = paste0("\\cvline{\\textbf{", title, "}, ", host, link, "}{", date, "}")
+            line  = paste0("{\\leftskip=1.2em\\cvline{", title, link, "}{",
+                           format(date, "%Y"), "}}")
         )
-    cat("\\begingroup\\setlength{\\parskip}{2pt}\n",
-        paste(df$latex, collapse = "\n"),
-        "\n\\endgroup\n", sep = "")
+    groups <- split(df, factor(df$host, levels = unique(df$host)))
+    entries <- vapply(names(groups), function(h) {
+        paste0("\\noindent\\textbf{", escape_latex(h), "}\\par\n",
+               paste(groups[[h]]$line, collapse = "\n"), "\n\\vspace{5pt}\n")
+    }, character(1))
+    cat("```{=latex}\n\\begingroup\\setlength{\\parskip}{1pt}\n",
+        entries,
+        "\\endgroup\n```\n", sep = "")
 }
 
 # Awards (sheet order):

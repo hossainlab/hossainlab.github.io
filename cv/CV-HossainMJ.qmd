@@ -62,7 +62,7 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \cvsep
 \href{https://github.com/hossainlab}{\color{cvlink}\faGithub~github.com/hossainlab}}
 \end{center}
-\vspace{-10pt}
+\vspace{-4pt}
 ```
 
 # Education 
@@ -86,6 +86,23 @@ get_cv_sheet('certifications') %>%
   make_cert_entries()
 ```
 
+
+# Technical Skills 
+- **Programming Languages**: Python, R, Julia, SQL, Bash, JavaScript
+- **Bioinformatics**: Bulk RNA-Seq (Salmon, DESeq2), Single-Cell (Seurat, Scanpy, CellChat, NicheNet, scvi-tools, rapids-singlecell), Spatial Transcriptomics (Seurat, Squidpy), Multi-omics (Muon)
+- **Workflow Management & Reproducibility**: Nextflow (DSL2), nf-core, Docker, Singularity, Git, GitHub
+- **ML/DL in Biology**: GNN, Scikit-learn, PyTorch, RDkit, DeepChem
+- **HPC & Cluster Computing**: SLURM (sbatch, sarray), Nextflow DSL2 with SLURM executor for scalable reusable pipelines
+- **Cloud**: AWS S3, Google Cloud Storage for large genomic datasets
+
+# Research Statement 
+Deciphering how spatial architecture within the tumor microenvironment drives therapeutic resistance by integrating single-cell multi-omics, spatial transcriptomics, and graph neural networks (GNNs).
+
+# Teaching Interests
+- **Bioinformatics**: scalable, reproducible computational pipelines for single-cell, spatial, and bulk transcriptomics to elucidate complex disease biology.
+- **Life Sciences AI**: Applying deep learning and foundation models to single-cell genomics data for high-accuracy predictive modeling.
+- **Agentic AI in Biology**: Autonomous AI agents for hypothesis generation, multi-step workflow orchestration, and automated bioinformatics analysis.
+
 # Research Experience
 
 ```{r}
@@ -94,7 +111,7 @@ get_cv_sheet('research') %>%
   make_research_entries()
 ```
 
-# Professional and Work Experience
+# Professional Experience
 
 ```{r}
 #| results: asis
@@ -121,7 +138,7 @@ get_cv_sheet('leadership') %>%
 # Publications 
 \underline{Underline} indicates mentee; *corresponding 
 
-## A. Journal Articles
+## Journal Articles
 ```{r}
 pubs <- get_cv_sheet('pubs') %>%
   mutate(
@@ -148,7 +165,7 @@ pubs <- get_cv_sheet('pubs') %>%
 make_ordered_list_filtered(pubs, "peer_reviewed")
 ```
 
-## B. Papers Under Review
+## Papers Under Review
 
 ```{r}
 #| results: asis
@@ -156,18 +173,11 @@ make_ordered_list_filtered(pubs, "peer_reviewed")
 make_ordered_list_filtered(pubs, "under_review")
 ```
 
-## C. Preprints
+## Preprints
 
 ```{r}
 #| results: asis
 make_ordered_list_filtered(pubs, "preprint")
-```
-
-## D. Working Papers
-
-```{r}
-#| results: asis
-make_ordered_list_filtered(pubs, "working")
 ```
 
 # Presentations
@@ -177,7 +187,7 @@ make_ordered_list_filtered(pubs, "working")
 presentations <- get_cv_sheet('presentations')
 ```
 
-## A. Invited Speaker
+## Invited Speaker
 
 ```{r}
 #| results: asis
@@ -185,7 +195,7 @@ presentations <- get_cv_sheet('presentations')
 make_presentation_entries(presentations, "invited")
 ```
 
-## B. Conference Presentations
+## Conference Presentations
 
 ```{r}
 #| results: asis
@@ -193,7 +203,7 @@ make_presentation_entries(presentations, "invited")
 make_presentation_entries(presentations, "conference")
 ```
 
-## C. Posters
+## Posters
 
 ```{r}
 #| results: asis
@@ -203,7 +213,7 @@ make_presentation_entries(presentations, "poster")
 
 
 # Teaching & Mentoring Experience 
-## A. Teaching & Training Roles
+## Teaching & Training Roles
 
 ```{r}
 #| results: asis
@@ -227,7 +237,7 @@ get_cv_sheet('teaching') %>%
   make_cv_entries(date, role, institution, where, details)
 ```
 
-## B. Courses Taught
+## Courses Taught
 
 ```{r}
 #| results: asis
@@ -275,24 +285,6 @@ get_cv_sheet('community') %>%
   ) %>%
   make_cv_entries(date, role, institution, where, details)
 ```
-
-# Technical Skills 
-- **Programming Languages**: Python, R, Julia, SQL, Bash, JavaScript
-- **Bioinformatics**: Bulk RNA-Seq, Single-Cell RNA-Seq, Spatial Transcriptomics, Multi-omics
-- **Workflow Management & Reproducibility**: Nextflow (DSL2), nf-core, Docker, Singularity, Git, GitHub
-- **AI in Biology**: Scikit-learn, PyTorch, RDkit, DeepChem
-- **HPC & Cluster Computing**: SLURM (sbatch, sarray), Nextflow DSL2 with SLURM executor for scalable reusable pipelines
-- **Cloud**: AWS S3, Google Cloud Storage for large genomic datasets
-
-
-# Research Interests
-- **Bioinformatics**: Integrative analysis of bulk RNA-seq, single-cell RNA-seq, and spatial transcriptomics to identify robust immunological biomarkers and therapeutic targets within tumor microenvironments;
-- **AI in Biology**: Deep learning applications in single-cell genomics, particularly for data integration and cell type annotation.
-
-# Teaching Interests
-- **Programming \& Data Analytics**: Programming in R and Python; exploratory data analysis; data visualization; reproducibility.
-- **Bioinformatics**: Scalable, reproducible computational pipelines for single-cell, spatial, and bulk transcriptomics to elucidate complex disease biology (Bash, Nextflow, Docker).
-- **AI in Biology**: Applying deep learning frameworks to single-cell genomics data for high-accuracy predictive modeling. 
 
 # Media Coverage
 <!-- Set spacing in between list -->

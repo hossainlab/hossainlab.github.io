@@ -36,12 +36,12 @@
 \addtokomafont{disposition}{\rmfamily\color{black}}
 \addtokomafont{section}{\large}
 \addtokomafont{subsection}{\normalsize\itshape}
-\RedeclareSectionCommand[beforeskip=14pt,afterskip=8pt]{section}
-\RedeclareSectionCommand[beforeskip=6pt,afterskip=3pt]{subsection}
+\RedeclareSectionCommand[beforeskip=8pt,afterskip=5pt]{section}
+\RedeclareSectionCommand[beforeskip=4pt,afterskip=2pt]{subsection}
 \makeatletter
 \renewcommand{\sectionlinesformat}[4]{%
   \ifstr{#1}{section}
-    {\parbox[t]{\linewidth}{\setlength{\parskip}{0pt}\MakeUppercase{#4}\par\nointerlineskip\vspace{6pt}{\color{black}\hrule height 0.8pt}}}
+    {\parbox[t]{\linewidth}{\setlength{\parskip}{0pt}\MakeUppercase{#4}\par\nointerlineskip\vspace{3pt}{\color{black}\hrule height 0.8pt}}}
     {\@hangfrom{\hskip #2#3}{#4}}}
 \makeatother
 
