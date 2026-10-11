@@ -25,27 +25,11 @@ get_cites <- function(url) {
   return(cites)
 }
 
-# Sheets are cached as .rds in _cache/ so re-renders skip the network. A cached
-# copy is reused for CV_CACHE_HOURS (default 24); set CV_REFRESH=true to force
-# a fresh download after editing the sheet.
 get_cv_sheet <- function(sheet) {
-    cache_dir <- '_cache'
-    cache_file <- file.path(cache_dir, paste0(sheet, '.rds'))
-    max_age <- as.numeric(Sys.getenv('CV_CACHE_HOURS', '24')) * 3600
-    refresh <- tolower(Sys.getenv('CV_REFRESH', 'false')) %in% c('true', '1', 'yes')
-
-    if (!refresh && file.exists(cache_file) &&
-        difftime(Sys.time(), file.mtime(cache_file), units = 'secs') < max_age) {
-        return(readRDS(cache_file))
-    }
-
-    df <- read_sheet(
+    return(read_sheet(
         ss = 'https://docs.google.com/spreadsheets/d/1uIJiRbVvBDzrB4QnrpHUmUOzB8rAjop5omtZBxVVE4Y/edit?usp=sharing',
         sheet = sheet
-    )
-    dir.create(cache_dir, showWarnings = FALSE)
-    saveRDS(df, cache_file)
-    return(df)
+    ))
 }
 
 make_ordered_list <- function(x) {
@@ -75,45 +59,25 @@ na_to_space <- function(x) {
   return(ifelse(is.na(x), '', x))
 }
 
-# Sheet date cells come back as a list-column of mixed types: real dates, bare
-# years, text like "Present" or "December, 2025", empty cells (NULL), and
-# occasionally an epoch-seconds serial. Normalize all of those to "Mon YYYY"
-# (bare years and free text pass through unchanged), or NA.
-fmt_when <- function(x) {
-  sapply(x, function(v) {
-    if (is.null(v) || length(v) == 0) return(NA_character_)
-    v <- v[[1]]
-    if (inherits(v, c('Date', 'POSIXct'))) return(format(as.Date(v), '%b %Y'))
-    s <- as.character(v)
-    if (is.na(s) || s %in% c('', 'NULL', 'NA')) return(NA_character_)
-    n <- suppressWarnings(as.numeric(s))
-    if (!is.na(n) && n > 10000) {
-      return(format(as.Date(as.POSIXct(n, origin = '1970-01-01', tz = 'UTC')), '%b %Y'))
-    }
-    if (!is.na(n)) return(format(round(n)))
-    p <- suppressWarnings(lubridate::my(s, quiet = TRUE))
-    if (!is.na(p)) return(format(p, '%b %Y'))
-    return(s)
-  }, USE.NAMES = FALSE)
-}
-
 enquote <- function(x) {
   return(paste0('"', x, '"'))
-}
-
-# Tables are rendered with kbl(escape = FALSE) so the $^†$ superscript survives,
-# which means LaTeX specials arriving from the sheet must be escaped by hand.
-escape_latex_cells <- function(df) {
-  df %>%
-    mutate(across(everything(), as.character)) %>%
-    mutate(across(everything(), ~str_replace_all(., "&", "\\\\&"))) %>%
-    mutate(across(everything(), ~str_replace_all(., "%", "\\\\%"))) %>%
-    mutate(across(everything(), ~str_replace_all(., "#", "\\\\#")))
 }
 
 library(tidyr)
 markdown_url <- function(url) {
   return(paste0('[', url, '](', url,')'))
+}
+
+# Entry header shared by all sections:
+#   **Role**                                           Date
+#   Institution                                        Location
+cv_entry_head <- function(role, inst, date, where) {
+    na_blank <- function(x) if (is.na(x)) "" else x
+    role_text <- if (!is.na(role)) paste0("\\textbf{", role, "}") else ""
+    paste0(
+        "\\cvline{", role_text, "}{", na_blank(date), "}\n",
+        "\\cvline{", na_blank(inst), "}{", na_blank(where), "}\n"
+    )
 }
 
 make_cv_entries <- function(df, date_col, role_col, inst_col, where_col, details_col) {
@@ -156,10 +120,13 @@ make_cv_entries <- function(df, date_col, role_col, inst_col, where_col, details
             # Format bullets
             bullet_list <- bullets
             bullet_list <- bullet_list[!is.na(bullet_list)]
+            is_note <- grepl("^(Advisor|Supervisor|Collaborator)s?:", bullet_list)
+            note_latex <- if (any(is_note)) paste0("\\noindent ", bullet_list[is_note], "\\par\n", collapse = "") else ""
+            bullet_list <- sub("^([A-Z][^:]{1,30}:)", "\\\\textbf{\\1}", bullet_list[!is_note])
 
             if (length(bullet_list) > 0) {
                 bullet_latex <- paste0(
-                    "\\begin{itemize}[nosep,topsep=2pt,leftmargin=1em]\n",
+                    "\\begin{itemize}\n",
                     paste0("  \\item ", bullet_list, collapse = "\n"),
                     "\n\\end{itemize}"
                 )
@@ -167,24 +134,310 @@ make_cv_entries <- function(df, date_col, role_col, inst_col, where_col, details
                 bullet_latex <- ""
             }
 
-            # Role (bold) \hfill Location (italic)
-            role_text  <- if (!is.na({{role_col}}))  paste0("\\textbf{", {{role_col}}, "}") else ""
-            where_text <- if (!is.na({{where_col}})) paste0("\\textit{", {{where_col}}, "}") else ""
-
-            # Institution (plain) \hfill Date
-            inst_text <- if (!is.na({{inst_col}})) {{inst_col}} else ""
-            date_text <- if (!is.na({{date_col}})) {{date_col}} else ""
-
             paste0(
-                "\\noindent\\begin{minipage}{\\linewidth}\n",
-                role_text, "\\hfill ", where_text, "\\\\\n",
-                inst_text, "\\hfill ", date_text, "\n",
-                "\\end{minipage}\n",
+                "\\begingroup\\setlength{\\parskip}{0pt}\n",
+                cv_entry_head({{role_col}}, {{inst_col}}, {{date_col}}, {{where_col}}),
+                note_latex,
                 if (bullet_latex != "") paste0(bullet_latex, "\n") else "",
-                "\\vspace{5pt}\n"
+                "\\endgroup\\vspace{5pt}\n"
             )
         }) %>%
         pull(latex)
 
     cat(entries, sep = "\n")
+}
+
+# Format one sheet date cell: Date/POSIXct -> "Jun 2020", bare year -> "2026",
+# "Present"/text passes through, NA/NULL -> NA
+fmt_cv_date <- function(x) {
+    if (is.null(x) || length(x) == 0 || all(is.na(x))) return(NA_character_)
+    if (inherits(x, c("Date", "POSIXt"))) return(format(as.Date(x), "%b %Y"))
+    if (is.numeric(x)) {
+        if (x < 3000) return(as.character(x))
+        return(format(as.Date(as.POSIXct(x, origin = "1970-01-01", tz = "UTC")), "%b %Y"))
+    }
+    x <- as.character(x)
+    if (grepl("^\\d{4}$", x)) return(x)
+    d <- suppressWarnings(as.Date(x, optional = TRUE))
+    if (!is.na(d)) return(format(d, "%b %Y"))
+    x
+}
+
+escape_latex <- function(x) {
+    x %>%
+        str_replace_all("&", "\\\\&") %>%
+        str_replace_all("_", "\\\\_") %>%
+        str_replace_all("%", "\\\\%") %>%
+        str_replace_all("#", "\\\\#") %>%
+        str_replace_all("\u2019", "'")  # xeCJK spaces curly apostrophes oddly
+}
+
+# Research entries:
+#   **Role**                                           Start – End
+#   Institution                                        Where
+#   Collaborator/Advisor line
+#   **Project N:** title (paragraph)
+#   bullets
+# Each entry starts on a row with a role; following rows (role empty) add details.
+make_research_entries <- function(df) {
+    df <- df %>%
+        mutate(
+            start = sapply(start_date, fmt_cv_date),
+            end   = sapply(end_date, fmt_cv_date),
+            across(c(role, institution, where, details), ~escape_latex(as.character(.))),
+            entry = cumsum(!is.na(role))
+        )
+
+    entries <- lapply(split(df, df$entry), function(e) {
+        head <- e[1, ]
+        date <- paste(na.omit(c(head$start, head$end)), collapse = " -- ")
+        out <- paste0(
+            "\\begingroup\\setlength{\\parskip}{0pt}\n",
+            cv_entry_head(head$role, head$institution, date, head$where)
+        )
+
+        details <- e$details[!is.na(e$details) & e$details != ""]
+        is_bullet <- !grepl("^(Project( \\d+)?|Collaborators?|Advisors?|Supervisors?|PI):", details)
+        run <- character(0)
+        flush <- function() {
+            if (length(run) == 0) return("")
+            s <- paste0(
+                "\\begin{itemize}\n",
+                paste0("  \\item ", run, collapse = "\n"),
+                "\n\\end{itemize}\n"
+            )
+            run <<- character(0)
+            s
+        }
+        for (i in seq_along(details)) {
+            d <- details[i]
+            if (is_bullet[i]) {
+                run <- c(run, d)
+                next
+            }
+            out <- paste0(out, flush())
+            if (grepl("^Project", d)) {
+                d <- sub("^(Project( \\d+)?:)\\s*", "\\\\textbf{\\1} ", d)
+                out <- paste0(out, "\\vspace{3pt}\\noindent ", d, "\\par\n")
+            } else {
+                out <- paste0(out, "\\noindent ", d, "\\par\n")
+            }
+        }
+        paste0(out, flush(), "\\endgroup\\vspace{5pt}\n")
+    })
+
+    cat(unlist(entries), sep = "\n")
+}
+
+# Courses: one line each, newest first
+#   **Title**, Host [Materials]                        Oct 2023
+make_course_entries <- function(df) {
+    df <- df %>%
+        arrange(desc(date)) %>%
+        mutate(
+            date  = format(as.Date(date), "%b %Y"),
+            title = escape_latex(title),
+            host  = escape_latex(host),
+            link  = ifelse(
+                is.na(url), "",
+                paste0(" \\href{", str_replace_all(url, "([%#])", "\\\\\\1"), "}{[Materials]}")
+            ),
+            latex = paste0("\\cvline{\\textbf{", title, "}, ", host, link, "}{", date, "}")
+        )
+    cat("\\begingroup\\setlength{\\parskip}{2pt}\n",
+        paste(df$latex, collapse = "\n"),
+        "\n\\endgroup\n", sep = "")
+}
+
+# Awards (sheet order):
+#   **Award name**, *Organization*                     2026
+#   Description (optional `description` column)
+make_award_entries <- function(df) {
+    if (!"description" %in% names(df)) df$description <- NA_character_
+    df <- df %>%
+        filter(!is.na(award_name)) %>%
+        mutate(
+            date  = ifelse(is.na(date), "", as.character(date)),
+            title = paste0(
+                "\\textbf{", escape_latex(award_name), "}",
+                ifelse(is.na(organization), "", paste0(", \\textit{", escape_latex(organization), "}"))
+            ),
+            desc  = ifelse(is.na(description), "", paste0("\\noindent ", escape_latex(description), "\\par\n")),
+            latex = paste0("\\cvline{", title, "}{", date, "}\n", desc)
+        )
+    cat("\\begingroup\\setlength{\\parskip}{3pt}\n",
+        paste(df$latex, collapse = ""),
+        "\\endgroup\n", sep = "")
+}
+
+# Certifications: same header as other sections, no bullets
+#   **Program**                                        2026
+#   Institution                                        Location
+make_cert_entries <- function(df) {
+    df <- df %>%
+        filter(!is.na(program)) %>%
+        mutate(
+            across(c(program, institution, where), ~escape_latex(as.character(.))),
+            program = str_replace_all(program, " [Xx] ", " \\\\texttimes{} "),
+            year    = as.character(year)
+        )
+    entries <- vapply(seq_len(nrow(df)), function(i) {
+        paste0(cv_entry_head(df$program[i], df$institution[i], df$year[i], df$where[i]), "\\vspace{5pt}\n")
+    }, character(1))
+    cat("\\begingroup\\setlength{\\parskip}{0pt}\n", entries, "\\endgroup\n", sep = "")
+}
+
+# Mentoring, one numbered list (newest first):
+#   Name (year), Department, University: Research theme
+# `department` is optional; omitted when the column is missing or empty.
+make_advising_entries <- function(df) {
+    if (!"department" %in% names(df)) df$department <- NA_character_
+    df <- df %>%
+        filter(!is.na(name)) %>%
+        arrange(desc(date_start)) %>%
+        mutate(
+            year  = format(as.Date(date_start), "%Y"),
+            where = paste0(
+                ifelse(is.na(department), "", paste0(", ", escape_latex(department))),
+                ifelse(is.na(institution), "", paste0(", ", escape_latex(institution)))
+            ),
+            theme = ifelse(is.na(title), "", paste0(": ", escape_latex(title))),
+            latex = paste0("  \\item \\textbf{", escape_latex(name), "} (", year, ")", where, theme)
+        )
+    cat("\\begin{enumerate}\n", paste(df$latex, collapse = "\n"), "\n\\end{enumerate}\n", sep = "")
+}
+
+# Presentations, one numbered list per category (newest first):
+#   1. Coauthors and *Hossain, M. J. Title. Host, Location,
+#      Month, Year.
+# `with` markup (same as the pubs sheet):
+#   \*Name, I.          mentee        -> surname underlined
+#   \*\*Name, I.        undergraduate -> ** + surname underlined
+#   ***Hossain, M. J.** corresponding -> * + bold
+# "Hossain, M. J." is always bold, and appended when missing from `with`.
+# `undergrad_mark = FALSE` drops the ** before undergraduate mentees (underline only).
+make_presentation_entries <- function(df, cat = NULL, undergrad_mark = TRUE) {
+    me <- "Hossain, M. J."
+    tidy_authors <- function(x) {
+        x %>%
+            # Corresponding author: keep a bare * before the name
+            str_replace_all("\\*\\*\\*([^*]+)\\*\\*", "@CORR@\\1") %>%
+            str_remove_all("(?<!\\\\)\\*\\*") %>%
+            # Mentees; {*} keeps the stars literal and out of later patterns
+            str_replace_all("\\\\\\*\\\\\\*([\\p{L}'-]+)", if (undergrad_mark) "{*}{*}\\\\uline{\\1}" else "\\\\uline{\\1}") %>%
+            str_replace_all("\\\\\\*([\\p{L}'-]+)", "\\\\uline{\\1}") %>%
+            # "Islam, MM" -> "Islam, M. M."
+            str_replace_all(",\\s*([A-Z]{1,3})(?=,|$|\\s|&)", function(m) {
+                ini <- str_extract(m, "[A-Z]+")
+                paste0(", ", paste0(strsplit(ini, "")[[1]], ".", collapse = " "))
+            }) %>%
+            str_replace_all(",?\\s*&\\s*", " and ") %>%
+            str_squish()
+    }
+    df <- df %>%
+        filter(!is.na(title), is.null(cat) | category %in% cat) %>%
+        arrange(desc(date)) %>%
+        mutate(
+            authors = tidy_authors(na_to_space(with)),
+            authors = case_when(
+                str_detect(authors, fixed(me)) ~ authors,
+                authors == ""                  ~ me,
+                TRUE                           ~ paste(authors, "and", me)
+            ),
+            authors = str_replace(escape_latex(authors), fixed(me), paste0("\\textbf{\\mbox{", me, "}}")),
+            authors = str_replace(authors, fixed("@CORR@"), "{*}"),
+            title   = escape_latex(str_squish(str_remove(title, "\\.$"))),
+            where   = str_remove_all(paste(na_to_space(host), na_to_space(location), sep = ", "), "^, |, $"),
+            when    = format(as.Date(date), "%B, %Y"),
+            latex   = paste0("  \\item ", authors, " ", title, ". ", escape_latex(where), ", ", when, ".")
+        )
+    # Raw block so pandoc leaves the LaTeX markup alone
+    cat("```{=latex}\n\\begin{enumerate}\n",
+        paste(df$latex, collapse = "\n"),
+        "\n\\end{enumerate}\n```\n", sep = "")
+}
+
+# ---- Resume helpers ----
+# Bioinformatics/computational work, matched on title
+is_bioinfo <- function(title) {
+    str_detect(str_to_lower(title), paste(
+        "bioinformatic", "omic", "transcriptom", "single-cell", "rna-seq", "genom",
+        "computational", "deep learning", "atlas", "immune landscape", "biomarker",
+        "prognostic", "cancer", "carcinoma", "sarcoma", "glioma", "melanoma", "tcr",
+        "perturb", "-seq", "spatial", "immune", "neural network", "copy-number",
+        sep = "|"
+    ))
+}
+
+# Resume selection: optional sheet column `resume` (1 = include, 0 = exclude)
+# overrides the title keyword match; blank cells fall back to is_bioinfo().
+pick_for_resume <- function(df) {
+    auto <- is_bioinfo(df$title)
+    if (!"resume" %in% names(df)) return(auto)
+    flag <- suppressWarnings(as.numeric(as.character(unlist(lapply(df$resume, function(x) if (is.null(x)) NA else x)))))
+    ifelse(is.na(flag), auto, flag == 1)
+}
+
+# DOI cells may hold a bare DOI or a full doi.org URL; keep the bare DOI
+clean_doi <- function(x) str_remove(x, "^https?://(dx\\.)?doi\\.org/")
+
+# Preprint server names as spelled by the servers
+fmt_venue <- function(x) {
+    x %>%
+        str_replace(regex("^biorxiv$", ignore_case = TRUE), "bioRxiv") %>%
+        str_replace(regex("^medrxiv$", ignore_case = TRUE), "medRxiv") %>%
+        str_replace(regex("^arxiv$", ignore_case = TRUE), "arXiv")
+}
+
+# "Jun 2020 -- Present" from sheet start/end cells (list columns allowed)
+resume_dates <- function(start, end) {
+    s <- vapply(start, fmt_cv_date, character(1))
+    e <- vapply(end, fmt_cv_date, character(1))
+    ifelse(is.na(s), NA, ifelse(is.na(e), s, paste(s, "--", e)))
+}
+
+# Entries without bullets:
+#   **Role**, Collaborator, Ph.D., Institution, Where           Date
+#      *Project title*              (indented; "Project N:" label dropped)
+#   Only detail lines matching `keep` are shown.
+# A Collaborator/Advisor/Supervisor/PI detail line is folded into the
+# header line, label dropped.
+# An entry starts on each row with a role; `date` is a ready-made string.
+make_resume_entries <- function(df, keep = "^(Project( \\d+)?|Thesis|Collaborators?|Advisors?|Supervisors?|PI):", relabel = NULL) {
+    df <- df %>%
+        mutate(
+            across(c(role, institution, where, details), ~escape_latex(as.character(.))),
+            entry = cumsum(!is.na(role))
+        )
+    entries <- lapply(split(df, df$entry), function(e) {
+        head <- e[1, ]
+        lines <- e$details[!is.na(e$details) & grepl(keep, e$details)]
+        is_person <- grepl("^(Collaborators?|Advisors?|Supervisors?|PI):", lines)
+        inst <- head$institution
+        if (any(is_person)) {
+            person <- sub("^[^:]+:\\s*", "", lines[is_person][1])
+            inst <- if (is.na(inst)) person else paste0(person, ", ", inst)
+        }
+        lines <- lines[!is_person]
+        if (!is.null(relabel)) lines <- str_replace(lines, relabel[1], relabel[2])
+        is_project <- grepl("^Project( \\d+)?:", lines)
+        lines <- ifelse(
+            is_project,
+            paste0("\\textit{", sub("^Project( \\d+)?:\\s*", "", lines), "}"),
+            sub("^([^:]{1,20}:)\\s*", "\\\\textbf{\\1} ", lines)
+        )
+        paste0(
+            # Two columns: long headers wrap on the left, date stays top-right
+            "\\noindent\\begin{tabularx}{\\linewidth}{@{}>{\\raggedright\\arraybackslash}X@{\\hspace{1em}}r@{}}",
+            paste(c(paste0("\\textbf{", head$role, "}"), na.omit(c(inst, head$where))), collapse = ", "),
+            " & ", ifelse(is.na(head$date), "", head$date), "\\end{tabularx}\\par\n",
+            # Details indented under the header, hanging so wrapped lines align
+            if (length(lines)) paste0(
+                "{\\leftskip=1.2em\\noindent ", lines, "\\par}\n", collapse = ""
+            ) else "",
+            "\\vspace{5pt}\n"
+        )
+    })
+    # Raw block so pandoc passes the tabularx rows through untouched
+    cat("```{=latex}\n\\begingroup\\setlength{\\parskip}{0pt}\n", unlist(entries), "\\endgroup\n```\n", sep = "")
 }

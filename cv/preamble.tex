@@ -1,75 +1,79 @@
-\makeatletter
-\providecommand\vcenter@text[1]{\vcenter{\hbox{#1}}}
-\makeatother
 \usepackage{marvosym} % Allows the use of symbols
-\usepackage{parskip} % Spacing adjustments
 \usepackage{enumitem} % List customization (nosep, topsep, leftmargin)
+\usepackage{microtype}
+\usepackage{tabularx} % Resume entry headers: wrapping text + date column
 
-% Justified text, no hyphenation, no loose word spacing.
-% Requires LuaLaTeX: microtype font expansion (unavailable in XeTeX) micro-scales
-% glyphs so lines justify without stretching the interword spaces.
+% Colors
 
-% (Quarto's default template already loads microtype, so configure it here
-% rather than re-loading it with options, which would be an option clash.)
-\microtypesetup{
-  protrusion = true,
-  expansion  = true,
-  tracking   = true,
-  factor     = 1100,  % protrusion strength
-  stretch    = 25,    % max glyph expansion (per mille)
-  shrink     = 25     % max glyph shrink
-}
+\usepackage{xcolor}
+\definecolor{cvname}{HTML}{14263F}
+\definecolor{cvsub}{HTML}{4A5568}
+\definecolor{cvlink}{HTML}{1D4ED8}
 
-\hyphenpenalty=10000  % No hyphenation
-\exhyphenpenalty=10000
-\tolerance=3000       % Accept slightly looser lines rather than overfull boxes
-\emergencystretch=1em % Last-resort stretch on the final pass only
-\hbadness=10000       % Silence badness warnings
-
-
-% Main font
+% Main font: Charter (serif, matches reference CV)
 
 \usepackage{fontspec}
-\setmainfont{Inter_18pt-Regular}[
-  Path           = ./fonts/,
-  Extension      = .ttf,
-  UprightFont    = *,
-  BoldFont       = Inter_18pt-Bold,
-  ItalicFont     = Inter_18pt-Italic,
-  BoldItalicFont = Inter_18pt-BoldItalic
+\setmainfont{Charter}[
+  UprightFont    = * Roman,
+  BoldFont       = * Bold,
+  ItalicFont     = * Italic,
+  BoldItalicFont = * Bold Italic
 ]
-\setsansfont{Inter_18pt-Regular}[
-  Path           = ./fonts/,
-  Extension      = .ttf,
-  UprightFont    = *,
-  BoldFont       = Inter_18pt-Bold,
-  ItalicFont     = Inter_18pt-Italic,
-  BoldItalicFont = Inter_18pt-BoldItalic
+\setsansfont{Charter}[
+  UprightFont    = * Roman,
+  BoldFont       = * Bold,
+  ItalicFont     = * Italic,
+  BoldItalicFont = * Bold Italic
 ]
 
-% Header and footer
+% Paragraph spacing
 
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+
+% Section headings: navy, uppercase, rule underneath
+
+\addtokomafont{disposition}{\rmfamily\color{black}}
+\addtokomafont{section}{\large}
+\addtokomafont{subsection}{\normalsize\itshape}
+\RedeclareSectionCommand[beforeskip=14pt,afterskip=8pt]{section}
+\RedeclareSectionCommand[beforeskip=6pt,afterskip=3pt]{subsection}
+\makeatletter
+\renewcommand{\sectionlinesformat}[4]{%
+  \ifstr{#1}{section}
+    {\parbox[t]{\linewidth}{\setlength{\parskip}{0pt}\MakeUppercase{#4}\par\nointerlineskip\vspace{6pt}{\color{black}\hrule height 0.8pt}}}
+    {\@hangfrom{\hskip #2#3}{#4}}}
+\makeatother
+
+% Lists
+
+\setlist[itemize]{label={\small\textbullet}, leftmargin=1.3em, labelsep=0.5em, nosep, topsep=2pt}
+\setlist[enumerate]{leftmargin=1.8em, itemsep=2pt}
+
+% Footer: centered, gray
+
+\usepackage{lastpage}
 \usepackage{fancyhdr}
-
 \pagestyle{fancy}
 \fancyhf{}
-\fancyfoot[L]{\textcolor{gray}{\footnotesize\emph{Updated \today}}}
-\fancyfoot[R]{\textcolor{gray}{\footnotesize\emph{\href{https://mdjubayerhossain.com/}{https://mdjubayerhossain.com/}}}}
-\fancyfoot[C]{\textcolor{gray}{\footnotesize\emph{Page \thepage\ of \pageref{LastPage}}}}
-\renewcommand{\headrulewidth}{0pt} % Removes the header line
-\renewcommand{\footrulewidth}{0pt} % Removes the footer line
-\usepackage{lastpage} % Required for \pageref{LastPage}
+\fancyfoot[C]{\footnotesize\color{cvsub}Md. Jubayer Hossain\enspace\textperiodcentered\enspace Academic Curriculum Vitae\enspace\textperiodcentered\enspace Page \thepage\ of {\color{cvlink}\pageref{LastPage}}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\footnotesize\color{cvsub}Md. Jubayer Hossain\enspace\textperiodcentered\enspace Academic Curriculum Vitae\enspace\textperiodcentered\enspace Page \thepage\ of {\color{cvlink}\pageref{LastPage}}}}
 
 % Links
 
 \usepackage{hyperref}
-\usepackage{color}
-\definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+\hypersetup{colorlinks, breaklinks, urlcolor=cvlink, linkcolor=cvlink}
 
-% Long URLs / DOIs must break anywhere: hyphenation is off, so an unbreakable
-% URL would otherwise force a badly-spaced line or an overfull box.
-\makeatletter
-\g@addto@macro\UrlBreaks{\UrlOrds}
-\makeatother
-\Urlmuskip=0mu plus 1mu
+% Header
+
+\usepackage{fontawesome5}
+\newcommand{\cvsep}{\enspace{\color{cvsub}\textperiodcentered}\enspace}
+
+% One line: left text, right text flush to margin
+% (empty right text: ordinary line, so the left text is not stretched)
+\newcommand{\cvline}[2]{\noindent #1\if\relax\detokenize{#2}\relax\par\else\hfill #2{\parfillskip=0pt\par}\fi}
+
+% Normal spacing after periods (names like "Md." and "Dr.")
+\frenchspacing

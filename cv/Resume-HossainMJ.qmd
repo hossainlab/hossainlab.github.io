@@ -1,0 +1,173 @@
+---
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    colorlinks: true
+    linkcolor: cvlink
+    urlcolor: cvlink
+    citecolor: cvlink
+    filecolor: cvlink
+    documentclass: scrartcl
+    papersize: letter
+    pdf-engine: xelatex
+    fontsize: 10pt
+    geometry:
+      - margin=0.5in
+      - bottom=0.65in
+      - heightrounded
+    include-in-header:
+      - preamble.tex
+execute:
+  warning: false
+  echo: false
+  message: false
+  eval: true
+---
+
+```{r}
+#| include: false
+
+source("functions.R")
+options(knitr.table.format = "latex")
+```
+
+```{=latex}
+\RedeclareSectionCommand[beforeskip=7pt,afterskip=4pt]{section}
+\setlist[enumerate]{leftmargin=1.8em, itemsep=0pt}
+\linespread{0.97}\selectfont
+\fancyfoot[C]{\footnotesize\color{cvsub}Md. Jubayer Hossain\enspace\textperiodcentered\enspace Resume\enspace\textperiodcentered\enspace Page \thepage\ of {\color{cvlink}\pageref{LastPage}}}
+\begin{center}
+{\fontsize{24}{28}\selectfont\bfseries\color{cvname} Md. Jubayer Hossain}\\[3pt]
+{\large\color{cvsub} Bioinformatics \& Computational Biology}\\[5pt]
+\makebox[\linewidth][c]{\footnotesize
+\href{mailto:hossainmj.me@gmail.com}{\color{cvlink}\faEnvelope~hossainmj.me@gmail.com}%
+\cvsep
+\href{https://mdjubayerhossain.com}{\color{cvlink}\faGlobe~mdjubayerhossain.com}%
+\cvsep
+\href{https://linkedin.com/in/hossainmj}{\color{cvlink}\faLinkedin~linkedin.com/in/hossainmj}%
+\cvsep
+\href{https://github.com/hossainlab}{\color{cvlink}\faGithub~github.com/hossainlab}}
+\end{center}
+\vspace{-16pt}
+```
+
+# Education
+
+```{r}
+#| results: asis
+get_cv_sheet('education') %>%
+  mutate(
+    role = degree,
+    date = str_replace_all(as.character(year), "\\s*[\u2014\u2013-]+\\s*", " -- ")
+  ) %>%
+  filter(!is.na(degree)) %>%
+  make_resume_entries(keep = "^$")
+```
+
+# Research Experience
+
+```{r}
+#| results: asis
+# Bioinformatics/genomics entries only
+get_cv_sheet('research') %>%
+  mutate(date = resume_dates(start_date, end_date), entry = cumsum(!is.na(role))) %>%
+  group_by(entry) %>%
+  filter(any(is_bioinfo(details), na.rm = TRUE)) %>%
+  ungroup() %>%
+  make_resume_entries()
+```
+
+# Professional Experience
+
+```{r}
+#| results: asis
+prep <- function(x) {
+  x %>%
+    mutate(date = resume_dates(start_date, end_date)) %>%
+    select(role, institution, where, details, date) %>%
+    mutate(across(everything(), as.character))
+}
+# One line per role:  **Role**, Institution, Where          Date
+bind_rows(prep(get_cv_sheet('leadership')), prep(get_cv_sheet('teaching'))) %>%
+  filter(!is.na(role)) %>%
+  mutate(latex = paste0(
+    "\\cvline{\\textbf{", escape_latex(role), "}, ", escape_latex(institution), "}{", date, "}"
+  )) %>%
+  pull(latex) %>%
+  paste(collapse = "\n") %>%
+  cat("\\begingroup\\setlength{\\parskip}{2pt}\n", ., "\n\\endgroup\n", sep = "")
+```
+
+# Selected Publications
+\underline{Underline} indicates mentee; * corresponding
+
+```{r}
+#| results: asis
+get_cv_sheet('pubs') %>%
+  filter(category %in% c("peer_reviewed", "under_review", "preprint")) %>%
+  filter(pick_for_resume(.)) %>%
+  mutate(
+    status   = case_when(
+                 category == "under_review" ~ " (Under Review)",
+                 category == "preprint" & is.na(journal) ~ "Preprint",
+                 TRUE ~ ""),
+    journal  = paste0(ifelse(is.na(journal), '', paste0('_', fmt_venue(journal), '_')), status),
+    journal  = ifelse(journal == '', '', paste0(journal, '.')),
+    doi      = clean_doi(doi),
+    doi      = case_when(
+                 !is.na(doi) ~ paste0('DOI: [', doi, '](https://doi.org/', doi, ')'),
+                 !is.na(url_repo) ~ paste0('[GitHub](', url_repo, ')'),
+                 TRUE ~ ''),
+    order    = match(category, c("peer_reviewed", "under_review", "preprint")),
+    # Undergraduate mentees: underline only, no **
+    author   = str_replace_all(author, "\\\\\\*\\\\\\*([\\p{L}'-]+)", "\\\\underline{\\1}"),
+    citation = str_squish(paste0(author, " (", year, ") ", enquote(title), " ", journal, " ", doi)),
+    citation = str_replace_all(citation, "\\s+,", ",")
+  ) %>%
+  arrange(order, desc(year)) %>%
+  mutate(category = "all") %>%
+  make_ordered_list_filtered("all")
+```
+
+# Selected Presentations
+
+```{r}
+#| results: asis
+get_cv_sheet('presentations') %>%
+  filter(pick_for_resume(.)) %>%
+  slice_max(date, n = 8, with_ties = FALSE) %>%   # 8 most recent keep the resume at 2 pages
+  mutate(location = NA) %>%
+  make_presentation_entries(undergrad_mark = FALSE)
+```
+
+# Awards & Certifications
+
+```{r}
+#| results: asis
+get_cv_sheet('awards') %>%
+  make_award_entries()
+```
+
+```{r}
+#| results: asis
+get_cv_sheet('certifications') %>%
+  filter(!is.na(program), !str_detect(program, "Public Health")) %>%
+  mutate(latex = paste0(
+    "\\cvline{\\textbf{", escape_latex(program), "}, ", escape_latex(institution), "}{", year, "}"
+  )) %>%
+  pull(latex) %>%
+  str_replace_all(" [Xx] ", " \\\\texttimes{} ") %>%
+  paste(collapse = "\n") %>%
+  cat("\\begingroup\\setlength{\\parskip}{3pt}\n", ., "\n\\endgroup\n", sep = "")
+```
+
+# Technical Skills
+
+```{=latex}
+\begingroup\setlength{\parskip}{2pt}
+\noindent\textbf{Bioinformatics:} Bulk RNA-seq, single-cell RNA-seq, spatial transcriptomics, multi-omics integration, WGS, metagenomics\par
+\noindent\textbf{Programming \& ML:} Python, R, Julia, SQL, Bash, JavaScript; scikit-learn, PyTorch, RDKit, DeepChem\par
+\noindent\textbf{Workflows, HPC \& Cloud:} Nextflow (DSL2), nf-core, Docker, Singularity, Git; SLURM; AWS S3, Google Cloud Storage\par
+\endgroup
+```
