@@ -80,7 +80,8 @@ cv_entry_head <- function(role, inst, date, where) {
     )
 }
 
-make_cv_entries <- function(df, date_col, role_col, inst_col, where_col, details_col) {
+make_cv_entries <- function(df, date_col, role_col, inst_col, where_col, details_col,
+                            note_pattern = "^(Advisor|Supervisor|Collaborator)s?:") {
     # Convert to character and escape special LaTeX characters
     df <- df %>%
         mutate(across(everything(), as.character)) %>%
@@ -120,8 +121,8 @@ make_cv_entries <- function(df, date_col, role_col, inst_col, where_col, details
             # Format bullets
             bullet_list <- bullets
             bullet_list <- bullet_list[!is.na(bullet_list)]
-            is_note <- grepl("^(Advisor|Supervisor|Collaborator)s?:", bullet_list)
-            note_latex <- if (any(is_note)) paste0("\\noindent ", bullet_list[is_note], "\\par\n", collapse = "") else ""
+            is_note <- grepl(note_pattern, bullet_list)
+            note_latex <- if (any(is_note)) paste0("\\begingroup\\raggedright\\hyphenpenalty=10000\\noindent ", bullet_list[is_note], "\\par\\endgroup\n", collapse = "") else ""
             bullet_list <- sub("^([A-Z][^:]{1,30}:)", "\\\\textbf{\\1}", bullet_list[!is_note])
 
             if (length(bullet_list) > 0) {

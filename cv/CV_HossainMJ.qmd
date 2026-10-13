@@ -69,12 +69,13 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 ```{r}
 #| results: asis
 get_cv_sheet('education') %>%
-  filter(!is.na(degree)) %>%
+  filter(!is.na(degree) | str_detect(details, "^(Advisor|Supervisor|Project|Coursework):")) %>%
   mutate(
     year    = str_replace_all(as.character(year), "\\s*[\u2014\u2013-]+\\s*", " -- "),
-    details = NA_character_   # degree header only
+    details = str_replace(details, "^Advisor:", "Supervisor:")
   ) %>%
-  make_cv_entries(year, degree, institution, where, details)
+  make_cv_entries(year, degree, institution, where, details,
+                  note_pattern = "^(Supervisor|Project|Coursework):")
 ```
 
 
