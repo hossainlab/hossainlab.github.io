@@ -68,7 +68,7 @@ listing:
 </svg>
 </span>
 <div class="ro-why-body">
-<strong>Generalisability</strong>
+<strong>Generalizability</strong>
 <p>Multi-cohort validation increases confidence that findings are not dataset-specific artefacts.</p>
 </div>
 </div>
@@ -108,7 +108,7 @@ listing:
 
 <a class="expertise-card" href="../projects/index.html">
 <span class="expertise-fig">
-<svg viewBox="0 0 160 90" role="img" aria-label="Single-cell: UMAP embedding with distinct coloured cell clusters">
+<svg viewBox="0 0 160 90" role="img" aria-label="Single-cell: UMAP embedding with distinct colored cell clusters">
 <rect x="0" y="0" width="160" height="90" fill="none"/>
 <ellipse cx="40" cy="28" rx="26" ry="19" fill="#e0e7ff"/>
 <ellipse cx="112" cy="34" rx="24" ry="17" fill="#dcfce7"/>
@@ -138,7 +138,7 @@ listing:
 
 <a class="expertise-card" href="../projects/index.html">
 <span class="expertise-fig">
-<svg viewBox="0 0 160 90" role="img" aria-label="Spatial transcriptomics: tissue section overlaid with a grid of expression-coloured capture spots">
+<svg viewBox="0 0 160 90" role="img" aria-label="Spatial transcriptomics: tissue section overlaid with a grid of expression-colored capture spots">
 <rect x="0" y="0" width="160" height="90" fill="none"/>
 <path d="M20 62 C 10 34, 34 10, 66 12 C 104 14, 140 22, 146 46 C 151 68, 120 82, 88 80 C 54 78, 28 80, 20 62 Z" fill="#faf5ff" stroke="#a855f7" stroke-width="2"/>
 <g>
@@ -172,7 +172,7 @@ listing:
 <div class="ro-wf-header">
 <div class="ro-wf-badge">Workflow 01</div>
 <h3 class="ro-wf-title">Bulk RNA-Seq Meta-Analysis</h3>
-<p class="ro-wf-subtitle">Large-scale transcriptomic discovery using harmonised public datasets from NCBI GEO & SRA</p>
+<p class="ro-wf-subtitle">Large-scale transcriptomic discovery using harmonized public datasets from NCBI GEO & SRA</p>
 </div>
 
 <div class="ro-steps">
@@ -200,7 +200,7 @@ listing:
 <div class="ro-step">
 <div class="ro-step-num">4</div>
 <div class="ro-step-icon">⚖️</div>
-<div class="ro-step-label">Normalisation</div>
+<div class="ro-step-label">Normalization</div>
 <div class="ro-step-sub">DESeq2 · edgeR · limma-voom</div>
 </div>
 <div class="ro-arrow">→</div>
@@ -236,13 +236,13 @@ listing:
 
 
 <!-- ══════════════════════════════════════════════
-     WORKFLOW 2 — Single-Cell Harmonised Framework
+     WORKFLOW 2 — Single-Cell Harmonized Framework
 ═══════════════════════════════════════════════ -->
 <div class="ro-workflow-section">
 
 <div class="ro-wf-header">
 <div class="ro-wf-badge ro-wf-badge-sc">Workflow 02</div>
-<h3 class="ro-wf-title">Single-Cell Harmonised Framework</h3>
+<h3 class="ro-wf-title">Single-Cell Harmonized Framework</h3>
 <p class="ro-wf-subtitle">Cross-cohort single-cell atlas construction and comparative cell-state analysis</p>
 </div>
 
@@ -403,7 +403,7 @@ listing:
 ```{=html}
 <div class="ro-collab-open">
 <strong>Open to new collaborations.</strong>
-<p>If you have a dataset, a clinical question, or a study that would benefit from bulk / single-cell / spatial re-analysis or ML modelling, get in touch.</p>
+<p>If you have a dataset, a clinical question, or a study that would benefit from bulk / single-cell / spatial re-analysis or ML modeling, get in touch.</p>
 <a class="ro-cta-btn" href="mailto:contact.jubayerhossain@gmail.com">Start a conversation &rarr;</a>
 </div>
 ```

@@ -7,7 +7,7 @@
 # without `home-order` is left off the homepage.
 - name: "DeepBio Limited"
   home-order: 3
-  home-summary: "AI and bioinformatics company turning multi-omics data into biomarker discovery and diagnostics for global health."
+  home-summary: "AI and bioinformatics startup turning multi-omics data into biomarker discovery and diagnostics for global health."
   role: "Founder, CEO & Bioinformatics Scientist"
   period: "Jan 2025 – Present"
   location: "Dhaka, Bangladesh"

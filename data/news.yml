@@ -1,6 +1,13 @@
 # Homepage "Updates / News" feed. Newest first.
 # date: YYYY-MM-DD  ·  kind: paper | talk | teaching | award | venture
 # link/link-text are optional.
+- date: 2026-10-24
+  kind: paper
+  title: "Fezf2 dosage and corticofugal neuron development preprint on bioRxiv"
+  detail: "Single-cell re-analysis shows dosage-dependent loss of subcerebral projection neurons."
+  link: "https://doi.org/10.64898/2026.10.21.760692"
+  link-text: "Read"
+
 - date: 2026-01-15
   kind: paper
   title: "COL13A1 and COL23A1 identified as thyroid cancer biomarkers"

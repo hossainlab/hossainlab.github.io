@@ -1,7 +1,7 @@
 <%
 /* Mentee roster — grouped by status (Currently mentoring / Alumni).
-   Programme names and cohort labels are deliberately NOT rendered: this
-   block presents mentoring experience, not the branded programmes the
+   Program names and cohort labels are deliberately NOT rendered: this
+   block presents mentoring experience, not the branded programs the
    mentees came through. `track` and `period` stay in mentorship.yml as
    record-keeping fields only.
 
@@ -20,7 +20,7 @@ return String(v == null ? '' : v)
 };
 const statusOf = function (it) { return String(it.status || '').trim().toLowerCase(); };
 
-/* Research mentees only. Training-programme mentees stay in mentorship.yml
+/* Research mentees only. Training-program mentees stay in mentorship.yml
    as a record but are not part of research supervision, so they are
    filtered out here. Records with no category default to research. */
 const roster = items.filter(function (i) {

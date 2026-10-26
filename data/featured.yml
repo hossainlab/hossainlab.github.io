@@ -1,4 +1,4 @@
-# Homepage "Featured Research" cards. Pick 4; order is respected.
+# Homepage "Featured Research" cards. Shown four per row; order is respected.
 - title: "metaXpress: An end-to-end R package for bulk RNA-seq multi-study meta-analysis"
   venue: "R Package"
   year: 2026
@@ -23,3 +23,30 @@
   year: 2025
   doi: "https://doi.org/10.1038/s41598-025-88339-z"
   image: "files/publications/featured-cct5-pancancer.jpg"
+
+- title: "Cella: Decoding cell-type identity beyond raw expression"
+  venue: "Web App"
+  year: 2026
+  url: "https://mdjubayerhossain.com/cella/"
+  image: "files/projects/featured-cella.svg"
+  link-text: "Open app"
+
+- title: "DMG Atlas"
+  venue: "Dataset"
+  year: 2026
+  doi: "https://doi.org/10.5281/zenodo.23623335"
+  image: "files/projects/featured-dmg-atlas.svg"
+  link-text: "View dataset"
+
+- title: "EWSAtlas"
+  venue: "Dataset"
+  year: 2026
+  doi: "https://doi.org/10.5281/zenodo.23622733"
+  image: "files/projects/featured-ewsatlas.svg"
+  link-text: "View dataset"
+
+- title: "DMG Cell State Spatial Mapping"
+  venue: "Spatial Transcriptomics"
+  year: 2026
+  status: "In progress"
+  image: "files/projects/featured-dmg-spatial.svg"

@@ -1,6 +1,6 @@
 ---
 title: "About"
-subtitle: "Multiomics Scientist, Educator & Entrepreneur"
+subtitle: "Computational Cancer Biologist, Educator & Entrepreneur"
 title-block-banner: true
 page-layout: full
 toc: false
@@ -15,6 +15,37 @@ listing:
     contents: ../data/about/certificates.yml
     template: ../_templates/certificate-card.ejs
 ---
+
+```{=html}
+<div class="ab-section-header">
+<h2 class="ab-section-title">About Me</h2>
+</div>
+<div class="ab-prose">
+<p>I'm Jubayer Hossain, a computational cancer biologist in Dhaka, Bangladesh. My goal is to uncover how tumor cell states and their spatial organization drive cancer growth and therapy resistance. I am motivated by the urgent need for better treatments for aggressive cancers that have few therapeutic options.</p>
+<p>I combine single-cell and spatial transcriptomics with graph neural networks to map tumor cell states, the tissue niches they occupy, and the programs that let them survive therapy. Meta-analysis of public bulk RNA-Seq cohorts lets me test those findings in independent patient cohorts.</p>
+</div>
+
+<div class="ab-section-header">
+<h2 class="ab-section-title">Backstory</h2>
+</div>
+<div class="ab-prose">
+<p>I came to biology wanting to be a data scientist, drawn to the idea of answering important biological questions with data. During my undergraduate studies in microbiology at Jagannath University, I found my place in computational biology, even though my program offered no computational coursework.</p>
+<p>In June 2020, after finishing my MS in Microbiology, I founded <a href="https://chiralbd.github.io" target="_blank" rel="noopener">CHIRAL Bangladesh</a>, a non-profit research institute that has since trained 3,000+ early-career researchers. In 2025 I founded <a href="https://deepbioltd.com" target="_blank" rel="noopener">DeepBio Limited</a>, where I lead a team of 13 researchers running single-cell and bulk RNA-Seq pipelines for cancer genomics, and <a href="https://deepbioacademy.com" target="_blank" rel="noopener">DeepBio Academy</a>, where I teach bioinformatics through project-based courses.</p>
+</div>
+
+<div class="ab-section-header">
+<h2 class="ab-section-title">Research Interests</h2>
+</div>
+<div class="ab-prose">
+<ul>
+<li>Tumor cell states and plasticity</li>
+<li>Spatial organization of the tumor microenvironment</li>
+<li>Mechanisms of therapy resistance</li>
+<li>Single-cell and spatial transcriptomics</li>
+<li>Graph neural networks for tissue niches</li>
+</ul>
+</div>
+```
 
 ```{=html}
 <div class="ab-section-header">

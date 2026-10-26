@@ -4,12 +4,12 @@
 #   initial    – fallback avatar letter when no photo
 #   photo      – image path (leave "" to use initial avatar)
 #   university – institution
-#   department – programme / department
-#   track      – mentorship track or programme
+#   department – program / department
+#   track      – mentorship track or program
 #   period     – cohort / duration
-#   status     – "Current" or "Alumni" (drives the badge colour)
+#   status     – "Current" or "Alumni" (drives the badge color)
 #   category   – "research" or "training". The research page renders ONLY
-#                category: research. Training-programme mentees are kept
+#                category: research. Training-program mentees are kept
 #                here as a record but are filtered out of that listing.
 
 # ── GSA Cohort 01 ──────────────────────────────────────────

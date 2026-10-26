@@ -3620,6 +3620,14 @@ img {
   color: var(--c-muted);
   margin: 0;
 }
+.ab-prose {
+  max-width: 860px;
+  margin: 0.75rem auto 0;
+  padding: 0 1.5rem;
+  line-height: 1.7;
+}
+.ab-prose p { margin: 0 0 0.9rem; }
+.ab-prose ul { margin: 0 0 0.9rem 1.2rem; }
 
 /* ── Education Timeline ── */
 .edu-timeline {
@@ -5956,6 +5964,15 @@ body.quarto-dark .feat-fig-mono {
   text-decoration: underline;
 }
 
+/* Shown in place of the link when a card has no url/doi yet. */
+.featured-card .featured-status {
+  color: var(--muted, #6b7280);
+  font-family: var(--f-sans);
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-top: auto;
+}
+
 .resource-card,
 .programme {
   border: 1px solid var(--line);
@@ -6477,5 +6494,3 @@ body.quarto-dark .feat-fig-mono {
     grid-template-columns: 1fr !important;
   }
 }
-
-

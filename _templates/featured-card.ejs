@@ -8,7 +8,7 @@ var lines = [];
 lines.push('<div class="featured-grid">');
 for (var i = 0; i < items.length; i++) {
   var it = items[i];
-  var href = esc(it.doi || it.url || it.page || '#');
+  var href = esc(it.doi || it.url || it.page || '');
   var mono = esc((it.venue || '?').replace(/[^A-Za-z ]/g, '').split(/\s+/).map(function (w) {
     return w.charAt(0);
   }).join('').slice(0, 3).toUpperCase());
@@ -23,7 +23,11 @@ for (var i = 0; i < items.length; i++) {
   card.push('<div class="featured-content">');
   card.push('<span class="venue-badge">' + esc(it.venue || '') + (it.year ? ', ' + esc(it.year) : '') + '</span>');
   card.push('<h3>' + esc(it.title || '') + '</h3>');
-  card.push('<a href="' + href + '" target="_blank" rel="noopener">' + linkText + '</a>');
+  if (href) {
+    card.push('<a href="' + href + '" target="_blank" rel="noopener">' + linkText + '</a>');
+  } else {
+    card.push('<span class="featured-status">' + esc(it.status || 'In progress') + '</span>');
+  }
   card.push('</div>');
   card.push('</article>');
   lines.push(card.join(''));

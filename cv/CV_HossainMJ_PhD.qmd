@@ -1,0 +1,346 @@
+---
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    colorlinks: true
+    linkcolor: cvlink
+    urlcolor: cvlink
+    citecolor: cvlink
+    filecolor: cvlink
+    documentclass: scrartcl
+    papersize: letter
+    pdf-engine: xelatex
+    fontsize: 10pt
+    geometry:
+      - margin=0.65in
+      - bottom=0.8in
+      - heightrounded
+    include-in-header:
+      - preamble.tex
+execute:
+  warning: false
+  echo: false
+  message: false
+  eval: true
+---
+
+```{r}
+#| name: setup
+#| include: false
+#| message: false
+#| eval: true
+
+knitr::opts_chunk$set(
+  fig.path = "figs/",
+  fig.width = 7.252,
+  fig.height = 4,
+  comment = "#>",
+  fig.retina = 3
+)
+
+source("functions.R")
+
+# Set global table format for knitr
+options(knitr.table.format = "latex")
+
+# Store IDs
+gscholar_id <- '9_K4ekoAAAAJ'
+gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_id)
+```
+
+```{=latex}
+\begin{center}
+{\fontsize{26}{30}\selectfont\bfseries\color{cvname} Md. Jubayer Hossain}\\[4pt]
+{\large\color{cvsub} Bioinformatics \& Computational Biology \textperiodcentered{} Prospective Ph.D. Student}\\[6pt]
+\makebox[\linewidth][c]{\footnotesize
+\href{mailto:hossainmj.me@gmail.com}{\color{cvlink}\faEnvelope~hossainmj.me@gmail.com}%
+\cvsep
+\href{https://mdjubayerhossain.com}{\color{cvlink}\faGlobe~mdjubayerhossain.com}%
+\cvsep
+\href{https://linkedin.com/in/hossainmj}{\color{cvlink}\faLinkedin~linkedin.com/in/hossainmj}%
+\cvsep
+\href{https://github.com/hossainlab}{\color{cvlink}\faGithub~github.com/hossainlab}}
+\end{center}
+\vspace{-4pt}
+```
+
+# Education 
+```{r}
+#| results: asis
+get_cv_sheet('education') %>%
+  filter(!is.na(degree) | str_detect(details, "^(Advisor|Supervisor|Project|Coursework):")) %>%
+  mutate(
+    year    = str_replace_all(as.character(year), "\\s*[\u2014\u2013-]+\\s*", " -- "),
+    details = str_replace(details, "^Advisor:", "Supervisor:")
+  ) %>%
+  make_cv_entries(year, degree, institution, where, details,
+                  note_pattern = "^(Supervisor|Project|Coursework):")
+```
+
+# Technical Skills 
+- **Programming Languages**: Python, R, Julia, SQL, Bash, JavaScript
+- **Bioinformatics**: Bulk RNA-Seq (Salmon, DESeq2), Single-Cell (Seurat, Scanpy, CellChat, NicheNet, scvi-tools, rapids-singlecell), Spatial Transcriptomics (Squidpy), Multi-omics (Muon)
+- **Workflow Management & Reproducibility**: Nextflow (DSL2), nf-core, Docker, Singularity, Git, GitHub
+- **ML/DL in Biology**: GNN, Scikit-learn, PyTorch, RDkit, DeepChem
+- **HPC & Cluster Computing**: SLURM (sbatch, sarray), Nextflow DSL2 with SLURM executor for scalable reusable pipelines
+- **Cloud**: AWS S3, Google Cloud Storage for large genomic datasets
+
+# Research Experience
+
+```{r}
+#| results: asis
+get_cv_sheet('research') %>%
+  make_research_entries()
+```
+
+# Professional Experience
+
+```{r}
+#| results: asis
+get_cv_sheet('leadership') %>%
+  fill(start_date, end_date, role, institution, where) %>%
+  mutate(
+    end_date = as.character(end_date),
+    date = paste0(
+      format(start_date, "%b %Y"), " -- ",
+      sapply(end_date, function(x) {
+        if (is.na(x) || x == "Present") return("Present")
+        x_num <- suppressWarnings(as.numeric(x))
+        if (!is.na(x_num)) {
+          d <- as.Date(as.POSIXct(x_num, origin = "1970-01-01", tz = "UTC"))
+          return(format(d, "%b %Y"))
+        }
+        tryCatch(format(as.Date(x), "%b %Y"), error = function(e) x)
+      }, USE.NAMES = FALSE)
+    )
+  ) %>%
+  make_cv_entries(date, role, institution, where, details)
+```
+
+# Publications 
+\underline{Underline} indicates mentee; *corresponding 
+
+## Journal Articles
+```{r}
+pubs <- get_cv_sheet('pubs') %>%
+  mutate(
+    journal  = ifelse(is.na(journal), '', paste0('_', fmt_venue(journal), '_.')),
+    number   = ifelse(is.na(number), '', paste0(number, '.')),
+    # No DOI (preprints, working papers): link the GitHub repo instead
+    doi      = clean_doi(doi),
+    doi      = case_when(
+               !is.na(doi) ~ paste0('DOI: [', doi, '](', 'https://doi.org/', doi, ')'),
+               !is.na(url_repo) ~ paste0('GitHub: [', str_remove(url_repo, '^https?://'), '](', url_repo, ')'),
+               TRUE ~ ''),
+    year     = paste0("(", year, ")"),
+    title    = enquote(title),
+    citation = str_squish(paste(author, year, title, journal, number, doi)),
+    citation = str_replace_all(citation, "\\s+,", ",")
+  ) %>% 
+  arrange(desc(year))
+```
+
+
+```{r}
+#| results: asis
+
+make_ordered_list_filtered(pubs, "peer_reviewed")
+```
+
+## Papers Under Review
+
+```{r}
+#| results: asis
+ 
+make_ordered_list_filtered(pubs, "under_review")
+```
+
+## Preprints
+
+```{r}
+#| results: asis
+make_ordered_list_filtered(pubs, "preprint")
+```
+
+# Presentations
+\underline{Underline} indicates mentee; *corresponding
+
+```{r}
+presentations <- get_cv_sheet('presentations')
+```
+
+## Invited Speaker
+
+```{r}
+#| results: asis
+
+make_presentation_entries(presentations, "invited")
+```
+
+## Conference Presentations
+
+```{r}
+#| results: asis
+
+make_presentation_entries(presentations, "conference")
+```
+
+## Posters
+
+```{r}
+#| results: asis
+
+make_presentation_entries(presentations, "poster")
+```
+
+
+# Teaching & Mentoring Experience 
+## Teaching & Training Roles
+
+```{r}
+#| results: asis
+get_cv_sheet('teaching') %>%
+  fill(start_date, end_date, role, institution, where) %>%
+  mutate(
+    end_date = as.character(end_date),
+    date = paste0(
+      format(start_date, "%b %Y"), " -- ",
+      sapply(end_date, function(x) {
+        if (is.na(x) || x == "Present") return("Present")
+        x_num <- suppressWarnings(as.numeric(x))
+        if (!is.na(x_num)) {
+          d <- as.Date(as.POSIXct(x_num, origin = "1970-01-01", tz = "UTC"))
+          return(format(d, "%b %Y"))
+        }
+        tryCatch(format(as.Date(x), "%b %Y"), error = function(e) x)
+      }, USE.NAMES = FALSE)
+    )
+  ) %>%
+  make_cv_entries(date, role, institution, where, details)
+```
+
+## Courses Taught
+
+```{r}
+#| results: asis
+
+get_cv_sheet('courses') %>%
+  make_course_entries()
+```
+
+# Mentoring
+
+```{r}
+#| results: asis
+get_cv_sheet('advising') %>%
+  make_advising_entries()
+```
+
+# Awards & Fellowships
+
+```{r}
+#| results: asis
+get_cv_sheet('awards') %>%
+  make_award_entries()
+```
+
+# Community Services 
+
+```{r}
+#| results: asis
+get_cv_sheet('community') %>%
+  fill(start_date, end_date, role, institution, where) %>%
+  mutate(
+    end_date = as.character(end_date),
+    date = paste0(
+      format(start_date, "%b %Y"), " -- ",
+      sapply(end_date, function(x) {
+        if (is.na(x) || x == "Present") return("Present")
+        x_num <- suppressWarnings(as.numeric(x))
+        if (!is.na(x_num)) {
+          d <- as.Date(as.POSIXct(x_num, origin = "1970-01-01", tz = "UTC"))
+          return(format(d, "%b %Y"))
+        }
+        tryCatch(format(as.Date(x), "%b %Y"), error = function(e) x)
+      }, USE.NAMES = FALSE)
+    )
+  ) %>%
+  make_cv_entries(date, role, institution, where, details)
+```
+
+# Media Coverage
+<!-- Set spacing in between list -->
+\apptocmd{\tightlist}{\setlength{\itemsep}{2pt}}{}{}
+
+```{r}
+media <- get_cv_sheet('media') %>%
+  arrange(desc(date)) %>%
+  mutate(
+      date = format(date, format = "%b %d, %Y"),
+      outlet = paste0("**", outlet, "**"),
+      citation = paste0(date, ", ", outlet, ": ", post, '.')
+  )
+
+media_counts <- media %>%
+  count(type) %>% 
+  mutate(
+    type = str_replace_all(type, '_', ' '),
+    type = str_to_title(type), 
+    type = ifelse(type == 'Tv', 'TV', type), 
+    type = ifelse(type == 'Government', 'Federal Government', type), 
+    cite = paste0(type, ' (', n, ')'),
+    has_press = str_detect(type, 'Press')
+  ) %>%
+  arrange(!has_press) %>%
+  pull(cite) %>%
+  paste(collapse = ', ')
+```
+
+
+```{r}
+#| results: asis
+
+media %>%
+  filter(highlight == 1) %>%
+  pull(citation) %>%
+  make_ordered_list()
+```
+
+# References
+\noindent
+\begin{minipage}[t]{0.24\linewidth}\small
+\textbf{Dr. Syeda Tasneem Towhid} \\
+Associate Professor \\
+Department of Microbiology \\
+Jagannath University \\
+Dhaka, Bangladesh \\
+\href{mailto:towhidst@mib.jnu.ac.bd}{towhidst@mib.jnu.ac.bd}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.24\linewidth}\small
+\textbf{Dr. Iqbal Mahmud} \\
+Assistant Professor \\
+Lamar University \\
+Beaumont, TX, USA \\
+\href{mailto:imahmud1@lamar.edu}{imahmud1@lamar.edu}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.24\linewidth}\small
+\textbf{Dr. Zeba Islam Seraj} \\
+Director, cBLAST \\
+University of Dhaka \\
+Dhaka, Bangladesh \\
+\href{mailto:zebai@du.ac.bd}{zebai@du.ac.bd}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.24\linewidth}\small
+\textbf{Dr. Yeon Ju Kim} \\
+Professor \\
+Convergent Biotechnology \\
+Kyung Hee University \\
+Seoul, South Korea \\
+\href{mailto:yeonjukim@khu.ac.kr}{yeonjukim@khu.ac.kr}
+\end{minipage}
+
+

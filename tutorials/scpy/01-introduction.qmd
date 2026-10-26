@@ -33,13 +33,13 @@ By the end of this tutorial you will be able to:
 
 ## 1. The Averaging Problem: Why Single-Cell?
 
-In 2011, a study of colorectal cancer tumours used bulk RNA-seq and concluded that the tumour immune microenvironment was immunosuppressed. A decade later, single-cell analysis of the same tumour type revealed something far more complex: within what bulk analysis called "immunosuppressed", there were activated cytotoxic T cells trying to kill, Tregs blocking them, exhausted CD8+ cells giving up, and M2-polarised macrophages fuelling the tumour — all co-existing in the same biopsy [@Zhangetal2020]. Bulk sequencing had **averaged** all of this into silence.
+In 2011, a study of colorectal cancer tumors used bulk RNA-seq and concluded that the tumor immune microenvironment was immunosuppressed. A decade later, single-cell analysis of the same tumor type revealed something far more complex: within what bulk analysis called "immunosuppressed", there were activated cytotoxic T cells trying to kill, Tregs blocking them, exhausted CD8+ cells giving up, and M2-polarized macrophages fueling the tumor — all co-existing in the same biopsy [@Zhangetal2020]. Bulk sequencing had **averaged** all of this into silence.
 
-This is the core problem. When you take a tissue and homogenise it for bulk RNA-seq, you are computing a **weighted average** of the transcriptomes of every cell type present. The signal you measure is not the signal of any real cell — it is an artefact of mixture proportions.
+This is the core problem. When you take a tissue and homogenize it for bulk RNA-seq, you are computing a **weighted average** of the transcriptomes of every cell type present. The signal you measure is not the signal of any real cell — it is an artefact of mixture proportions.
 
 ![Mixing two cell populations with opposing gene–gene relationships produces a misleading average correlation (left). Only by resolving cells individually does the true biology emerge (right). *Adapted from HBC Training Materials.*](img/intro/sc_vs_bulk_cells.png){fig-align="center" width="75%"}
 
-The consequence is profound. Rare cell types that constitute 1–2% of a tissue are invisible. Transitional states between mature cell types are blurred away. A stimulus that activates 30% of T cells while leaving 70% unaffected looks like a mild, uniform response. Tumour subclones with distinct mutation profiles are averaged together.
+The consequence is profound. Rare cell types that constitute 1–2% of a tissue are invisible. Transitional states between mature cell types are blurred away. A stimulus that activates 30% of T cells while leaving 70% unaffected looks like a mild, uniform response. Tumor subclones with distinct mutation profiles are averaged together.
 
 Single-cell RNA sequencing (**scRNA-seq**) solves this by measuring the transcriptome of **each cell individually** — turning a single averaged measurement into a data matrix with one row per cell, capturing the true diversity of biological states.
 
@@ -61,7 +61,7 @@ The real revolution came in **2015**, when two groups published back-to-back in 
 ## Two Papers That Changed Everything (Published the Same Week)
 
 **Macosko et al., 2015 — Drop-seq** [@Macoskoetal2015]
-Encapsulated single cells in nanolitre-scale aqueous droplets alongside DNA-barcoded beads in an oil stream. Profiled **44,808 retinal cells** from the mouse retina in a single experiment, discovering 39 transcriptionally distinct cell populations. Cost per cell dropped to **\$0.06** — orders of magnitude cheaper than any previous method.
+Encapsulated single cells in nanoliter-scale aqueous droplets alongside DNA-barcoded beads in an oil stream. Profiled **44,808 retinal cells** from the mouse retina in a single experiment, discovering 39 transcriptionally distinct cell populations. Cost per cell dropped to **\$0.06** — orders of magnitude cheaper than any previous method.
 
 **Klein et al., 2015 — inDrop** [@Kleinetal2015]
 Published simultaneously, independently arriving at a nearly identical droplet-based solution. Profiled mouse embryonic stem cells undergoing differentiation, capturing continuous transcriptional trajectories invisible to bulk methods.
@@ -69,9 +69,9 @@ Published simultaneously, independently arriving at a nearly identical droplet-b
 These papers established the **droplet microfluidics** paradigm that dominates the field today.
 :::
 
-By 2017, **10x Genomics** had commercialised droplet capture into the **Chromium** platform, making scRNA-seq accessible to any lab with \$50,000 and an Illumina sequencer. Zheng et al. demonstrated profiling of **1.3 million mouse brain cells** in a single run [@Zhengetal2017]. That same year, the **Human Cell Atlas** consortium was announced — an international effort to map every cell type in the human body [@HCA2017].
+By 2017, **10x Genomics** had commercialized droplet capture into the **Chromium** platform, making scRNA-seq accessible to any lab with \$50,000 and an Illumina sequencer. Zheng et al. demonstrated profiling of **1.3 million mouse brain cells** in a single run [@Zhengetal2017]. That same year, the **Human Cell Atlas** consortium was announced — an international effort to map every cell type in the human body [@HCA2017].
 
-The pace accelerated. By 2023, single-cell atlases existed for the entire human immune system, the developing brain, the lung across COVID-19 severity, and dozens of tumour types. What Tang et al. did painstakingly for one cell in 2009, researchers now do for a million cells before lunch.
+The pace accelerated. By 2023, single-cell atlases existed for the entire human immune system, the developing brain, the lung across COVID-19 severity, and dozens of tumor types. What Tang et al. did painstakingly for one cell in 2009, researchers now do for a million cells before lunch.
 
 ---
 
@@ -95,7 +95,7 @@ Modern platforms split into three broad families based on how they physically is
 
 ![Three major cell capture strategies: droplet-based pooled amplification (left), FACS-sorted plate-based individual amplification (middle), and microfluidic chip-based capture (right). Each trades off throughput, sensitivity, and cost differently. *Source: Papalexi & Satija, Nat Rev Immunol, 2018.*](img/intro/sc_library_overviews.png){fig-align="center" width="90%"}
 
-**Droplet-based methods** (10x Chromium, Drop-seq, inDrop) are by far the most widely used. Cells and barcoded beads are co-encapsulated in oil droplets at nanolitre scale. Throughput is 500–10,000 cells per run, cost per cell is very low (~\$0.10–0.50), but only the 3′ or 5′ end of transcripts is captured.
+**Droplet-based methods** (10x Chromium, Drop-seq, inDrop) are by far the most widely used. Cells and barcoded beads are co-encapsulated in oil droplets at nanoliter scale. Throughput is 500–10,000 cells per run, cost per cell is very low (~\$0.10–0.50), but only the 3′ or 5′ end of transcripts is captured.
 
 **Plate-based methods** (Smart-seq2, Smart-seq3) sort individual cells into wells of a 96- or 384-well plate. Each cell is processed separately. Throughput is low (96–384 cells per run), cost per cell is high, but **full-length transcript coverage** enables detection of splice variants, allele-specific expression, and V(D)J recombination.
 
@@ -113,7 +113,7 @@ The key innovation of the 10x Chromium is the **Gel Bead in Emulsion (GEM)**. He
    - A **16 bp cell barcode** (same sequence on all oligos from one bead — this is the cell's identity tag)
    - A **12 bp Unique Molecular Identifier (UMI)** (random sequence — unique per molecule)
    - A **poly-dT** anchor that captures polyadenylated mRNA
-3. mRNA molecules in the droplet hybridise to the poly-dT
+3. mRNA molecules in the droplet hybridize to the poly-dT
 4. Reverse transcriptase converts them to cDNA with the barcode and UMI incorporated
 5. Droplets are broken, cDNA from all cells is pooled, PCR-amplified, and sequenced together
 
@@ -153,7 +153,7 @@ The journey from raw FASTQ reads to a count matrix involves several filtering st
 
 At each step, reads are discarded for a specific reason — invalid barcode, unmapped sequence, multimapping, low base quality. The survivors — confidently mapped, uniquely barcoded reads with valid UMIs — are collapsed into the final count matrix.
 
-The equivalent open-source tools are **STARsolo** (integrated into the STAR aligner) and **Alevin** (part of Salmon), which produce identical outputs while avoiding the Cell Ranger licence requirement.
+The equivalent open-source tools are **STARsolo** (integrated into the STAR aligner) and **Alevin** (part of Salmon), which produce identical outputs while avoiding the Cell Ranger license requirement.
 
 ---
 
@@ -164,7 +164,7 @@ The output of preprocessing is a **gene × cell count matrix** — the fundament
 ::: {layout-ncol=2}
 ![The count matrix has **genes as rows** and **cells as columns**. Each entry is the number of UMIs detected for that gene in that cell. *Adapted from HBC Training Materials.*](img/intro/count_matrix2.png){fig-align="center"}
 
-![In practice, the vast majority of entries are **zero**. A typical 10x Chromium dataset is 90–95% sparse. This is not just a storage problem — it shapes every normalisation and statistical method used downstream. *Adapted from HBC Training Materials.*](img/intro/sparse_matrix.png){fig-align="center"}
+![In practice, the vast majority of entries are **zero**. A typical 10x Chromium dataset is 90–95% sparse. This is not just a storage problem — it shapes every normalization and statistical method used downstream. *Adapted from HBC Training Materials.*](img/intro/sparse_matrix.png){fig-align="center"}
 :::
 
 A typical 10x Chromium experiment profiling human PBMCs might produce:
@@ -185,7 +185,7 @@ A gene that is expressed in a cell may still appear as zero in the count matrix.
 
 Dropout has important consequences:
 - You cannot distinguish a **true biological zero** (gene not expressed) from a **technical zero** (gene expressed but not captured)
-- Normalisation must account for the fact that total counts per cell reflect both biology and capture efficiency
+- Normalization must account for the fact that total counts per cell reflect both biology and capture efficiency
 - Imputation methods (MAGIC, scVI) attempt to statistically recover dropout values, though this remains controversial
 
 ::: {.callout-warning}
@@ -207,7 +207,7 @@ Here is a concise map of each stage and where it lives in this series:
 | Step | What it does | Tutorial |
 |---|---|---|
 | **QC** | Remove dead cells, doublets, low-quality barcodes | #4 |
-| **Normalisation** | Correct for library size differences | #6 |
+| **Normalization** | Correct for library size differences | #6 |
 | **Feature selection** | Focus on highly variable genes | #6 |
 | **Dimensionality reduction** | PCA → UMAP, compress 20,000 genes to 2D | #7–8 |
 | **Clustering** | Group cells by transcriptional similarity | #9 |
@@ -226,7 +226,7 @@ A simplified view of the core pipeline:
 
 The reason scRNA-seq has become ubiquitous is not just technical capability — it is because the biology being revealed was **genuinely not accessible before**. There are at least five categories of biological variation that only single-cell resolution can capture:
 
-![Five types of biological information accessible only at single-cell resolution. Discrete cell types and continuous phenotypes are the most commonly analysed, but rare subtype discovery, spatial mapping, and temporal dynamics represent some of the most biologically impactful applications. *Adapted from Luecken & Theis, 2019.*](img/intro/sc_biol_variability.png){fig-align="center" width="75%"}
+![Five types of biological information accessible only at single-cell resolution. Discrete cell types and continuous phenotypes are the most commonly analyzed, but rare subtype discovery, spatial mapping, and temporal dynamics represent some of the most biologically impactful applications. *Adapted from Luecken & Theis, 2019.*](img/intro/sc_biol_variability.png){fig-align="center" width="75%"}
 
 Let us look at three landmark studies that exemplify what this resolution makes possible:
 
@@ -236,15 +236,15 @@ Keren-Shaul et al. (2017) profiled microglia from the brains of Alzheimer's mous
 
 ### Resolving T Cell Exhaustion in Melanoma
 
-Tirosh et al. (2016) performed scRNA-seq on 4,645 cells from 19 melanoma tumours, resolving tumour cells, T cells, B cells, macrophages, and cancer-associated fibroblasts within each biopsy [@Tirosh2016Science]. They discovered that **intratumoural T cells** showed a continuous spectrum from functional to exhausted states — a trajectory that bulk T cell gene signatures had conflated into a single "dysfunction" category. They identified a cell-cycle-related gene programme in malignant cells that explained inter-tumour heterogeneity. This paper is still cited as a template for single-cell TME analysis.
+Tirosh et al. (2016) performed scRNA-seq on 4,645 cells from 19 melanoma tumors, resolving tumor cells, T cells, B cells, macrophages, and cancer-associated fibroblasts within each biopsy [@Tirosh2016Science]. They discovered that **intratumoral T cells** showed a continuous spectrum from functional to exhausted states — a trajectory that bulk T cell gene signatures had conflated into a single "dysfunction" category. They identified a cell-cycle-related gene program in malignant cells that explained inter-tumor heterogeneity. This paper is still cited as a template for single-cell TME analysis.
 
 ### Multiplexing Samples to Eliminate Batch Effects
 
 A practical landmark: Kang et al. (2018) introduced **cell multiplexing** using natural genetic variation. By pooling PBMCs from multiple donors into a single 10x run and then demultiplexing computationally by SNP profile (using the *demuxlet* tool), they could capture multiple samples simultaneously — **halving costs** and **eliminating batch effects** between samples within the same study [@Kang2018NatBiotech].
 
-![Multiplexing: cells from multiple genetically distinct donors are encapsulated together, labelled by their donor SNP profile, then computationally demultiplexed. Doublets (two cells from different donors in one droplet) are simultaneously identified and removed. *Source: Kang et al., Nat Biotechnol, 2018.*](img/intro/kangetal_image.png){fig-align="center" width="70%"}
+![Multiplexing: cells from multiple genetically distinct donors are encapsulated together, labeled by their donor SNP profile, then computationally demultiplexed. Doublets (two cells from different donors in one droplet) are simultaneously identified and removed. *Source: Kang et al., Nat Biotechnol, 2018.*](img/intro/kangetal_image.png){fig-align="center" width="70%"}
 
-This technique — or its modern relatives (hashtag oligos, MULTI-seq, CMO labelling) — is now standard practice in clinical scRNA-seq studies with multiple patients.
+This technique — or its modern relatives (hashtag oligos, MULTI-seq, CMO labeling) — is now standard practice in clinical scRNA-seq studies with multiple patients.
 
 ---
 
@@ -255,8 +255,8 @@ All analysis in this series uses the **scverse** — a coordinated ecosystem of 
 | Package | Role | Key operations |
 |---|---|---|
 | **anndata** | Data structure | Store and manipulate annotated data matrices |
-| **scanpy** | Core analysis | QC, normalisation, PCA, UMAP, clustering, DE |
-| **scvi-tools** | Deep generative models | Probabilistic normalisation, integration, doublet detection |
+| **scanpy** | Core analysis | QC, normalization, PCA, UMAP, clustering, DE |
+| **scvi-tools** | Deep generative models | Probabilistic normalization, integration, doublet detection |
 | **cellrank** | Trajectory inference | Cell fate prediction using RNA velocity and pseudotime |
 | **squidpy** | Spatial transcriptomics | Spatial neighbourhood graphs, image analysis |
 | **muon** | Multi-modal data | CITE-seq, ATAC+RNA, multi-omics integration |
@@ -296,7 +296,7 @@ The dataset consists of 12 count matrices stored as compressed CSV files (`.csv.
 Clinical scRNA-seq datasets with paired pre/post samples are among the most powerful study designs in the field, because you can:
 
 1. Identify which **cell types** expand or contract in response to treatment
-2. Find which **gene programmes** are activated or suppressed within each cell type
+2. Find which **gene programs** are activated or suppressed within each cell type
 3. Detect cell type-specific **treatment responders** vs non-responders
 
 This is the exact type of analysis driving precision medicine applications today.
@@ -312,7 +312,7 @@ Single-cell RNA-seq is not just a more expensive version of bulk RNA-seq — it 
 
 The technology achieves single-cell resolution through **droplet microfluidics** (primarily) — co-encapsulating a cell and a barcoded bead, reverse-transcribing the cell's mRNA with a unique cell barcode and per-molecule UMI, then sequencing millions of tagged cDNA fragments in a single sequencer run.
 
-The output — a **sparse gene × cell count matrix** — is the starting point for all computational analysis: QC, normalisation, dimensionality reduction, clustering, cell type annotation, and downstream biological interpretation.
+The output — a **sparse gene × cell count matrix** — is the starting point for all computational analysis: QC, normalization, dimensionality reduction, clustering, cell type annotation, and downstream biological interpretation.
 
 The Python **scverse** ecosystem — centred on `scanpy` and `anndata` — provides a coherent, well-maintained framework for every step of this pipeline. In the next tutorial, you will set up your environment and install everything you need.
 

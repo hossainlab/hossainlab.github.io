@@ -105,7 +105,7 @@
 - title: "Using Singularity on HPC Clusters"
   module: "Module 3: Containers and Reproducibility"
   number: 8
-  description: "Convert Docker images to Singularity SIF files, configure Singularity cache and bind paths, and run containerised pipelines on shared HPC systems."
+  description: "Convert Docker images to Singularity SIF files, configure Singularity cache and bind paths, and run containerized pipelines on shared HPC systems."
   status: coming-soon
   difficulty: Intermediate
   duration: "~30 min"

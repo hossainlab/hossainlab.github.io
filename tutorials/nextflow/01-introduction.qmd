@@ -20,7 +20,7 @@ By the end of this tutorial you will be able to:
 - Describe what Nextflow is and understand its **dataflow programming model**
 - Define the four core abstractions: **processes**, **channels**, **operators**, and **executors**
 - Understand the difference between **Nextflow DSL1 and DSL2**
-- Recognise the **nf-core** community and the value it provides
+- Recognize the **nf-core** community and the value it provides
 - Make an informed choice between Nextflow and alternative workflow managers (Snakemake, WDL, CWL)
 - Identify real-world bioinformatics **use cases** where Nextflow excels
 
@@ -67,7 +67,7 @@ This works for a single sample, run once, on one machine. It fails in every othe
 
 **Failure mode 2: Different machines.** The script hardcodes paths, resource requirements, and tool locations that do not exist on another system.
 
-**Failure mode 3: Scaling.** Running 100 samples sequentially takes 100× as long as running 1. Parallelising with `&` and `wait` works until one job crashes and corrupts shared files.
+**Failure mode 3: Scaling.** Running 100 samples sequentially takes 100× as long as running 1. Parallelizing with `&` and `wait` works until one job crashes and corrupts shared files.
 
 **Failure mode 4: Reproducibility.** There is no automatic record of which software versions were used. Rerunning a year later with updated tools may silently produce different results.
 
@@ -107,7 +107,7 @@ Two words in that definition deserve unpacking: **scalable** and **reproducible*
 ::: {.callout-important}
 ## What Nextflow is NOT
 
-Nextflow is not a bioinformatics tool itself. It does not align reads, call variants, or normalise expression. It is a **framework for orchestrating other tools**. Every process in a Nextflow pipeline is essentially a shell script that calls an existing tool (BWA, STAR, GATK, DeepVariant, etc.) on specific inputs.
+Nextflow is not a bioinformatics tool itself. It does not align reads, call variants, or normalize expression. It is a **framework for orchestrating other tools**. Every process in a Nextflow pipeline is essentially a shell script that calls an existing tool (BWA, STAR, GATK, DeepVariant, etc.) on specific inputs.
 
 Think of Nextflow as the conductor of an orchestra — it does not play any instrument, but it ensures that every instrument plays the right notes at the right time, and that the performance can be repeated identically on any stage.
 :::
@@ -143,7 +143,7 @@ This model maps beautifully onto bioinformatics pipelines:
 
 In Nextflow, this data dependency graph is described through **channels** — streams of data that connect processes together.
 
-### 3.1 Visualising a Simple Dataflow Graph
+### 3.1 Visualizing a Simple Dataflow Graph
 
 Consider a minimal RNA-seq pipeline with three steps: trimming, alignment, and quantification. In Nextflow's mental model:
 
@@ -298,7 +298,7 @@ workflow {
 }
 ```
 
-This modularity is what makes nf-core possible — a library of standardised, tested, containerised modules that any pipeline can import.
+This modularity is what makes nf-core possible — a library of standardized, tested, containerized modules that any pipeline can import.
 
 ### 5.2 Subworkflows
 
@@ -318,8 +318,8 @@ As of 2024, nf-core includes:
 
 - **100+ peer-reviewed pipelines** covering genomics, transcriptomics, proteomics, metagenomics, imaging analysis, and more
 - **1,000+ contributors** from research institutions worldwide
-- A shared **module library** (nf-core/modules) with 1,000+ tested, containerised process modules
-- A **template** that standardises pipeline structure, testing, CI/CD, documentation, and release management
+- A shared **module library** (nf-core/modules) with 1,000+ tested, containerized process modules
+- A **template** that standardizes pipeline structure, testing, CI/CD, documentation, and release management
 - The **nf-core/tools** CLI for creating, linting, and updating pipelines
 
 ### 6.1 Selected nf-core Pipelines
@@ -366,12 +366,12 @@ Every nf-core pipeline must:
 - Pass **automated linting** (`nf-core lint`) checking 150+ code quality rules
 - Include a **test profile** that runs end-to-end on minimal data in CI
 - Specify container images for every process (Docker + Singularity)
-- Follow a standardised **samplesheet** format for input specification
+- Follow a standardized **samplesheet** format for input specification
 - Include a **MultiQC report** with QC metrics for all samples
 - Maintain **semantic versioning** (patch/minor/major) with changelogs
 - Be reviewed and approved by at least two community members
 
-This standardisation means that if you know how to run one nf-core pipeline, you essentially know how to run all of them.
+This standardization means that if you know how to run one nf-core pipeline, you essentially know how to run all of them.
 
 ---
 
@@ -435,7 +435,7 @@ Nextflow is used in production at some of the world's largest genomics operation
 
 ### 9.1 Clinical Genomics
 
-**Clinical Genomics Sweden** uses nf-core/sarek to process whole-genome sequencing data from rare disease patients. The pipeline runs on a SLURM cluster, uses Singularity containers, and has been validated against the AstraZeneca rare disease programme requirements. The same pipeline code runs on ~50 samples per week in a clinical diagnostic context where **reproducibility is a regulatory requirement**, not just good practice.
+**Clinical Genomics Sweden** uses nf-core/sarek to process whole-genome sequencing data from rare disease patients. The pipeline runs on a SLURM cluster, uses Singularity containers, and has been validated against the AstraZeneca rare disease program requirements. The same pipeline code runs on ~50 samples per week in a clinical diagnostic context where **reproducibility is a regulatory requirement**, not just good practice.
 
 ### 9.2 Population-Scale Genomics
 
@@ -443,11 +443,11 @@ The **UK Biobank** analysis of 500,000 exomes used Nextflow-based pipelines runn
 
 ### 9.3 Cancer Genomics Atlases
 
-The **ICGC/PCAWG** (Pan-Cancer Analysis of Whole Genomes) project processed whole genomes from 2,658 donors across 38 cancer types using a harmonised Nextflow pipeline. Different member institutions (in different countries, on different HPC systems) ran the **identical pipeline code** using institution-specific profiles — ensuring that results were comparable across sites.
+The **ICGC/PCAWG** (Pan-Cancer Analysis of Whole Genomes) project processed whole genomes from 2,658 donors across 38 cancer types using a harmonized Nextflow pipeline. Different member institutions (in different countries, on different HPC systems) ran the **identical pipeline code** using institution-specific profiles — ensuring that results were comparable across sites.
 
 ### 9.4 Drug Discovery
 
-Several pharmaceutical companies (AstraZeneca, Roche, Novartis) use nf-core pipelines in their internal bioinformatics platforms. The standardisation and audit trail provided by Nextflow + containers satisfies GxP (Good Practice) regulatory requirements for drug discovery workflows.
+Several pharmaceutical companies (AstraZeneca, Roche, Novartis) use nf-core pipelines in their internal bioinformatics platforms. The standardization and audit trail provided by Nextflow + containers satisfies GxP (Good Practice) regulatory requirements for drug discovery workflows.
 
 ### 9.5 Your Research Lab
 
@@ -553,7 +553,7 @@ In the next tutorial, you will install Nextflow and run this exact pipeline your
 Bioinformatics pipelines are complex, multi-step, multi-tool processes that fail to be reproducible and scalable when implemented as shell scripts. Workflow managers exist to solve this problem by providing a framework for:
 
 - **Declaring** data dependencies between steps (rather than sequencing them imperatively)
-- **Parallelising** automatically across samples
+- **Parallelizing** automatically across samples
 - **Isolating** execution environments with containers
 - **Resuming** from failure without rerunning successful steps
 - **Porting** between local, HPC, and cloud execution environments with configuration changes only
@@ -562,7 +562,7 @@ Bioinformatics pipelines are complex, multi-step, multi-tool processes that fail
 
 **DSL2** is the current Nextflow syntax, enabling modular, reusable pipeline components (modules and subworkflows) that can be shared across projects.
 
-**nf-core** is the community ecosystem of standardised, peer-reviewed Nextflow pipelines that solve the most common bioinformatics analysis scenarios — from RNA-seq and variant calling to metagenomics and proteomics.
+**nf-core** is the community ecosystem of standardized, peer-reviewed Nextflow pipelines that solve the most common bioinformatics analysis scenarios — from RNA-seq and variant calling to metagenomics and proteomics.
 
 ::: {.callout-note}
 ## Key Concepts Checklist

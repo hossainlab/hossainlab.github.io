@@ -52,7 +52,7 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 ```{=latex}
 \begin{center}
 {\fontsize{26}{30}\selectfont\bfseries\color{cvname} Md. Jubayer Hossain}\\[4pt]
-{\large\color{cvsub} Bioinformatics \& Computational Biology \textperiodcentered{} Prospective Ph.D. Student}\\[6pt]
+{\large\color{cvsub} Bioinformatics \& Computational Biology \textperiodcentered{} DeepBio}\\[6pt]
 \makebox[\linewidth][c]{\footnotesize
 \href{mailto:hossainmj.me@gmail.com}{\color{cvlink}\faEnvelope~hossainmj.me@gmail.com}%
 \cvsep

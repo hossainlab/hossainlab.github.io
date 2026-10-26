@@ -1,8 +1,8 @@
 # ──────────────────────────────────────────────────────────────────────────────
-# Homepage "Open Programmes" cards (Training & mentorship section)
+# Homepage "Open Programs" cards (Training & mentorship section)
 # ──────────────────────────────────────────────────────────────────────────────
 # Fields:
-#   title        – Programme name (required)
+#   title        – Program name (required)
 #   url          – Where "Learn more" and the title point (required)
 #   kicker       – Small pill above the title, e.g. duration and topic
 #   description  – One or two sentences

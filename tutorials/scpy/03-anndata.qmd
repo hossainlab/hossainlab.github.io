@@ -89,7 +89,7 @@ adata = adata[adata.obs["n_genes"] > 500, :]
     <span style="font-size:0.65rem;color:#cbd5e1;margin-top:0.3rem">var_names →<br>gene symbols</span>
   </div>
 
-  <!-- .var — top centre -->
+  <!-- .var — top center -->
   <div class="ad-cell ad-var">
     <span class="ad-key">.var</span>
     <span class="ad-type">pd.DataFrame &nbsp;·&nbsp; n_vars × p</span>
@@ -133,20 +133,20 @@ adata = adata[adata.obs["n_genes"] > 500, :]
     <span class="ad-axis-label">↕ n_obs rows (one per cell)</span>
   </div>
 
-  <!-- .X — centre -->
+  <!-- .X — center -->
   <div class="ad-cell ad-x">
     <span class="ad-key">.X</span>
     <span class="ad-type">scipy.sparse.csr_matrix &nbsp;·&nbsp; n_obs × n_vars</span>
     <span class="ad-desc" style="font-size:0.8rem;margin-top:0.4rem">
       The core expression matrix. Holds raw UMI counts on load;
-      replaced by log-normalised values after preprocessing.
+      replaced by log-normalized values after preprocessing.
     </span>
     <span class="ad-desc" style="font-size:0.76rem;margin-top:0.3rem;opacity:0.8">
       ~94 % zeros (dropout). Always stored as sparse to save memory.
     </span>
     <div class="ad-tags" style="margin-top:0.5rem">
       <span class="ad-tag">int32 counts (raw)</span>
-      <span class="ad-tag">float32 (normalised)</span>
+      <span class="ad-tag">float32 (normalized)</span>
     </div>
   </div>
 
@@ -166,7 +166,7 @@ adata = adata[adata.obs["n_genes"] > 500, :]
   <div class="ad-cell ad-uns">
     <span class="ad-key">.uns</span>
     <span class="ad-type">dict &nbsp;·&nbsp; unstructured</span>
-    <span class="ad-desc">Free-form experiment metadata. Parameters, colour palettes, algorithm outputs.</span>
+    <span class="ad-desc">Free-form experiment metadata. Parameters, color palettes, algorithm outputs.</span>
     <div class="ad-tags">
       <span class="ad-tag">neighbors</span>
       <span class="ad-tag">leiden</span>
@@ -175,11 +175,11 @@ adata = adata[adata.obs["n_genes"] > 500, :]
     </div>
   </div>
 
-  <!-- .layers — bottom centre -->
+  <!-- .layers — bottom center -->
   <div class="ad-cell ad-layers">
     <span class="ad-key">.layers</span>
     <span class="ad-type">dict of matrices (n_obs × n_vars)</span>
-    <span class="ad-desc">Extra expression matrices — identical shape to .X. Use to preserve raw counts before normalising.</span>
+    <span class="ad-desc">Extra expression matrices — identical shape to .X. Use to preserve raw counts before normalizing.</span>
     <div class="ad-tags">
       <span class="ad-tag">counts</span>
       <span class="ad-tag">normalized</span>
@@ -292,7 +292,7 @@ print(adata.n_obs, adata.n_vars)  # 5 4
 
 ### Adding to `.uns`
 
-`.uns` (unstructured) is a plain Python dictionary. Store anything that belongs to the experiment but does not fit the matrix structure — algorithm parameters, colour palettes, log entries.
+`.uns` (unstructured) is a plain Python dictionary. Store anything that belongs to the experiment but does not fit the matrix structure — algorithm parameters, color palettes, log entries.
 
 ```python
 adata.uns["experiment"] = {
@@ -492,7 +492,7 @@ print(adata.var[["n_cells_by_counts", "mean_counts"]].sort_values(
 ::: {.callout-tip}
 ## What `.var` Will Contain by Tutorial #6
 
-By the end of Tutorial #6 (Normalisation & Feature Selection), your `.var` DataFrame will contain many new columns added automatically by scanpy:
+By the end of Tutorial #6 (Normalization & Feature Selection), your `.var` DataFrame will contain many new columns added automatically by scanpy:
 
 | Column | Added by | Meaning |
 |---|---|---|
@@ -500,7 +500,7 @@ By the end of Tutorial #6 (Normalisation & Feature Selection), your `.var` DataF
 | `n_cells_by_counts` | `sc.pp.calculate_qc_metrics` | Cells expressing this gene |
 | `highly_variable` | `sc.pp.highly_variable_genes` | Selected for downstream analysis |
 | `means` | `sc.pp.highly_variable_genes` | Mean expression |
-| `dispersions_norm` | `sc.pp.highly_variable_genes` | Normalised dispersion (variance) |
+| `dispersions_norm` | `sc.pp.highly_variable_genes` | Normalized dispersion (variance) |
 
 Everything stays in `.var` — one DataFrame, always aligned to your genes.
 :::
@@ -509,24 +509,24 @@ Everything stays in `.var` — one DataFrame, always aligned to your genes.
 
 ## 7. Layers — Storing Multiple Expression Matrices
 
-`.layers` is a dictionary of matrices, each the same shape as `.X` (`n_obs × n_vars`). It is designed for exactly one workflow pattern: **preserve raw counts while working with normalised values**.
+`.layers` is a dictionary of matrices, each the same shape as `.X` (`n_obs × n_vars`). It is designed for exactly one workflow pattern: **preserve raw counts while working with normalized values**.
 
 ```python
-# ── Save raw counts BEFORE any normalisation ──────────────────────────────────
+# ── Save raw counts BEFORE any normalization ──────────────────────────────────
 # This is the single most important best practice in the pipeline.
 adata.layers["counts"] = adata.X.copy()
 
-# Later in the pipeline: normalise and log-transform .X
+# Later in the pipeline: normalize and log-transform .X
 sc.pp.normalize_total(adata, target_sum=1e4)
 sc.pp.log1p(adata)
 
-# Now .X holds log-normalised values, but raw counts are safe in .layers
-print("log-normalised .X, first cell, first gene:", adata.X[0, 0])
+# Now .X holds log-normalized values, but raw counts are safe in .layers
+print("log-normalized .X, first cell, first gene:", adata.X[0, 0])
 print("raw counts      in layer, same entry:      ", adata.layers["counts"][0, 0])
 ```
 
 ::: {.callout-important}
-## Save Raw Counts Before Normalising — Always
+## Save Raw Counts Before Normalizing — Always
 
 The very first thing you should do after loading data is:
 
@@ -534,7 +534,7 @@ The very first thing you should do after loading data is:
 adata.layers["counts"] = adata.X.copy()
 ```
 
-Several downstream tools (notably `scvi-tools`, `DESeq2` via PyDESeq2, and compositional analysis methods) require raw integer counts as input, **not** log-normalised values. If you normalise `.X` and forget to save the original counts, you cannot recover them without reloading from disk. This is among the most common and most frustrating mistakes in single-cell analysis.
+Several downstream tools (notably `scvi-tools`, `DESeq2` via PyDESeq2, and compositional analysis methods) require raw integer counts as input, **not** log-normalized values. If you normalize `.X` and forget to save the original counts, you cannot recover them without reloading from disk. This is among the most common and most frustrating mistakes in single-cell analysis.
 :::
 
 ---
@@ -719,7 +719,7 @@ print(adata_all.obs_names[:3].tolist())
 
 The merged `.obs` table now shows condition and sample labels for every cell:
 
-![After merging samples, `.obs` contains one row per cell with all per-sample metadata attached. This table will grow with QC metrics, normalised statistics, cluster labels, and cell type annotations over the next tutorials. *Adapted from HBC Training Materials.*](img/merged_seurat_meta.png){fig-align="center" width="85%"}
+![After merging samples, `.obs` contains one row per cell with all per-sample metadata attached. This table will grow with QC metrics, normalized statistics, cluster labels, and cell type annotations over the next tutorials. *Adapted from HBC Training Materials.*](img/merged_seurat_meta.png){fig-align="center" width="85%"}
 
 ---
 
@@ -787,13 +787,13 @@ In AnnData (≤ 0.9), slicing an AnnData returns a **view** — a lightweight re
 # This is a slice — may be a view or copy depending on AnnData version
 adata_ctrl = adata_all[ctrl_cells, :]
 
-# Always materialise explicitly when you intend to modify a subset
+# Always materialize explicitly when you intend to modify a subset
 adata_ctrl = adata_all[ctrl_cells, :].copy()  # ← safe, always a new object
 ```
 
 **When to use `.copy()`:**
 
-- Before normalising a subset separately from the rest
+- Before normalizing a subset separately from the rest
 - Before adding new `.obs` columns to a subset
 - Any time you write `adata_subset = adata_all[some_mask, :]` and then modify `adata_subset`
 
@@ -804,7 +804,7 @@ The cost is memory (you now have two copies). The benefit is correctness. For mo
 
 ## 12. Saving and Loading — The `.h5ad` Format
 
-AnnData's native serialisation format is **HDF5-backed AnnData** (`.h5ad`). It stores the sparse matrix, all DataFrames, and all dict components efficiently in a single binary file.
+AnnData's native serialization format is **HDF5-backed AnnData** (`.h5ad`). It stores the sparse matrix, all DataFrames, and all dict components efficiently in a single binary file.
 
 ```python
 import scanpy as sc
@@ -830,7 +830,7 @@ print(adata)
 |---|---|
 | Merged raw counts (12 samples) | ~800 MB |
 | After QC filtering (~80k cells) | ~600 MB |
-| After normalisation + HVG selection (~3k genes) | ~50 MB |
+| After normalization + HVG selection (~3k genes) | ~50 MB |
 | After PCA + UMAP (final analysis object) | ~60 MB |
 
 ::: {.callout-tip}
@@ -904,7 +904,7 @@ adata = ad.concat(
 )
 adata.obs_names_make_unique()
 
-# ── Store raw counts before any normalisation ─────────────────────────────────
+# ── Store raw counts before any normalization ─────────────────────────────────
 adata.layers["counts"] = adata.X.copy()
 
 # ── Save checkpoint ───────────────────────────────────────────────────────────
@@ -959,7 +959,7 @@ If any check fails, re-run the "Putting It All Together" script above.
 ## What's Next
 
 **Tutorial #4 — Quality Control: Filtering Cells and Genes**
-Use the merged AnnData to compute QC metrics (total counts, genes detected, mitochondrial fraction), visualise their distributions, choose principled filtering thresholds, and remove low-quality cells, empty droplets, and doublets — reducing 107k raw barcodes to a high-quality analysis dataset.
+Use the merged AnnData to compute QC metrics (total counts, genes detected, mitochondrial fraction), visualize their distributions, choose principled filtering thresholds, and remove low-quality cells, empty droplets, and doublets — reducing 107k raw barcodes to a high-quality analysis dataset.
 
 ---
 

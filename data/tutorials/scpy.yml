@@ -60,7 +60,7 @@
 - title: "Loading Raw Data and Quality Control Metrics"
   module: "Module 2: Preprocessing & QC"
   number: 4
-  description: "Read 10x Genomics data into AnnData, compute QC metrics (total counts, n_genes, mitochondrial fraction), and visualise distributions."
+  description: "Read 10x Genomics data into AnnData, compute QC metrics (total counts, n_genes, mitochondrial fraction), and visualize distributions."
   status: coming-soon
   difficulty: Beginner
   duration: "~45 min"
@@ -84,7 +84,7 @@
 - title: "Normalization, Log-Transformation & Feature Selection"
   module: "Module 2: Preprocessing & QC"
   number: 6
-  description: "Library-size normalisation, log1p transformation, and highly variable gene selection to prepare data for dimensionality reduction."
+  description: "Library-size normalization, log1p transformation, and highly variable gene selection to prepare data for dimensionality reduction."
   status: coming-soon
   difficulty: Intermediate
   duration: "~35 min"
@@ -107,7 +107,7 @@
     - kNN
     - scanpy
 
-- title: "UMAP and t-SNE Visualisation"
+- title: "UMAP and t-SNE Visualization"
   module: "Module 3: Dimensionality Reduction & Clustering"
   number: 8
   description: "Generate UMAP and t-SNE embeddings, interpret scatter plots, and understand the strengths and limitations of each method."
@@ -117,7 +117,7 @@
   tags:
     - UMAP
     - t-SNE
-    - visualisation
+    - visualization
 
 - title: "Clustering with Leiden and Louvain"
   module: "Module 3: Dimensionality Reduction & Clustering"

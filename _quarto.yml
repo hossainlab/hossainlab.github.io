@@ -21,7 +21,7 @@ author-meta: "Jubayer Hossain"
 
 website:
   page-navigation: true
-  title: "Jubayer Hossain - Multiomics and Machine Learning"
+  title: "Jubayer Hossain - Computational Cancer Biology"
   image: "files/profiles/jubayer.jpg"
   favicon: "/files/profiles/icon.png"
   description: "Academic Website for Jubayer Hossain"
@@ -81,8 +81,6 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: "/#focus"
-        text: Focus
       - href: "/#featured"
         text: Work
       - href: "/#talks"

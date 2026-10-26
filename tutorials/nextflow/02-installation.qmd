@@ -384,7 +384,7 @@ The `-resume` mechanism requires that the actual output files in `work/` still e
 
 ## 5. Configuring Nextflow Environment Variables
 
-Nextflow's behaviour can be customised through environment variables. The following are the most useful for day-to-day work.
+Nextflow's behavior can be customized through environment variables. The following are the most useful for day-to-day work.
 
 | Variable | Default | Purpose |
 |---|---|---|
@@ -395,7 +395,7 @@ Nextflow's behaviour can be customised through environment variables. The follow
 | `NXF_JAVA_HOME` | Uses `$JAVA_HOME` | Override Java location for Nextflow only |
 | `NXF_CONDA_CACHEDIR` | `$NXF_HOME/conda` | Conda environment cache |
 | `NXF_SINGULARITY_CACHEDIR` | none | Where Singularity SIF images are cached |
-| `NXF_DOCKER_LEGACY_PULL` | false | Use legacy `docker pull` behaviour |
+| `NXF_DOCKER_LEGACY_PULL` | false | Use legacy `docker pull` behavior |
 | `TOWER_ACCESS_TOKEN` | none | API token for Seqera Platform (Tower) |
 
 ### 5.1 Recommended Minimal Configuration

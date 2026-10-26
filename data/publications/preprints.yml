@@ -9,6 +9,7 @@
 #   journal        – Preprint server name (bioRxiv)
 #   status         – Preprint / Submitted
 #   type           – Must be: preprint
+#   image          – Optional thumbnail (files/publications/preprint-*.svg)
 #   categories     – List of research topics for filtering
 # ──────────────────────────────────────────────────────────────────────────────
 
@@ -19,6 +20,7 @@
   journal: "bioRxiv"
   status: "Preprint"
   type: preprint
+  image: "files/publications/preprint-fezf2.svg"
   categories:
     - Bioinformatics
     - Neuroscience
@@ -30,6 +32,7 @@
   journal: "bioRxiv"
   status: "Preprint"
   type: preprint
+  image: "files/publications/preprint-cnv-fpr.svg"
   categories:
     - Bioinformatics
     - Single-Cell
@@ -42,6 +45,7 @@
   journal: "bioRxiv"
   status: "Preprint"
   type: preprint
+  image: "files/publications/preprint-immune-sex.svg"
   categories:
     - Bioinformatics
     - Immunology
@@ -53,6 +57,7 @@
   journal: "bioRxiv"
   status: "Preprint"
   type: preprint
+  image: "files/publications/preprint-gbm-hub.svg"
   categories:
     - Bioinformatics
     - Cancer Genomics
@@ -64,6 +69,7 @@
   journal: "bioRxiv"
   status: "Preprint"
   type: preprint
+  image: "files/publications/preprint-brca-targets.svg"
   categories:
     - Bioinformatics
     - Cancer Genomics
@@ -76,6 +82,7 @@
   journal: "bioRxiv"
   status: "Preprint"
   type: preprint
+  image: "files/publications/preprint-gnn-niche.svg"
   categories:
     - Bioinformatics
     - Spatial Transcriptomics

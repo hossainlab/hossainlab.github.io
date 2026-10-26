@@ -422,7 +422,7 @@ publishDir "${params.outdir}", mode: 'copy'
 
 Common `mode` values:
 
-| Mode | Behaviour |
+| Mode | Behavior |
 |---|---|
 | `'copy'` | Copy the file; original stays in `work/` |
 | `'move'` | Move the file; original removed from `work/` (breaks `-resume`) |
@@ -830,7 +830,7 @@ This **tuple + fromFilePairs** pattern is the foundation of nearly every real bi
 ::: {.callout-tip}
 ## Custom Grouping with `fromFilePairs`
 
-By default, `fromFilePairs` groups by stripping the matched glob token. You can customise this:
+By default, `fromFilePairs` groups by stripping the matched glob token. You can customize this:
 
 ```groovy
 // Extract sample ID from a more complex naming convention
@@ -930,7 +930,7 @@ Nextflow skips items 1 and 3 (cached) and only re-runs item 2.
 
 ### 12.3 `errorStrategy`
 
-The default behaviour when a process fails is to **abort the entire pipeline** after all currently-running tasks complete. You can change this with the `errorStrategy` directive:
+The default behavior when a process fails is to **abort the entire pipeline** after all currently-running tasks complete. You can change this with the `errorStrategy` directive:
 
 ```groovy
 process WILL_FAIL {
@@ -1021,7 +1021,7 @@ You have written four Nextflow pipelines from scratch, progressively introducing
 
 - Use `${param}` for Nextflow variables; use `\$var` for shell variables inside `script:`
 - Every process invocation runs in its own isolated `work/` subdirectory
-- Always use `publishDir mode: 'copy'` (not `'move'`) to preserve `-resume` behaviour
+- Always use `publishDir mode: 'copy'` (not `'move'`) to preserve `-resume` behavior
 - Use `tag` directives — they make debugging dramatically easier at scale
 - `nextflow log <run-name>` is your history and forensics tool
 - `-resume` uses input hashes, not timestamps — only changed inputs trigger re-execution

@@ -8,7 +8,7 @@ the repository holds content: edit a file here and the page follows on the next
 |---|---|---|
 | `featured.yml` | Home > Featured Research | `featured-card.ejs` |
 | `news.yml` | Home > News | `news-item.ejs` |
-| `programmes.yml` | Home > Open Programmes | `programme-card.ejs` |
+| `programmes.yml` | Home > Open Programs | `programme-card.ejs` |
 | `projects.yml` | Projects | `project-card.ejs` |
 | `publications/journal-articles.yml` | Home > Recent Publications, Publications | `home-publication.ejs`, `publication-card.ejs` |
 | `publications/gbd-contributions.yml` | Publications | `publication-card.ejs` |

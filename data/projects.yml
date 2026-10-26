@@ -43,8 +43,8 @@
   title: "EWSAtlas: A Single-Cell Atlas of Ewing Sarcoma"
   featured: true
   featured-order: 2
-  summary: "Harmonised single-cell transcriptomics atlas of human Ewing sarcoma, integrating published tumour datasets into one reference."
-  description: "A harmonised single-cell transcriptomics atlas of human Ewing sarcoma (EWS). Published tumour datasets are integrated into a common reference to chart malignant and microenvironmental cell states, characterise EWS-FLI1-driven transcriptional programmes, and provide a reusable resource for downstream analysis."
+  summary: "Harmonized single-cell transcriptomics atlas of human Ewing sarcoma, integrating published tumor datasets into one reference."
+  description: "A harmonized single-cell transcriptomics atlas of human Ewing sarcoma (EWS). Published tumor datasets are integrated into a common reference to chart malignant and microenvironmental cell states, characterize EWS-FLI1-driven transcriptional programs, and provide a reusable resource for downstream analysis."
   categories:
     - Single-Cell
     - Cancer Genomics
@@ -62,7 +62,7 @@
   featured: true
   featured-order: 3
   summary: "Cell-type-resolved transcriptional signatures of hyperglycemic injury across hepatic and renal tissue."
-  description: "Single-cell analysis of hyperglycemia-associated transcriptional change in liver and kidney, resolving which cell types carry the metabolic stress signature in each organ and how those programmes overlap between the two tissues."
+  description: "Single-cell analysis of hyperglycemia-associated transcriptional change in liver and kidney, resolving which cell types carry the metabolic stress signature in each organ and how those programs overlap between the two tissues."
   categories:
     - Single-Cell
     - Metabolic Disease
@@ -76,8 +76,8 @@
   title: "Cellular and Molecular Mechanisms of Alzheimer's Disease"
   featured: true
   featured-order: 4
-  summary: "Single-cell and multi-omic dissection of the cell-type-specific programmes that drive Alzheimer's disease pathology."
-  description: "Analysis of the cellular and molecular mechanisms underlying Alzheimer's disease, using single-cell and multi-omic brain data to resolve cell-type-specific transcriptional and regulatory programmes associated with disease progression."
+  summary: "Single-cell and multi-omic dissection of the cell-type-specific programs that drive Alzheimer's disease pathology."
+  description: "Analysis of the cellular and molecular mechanisms underlying Alzheimer's disease, using single-cell and multi-omic brain data to resolve cell-type-specific transcriptional and regulatory programs associated with disease progression."
   categories:
     - Single-Cell
     - Neuroscience

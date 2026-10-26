@@ -61,7 +61,7 @@ These paths are **not mutually exclusive** — many researchers develop locally 
 
 You may have heard of Anaconda. We recommend **Miniforge** instead for three reasons:
 
-1. **Licence** — Anaconda's default channel has a commercial-use restriction since 2020. Miniforge uses `conda-forge` by default, which is fully open-source and has no such restriction.
+1. **License** — Anaconda's default channel has a commercial-use restriction since 2020. Miniforge uses `conda-forge` by default, which is fully open-source and has no such restriction.
 2. **Speed** — Miniforge ships with **mamba**, a C++ reimplementation of the conda solver that resolves environments in seconds instead of minutes.
 3. **Size** — Miniforge is a minimal installer (~90 MB). You install only what you need.
 
@@ -391,10 +391,10 @@ print("\nRunning end-to-end sanity check...")
 adata = sc.datasets.pbmc3k()               # Download 3k PBMC demo dataset
 sc.pp.filter_cells(adata, min_genes=200)   # Basic filter
 sc.pp.filter_genes(adata, min_cells=3)
-sc.pp.normalize_total(adata)               # Normalise
+sc.pp.normalize_total(adata)               # Normalize
 sc.pp.log1p(adata)
 sc.pp.pca(adata, n_comps=10)              # PCA
-sc.pp.neighbors(adata)                     # Neighbour graph
+sc.pp.neighbors(adata)                     # Neighbor graph
 sc.tl.umap(adata)                          # UMAP
 
 print(f"\n  ✓  End-to-end pipeline complete")
@@ -497,7 +497,7 @@ print(f"scanpy {sc.__version__} | anndata {ad.__version__} | numpy {np.__version
 ::: {.callout-important}
 ## Why Set a Random Seed?
 
-Several steps in the single-cell pipeline are stochastic: UMAP initialisation, Leiden clustering tie-breaking, and neural network weight initialisation (scvi-tools). Without a fixed seed, your UMAP will look slightly different every run, and cluster numbers will shift. Setting `SEED = 42` at the top of every notebook ensures your figures are **exactly reproducible** — critical when revising a manuscript six months after the analysis was done.
+Several steps in the single-cell pipeline are stochastic: UMAP initialization, Leiden clustering tie-breaking, and neural network weight initialization (scvi-tools). Without a fixed seed, your UMAP will look slightly different every run, and cluster numbers will shift. Setting `SEED = 42` at the top of every notebook ensures your figures are **exactly reproducible** — critical when revising a manuscript six months after the analysis was done.
 :::
 
 ---
@@ -531,7 +531,7 @@ The key rules:
 Never overwrite, rename, or edit files in `data/raw/`. If you need to modify something, copy it to `data/processed/` first.
 
 **Rule 2 — Save AnnData checkpoints.**
-After each major step (QC, normalisation, clustering), write the AnnData object to an `.h5ad` file. This way, you can restart any tutorial from that point without rerunning everything.
+After each major step (QC, normalization, clustering), write the AnnData object to an `.h5ad` file. This way, you can restart any tutorial from that point without rerunning everything.
 
 ```python
 # After QC
@@ -542,7 +542,7 @@ adata = sc.read_h5ad("data/processed/adata_qc.h5ad")
 ```
 
 **Rule 3 — One notebook per major analysis step.**
-Do not cram quality control, normalisation, clustering, and annotation into one 500-cell notebook. Give each step its own file. Your future self will thank you.
+Do not cram quality control, normalization, clustering, and annotation into one 500-cell notebook. Give each step its own file. Your future self will thank you.
 
 **Rule 4 — Log your parameters.**
 Record the key parameters you used — QC thresholds, number of PCs, clustering resolution — in a dedicated cell or a YAML config file. This makes it trivial to revisit parameter choices when a reviewer asks.
@@ -574,9 +574,9 @@ You now have a fully functional single-cell analysis environment. Here is what y
 | Component | Purpose |
 |---|---|
 | `scpy` conda environment | Isolated, reproducible Python environment |
-| `scanpy` | Core analysis: QC, normalisation, PCA, UMAP, clustering |
+| `scanpy` | Core analysis: QC, normalization, PCA, UMAP, clustering |
 | `anndata` | The AnnData data structure |
-| `scvi-tools` | Probabilistic models: deep learning-based normalisation and integration |
+| `scvi-tools` | Probabilistic models: deep learning-based normalization and integration |
 | `cellrank` | Trajectory inference and cell fate prediction |
 | `squidpy` | Spatial transcriptomics analysis |
 | `muon` | Multi-modal (CITE-seq, ATAC+RNA) analysis |
