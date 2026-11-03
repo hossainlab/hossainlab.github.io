@@ -20,7 +20,12 @@ return false;
    lists every talk from these same YAML files. */
 var sorted = items.filter(function (i) {
 return i.title && i.title !== 'To be added' && isBioinformatics(i);
-}).sort(function (a, b) { return (b.year || 0) - (a.year || 0); });
+}).sort(function (a, b) {
+/* Newest year first; within a year, entries with a later `date` (YYYY-MM-DD) come first. */
+var dy = (b.year || 0) - (a.year || 0);
+if (dy !== 0) { return dy; }
+return String(b.date || '').localeCompare(String(a.date || ''));
+});
 
 var kinds = [];
 sorted.forEach(function (i) {

@@ -50,21 +50,22 @@ listing:
 <div class="hero-body container is-max-widescreen">
 <div class="hero-layout">
 <div class="hero-copy">
-<p class="eyebrow">Tumor Cell States &middot; Spatial Transcriptomics &middot; Therapy Resistance</p>
+<p class="eyebrow">Tumor Evolution &middot; Therapy Resistance &middot; Metastasis</p>
 <h1 class="title hero-title">Jubayer Hossain</h1>
-<p class="hero-subtitle">Computational cancer biologist mapping how tumor cell states and their spatial organization drive therapy resistance.</p>
+<p class="hero-subtitle">Computational cancer biologist using single-cell multi-omics to study how aggressive cancers evolve, resist therapy, and metastasize.</p>
 <div class="hero-description">
-<p>I study how tumor cell states and their spatial organization drive cancer growth and therapy resistance, with a focus on aggressive cancers that have few treatment options. I combine single-cell and spatial transcriptomics with graph neural networks to map these cell states, the tissue niches they occupy, and the programs that let them survive therapy.</p>
+<p>My research focuses on tumor evolution, therapy resistance, and metastasis in aggressive cancers that have few treatment options. I use single-cell multi-omics approaches to trace how tumor cells diversify, which cell states survive treatment, and how they spread to distant sites, aiming to find the programs that could be targeted to stop them.</p>
 <p>I founded <a href="https://deepbioltd.com" target="_blank" rel="noopener">DeepBio Limited</a>, a Dhaka-based AI and bioinformatics startup, and <a href="https://chiralbd.github.io" target="_blank" rel="noopener">CHIRAL Bangladesh</a>, a non-profit research institute that has trained 3,000+ early-career researchers. I teach through <a href="https://deepbioacademy.com" target="_blank" rel="noopener">DeepBio Academy</a>, <a href="https://cblast.du.ac.bd/" target="_blank" rel="noopener">cBLAST</a>, and the <a href="https://gsabioinfointernship.github.io/" target="_blank" rel="noopener">GSA Bioinformatics Internship Program</a>, and mentor students from raw sequencing data to published analysis.</p>
 </div>
 <div class="research-chips" aria-label="Research focus areas">
-<span>Single-Cell</span>
-<span>Spatial Transcriptomics</span>
-<span>Graph Neural Networks</span>
+<span>Tumor Evolution</span>
+<span>Therapy Resistance</span>
+<span>Metastasis</span>
+<span>Single-Cell Multi-Omics</span>
 </div>
 <div class="live-snapshot" aria-label="Live research snapshot">
 <span class="live-stat"><strong>16</strong> Publications</span>
-<span class="live-stat"><strong>19</strong> Talks</span>
+<span class="live-stat"><strong>20</strong> Talks</span>
 <span class="live-stat"><strong>3,000+</strong> Researchers trained</span>
 </div>
 <div class="buttons hero-actions">

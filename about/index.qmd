@@ -21,8 +21,8 @@ listing:
 <h2 class="ab-section-title">About Me</h2>
 </div>
 <div class="ab-prose">
-<p>I'm Jubayer Hossain, a computational cancer biologist in Dhaka, Bangladesh. My goal is to uncover how tumor cell states and their spatial organization drive cancer growth and therapy resistance. I am motivated by the urgent need for better treatments for aggressive cancers that have few therapeutic options.</p>
-<p>I combine single-cell and spatial transcriptomics with graph neural networks to map tumor cell states, the tissue niches they occupy, and the programs that let them survive therapy. Meta-analysis of public bulk RNA-Seq cohorts lets me test those findings in independent patient cohorts.</p>
+<p>I'm Jubayer Hossain, a computational cancer biologist in Dhaka, Bangladesh. My current research focuses on tumor evolution, therapy resistance, and metastasis in aggressive cancers. I am motivated by the urgent need for better treatments for cancers that have few therapeutic options.</p>
+<p>I use single-cell multi-omics approaches to trace how tumor cells diversify over time, which cell states survive treatment, and how they acquire the ability to spread. I then test those findings in independent public patient cohorts.</p>
 </div>
 
 <div class="ab-section-header">
@@ -38,11 +38,11 @@ listing:
 </div>
 <div class="ab-prose">
 <ul>
-<li>Tumor cell states and plasticity</li>
-<li>Spatial organization of the tumor microenvironment</li>
+<li>Tumor evolution and clonal heterogeneity</li>
 <li>Mechanisms of therapy resistance</li>
-<li>Single-cell and spatial transcriptomics</li>
-<li>Graph neural networks for tissue niches</li>
+<li>Metastasis and tumor cell plasticity</li>
+<li>Tumor microenvironment</li>
+<li>Single-cell multi-omics</li>
 </ul>
 </div>
 ```
